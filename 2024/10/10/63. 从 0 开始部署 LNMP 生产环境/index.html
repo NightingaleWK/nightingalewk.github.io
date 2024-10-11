@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="前置准备工作本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置 1. 初始化 root 账户密码一行指令即可实现，其中需要输入两次密码，自己要记住。 1sudo passwd root  即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。 2. 更新系统目的是确保系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从 0 开始部署 LNMP 生产环境">
+<meta property="og:url" content="https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="前置准备工作本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置 1. 初始化 root 账户密码一行指令即可实现，其中需要输入两次密码，自己要记住。 1sudo passwd root  即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。 2. 更新系统目的是确保系统">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-10-10T01:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-11T02:49:44.429Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="linux">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>从 0 开始部署 LNMP 生产环境</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&text=从 0 开始部署 LNMP 生产环境"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&is_video=false&description=从 0 开始部署 LNMP 生产环境"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从 0 开始部署 LNMP 生产环境&body=Check out this article: https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&name=从 0 开始部署 LNMP 生产环境&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&t=从 0 开始部署 LNMP 生产环境"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">前置准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96-root-%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">1. 初始化 root 账户密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.</span> <span class="toc-text">2. 更新系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85-Nginx"><span class="toc-number">4.</span> <span class="toc-text">3. 安装 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85-MySQL"><span class="toc-number">5.</span> <span class="toc-text">4. 安装 MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9-MySQL-%E7%9A%84%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6%E4%BB%8E-auth-socket-%E6%8F%92%E4%BB%B6%E8%AE%A4%E8%AF%81%E6%94%B9%E4%B8%BA%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AE%89%E8%A3%85-PHP"><span class="toc-number">7.</span> <span class="toc-text">5. 安装 PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%85%8D%E7%BD%AE-Nginx-%E4%BB%A5%E6%94%AF%E6%8C%81-PHP"><span class="toc-number">8.</span> <span class="toc-text">6. 配置 Nginx 以支持 PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Composer"><span class="toc-number">9.</span> <span class="toc-text">安装 Composer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E4%BA%8B%E5%84%BF"><span class="toc-number">10.</span> <span class="toc-text">完事儿</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        从 0 开始部署 LNMP 生产环境
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-10-10T01:00:00.000Z" class="dt-published" itemprop="datePublished">2024-10-10</time>
+        
+        (Updated: <time datetime="2024-10-11T02:49:44.429Z" class="dt-updated" itemprop="dateModified">2024-10-11</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/LNMP/">LNMP</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/linux/" rel="tag">linux</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="前置准备工作"><a href="#前置准备工作" class="headerlink" title="前置准备工作"></a>前置准备工作</h2><p>本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置</p>
+<h2 id="1-初始化-root-账户密码"><a href="#1-初始化-root-账户密码" class="headerlink" title="1. 初始化 root 账户密码"></a>1. 初始化 root 账户密码</h2><p>一行指令即可实现，其中需要输入两次密码，自己要记住。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> passwd root</span><br></pre></td></tr></table></figure>
+
+<p>即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。</p>
+<h2 id="2-更新系统"><a href="#2-更新系统" class="headerlink" title="2. 更新系统"></a>2. 更新系统</h2><p>目的是确保系统的所有软件包都是最新的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt update &amp;&amp; <span class="built_in">sudo</span> apt upgrade -y</span><br></pre></td></tr></table></figure>
+
+<p>其中，-y 是 apt upgrade 命令中的一个选项，它的作用是自动回答 “yes”（是） 以确认安装或升级过程中的所有提示。</p>
+<h2 id="3-安装-Nginx"><a href="#3-安装-Nginx" class="headerlink" title="3. 安装 Nginx"></a>3. 安装 Nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install nginx -y</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，可以使用以下命令检查 Nginx 是否已经正确启动：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl status nginx</span><br></pre></td></tr></table></figure>
+
+<p>访问服务器的 IP 地址（例如：<a target="_blank" rel="noopener" href="http://your_server_ip),你应该能看到/">http://your_server_ip），你应该能看到</a> Nginx 的默认页面。</p>
+<h2 id="4-安装-MySQL"><a href="#4-安装-MySQL" class="headerlink" title="4. 安装 MySQL"></a>4. 安装 MySQL</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install mysql-server -y</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，执行以下命令对 MySQL 进行安全性设置：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<p>完成后，登录 MySQL 检查：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证"><a href="#4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证" class="headerlink" title="4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证"></a>4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证</h2><p>在新的 MySQL 版本中，root 用户默认使用 auth_socket 插件进行身份验证，这意味着只有在系统中以 root 或 sudo 权限运行的用户才可以登录 MySQL，而无需密码。</p>
+<p>但是这个机制不是我们需要的，如果不为 MySQL 的 root 用户设置密码，Laravel 将无法通过默认的 DB_USERNAME&#x3D;root 和 DB_PASSWORD 来连接到数据库。因为 Laravel 的数据库连接需要使用传统的用户名和密码进行身份验证，而不是通过 auth_socket 插件的方式。</p>
+<p>为了确保 Laravel 能够成功连接 MySQL 数据库，需要按照以下步骤操作：</p>
+<ol>
+<li>登录 MySQL：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> mysql</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>查看 root 用户的身份验证插件：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">user</span>, host, plugin <span class="keyword">FROM</span> mysql.user;</span><br></pre></td></tr></table></figure>
+
+<p>检查 root 用户的 plugin 是否为 auth_socket。</p>
+<ol start="3">
+<li>设置 root 用户的密码，并将身份验证插件更改为 mysql_native_password（或者 caching_sha2_password）：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">&#x27;your_new_password&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>或者使用 caching_sha2_password 插件：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED <span class="keyword">WITH</span> caching_sha2_password <span class="keyword">BY</span> <span class="string">&#x27;your_new_password&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>小课堂：MySQL 8.0 及之后的版本中，mysql_native_password 和 caching_sha2_password 是 MySQL 中两种不同的身份验证插件，它们在安全性和性能上有一定的区别。以下是它们的详细对比：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">1. mysql_native_password 插件</span><br><span class="line">    - 概述：mysql_native_password 是 MySQL 较早版本（5.7 及以前）中的默认身份验证插件，它通过哈希算法（SHA1）加密用户密码，并用于验证用户身份。</span><br><span class="line">    - 优点：</span><br><span class="line">        - 兼容性好：与 MySQL 早期版本、PHP 及其他数据库驱动程序（如 PDO、MySQLi）都有很好的兼容性。</span><br><span class="line">        - 配置简单：不需要额外的密码加密设置，容易理解和使用。</span><br><span class="line">    - 缺点：</span><br><span class="line">        - 安全性较低：使用 SHA1 作为哈希算法，而 SHA1 已被证明存在安全漏洞，因此使用该插件的密码容易受到彩虹表攻击和其他哈希破解技术的攻击。</span><br><span class="line">    - 适用场景：</span><br><span class="line">        - 与旧版本 MySQL 或旧版本客户端程序的兼容性需求。</span><br><span class="line">        - 出于兼容性考虑，推荐在低风险环境或开发环境中使用。</span><br><span class="line">2. caching_sha2_password 插件</span><br><span class="line">    - 概述：caching_sha2_password 是 MySQL 8.0 及之后的默认身份验证插件，使用更安全的 SHA-256 哈希算法来加密密码，并带有密码缓存功能，可以提高身份验证的效率。</span><br><span class="line">    - 优点：</span><br><span class="line">        - 更高的安全性：SHA-256 比 SHA1 更强大，能够更好地抵御暴力破解和其他类型的密码攻击。</span><br><span class="line">        - 提高性能：使用了客户端和服务器的身份验证缓存机制，可以减少重复身份验证时的性能开销，提升性能表现。</span><br><span class="line">        - 加密连接：支持加密连接（TLS/SSL），在不安全的网络中也可以保证传输中的数据安全性。</span><br><span class="line">    缺点：</span><br><span class="line">        - 兼容性问题：由于 caching_sha2_password 是 MySQL 8.0 中引入的新插件，因此可能与旧版本的 MySQL 客户端和驱动程序不兼容。例如：一些旧版本的 PHP 和 MySQLi 扩展可能无法直接连接到使用 caching_sha2_password 插件的 MySQL 数据库。</span><br><span class="line">    - 适用场景：</span><br><span class="line">        - 强安全性需求：在生产环境中，推荐使用 caching_sha2_password 来确保数据安全性。</span><br><span class="line">        - 高性能需求：由于缓存机制的存在，适用于高并发和频繁数据库访问的场景。</span><br><span class="line"></span><br><span class="line">在选择建议方面：</span><br><span class="line"></span><br><span class="line">1. 兼容性优先时使用 mysql_native_password：</span><br><span class="line">    - 如果你的 Laravel 项目、PHP 版本较旧（例如 PHP 7.x），或者使用了旧的 MySQL 客户端库（如 MySQLi），可能会遇到 caching_sha2_password 不兼容的问题。</span><br><span class="line">    - 在这种情况下，可以选择 mysql_native_password 作为过渡解决方案，以保证 Laravel 项目能够正常连接到数据库。</span><br><span class="line">2. 安全性优先时使用 caching_sha2_password：</span><br><span class="line">    - 在生产环境中，如果你的 Laravel 项目、PHP 版本以及 MySQL 客户端均支持 MySQL 8.0 及以上，并且支持 caching_sha2_password 插件，建议使用该插件以提高密码安全性。</span><br><span class="line">    - 另外，如果需要使用 SSL/TLS 加密的连接，也建议使用 caching_sha2_password。</span><br></pre></td></tr></table></figure>
+
+<p>这里我选择的是 <strong>caching_sha2_password</strong></p>
+<ol start="4">
+<li>刷新权限表：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>退出 MySQL：</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit;</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>验证 root 密码是否生效</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-安装-PHP"><a href="#5-安装-PHP" class="headerlink" title="5. 安装 PHP"></a>5. 安装 PHP</h2><p>安装 PHP 及其扩展：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install php-fpm php-mysql php-cli php-xml php-mbstring php-curl php-zip php-gd php-imagick -y</span><br></pre></td></tr></table></figure>
+
+<p>截稿时最新版本为 8.3</p>
+<p>配置 PHP-FPM： 编辑 PHP 配置文件 php.ini：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/php/8.3/fpm/php.ini</span><br></pre></td></tr></table></figure>
+
+<p>确保以下参数值正确（如果没有则手动添加或修改）：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">cgi.fix_pathinfo</span>=<span class="number">0</span></span><br><span class="line"><span class="attr">memory_limit</span> = <span class="number">512</span>M</span><br><span class="line"><span class="attr">upload_max_filesize</span> = <span class="number">50</span>M</span><br><span class="line"><span class="attr">post_max_size</span> = <span class="number">50</span>M</span><br><span class="line"><span class="attr">max_execution_time</span> = <span class="number">300</span></span><br></pre></td></tr></table></figure>
+
+<p>重启 PHP-FPM 服务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart php8.3-fpm</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-配置-Nginx-以支持-PHP"><a href="#6-配置-Nginx-以支持-PHP" class="headerlink" title="6. 配置 Nginx 以支持 PHP"></a>6. 配置 Nginx 以支持 PHP</h2><p>创建一个新的 Nginx 配置文件，或者修改默认的配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> vim /etc/nginx/sites-available/laravel</span><br></pre></td></tr></table></figure>
+
+<p>在文件中添加以下内容（确保与 Laravel 项目目录匹配）：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span> your_domain_or_ip;</span><br><span class="line">    <span class="attribute">root</span> /var/www/laravel/public;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">index</span> index.php index.html index.htm;</span><br><span class="line"></span><br><span class="line">    <span class="section">location</span> / &#123;</span><br><span class="line">        <span class="attribute">try_files</span> <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.php?<span class="variable">$query_string</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="section">location</span> <span class="regexp">~ \.php$</span> &#123;</span><br><span class="line">        <span class="attribute">include</span> snippets/fastcgi-php.conf;</span><br><span class="line">        <span class="attribute">fastcgi_pass</span> unix:/var/run/php/php8.1-fpm.sock;</span><br><span class="line">        <span class="attribute">fastcgi_param</span> SCRIPT_FILENAME <span class="variable">$document_root</span><span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">        <span class="attribute">include</span> fastcgi_params;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="section">location</span> <span class="regexp">~ /\.ht</span> &#123;</span><br><span class="line">        <span class="attribute">deny</span> all;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>启用此配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">ln</span> -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/</span><br></pre></td></tr></table></figure>
+
+<p>检查 Nginx 配置语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> nginx -t</span><br></pre></td></tr></table></figure>
+
+<p>重启 Nginx：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart nginx</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-Composer"><a href="#安装-Composer" class="headerlink" title="安装 Composer"></a>安装 Composer</h2><p>全局安装 Composer：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -sS https://getcomposer.org/installer | php</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">mv</span> composer.phar /usr/local/bin/composer</span><br></pre></td></tr></table></figure>
+
+<p>验证：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer --version</span><br></pre></td></tr></table></figure>
+
+<h2 id="完事儿"><a href="#完事儿" class="headerlink" title="完事儿"></a>完事儿</h2><p>至此，一个崭新的 LNMP 环境就配置好了，下一篇文章我将继续介绍如何在此基础上部署一个 Laravel 项目。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">前置准备工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%88%9D%E5%A7%8B%E5%8C%96-root-%E8%B4%A6%E6%88%B7%E5%AF%86%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">1. 初始化 root 账户密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%9B%B4%E6%96%B0%E7%B3%BB%E7%BB%9F"><span class="toc-number">3.</span> <span class="toc-text">2. 更新系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85-Nginx"><span class="toc-number">4.</span> <span class="toc-text">3. 安装 Nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85-MySQL"><span class="toc-number">5.</span> <span class="toc-text">4. 安装 MySQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BF%AE%E6%94%B9-MySQL-%E7%9A%84%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6%E4%BB%8E-auth-socket-%E6%8F%92%E4%BB%B6%E8%AE%A4%E8%AF%81%E6%94%B9%E4%B8%BA%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AE%89%E8%A3%85-PHP"><span class="toc-number">7.</span> <span class="toc-text">5. 安装 PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%85%8D%E7%BD%AE-Nginx-%E4%BB%A5%E6%94%AF%E6%8C%81-PHP"><span class="toc-number">8.</span> <span class="toc-text">6. 配置 Nginx 以支持 PHP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Composer"><span class="toc-number">9.</span> <span class="toc-text">安装 Composer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E4%BA%8B%E5%84%BF"><span class="toc-number">10.</span> <span class="toc-text">完事儿</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&text=从 0 开始部署 LNMP 生产环境"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&is_video=false&description=从 0 开始部署 LNMP 生产环境"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从 0 开始部署 LNMP 生产环境&body=Check out this article: https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&title=从 0 开始部署 LNMP 生产环境"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&name=从 0 开始部署 LNMP 生产环境&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/&t=从 0 开始部署 LNMP 生产环境"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2024
+    NightingaleWK
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

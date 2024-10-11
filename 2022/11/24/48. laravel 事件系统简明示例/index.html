@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="简单对 laravel 事件系统做一些说明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel 事件系统简明示例">
+<meta property="og:url" content="https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="简单对 laravel 事件系统做一些说明">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-11-24T08:17:00.000Z">
+<meta property="article:modified_time" content="2023-11-07T03:12:56.000Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="事件">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>laravel 事件系统简明示例</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2022/11/24/49.%20laravel%20blade%20%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&text=laravel 事件系统简明示例"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&is_video=false&description=laravel 事件系统简明示例"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=laravel 事件系统简明示例&body=Check out this article: https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&name=laravel 事件系统简明示例&description=&lt;p&gt;简单对 laravel 事件系统做一些说明&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&t=laravel 事件系统简明示例"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E4%BA%8B%E4%BB%B6%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">生成一个事件类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">定义监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8F%91%E5%92%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">分发和触发事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86"><span class="toc-number"></span> <span class="toc-text">队列异步处理</span></a>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        laravel 事件系统简明示例
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-11-24T08:17:00.000Z" class="dt-published" itemprop="datePublished">2022-11-24</time>
+        
+        (Updated: <time datetime="2023-11-07T03:12:56.000Z" class="dt-updated" itemprop="dateModified">2023-11-07</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/laravel/">laravel</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/%E4%BA%8B%E4%BB%B6/" rel="tag">事件</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>简单对 laravel 事件系统做一些说明</p>
+<span id="more"></span>
+<p>laravel 的事件提供了一个简单的观察者实现，能够订阅和监听应用中发生的各种事件。事件类保存在 app&#x2F;Events 目录中，而这些事件的的监听器则被保存在 app&#x2F;Listeners 目录下。这些目录只有当你使用 Artisan 命令来生成事件和监听器时才会被自动创建。</p>
+<p>事件机制是一种很好的应用解耦方式，因为一个事件可以拥有多个互不依赖的监听器。例如，如果你希望每次订单发货时向用户发送一个 Slack 通知。你可以简单地发起一个 OrderShipped 事件，让监听器接收之后转化成一个 Slack 通知，这样你就可以不用把订单的业务代码跟 Slack 通知的代码耦合在一起了。</p>
+<h2 id="生成一个事件类"><a href="#生成一个事件类" class="headerlink" title="生成一个事件类"></a>生成一个事件类</h2><p>比如通过 artisan 命令生成一个 UserLogin 事件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:event UserLogin</span><br></pre></td></tr></table></figure>
+<p>在 app&#x2F;Events 中就会自动生成一个 UserLogin.php 文件，内容不多，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Events;</span><br><span class="line"></span><br><span class="line">use Illuminate\Broadcasting\Channel;</span><br><span class="line">use Illuminate\Queue\SerializesModels;</span><br><span class="line">use Illuminate\Broadcasting\PrivateChannel;</span><br><span class="line">use Illuminate\Broadcasting\PresenceChannel;</span><br><span class="line">use Illuminate\Broadcasting\InteractsWithSockets;</span><br><span class="line">use Illuminate\Contracts\Broadcasting\ShouldBroadcast;</span><br><span class="line"></span><br><span class="line">class UserLogin</span><br><span class="line">&#123;</span><br><span class="line">    use InteractsWithSockets, SerializesModels;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Create a new event instance.</span><br><span class="line">     *</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function __construct()</span><br><span class="line">    &#123;</span><br><span class="line">        //</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the channels the event should broadcast on.</span><br><span class="line">     *</span><br><span class="line">     * @return Channel|array</span><br><span class="line">     */</span><br><span class="line">    public function broadcastOn()</span><br><span class="line">    &#123;</span><br><span class="line">        return new PrivateChannel(&#x27;channel-name&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="定义监听器"><a href="#定义监听器" class="headerlink" title="定义监听器"></a>定义监听器</h2><p>一个事件可以被一个或多个监听器监听，也就是观察者模式，我们可以定义多个监听器，当这个事件发生，执行一系列逻辑。</p>
+<p>在 EventServiceProvider 的 $listen 中可以定义事件和监听器，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">protected $listen = [</span><br><span class="line">    &#x27;App\Events\UserLogin&#x27; =&gt; [</span><br><span class="line">        &#x27;App\Lisenter\DoSomething1&#x27;,</span><br><span class="line">        &#x27;App\Lisenter\Dosomething2&#x27;,</span><br><span class="line">    ],</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>然后执行 artisan 命令，就可以自动在 app&#x2F;Lisenter 目录生成监听器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan event::generate</span><br></pre></td></tr></table></figure>
+<p>可以看到 app&#x2F;Lisenter 目录多了 DoSomething1.php 和 DoSomething2.php 两个文件，我们看看其中一个内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Lisenter;</span><br><span class="line"></span><br><span class="line">use App\Events\UserLogin;</span><br><span class="line">use Illuminate\Queue\InteractsWithQueue;</span><br><span class="line">use Illuminate\Contracts\Queue\ShouldQueue;</span><br><span class="line"></span><br><span class="line">class DoSomething1</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Create the event listener.</span><br><span class="line">     *</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function __construct()</span><br><span class="line">    &#123;</span><br><span class="line">        //</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Handle the event.</span><br><span class="line">     *</span><br><span class="line">     * @param  UserLogin  $event</span><br><span class="line">     * @return void</span><br><span class="line">     */</span><br><span class="line">    public function handle(UserLogin $event)</span><br><span class="line">    &#123;</span><br><span class="line">        info(&#x27;do something1&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在两个监听器的 handle 方法中我们打印一个日志来测试一下，如代码 handle 方法所示。</p>
+<h2 id="分发和触发事件"><a href="#分发和触发事件" class="headerlink" title="分发和触发事件"></a>分发和触发事件</h2><p>我们在某个控制器的方法中来分发事件，也就是触发事件，看监听器是否正常工作。</p>
+<p>就是一句话：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event(new UserLogin());</span><br></pre></td></tr></table></figure>
+<p>然后我们请求这个控制器，观察日志，发现打印了日志：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[2018-06-17 10:04:29] local.INFO: do something1</span><br><span class="line">[2018-06-17 10:04:29] local.INFO: do something2</span><br></pre></td></tr></table></figure>
+<p>那么这个事件 - 监听机制就正常工作了。</p>
+<h1 id="队列异步处理"><a href="#队列异步处理" class="headerlink" title="队列异步处理"></a>队列异步处理</h1><p>如果某个监听器需要执行的操作比较慢，可以放到消息队列进行异步处理。</p>
+<p>比如把上面的 DoSomething1 改成需要放入队列的，只需要 implements ShoulQueue 接口。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class DoSomething1 implements ShouldQueue</span><br></pre></td></tr></table></figure>
+<p>也可以指定队列驱动，如下代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 任务应该发送到的队列的连接的名称</span><br><span class="line"> *</span><br><span class="line"> * @var string|null</span><br><span class="line"> */</span><br><span class="line">public $connection = &#x27;redis&#x27;;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 任务应该发送到的队列的名称</span><br><span class="line"> *</span><br><span class="line"> * @var string|null</span><br><span class="line"> */</span><br><span class="line">public $queue = &#x27;listeners&#x27;;</span><br></pre></td></tr></table></figure>
+<p>我们再次执行控制器方法。</p>
+<p>日志里没有打印 do something1，只有 do something2，但是在 redis 队列里发现了一个名为 queues:default 的列表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;job&quot;:&quot;Illuminate\\Events\\CallQueuedHandler@call&quot;,&quot;data&quot;:&#123;&quot;class&quot;:&quot;App\\Listener\\DoSomething1&quot;,&quot;method&quot;:&quot;handle&quot;,&quot;data&quot;:&quot;a:1:&#123;i:0;O:20:\&quot;App\\Events\\UserLogin\&quot;:1:&#123;s:6:\&quot;socket\&quot;;N;&#125;&#125;&quot;&#125;,&quot;id&quot;:&quot;3D7VDUwueYGtUvsazicWsifwWQxnnLID&quot;,&quot;attempts&quot;:1&#125;</span><br></pre></td></tr></table></figure>
+<p>这个时候需要使用 php artisan queue:work 执行队列任务，才是真正执行 DoSomething1 这个监听器的 handle 方法。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E4%BA%8B%E4%BB%B6%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">生成一个事件类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">定义监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%8F%91%E5%92%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">分发和触发事件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%98%9F%E5%88%97%E5%BC%82%E6%AD%A5%E5%A4%84%E7%90%86"><span class="toc-number"></span> <span class="toc-text">队列异步处理</span></a>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&text=laravel 事件系统简明示例"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&is_video=false&description=laravel 事件系统简明示例"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=laravel 事件系统简明示例&body=Check out this article: https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&title=laravel 事件系统简明示例"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&name=laravel 事件系统简明示例&description=&lt;p&gt;简单对 laravel 事件系统做一些说明&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/&t=laravel 事件系统简明示例"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2020-2024
+    NightingaleWK
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
