@@ -494,26 +494,23 @@
   </entry>
   
   <entry>
-    <title>sshpass 中使用 awk 的坑</title>
-    <link href="https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
-    <id>https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</id>
+    <title>使用 net time 实现内网时间同步</title>
+    <link href="https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+    <id>https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</id>
     <published>2022-08-30T06:20:00.000Z</published>
-    <updated>2023-11-07T02:39:51.000Z</updated>
+    <updated>2023-11-07T02:40:35.000Z</updated>
     
-    <content type="html"><![CDATA[<p>之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。</p><p>最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。</p><span id="more"></span><p>原语句：<code>free -m | sed -n &#39;2p&#39; | awk &#39;&#123;print &quot;Mem used is &quot;$3/$2*100&#125;&#39;</code></p><p>想在 sshpass 中执行正确，就应该把 <code>&amp;</code> 转义，在其前面加上 <code>\</code> 即可，最终结果为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshpass -p Password ssh root@192.168.1.1 &quot;free -m | sed -n &#x27;2p&#x27; | awk &#x27;&#123;print &quot;Mem used is &quot;\$3/\$2*100&#125;&#x27;&quot; &gt;&gt;test.txt</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。&lt;/p&gt;
-&lt;p&gt;最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。&lt;/p&gt;</summary>
+    <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
     
     
+    <summary type="html">&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;</summary>
     
-    <category term="linux" scheme="https://nightingalewk.cn/categories/linux/"/>
     
     
-    <category term="sshppass" scheme="https://nightingalewk.cn/tags/sshppass/"/>
+    <category term="工具" scheme="https://nightingalewk.cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="awk" scheme="https://nightingalewk.cn/tags/awk/"/>
+    
+    <category term="net time" scheme="https://nightingalewk.cn/tags/net-time/"/>
     
   </entry>
   
