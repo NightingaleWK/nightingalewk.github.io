@@ -9,7 +9,7 @@
     <meta name="description" content="ubuntu 镜像下载与安装ubuntu 官方可免费下载服务器版本的 iso 镜像文件，我们使用本镜像进行最小化安装即可。我自己的操作是把镜像交给我们公司的网络运维工程师，让他给我那这个镜像开了个虚机，分配了一个内网 IP 用来测试。 记得跟网络运维工程师说一下让服务器通互联网，再配置一下阿里云的源 系统必要的配置系统默认没初始化 root 账号，使用下方指令初始化： 1sudo passwd r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器">
-<meta property="og:url" content="https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:url" content="https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
 <meta property="og:site_name" content="雪漫城的风宅">
 <meta property="og:description" content="ubuntu 镜像下载与安装ubuntu 官方可免费下载服务器版本的 iso 镜像文件，我们使用本镜像进行最小化安装即可。我自己的操作是把镜像交给我们公司的网络运维工程师，让他给我那这个镜像开了个虚机，分配了一个内网 IP 用来测试。 记得跟网络运维工程师说一下让服务器通互联网，再配置一下阿里云的源 系统必要的配置系统默认没初始化 root 账号，使用下方指令初始化： 1sudo passwd r">
 <meta property="og:locale" content="zh_CN">
@@ -22,17 +22,23 @@
     
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+          
+            <link rel="shortcut icon" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=48">
+          
         
       
       
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=192" sizes="192x192">
+          
         
       
       
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=180">
+          
         
       
     
@@ -63,20 +69,26 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/">首页</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
      -->
       </ul>
     </span>
@@ -84,33 +96,33 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post" href="/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
     </span>
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&text=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&is_video=false&description=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&body=Check out this article: https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&name=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&t=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&text=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&is_video=false&description=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&body=Check out this article: https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&name=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&t=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -254,13 +266,19 @@
     <div id="nav-footer" style="display: none">
       <ul>
         
-          <li><a href="/">Home</a></li>
+          <li><a href="/">首页</a></li>
         
-          <li><a href="/about/">About</a></li>
+          <li><a href="/about/">关于</a></li>
         
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/archives/">归档</a></li>
         
-          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li>
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
         
       </ul>
     </div>
@@ -274,28 +292,28 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&text=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&is_video=false&description=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&body=Check out this article: https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&name=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&t=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&text=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&is_video=false&description=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&body=Check out this article: https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&title=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&name=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/&t=配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
         
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
         
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
     </div>
 
   </div>
@@ -314,13 +332,19 @@
     <nav>
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/">首页</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
      -->
       </ul>
     </nav>
@@ -350,7 +374,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
     btn += '<i class="fa-regular fa-clone"></i>';
     btn += '</span>';
     // mount it!
@@ -361,7 +385,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Copied!");
+      e.trigger.setAttribute('aria-label', "复制成功！");
       e.clearSelection();
     })
   })

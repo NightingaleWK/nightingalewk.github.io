@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>雪漫城的风宅</title>
   
-  <subtitle>聆听一段风雪与密酒的故事</subtitle>
-  <link href="https://nightingalewk.github.io/atom.xml" rel="self"/>
+  <subtitle>Breezehome In Whiterun</subtitle>
+  <link href="https://nightingalewk.cn/atom.xml" rel="self"/>
   
-  <link href="https://nightingalewk.github.io/"/>
+  <link href="https://nightingalewk.cn/"/>
   <updated>2024-10-11T02:49:44.429Z</updated>
-  <id>https://nightingalewk.github.io/</id>
+  <id>https://nightingalewk.cn/</id>
   
   <author>
     <name>NightingaleWK</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>从 0 开始部署 LNMP 生产环境</title>
-    <link href="https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"/>
-    <id>https://nightingalewk.github.io/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</id>
+    <link href="https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"/>
+    <id>https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</id>
     <published>2024-10-10T01:00:00.000Z</published>
     <updated>2024-10-11T02:49:44.429Z</updated>
     
@@ -33,17 +33,17 @@
     
     
     
-    <category term="LNMP" scheme="https://nightingalewk.github.io/categories/LNMP/"/>
+    <category term="LNMP" scheme="https://nightingalewk.cn/categories/LNMP/"/>
     
     
-    <category term="linux" scheme="https://nightingalewk.github.io/tags/linux/"/>
+    <category term="linux" scheme="https://nightingalewk.cn/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>laravel 10 在 vite 工作流中引入并使用 Font Awesome 6</title>
-    <link href="https://nightingalewk.github.io/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/"/>
-    <id>https://nightingalewk.github.io/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/</id>
+    <link href="https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/"/>
+    <id>https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/</id>
     <published>2023-11-21T10:00:00.000Z</published>
     <updated>2023-11-21T08:50:57.000Z</updated>
     
@@ -58,19 +58,19 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="Font Awesome" scheme="https://nightingalewk.github.io/tags/Font-Awesome/"/>
+    <category term="Font Awesome" scheme="https://nightingalewk.cn/tags/Font-Awesome/"/>
     
-    <category term="vite" scheme="https://nightingalewk.github.io/tags/vite/"/>
+    <category term="vite" scheme="https://nightingalewk.cn/tags/vite/"/>
     
   </entry>
   
   <entry>
     <title>laravel 项目执行 sail up 报 80 端口占用问题</title>
-    <link href="https://nightingalewk.github.io/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <id>https://nightingalewk.github.io/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/</id>
+    <link href="https://nightingalewk.cn/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://nightingalewk.cn/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/</id>
     <published>2023-11-16T09:00:00.000Z</published>
     <updated>2023-11-16T09:09:45.000Z</updated>
     
@@ -85,19 +85,19 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="laravel sail" scheme="https://nightingalewk.github.io/tags/laravel-sail/"/>
+    <category term="laravel sail" scheme="https://nightingalewk.cn/tags/laravel-sail/"/>
     
-    <category term="故障排除" scheme="https://nightingalewk.github.io/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4/"/>
+    <category term="故障排除" scheme="https://nightingalewk.cn/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4/"/>
     
   </entry>
   
   <entry>
     <title>laravel artisan route 用法</title>
-    <link href="https://nightingalewk.github.io/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/"/>
-    <id>https://nightingalewk.github.io/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/</id>
+    <link href="https://nightingalewk.cn/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/"/>
+    <id>https://nightingalewk.cn/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/</id>
     <published>2023-11-15T09:00:00.000Z</published>
     <updated>2023-11-15T09:22:28.000Z</updated>
     
@@ -112,17 +112,17 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="artisan 指令" scheme="https://nightingalewk.github.io/tags/artisan-%E6%8C%87%E4%BB%A4/"/>
+    <category term="artisan 指令" scheme="https://nightingalewk.cn/tags/artisan-%E6%8C%87%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>哎，又把博客迁移了</title>
-    <link href="https://nightingalewk.github.io/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"/>
-    <id>https://nightingalewk.github.io/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/</id>
+    <link href="https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"/>
+    <id>https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/</id>
     <published>2023-11-07T02:57:43.000Z</published>
     <updated>2023-11-07T03:08:08.000Z</updated>
     
@@ -139,17 +139,17 @@
     
     
     
-    <category term="个人" scheme="https://nightingalewk.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="个人" scheme="https://nightingalewk.cn/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-    <category term="迁移" scheme="https://nightingalewk.github.io/tags/%E8%BF%81%E7%A7%BB/"/>
+    <category term="迁移" scheme="https://nightingalewk.cn/tags/%E8%BF%81%E7%A7%BB/"/>
     
   </entry>
   
   <entry>
     <title>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</title>
-    <link href="https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>https://nightingalewk.github.io/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+    <link href="https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <id>https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2023-07-10T06:21:00.000Z</published>
     <updated>2023-11-07T03:12:56.000Z</updated>
     
@@ -163,17 +163,17 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="代码部署" scheme="https://nightingalewk.github.io/tags/%E4%BB%A3%E7%A0%81%E9%83%A8%E7%BD%B2/"/>
+    <category term="代码部署" scheme="https://nightingalewk.cn/tags/%E4%BB%A3%E7%A0%81%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   
   <entry>
     <title>git 同时推送本地代码到远端 2 个仓库</title>
-    <link href="https://nightingalewk.github.io/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/"/>
-    <id>https://nightingalewk.github.io/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/</id>
+    <link href="https://nightingalewk.cn/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/"/>
+    <id>https://nightingalewk.cn/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/</id>
     <published>2023-07-06T00:36:00.000Z</published>
     <updated>2023-11-07T02:52:29.000Z</updated>
     
@@ -188,15 +188,15 @@
     
     
     
-    <category term="git" scheme="https://nightingalewk.github.io/categories/git/"/>
+    <category term="git" scheme="https://nightingalewk.cn/categories/git/"/>
     
     
   </entry>
   
   <entry>
     <title>（更新中）将 homestead 中的项目迁移到 laravel sail 中进行开发</title>
-    <link href="https://nightingalewk.github.io/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/"/>
-    <id>https://nightingalewk.github.io/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/</id>
+    <link href="https://nightingalewk.cn/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/"/>
+    <id>https://nightingalewk.cn/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/</id>
     <published>2023-05-09T01:43:00.000Z</published>
     <updated>2023-11-07T02:51:07.000Z</updated>
     
@@ -211,19 +211,19 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="homestead" scheme="https://nightingalewk.github.io/tags/homestead/"/>
+    <category term="homestead" scheme="https://nightingalewk.cn/tags/homestead/"/>
     
-    <category term="laravel sail" scheme="https://nightingalewk.github.io/tags/laravel-sail/"/>
+    <category term="laravel sail" scheme="https://nightingalewk.cn/tags/laravel-sail/"/>
     
   </entry>
   
   <entry>
     <title>解决 .gitignore 无效的问题</title>
-    <link href="https://nightingalewk.github.io/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://nightingalewk.github.io/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <link href="https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2023-03-28T00:38:00.000Z</published>
     <updated>2023-11-07T02:50:20.000Z</updated>
     
@@ -238,17 +238,17 @@
     
     
     
-    <category term="git" scheme="https://nightingalewk.github.io/categories/git/"/>
+    <category term="git" scheme="https://nightingalewk.cn/categories/git/"/>
     
     
-    <category term="debug" scheme="https://nightingalewk.github.io/tags/debug/"/>
+    <category term="debug" scheme="https://nightingalewk.cn/tags/debug/"/>
     
   </entry>
   
   <entry>
     <title>皮蛋瘦肉粥</title>
-    <link href="https://nightingalewk.github.io/2023/01/04/54.%20%E7%9A%AE%E8%9B%8B%E7%98%A6%E8%82%89%E7%B2%A5/"/>
-    <id>https://nightingalewk.github.io/2023/01/04/54.%20%E7%9A%AE%E8%9B%8B%E7%98%A6%E8%82%89%E7%B2%A5/</id>
+    <link href="https://nightingalewk.cn/2023/01/04/54.%20%E7%9A%AE%E8%9B%8B%E7%98%A6%E8%82%89%E7%B2%A5/"/>
+    <id>https://nightingalewk.cn/2023/01/04/54.%20%E7%9A%AE%E8%9B%8B%E7%98%A6%E8%82%89%E7%B2%A5/</id>
     <published>2023-01-04T09:31:00.000Z</published>
     <updated>2023-11-07T02:49:46.000Z</updated>
     
@@ -265,17 +265,17 @@
     
     
     
-    <category term="美食" scheme="https://nightingalewk.github.io/categories/%E7%BE%8E%E9%A3%9F/"/>
+    <category term="美食" scheme="https://nightingalewk.cn/categories/%E7%BE%8E%E9%A3%9F/"/>
     
     
-    <category term="粥" scheme="https://nightingalewk.github.io/tags/%E7%B2%A5/"/>
+    <category term="粥" scheme="https://nightingalewk.cn/tags/%E7%B2%A5/"/>
     
   </entry>
   
   <entry>
     <title>地道黄焖鸡</title>
-    <link href="https://nightingalewk.github.io/2022/12/20/53.%20%E5%9C%B0%E9%81%93%E9%BB%84%E7%84%96%E9%B8%A1/"/>
-    <id>https://nightingalewk.github.io/2022/12/20/53.%20%E5%9C%B0%E9%81%93%E9%BB%84%E7%84%96%E9%B8%A1/</id>
+    <link href="https://nightingalewk.cn/2022/12/20/53.%20%E5%9C%B0%E9%81%93%E9%BB%84%E7%84%96%E9%B8%A1/"/>
+    <id>https://nightingalewk.cn/2022/12/20/53.%20%E5%9C%B0%E9%81%93%E9%BB%84%E7%84%96%E9%B8%A1/</id>
     <published>2022-12-20T09:25:00.000Z</published>
     <updated>2023-11-07T02:49:15.000Z</updated>
     
@@ -290,17 +290,17 @@
     
     
     
-    <category term="美食" scheme="https://nightingalewk.github.io/categories/%E7%BE%8E%E9%A3%9F/"/>
+    <category term="美食" scheme="https://nightingalewk.cn/categories/%E7%BE%8E%E9%A3%9F/"/>
     
     
-    <category term="特色小吃" scheme="https://nightingalewk.github.io/tags/%E7%89%B9%E8%89%B2%E5%B0%8F%E5%90%83/"/>
+    <category term="特色小吃" scheme="https://nightingalewk.cn/tags/%E7%89%B9%E8%89%B2%E5%B0%8F%E5%90%83/"/>
     
   </entry>
   
   <entry>
     <title>发起 laravel 队列任务不生效</title>
-    <link href="https://nightingalewk.github.io/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/"/>
-    <id>https://nightingalewk.github.io/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/</id>
+    <link href="https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/"/>
+    <id>https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/</id>
     <published>2022-12-14T08:48:00.000Z</published>
     <updated>2023-11-07T03:12:56.000Z</updated>
     
@@ -315,21 +315,21 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="debug" scheme="https://nightingalewk.github.io/tags/debug/"/>
+    <category term="debug" scheme="https://nightingalewk.cn/tags/debug/"/>
     
-    <category term="队列" scheme="https://nightingalewk.github.io/tags/%E9%98%9F%E5%88%97/"/>
+    <category term="队列" scheme="https://nightingalewk.cn/tags/%E9%98%9F%E5%88%97/"/>
     
-    <category term="redis" scheme="https://nightingalewk.github.io/tags/redis/"/>
+    <category term="redis" scheme="https://nightingalewk.cn/tags/redis/"/>
     
   </entry>
   
   <entry>
     <title>在 laravel 中使用 redis 队列</title>
-    <link href="https://nightingalewk.github.io/2022/12/09/51.%20%E5%9C%A8%20laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20redis%20%E9%98%9F%E5%88%97/"/>
-    <id>https://nightingalewk.github.io/2022/12/09/51.%20%E5%9C%A8%20laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20redis%20%E9%98%9F%E5%88%97/</id>
+    <link href="https://nightingalewk.cn/2022/12/09/51.%20%E5%9C%A8%20laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20redis%20%E9%98%9F%E5%88%97/"/>
+    <id>https://nightingalewk.cn/2022/12/09/51.%20%E5%9C%A8%20laravel%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20redis%20%E9%98%9F%E5%88%97/</id>
     <published>2022-12-09T08:04:00.000Z</published>
     <updated>2023-11-07T03:12:56.000Z</updated>
     
@@ -344,19 +344,19 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="队列" scheme="https://nightingalewk.github.io/tags/%E9%98%9F%E5%88%97/"/>
+    <category term="队列" scheme="https://nightingalewk.cn/tags/%E9%98%9F%E5%88%97/"/>
     
-    <category term="redis" scheme="https://nightingalewk.github.io/tags/redis/"/>
+    <category term="redis" scheme="https://nightingalewk.cn/tags/redis/"/>
     
   </entry>
   
   <entry>
     <title>又一次更换博客系统辣</title>
-    <link href="https://nightingalewk.github.io/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/"/>
-    <id>https://nightingalewk.github.io/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/</id>
+    <link href="https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/"/>
+    <id>https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/</id>
     <published>2022-11-24T08:57:00.000Z</published>
     <updated>2023-11-07T02:46:52.000Z</updated>
     
@@ -372,17 +372,17 @@
     
     
     
-    <category term="个人" scheme="https://nightingalewk.github.io/categories/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="个人" scheme="https://nightingalewk.cn/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-    <category term="迁移" scheme="https://nightingalewk.github.io/tags/%E8%BF%81%E7%A7%BB/"/>
+    <category term="迁移" scheme="https://nightingalewk.cn/tags/%E8%BF%81%E7%A7%BB/"/>
     
   </entry>
   
   <entry>
     <title>laravel blade 简明示例</title>
-    <link href="https://nightingalewk.github.io/2022/11/24/49.%20laravel%20blade%20%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
-    <id>https://nightingalewk.github.io/2022/11/24/49.%20laravel%20blade%20%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
+    <link href="https://nightingalewk.cn/2022/11/24/49.%20laravel%20blade%20%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://nightingalewk.cn/2022/11/24/49.%20laravel%20blade%20%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
     <published>2022-11-24T08:17:11.000Z</published>
     <updated>2023-11-07T03:12:56.000Z</updated>
     
@@ -393,17 +393,17 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="blade" scheme="https://nightingalewk.github.io/tags/blade/"/>
+    <category term="blade" scheme="https://nightingalewk.cn/tags/blade/"/>
     
   </entry>
   
   <entry>
     <title>laravel 事件系统简明示例</title>
-    <link href="https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
-    <id>https://nightingalewk.github.io/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
+    <link href="https://nightingalewk.cn/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://nightingalewk.cn/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
     <published>2022-11-24T08:17:00.000Z</published>
     <updated>2023-11-07T03:12:56.000Z</updated>
     
@@ -414,38 +414,17 @@
     
     
     
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
     
     
-    <category term="事件" scheme="https://nightingalewk.github.io/tags/%E4%BA%8B%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>laravel 表单请求验证简明示例</title>
-    <link href="https://nightingalewk.github.io/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
-    <id>https://nightingalewk.github.io/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
-    <published>2022-11-24T08:10:00.000Z</published>
-    <updated>2023-11-07T03:12:56.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;简单写一下 laravel 表单请求验证使用方法&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="laravel" scheme="https://nightingalewk.github.io/categories/laravel/"/>
-    
-    
-    <category term="表单验证" scheme="https://nightingalewk.github.io/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
+    <category term="事件" scheme="https://nightingalewk.cn/tags/%E4%BA%8B%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>检测服务端口的方法</title>
-    <link href="https://nightingalewk.github.io/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-    <id>https://nightingalewk.github.io/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</id>
+    <link href="https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+    <id>https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</id>
     <published>2022-11-24T08:10:00.000Z</published>
     <updated>2023-11-07T02:43:29.000Z</updated>
     
@@ -460,17 +439,38 @@
     
     
     
-    <category term="linux" scheme="https://nightingalewk.github.io/categories/linux/"/>
+    <category term="linux" scheme="https://nightingalewk.cn/categories/linux/"/>
     
     
-    <category term="端口查询" scheme="https://nightingalewk.github.io/tags/%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2/"/>
+    <category term="端口查询" scheme="https://nightingalewk.cn/tags/%E7%AB%AF%E5%8F%A3%E6%9F%A5%E8%AF%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel 表单请求验证简明示例</title>
+    <link href="https://nightingalewk.cn/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
+    <id>https://nightingalewk.cn/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
+    <published>2022-11-24T08:10:00.000Z</published>
+    <updated>2023-11-07T03:12:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;简单写一下 laravel 表单请求验证使用方法&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="laravel" scheme="https://nightingalewk.cn/categories/laravel/"/>
+    
+    
+    <category term="表单验证" scheme="https://nightingalewk.cn/tags/%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
     
   </entry>
   
   <entry>
     <title>解决 swap 占用过高的问题</title>
-    <link href="https://nightingalewk.github.io/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://nightingalewk.github.io/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <link href="https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2022-09-15T08:56:00.000Z</published>
     <updated>2023-11-07T02:41:19.000Z</updated>
     
@@ -486,17 +486,17 @@
     
     
     
-    <category term="linux" scheme="https://nightingalewk.github.io/categories/linux/"/>
+    <category term="linux" scheme="https://nightingalewk.cn/categories/linux/"/>
     
     
-    <category term="swap" scheme="https://nightingalewk.github.io/tags/swap/"/>
+    <category term="swap" scheme="https://nightingalewk.cn/tags/swap/"/>
     
   </entry>
   
   <entry>
     <title>sshpass 中使用 awk 的坑</title>
-    <link href="https://nightingalewk.github.io/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
-    <id>https://nightingalewk.github.io/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</id>
+    <link href="https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
+    <id>https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</id>
     <published>2022-08-30T06:20:00.000Z</published>
     <updated>2023-11-07T02:39:51.000Z</updated>
     
@@ -508,12 +508,12 @@
     
     
     
-    <category term="linux" scheme="https://nightingalewk.github.io/categories/linux/"/>
+    <category term="linux" scheme="https://nightingalewk.cn/categories/linux/"/>
     
     
-    <category term="sshppass" scheme="https://nightingalewk.github.io/tags/sshppass/"/>
+    <category term="sshppass" scheme="https://nightingalewk.cn/tags/sshppass/"/>
     
-    <category term="awk" scheme="https://nightingalewk.github.io/tags/awk/"/>
+    <category term="awk" scheme="https://nightingalewk.cn/tags/awk/"/>
     
   </entry>
   

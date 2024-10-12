@@ -9,7 +9,7 @@
     <meta name="description" content="公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用 net time 实现内网时间同步">
-<meta property="og:url" content="https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/index.html">
+<meta property="og:url" content="https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/index.html">
 <meta property="og:site_name" content="雪漫城的风宅">
 <meta property="og:description" content="公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一">
 <meta property="og:locale" content="zh_CN">
@@ -22,17 +22,23 @@
     
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
+          
+            <link rel="shortcut icon" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=48">
+          
         
       
       
         
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=192" sizes="192x192">
+          
         
       
       
         
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/2fe67a33e1c85c8cf5dac11757bc4faa?s=180">
+          
         
       
     
@@ -63,20 +69,26 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/">首页</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
      -->
       </ul>
     </span>
@@ -84,33 +96,33 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" aria-label="Previous post" href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="上一篇" href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="下一篇" href="/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
       </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
     </span>
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&text=使用 net time 实现内网时间同步"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&is_video=false&description=使用 net time 实现内网时间同步"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=使用 net time 实现内网时间同步&body=Check out this article: https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&name=使用 net time 实现内网时间同步&description=&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&t=使用 net time 实现内网时间同步"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&text=使用 net time 实现内网时间同步"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&is_video=false&description=使用 net time 实现内网时间同步"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用 net time 实现内网时间同步&body=Check out this article: https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&name=使用 net time 实现内网时间同步&description=&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&t=使用 net time 实现内网时间同步"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -193,13 +205,19 @@
     <div id="nav-footer" style="display: none">
       <ul>
         
-          <li><a href="/">Home</a></li>
+          <li><a href="/">首页</a></li>
         
-          <li><a href="/about/">About</a></li>
+          <li><a href="/about/">关于</a></li>
         
-          <li><a href="/archives/">Writing</a></li>
+          <li><a href="/archives/">归档</a></li>
         
-          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li>
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
         
       </ul>
     </div>
@@ -213,28 +231,28 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&text=使用 net time 实现内网时间同步"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&is_video=false&description=使用 net time 实现内网时间同步"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=使用 net time 实现内网时间同步&body=Check out this article: https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&name=使用 net time 实现内网时间同步&description=&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.github.io/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&t=使用 net time 实现内网时间同步"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&text=使用 net time 实现内网时间同步"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&is_video=false&description=使用 net time 实现内网时间同步"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=使用 net time 实现内网时间同步&body=Check out this article: https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&title=使用 net time 实现内网时间同步"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&name=使用 net time 实现内网时间同步&description=&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/&t=使用 net time 实现内网时间同步"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
 
     <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
         
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
         
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
     </div>
 
   </div>
@@ -253,13 +271,19 @@
     <nav>
       <ul>
         <!--
-       --><li><a href="/">Home</a></li><!--
+       --><li><a href="/">首页</a></li><!--
      --><!--
-       --><li><a href="/about/">About</a></li><!--
+       --><li><a href="/about/">关于</a></li><!--
      --><!--
-       --><li><a href="/archives/">Writing</a></li><!--
+       --><li><a href="/archives/">归档</a></li><!--
      --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">Projects</a></li><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
      -->
       </ul>
     </nav>
@@ -289,7 +313,7 @@
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
     btn += '<i class="fa-regular fa-clone"></i>';
     btn += '</span>';
     // mount it!
@@ -300,7 +324,7 @@
       }
     });
     clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "Copied!");
+      e.trigger.setAttribute('aria-label', "复制成功！");
       e.clearSelection();
     })
   })
