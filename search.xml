@@ -8,7 +8,7 @@
       <link href="/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
       <url>/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
       
-        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ol><li>本文将列举服务器当前使用过的插件的使用指南，便于快速查找使用方法。</li><li>善用右侧的导航栏，快速定位到您需要的内容。</li></ol><h2 id="1-World-Utilities-实用工具"><a href="#1-World-Utilities-实用工具" class="headerlink" title="1. World Utilities - 实用工具"></a>1. World Utilities - 实用工具</h2><ul><li>✅ Guide Book - 指南书<ul><li>介绍：死亡后丢掉了合成指南？不要紧，找个工作台，简单的原料就可以再做一本，World Utilities 的全部合成指南都在书里，英语好的家人们可直接看书，而无需看下方内容了。</li><li>材料准备：<ul><li>[B]书 x1</li><li>[P]木稿 x1</li><li>[S]木铲 x1</li><li>[A]木斧 x1</li><li>[W]木剑 x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[W][B][A]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ homes - 快速传送<ul><li>介绍：该功能实现了快速传送到指定位置的功能，合成后右键使用，可记录当前所在位置，共开放了 10 个位置</li><li>材料准备：<ul><li>[C]原石 x5</li><li>[P]木板 x1</li><li>[D]木门（任意） x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[C][D][C]</li><li>[C][C][C]</li></ul></li></ul></li><li>✅ Multiblock Pickaxe - 多方块挖掘镐<ul><li>介绍：现在挖一次方块就等于挖了 9 个方块，挖掘区域为下稿子的方块周围一圈，也就是9个，而区域方向为挖掘方块受击面所在平面，极大提升了下矿体验。</li><li>材料准备：<ul><li>[D]钻石镐 x3</li><li>[S]木棍 x2</li></ul></li><li>合成方式：<ul><li>[D][D][D]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ Omni Tool - 多功能工具<ul><li>介绍：使用这个多功能工具优化你的库存空间。这使你能够像使用镐、斧头或铲子一样打破任何方块。出门带着一个就行了，大大提高跑图体验。</li><li>材料准备：<ul><li>[H]蜂蜜块 x6</li><li>[A]钻石斧 x1</li><li>[F]钻石镐 x1</li><li>[S]钻石铲 x1</li></ul></li><li>合成方式：<ul><li>[H][A][H]</li><li>[H][P][H]</li><li>[H][S][H]</li></ul></li></ul></li><li>✅ Harvester Hoe - 收割者锄<ul><li>介绍：收割的作物将自动重新种植，掉落的物品将添加到您的库存中，除了用于重新种植所需的种子！这将适用于小麦、胡萝卜、甜菜根、土豆、瓜类、南瓜、可可豆和下界疣。</li><li>材料准备：<ul><li>[H]钻石锄 x1</li><li>[W]小麦种子 x1</li><li>[M]西瓜种子 x1</li><li>[U]南瓜种子 x1</li><li>[O]可可豆 x1</li><li>[X]小麦种子 x1</li><li>[B]甜菜根种子 x1</li><li>[P]土豆 x1</li><li>[C]胡萝卜 x1</li></ul></li><li>合成方式：<ul><li>[W][M][U]</li><li>[O][H][X]</li><li>[B][P][C]</li></ul></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ol><li>本文将列举服务器当前使用过的插件的使用指南，便于快速查找使用方法。</li><li>善用右侧的导航栏，快速定位到您需要的内容。</li></ol><h2 id="1-World-Utilities-实用工具"><a href="#1-World-Utilities-实用工具" class="headerlink" title="1. World Utilities - 实用工具"></a>1. World Utilities - 实用工具</h2><ul><li>✅ Guide Book - 指南书<ul><li>介绍：死亡后丢掉了合成指南？不要紧，找个工作台，简单的原料就可以再做一本，World Utilities 的全部合成指南都在书里，英语好的家人们可直接看书，而无需看下方内容了。</li><li>材料准备：<ul><li>[B]书 x1</li><li>[P]木稿 x1</li><li>[S]木铲 x1</li><li>[A]木斧 x1</li><li>[W]木剑 x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[W][B][A]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ homes - 快速传送<ul><li>介绍：该功能实现了快速传送到指定位置的功能，合成后右键使用，可记录当前所在位置，共开放了 10 个位置</li><li>材料准备：<ul><li>[C]原石 x5</li><li>[P]木板 x1</li><li>[D]木门（任意） x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[C][D][C]</li><li>[C][C][C]</li></ul></li></ul></li><li>✅ Multiblock Pickaxe - 多方块挖掘镐<ul><li>介绍：现在挖一次方块就等于挖了 9 个方块，挖掘区域为下稿子的方块周围一圈，也就是9个，而区域方向为挖掘方块受击面所在平面，极大提升了下矿体验。</li><li>材料准备：<ul><li>[D]钻石镐 x3</li><li>[S]木棍 x2</li></ul></li><li>合成方式：<ul><li>[D][D][D]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ Omni Tool - 多功能工具<ul><li>介绍：使用这个多功能工具优化你的库存空间。这使你能够像使用镐、斧头或铲子一样打破任何方块。出门带着一个就行了，大大提高跑图体验。</li><li>材料准备：<ul><li>[H]蜂蜜块 x6</li><li>[A]钻石斧 x1</li><li>[P]钻石镐 x1</li><li>[S]钻石铲 x1</li></ul></li><li>合成方式：<ul><li>[H][A][H]</li><li>[H][P][H]</li><li>[H][S][H]</li></ul></li></ul></li><li>✅ Harvester Hoe - 收割者锄<ul><li>介绍：收割的作物将自动重新种植，掉落的物品将添加到您的库存中，除了用于重新种植所需的种子！这将适用于小麦、胡萝卜、甜菜根、土豆、瓜类、南瓜、可可豆和下界疣。</li><li>材料准备：<ul><li>[H]钻石锄 x1</li><li>[W]小麦种子 x1</li><li>[M]西瓜种子 x1</li><li>[U]南瓜种子 x1</li><li>[O]可可豆 x1</li><li>[X]小麦种子 x1</li><li>[B]甜菜根种子 x1</li><li>[P]土豆 x1</li><li>[C]胡萝卜 x1</li></ul></li><li>合成方式：<ul><li>[W][M][U]</li><li>[O][H][X]</li><li>[B][P][C]</li></ul></li></ul></li></ul>]]></content>
       
       
       <categories>
@@ -550,31 +550,6 @@
     
     
     <entry>
-      <title>laravel 表单请求验证简明示例</title>
-      <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
-      <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
-      
-        <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 表单验证 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>检测服务端口的方法</title>
       <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
@@ -592,6 +567,31 @@
         <tags>
             
             <tag> 端口查询 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 表单请求验证简明示例</title>
+      <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
+      <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 表单验证 </tag>
             
         </tags>
       
@@ -625,31 +625,6 @@
     
     
     <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -669,6 +644,31 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
             
         </tags>
       
@@ -1065,25 +1065,6 @@
     
     
     <entry>
-      <title>git pull 后如何快速回滚</title>
-      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
-      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
-      
-        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Dcat-Admin 主题色变更的避坑方法</title>
       <link href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/"/>
       <url>/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</url>
@@ -1109,16 +1090,16 @@
     
     
     <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      <title>git pull 后如何快速回滚</title>
+      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
+      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
       
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> 开发 </category>
+          <category> git </category>
           
       </categories>
       
@@ -1151,6 +1132,25 @@
             <tag> lnmp </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -1261,31 +1261,6 @@
     
     
     <entry>
-      <title>秘制特色鸡蛋</title>
-      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
-      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
-      
-        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 美食 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 热菜 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>西红柿土豆丁浓汤</title>
       <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
       <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
@@ -1303,6 +1278,31 @@
         <tags>
             
             <tag> 汤 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>秘制特色鸡蛋</title>
+      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
+      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美食 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 热菜 </tag>
             
         </tags>
       
