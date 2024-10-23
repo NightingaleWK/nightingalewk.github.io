@@ -410,31 +410,6 @@
     
     
     <entry>
-      <title>laravel 表单请求验证简明示例</title>
-      <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
-      <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
-      
-        <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 表单验证 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>检测服务端口的方法</title>
       <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
@@ -452,6 +427,31 @@
         <tags>
             
             <tag> 端口查询 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 表单请求验证简明示例</title>
+      <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
+      <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
+      
+        <content type="html"><![CDATA[<p>简单写一下 laravel 表单请求验证使用方法</p><span id="more"></span><p>示例如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">use App\Http\Requests\UserRequest;</span><br><span class="line"></span><br><span class="line">class UsersController extends Controller</span><br><span class="line">&#123;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line"></span><br><span class="line">    public function update(UserRequest $request, User $user)</span><br><span class="line">    &#123;</span><br><span class="line">        $user-&gt;update($request-&gt;all());</span><br><span class="line">        return redirect()-&gt;route(&#x27;users.show&#x27;, $user-&gt;id)-&gt;with(&#x27;success&#x27;, &#x27;个人资料更新成功！&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>其实我们将 update 方法中传的第一个参，从 Request 改成 UserRequest 就可以了，系统会在一开始就开始验证，过了再继续之后的步骤。而在此之前，我们需要生成表单请求验证：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan make:request UserRequest</span><br></pre></td></tr></table></figure><p>之后我们就可以去修改这个 UserRequest 文件了。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line"></span><br><span class="line">namespace App\Http\Requests;</span><br><span class="line"></span><br><span class="line">use Illuminate\Foundation\Http\FormRequest;</span><br><span class="line">use Illuminate\Support\Facades\Auth;</span><br><span class="line"></span><br><span class="line">class UserRequest extends FormRequest</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * Determine if the user is authorized to make this request.</span><br><span class="line">     *</span><br><span class="line">     * @return bool</span><br><span class="line">     */</span><br><span class="line">    public function authorize()</span><br><span class="line">    &#123;</span><br><span class="line">        return true;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * Get the validation rules that apply to the request.</span><br><span class="line">     *</span><br><span class="line">     * @return array&lt;string, mixed&gt;</span><br><span class="line">     */</span><br><span class="line">    public function rules()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name&#x27; =&gt; &#x27;required|between:3,25|regex:/^[A-Za-z0-9\-\_]+$/|unique:users,name,&#x27; . Auth::id(),</span><br><span class="line">            &#x27;email&#x27; =&gt; &#x27;required|email&#x27;,</span><br><span class="line">            &#x27;introduction&#x27; =&gt; &#x27;max:80&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public function messages()</span><br><span class="line">    &#123;</span><br><span class="line">        return [</span><br><span class="line">            &#x27;name.unique&#x27; =&gt; &#x27;用户名已被占用，请重新填写&#x27;,</span><br><span class="line">            &#x27;name.regex&#x27; =&gt; &#x27;用户名只支持英文、数字、横杠和下划线。&#x27;,</span><br><span class="line">            &#x27;name.between&#x27; =&gt; &#x27;用户名必须介于 3 - 25 个字符之间。&#x27;,</span><br><span class="line">            &#x27;name.required&#x27; =&gt; &#x27;用户名不能为空。&#x27;,</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 表单验证 </tag>
             
         </tags>
       
@@ -875,31 +875,6 @@
     
     
     <entry>
-      <title>Hexo 博客升级流程</title>
-      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
-      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
       <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
       <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
@@ -917,6 +892,31 @@
         <tags>
             
             <tag> oh-my-zsh </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 博客升级流程</title>
+      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
+      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -969,31 +969,6 @@
     
     
     <entry>
-      <title>laravel 项目 Homestead 开发环境的搭建</title>
-      <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
-      <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-      
-        <content type="html"><![CDATA[<h1 id="做好准备"><a href="#做好准备" class="headerlink" title="做好准备"></a>做好准备</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead &amp;&amp; vagrant up</span><br><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure><p>在虚拟机中进入 <code>code</code> 文件夹</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/code</span><br></pre></td></tr></table></figure><h1 id="Composer-加速"><a href="#Composer-加速" class="headerlink" title="Composer 加速"></a>Composer 加速</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span><br></pre></td></tr></table></figure><h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project laravel/laravel yourapp</span><br></pre></td></tr></table></figure><h1 id="修改-Hosts"><a href="#修改-Hosts" class="headerlink" title="修改 Hosts"></a>修改 Hosts</h1><p>首先找到 <code>Hosts</code> 文件，<code>Windows</code> 下是在</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:/Windows/System32/Drivers/etc/hosts</span><br></pre></td></tr></table></figure><p>文件成功打开后，在 <code>hosts</code> 文件最后面新增下面一行以完成设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.10.10   yourapp.test</span><br></pre></td></tr></table></figure><h1 id="新增站点"><a href="#新增站点" class="headerlink" title="新增站点"></a>新增站点</h1><p>进入 homestead 的根目录，找到 <code>Homestead.yaml</code> 并打开</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">ip: &quot;192.168.10.10&quot;</span><br><span class="line">memory: 2048</span><br><span class="line">cpus: 2</span><br><span class="line">provider: virtualbox</span><br><span class="line"></span><br><span class="line">authorize: ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">keys:</span><br><span class="line">    - ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">folders:</span><br><span class="line">    - map: ~/Code</span><br><span class="line">      to: /home/vagrant/Code</span><br><span class="line"></span><br><span class="line">sites:</span><br><span class="line">    - map: homestead.test</span><br><span class="line">      to: /home/vagrant/Code/laravel/public</span><br><span class="line">    - map: yourapp.test #  &lt;--- 这里</span><br><span class="line">      to: /home/vagrant/Code/yourapp/public #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">databases:</span><br><span class="line">    - homestead</span><br><span class="line">    - yourapp #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">variables:</span><br><span class="line">    - key: APP_ENV</span><br><span class="line">      value: local</span><br><span class="line"></span><br><span class="line">features:</span><br><span class="line">    - mysql: true</span><br><span class="line"></span><br><span class="line"># blackfire:</span><br><span class="line">#     - id: foo</span><br><span class="line">#       token: bar</span><br><span class="line">#       client-id: foo</span><br><span class="line">#       client-token: bar</span><br><span class="line"></span><br><span class="line"># ports:</span><br><span class="line">#     - send: 93000</span><br><span class="line">#       to: 9300</span><br><span class="line">#     - send: 7777</span><br><span class="line">#       to: 777</span><br><span class="line">#       protocol: udp</span><br></pre></td></tr></table></figure><p>这里主要设置了 <code>sites</code> 和 <code>databases</code> 两项。 <code>sites</code> 会将域名 <code>larabbs.test</code> 映射到虚拟机的 <code>/home/vagrant/Code/yourapp/public</code> 文件夹上，而 <code>databases</code> 则为新创建的项目指定数据库名</p><h1 id="重启虚拟机"><a href="#重启虚拟机" class="headerlink" title="重启虚拟机"></a>重启虚拟机</h1><p>对 <code>Homestead.yaml</code> 文件进行了更改之后，需要运行下面命令来使其更改生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead</span><br><span class="line">vagrant provision</span><br><span class="line">vagrant reload</span><br></pre></td></tr></table></figure><h1 id="env-修改"><a href="#env-修改" class="headerlink" title=".env 修改"></a>.env 修改</h1><p>我们还需要对应用根目录下的 <code>.env</code> 文件进行设置，为应用指定数据库名称 <code>yourapp</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">APP_NAME=yourapp</span><br><span class="line">APP_ENV=local</span><br><span class="line">APP_KEY=your_app_key</span><br><span class="line">APP_DEBUG=true</span><br><span class="line">APP_URL=http://yourapp.test</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">DB_DATABASE=yourapp</span><br><span class="line">DB_USERNAME=homestead</span><br><span class="line">DB_PASSWORD=secret</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><h1 id="统一代码风格"><a href="#统一代码风格" class="headerlink" title="统一代码风格"></a>统一代码风格</h1><p>对项目的 <code>.editorconfig</code> 进行统一修改。这是为了保证我们的代码风格一致，以避免引起不必要的歧义</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">insert_final_newline = true</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 4</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br><span class="line"></span><br><span class="line">[*.&#123;yml,yaml&#125;]</span><br><span class="line">indent_size = 2</span><br><span class="line"></span><br><span class="line">[*.&#123;js,html,blade.php,css,scss,vue&#125;]</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 2</span><br></pre></td></tr></table></figure><h1 id="访问应用"><a href="#访问应用" class="headerlink" title="访问应用"></a>访问应用</h1><p>在 Chrome 浏览器中打开 <code>yourapp.test</code> 即可</p><h1 id="git-版本控制"><a href="#git-版本控制" class="headerlink" title="git 版本控制"></a>git 版本控制</h1><p>线上建立好仓库后，记住 ssh 方式连接的代码仓库名，在虚机的项目根目录下输入如下指令即可</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;初始化项目&quot;</span><br><span class="line">git remote add origin git@e.coding.net:nightingalewk/yanji/yanji.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h1 id="git-分支的使用"><a href="#git-分支的使用" class="headerlink" title="git 分支的使用"></a>git 分支的使用</h1><p>分支使用时，首先执行如下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b static-pages</span><br></pre></td></tr></table></figure><p>当写完一阶段的代码时，需要合并到主分支，需要如下操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m &quot;完成静态页面的建立&quot;</span><br><span class="line">git checkout master</span><br><span class="line">git merge static-pages</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h1 id="启用-Bootstrap"><a href="#启用-Bootstrap" class="headerlink" title="启用 Bootstrap"></a>启用 Bootstrap</h1><p>项目中使用 Bootstrap 前端框架，需要先执行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer require laravel/ui --dev</span><br><span class="line">php artisan ui bootstrap</span><br></pre></td></tr></table></figure><p>开始安装之前，我们需要设置安装器来使用国内的淘宝镜像加速，加速镜像的原理是使用国内的 CDN 来下载所需代码包，会更加顺畅</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=https://registry.npm.taobao.org</span><br><span class="line">yarn config set registry &#x27;https://registry.npm.taobao.org&#x27;</span><br></pre></td></tr></table></figure><p>使用用 Yarn 对扩展包进行安装，请在项目根目录下运行以下命令进行安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn --no-bin-links</span><br><span class="line">yarn add cross-env --no-bin-links</span><br></pre></td></tr></table></figure><h1 id="开发常用指令"><a href="#开发常用指令" class="headerlink" title="开发常用指令"></a>开发常用指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> homestead </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 项目部署到服务器的流程</title>
       <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
@@ -1015,6 +990,50 @@
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 项目 Homestead 开发环境的搭建</title>
+      <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="做好准备"><a href="#做好准备" class="headerlink" title="做好准备"></a>做好准备</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead &amp;&amp; vagrant up</span><br><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure><p>在虚拟机中进入 <code>code</code> 文件夹</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/code</span><br></pre></td></tr></table></figure><h1 id="Composer-加速"><a href="#Composer-加速" class="headerlink" title="Composer 加速"></a>Composer 加速</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span><br></pre></td></tr></table></figure><h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project laravel/laravel yourapp</span><br></pre></td></tr></table></figure><h1 id="修改-Hosts"><a href="#修改-Hosts" class="headerlink" title="修改 Hosts"></a>修改 Hosts</h1><p>首先找到 <code>Hosts</code> 文件，<code>Windows</code> 下是在</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:/Windows/System32/Drivers/etc/hosts</span><br></pre></td></tr></table></figure><p>文件成功打开后，在 <code>hosts</code> 文件最后面新增下面一行以完成设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.10.10   yourapp.test</span><br></pre></td></tr></table></figure><h1 id="新增站点"><a href="#新增站点" class="headerlink" title="新增站点"></a>新增站点</h1><p>进入 homestead 的根目录，找到 <code>Homestead.yaml</code> 并打开</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">ip: &quot;192.168.10.10&quot;</span><br><span class="line">memory: 2048</span><br><span class="line">cpus: 2</span><br><span class="line">provider: virtualbox</span><br><span class="line"></span><br><span class="line">authorize: ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">keys:</span><br><span class="line">    - ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">folders:</span><br><span class="line">    - map: ~/Code</span><br><span class="line">      to: /home/vagrant/Code</span><br><span class="line"></span><br><span class="line">sites:</span><br><span class="line">    - map: homestead.test</span><br><span class="line">      to: /home/vagrant/Code/laravel/public</span><br><span class="line">    - map: yourapp.test #  &lt;--- 这里</span><br><span class="line">      to: /home/vagrant/Code/yourapp/public #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">databases:</span><br><span class="line">    - homestead</span><br><span class="line">    - yourapp #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">variables:</span><br><span class="line">    - key: APP_ENV</span><br><span class="line">      value: local</span><br><span class="line"></span><br><span class="line">features:</span><br><span class="line">    - mysql: true</span><br><span class="line"></span><br><span class="line"># blackfire:</span><br><span class="line">#     - id: foo</span><br><span class="line">#       token: bar</span><br><span class="line">#       client-id: foo</span><br><span class="line">#       client-token: bar</span><br><span class="line"></span><br><span class="line"># ports:</span><br><span class="line">#     - send: 93000</span><br><span class="line">#       to: 9300</span><br><span class="line">#     - send: 7777</span><br><span class="line">#       to: 777</span><br><span class="line">#       protocol: udp</span><br></pre></td></tr></table></figure><p>这里主要设置了 <code>sites</code> 和 <code>databases</code> 两项。 <code>sites</code> 会将域名 <code>larabbs.test</code> 映射到虚拟机的 <code>/home/vagrant/Code/yourapp/public</code> 文件夹上，而 <code>databases</code> 则为新创建的项目指定数据库名</p><h1 id="重启虚拟机"><a href="#重启虚拟机" class="headerlink" title="重启虚拟机"></a>重启虚拟机</h1><p>对 <code>Homestead.yaml</code> 文件进行了更改之后，需要运行下面命令来使其更改生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead</span><br><span class="line">vagrant provision</span><br><span class="line">vagrant reload</span><br></pre></td></tr></table></figure><h1 id="env-修改"><a href="#env-修改" class="headerlink" title=".env 修改"></a>.env 修改</h1><p>我们还需要对应用根目录下的 <code>.env</code> 文件进行设置，为应用指定数据库名称 <code>yourapp</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">APP_NAME=yourapp</span><br><span class="line">APP_ENV=local</span><br><span class="line">APP_KEY=your_app_key</span><br><span class="line">APP_DEBUG=true</span><br><span class="line">APP_URL=http://yourapp.test</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">DB_DATABASE=yourapp</span><br><span class="line">DB_USERNAME=homestead</span><br><span class="line">DB_PASSWORD=secret</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><h1 id="统一代码风格"><a href="#统一代码风格" class="headerlink" title="统一代码风格"></a>统一代码风格</h1><p>对项目的 <code>.editorconfig</code> 进行统一修改。这是为了保证我们的代码风格一致，以避免引起不必要的歧义</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">insert_final_newline = true</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 4</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br><span class="line"></span><br><span class="line">[*.&#123;yml,yaml&#125;]</span><br><span class="line">indent_size = 2</span><br><span class="line"></span><br><span class="line">[*.&#123;js,html,blade.php,css,scss,vue&#125;]</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 2</span><br></pre></td></tr></table></figure><h1 id="访问应用"><a href="#访问应用" class="headerlink" title="访问应用"></a>访问应用</h1><p>在 Chrome 浏览器中打开 <code>yourapp.test</code> 即可</p><h1 id="git-版本控制"><a href="#git-版本控制" class="headerlink" title="git 版本控制"></a>git 版本控制</h1><p>线上建立好仓库后，记住 ssh 方式连接的代码仓库名，在虚机的项目根目录下输入如下指令即可</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;初始化项目&quot;</span><br><span class="line">git remote add origin git@e.coding.net:nightingalewk/yanji/yanji.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h1 id="git-分支的使用"><a href="#git-分支的使用" class="headerlink" title="git 分支的使用"></a>git 分支的使用</h1><p>分支使用时，首先执行如下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b static-pages</span><br></pre></td></tr></table></figure><p>当写完一阶段的代码时，需要合并到主分支，需要如下操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m &quot;完成静态页面的建立&quot;</span><br><span class="line">git checkout master</span><br><span class="line">git merge static-pages</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h1 id="启用-Bootstrap"><a href="#启用-Bootstrap" class="headerlink" title="启用 Bootstrap"></a>启用 Bootstrap</h1><p>项目中使用 Bootstrap 前端框架，需要先执行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer require laravel/ui --dev</span><br><span class="line">php artisan ui bootstrap</span><br></pre></td></tr></table></figure><p>开始安装之前，我们需要设置安装器来使用国内的淘宝镜像加速，加速镜像的原理是使用国内的 CDN 来下载所需代码包，会更加顺畅</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=https://registry.npm.taobao.org</span><br><span class="line">yarn config set registry &#x27;https://registry.npm.taobao.org&#x27;</span><br></pre></td></tr></table></figure><p>使用用 Yarn 对扩展包进行安装，请在项目根目录下运行以下命令进行安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn --no-bin-links</span><br><span class="line">yarn add cross-env --no-bin-links</span><br></pre></td></tr></table></figure><h1 id="开发常用指令"><a href="#开发常用指令" class="headerlink" title="开发常用指令"></a>开发常用指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> homestead </tag>
             
         </tags>
       
@@ -1046,25 +1065,6 @@
             <tag> 代码更新 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
       
     </entry>
     
@@ -1121,31 +1121,6 @@
     
     
     <entry>
-      <title>西红柿土豆丁浓汤</title>
-      <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
-      <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
-      
-        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>西红柿</li><li>土豆</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>西红柿和土豆切丁</li><li>起锅烧油，放入西红柿，翻炒至软烂</li><li>倒入土豆继续翻炒数下</li><li>加水没过食材，加入生抽和盐</li><li>大火煮沸，转中小火炖 5 分钟</li><li>出锅前撒入些许鸡精，完成</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 美食 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 汤 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>秘制特色鸡蛋</title>
       <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
       <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
@@ -1163,6 +1138,31 @@
         <tags>
             
             <tag> 热菜 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>西红柿土豆丁浓汤</title>
+      <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
+      <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>西红柿</li><li>土豆</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>西红柿和土豆切丁</li><li>起锅烧油，放入西红柿，翻炒至软烂</li><li>倒入土豆继续翻炒数下</li><li>加水没过食材，加入生抽和盐</li><li>大火煮沸，转中小火炖 5 分钟</li><li>出锅前撒入些许鸡精，完成</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美食 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 汤 </tag>
             
         </tags>
       
