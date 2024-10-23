@@ -590,6 +590,31 @@
     
     
     <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -609,31 +634,6 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
             
         </tags>
       
@@ -1030,25 +1030,6 @@
     
     
     <entry>
-      <title>git pull 后如何快速回滚</title>
-      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
-      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
-      
-        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Dcat-Admin 主题色变更的避坑方法</title>
       <link href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/"/>
       <url>/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</url>
@@ -1068,6 +1049,44 @@
             <tag> dcat admin </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git pull 后如何快速回滚</title>
+      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
+      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
+      
+        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -1099,54 +1118,6 @@
     
     
     <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
-      
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 代码更新 </tag>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 项目部署到服务器的流程</title>
       <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
@@ -1163,11 +1134,40 @@
       
         <tags>
             
+            <tag> 代码部署 </tag>
+            
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
             
-            <tag> 代码部署 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
+            <tag> 代码更新 </tag>
             
         </tags>
       
