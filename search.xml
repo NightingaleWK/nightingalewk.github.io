@@ -875,31 +875,6 @@
     
     
     <entry>
-      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
-      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> oh-my-zsh </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo 博客升级流程</title>
       <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
@@ -925,11 +900,11 @@
     
     
     <entry>
-      <title>git pull 后如何快速回滚</title>
-      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
-      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
+      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
+      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
       
       
       <categories>
@@ -938,6 +913,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> oh-my-zsh </tag>
+            
+        </tags>
       
     </entry>
     
@@ -969,16 +950,16 @@
     
     
     <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      <title>git pull 后如何快速回滚</title>
+      <link href="/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/"/>
+      <url>/2021/08/03/26.%20git%20pull%20%E5%90%8E%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%9B%9E%E6%BB%9A/</url>
       
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure><p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> 开发 </category>
+          <category> git </category>
           
       </categories>
       
@@ -1065,6 +1046,25 @@
             <tag> 代码更新 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
       
     </entry>
     
