@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="公司某项目有 2 个机子的 swap 占满了，监控他们的 zabbix 平台一直提示高占用，于是开始着手解决一下这个问题。 首先我们释放 swap 存储的文件导内存 1Swapoff –a 接下来我们将需要新建一个更大的swap交换空间 1234cd &#x2F;varsudo mkdir swapsudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;swapfile bs&#x3D;1024 count&#x3D;4000000s">
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="公司某项目有 2 个机子的 swap 占满了，监控他们的 zabbix 平台一直提示高占用，于是开始着手解决一下这个问题。 首先我们释放 swap 存储的文件导内存 1Swapoff –a 接下来我们将需要新建一个更大的swap交换空间 1234cd &#x2F;varsudo mkdir swapsudo dd if&#x3D;&#x2F;dev&#x2F;zero of&#x3D;swapfile bs&#x3D;1024 count&#x3D;4000000s">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决 swap 占用过高的问题">
 <meta property="og:url" content="https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
@@ -19,47 +20,53 @@
 <meta property="article:tag" content="swap">
 <meta name="twitter:card" content="summary">
     
-    
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>解决 swap 占用过高的问题</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            解决 swap 占用过高的问题
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
 
 
-    <!-- Umami Analytics -->
+                                                            <!-- Umami Analytics -->
 
 
-    <!-- styles -->
-    
+                                                              <!-- styles -->
+                                                              
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
-    
-	<!-- mathjax -->
-	
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">

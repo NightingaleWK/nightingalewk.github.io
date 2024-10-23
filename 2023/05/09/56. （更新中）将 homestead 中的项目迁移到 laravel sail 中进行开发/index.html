@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="本文的目的是：将原本跑 homestead 环境下的 laravel 项目，迁移到官方最新推荐的 laravel sail 开发环境中。下面我分享一下我的操作方法。 在文章开始之前，我们默认大家均已拥有一个 homestead 开发环境，且你也是在其之上本地开发多次的开发者，而且你的需求是将你的 homestead 开发环境转换成 laravel sail，希望借助 docker 技术来提升系统的">
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="本文的目的是：将原本跑 homestead 环境下的 laravel 项目，迁移到官方最新推荐的 laravel sail 开发环境中。下面我分享一下我的操作方法。 在文章开始之前，我们默认大家均已拥有一个 homestead 开发环境，且你也是在其之上本地开发多次的开发者，而且你的需求是将你的 homestead 开发环境转换成 laravel sail，希望借助 docker 技术来提升系统的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="（更新中）将 homestead 中的项目迁移到 laravel sail 中进行开发">
 <meta property="og:url" content="https://nightingalewk.cn/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/index.html">
@@ -20,47 +21,53 @@
 <meta property="article:tag" content="laravel sail">
 <meta name="twitter:card" content="summary">
     
-    
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>（更新中）将 homestead 中的项目迁移到 laravel sail 中进行开发</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            （更新中）将 homestead 中的项目迁移到 laravel sail 中进行开发
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
 
 
-    <!-- Umami Analytics -->
+                                                            <!-- Umami Analytics -->
 
 
-    <!-- styles -->
-    
+                                                              <!-- styles -->
+                                                              
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
-    
-	<!-- mathjax -->
-	
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">

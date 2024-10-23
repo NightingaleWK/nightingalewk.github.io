@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="前置准备工作本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置 1. 初始化 root 账户密码一行指令即可实现，其中需要输入两次密码，自己要记住。 1sudo passwd root  即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。 2. 更新系统目的是确保系统">
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="前置准备工作本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置 1. 初始化 root 账户密码一行指令即可实现，其中需要输入两次密码，自己要记住。 1sudo passwd root  即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。 2. 更新系统目的是确保系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从 0 开始部署 LNMP 生产环境">
 <meta property="og:url" content="https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/index.html">
@@ -19,47 +20,53 @@
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
     
-    
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>从 0 开始部署 LNMP 生产环境</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            从 0 开始部署 LNMP 生产环境
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
 
 
-    <!-- Umami Analytics -->
+                                                            <!-- Umami Analytics -->
 
 
-    <!-- styles -->
-    
+                                                              <!-- styles -->
+                                                              
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
-    
-	<!-- mathjax -->
-	
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">

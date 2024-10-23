@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=zh>
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。 最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。">
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。 最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sshpass 中使用 awk 的坑">
 <meta property="og:url" content="https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/index.html">
@@ -20,47 +21,53 @@
 <meta property="article:tag" content="awk">
 <meta name="twitter:card" content="summary">
     
-    
       
         
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>sshpass 中使用 awk 的坑</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            sshpass 中使用 awk 的坑
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
 
 
-    <!-- Umami Analytics -->
+                                                            <!-- Umami Analytics -->
 
 
-    <!-- styles -->
-    
+                                                              <!-- styles -->
+                                                              
 <link rel="stylesheet" href="/css/style.css">
 
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-      <link rel="alternate" href="/true" title="雪漫城的风宅" type="application/atom+xml" />
-    
-	<!-- mathjax -->
-	
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
 <meta name="generator" content="Hexo 7.3.0"></head>
-
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
