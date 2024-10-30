@@ -765,6 +765,31 @@
     
     
     <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -784,31 +809,6 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
             
         </tags>
       
@@ -1268,11 +1268,11 @@
     
     
     <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      <title>laravel 项目部署到服务器的流程</title>
+      <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
+      <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="新建虚拟站点"><a href="#新建虚拟站点" class="headerlink" title="新建虚拟站点"></a>新建虚拟站点</h1><p>进入到 oneinstack 根目录，输入 <code>./vhost</code> 新建虚拟主机，在开始之前首先申请好指向本测试服务器的域名，ssl 证书可使用 oneinstack 自动生成并自动续期，一路完成后会有如下提示即可</p><p>&#x2F;&#x2F; #######################################################################<br>&#x2F;&#x2F; #       OneinStack for CentOS&#x2F;RedHat 6+ Debian 8+ and Ubuntu 14+      #<br>&#x2F;&#x2F; #       For more information please visit <a href="https://oneinstack.com/">https://oneinstack.com</a>      #<br>&#x2F;&#x2F; #######################################################################<br>&#x2F;&#x2F; Your domain:                  yanji.wkarrow.top<br>&#x2F;&#x2F; Virtualhost conf:             &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;vhost&#x2F;yanji.wkarrow.top.conf<br>&#x2F;&#x2F; Directory of:                 &#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top<br>&#x2F;&#x2F; Rewrite rule:                 &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;rewrite&#x2F;laravel.conf<br>&#x2F;&#x2F; Let’s Encrypt SSL Certificate:&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;ssl&#x2F;yanji.wkarrow.top.crt<br>&#x2F;&#x2F; SSL Private Key:              &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;ssl&#x2F;yanji.wkarrow.top.key</p><h1 id="git-clone-拷贝线上仓库数据到本地"><a href="#git-clone-拷贝线上仓库数据到本地" class="headerlink" title="git clone 拷贝线上仓库数据到本地"></a>git clone 拷贝线上仓库数据到本地</h1><p>cd 到 <code>/date/wwwroot/yanji.wkarrow.top</code> 目录中，执行<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer update</span><br><span class="line">php artisan key:generate</span><br></pre></td></tr></table></figure></p><h1 id="修改-env-文件"><a href="#修改-env-文件" class="headerlink" title="修改 .env 文件"></a>修改 .env 文件</h1><p>在项目根目录下执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp .env.example .env</span><br></pre></td></tr></table></figure><p>之后 <code>vim .env</code> 配置站点数据</p><h1 id="修改站点权限"><a href="#修改站点权限" class="headerlink" title="修改站点权限"></a>修改站点权限</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 yanji.wkarrow.top</span><br><span class="line">chown -R www-data:www-data yanji.wkarrow.top</span><br><span class="line"></span><br><span class="line">cd yanji,wkarrow.top</span><br><span class="line">chgrp -R www storage bootstrap/cache</span><br><span class="line">chmod -R ug+rwx storage bootstrap/cache</span><br></pre></td></tr></table></figure><h1 id="修改-nginx-配置"><a href="#修改-nginx-配置" class="headerlink" title="修改 nginx 配置"></a>修改 nginx 配置</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/conf/vhost</span><br><span class="line">vim yanji.wkarrow.top.conf</span><br><span class="line">service nginx restart</span><br></pre></td></tr></table></figure><h1 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h1><p>前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库</p><h1 id="数据库迁移"><a href="#数据库迁移" class="headerlink" title="数据库迁移"></a>数据库迁移</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1284,7 +1284,7 @@
       
         <tags>
             
-            <tag> 代码更新 </tag>
+            <tag> 代码部署 </tag>
             
             <tag> oneinstack </tag>
             
@@ -1322,11 +1322,11 @@
     
     
     <entry>
-      <title>laravel 项目部署到服务器的流程</title>
-      <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
-      <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
       
-        <content type="html"><![CDATA[<h1 id="新建虚拟站点"><a href="#新建虚拟站点" class="headerlink" title="新建虚拟站点"></a>新建虚拟站点</h1><p>进入到 oneinstack 根目录，输入 <code>./vhost</code> 新建虚拟主机，在开始之前首先申请好指向本测试服务器的域名，ssl 证书可使用 oneinstack 自动生成并自动续期，一路完成后会有如下提示即可</p><p>&#x2F;&#x2F; #######################################################################<br>&#x2F;&#x2F; #       OneinStack for CentOS&#x2F;RedHat 6+ Debian 8+ and Ubuntu 14+      #<br>&#x2F;&#x2F; #       For more information please visit <a href="https://oneinstack.com/">https://oneinstack.com</a>      #<br>&#x2F;&#x2F; #######################################################################<br>&#x2F;&#x2F; Your domain:                  yanji.wkarrow.top<br>&#x2F;&#x2F; Virtualhost conf:             &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;vhost&#x2F;yanji.wkarrow.top.conf<br>&#x2F;&#x2F; Directory of:                 &#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top<br>&#x2F;&#x2F; Rewrite rule:                 &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;rewrite&#x2F;laravel.conf<br>&#x2F;&#x2F; Let’s Encrypt SSL Certificate:&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;ssl&#x2F;yanji.wkarrow.top.crt<br>&#x2F;&#x2F; SSL Private Key:              &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;ssl&#x2F;yanji.wkarrow.top.key</p><h1 id="git-clone-拷贝线上仓库数据到本地"><a href="#git-clone-拷贝线上仓库数据到本地" class="headerlink" title="git clone 拷贝线上仓库数据到本地"></a>git clone 拷贝线上仓库数据到本地</h1><p>cd 到 <code>/date/wwwroot/yanji.wkarrow.top</code> 目录中，执行<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer update</span><br><span class="line">php artisan key:generate</span><br></pre></td></tr></table></figure></p><h1 id="修改-env-文件"><a href="#修改-env-文件" class="headerlink" title="修改 .env 文件"></a>修改 .env 文件</h1><p>在项目根目录下执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp .env.example .env</span><br></pre></td></tr></table></figure><p>之后 <code>vim .env</code> 配置站点数据</p><h1 id="修改站点权限"><a href="#修改站点权限" class="headerlink" title="修改站点权限"></a>修改站点权限</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 yanji.wkarrow.top</span><br><span class="line">chown -R www-data:www-data yanji.wkarrow.top</span><br><span class="line"></span><br><span class="line">cd yanji,wkarrow.top</span><br><span class="line">chgrp -R www storage bootstrap/cache</span><br><span class="line">chmod -R ug+rwx storage bootstrap/cache</span><br></pre></td></tr></table></figure><h1 id="修改-nginx-配置"><a href="#修改-nginx-配置" class="headerlink" title="修改 nginx 配置"></a>修改 nginx 配置</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx/conf/vhost</span><br><span class="line">vim yanji.wkarrow.top.conf</span><br><span class="line">service nginx restart</span><br></pre></td></tr></table></figure><h1 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h1><p>前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库</p><h1 id="数据库迁移"><a href="#数据库迁移" class="headerlink" title="数据库迁移"></a>数据库迁移</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1342,7 +1342,7 @@
             
             <tag> lnmp </tag>
             
-            <tag> 代码部署 </tag>
+            <tag> 代码更新 </tag>
             
         </tags>
       
@@ -1401,31 +1401,6 @@
     
     
     <entry>
-      <title>秘制特色鸡蛋</title>
-      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
-      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
-      
-        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 美食 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 热菜 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>西红柿土豆丁浓汤</title>
       <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
       <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
@@ -1443,6 +1418,31 @@
         <tags>
             
             <tag> 汤 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>秘制特色鸡蛋</title>
+      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
+      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美食 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 热菜 </tag>
             
         </tags>
       
