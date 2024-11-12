@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;lnmp&#34; category</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2024-10-10T01:00:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</id>
+        <title>从 0 开始部署 LNMP 生产环境</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/"/>
+        <content type="html">&lt;h2 id=&#34;前置准备工作&#34;&gt;&lt;a href=&#34;#前置准备工作&#34; class=&#34;headerlink&#34; title=&#34;前置准备工作&#34;&gt;&lt;/a&gt;前置准备工作&lt;/h2&gt;&lt;p&gt;本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置&lt;/p&gt;
+&lt;h2 id=&#34;1-初始化-root-账户密码&#34;&gt;&lt;a href=&#34;#1-初始化-root-账户密码&#34; class=&#34;headerlink&#34; title=&#34;1. 初始化 root 账户密码&#34;&gt;&lt;/a&gt;1. 初始化 root 账户密码&lt;/h2&gt;&lt;p&gt;一行指令即可实现，其中需要输入两次密码，自己要记住。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。&lt;/p&gt;
+&lt;h2 id=&#34;2-更新系统&#34;&gt;&lt;a href=&#34;#2-更新系统&#34; class=&#34;headerlink&#34; title=&#34;2. 更新系统&#34;&gt;&lt;/a&gt;2. 更新系统&lt;/h2&gt;&lt;p&gt;目的是确保系统的所有软件包都是最新的。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt update &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt upgrade -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;其中，-y 是 apt upgrade 命令中的一个选项，它的作用是自动回答 “yes”（是） 以确认安装或升级过程中的所有提示。&lt;/p&gt;
+&lt;h2 id=&#34;3-安装-Nginx&#34;&gt;&lt;a href=&#34;#3-安装-Nginx&#34; class=&#34;headerlink&#34; title=&#34;3. 安装 Nginx&#34;&gt;&lt;/a&gt;3. 安装 Nginx&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install nginx -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;安装完成后，可以使用以下命令检查 Nginx 是否已经正确启动：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl status nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;访问服务器的 IP 地址（例如：&lt;a href=&#34;http://your_server_ip),你应该能看到/&#34;&gt;http://your_server_ip），你应该能看到&lt;/a&gt; Nginx 的默认页面。&lt;/p&gt;
+&lt;h2 id=&#34;4-安装-MySQL&#34;&gt;&lt;a href=&#34;#4-安装-MySQL&#34; class=&#34;headerlink&#34; title=&#34;4. 安装 MySQL&#34;&gt;&lt;/a&gt;4. 安装 MySQL&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install mysql-server -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;安装完成后，执行以下命令对 MySQL 进行安全性设置：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql_secure_installation&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;完成后，登录 MySQL 检查：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证&#34;&gt;&lt;a href=&#34;#4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证&#34; class=&#34;headerlink&#34; title=&#34;4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证&#34;&gt;&lt;/a&gt;4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证&lt;/h2&gt;&lt;p&gt;在新的 MySQL 版本中，root 用户默认使用 auth_socket 插件进行身份验证，这意味着只有在系统中以 root 或 sudo 权限运行的用户才可以登录 MySQL，而无需密码。&lt;/p&gt;
+&lt;p&gt;但是这个机制不是我们需要的，如果不为 MySQL 的 root 用户设置密码，Laravel 将无法通过默认的 DB_USERNAME&amp;#x3D;root 和 DB_PASSWORD 来连接到数据库。因为 Laravel 的数据库连接需要使用传统的用户名和密码进行身份验证，而不是通过 auth_socket 插件的方式。&lt;/p&gt;
+&lt;p&gt;为了确保 Laravel 能够成功连接 MySQL 数据库，需要按照以下步骤操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 MySQL：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;查看 root 用户的身份验证插件：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;user&lt;/span&gt;, host, plugin &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; mysql.user;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;检查 root 用户的 plugin 是否为 auth_socket。&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;设置 root 用户的密码，并将身份验证插件更改为 mysql_native_password（或者 caching_sha2_password）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;USER&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;root&amp;#x27;&lt;/span&gt;@&lt;span class=&#34;string&#34;&gt;&amp;#x27;localhost&amp;#x27;&lt;/span&gt; IDENTIFIED &lt;span class=&#34;keyword&#34;&gt;WITH&lt;/span&gt; mysql_native_password &lt;span class=&#34;keyword&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;your_new_password&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;或者使用 caching_sha2_password 插件：&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;USER&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;root&amp;#x27;&lt;/span&gt;@&lt;span class=&#34;string&#34;&gt;&amp;#x27;localhost&amp;#x27;&lt;/span&gt; IDENTIFIED &lt;span class=&#34;keyword&#34;&gt;WITH&lt;/span&gt; caching_sha2_password &lt;span class=&#34;keyword&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;your_new_password&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;小课堂：MySQL 8.0 及之后的版本中，mysql_native_password 和 caching_sha2_password 是 MySQL 中两种不同的身份验证插件，它们在安全性和性能上有一定的区别。以下是它们的详细对比：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1. mysql_native_password 插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 概述：mysql_native_password 是 MySQL 较早版本（5.7 及以前）中的默认身份验证插件，它通过哈希算法（SHA1）加密用户密码，并用于验证用户身份。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 优点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 兼容性好：与 MySQL 早期版本、PHP 及其他数据库驱动程序（如 PDO、MySQLi）都有很好的兼容性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 配置简单：不需要额外的密码加密设置，容易理解和使用。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 缺点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 安全性较低：使用 SHA1 作为哈希算法，而 SHA1 已被证明存在安全漏洞，因此使用该插件的密码容易受到彩虹表攻击和其他哈希破解技术的攻击。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 适用场景：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 与旧版本 MySQL 或旧版本客户端程序的兼容性需求。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 出于兼容性考虑，推荐在低风险环境或开发环境中使用。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. caching_sha2_password 插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 概述：caching_sha2_password 是 MySQL 8.0 及之后的默认身份验证插件，使用更安全的 SHA-256 哈希算法来加密密码，并带有密码缓存功能，可以提高身份验证的效率。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 优点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 更高的安全性：SHA-256 比 SHA1 更强大，能够更好地抵御暴力破解和其他类型的密码攻击。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 提高性能：使用了客户端和服务器的身份验证缓存机制，可以减少重复身份验证时的性能开销，提升性能表现。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 加密连接：支持加密连接（TLS/SSL），在不安全的网络中也可以保证传输中的数据安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    缺点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 兼容性问题：由于 caching_sha2_password 是 MySQL 8.0 中引入的新插件，因此可能与旧版本的 MySQL 客户端和驱动程序不兼容。例如：一些旧版本的 PHP 和 MySQLi 扩展可能无法直接连接到使用 caching_sha2_password 插件的 MySQL 数据库。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 适用场景：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 强安全性需求：在生产环境中，推荐使用 caching_sha2_password 来确保数据安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 高性能需求：由于缓存机制的存在，适用于高并发和频繁数据库访问的场景。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;在选择建议方面：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1. 兼容性优先时使用 mysql_native_password：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 如果你的 Laravel 项目、PHP 版本较旧（例如 PHP 7.x），或者使用了旧的 MySQL 客户端库（如 MySQLi），可能会遇到 caching_sha2_password 不兼容的问题。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 在这种情况下，可以选择 mysql_native_password 作为过渡解决方案，以保证 Laravel 项目能够正常连接到数据库。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. 安全性优先时使用 caching_sha2_password：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 在生产环境中，如果你的 Laravel 项目、PHP 版本以及 MySQL 客户端均支持 MySQL 8.0 及以上，并且支持 caching_sha2_password 插件，建议使用该插件以提高密码安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 另外，如果需要使用 SSL/TLS 加密的连接，也建议使用 caching_sha2_password。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这里我选择的是 &lt;strong&gt;caching_sha2_password&lt;/strong&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;刷新权限表：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FLUSH PRIVILEGES;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;退出 MySQL：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;exit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;验证 root 密码是否生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql -u root -p&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;5-安装-PHP&#34;&gt;&lt;a href=&#34;#5-安装-PHP&#34; class=&#34;headerlink&#34; title=&#34;5. 安装 PHP&#34;&gt;&lt;/a&gt;5. 安装 PHP&lt;/h2&gt;&lt;p&gt;安装 PHP 及其扩展：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install php-fpm php-mysql php-cli php-xml php-mbstring php-curl php-zip php-gd php-imagick -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;截稿时最新版本为 8.3&lt;/p&gt;
+&lt;p&gt;配置 PHP-FPM： 编辑 PHP 配置文件 php.ini：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; vim /etc/php/8.3/fpm/php.ini&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;确保以下参数值正确（如果没有则手动添加或修改）：&lt;/p&gt;
+&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;cgi.fix_pathinfo&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;memory_limit&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;512&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;upload_max_filesize&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;post_max_size&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;max_execution_time&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;300&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;重启 PHP-FPM 服务：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl restart php8.3-fpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;6-配置-Nginx-以支持-PHP&#34;&gt;&lt;a href=&#34;#6-配置-Nginx-以支持-PHP&#34; class=&#34;headerlink&#34; title=&#34;6. 配置 Nginx 以支持 PHP&#34;&gt;&lt;/a&gt;6. 配置 Nginx 以支持 PHP&lt;/h2&gt;&lt;p&gt;创建一个新的 Nginx 配置文件，或者修改默认的配置文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; vim /etc/nginx/sites-available/laravel&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;在文件中添加以下内容（确保与 Laravel 项目目录匹配）：&lt;/p&gt;
+&lt;figure class=&#34;highlight nginx&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;server&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;80&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;server_name&lt;/span&gt; your_domain_or_ip;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;root&lt;/span&gt; /var/www/laravel/public;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;index&lt;/span&gt; index.php index.html index.htm;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;try_files&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;$uri&lt;/span&gt;/ /index.php?&lt;span class=&#34;variable&#34;&gt;$query_string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;regexp&#34;&gt;~ \.php$&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;include&lt;/span&gt; snippets/fastcgi-php.conf;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;fastcgi_pass&lt;/span&gt; unix:/var/run/php/php8.1-fpm.sock;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;fastcgi_param&lt;/span&gt; SCRIPT_FILENAME &lt;span class=&#34;variable&#34;&gt;$document_root&lt;/span&gt;&lt;span class=&#34;variable&#34;&gt;$fastcgi_script_name&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;include&lt;/span&gt; fastcgi_params;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;regexp&#34;&gt;~ /\.ht&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;deny&lt;/span&gt; all;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;启用此配置文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;ln&lt;/span&gt; -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;检查 Nginx 配置语法：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; nginx -t&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;重启 Nginx：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl restart nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;安装-Composer&#34;&gt;&lt;a href=&#34;#安装-Composer&#34; class=&#34;headerlink&#34; title=&#34;安装 Composer&#34;&gt;&lt;/a&gt;安装 Composer&lt;/h2&gt;&lt;p&gt;全局安装 Composer：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -sS https://getcomposer.org/installer | php&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; composer.phar /usr/local/bin/composer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;验证：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;完事儿&#34;&gt;&lt;a href=&#34;#完事儿&#34; class=&#34;headerlink&#34; title=&#34;完事儿&#34;&gt;&lt;/a&gt;完事儿&lt;/h2&gt;&lt;p&gt;至此，一个崭新的 LNMP 环境就配置好了，下一篇文章我将继续介绍如何在此基础上部署一个 Laravel 项目。&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <updated>2024-10-10T01:00:00.000Z</updated>
+    </entry>
+</feed>

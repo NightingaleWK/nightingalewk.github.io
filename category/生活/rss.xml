@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;生活&#34; category</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 08 Dec 2020 12:26:00 +0800</pubDate>
+        <lastBuildDate>Tue, 08 Dec 2020 12:26:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/12/08/11.%20%E9%9D%99%E7%94%B5%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
+            <title>静电导致电脑无法开机问题记录</title>
+            <link>https://nightingalewk.cn/2020/12/08/11.%20%E9%9D%99%E7%94%B5%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</link>
+            <category>电脑维修</category>
+            <pubDate>Tue, 08 Dec 2020 12:26:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;现象&#34;&gt;&lt;a href=&#34;#现象&#34; class=&#34;headerlink&#34; title=&#34;现象&#34;&gt;&lt;/a&gt;现象&lt;/h2&gt;&lt;p&gt;今天早上起床开机，电脑运行，但是显示器无画面，体现为无信号传输到显示器上，通过控制变量法排除问题，最终预估是显卡或者主板的事情，故保修 Dell 售后，其后电脑断电放置一边等待明天上门的更换&lt;/p&gt;
+&lt;p&gt;随后一段时间，工程师来电让我再测试一次，结果电脑居然顺利的开机并显示画面&lt;/p&gt;
+&lt;h2 id=&#34;解决&#34;&gt;&lt;a href=&#34;#解决&#34; class=&#34;headerlink&#34; title=&#34;解决&#34;&gt;&lt;/a&gt;解决&lt;/h2&gt;&lt;p&gt;冬季干燥，地暖高温，导致室内湿度低温度高，很容易产生静电，以致电脑无法开机&lt;/p&gt;
+&lt;p&gt;冬季在屋子里注意适度温度，打开加湿器保证室内湿度，防止静电对电子元件的干扰和损伤&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

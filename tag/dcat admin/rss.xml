@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;dcat admin&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 03 Aug 2021 12:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 03 Aug 2021 12:00:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</guid>
+            <title>Dcat-Admin 主题色变更的避坑方法</title>
+            <link>https://nightingalewk.cn/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</link>
+            <category>dcat admin</category>
+            <pubDate>Tue, 03 Aug 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;官方文档里写了如何变变更主题色，文档如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725&#34;&gt;https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当我们使用 &lt;code&gt;homestead&lt;/code&gt; 开发时，运行 &lt;code&gt;php artisan admin:minify orange --color fbbd08 --publish&lt;/code&gt; 会报错，问题大约就是在 &lt;code&gt;windows&lt;/code&gt; 上运行的 &lt;code&gt;homestead&lt;/code&gt; 这样的 &lt;code&gt;linux&lt;/code&gt; 系统，在建立软连接的时候会出错，故我这里改一下教程，按照这样的方式就可以编译通过，达到效果&lt;/p&gt;
+&lt;h2 id=&#34;1-Windows-上的操作&#34;&gt;&lt;a href=&#34;#1-Windows-上的操作&#34; class=&#34;headerlink&#34; title=&#34;1. Windows 上的操作&#34;&gt;&lt;/a&gt;1. Windows 上的操作&lt;/h2&gt;&lt;p&gt;上官网下载 &lt;code&gt;Node.js&lt;/code&gt; 并安装，找到项目文件所在位置，这里我按照默认的规范，位置在 &lt;code&gt;C:\Users\djsyw\code\MyProject&lt;/code&gt; ，之后我们继续寻找 &lt;code&gt;dcat&lt;/code&gt; 的包，在 &lt;code&gt;C:\Users\djsyw\code\MyProject\vendor\dcat\laravel-admin&lt;/code&gt; 这里，我们在这里打开 &lt;code&gt;Terminal&lt;/code&gt; 输入指令 &lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;完成后执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;相对于在 &lt;code&gt;homestead&lt;/code&gt; 里运行 &lt;code&gt;linux Mix&lt;/code&gt; 前端工作流那繁琐操蛋的流程， &lt;code&gt;win&lt;/code&gt;下就很舒心，至此准备工作结束，我们这些操作完成了在 &lt;code&gt;homestead&lt;/code&gt; 上各种报错的环节，这里算是给他提前做好了&lt;/p&gt;
+&lt;h2 id=&#34;2-homestead-上的操作&#34;&gt;&lt;a href=&#34;#2-homestead-上的操作&#34; class=&#34;headerlink&#34; title=&#34;2. homestead 上的操作&#34;&gt;&lt;/a&gt;2. homestead 上的操作&lt;/h2&gt;&lt;p&gt;定位到我们的项目根目录，直接按照教程走，执行命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan admin:minify orange --color fbbd08 --publish&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后会有接下来的显示，这就没问题了&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;➜  yanji git:(master) php artisan admin:minify cecBlue --color 004ea2 --publish&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[cecBlue][#004ea2] npm run production...&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;gt; prod&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;gt; npm run production&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;gt; production&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;gt; cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//这里有很多的 warning 忽略即可（反正没 ERR 就行）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;DONE  Compiled successfully in 27702ms2:32:20 AM&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Asset      Size  Chunks                          Chunk Names&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/adminlte/adminlte.js  29.4 KiB       0  [emitted]               /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/adminlte/adminlte.js.map  83.9 KiB       0  [emitted] [dev]         /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/css/nunito.css  9.83 KiB          [emitted]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/action.js  2.85 KiB       1  [emitted]               /resources/dist/dcat/extra/action&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/action.js.map  10.6 KiB       1  [emitted] [dev]         /resources/dist/dcat/extra/action&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/grid-extend.js  7.65 KiB       2  [emitted]               /resources/dist/dcat/extra/grid-extend&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/grid-extend.js.map  24.7 KiB       2  [emitted] [dev]         /resources/dist/dcat/extra/grid-extend&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/select-table.js  4.79 KiB       3  [emitted]               /resources/dist/dcat/extra/select-table&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/select-table.js.map  18.3 KiB       3  [emitted] [dev]         /resources/dist/dcat/extra/select-table&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/upload.js  24.9 KiB       4  [emitted]               /resources/dist/dcat/extra/upload&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/extra/upload.js.map  74.5 KiB       4  [emitted] [dev]         /resources/dist/dcat/extra/upload&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/js/dcat-app.js  99.1 KiB       5  [emitted]               /resources/dist/dcat/js/dcat-app&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/resources/dist/dcat/js/dcat-app.js.map   192 KiB       5  [emitted] [dev]         /resources/dist/dcat/js/dcat-app&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;resources/dist/adminlte/adminlte-cecBlue.css   656 KiB       0  [emitted]        [big]  /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;resources/dist/dcat/css/dcat-app-cecBlue.css    68 KiB       0  [emitted]               /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;resources/dist/dcat/extra/markdown.css  1.72 KiB       0  [emitted]               /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;resources/dist/dcat/extra/upload.css  6.34 KiB       0  [emitted]               /resources/dist/adminlte/adminlte&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Copied Directory [/vendor/dcat/laravel-admin/resources/dist] To [/public/vendor/dcat-admin]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Publishing complete.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后按照教程就可以了&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"vs code\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "url": "https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "title": "VS Code 使用公钥配合 Remote SSH 登录远程服务器",
+            "date_published": "2022-03-02T09:00:00.000Z",
+            "content_html": "<p>为了随时随地的使用不同设备链接同一个开发环境，也因为电脑赢弱的性能带不动开发环境，我决定使用远端开发的思路，于是就有了如何免密访问服务器的方案</p>\n<span id=\"more\"></span>\n\n<h1 id=\"1-生成公钥私钥\"><a href=\"#1-生成公钥私钥\" class=\"headerlink\" title=\"1.生成公钥私钥\"></a>1.生成公钥私钥</h1><p><code>ssh-keygen -t rsa</code> 生成密钥，想安全级别更高 <code>ssh-keygen -b 4096 -t rsa</code></p>\n<p>其中，生成的公钥保存在 <code>.ssh/id_rsa</code> ,私钥在 <code>.ssh/id_rsa.pub</code></p>\n<h1 id=\"2-上传公钥到远程服务器\"><a href=\"#2-上传公钥到远程服务器\" class=\"headerlink\" title=\"2.上传公钥到远程服务器\"></a>2.上传公钥到远程服务器</h1><p>执行 <code>vim /etc/ssh/sshd_config</code> ，确保以下三项是这个样子的，没有的可以自己加进去</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">RSAAuthentication yes</span><br><span class=\"line\">PubkeyAuthentication yes</span><br><span class=\"line\">AuthorizedKeysFile .ssh/authorized_keys</span><br></pre></td></tr></table></figure>\n<p>然后 <code>service sshd restart</code> 重启 ssh 服务</p>\n<p>在本地打开 git bash 输入 <code>ssh-copy-id user@host</code>，该指令将实现公钥上传到远程服务器的 .ssh&#x2F;authorized_keys 的功能</p>\n<p>至此，本地电脑访问远程服务器就不需要密码了</p>\n",
+            "tags": [
+                "vs code"
+            ]
+        }
+    ]
+}

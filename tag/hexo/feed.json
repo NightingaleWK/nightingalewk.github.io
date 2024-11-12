@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"hexo\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/",
+            "url": "https://nightingalewk.cn/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/",
+            "title": "Hexo 博客升级流程",
+            "date_published": "2021-08-09T04:00:00.000Z",
+            "content_html": "<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p>\n<p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p>\n<p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p>\n<p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>\n",
+            "tags": [
+                "hexo"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2020/11/30/10.%20Hexo%20%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/",
+            "url": "https://nightingalewk.cn/2020/11/30/10.%20Hexo%20%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/",
+            "title": "Hexo 部署阿里云服务器教程",
+            "date_published": "2020-11-30T10:14:00.000Z",
+            "content_html": "<h2 id=\"起因\"><a href=\"#起因\" class=\"headerlink\" title=\"起因\"></a>起因</h2><p>我个人的网站都是部署在 Coding pages 服务上，免费够用还方便，之后呢， Coding 被腾讯云收编了，我心思应该不会对我有啥影响吧，而且我还心思 Coding 的静态服务应该在腾讯云的加持下，体验应该更进一步</p>\n<p>但是，<strong>腾讯云不讲武德，来，骗，来，偷袭，我一个老 Coding 用户</strong>，具体做法就是提示我 Coding 的免费静态网站服务现在需要强制升级到腾讯云静态网页服务，问题就在于后者是 <strong>收费</strong> 的，其实是一些 CDN 流量和存储空间等未来存在收费的可能性</p>\n<p>这就很操蛋了，反正你腾讯云这给我花里胡哨的，那么👴说撤就撤，立刻将 Hexo 部署到我的私有服务器上，不和你逼逼赖赖的，多一事不如少一事，省心</p>\n<h2 id=\"步骤\"><a href=\"#步骤\" class=\"headerlink\" title=\"步骤\"></a>步骤</h2><p>我说一下我的服务器环境：阿里云的 ECS 服务器，Ubuntu 18.04，使用 Oneinstack 部署了 LNMP 环境，并且为我的网站建立了一个虚拟主机，Hexo 生成的静态文件也就放在这个虚拟主机里，并使用网址访问，全站强制转 HTTPS</p>\n<p>根据官方文档来就行，具体如下 <a href=\"https://hexo.io/zh-cn/docs/one-command-deployment\">https://hexo.io/zh-cn/docs/one-command-deployment</a></p>\n<p>其中，这里我选择的部署方式是 <strong>SFTP</strong>，我只把我的配置文件贴一下，方便日后查阅</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">deploy:</span><br><span class=\"line\">  type: sftp</span><br><span class=\"line\">  host: 10.10.10.10  //远端服务器 IP</span><br><span class=\"line\">  user: MaBaoGuo</span><br><span class=\"line\">  pass: MaBaoGuo666</span><br><span class=\"line\">  remotePath: /data/wwwroot/www.mabaoguo.com</span><br><span class=\"line\">  port: 22</span><br></pre></td></tr></table></figure>\n<p>我省略了一些文档里的键值，用不上，我这样就可以用，没问题</p>\n<p>之后再本地执行 <code>hexo clean &amp;&amp; hexo g -d</code> 即可将站点推送到服务器上</p>\n",
+            "tags": [
+                "hexo"
+            ]
+        }
+    ]
+}

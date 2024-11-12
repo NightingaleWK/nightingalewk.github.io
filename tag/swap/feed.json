@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"swap\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/",
+            "url": "https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/",
+            "title": "解决 swap 占用过高的问题",
+            "date_published": "2022-09-15T08:56:00.000Z",
+            "content_html": "<p>公司某项目有 2 个机子的 swap 占满了，监控他们的 zabbix 平台一直提示高占用，于是开始着手解决一下这个问题。</p>\n<p>首先我们释放 swap 存储的文件导内存</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">Swapoff –a</span><br></pre></td></tr></table></figure>\n<p>接下来我们将需要新建一个更大的swap交换空间</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">cd /var</span><br><span class=\"line\">sudo mkdir swap</span><br><span class=\"line\">sudo dd if=/dev/zero of=swapfile bs=1024 count=4000000</span><br><span class=\"line\">sudo mkswap swapfile</span><br></pre></td></tr></table></figure>\n<p>之后添加自动挂载</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">vi /etc/fstab</span><br><span class=\"line\"></span><br><span class=\"line\">最后添加如下信息</span><br><span class=\"line\"></span><br><span class=\"line\">/var/swapfile   swap  swap  defaults  0  0</span><br></pre></td></tr></table></figure>\n<p>至此操作结束</p>\n",
+            "tags": [
+                "swap"
+            ]
+        }
+    ]
+}

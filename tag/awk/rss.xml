@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;awk&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 30 Aug 2022 14:20:00 +0800</pubDate>
+        <lastBuildDate>Tue, 30 Aug 2022 14:20:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</guid>
+            <title>sshpass 中使用 awk 的坑</title>
+            <link>https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</link>
+            <category>sshppass</category>
+            <category>awk</category>
+            <pubDate>Tue, 30 Aug 2022 14:20:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。&lt;/p&gt;
+&lt;p&gt;最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;原语句：&lt;code&gt;free -m | sed -n &amp;#39;2p&amp;#39; | awk &amp;#39;&amp;#123;print &amp;quot;Mem used is &amp;quot;$3/$2*100&amp;#125;&amp;#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;想在 sshpass 中执行正确，就应该把 &lt;code&gt;&amp;amp;&lt;/code&gt; 转义，在其前面加上 &lt;code&gt;\&lt;/code&gt; 即可，最终结果为：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sshpass -p Password ssh root@192.168.1.1 &amp;quot;free -m | sed -n &amp;#x27;2p&amp;#x27; | awk &amp;#x27;&amp;#123;print &amp;quot;Mem used is &amp;quot;\$3/\$2*100&amp;#125;&amp;#x27;&amp;quot; &amp;gt;&amp;gt;test.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

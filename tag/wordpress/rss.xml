@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;wordpress&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 25 Nov 2020 18:23:00 +0800</pubDate>
+        <lastBuildDate>Wed, 25 Nov 2020 18:23:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/25/9.%20Wordpress%20%E5%BF%85%E8%A3%85%E6%8F%92%E4%BB%B6/</guid>
+            <title>Wordpress 必装插件</title>
+            <link>https://nightingalewk.cn/2020/11/25/9.%20Wordpress%20%E5%BF%85%E8%A3%85%E6%8F%92%E4%BB%B6/</link>
+            <category>wordpress</category>
+            <pubDate>Wed, 25 Nov 2020 18:23:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;对 Wordpress 的使用过程中，总结了一套我认为比较不错，建站必装的插件，在此仅提供非常必须的插件列表，那些满足个人需求的我就没必要整理了&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wp-china.org/&#34;&gt;&lt;strong&gt;WP-China-Yes&lt;/strong&gt;&lt;/a&gt; - 将你的 WordPress 接入本土生态体系中，这将为你提供一个更贴近中国人使用习惯的 WordPress&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;没错，&lt;strong&gt;就一个&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我对 Worpdress 的使用，是从原生到复杂，最终回归原生，插件多了就是慢，影响性能，并且各种插件给你的选择太多，会扰乱你的想法，让本来很简单的事情复杂，让单纯的写作变得失去本心（这也是我逃离 WP，拥抱 hexo 的原因😀）&lt;/p&gt;
+&lt;p&gt;我需要的，只是解决 WP 本土使用上因网络问题造成的缓慢问题，只要解决这个，我就可以舒适的体验 WP 为我提供的全部功能，进而满足我的需求，那就够了&lt;/p&gt;
+&lt;p&gt;学会“做减法”，会让你又一个更清晰的思维，去专心做对的事情&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/20/5.%20%E8%A7%A3%E5%86%B3%20%E2%80%9CWordPress%20%E9%9C%80%E8%A6%81%E8%AE%BF%E9%97%AE%E6%82%A8%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9D%83%E9%99%90%E2%80%9D%20%E9%97%AE%E9%A2%98/</guid>
+            <title>解决 “WordPress 需要访问您网页服务器的权限” 问题</title>
+            <link>https://nightingalewk.cn/2020/11/20/5.%20%E8%A7%A3%E5%86%B3%20%E2%80%9CWordPress%20%E9%9C%80%E8%A6%81%E8%AE%BF%E9%97%AE%E6%82%A8%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9D%83%E9%99%90%E2%80%9D%20%E9%97%AE%E9%A2%98/</link>
+            <category>wordpress</category>
+            <pubDate>Fri, 20 Nov 2020 15:18:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;解决初次安装 wordpress 报错：“要执行请求的操作，WordPress需要访问您网页服务器的权限。 请输入您的 FTP 登录凭据以继续。 如果您忘记了您的登录凭据（如用户名、密码），请联系您的网站托管商。”的问题&lt;/p&gt;
+&lt;p&gt;问题的本质为服务器的相关权限问题，赋予正确的权限即可，只需如下两行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 755 site.website.top/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www site.website.top/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

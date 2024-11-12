@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;学习笔记&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2021-02-01T04:00:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2021/02/01/14.%20java%20%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+        <title>java 基础学习笔记</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/02/01/14.%20java%20%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+        <content type="html">&lt;h2 id=&#34;1-系统环境配置&#34;&gt;&lt;a href=&#34;#1-系统环境配置&#34; class=&#34;headerlink&#34; title=&#34;1.系统环境配置&#34;&gt;&lt;/a&gt;1.系统环境配置&lt;/h2&gt;&lt;p&gt;共需要添加两个地方，分别为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JAVA_HOME。需要设置为 jdk 的安装目录，如 &lt;code&gt;C:\Program Files\Java\jdk-11.0.10&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;PATH。为其新增一个变量 &lt;code&gt;%JAVA_HOME%\bin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-常用-DOS-指令&#34;&gt;&lt;a href=&#34;#2-常用-DOS-指令&#34; class=&#34;headerlink&#34; title=&#34;2.常用 DOS 指令&#34;&gt;&lt;/a&gt;2.常用 DOS 指令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;dir&lt;/li&gt;
+&lt;li&gt;cd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3-常量&#34;&gt;&lt;a href=&#34;#3-常量&#34; class=&#34;headerlink&#34; title=&#34;3.常量&#34;&gt;&lt;/a&gt;3.常量&lt;/h2&gt;&lt;p&gt;字符串、字符、整数、小数、布尔、空&lt;/p&gt;
+&lt;h2 id=&#34;4-计算机存储单元&#34;&gt;&lt;a href=&#34;#4-计算机存储单元&#34; class=&#34;headerlink&#34; title=&#34;4.计算机存储单元&#34;&gt;&lt;/a&gt;4.计算机存储单元&lt;/h2&gt;&lt;p&gt;1 B（ 字节 ） &amp;#x3D; 8 bit （ 比特位 ）&lt;/p&gt;
+&lt;h2 id=&#34;5-数据类型&#34;&gt;&lt;a href=&#34;#5-数据类型&#34; class=&#34;headerlink&#34; title=&#34;5.数据类型&#34;&gt;&lt;/a&gt;5.数据类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;基本数据类型&lt;ul&gt;
+&lt;li&gt;数值型&lt;ul&gt;
+&lt;li&gt;整数 &lt;ul&gt;
+&lt;li&gt;byte 1&lt;/li&gt;
+&lt;li&gt;short 2&lt;/li&gt;
+&lt;li&gt;int 4 ( 默认 )&lt;/li&gt;
+&lt;li&gt;long 8&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;浮点数 &lt;ul&gt;
+&lt;li&gt;float 4&lt;/li&gt;
+&lt;li&gt;double 8 （ 默认 ）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;字符 &lt;ul&gt;
+&lt;li&gt;char 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;非数值型&lt;ul&gt;
+&lt;li&gt;布尔&lt;ul&gt;
+&lt;li&gt;boolean 1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;引用数据类型&lt;ul&gt;
+&lt;li&gt;类 class&lt;/li&gt;
+&lt;li&gt;接口 interface&lt;/li&gt;
+&lt;li&gt;数组 []&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;防止 long 太大，在数后面加个 L 即可，同理，float 是加 F，对于 float 还有其他的格式 &lt;code&gt;float b = (float) 13.14;&lt;/code&gt; 也可以&lt;/p&gt;
+&lt;h2 id=&#34;6-标识符&#34;&gt;&lt;a href=&#34;#6-标识符&#34; class=&#34;headerlink&#34; title=&#34;6.标识符&#34;&gt;&lt;/a&gt;6.标识符&lt;/h2&gt;&lt;p&gt;由 &lt;strong&gt;数字、字母、下划线和美元符号&lt;/strong&gt; 组成，遵循&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;数字&lt;/strong&gt; 不当开头&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键字&lt;/strong&gt; 不用，（关键字在系统里全是小写，Class 就可以当标识符）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;大小写&lt;/strong&gt; 区分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;命名规范：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;小驼峰。如 &lt;code&gt;myStudentCount&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;大驼峰。如 &lt;code&gt;MyStudentCount&lt;/code&gt;，当仅为一个单词时，首字母大写，如 &lt;code&gt;Fuck&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;小驼峰用于 &lt;strong&gt;方法和变量&lt;/strong&gt;，大驼峰用于 &lt;strong&gt;类&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;7-类型转换&#34;&gt;&lt;a href=&#34;#7-类型转换&#34; class=&#34;headerlink&#34; title=&#34;7.类型转换&#34;&gt;&lt;/a&gt;7.类型转换&lt;/h2&gt;&lt;h3 id=&#34;7-1-自动类型转换&#34;&gt;&lt;a href=&#34;#7-1-自动类型转换&#34; class=&#34;headerlink&#34; title=&#34;7.1 自动类型转换&#34;&gt;&lt;/a&gt;7.1 自动类型转换&lt;/h3&gt;&lt;p&gt;小范围换大范围&lt;/p&gt;
+&lt;p&gt;( ( byte -&amp;gt; short ) or char ) -&amp;gt; int -&amp;gt; long -&amp;gt; float -&amp;gt; double&lt;/p&gt;
+&lt;h3 id=&#34;7-2-强制类型转换&#34;&gt;&lt;a href=&#34;#7-2-强制类型转换&#34; class=&#34;headerlink&#34; title=&#34;7.2 强制类型转换&#34;&gt;&lt;/a&gt;7.2 强制类型转换&lt;/h3&gt;&lt;p&gt;大范围换小范围，上面的流程图反过来即可，如&lt;br&gt;&lt;code&gt;int k = (int)88.88&lt;/code&gt; ，浮点转整数时，小数点后会抹去，数据丢失，不建议使用&lt;/p&gt;
+&lt;h2 id=&#34;8-运算符&#34;&gt;&lt;a href=&#34;#8-运算符&#34; class=&#34;headerlink&#34; title=&#34;8.运算符&#34;&gt;&lt;/a&gt;8.运算符&lt;/h2&gt;&lt;h3 id=&#34;8-1-赋值运算符&#34;&gt;&lt;a href=&#34;#8-1-赋值运算符&#34; class=&#34;headerlink&#34; title=&#34;8.1 赋值运算符&#34;&gt;&lt;/a&gt;8.1 赋值运算符&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;逻辑与 &amp;amp;&lt;/li&gt;
+&lt;li&gt;逻辑或 |&lt;/li&gt;
+&lt;li&gt;逻辑异或 ^ 例如，a^b，ab 结果不同为 true ，否则为 false&lt;/li&gt;
+&lt;li&gt;逻辑非 ！&lt;/li&gt;
+&lt;li&gt;短路与  &amp;amp;&amp;amp;&lt;/li&gt;
+&lt;li&gt;短路非  ||&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;amp;&amp;amp; 和 &amp;amp; 和区别：运算符左右两边，经过判断均为 false，逻辑与和短路与均可报 false，但是逻辑与是执行了左右两边并对其进行比较得到的 false，而3短路与是只比较了左侧的城里，右侧的压根没看，直接看着左面是 false 就直接短路整个语句，输出 false&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;短路与是左边为 false 直接不执行了，左边为真则右边执行&lt;/li&gt;
+&lt;li&gt;短路或是左边为 true 直接不执行了，左边为假则右边执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;8-2-三元运算符&#34;&gt;&lt;a href=&#34;#8-2-三元运算符&#34; class=&#34;headerlink&#34; title=&#34;8.2 三元运算符&#34;&gt;&lt;/a&gt;8.2 三元运算符&lt;/h3&gt;&lt;p&gt;a &amp;gt; b ? a : b&lt;/p&gt;
+&lt;p&gt;关系表达式 ？ 表达式1 ： 表达式2&lt;/p&gt;
+</content>
+        <category term="学习笔记" />
+        <updated>2021-02-01T04:00:00.000Z</updated>
+    </entry>
+</feed>

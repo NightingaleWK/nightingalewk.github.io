@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"screen\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2020/11/23/8.%20%E2%80%9C%20%E5%86%8D%E7%BB%99%E6%88%91%E5%8D%81%E7%A7%92%E5%90%A7%EF%BC%8C%E6%89%98%E5%85%8B%20%E2%80%9D/",
+            "url": "https://nightingalewk.cn/2020/11/23/8.%20%E2%80%9C%20%E5%86%8D%E7%BB%99%E6%88%91%E5%8D%81%E7%A7%92%E5%90%A7%EF%BC%8C%E6%89%98%E5%85%8B%20%E2%80%9D/",
+            "title": "“ 再给我十秒吧，托克 ”",
+            "date_published": "2020-11-23T09:26:00.000Z",
+            "content_html": "<blockquote>\n<p>“ 再给我十秒吧，托克，我还没藏好 ”</p>\n<p>“ 哥哥又耍赖，好吧，最后十秒 … ”</p>\n<p>* 公子苦笑</p>\n</blockquote>\n<p><a href=\"https://cdn.blog.wkarrow.top/posts/TartagliaScreenShot.jpg\"><img src=\"https://cdn.blog.wkarrow.top/posts/TartagliaScreenShot.jpg\"></a></p>\n<p>温暖的家人，亲切的朋友，忠实的手下，狠辣的敌人，他做好了每一个角色</p>\n<p>就冲着这十秒，我把留给钟离的大保底果断的给了达达利亚！</p>\n<p>主线任务中公子就是一个个性鲜明、强的一批的反派，而在魔神任务中，身为”玩具推销员”的他为自己的家人献上了一切，强烈对比下的那份无暇无私的爱，给我直接整泪目了😭</p>\n<p>把反派角色刻画的如此深刻到位，mhy 真有你的啊，又骗我掏钱抽池，👴认了</p>\n<p><strong>至冬国最厉害的玩具销售员，冲鸭！</strong></p>\n",
+            "tags": [
+                "screen"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2020/11/20/7.%20Screen%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/",
+            "url": "https://nightingalewk.cn/2020/11/20/7.%20Screen%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/",
+            "title": "Screen 安装与使用",
+            "date_published": "2020-11-20T04:46:00.000Z",
+            "content_html": "<p>为了保证使用 oneinstack 安装 lnmp 环境稳定不中断，使用 screen 指令可保证安装进程全程在线，不会因为本地 shell 关闭而终止，接下来就简单的记录一下我的实战经验</p>\n<h2 id=\"安装\"><a href=\"#安装\" class=\"headerlink\" title=\"安装\"></a>安装</h2><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">apt install screen   //For ubuntu 20.04</span><br></pre></td></tr></table></figure>\n<h2 id=\"使用\"><a href=\"#使用\" class=\"headerlink\" title=\"使用\"></a>使用</h2><h3 id=\"1-创建会话\"><a href=\"#1-创建会话\" class=\"headerlink\" title=\"1.创建会话\"></a>1.创建会话</h3><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">screen -S lnmp</span><br></pre></td></tr></table></figure>\n<p>离开时，只需要按下 <code>ctrl</code> 并依次按下 <code>a</code> 和 <code>d</code> 即可，会话会继续在后台运行，不受干扰</p>\n<h3 id=\"2-恢复会话\"><a href=\"#2-恢复会话\" class=\"headerlink\" title=\"2.恢复会话\"></a>2.恢复会话</h3><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">screen -r lnmp</span><br></pre></td></tr></table></figure>\n<p>这样就可显示处于后台的会话</p>\n<h2 id=\"示例：安装-lnmp-环境\"><a href=\"#示例：安装-lnmp-环境\" class=\"headerlink\" title=\"示例：安装 lnmp 环境\"></a>示例：安装 lnmp 环境</h2><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">//新建名为 lnmp 的会话</span><br><span class=\"line\">screen -S lnmp</span><br><span class=\"line\"></span><br><span class=\"line\">开始自动化安装 lnmp</span><br><span class=\"line\">wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz &amp;&amp; tar xzf oneinstack-full.tar.gz &amp;&amp; ./oneinstack/install.sh --nginx_option 1 --php_option 9 --phpcache_option 1 --php_extensions imagick,fileinfo,imap,ldap,phalcon,yaf,redis,memcached,memcache,mongodb,swoole --phpmyadmin  --db_option 1 --dbinstallmethod 1 --dbrootpwd Asdf9741 --pureftpd  --redis  --memcached  --reboot </span><br><span class=\"line\"></span><br><span class=\"line\">//离开并将会话后台进行</span><br><span class=\"line\">ctrl + a d</span><br><span class=\"line\"></span><br><span class=\"line\">//查看后台会话</span><br><span class=\"line\">screen -r lnmp</span><br></pre></td></tr></table></figure>\n\n<h2 id=\"相关链接\"><a href=\"#相关链接\" class=\"headerlink\" title=\"相关链接\"></a>相关链接</h2><ul>\n<li><a href=\"https://oneinstack.com/auto/\">Oneinstack 官网</a></li>\n<li><a href=\"https://zhuanlan.zhihu.com/p/26683968\">【知乎】Screen命令安装使用教程（By：魏艾斯博客）</a></li>\n</ul>\n",
+            "tags": [
+                "screen"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;debug&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 28 Mar 2023 08:38:00 +0800</pubDate>
+        <lastBuildDate>Tue, 28 Mar 2023 08:38:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+            <title>解决 .gitignore 无效的问题</title>
+            <link>https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+            <category>debug</category>
+            <pubDate>Tue, 28 Mar 2023 08:38:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;首先确定好需要忽略的文件或文件夹，并加入到 .gitignore 中，然后执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git rm -r --cached .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;update .gitignore&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;若你的另一台机子也需要更新代码，那么他在 git pull 的时候，.gitignore 中你刚才添加的文件和文件夹都会删除，记得重新生成或新建上。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/</guid>
+            <title>发起 laravel 队列任务不生效</title>
+            <link>https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/</link>
+            <category>debug</category>
+            <category>队列</category>
+            <category>redis</category>
+            <pubDate>Wed, 14 Dec 2022 16:48:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;当确定你的代码都没问题，而且队列都在运行，而且是你变动了 job 文件，那很有可能是缓存原因导致的，清理一下&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan cache:clear &amp;amp;&amp;amp; php artisan config:clear &amp;amp;&amp;amp; php artisan route:clear &amp;amp;&amp;amp; php artisan view:clear&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;若是在 laravel sail 开发环境中，修改一下即可使用：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan cache:clear &amp;amp;&amp;amp; sail artisan config:clear &amp;amp;&amp;amp; sail artisan route:clear &amp;amp;&amp;amp; sail artisan view:clear&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;花式清理后就好了&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/04/26/41.%20Target%20Class%20does%20not%20exists%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+            <title>Target Class does not exists 解决方案</title>
+            <link>https://nightingalewk.cn/2022/04/26/41.%20Target%20Class%20does%20not%20exists%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+            <category>debug</category>
+            <pubDate>Tue, 26 Apr 2022 12:45:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;问题情况&#34;&gt;&lt;a href=&#34;#问题情况&#34; class=&#34;headerlink&#34; title=&#34;问题情况&#34;&gt;&lt;/a&gt;问题情况&lt;/h2&gt;&lt;p&gt;在路由里写了一个 API 路由&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Route::prefix(&amp;#x27;v1&amp;#x27;)-&amp;gt;namespace(&amp;#x27;Api&amp;#x27;)-&amp;gt;name(&amp;#x27;api.v1.&amp;#x27;)-&amp;gt;group(function () &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    // 短信验证码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    Route::post(&amp;#x27;verificationCodes&amp;#x27;, [VerificationCodesController::class, &amp;#x27;store&amp;#x27;])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        -&amp;gt;name(&amp;#x27;verificationCodes.store&amp;#x27;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;控制器如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;namespace App\Http\Controllers\Api;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;use Illuminate\Http\Request;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;class VerificationCodesController extends Controller&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    public function store()&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        return response()-&amp;gt;json([&amp;#x27;test_message&amp;#x27; =&amp;gt; &amp;#x27;store verification code&amp;#x27;]);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Postman 以 post 方式访问 &lt;a href=&#34;http://larabbs.test/api/v1/verificationCodes%EF%BC%8C%E6%8A%A5%E9%94%99%EF%BC%9A&#34;&gt;http://larabbs.test/api/v1/verificationCodes，报错：&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Target Class XXXXXXXXX does not exists&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;2-解决方案&#34;&gt;&lt;a href=&#34;#2-解决方案&#34; class=&#34;headerlink&#34; title=&#34;2. 解决方案&#34;&gt;&lt;/a&gt;2. 解决方案&lt;/h2&gt;&lt;p&gt;抛开先入为主的思想，我们一条一条的排查：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;php artisan cache:clear&lt;/li&gt;
+&lt;li&gt;检查命名空间大小写&lt;/li&gt;
+&lt;li&gt;是否有路由组，路由组是否声明了命名空间？&lt;/li&gt;
+&lt;li&gt;在同样的位置注册另一个路由地址，使用其他控制器，是否生效？&lt;/li&gt;
+&lt;li&gt;注释关于 SearchController 的所有相关代码，项目是否正常运行？&lt;/li&gt;
+&lt;li&gt;把 api.php 路由文件的内容全部删除，项目是否正常运行？&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/</guid>
+            <title>个人开发服务器换新啦</title>
+            <link>https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/</link>
+            <category>debug</category>
+            <pubDate>Wed, 22 Sep 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;从大学最后一年到现在，阿里云一直陪伴我走过了风风雨雨，当时毕设部署在上面，自己的 web 应用做测试也在上面，虽然 1C2G 的配置真的拘谨，但是它给我带来的提升是无法衡量的，自从有了个人的服务器后，我才可以完成从开发到部署到运维的全链条学习实战，不管怎么说，感谢有你 ♥&lt;/p&gt;
+&lt;p&gt;可惜的是，当年服务器是用学生价格买的，一年就 100 多点，现在毕业了，到期续费得几大百元，这就难顶了，于是就萌生换服务器的想法&lt;/p&gt;
+&lt;p&gt;腾讯云可以申请轻量应用服务器，相比云服务器没啥区别。我现在个人就是两个需求。一个是我的 web 应用需要测试服务器，一个是我的这个站点（HEXO 框架）需要线上服务器，那么对性能要求就没那么大，看着便宜，一口气 3 百块钱买了三年，配置还是 1C2G 但是带宽从当时的 1M 小水管升级到 6M 小水管，好吧，好像还是那个鸟样&lt;/p&gt;
+&lt;p&gt;最近几天忙着配置环境，域名迁移，代码部署，服务器设备，现在基本上是告一段落了，工作上做的项目现在都能跑的很舒服，那就行了&lt;/p&gt;
+&lt;p&gt;总之干就完事儿了，在奋斗中不断前行，加油！&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+            <title>ERR_CONNECTION_TIMED_OUT 解决方法</title>
+            <link>https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+            <category>debug</category>
+            <pubDate>Mon, 13 Sep 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;平日正常访问的站点突然无法访问，提示&lt;code&gt;ERR_CONNECTION_TIMED_OUT&lt;/code&gt;，排除服务端的问题后，不如排查一下本地的问题，我们可以清理浏览器各类缓存试试&lt;/p&gt;
+&lt;p&gt;若依旧存在问题，我们可以重置一下系统的网络环境，在&lt;code&gt;CMD&lt;/code&gt;或者&lt;code&gt;PowerShell&lt;/code&gt;下逐次运行以下指令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /renew&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /registerdns&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /flushdns&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /release&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;问题即可解决&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

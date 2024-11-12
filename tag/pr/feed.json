@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"pr\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/",
+            "url": "https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/",
+            "title": "B 站上传视频防压参数",
+            "date_published": "2021-01-21T04:00:00.000Z",
+            "content_html": "<p>使用的是 PR ，这里只记录导出时的参数，自用防忘</p>\n<h2 id=\"导出设置\"><a href=\"#导出设置\" class=\"headerlink\" title=\"导出设置\"></a>导出设置</h2><ul>\n<li>格式：H264</li>\n</ul>\n<h2 id=\"视频\"><a href=\"#视频\" class=\"headerlink\" title=\"视频\"></a>视频</h2><ul>\n<li>宽度：1920</li>\n<li>高度：1080</li>\n<li>帧速率：60</li>\n<li>√ 以最大深度渲染</li>\n<li>比特率编码：VBR，2次</li>\n<li>目标比特率：19</li>\n<li>最大比特率：50</li>\n<li>关键帧距离：72</li>\n</ul>\n<h2 id=\"音频\"><a href=\"#音频\" class=\"headerlink\" title=\"音频\"></a>音频</h2><ul>\n<li>采样率：44100 Hz</li>\n<li>比特率：320</li>\n</ul>\n<h2 id=\"其他\"><a href=\"#其他\" class=\"headerlink\" title=\"其他\"></a>其他</h2><ul>\n<li>√ 使用最高渲染质量</li>\n<li>bilibili 上传助手的单个文件最大 4 GB<br>以上参数注意修改，其他保持默认</li>\n</ul>\n",
+            "tags": [
+                "pr",
+                "bilibili"
+            ]
+        }
+    ]
+}

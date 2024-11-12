@@ -1,0 +1,28 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"wordpress\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2020/11/25/9.%20Wordpress%20%E5%BF%85%E8%A3%85%E6%8F%92%E4%BB%B6/",
+            "url": "https://nightingalewk.cn/2020/11/25/9.%20Wordpress%20%E5%BF%85%E8%A3%85%E6%8F%92%E4%BB%B6/",
+            "title": "Wordpress 必装插件",
+            "date_published": "2020-11-25T10:23:00.000Z",
+            "content_html": "<p>对 Wordpress 的使用过程中，总结了一套我认为比较不错，建站必装的插件，在此仅提供非常必须的插件列表，那些满足个人需求的我就没必要整理了</p>\n<ul>\n<li><a href=\"https://wp-china.org/\"><strong>WP-China-Yes</strong></a> - 将你的 WordPress 接入本土生态体系中，这将为你提供一个更贴近中国人使用习惯的 WordPress</li>\n</ul>\n<p>没错，<strong>就一个</strong></p>\n<p>我对 Worpdress 的使用，是从原生到复杂，最终回归原生，插件多了就是慢，影响性能，并且各种插件给你的选择太多，会扰乱你的想法，让本来很简单的事情复杂，让单纯的写作变得失去本心（这也是我逃离 WP，拥抱 hexo 的原因😀）</p>\n<p>我需要的，只是解决 WP 本土使用上因网络问题造成的缓慢问题，只要解决这个，我就可以舒适的体验 WP 为我提供的全部功能，进而满足我的需求，那就够了</p>\n<p>学会“做减法”，会让你又一个更清晰的思维，去专心做对的事情</p>\n",
+            "tags": [
+                "wordpress"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2020/11/20/5.%20%E8%A7%A3%E5%86%B3%20%E2%80%9CWordPress%20%E9%9C%80%E8%A6%81%E8%AE%BF%E9%97%AE%E6%82%A8%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9D%83%E9%99%90%E2%80%9D%20%E9%97%AE%E9%A2%98/",
+            "url": "https://nightingalewk.cn/2020/11/20/5.%20%E8%A7%A3%E5%86%B3%20%E2%80%9CWordPress%20%E9%9C%80%E8%A6%81%E8%AE%BF%E9%97%AE%E6%82%A8%E7%BD%91%E9%A1%B5%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9D%83%E9%99%90%E2%80%9D%20%E9%97%AE%E9%A2%98/",
+            "title": "解决 “WordPress 需要访问您网页服务器的权限” 问题",
+            "date_published": "2020-11-20T07:18:00.000Z",
+            "content_html": "<p>解决初次安装 wordpress 报错：“要执行请求的操作，WordPress需要访问您网页服务器的权限。 请输入您的 FTP 登录凭据以继续。 如果您忘记了您的登录凭据（如用户名、密码），请联系您的网站托管商。”的问题</p>\n<p>问题的本质为服务器的相关权限问题，赋予正确的权限即可，只需如下两行</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">chmod -R 755 site.website.top/</span><br><span class=\"line\">chown -R www site.website.top/</span><br></pre></td></tr></table></figure>",
+            "tags": [
+                "wordpress"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;指令&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2021-12-15T04:00:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2021/12/15/34.%20laravel%20%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+        <title>laravel 项目常用指令</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/12/15/34.%20laravel%20%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+        <content type="html">&lt;h2 id=&#34;Create-vhost&#34;&gt;&lt;a href=&#34;#Create-vhost&#34; class=&#34;headerlink&#34; title=&#34;Create vhost&#34;&gt;&lt;/a&gt;Create vhost&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd ~/oneinstack&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;./vhost.sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;Git-clone&#34;&gt;&lt;a href=&#34;#Git-clone&#34; class=&#34;headerlink&#34; title=&#34;Git clone&#34;&gt;&lt;/a&gt;Git clone&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git clone &amp;lt;url&amp;gt; .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Create-Edit-env&#34;&gt;&lt;a href=&#34;#Create-Edit-env&#34; class=&#34;headerlink&#34; title=&#34;Create &amp;amp; Edit .env&#34;&gt;&lt;/a&gt;Create &amp;amp; Edit .env&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd &amp;lt;project dir&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mv .env.example .env&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Then,edit it&lt;/p&gt;
+&lt;p&gt;Finally,create a app_key&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Change-file-permission&#34;&gt;&lt;a href=&#34;#Change-file-permission&#34; class=&#34;headerlink&#34; title=&#34;Change file permission&#34;&gt;&lt;/a&gt;Change file permission&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 777 &amp;lt;project dir&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www-data:www-data &amp;lt;project dir&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd &amp;lt;project dir&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chgrp -R www storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod -R ug+rwx storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;Migration（For-Dcat-Admin）&#34;&gt;&lt;a href=&#34;#Migration（For-Dcat-Admin）&#34; class=&#34;headerlink&#34; title=&#34;Migration（For Dcat-Admin）&#34;&gt;&lt;/a&gt;Migration（For Dcat-Admin）&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate:refresh &amp;amp;&amp;amp; php artisan admin:install &amp;amp;&amp;amp; php artisan db:seed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;vagrant&#34;&gt;&lt;a href=&#34;#vagrant&#34; class=&#34;headerlink&#34; title=&#34;vagrant&#34;&gt;&lt;/a&gt;vagrant&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vagrant init	  初始化 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant up	  启动 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant halt  	关闭 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant ssh  	通过 SSH 登录 vagrant（需要先启动 vagrant）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant provision	  重新应用更改 vagrant 配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant destroy	  删除 vagrant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+        <category term="指令" />
+        <updated>2021-12-15T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/11/03/32.%20%E6%96%B0%E5%BB%BA%20laravel%20%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</id>
+        <title>新建 laravel 项目常用指令</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/11/03/32.%20%E6%96%B0%E5%BB%BA%20laravel%20%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/"/>
+        <content type="html">&lt;h2 id=&#34;1-安装-virtual-box&#34;&gt;&lt;a href=&#34;#1-安装-virtual-box&#34; class=&#34;headerlink&#34; title=&#34;1. 安装 virtual box&#34;&gt;&lt;/a&gt;1. 安装 virtual box&lt;/h2&gt;&lt;p&gt;官网下载最新稳定版，安装&lt;/p&gt;
+&lt;h2 id=&#34;2-安装-vagrant&#34;&gt;&lt;a href=&#34;#2-安装-vagrant&#34; class=&#34;headerlink&#34; title=&#34;2. 安装 vagrant&#34;&gt;&lt;/a&gt;2. 安装 vagrant&lt;/h2&gt;&lt;p&gt;官网下载最新稳定版，安装&lt;/p&gt;
+&lt;h2 id=&#34;3-命令行安装-laravel-homestead-box&#34;&gt;&lt;a href=&#34;#3-命令行安装-laravel-homestead-box&#34; class=&#34;headerlink&#34; title=&#34;3. 命令行安装 laravel&amp;#x2F;homestead box&#34;&gt;&lt;/a&gt;3. 命令行安装 laravel&amp;#x2F;homestead box&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vagrant box add laravel/homestead&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;4-在用户目录下新建-code-文件夹&#34;&gt;&lt;a href=&#34;#4-在用户目录下新建-code-文件夹&#34; class=&#34;headerlink&#34; title=&#34;4. 在用户目录下新建 code 文件夹&#34;&gt;&lt;/a&gt;4. 在用户目录下新建 &lt;code&gt;code&lt;/code&gt; 文件夹&lt;/h2&gt;&lt;p&gt;项目以后放这里&lt;/p&gt;
+&lt;h2 id=&#34;5-在用户目录下-git-clone-homestead-文件夹&#34;&gt;&lt;a href=&#34;#5-在用户目录下-git-clone-homestead-文件夹&#34; class=&#34;headerlink&#34; title=&#34;5. 在用户目录下 git clone homestead 文件夹&#34;&gt;&lt;/a&gt;5. 在用户目录下 git clone homestead 文件夹&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git clone https://github.com/laravel/homestead.git Homestead&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;同时进入 Homestead 文件夹下双击 &lt;code&gt;init.bat&lt;/code&gt; 进行初始化&lt;/p&gt;
+&lt;h2 id=&#34;6-配置-homestead&#34;&gt;&lt;a href=&#34;#6-配置-homestead&#34; class=&#34;headerlink&#34; title=&#34;6. 配置 homestead&#34;&gt;&lt;/a&gt;6. 配置 homestead&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;43&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;44&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;45&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;46&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;47&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;48&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;49&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;50&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;51&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;52&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;53&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;54&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;55&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;56&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;57&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;58&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;59&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;60&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ip: &amp;quot;192.168.22.33&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;memory: 4096&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cpus: 4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;provider: virtualbox&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;authorize: ~/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;keys:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - ~/.ssh/id_rsa&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - ~/.ssh/id_rsa.pub&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;folders:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - map: ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      to: /home/vagrant/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sites:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - map: weibo.test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      to: /home/vagrant/code/weibo/public&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - map: larabbs.test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      to: /home/vagrant/code/larabbs/public&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - map: yanji.test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      to: /home/vagrant/code/yanji/public&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - map: jianbing.test&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      to: /home/vagrant/code/jianbing/public&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;databases:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - weibo&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - larabbs&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - yanji&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - jianbing&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;features:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - mysql: true&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - mariadb: false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - postgresql: false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - ohmyzsh: false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - webdriver: false&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;services:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - enabled:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          - &amp;quot;mysql&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - disabled:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#        - &amp;quot;postgresql@11-main&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#ports:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 33060 # MySQL/MariaDB&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 3306&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 4040&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 4040&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 54320 # PostgreSQL&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 5432&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 8025 # Mailhog&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 8025&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 9600&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 9600&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#    - send: 27017&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;#      to: 27017&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;7-修改-host-文件&#34;&gt;&lt;a href=&#34;#7-修改-host-文件&#34; class=&#34;headerlink&#34; title=&#34;7. 修改 host 文件&#34;&gt;&lt;/a&gt;7. 修改 host 文件&lt;/h2&gt;&lt;p&gt;文件位于 C:\Windows\System32\drivers\etc\hosts ，使用 vs code 在文件尾部添加：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;192.168.22.33 homestead.app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;8-启动-homestead&#34;&gt;&lt;a href=&#34;#8-启动-homestead&#34; class=&#34;headerlink&#34; title=&#34;8.启动 homestead&#34;&gt;&lt;/a&gt;8.启动 homestead&lt;/h2&gt;&lt;p&gt;在 Homestead 文件夹下，执行 &lt;code&gt;vagrant up&lt;/code&gt;，其他常用指令如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vagrant init	  //初始化 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant up	  //启动 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant halt	  //关闭 vagrant&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant ssh	  //通过 SSH 登录 vagrant（需要先启动 vagrant）&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant provision	  //重新应用更改 vagrant 配置&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vagrant destroy	   //删除 vagrant&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;9-克隆-larave-初始化项目&#34;&gt;&lt;a href=&#34;#9-克隆-larave-初始化项目&#34; class=&#34;headerlink&#34; title=&#34;9.克隆 larave 初始化项目&#34;&gt;&lt;/a&gt;9.克隆 larave 初始化项目&lt;/h2&gt;&lt;p&gt;在 linux 中，定位到 ~&amp;#x2F;code 目录下，执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer create-project laravel/laravel duanliu&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="指令" />
+        <updated>2021-11-03T04:00:00.000Z</updated>
+    </entry>
+</feed>

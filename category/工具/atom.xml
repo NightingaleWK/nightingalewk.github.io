@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;工具&#34; category</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2022-08-30T06:20:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</id>
+        <title>使用 net time 实现内网时间同步</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+        <content type="html">&lt;p&gt;公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;一、写在前面&#34;&gt;&lt;a href=&#34;#一、写在前面&#34; class=&#34;headerlink&#34; title=&#34;一、写在前面&#34;&gt;&lt;/a&gt;一、写在前面&lt;/h2&gt;&lt;p&gt;首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。&lt;/p&gt;
+&lt;h2 id=&#34;二、具体流程&#34;&gt;&lt;a href=&#34;#二、具体流程&#34; class=&#34;headerlink&#34; title=&#34;二、具体流程&#34;&gt;&lt;/a&gt;二、具体流程&lt;/h2&gt;&lt;p&gt;首先我们保障 B 能 ping 通 A ，网能通是一切的前提。&lt;/p&gt;
+&lt;p&gt;然后我们在 B 上用管理员方式打开 CMD，首先用 &lt;code&gt;net use&lt;/code&gt; 建立于 A 的连接&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;net use \\10.1.112.99 &amp;quot;password&amp;quot; /user:&amp;quot;admin&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;IP 换成那个 A 主机的，账号密码也是 A 的&lt;/p&gt;
+&lt;p&gt;至此我们建立了与 A 的连接，之后我们就可以使用 &lt;code&gt;net time&lt;/code&gt; 来同步时间，具体为&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;net time \\10.1.112.99 /set /y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。&lt;/p&gt;
+</content>
+        <category term="net time" />
+        <updated>2022-08-30T06:20:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
+        <title>VS Code 使用公钥配合 Remote SSH 登录远程服务器</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+        <content type="html">&lt;p&gt;为了随时随地的使用不同设备链接同一个开发环境，也因为电脑赢弱的性能带不动开发环境，我决定使用远端开发的思路，于是就有了如何免密访问服务器的方案&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;1-生成公钥私钥&#34;&gt;&lt;a href=&#34;#1-生成公钥私钥&#34; class=&#34;headerlink&#34; title=&#34;1.生成公钥私钥&#34;&gt;&lt;/a&gt;1.生成公钥私钥&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa&lt;/code&gt; 生成密钥，想安全级别更高 &lt;code&gt;ssh-keygen -b 4096 -t rsa&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中，生成的公钥保存在 &lt;code&gt;.ssh/id_rsa&lt;/code&gt; ,私钥在 &lt;code&gt;.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2-上传公钥到远程服务器&#34;&gt;&lt;a href=&#34;#2-上传公钥到远程服务器&#34; class=&#34;headerlink&#34; title=&#34;2.上传公钥到远程服务器&#34;&gt;&lt;/a&gt;2.上传公钥到远程服务器&lt;/h1&gt;&lt;p&gt;执行 &lt;code&gt;vim /etc/ssh/sshd_config&lt;/code&gt; ，确保以下三项是这个样子的，没有的可以自己加进去&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;RSAAuthentication yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PubkeyAuthentication yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;AuthorizedKeysFile .ssh/authorized_keys&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后 &lt;code&gt;service sshd restart&lt;/code&gt; 重启 ssh 服务&lt;/p&gt;
+&lt;p&gt;在本地打开 git bash 输入 &lt;code&gt;ssh-copy-id user@host&lt;/code&gt;，该指令将实现公钥上传到远程服务器的 .ssh&amp;#x2F;authorized_keys 的功能&lt;/p&gt;
+&lt;p&gt;至此，本地电脑访问远程服务器就不需要密码了&lt;/p&gt;
+</content>
+        <category term="vs code" />
+        <updated>2022-03-02T09:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/</id>
+        <title>B 站上传视频防压参数</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/"/>
+        <content type="html">&lt;p&gt;使用的是 PR ，这里只记录导出时的参数，自用防忘&lt;/p&gt;
+&lt;h2 id=&#34;导出设置&#34;&gt;&lt;a href=&#34;#导出设置&#34; class=&#34;headerlink&#34; title=&#34;导出设置&#34;&gt;&lt;/a&gt;导出设置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;格式：H264&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;视频&#34;&gt;&lt;a href=&#34;#视频&#34; class=&#34;headerlink&#34; title=&#34;视频&#34;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;宽度：1920&lt;/li&gt;
+&lt;li&gt;高度：1080&lt;/li&gt;
+&lt;li&gt;帧速率：60&lt;/li&gt;
+&lt;li&gt;√ 以最大深度渲染&lt;/li&gt;
+&lt;li&gt;比特率编码：VBR，2次&lt;/li&gt;
+&lt;li&gt;目标比特率：19&lt;/li&gt;
+&lt;li&gt;最大比特率：50&lt;/li&gt;
+&lt;li&gt;关键帧距离：72&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;音频&#34;&gt;&lt;a href=&#34;#音频&#34; class=&#34;headerlink&#34; title=&#34;音频&#34;&gt;&lt;/a&gt;音频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;采样率：44100 Hz&lt;/li&gt;
+&lt;li&gt;比特率：320&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a href=&#34;#其他&#34; class=&#34;headerlink&#34; title=&#34;其他&#34;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;√ 使用最高渲染质量&lt;/li&gt;
+&lt;li&gt;bilibili 上传助手的单个文件最大 4 GB&lt;br&gt;以上参数注意修改，其他保持默认&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="pr" />
+        <category term="bilibili" />
+        <updated>2021-01-21T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</id>
+        <title>用 Cloudreve 自建网盘的注意点</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/"/>
+        <content type="html">&lt;p&gt;自建一个不限速、无限容量、无客户端、流程可控的在线云盘很有必要，有时候自己跨设备传个东西，和朋友分享几个小文件，自建盘高速且方便&lt;/p&gt;
+&lt;p&gt;我是用的是 Cloudreve 框架，配合七牛云存储来实现的&lt;/p&gt;
+&lt;p&gt;其中有几个注意点需要说一下&lt;/p&gt;
+&lt;h2 id=&#34;1-反向代理白屏&#34;&gt;&lt;a href=&#34;#1-反向代理白屏&#34; class=&#34;headerlink&#34; title=&#34;1. 反向代理白屏&#34;&gt;&lt;/a&gt;1. 反向代理白屏&lt;/h2&gt;&lt;p&gt;原本 Cloudreve （以下称 CR）自己的使用逻辑是访问服务器 IP 和端口来访问可视化管理面板，但是我想使用 oneinstack 创建一个虚拟主机来，并分配一个二级域名访问我的 CR ，于是这就需要修改一下站点的 nginx 配置文件 &lt;/p&gt;
+&lt;p&gt;官方文档写的很明白，加上给的一段话即可&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;location / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_set_header Host $http_host;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_redirect off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_pass http://127.0.0.1:5212;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # 如果您要使用本地存储策略，请将下一行注释符删除，并更改大小为理论最大文件尺寸&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # client_max_body_size 20000m;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而 oneinstack 自己默认创建的配置文件中含有大量已生成的 location 配置，不删除这些默认的信息会与我们后加的内容冲突导致访问网址白屏，我们只需删除那些自带的 location 配置即可&lt;/p&gt;
+&lt;h2 id=&#34;2-反向代理访问缓慢&#34;&gt;&lt;a href=&#34;#2-反向代理访问缓慢&#34; class=&#34;headerlink&#34; title=&#34;2. 反向代理访问缓慢&#34;&gt;&lt;/a&gt;2. 反向代理访问缓慢&lt;/h2&gt;&lt;p&gt;上方代码中有一段是 &lt;code&gt;proxy_pass http://127.0.0.1:5212&lt;/code&gt; ，我自己下意识的将 &lt;code&gt;127.0.0.1&lt;/code&gt; 改为了 &lt;code&gt;47.100.100.100&lt;/code&gt; 即我的服务器公网 IP（安全起见，这个 IP 是我编的 😋） ，此修改是没必要的，这样会徒增访问时间，保持原样即可，务必注意&lt;/p&gt;
+&lt;h2 id=&#34;3-Oneinstack-中-Nginx-默认的-conf-位置&#34;&gt;&lt;a href=&#34;#3-Oneinstack-中-Nginx-默认的-conf-位置&#34; class=&#34;headerlink&#34; title=&#34;3. Oneinstack 中 Nginx 默认的 conf 位置&#34;&gt;&lt;/a&gt;3. Oneinstack 中 Nginx 默认的 conf 位置&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/usr/local/nginx/conf/vhost&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;最后，按照官网的指南手册和网友的攻略可轻松快速的搭建一个属于自己的网盘，故不再重复叙述&lt;/p&gt;
+</content>
+        <category term="Cloudreve" />
+        <updated>2020-11-20T15:07:00.000Z</updated>
+    </entry>
+</feed>

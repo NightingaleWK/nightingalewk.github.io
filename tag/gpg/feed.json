@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"gpg\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/",
+            "url": "https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/",
+            "title": "在 GIT 中 使用 GPG 签名",
+            "date_published": "2022-07-26T09:45:00.000Z",
+            "content_html": "<p>本文将介绍如何在 coding 中使用 GPG 签名加密你的每次 commit，来保证代码提交的真实性</p>\n<span id=\"more\"></span>\n\n<h2 id=\"1-电脑安装-GPG-组件\"><a href=\"#1-电脑安装-GPG-组件\" class=\"headerlink\" title=\"1. 电脑安装 GPG 组件\"></a>1. 电脑安装 GPG 组件</h2><p>这里我选择的是 gpg4win ，直接去官网下载安装即可</p>\n<h2 id=\"2-新建密钥对\"><a href=\"#2-新建密钥对\" class=\"headerlink\" title=\"2. 新建密钥对\"></a>2. 新建密钥对</h2><p>新建一个密钥对，填写你的姓名和邮箱，这里的邮箱填写的是你 coding 的邮箱，一路下一步即可</p>\n<h2 id=\"3-配置-gpg-信息到-coding-中\"><a href=\"#3-配置-gpg-信息到-coding-中\" class=\"headerlink\" title=\"3. 配置 gpg 信息到 coding 中\"></a>3. 配置 gpg 信息到 coding 中</h2><p>转到项目上，打开终端，首先确认私钥代码</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">gpg --list-secret-keys --keyid-format LONG &quot;your_email&quot;</span><br></pre></td></tr></table></figure>\n<p>复制以 sec 开头的 GPG 密钥 ID。以下示例中，复制 4AEA00A342C24CA3：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">sec   ed25519/4AEA00A342C24CA3 2021-09-14 [SC]</span><br><span class=\"line\">      6DE3507E82DEB6E8828FAAC34AEA00A342C24BD4</span><br><span class=\"line\">uid                 [ 绝对 ] your_name &quot;your_email&quot;</span><br><span class=\"line\">ssb   cv25519/812B586FD245B560 2021-09-14 [E]</span><br></pre></td></tr></table></figure>\n<p>利用复制的 ID 导出该 ID 的公钥（以上述 ID 为例）：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">gpg --armor --export 4AEA00A342C24CA3</span><br></pre></td></tr></table></figure>\n<p>生成公钥之后，可将其添加至你的 CODING 账户。</p>\n<h2 id=\"4-配置-gpg-信息到本地-git-中\"><a href=\"#4-配置-gpg-信息到本地-git-中\" class=\"headerlink\" title=\"4. 配置 gpg 信息到本地 git 中\"></a>4. 配置 gpg 信息到本地 git 中</h2>",
+            "tags": [
+                "gpg"
+            ]
+        }
+    ]
+}

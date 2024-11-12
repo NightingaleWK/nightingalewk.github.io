@@ -1,0 +1,60 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"debug\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/",
+            "url": "https://nightingalewk.cn/2023/03/28/55.%20%E8%A7%A3%E5%86%B3%20.gitignore%20%E6%97%A0%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/",
+            "title": "解决 .gitignore 无效的问题",
+            "date_published": "2023-03-28T00:38:00.000Z",
+            "content_html": "<p>首先确定好需要忽略的文件或文件夹，并加入到 .gitignore 中，然后执行：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">git rm -r --cached .</span><br><span class=\"line\">git add .</span><br><span class=\"line\">git commit -m &quot;update .gitignore&quot;</span><br><span class=\"line\">git push -u origin master</span><br></pre></td></tr></table></figure>\n<p>若你的另一台机子也需要更新代码，那么他在 git pull 的时候，.gitignore 中你刚才添加的文件和文件夹都会删除，记得重新生成或新建上。</p>\n",
+            "tags": [
+                "debug"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/",
+            "url": "https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/",
+            "title": "发起 laravel 队列任务不生效",
+            "date_published": "2022-12-14T08:48:00.000Z",
+            "content_html": "<p>当确定你的代码都没问题，而且队列都在运行，而且是你变动了 job 文件，那很有可能是缓存原因导致的，清理一下</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure>\n<p>若是在 laravel sail 开发环境中，修改一下即可使用：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">sail artisan cache:clear &amp;&amp; sail artisan config:clear &amp;&amp; sail artisan route:clear &amp;&amp; sail artisan view:clear</span><br></pre></td></tr></table></figure>\n\n<p>花式清理后就好了</p>\n",
+            "tags": [
+                "debug",
+                "队列",
+                "redis"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2022/04/26/41.%20Target%20Class%20does%20not%20exists%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/",
+            "url": "https://nightingalewk.cn/2022/04/26/41.%20Target%20Class%20does%20not%20exists%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/",
+            "title": "Target Class does not exists 解决方案",
+            "date_published": "2022-04-26T04:45:00.000Z",
+            "content_html": "<h2 id=\"问题情况\"><a href=\"#问题情况\" class=\"headerlink\" title=\"问题情况\"></a>问题情况</h2><p>在路由里写了一个 API 路由</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">Route::prefix(&#x27;v1&#x27;)-&gt;namespace(&#x27;Api&#x27;)-&gt;name(&#x27;api.v1.&#x27;)-&gt;group(function () &#123;</span><br><span class=\"line\">    // 短信验证码</span><br><span class=\"line\">    Route::post(&#x27;verificationCodes&#x27;, [VerificationCodesController::class, &#x27;store&#x27;])</span><br><span class=\"line\">        -&gt;name(&#x27;verificationCodes.store&#x27;);</span><br><span class=\"line\">&#125;);</span><br></pre></td></tr></table></figure>\n<p>控制器如下：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">&lt;?php</span><br><span class=\"line\"></span><br><span class=\"line\">namespace App\\Http\\Controllers\\Api;</span><br><span class=\"line\"></span><br><span class=\"line\">use Illuminate\\Http\\Request;</span><br><span class=\"line\"></span><br><span class=\"line\">class VerificationCodesController extends Controller</span><br><span class=\"line\">&#123;</span><br><span class=\"line\">    public function store()</span><br><span class=\"line\">    &#123;</span><br><span class=\"line\">        return response()-&gt;json([&#x27;test_message&#x27; =&gt; &#x27;store verification code&#x27;]);</span><br><span class=\"line\">    &#125;</span><br><span class=\"line\">&#125;</span><br><span class=\"line\"></span><br></pre></td></tr></table></figure>\n<p>Postman 以 post 方式访问 <a href=\"http://larabbs.test/api/v1/verificationCodes%EF%BC%8C%E6%8A%A5%E9%94%99%EF%BC%9A\">http://larabbs.test/api/v1/verificationCodes，报错：</a></p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">Target Class XXXXXXXXX does not exists</span><br></pre></td></tr></table></figure>\n<h2 id=\"2-解决方案\"><a href=\"#2-解决方案\" class=\"headerlink\" title=\"2. 解决方案\"></a>2. 解决方案</h2><p>抛开先入为主的思想，我们一条一条的排查：</p>\n<ol>\n<li>php artisan cache:clear</li>\n<li>检查命名空间大小写</li>\n<li>是否有路由组，路由组是否声明了命名空间？</li>\n<li>在同样的位置注册另一个路由地址，使用其他控制器，是否生效？</li>\n<li>注释关于 SearchController 的所有相关代码，项目是否正常运行？</li>\n<li>把 api.php 路由文件的内容全部删除，项目是否正常运行？</li>\n</ol>\n",
+            "tags": [
+                "debug"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/",
+            "url": "https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/",
+            "title": "个人开发服务器换新啦",
+            "date_published": "2021-09-22T04:00:00.000Z",
+            "content_html": "<p>从大学最后一年到现在，阿里云一直陪伴我走过了风风雨雨，当时毕设部署在上面，自己的 web 应用做测试也在上面，虽然 1C2G 的配置真的拘谨，但是它给我带来的提升是无法衡量的，自从有了个人的服务器后，我才可以完成从开发到部署到运维的全链条学习实战，不管怎么说，感谢有你 ♥</p>\n<p>可惜的是，当年服务器是用学生价格买的，一年就 100 多点，现在毕业了，到期续费得几大百元，这就难顶了，于是就萌生换服务器的想法</p>\n<p>腾讯云可以申请轻量应用服务器，相比云服务器没啥区别。我现在个人就是两个需求。一个是我的 web 应用需要测试服务器，一个是我的这个站点（HEXO 框架）需要线上服务器，那么对性能要求就没那么大，看着便宜，一口气 3 百块钱买了三年，配置还是 1C2G 但是带宽从当时的 1M 小水管升级到 6M 小水管，好吧，好像还是那个鸟样</p>\n<p>最近几天忙着配置环境，域名迁移，代码部署，服务器设备，现在基本上是告一段落了，工作上做的项目现在都能跑的很舒服，那就行了</p>\n<p>总之干就完事儿了，在奋斗中不断前行，加油！</p>\n",
+            "tags": [
+                "debug"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
+            "url": "https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
+            "title": "ERR_CONNECTION_TIMED_OUT 解决方法",
+            "date_published": "2021-09-13T04:00:00.000Z",
+            "content_html": "<p>平日正常访问的站点突然无法访问，提示<code>ERR_CONNECTION_TIMED_OUT</code>，排除服务端的问题后，不如排查一下本地的问题，我们可以清理浏览器各类缓存试试</p>\n<p>若依旧存在问题，我们可以重置一下系统的网络环境，在<code>CMD</code>或者<code>PowerShell</code>下逐次运行以下指令</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">ipconfig /renew</span><br><span class=\"line\">ipconfig /registerdns</span><br><span class=\"line\">ipconfig /flushdns</span><br><span class=\"line\">ipconfig /release</span><br></pre></td></tr></table></figure>\n\n<p>问题即可解决</p>\n",
+            "tags": [
+                "debug"
+            ]
+        }
+    ]
+}

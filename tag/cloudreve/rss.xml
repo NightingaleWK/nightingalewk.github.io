@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;cloudreve&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 20 Nov 2020 23:07:00 +0800</pubDate>
+        <lastBuildDate>Fri, 20 Nov 2020 23:07:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</guid>
+            <title>用 Cloudreve 自建网盘的注意点</title>
+            <link>https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</link>
+            <category>Cloudreve</category>
+            <pubDate>Fri, 20 Nov 2020 23:07:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;自建一个不限速、无限容量、无客户端、流程可控的在线云盘很有必要，有时候自己跨设备传个东西，和朋友分享几个小文件，自建盘高速且方便&lt;/p&gt;
+&lt;p&gt;我是用的是 Cloudreve 框架，配合七牛云存储来实现的&lt;/p&gt;
+&lt;p&gt;其中有几个注意点需要说一下&lt;/p&gt;
+&lt;h2 id=&#34;1-反向代理白屏&#34;&gt;&lt;a href=&#34;#1-反向代理白屏&#34; class=&#34;headerlink&#34; title=&#34;1. 反向代理白屏&#34;&gt;&lt;/a&gt;1. 反向代理白屏&lt;/h2&gt;&lt;p&gt;原本 Cloudreve （以下称 CR）自己的使用逻辑是访问服务器 IP 和端口来访问可视化管理面板，但是我想使用 oneinstack 创建一个虚拟主机来，并分配一个二级域名访问我的 CR ，于是这就需要修改一下站点的 nginx 配置文件 &lt;/p&gt;
+&lt;p&gt;官方文档写的很明白，加上给的一段话即可&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;location / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_set_header Host $http_host;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_redirect off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    proxy_pass http://127.0.0.1:5212;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # 如果您要使用本地存储策略，请将下一行注释符删除，并更改大小为理论最大文件尺寸&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # client_max_body_size 20000m;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;而 oneinstack 自己默认创建的配置文件中含有大量已生成的 location 配置，不删除这些默认的信息会与我们后加的内容冲突导致访问网址白屏，我们只需删除那些自带的 location 配置即可&lt;/p&gt;
+&lt;h2 id=&#34;2-反向代理访问缓慢&#34;&gt;&lt;a href=&#34;#2-反向代理访问缓慢&#34; class=&#34;headerlink&#34; title=&#34;2. 反向代理访问缓慢&#34;&gt;&lt;/a&gt;2. 反向代理访问缓慢&lt;/h2&gt;&lt;p&gt;上方代码中有一段是 &lt;code&gt;proxy_pass http://127.0.0.1:5212&lt;/code&gt; ，我自己下意识的将 &lt;code&gt;127.0.0.1&lt;/code&gt; 改为了 &lt;code&gt;47.100.100.100&lt;/code&gt; 即我的服务器公网 IP（安全起见，这个 IP 是我编的 😋） ，此修改是没必要的，这样会徒增访问时间，保持原样即可，务必注意&lt;/p&gt;
+&lt;h2 id=&#34;3-Oneinstack-中-Nginx-默认的-conf-位置&#34;&gt;&lt;a href=&#34;#3-Oneinstack-中-Nginx-默认的-conf-位置&#34; class=&#34;headerlink&#34; title=&#34;3. Oneinstack 中 Nginx 默认的 conf 位置&#34;&gt;&lt;/a&gt;3. Oneinstack 中 Nginx 默认的 conf 位置&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;/usr/local/nginx/conf/vhost&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;最后，按照官网的指南手册和网友的攻略可轻松快速的搭建一个属于自己的网盘，故不再重复叙述&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

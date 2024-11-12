@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"vite\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/",
+            "url": "https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/",
+            "title": "laravel 10 在 vite 工作流中引入并使用 Font Awesome 6",
+            "date_published": "2023-11-21T10:00:00.000Z",
+            "content_html": "<p>引入 Font Awesome 组件到 Laravel 项目的 Vite 构建中涉及一些步骤。以下是一般的指南：</p>\n<h2 id=\"1-安装-Font-Awesome：\"><a href=\"#1-安装-Font-Awesome：\" class=\"headerlink\" title=\"1. 安装 Font Awesome：\"></a>1. 安装 Font Awesome：</h2><p>通过 npm 或 yarn 安装 Font Awesome。在项目根目录下运行：</p>\n<figure class=\"highlight bash\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">npm install @fortawesome/fontawesome-free</span><br></pre></td></tr></table></figure>\n<p>或者使用 yarn：</p>\n<figure class=\"highlight bash\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">yarn add @fortawesome/fontawesome-free</span><br></pre></td></tr></table></figure>\n<h2 id=\"2-引入-Font-Awesome-样式：\"><a href=\"#2-引入-Font-Awesome-样式：\" class=\"headerlink\" title=\"2. 引入 Font Awesome 样式：\"></a>2. 引入 Font Awesome 样式：</h2><p>在 Vite 项目中，你可以在入口文件（通常是 main.js 或 main.ts,laravel 默认是 app.js ）中引入 Font Awesome 样式。</p>\n<figure class=\"highlight javascript\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"><span class=\"comment\">// src/main.js or src/main.ts or resources/js/app.js</span></span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"keyword\">import</span> <span class=\"string\">&#x27;@fortawesome/fontawesome-free/css/all.css&#x27;</span>;</span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"comment\">// 其他的入口文件内容...</span></span><br></pre></td></tr></table></figure>\n<p>这将引入 Font Awesome 的所有样式。如果你只需要使用特定图标的样式，你可以根据需要引入 solid、regular 或 brands 中的子集。</p>\n<h2 id=\"4-npm-构建\"><a href=\"#4-npm-构建\" class=\"headerlink\" title=\"4. npm 构建\"></a>4. npm 构建</h2><figure class=\"highlight bash\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">npm run dev</span><br><span class=\"line\"></span><br><span class=\"line\"><span class=\"comment\">## laravel sail 环境需要添加 sail 前缀</span></span><br><span class=\"line\">sail npm run dev</span><br></pre></td></tr></table></figure>\n\n<h2 id=\"3-开始使用\"><a href=\"#3-开始使用\" class=\"headerlink\" title=\"3. 开始使用\"></a>3. 开始使用</h2><p>然后你就可以使用 Font Awesome 图标了。</p>\n",
+            "tags": [
+                "Font Awesome",
+                "vite"
+            ]
+        }
+    ]
+}

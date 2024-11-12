@@ -1,0 +1,38 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"主食\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2021/02/20/16.%20%E9%BB%91%E6%A4%92%E6%84%8F%E9%9D%A2/",
+            "url": "https://nightingalewk.cn/2021/02/20/16.%20%E9%BB%91%E6%A4%92%E6%84%8F%E9%9D%A2/",
+            "title": "黑椒意面",
+            "date_published": "2021-02-20T04:00:00.000Z",
+            "content_html": "<h2 id=\"食材\"><a href=\"#食材\" class=\"headerlink\" title=\"食材\"></a>食材</h2><ul>\n<li>洋葱丁</li>\n<li>意面</li>\n</ul>\n<h2 id=\"操作\"><a href=\"#操作\" class=\"headerlink\" title=\"操作\"></a>操作</h2><ul>\n<li>意面放入沸水中煮熟，煮面过程中加半勺盐，捞出后加入食用油防止粘连</li>\n<li>起锅烧油，下入洋葱丁煸炒，倒入一勺酱油、些许黑胡椒和黑胡椒酱</li>\n<li>加入意面继续拌匀</li>\n</ul>\n<h2 id=\"其他\"><a href=\"#其他\" class=\"headerlink\" title=\"其他\"></a>其他</h2><p>可以加入一些蔬菜丁和洋葱一起炒</p>\n",
+            "tags": [
+                "主食"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/02/18/15.%20%E5%92%96%E5%96%B1%E9%B8%A1%E5%9D%97/",
+            "url": "https://nightingalewk.cn/2021/02/18/15.%20%E5%92%96%E5%96%B1%E9%B8%A1%E5%9D%97/",
+            "title": "咖喱鸡块",
+            "date_published": "2021-02-18T04:00:00.000Z",
+            "content_html": "<h2 id=\"食材\"><a href=\"#食材\" class=\"headerlink\" title=\"食材\"></a>食材</h2><ul>\n<li>鸡身上的肉</li>\n<li>土豆块</li>\n<li>洋葱丁</li>\n<li>香菇丁</li>\n</ul>\n<h2 id=\"操作\"><a href=\"#操作\" class=\"headerlink\" title=\"操作\"></a>操作</h2><ul>\n<li>鸡块切丁，一勺生抽、一勺料酒、一勺淀粉、黑胡椒适量，腌制 10 分钟</li>\n<li>土豆、香菇和洋葱切丁，之后土豆泡水</li>\n<li>起锅烧油，煎一下鸡块，变色后放洋葱煸炒，再放入土豆香菇煸炒</li>\n<li>加水没过食材，加入咖喱块、两勺生抽、一勺蚝油、一勺白糖、一勺十三香，大火烧开，小火炖 10 分钟</li>\n<li>出锅前加一勺食盐</li>\n</ul>\n",
+            "tags": [
+                "主食"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/01/17/12.%20%E7%95%AA%E8%8C%84%E8%82%89%E9%85%B1%E6%84%8F%E9%9D%A2/",
+            "url": "https://nightingalewk.cn/2021/01/17/12.%20%E7%95%AA%E8%8C%84%E8%82%89%E9%85%B1%E6%84%8F%E9%9D%A2/",
+            "title": "番茄肉酱意面",
+            "date_published": "2021-01-17T04:00:00.000Z",
+            "content_html": "<h2 id=\"食材\"><a href=\"#食材\" class=\"headerlink\" title=\"食材\"></a>食材</h2><ul>\n<li><strong>洋葱</strong> 切小块</li>\n<li><strong>番茄</strong> 切块（如果是熟透的，可以不用去皮）</li>\n<li><strong>肉末</strong> 加姜片和料酒腌制 10 分钟</li>\n</ul>\n<h2 id=\"操作\"><a href=\"#操作\" class=\"headerlink\" title=\"操作\"></a>操作</h2><ul>\n<li>意面<ul>\n<li>放入沸水中煮熟，煮面过程中加半勺盐，捞出后加入食用油防止粘连</li>\n</ul>\n</li>\n<li>肉酱<ul>\n<li>锅中热油放入洋葱，炒至变软后加入肉末翻炒至变色</li>\n<li>加 1 勺生抽调味，加入番茄炒至炒至变软</li>\n<li>加入酱料（3 勺番茄酱，1 勺盐，适量黑胡椒），小火熬制</li>\n</ul>\n</li>\n<li>酱汁熬至糊状，加入意面拌匀，每一根面条要裹满酱汁，要用小火搅拌</li>\n<li>出锅摆盘！</li>\n</ul>\n",
+            "tags": [
+                "主食"
+            ]
+        }
+    ]
+}

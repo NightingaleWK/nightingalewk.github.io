@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"pac 清单\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/",
+            "url": "https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/",
+            "title": "Personal PAC list",
+            "date_published": "2020-11-16T06:00:00.000Z",
+            "content_html": "<p>我自己总结整理的 PAC 清单，在这里记录一下，以备不时之需</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br><span class=\"line\">18</span><br><span class=\"line\">19</span><br><span class=\"line\">20</span><br><span class=\"line\">21</span><br><span class=\"line\">22</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">justmysocks.net,</span><br><span class=\"line\">wallhaven.cc,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">pixiv.net,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">nexusmods.com,</span><br><span class=\"line\">iwara.tv,</span><br><span class=\"line\">rule34.xxx,</span><br><span class=\"line\">pixiv.net,</span><br><span class=\"line\">pximg.net,</span><br><span class=\"line\">steamcommunity.com,</span><br><span class=\"line\">fontawesome.com,</span><br><span class=\"line\">ichr.me,</span><br><span class=\"line\">github.com,</span><br><span class=\"line\">e-hentai.org,</span><br><span class=\"line\">nightlifeporn.com,</span><br><span class=\"line\">zchan.moe,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">dribbble.com,</span><br><span class=\"line\">manypixels.co,</span><br><span class=\"line\">minecraft.net,</span><br><span class=\"line\">winscp.net</span><br></pre></td></tr></table></figure>",
+            "tags": [
+                "PAC 清单"
+            ]
+        }
+    ]
+}

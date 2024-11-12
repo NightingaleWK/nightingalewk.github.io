@@ -1,0 +1,49 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"工具\" category",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/",
+            "url": "https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/",
+            "title": "使用 net time 实现内网时间同步",
+            "date_published": "2022-08-30T06:20:00.000Z",
+            "content_html": "<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p>\n<span id=\"more\"></span>\n<h2 id=\"一、写在前面\"><a href=\"#一、写在前面\" class=\"headerlink\" title=\"一、写在前面\"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p>\n<h2 id=\"二、具体流程\"><a href=\"#二、具体流程\" class=\"headerlink\" title=\"二、具体流程\"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p>\n<p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">net use \\\\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure>\n<p>IP 换成那个 A 主机的，账号密码也是 A 的</p>\n<p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">net time \\\\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure>\n\n<p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>\n",
+            "tags": [
+                "net time"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "url": "https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/",
+            "title": "VS Code 使用公钥配合 Remote SSH 登录远程服务器",
+            "date_published": "2022-03-02T09:00:00.000Z",
+            "content_html": "<p>为了随时随地的使用不同设备链接同一个开发环境，也因为电脑赢弱的性能带不动开发环境，我决定使用远端开发的思路，于是就有了如何免密访问服务器的方案</p>\n<span id=\"more\"></span>\n\n<h1 id=\"1-生成公钥私钥\"><a href=\"#1-生成公钥私钥\" class=\"headerlink\" title=\"1.生成公钥私钥\"></a>1.生成公钥私钥</h1><p><code>ssh-keygen -t rsa</code> 生成密钥，想安全级别更高 <code>ssh-keygen -b 4096 -t rsa</code></p>\n<p>其中，生成的公钥保存在 <code>.ssh/id_rsa</code> ,私钥在 <code>.ssh/id_rsa.pub</code></p>\n<h1 id=\"2-上传公钥到远程服务器\"><a href=\"#2-上传公钥到远程服务器\" class=\"headerlink\" title=\"2.上传公钥到远程服务器\"></a>2.上传公钥到远程服务器</h1><p>执行 <code>vim /etc/ssh/sshd_config</code> ，确保以下三项是这个样子的，没有的可以自己加进去</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">RSAAuthentication yes</span><br><span class=\"line\">PubkeyAuthentication yes</span><br><span class=\"line\">AuthorizedKeysFile .ssh/authorized_keys</span><br></pre></td></tr></table></figure>\n<p>然后 <code>service sshd restart</code> 重启 ssh 服务</p>\n<p>在本地打开 git bash 输入 <code>ssh-copy-id user@host</code>，该指令将实现公钥上传到远程服务器的 .ssh&#x2F;authorized_keys 的功能</p>\n<p>至此，本地电脑访问远程服务器就不需要密码了</p>\n",
+            "tags": [
+                "vs code"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/",
+            "url": "https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/",
+            "title": "B 站上传视频防压参数",
+            "date_published": "2021-01-21T04:00:00.000Z",
+            "content_html": "<p>使用的是 PR ，这里只记录导出时的参数，自用防忘</p>\n<h2 id=\"导出设置\"><a href=\"#导出设置\" class=\"headerlink\" title=\"导出设置\"></a>导出设置</h2><ul>\n<li>格式：H264</li>\n</ul>\n<h2 id=\"视频\"><a href=\"#视频\" class=\"headerlink\" title=\"视频\"></a>视频</h2><ul>\n<li>宽度：1920</li>\n<li>高度：1080</li>\n<li>帧速率：60</li>\n<li>√ 以最大深度渲染</li>\n<li>比特率编码：VBR，2次</li>\n<li>目标比特率：19</li>\n<li>最大比特率：50</li>\n<li>关键帧距离：72</li>\n</ul>\n<h2 id=\"音频\"><a href=\"#音频\" class=\"headerlink\" title=\"音频\"></a>音频</h2><ul>\n<li>采样率：44100 Hz</li>\n<li>比特率：320</li>\n</ul>\n<h2 id=\"其他\"><a href=\"#其他\" class=\"headerlink\" title=\"其他\"></a>其他</h2><ul>\n<li>√ 使用最高渲染质量</li>\n<li>bilibili 上传助手的单个文件最大 4 GB<br>以上参数注意修改，其他保持默认</li>\n</ul>\n",
+            "tags": [
+                "pr",
+                "bilibili"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/",
+            "url": "https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/",
+            "title": "用 Cloudreve 自建网盘的注意点",
+            "date_published": "2020-11-20T15:07:00.000Z",
+            "content_html": "<p>自建一个不限速、无限容量、无客户端、流程可控的在线云盘很有必要，有时候自己跨设备传个东西，和朋友分享几个小文件，自建盘高速且方便</p>\n<p>我是用的是 Cloudreve 框架，配合七牛云存储来实现的</p>\n<p>其中有几个注意点需要说一下</p>\n<h2 id=\"1-反向代理白屏\"><a href=\"#1-反向代理白屏\" class=\"headerlink\" title=\"1. 反向代理白屏\"></a>1. 反向代理白屏</h2><p>原本 Cloudreve （以下称 CR）自己的使用逻辑是访问服务器 IP 和端口来访问可视化管理面板，但是我想使用 oneinstack 创建一个虚拟主机来，并分配一个二级域名访问我的 CR ，于是这就需要修改一下站点的 nginx 配置文件 </p>\n<p>官方文档写的很明白，加上给的一段话即可</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">location / &#123;</span><br><span class=\"line\">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class=\"line\">    proxy_set_header Host $http_host;</span><br><span class=\"line\">    proxy_redirect off;</span><br><span class=\"line\">    proxy_pass http://127.0.0.1:5212;</span><br><span class=\"line\"></span><br><span class=\"line\">    # 如果您要使用本地存储策略，请将下一行注释符删除，并更改大小为理论最大文件尺寸</span><br><span class=\"line\">    # client_max_body_size 20000m;</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n<p>而 oneinstack 自己默认创建的配置文件中含有大量已生成的 location 配置，不删除这些默认的信息会与我们后加的内容冲突导致访问网址白屏，我们只需删除那些自带的 location 配置即可</p>\n<h2 id=\"2-反向代理访问缓慢\"><a href=\"#2-反向代理访问缓慢\" class=\"headerlink\" title=\"2. 反向代理访问缓慢\"></a>2. 反向代理访问缓慢</h2><p>上方代码中有一段是 <code>proxy_pass http://127.0.0.1:5212</code> ，我自己下意识的将 <code>127.0.0.1</code> 改为了 <code>47.100.100.100</code> 即我的服务器公网 IP（安全起见，这个 IP 是我编的 😋） ，此修改是没必要的，这样会徒增访问时间，保持原样即可，务必注意</p>\n<h2 id=\"3-Oneinstack-中-Nginx-默认的-conf-位置\"><a href=\"#3-Oneinstack-中-Nginx-默认的-conf-位置\" class=\"headerlink\" title=\"3. Oneinstack 中 Nginx 默认的 conf 位置\"></a>3. Oneinstack 中 Nginx 默认的 conf 位置</h2><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">/usr/local/nginx/conf/vhost</span><br></pre></td></tr></table></figure>\n\n<p>最后，按照官网的指南手册和网友的攻略可轻松快速的搭建一个属于自己的网盘，故不再重复叙述</p>\n",
+            "tags": [
+                "Cloudreve"
+            ]
+        }
+    ]
+}

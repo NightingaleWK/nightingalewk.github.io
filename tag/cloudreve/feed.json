@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"cloudreve\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/",
+            "url": "https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/",
+            "title": "用 Cloudreve 自建网盘的注意点",
+            "date_published": "2020-11-20T15:07:00.000Z",
+            "content_html": "<p>自建一个不限速、无限容量、无客户端、流程可控的在线云盘很有必要，有时候自己跨设备传个东西，和朋友分享几个小文件，自建盘高速且方便</p>\n<p>我是用的是 Cloudreve 框架，配合七牛云存储来实现的</p>\n<p>其中有几个注意点需要说一下</p>\n<h2 id=\"1-反向代理白屏\"><a href=\"#1-反向代理白屏\" class=\"headerlink\" title=\"1. 反向代理白屏\"></a>1. 反向代理白屏</h2><p>原本 Cloudreve （以下称 CR）自己的使用逻辑是访问服务器 IP 和端口来访问可视化管理面板，但是我想使用 oneinstack 创建一个虚拟主机来，并分配一个二级域名访问我的 CR ，于是这就需要修改一下站点的 nginx 配置文件 </p>\n<p>官方文档写的很明白，加上给的一段话即可</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">location / &#123;</span><br><span class=\"line\">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class=\"line\">    proxy_set_header Host $http_host;</span><br><span class=\"line\">    proxy_redirect off;</span><br><span class=\"line\">    proxy_pass http://127.0.0.1:5212;</span><br><span class=\"line\"></span><br><span class=\"line\">    # 如果您要使用本地存储策略，请将下一行注释符删除，并更改大小为理论最大文件尺寸</span><br><span class=\"line\">    # client_max_body_size 20000m;</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure>\n<p>而 oneinstack 自己默认创建的配置文件中含有大量已生成的 location 配置，不删除这些默认的信息会与我们后加的内容冲突导致访问网址白屏，我们只需删除那些自带的 location 配置即可</p>\n<h2 id=\"2-反向代理访问缓慢\"><a href=\"#2-反向代理访问缓慢\" class=\"headerlink\" title=\"2. 反向代理访问缓慢\"></a>2. 反向代理访问缓慢</h2><p>上方代码中有一段是 <code>proxy_pass http://127.0.0.1:5212</code> ，我自己下意识的将 <code>127.0.0.1</code> 改为了 <code>47.100.100.100</code> 即我的服务器公网 IP（安全起见，这个 IP 是我编的 😋） ，此修改是没必要的，这样会徒增访问时间，保持原样即可，务必注意</p>\n<h2 id=\"3-Oneinstack-中-Nginx-默认的-conf-位置\"><a href=\"#3-Oneinstack-中-Nginx-默认的-conf-位置\" class=\"headerlink\" title=\"3. Oneinstack 中 Nginx 默认的 conf 位置\"></a>3. Oneinstack 中 Nginx 默认的 conf 位置</h2><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">/usr/local/nginx/conf/vhost</span><br></pre></td></tr></table></figure>\n\n<p>最后，按照官网的指南手册和网友的攻略可轻松快速的搭建一个属于自己的网盘，故不再重复叙述</p>\n",
+            "tags": [
+                "Cloudreve"
+            ]
+        }
+    ]
+}

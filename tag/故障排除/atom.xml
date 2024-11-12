@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;故障排除&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2023-11-16T09:00:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/</id>
+        <title>laravel 项目执行 sail up 报 80 端口占用问题</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2023/11/16/61.%20laravel%20%E9%A1%B9%E7%9B%AE%E6%89%A7%E8%A1%8C%20sail%20up%20%E6%8A%A5%2080%20%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+        <content type="html">&lt;p&gt;今天给一台新机器装好 laravel sail 环境后，在最后一步启动项目时，报错如下：&lt;/p&gt;
+&lt;figure class=&#34;highlight php&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wangkai@Precision-&lt;span class=&#34;number&#34;&gt;7920&lt;/span&gt;:~/code/daochenglin$ sail up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[+] Building &lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;s (&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;/&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;)                                                                          docker:&lt;span class=&#34;keyword&#34;&gt;default&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[+] Running &lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;/&lt;span class=&#34;number&#34;&gt;8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Network daochenglin_sail              Created                                                           &lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-meilisearch-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;   Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-selenium-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;      Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-redis-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;         Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-memcached-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;     Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-mysql-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;         Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-mailpit-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;       Started                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; ✔ Container daochenglin-laravel.test-&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;  Created                                                           &lt;span class=&#34;number&#34;&gt;0.1&lt;/span&gt;s&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;Error&lt;/span&gt; response &lt;span class=&#34;keyword&#34;&gt;from&lt;/span&gt; daemon: Ports are not available: exposing port TCP &lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;80&lt;/span&gt; -&amp;gt; &lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;: listen tcp &lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;.&lt;span class=&#34;number&#34;&gt;0.0&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;80&lt;/span&gt;: bind: An attempt was made to access a socket in a way forbidden by its access permissions.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;这个问题就是我们本机的 80 端口被占用了，我个人的电脑是 windows 11，系统服务默认开启一个叫 &lt;code&gt;World Wide Web 发布服务&lt;/code&gt; 的服务，他是自动启动的，该服务通过 Internet Information Services 管理器提供 Web 连接和管理，默认占用 80 端口，这个服务我们很明显用不到，给他禁用掉，然后再 sail up 就 ok 了。&lt;/p&gt;
+&lt;p&gt;一点小小的经验分享 😁&lt;/p&gt;
+</content>
+        <category term="laravel sail" />
+        <category term="故障排除" />
+        <updated>2023-11-16T09:00:00.000Z</updated>
+    </entry>
+</feed>

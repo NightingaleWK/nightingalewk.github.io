@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;hexo&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 09 Aug 2021 12:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 09 Aug 2021 12:00:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</guid>
+            <title>Hexo 博客升级流程</title>
+            <link>https://nightingalewk.cn/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</link>
+            <category>hexo</category>
+            <pubDate>Mon, 09 Aug 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;1、全局升级&lt;code&gt;hexo-cli&lt;/code&gt;，先&lt;code&gt;hexo version&lt;/code&gt;查看当前版本，然后&lt;code&gt;npm i hexo-cli -g&lt;/code&gt;，再次&lt;code&gt;hexo version&lt;/code&gt;查看是否升级成功。&lt;/p&gt;
+&lt;p&gt;2、使用&lt;code&gt;npm install -g npm-check&lt;/code&gt;和&lt;code&gt;npm-check&lt;/code&gt;，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件&lt;/p&gt;
+&lt;p&gt;3、使用&lt;code&gt;npm install -g npm-upgrade&lt;/code&gt;和&lt;code&gt;npm-upgrade&lt;/code&gt;，升级系统中的插件&lt;/p&gt;
+&lt;p&gt;4、使用&lt;code&gt;npm update -g&lt;/code&gt;和&lt;code&gt;npm update --save&lt;/code&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/30/10.%20Hexo%20%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/</guid>
+            <title>Hexo 部署阿里云服务器教程</title>
+            <link>https://nightingalewk.cn/2020/11/30/10.%20Hexo%20%E9%83%A8%E7%BD%B2%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/</link>
+            <category>hexo</category>
+            <pubDate>Mon, 30 Nov 2020 18:14:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;起因&#34;&gt;&lt;a href=&#34;#起因&#34; class=&#34;headerlink&#34; title=&#34;起因&#34;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;我个人的网站都是部署在 Coding pages 服务上，免费够用还方便，之后呢， Coding 被腾讯云收编了，我心思应该不会对我有啥影响吧，而且我还心思 Coding 的静态服务应该在腾讯云的加持下，体验应该更进一步&lt;/p&gt;
+&lt;p&gt;但是，&lt;strong&gt;腾讯云不讲武德，来，骗，来，偷袭，我一个老 Coding 用户&lt;/strong&gt;，具体做法就是提示我 Coding 的免费静态网站服务现在需要强制升级到腾讯云静态网页服务，问题就在于后者是 &lt;strong&gt;收费&lt;/strong&gt; 的，其实是一些 CDN 流量和存储空间等未来存在收费的可能性&lt;/p&gt;
+&lt;p&gt;这就很操蛋了，反正你腾讯云这给我花里胡哨的，那么👴说撤就撤，立刻将 Hexo 部署到我的私有服务器上，不和你逼逼赖赖的，多一事不如少一事，省心&lt;/p&gt;
+&lt;h2 id=&#34;步骤&#34;&gt;&lt;a href=&#34;#步骤&#34; class=&#34;headerlink&#34; title=&#34;步骤&#34;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;p&gt;我说一下我的服务器环境：阿里云的 ECS 服务器，Ubuntu 18.04，使用 Oneinstack 部署了 LNMP 环境，并且为我的网站建立了一个虚拟主机，Hexo 生成的静态文件也就放在这个虚拟主机里，并使用网址访问，全站强制转 HTTPS&lt;/p&gt;
+&lt;p&gt;根据官方文档来就行，具体如下 &lt;a href=&#34;https://hexo.io/zh-cn/docs/one-command-deployment&#34;&gt;https://hexo.io/zh-cn/docs/one-command-deployment&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其中，这里我选择的部署方式是 &lt;strong&gt;SFTP&lt;/strong&gt;，我只把我的配置文件贴一下，方便日后查阅&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;deploy:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  type: sftp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  host: 10.10.10.10  //远端服务器 IP&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  user: MaBaoGuo&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  pass: MaBaoGuo666&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  remotePath: /data/wwwroot/www.mabaoguo.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  port: 22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;我省略了一些文档里的键值，用不上，我这样就可以用，没问题&lt;/p&gt;
+&lt;p&gt;之后再本地执行 &lt;code&gt;hexo clean &amp;amp;&amp;amp; hexo g -d&lt;/code&gt; 即可将站点推送到服务器上&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

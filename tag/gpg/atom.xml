@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;gpg&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2022-07-26T09:45:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/</id>
+        <title>在 GIT 中 使用 GPG 签名</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/"/>
+        <content type="html">&lt;p&gt;本文将介绍如何在 coding 中使用 GPG 签名加密你的每次 commit，来保证代码提交的真实性&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;1-电脑安装-GPG-组件&#34;&gt;&lt;a href=&#34;#1-电脑安装-GPG-组件&#34; class=&#34;headerlink&#34; title=&#34;1. 电脑安装 GPG 组件&#34;&gt;&lt;/a&gt;1. 电脑安装 GPG 组件&lt;/h2&gt;&lt;p&gt;这里我选择的是 gpg4win ，直接去官网下载安装即可&lt;/p&gt;
+&lt;h2 id=&#34;2-新建密钥对&#34;&gt;&lt;a href=&#34;#2-新建密钥对&#34; class=&#34;headerlink&#34; title=&#34;2. 新建密钥对&#34;&gt;&lt;/a&gt;2. 新建密钥对&lt;/h2&gt;&lt;p&gt;新建一个密钥对，填写你的姓名和邮箱，这里的邮箱填写的是你 coding 的邮箱，一路下一步即可&lt;/p&gt;
+&lt;h2 id=&#34;3-配置-gpg-信息到-coding-中&#34;&gt;&lt;a href=&#34;#3-配置-gpg-信息到-coding-中&#34; class=&#34;headerlink&#34; title=&#34;3. 配置 gpg 信息到 coding 中&#34;&gt;&lt;/a&gt;3. 配置 gpg 信息到 coding 中&lt;/h2&gt;&lt;p&gt;转到项目上，打开终端，首先确认私钥代码&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;gpg --list-secret-keys --keyid-format LONG &amp;quot;your_email&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;复制以 sec 开头的 GPG 密钥 ID。以下示例中，复制 4AEA00A342C24CA3：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sec   ed25519/4AEA00A342C24CA3 2021-09-14 [SC]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      6DE3507E82DEB6E8828FAAC34AEA00A342C24BD4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;uid                 [ 绝对 ] your_name &amp;quot;your_email&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ssb   cv25519/812B586FD245B560 2021-09-14 [E]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;利用复制的 ID 导出该 ID 的公钥（以上述 ID 为例）：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;gpg --armor --export 4AEA00A342C24CA3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;生成公钥之后，可将其添加至你的 CODING 账户。&lt;/p&gt;
+&lt;h2 id=&#34;4-配置-gpg-信息到本地-git-中&#34;&gt;&lt;a href=&#34;#4-配置-gpg-信息到本地-git-中&#34; class=&#34;headerlink&#34; title=&#34;4. 配置 gpg 信息到本地 git 中&#34;&gt;&lt;/a&gt;4. 配置 gpg 信息到本地 git 中&lt;/h2&gt;</content>
+        <category term="gpg" />
+        <updated>2022-07-26T09:45:00.000Z</updated>
+    </entry>
+</feed>

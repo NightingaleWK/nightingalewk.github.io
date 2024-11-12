@@ -1,0 +1,36 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"开发\" category",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
+            "url": "https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/",
+            "title": "ERR_CONNECTION_TIMED_OUT 解决方法",
+            "date_published": "2021-09-13T04:00:00.000Z",
+            "content_html": "<p>平日正常访问的站点突然无法访问，提示<code>ERR_CONNECTION_TIMED_OUT</code>，排除服务端的问题后，不如排查一下本地的问题，我们可以清理浏览器各类缓存试试</p>\n<p>若依旧存在问题，我们可以重置一下系统的网络环境，在<code>CMD</code>或者<code>PowerShell</code>下逐次运行以下指令</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">ipconfig /renew</span><br><span class=\"line\">ipconfig /registerdns</span><br><span class=\"line\">ipconfig /flushdns</span><br><span class=\"line\">ipconfig /release</span><br></pre></td></tr></table></figure>\n\n<p>问题即可解决</p>\n",
+            "tags": [
+                "debug"
+            ]
+        },
+        {
+            "id": "https://nightingalewk.cn/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/",
+            "url": "https://nightingalewk.cn/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/",
+            "title": "我开发用到的各种技术参数",
+            "date_published": "2021-06-08T04:00:00.000Z",
+            "content_html": "<p> 开发环境</p>\n<ul>\n<li>homestead V12.3</li>\n<li>Settler v11.3.0 (Ubuntu 20.04)</li>\n<li>Ubuntu LTS 20.04</li>\n<li>PHP 8.0.1 (cli)  </li>\n<li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li>\n<li>nginx 1.18.0 (Ubuntu)</li>\n</ul>\n<h1 id=\"开发工具\"><a href=\"#开发工具\" class=\"headerlink\" title=\"开发工具\"></a>开发工具</h1><ul>\n<li>Visual Studio Code 1.56.2</li>\n<li>Navicat Premium 15（15.0.25）</li>\n<li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li>\n<li>Github Desktiop Version 2.8.2 (x64)</li>\n<li>Termius 7.12.0（Windows store version）</li>\n</ul>\n<h1 id=\"浏览器调试\"><a href=\"#浏览器调试\" class=\"headerlink\" title=\"浏览器调试\"></a>浏览器调试</h1><ul>\n<li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li>\n<li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li>\n<li>360极速浏览器 13.0.2250.0</li>\n<li>IE 21H1</li>\n</ul>\n<h1 id=\"技术版本\"><a href=\"#技术版本\" class=\"headerlink\" title=\"技术版本\"></a>技术版本</h1><ul>\n<li>laravel 8</li>\n<li>Dcat Admin 2</li>\n</ul>\n",
+            "tags": []
+        },
+        {
+            "id": "https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/",
+            "url": "https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/",
+            "title": "Personal PAC list",
+            "date_published": "2020-11-16T06:00:00.000Z",
+            "content_html": "<p>我自己总结整理的 PAC 清单，在这里记录一下，以备不时之需</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br><span class=\"line\">9</span><br><span class=\"line\">10</span><br><span class=\"line\">11</span><br><span class=\"line\">12</span><br><span class=\"line\">13</span><br><span class=\"line\">14</span><br><span class=\"line\">15</span><br><span class=\"line\">16</span><br><span class=\"line\">17</span><br><span class=\"line\">18</span><br><span class=\"line\">19</span><br><span class=\"line\">20</span><br><span class=\"line\">21</span><br><span class=\"line\">22</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">justmysocks.net,</span><br><span class=\"line\">wallhaven.cc,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">pixiv.net,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">nexusmods.com,</span><br><span class=\"line\">iwara.tv,</span><br><span class=\"line\">rule34.xxx,</span><br><span class=\"line\">pixiv.net,</span><br><span class=\"line\">pximg.net,</span><br><span class=\"line\">steamcommunity.com,</span><br><span class=\"line\">fontawesome.com,</span><br><span class=\"line\">ichr.me,</span><br><span class=\"line\">github.com,</span><br><span class=\"line\">e-hentai.org,</span><br><span class=\"line\">nightlifeporn.com,</span><br><span class=\"line\">zchan.moe,</span><br><span class=\"line\">alphacoders.com,</span><br><span class=\"line\">dribbble.com,</span><br><span class=\"line\">manypixels.co,</span><br><span class=\"line\">minecraft.net,</span><br><span class=\"line\">winscp.net</span><br></pre></td></tr></table></figure>",
+            "tags": [
+                "PAC 清单"
+            ]
+        }
+    ]
+}

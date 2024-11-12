@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;个人&#34; category</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2023-11-07T02:57:43.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/</id>
+        <title>哎，又把博客迁移了</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;就结果来说，我还是回归 hexo 的怀抱了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本来我的博客部署在自己的腾讯云轻量服务器，但是最近手头的项目需要部署测试，就可能对服务器进行一些变动和修改，甚至重装，这就对博客的稳定造成了影响。为了追求稳定，我决定还是把网站部署到 github pages 上，虽然可能存在部分打不开的情况，但至少是免费的，我再把我的域名指向默认地址上，就没问题了。&lt;/p&gt;
+&lt;p&gt;其实 typecho 用得好好的，非常顺手，要不是服务器有其他用处，我才不换呢。&lt;/p&gt;
+&lt;p&gt;啥也没丢，啥都可以正常运行，而且 github 为我们提供稳定可靠谱的服务，我觉得就足够了&lt;/p&gt;
+&lt;p&gt;回顾一路走来的博客路线，从 wordpress，再到 hexo，再到 typecho，再回到 hexo，个人的偏好从一开始追寻花里胡哨，大而全，慢慢的转为简单简约，稳定可靠。慢慢回归博客的记录本质。&lt;/p&gt;
+&lt;p&gt;在发文的时候，我把该转移的资源都完成了转移，那就让我们继续在 github pages 强力驱动下的 hexo 里继续记录我的成长历程吧&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生命不息，折腾不止&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="迁移" />
+        <updated>2023-11-07T02:57:43.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/</id>
+        <title>又一次更换博客系统辣</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/"/>
+        <content type="html">&lt;p&gt;当你看到这个文章的时候，我已经从 hexo 换回到 typecho 了，最近发现作者开始更新，版本到 1.2.0 ，普大喜奔🫡&lt;/p&gt;
+&lt;p&gt;我花了点时间把之前的博客迁移到了 typecho，以后就用它啦&lt;/p&gt;
+&lt;p&gt;另外，最近抢了一台腾讯云的轻量云服务器，333元3年，2C2G 配置，感觉完全可以做本站及其其他博客站等需要长期部署不太动的东西，所以借此机会把我的站点搬到新服务器上，原来的老服务器性能更好，我等给他重装一下，专用于部署自己的测试商业项目，实现了个人生活与工作需要的服务器分离。&lt;/p&gt;
+&lt;p&gt;哦对了，新房子现在家具都到了，最近收拾一下，跑跑味，结一下尾，明年小家电一买，哎嘿，我和我对象就以火箭般的速度光速入住我的小窝&lt;/p&gt;
+&lt;p&gt;总之就是好耶！&lt;/p&gt;
+</content>
+        <category term="迁移" />
+        <updated>2022-11-24T08:57:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/12/02/33.%20%E8%AF%9A%E6%81%B3%E7%9A%84%E9%81%93%E6%AD%89%E5%97%B7/</id>
+        <title>诚恳的道歉嗷 🫡</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/12/02/33.%20%E8%AF%9A%E6%81%B3%E7%9A%84%E9%81%93%E6%AD%89%E5%97%B7/"/>
+        <content type="html">&lt;h2 id=&#34;1-错在哪？&#34;&gt;&lt;a href=&#34;#1-错在哪？&#34; class=&#34;headerlink&#34; title=&#34;1.错在哪？&#34;&gt;&lt;/a&gt;1.错在哪？&lt;/h2&gt;&lt;p&gt;客观上：享乐只考虑自己，不曾考虑他人；&lt;br&gt;主观上：自己只顾着&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自己开车公司到自己家、&lt;/li&gt;
+&lt;li&gt;处理西红柿木耳菠菜等食材、&lt;/li&gt;
+&lt;li&gt;做了一锅蔬菜汤并开始吃饭、&lt;/li&gt;
+&lt;li&gt;看着荒木老贼在今天bilibili首播的《JIOJIO的奇幻冒险：石之海》的一口气腹泻式的12集联播、首播、&lt;/li&gt;
+&lt;li&gt;并且考虑要不打会原神清清体力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是没考虑到&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下午早早下班自己家的、&lt;/li&gt;
+&lt;li&gt;吃完饭没人陪着玩的、&lt;/li&gt;
+&lt;li&gt;被窝里也没有啥好吃的、&lt;/li&gt;
+&lt;li&gt;独自一人躺在船上抱着手机盖着暖炕的、&lt;/li&gt;
+&lt;li&gt;刷淘宝抖音等刷到没内容可推荐的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;——包子还是一个没人陪的孩子，可怜弱小又无助，这就是对包子最大的虐待&lt;br&gt;本犯罪嫌疑人的犯罪证据确凿，作案动机主客观一致，数罪并罚，从重处置，宣判为无期徒刑&lt;/p&gt;
+&lt;h2 id=&#34;2-怎么改？&#34;&gt;&lt;a href=&#34;#2-怎么改？&#34; class=&#34;headerlink&#34; title=&#34;2.怎么改？&#34;&gt;&lt;/a&gt;2.怎么改？&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;加强自我学习&lt;/strong&gt;。加强对理论知识的学习，通过互联网等工具，快速学习如何和包子相处，解决怎么处、怎么哄等一系列高艰难问题，虚心接受批评指责，通过他人的指导让自己不走弯路，知错就改；切实掌握相关高情商人必备的知识技巧，降低自己的直男特质，努力做到一个让包子满意的男朋友&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重视理论实践相结合&lt;/strong&gt;。只说不做假把式，黑猫白猫抓得到老鼠的就是好猫。通过不断的试错，在试错中学习经验，不断探索和包子相处的独门绝技，并应用于实际生活，以错代学，不断进取，波浪式前进螺旋式上升的提高包子对我的好感和认可。用实际行动出真知，力做人民群众满意的男朋友&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;发挥主观能动性&lt;/strong&gt;。拒绝冷暴力，不多二传手，提倡捞过界的理念，自己在做好本职工作的前提下，主动关心关照宝宝，不能一有问题就摆烂，不能天天就会说“啊对对对，啊对对对”，要勇于冒险，敢于靠前，主动为宝宝多思考、勤关心，让暖男的形象深入人心&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;回回头、出出汗、发发热、红红脸&lt;/strong&gt;。在每天结束的时候，多反思今天做了什么，做的怎么样？是否是宝宝群众喜爱的事情？是否真正关心到了宝宝？多反思，勤思考，将问题拿到台面上曝曝光，将自己的负面实例作为下一次进步的阶梯，长回头看，在失败中找到成功的秘诀！&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="道歉信" />
+        <updated>2021-12-02T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/</id>
+        <title>个人开发服务器换新啦</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/09/22/31.%20%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8D%A2%E6%96%B0%E5%95%A6/"/>
+        <content type="html">&lt;p&gt;从大学最后一年到现在，阿里云一直陪伴我走过了风风雨雨，当时毕设部署在上面，自己的 web 应用做测试也在上面，虽然 1C2G 的配置真的拘谨，但是它给我带来的提升是无法衡量的，自从有了个人的服务器后，我才可以完成从开发到部署到运维的全链条学习实战，不管怎么说，感谢有你 ♥&lt;/p&gt;
+&lt;p&gt;可惜的是，当年服务器是用学生价格买的，一年就 100 多点，现在毕业了，到期续费得几大百元，这就难顶了，于是就萌生换服务器的想法&lt;/p&gt;
+&lt;p&gt;腾讯云可以申请轻量应用服务器，相比云服务器没啥区别。我现在个人就是两个需求。一个是我的 web 应用需要测试服务器，一个是我的这个站点（HEXO 框架）需要线上服务器，那么对性能要求就没那么大，看着便宜，一口气 3 百块钱买了三年，配置还是 1C2G 但是带宽从当时的 1M 小水管升级到 6M 小水管，好吧，好像还是那个鸟样&lt;/p&gt;
+&lt;p&gt;最近几天忙着配置环境，域名迁移，代码部署，服务器设备，现在基本上是告一段落了，工作上做的项目现在都能跑的很舒服，那就行了&lt;/p&gt;
+&lt;p&gt;总之干就完事儿了，在奋斗中不断前行，加油！&lt;/p&gt;
+</content>
+        <category term="debug" />
+        <updated>2021-09-22T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/11/06/3.%20%E4%BB%8A%E5%A4%A9%E4%B8%AD%E5%8D%88%E5%81%9A%E5%95%A5%E6%A2%A6%E4%BA%86%20002/</id>
+        <title>今天中午做啥梦了 002</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/11/06/3.%20%E4%BB%8A%E5%A4%A9%E4%B8%AD%E5%8D%88%E5%81%9A%E5%95%A5%E6%A2%A6%E4%BA%86%20002/"/>
+        <content type="html">&lt;p&gt;首先，我认为我最近中午睡觉难醒和频繁做梦，很大程度是平日学习压力的问题，距离考研还有50来天，自己静下心心思了一会，确实逼得我中午睡觉偏向于这样的悲相&lt;/p&gt;
+&lt;p&gt;然后，今天中午果不其然的又做梦了，而且也起晚了&lt;/p&gt;
+&lt;p&gt;梦里都是我初中的梦，日常的上学琐事，我都服了我自己了，平常都不记得的事情，梦里给演的让我拍案叫绝，太真实太有意思了&lt;/p&gt;
+&lt;p&gt;梦里我记得我：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上课迟到&lt;/li&gt;
+&lt;li&gt;下了想去买可乐，但是走去发现那个地方已经没商店了，改在了教室的跟前，即导致我上课晚了还让我跑了一大圈，累的要死&lt;/li&gt;
+&lt;li&gt;这里面，我下课之后过是回到自己和其他同学租的房子，也是奇奇怪怪的事情，我和一个亚非裔的漂亮的小姐姐关系甚好，甚至发生了不可描述的事情&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其实还有很多，但是你知道，醒来后很难再去刻意的回忆出来的&lt;/p&gt;
+&lt;p&gt;最后，最离谱的就是。一次上课，物理课，老师走进来，准备用电子白板上课，开机发现电脑坏了，当时镜头切换到班级人员配置表上，移到表格里我所在的这一行并显示这我是班级的技术委员（别问，问就是魔幻现实主义），我起身去讲台看看电脑咋回事儿，就开始修了起来&lt;/p&gt;
+&lt;p&gt;15 分钟后，班主任进来了，最操蛋的事情发生了。这个班主任是我之前工作单位上的老板，我都觉得虽然梦里的我可能平凡的把一切事情习以为常，但是梦外的我靠着意思理智，对着发生的事情，不断地卧槽了起来，班主任居然再梦里又给我下达任务，我在负责分析项目需求并准备安排人手开干，梦外的我应该是看不下去了，把我叫醒了&lt;/p&gt;
+&lt;p&gt;哎，3 点了，本来心思2点就起，今天下午的学习时间 -1 Hours&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;复习进度最近很糟糕，满脑子的放弃，现在的我只能是继续忍下去了，没崩溃到放弃真的是奇迹了&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="梦境" />
+        <updated>2020-11-06T07:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/11/02/2.%20%E4%BB%8A%E5%A4%A9%E4%B8%AD%E5%8D%88%E5%81%9A%E5%95%A5%E6%A2%A6%E4%BA%86%20001/</id>
+        <title>今天中午做啥梦了 001</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/11/02/2.%20%E4%BB%8A%E5%A4%A9%E4%B8%AD%E5%8D%88%E5%81%9A%E5%95%A5%E6%A2%A6%E4%BA%86%20001/"/>
+        <content type="html">&lt;p&gt;今天中午又睡过头了，做了个梦&lt;/p&gt;
+&lt;p&gt;梦里我和我对象，在外地，找了个一般的三流旅馆，就像是汽车旅馆一样，一般到不能再一般了，期间住的得好好的，没啥事儿&lt;/p&gt;
+&lt;p&gt;有一天，两个小孩在咱们房间的门口撬门，后来知道是两个小孩也定了一个房间，但是因为走错走到咱们屋子门口刷卡进不来，就心思强行扒门进来，结果一个小孩的手被卡住了，当时咱俩在屋子里，我一看，急忙从里们把门解锁打开，我着急直接一下子把门推开了，小孩获救了，但是店主说我这么急干啥，他在外面心思让我先解锁之后听他指挥慢慢开门，我特么上去就特么急了，我说孩子虽然熊，但是手被挤了我有能力开门我特么不开听你这逼逼赖赖的？于是就跟他争辩了一波，这算是结下梁子了&lt;/p&gt;
+&lt;p&gt;之后店家动不动的就给我使绊子，各种关于小事儿的恶心，我也是保持这最大的克制，遵循 &lt;strong&gt;有理有利有节&lt;/strong&gt; 的原则和他制衡&lt;/p&gt;
+&lt;p&gt;最后住的一天，店家以及膈应的我洗个澡得间间断断洗三次才洗完，洗完我心思再睡一会的就走。睡的过程中，我偶然看到店主偷偷摸摸进来打了我家猫一巴掌，力度不大，就像是怂逼做事儿有贼心没贼胆一样，打完怂的一批，我看见了一下子就他妈飞扑过去，单手握住店主两个手腕，用力一只手就是砰砰砰的打脸，打得他鼻青脸肿的，期间我大喊， &lt;strong&gt;“他妈的，敢打我的猫”&lt;/strong&gt; ，“我的猫是你他妈敢打的！”第一句应该是现实中看《让子弹飞》里黄老爷的名言“他妈的，敢杀我的马”&lt;/p&gt;
+&lt;p&gt;当时气的一下子就醒了，一看是做梦，就知道自己睡过了，爬起来洗洗脸，就把事情记录了一下&lt;/p&gt;
+</content>
+        <category term="梦境" />
+        <updated>2020-11-02T08:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/10/03/1.%20%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</id>
+        <title>博客迁移</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/10/03/1.%20%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"/>
+        <content type="html">&lt;p&gt;从今天开始，我的博客站将全面从 wordpress 转移到 hexo 上，佛系的迁移吧，慢慢来，我倒是不着急。&lt;/p&gt;
+&lt;p&gt;因为 wordpress 的国内体验实在是越来越差，后台反应慢、更新不可能、功能臃肿我用不到，花里胡哨的固然有好处，可视化编辑器确实很香，但是用了快2年，不想再折腾了，于是就选择 hexo 了&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;而且最大的优势就是我可以把站点部署在 Coding 平台，然后开启静态页面服务，也就是不用再花钱买服务器了，我只要解析个自己的域名，配置配置就搞定，舒心&lt;/del&gt; （ 2020.11.30 Coding 的静态网站服务强制转移到腾讯云并收费了，不讲武德，当前站点现已部署到个人阿里云服务器上 ）&lt;/p&gt;
+&lt;p&gt;转来转去，博客吧，我还是想回归写作的本质，排除一切繁杂，保留最原始的初心&lt;/p&gt;
+&lt;p&gt;该玩的骚操作都玩过之后，就只剩下回归初心了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回归写作、回归思考、回归独立&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;2017-08-11，买了人生中第一台云服务器，阿里云的，开始自己部署 wordpress 玩博客，同时，也开启了我的码农生涯。&lt;/li&gt;
+&lt;li&gt;2020-10-03，从 Wordpress 迁移到 Hexo，因为 wp 实在是太慢了，真不如静态页面来的速度。&lt;/li&gt;
+&lt;li&gt;2021-09-22，5 年的阿里云服务器到期了，转入腾讯云。&lt;/li&gt;
+&lt;li&gt;2022-11-24，Hexo 转 typecho。因为作者把版本诈尸般的更新到 1.2.0，想体验。&lt;/li&gt;
+&lt;li&gt;2023-11-07，typecho 转 Hexo。因为这么多年了，折腾不动了。整个静态网站部署到 github pages 上养老就行了。&lt;/li&gt;
+&lt;li&gt;2024-01-15，Hexo 转微信公众号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一开始，按月学生价白嫖服务器，经常升级系统，LNMP 环境换了又换，各种东西装了又装，各种插件试了又试，生命不息，折腾不止。&lt;/p&gt;
+&lt;p&gt;再后来，工作后的业余时间与极客热情慢慢减少，博客对我来说逐渐趋向于一个放在手边的“笔记本”，自己的工作经验和常用手册就放在博客里，我需要的慢慢就是一个稳定，可靠的环境，来沉淀我的记忆。所以不再折腾 wp，用上了急速、可靠、便捷的 Hexo，编辑方式也从 wp 的古腾堡，改为了 markdown。&lt;/p&gt;
+&lt;p&gt;最后，服务器已经不能只作为自己的兴趣爱好了，工作上的测试项目需要不断变动我的服务器，这种不确定性与博客稳定的环境需求产生了很大的矛盾，于是我索性直接把站点部署到 github pages 服务上，哪怕外网慢一点，不稳定一点，每次部署都要重新配置 dns 信息，那也愿意，至少我的文章，会一直留在 github，一定不会随我而消失。&lt;/p&gt;
+&lt;p&gt;现在，为什么我换成公众号了呢？因为我最重要的需求，也就是我的“笔记本”，经常在没有科学上网的情况下，无法访问，这违背了我对博客最基本的要求。既然公众号也是文章的归宿，微信的体量，我相信也不会说倒就倒，那我不如把我的“笔记本”放在这里。&lt;/p&gt;
+&lt;p&gt;不追求格式，不需要效果，不在乎外表，只需要一个忠实记录着我人生轨迹的工具。&lt;/p&gt;
+&lt;p&gt;至于为什么不用 MSDN、博客园？算了吧，太 low 了，我现在天天问 chatgp、翻官方文档，也不会去看 MSDN 的无营养文章了，浪费生命。&lt;/p&gt;
+</content>
+        <category term="迁移" />
+        <updated>2020-10-03T02:51:10.000Z</updated>
+    </entry>
+</feed>

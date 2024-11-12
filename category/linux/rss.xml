@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;linux&#34; category</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 24 Nov 2022 16:10:00 +0800</pubDate>
+        <lastBuildDate>Thu, 24 Nov 2022 16:10:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+            <title>检测服务端口的方法</title>
+            <link>https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+            <category>端口查询</category>
+            <pubDate>Thu, 24 Nov 2022 16:10:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中&lt;/p&gt;
+&lt;h2 id=&#34;1-Linux-系统&#34;&gt;&lt;a href=&#34;#1-Linux-系统&#34; class=&#34;headerlink&#34; title=&#34;1. Linux 系统&#34;&gt;&lt;/a&gt;1. Linux 系统&lt;/h2&gt;&lt;h3 id=&#34;1-1-查询-etc-services-找端口&#34;&gt;&lt;a href=&#34;#1-1-查询-etc-services-找端口&#34; class=&#34;headerlink&#34; title=&#34;1.1 查询 &amp;#x2F;etc&amp;#x2F;services 找端口&#34;&gt;&lt;/a&gt;1.1 查询 &amp;#x2F;etc&amp;#x2F;services 找端口&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cat /etc/services | grep postgres&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;postgres 5432/tcp postgresql # POSTGRES&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;postgres 5432/udp postgresql # POSTGRES&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意：如果用户没有配置services的话，这个方法就无效。&lt;/p&gt;
+&lt;h3 id=&#34;1-2-netstat-命令查看&#34;&gt;&lt;a href=&#34;#1-2-netstat-命令查看&#34; class=&#34;headerlink&#34; title=&#34;1.2 netstat 命令查看&#34;&gt;&lt;/a&gt;1.2 netstat 命令查看&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;# netstat -a | grep PGSQL&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;2-Windows-系统&#34;&gt;&lt;a href=&#34;#2-Windows-系统&#34; class=&#34;headerlink&#34; title=&#34;2. Windows 系统&#34;&gt;&lt;/a&gt;2. Windows 系统&lt;/h2&gt;&lt;p&gt;待补充&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+            <title>解决 swap 占用过高的问题</title>
+            <link>https://nightingalewk.cn/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+            <category>swap</category>
+            <pubDate>Thu, 15 Sep 2022 16:56:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;公司某项目有 2 个机子的 swap 占满了，监控他们的 zabbix 平台一直提示高占用，于是开始着手解决一下这个问题。&lt;/p&gt;
+&lt;p&gt;首先我们释放 swap 存储的文件导内存&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Swapoff –a&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;接下来我们将需要新建一个更大的swap交换空间&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /var&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo mkdir swap&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo dd if=/dev/zero of=swapfile bs=1024 count=4000000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo mkswap swapfile&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后添加自动挂载&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;vi /etc/fstab&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;最后添加如下信息&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;/var/swapfile   swap  swap  defaults  0  0&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;至此操作结束&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</guid>
+            <title>sshpass 中使用 awk 的坑</title>
+            <link>https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</link>
+            <category>sshppass</category>
+            <category>awk</category>
+            <pubDate>Tue, 30 Aug 2022 14:20:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。&lt;/p&gt;
+&lt;p&gt;最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;p&gt;原语句：&lt;code&gt;free -m | sed -n &amp;#39;2p&amp;#39; | awk &amp;#39;&amp;#123;print &amp;quot;Mem used is &amp;quot;$3/$2*100&amp;#125;&amp;#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;想在 sshpass 中执行正确，就应该把 &lt;code&gt;&amp;amp;&lt;/code&gt; 转义，在其前面加上 &lt;code&gt;\&lt;/code&gt; 即可，最终结果为：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sshpass -p Password ssh root@192.168.1.1 &amp;quot;free -m | sed -n &amp;#x27;2p&amp;#x27; | awk &amp;#x27;&amp;#123;print &amp;quot;Mem used is &amp;quot;\$3/\$2*100&amp;#125;&amp;#x27;&amp;quot; &amp;gt;&amp;gt;test.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/23/8.%20%E2%80%9C%20%E5%86%8D%E7%BB%99%E6%88%91%E5%8D%81%E7%A7%92%E5%90%A7%EF%BC%8C%E6%89%98%E5%85%8B%20%E2%80%9D/</guid>
+            <title>“ 再给我十秒吧，托克 ”</title>
+            <link>https://nightingalewk.cn/2020/11/23/8.%20%E2%80%9C%20%E5%86%8D%E7%BB%99%E6%88%91%E5%8D%81%E7%A7%92%E5%90%A7%EF%BC%8C%E6%89%98%E5%85%8B%20%E2%80%9D/</link>
+            <category>screen</category>
+            <pubDate>Mon, 23 Nov 2020 17:26:00 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;“ 再给我十秒吧，托克，我还没藏好 ”&lt;/p&gt;
+&lt;p&gt;“ 哥哥又耍赖，好吧，最后十秒 … ”&lt;/p&gt;
+&lt;p&gt;* 公子苦笑&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://cdn.blog.wkarrow.top/posts/TartagliaScreenShot.jpg&#34;&gt;&lt;img src=&#34;https://cdn.blog.wkarrow.top/posts/TartagliaScreenShot.jpg&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;温暖的家人，亲切的朋友，忠实的手下，狠辣的敌人，他做好了每一个角色&lt;/p&gt;
+&lt;p&gt;就冲着这十秒，我把留给钟离的大保底果断的给了达达利亚！&lt;/p&gt;
+&lt;p&gt;主线任务中公子就是一个个性鲜明、强的一批的反派，而在魔神任务中，身为”玩具推销员”的他为自己的家人献上了一切，强烈对比下的那份无暇无私的爱，给我直接整泪目了😭&lt;/p&gt;
+&lt;p&gt;把反派角色刻画的如此深刻到位，mhy 真有你的啊，又骗我掏钱抽池，👴认了&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;至冬国最厉害的玩具销售员，冲鸭！&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2020/11/20/7.%20Screen%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+            <title>Screen 安装与使用</title>
+            <link>https://nightingalewk.cn/2020/11/20/7.%20Screen%20%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+            <category>screen</category>
+            <pubDate>Fri, 20 Nov 2020 12:46:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;为了保证使用 oneinstack 安装 lnmp 环境稳定不中断，使用 screen 指令可保证安装进程全程在线，不会因为本地 shell 关闭而终止，接下来就简单的记录一下我的实战经验&lt;/p&gt;
+&lt;h2 id=&#34;安装&#34;&gt;&lt;a href=&#34;#安装&#34; class=&#34;headerlink&#34; title=&#34;安装&#34;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;apt install screen   //For ubuntu 20.04&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;使用&#34;&gt;&lt;a href=&#34;#使用&#34; class=&#34;headerlink&#34; title=&#34;使用&#34;&gt;&lt;/a&gt;使用&lt;/h2&gt;&lt;h3 id=&#34;1-创建会话&#34;&gt;&lt;a href=&#34;#1-创建会话&#34; class=&#34;headerlink&#34; title=&#34;1.创建会话&#34;&gt;&lt;/a&gt;1.创建会话&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;screen -S lnmp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;离开时，只需要按下 &lt;code&gt;ctrl&lt;/code&gt; 并依次按下 &lt;code&gt;a&lt;/code&gt; 和 &lt;code&gt;d&lt;/code&gt; 即可，会话会继续在后台运行，不受干扰&lt;/p&gt;
+&lt;h3 id=&#34;2-恢复会话&#34;&gt;&lt;a href=&#34;#2-恢复会话&#34; class=&#34;headerlink&#34; title=&#34;2.恢复会话&#34;&gt;&lt;/a&gt;2.恢复会话&lt;/h3&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;screen -r lnmp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这样就可显示处于后台的会话&lt;/p&gt;
+&lt;h2 id=&#34;示例：安装-lnmp-环境&#34;&gt;&lt;a href=&#34;#示例：安装-lnmp-环境&#34; class=&#34;headerlink&#34; title=&#34;示例：安装 lnmp 环境&#34;&gt;&lt;/a&gt;示例：安装 lnmp 环境&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//新建名为 lnmp 的会话&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;screen -S lnmp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;开始自动化安装 lnmp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wget -c http://mirrors.linuxeye.com/oneinstack-full.tar.gz &amp;amp;&amp;amp; tar xzf oneinstack-full.tar.gz &amp;amp;&amp;amp; ./oneinstack/install.sh --nginx_option 1 --php_option 9 --phpcache_option 1 --php_extensions imagick,fileinfo,imap,ldap,phalcon,yaf,redis,memcached,memcache,mongodb,swoole --phpmyadmin  --db_option 1 --dbinstallmethod 1 --dbrootpwd Asdf9741 --pureftpd  --redis  --memcached  --reboot &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//离开并将会话后台进行&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ctrl + a d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//查看后台会话&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;screen -r lnmp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;相关链接&#34;&gt;&lt;a href=&#34;#相关链接&#34; class=&#34;headerlink&#34; title=&#34;相关链接&#34;&gt;&lt;/a&gt;相关链接&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://oneinstack.com/auto/&#34;&gt;Oneinstack 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/26683968&#34;&gt;【知乎】Screen命令安装使用教程（By：魏艾斯博客）&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;代码部署&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 10 Jul 2023 14:21:00 +0800</pubDate>
+        <lastBuildDate>Mon, 10 Jul 2023 14:21:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <title>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</title>
+            <link>https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <category>代码部署</category>
+            <pubDate>Mon, 10 Jul 2023 14:21:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;ubuntu-镜像下载与安装&#34;&gt;&lt;a href=&#34;#ubuntu-镜像下载与安装&#34; class=&#34;headerlink&#34; title=&#34;ubuntu 镜像下载与安装&#34;&gt;&lt;/a&gt;ubuntu 镜像下载与安装&lt;/h2&gt;&lt;p&gt;ubuntu 官方可免费下载服务器版本的 iso 镜像文件，我们使用本镜像进行最小化安装即可。我自己的操作是把镜像交给我们公司的网络运维工程师，让他给我那这个镜像开了个虚机，分配了一个内网 IP 用来测试。&lt;/p&gt;
+&lt;p&gt;记得跟网络运维工程师说一下让服务器通互联网，再配置一下阿里云的源&lt;/p&gt;
+&lt;h2 id=&#34;系统必要的配置&#34;&gt;&lt;a href=&#34;#系统必要的配置&#34; class=&#34;headerlink&#34; title=&#34;系统必要的配置&#34;&gt;&lt;/a&gt;系统必要的配置&lt;/h2&gt;&lt;p&gt;系统默认没初始化 root 账号，使用下方指令初始化：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后定一个安全好记的密码就行，我们之后的操作都在 root 账号下执行。&lt;/p&gt;
+&lt;p&gt;接下来就是升级 ubuntu 系统&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;apt update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;apt upgrade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后我们安装 vim 编辑器，方便编辑文件&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;apt install vim&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后我们安装 screen 工具，保证我们的操作不因关闭终端而终止&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;apt install screen&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;至此该配置的都配置好了&lt;/p&gt;
+&lt;h2 id=&#34;安装并配置-oneinstack&#34;&gt;&lt;a href=&#34;#安装并配置-oneinstack&#34; class=&#34;headerlink&#34; title=&#34;安装并配置 oneinstack&#34;&gt;&lt;/a&gt;安装并配置 oneinstack&lt;/h2&gt;&lt;p&gt;oneinstack 是一款自动化部署 lnmp 环境的组件工具，百度并访问官网，选择自动安装，选好你需要的配置后，复制好安装的命令，后面用&lt;/p&gt;
+&lt;p&gt;安装 lnmp 环境之前，我们新建一个 screen 窗口，保证我们的安装不因窗口关闭而终止：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;screen -S lnmp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;下面是一些常用操作，可以参考：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ctrl a + d    // 暂退当前的 screen 窗口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;screen -r lnmp    // 恢复名为 lnmp 的 screen 窗口&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;screen -ls    // 查看当前的所有 screen 窗口信息&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;回到话题，配置好 screen 就可以开始安装 lnmp 环境啦，用上面的你复制的 oneinstack 生成的指令到你的终端，回车，然后等待安装完毕并重启服务器即可。&lt;/p&gt;
+&lt;p&gt;此过程一般没问题，若出现报错，安装会终止并提示错误信息，建议重新执行一遍。再有故障那就要自行解决了。&lt;/p&gt;
+&lt;h2 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h2&gt;&lt;p&gt;根据 oneinstack 安装时配置的数据库密码，我们通过访问咱们主机的 ip 进入 oneinstack 默认页面，然后找到 phpmyadmin ，使用 root 和刚才说的密码进入数据库中，新建一个所需的空白数据库。&lt;/p&gt;
+&lt;h2 id=&#34;部署项目&#34;&gt;&lt;a href=&#34;#部署项目&#34; class=&#34;headerlink&#34; title=&#34;部署项目&#34;&gt;&lt;/a&gt;部署项目&lt;/h2&gt;&lt;p&gt;假设你的 laravel 10 项目在 github 中，代码通过 git 进行版本控制。&lt;/p&gt;
+&lt;p&gt;接下来我们前往网站目录，并将代码 clone 到本地&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /date/wwwroot&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mv default default_back&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git clone [ 你的远端 git 地址 ] jiepade&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;php-配置&#34;&gt;&lt;a href=&#34;#php-配置&#34; class=&#34;headerlink&#34; title=&#34;php 配置&#34;&gt;&lt;/a&gt;php 配置&lt;/h2&gt;&lt;p&gt;我们需要将部分的 php 默认禁用的函数方法打开，方便使用诸如 composer 之类的命令，具体操作为：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /usr/local/php/etc/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim php.ini&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后找到如下这行：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;; This directive allows you to disable certain functions.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;; It receives a comma-delimited list of function names.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;; https://php.net/disable-functions&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;disable_functions = passthru,exec,system,chroot,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_restore,dl,readlink,symlink,popepassthru,stream_socket_server,fsocket,popen&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;修改为：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;disable_functions = passthru,exec,system,chroot,chgrp,chown,shell_exec,ini_alter,ini_restore,dl,readlink,popepassthru,stream_socket_server,fsocket,popen&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;保存退出后，重启 php—fpm 服务&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service php-fpm restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;composer-安装与执行&#34;&gt;&lt;a href=&#34;#composer-安装与执行&#34; class=&#34;headerlink&#34; title=&#34;composer 安装与执行&#34;&gt;&lt;/a&gt;composer 安装与执行&lt;/h2&gt;&lt;p&gt;回到项目根目录，安装 composer，若已安装，直接配置下一步&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php -r &amp;quot;copy(&amp;#x27;https://install.phpcomposer.com/installer&amp;#x27;, &amp;#x27;composer-setup.php&amp;#x27;);&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php composer-setup.php&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;mv composer.phar /usr/local/bin/composer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;若以上指令报错 php 无法找到，请检查path路径是否添加了php的bin目录，具体百度即可。不可能是没装 php，oneinstack 已经给你装好了，这个问题基本上是ubuntu下一般账号能跑 php，但 root 不行。小问题的。&lt;/p&gt;
+&lt;p&gt;我们不使用阿里云的 composer 镜像，因为国内镜像的composer各依赖版本不够新，影响使用，用国外原版镜像慢点，但是稳定且最新。&lt;/p&gt;
+&lt;p&gt;安装好后，在项目根目录执行 composer i 指令，安装项目所需的依赖&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer i&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;laravel-初始化配置&#34;&gt;&lt;a href=&#34;#laravel-初始化配置&#34; class=&#34;headerlink&#34; title=&#34;laravel 初始化配置&#34;&gt;&lt;/a&gt;laravel 初始化配置&lt;/h2&gt;&lt;p&gt;接下来就可以进行基础的 laravel 配置了，首先我们复制根目录下的 .env 一份出来&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后生成密钥&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后修改 .env 为项目实际需要调整的内容，具体需要咨询开发人员要改哪些。&lt;/p&gt;
+&lt;p&gt;完成上述环节后，就可以进行数据库填充工作&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate:refresh --seed &amp;amp;&amp;amp; php artisan admin:install &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;之后你可能需要借助数据库程序，连接到服务器，把一些你备份的项目初始化数据库填充到项目中，具体自行操作即可，推荐使用 Dbeaver，开源且免费，官方也在更新，别用盗版的 navicat 辣&lt;/p&gt;
+&lt;h2 id=&#34;配置-nginx&#34;&gt;&lt;a href=&#34;#配置-nginx&#34; class=&#34;headerlink&#34; title=&#34;配置 nginx&#34;&gt;&lt;/a&gt;配置 nginx&lt;/h2&gt;&lt;p&gt;这时候你访问网址是无法看到你的项目的，需要对 nginx 配置，首先找到配置文件&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /usr/local/nginx/conf/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim nginx.conf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改如下的几个值&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;######################## default ############################&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  server &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    listen 2333;             &amp;lt;------------------here,change it&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    server_name _;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    access_log /data/wwwlogs/access_nginx.log combined;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    root /data/wwwroot/default/public;             &amp;lt;------------------here,change it&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    index index.html index.htm index.php;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    #error_page 404 /404.html;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    #error_page 502 /502.html;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location /nginx_status &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      stub_status on;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      access_log off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      allow 127.0.0.1;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      deny all;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location ~ [^/]\.php(/|$) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      #fastcgi_pass remote_php_ip:9000;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      fastcgi_pass unix:/dev/shm/php-cgi.sock;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      fastcgi_index index.php;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      include fastcgi.conf;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|flv|mp4|ico)$ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      expires 30d;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      access_log off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location ~ .*\.(js|css)?$ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      expires 7d;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      access_log off;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location ~ ^/(\.user.ini|\.ht|\.git|\.svn|\.project|LICENSE|README.md) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      deny all;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location /.well-known &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      allow all;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    location / &amp;#123;             &amp;lt;------------------here,add it&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      try_files $uri $uri/ /index.php?$query_string;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;保存退出后，重启 nginx 使之生效&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;文件权限调整&#34;&gt;&lt;a href=&#34;#文件权限调整&#34; class=&#34;headerlink&#34; title=&#34;文件权限调整&#34;&gt;&lt;/a&gt;文件权限调整&lt;/h2&gt;&lt;p&gt;我们需要对项目的文件提权，允许项目进行诸如存储文件等操作。&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 777 default&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www-data:www-data default&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd default&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chgrp -R www storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod -R ug+rwx storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;之后访问 http:&amp;#x2F;&amp;#x2F;[你的 IP 地址]:2333&amp;#x2F; 就可以看到你的项目辣，项目部署到此结束&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</guid>
+            <title>laravel 项目部署到服务器的流程</title>
+            <link>https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</link>
+            <category>代码部署</category>
+            <category>oneinstack</category>
+            <category>lnmp</category>
+            <pubDate>Tue, 08 Jun 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;新建虚拟站点&#34;&gt;&lt;a href=&#34;#新建虚拟站点&#34; class=&#34;headerlink&#34; title=&#34;新建虚拟站点&#34;&gt;&lt;/a&gt;新建虚拟站点&lt;/h1&gt;&lt;p&gt;进入到 oneinstack 根目录，输入 &lt;code&gt;./vhost&lt;/code&gt; 新建虚拟主机，在开始之前首先申请好指向本测试服务器的域名，ssl 证书可使用 oneinstack 自动生成并自动续期，一路完成后会有如下提示即可&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; #       OneinStack for CentOS&amp;#x2F;RedHat 6+ Debian 8+ and Ubuntu 14+      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #       For more information please visit &lt;a href=&#34;https://oneinstack.com/&#34;&gt;https://oneinstack.com&lt;/a&gt;      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; Your domain:                  yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Virtualhost conf:             &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;vhost&amp;#x2F;yanji.wkarrow.top.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Directory of:                 &amp;#x2F;data&amp;#x2F;wwwroot&amp;#x2F;yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Rewrite rule:                 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;rewrite&amp;#x2F;laravel.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Let’s Encrypt SSL Certificate:&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.crt&lt;br&gt;&amp;#x2F;&amp;#x2F; SSL Private Key:              &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.key&lt;/p&gt;
+&lt;h1 id=&#34;git-clone-拷贝线上仓库数据到本地&#34;&gt;&lt;a href=&#34;#git-clone-拷贝线上仓库数据到本地&#34; class=&#34;headerlink&#34; title=&#34;git clone 拷贝线上仓库数据到本地&#34;&gt;&lt;/a&gt;git clone 拷贝线上仓库数据到本地&lt;/h1&gt;&lt;p&gt;cd 到 &lt;code&gt;/date/wwwroot/yanji.wkarrow.top&lt;/code&gt; 目录中，执行&lt;br&gt; &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;修改-env-文件&#34;&gt;&lt;a href=&#34;#修改-env-文件&#34; class=&#34;headerlink&#34; title=&#34;修改 .env 文件&#34;&gt;&lt;/a&gt;修改 .env 文件&lt;/h1&gt;&lt;p&gt;在项目根目录下执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后 &lt;code&gt;vim .env&lt;/code&gt; 配置站点数据&lt;/p&gt;
+&lt;h1 id=&#34;修改站点权限&#34;&gt;&lt;a href=&#34;#修改站点权限&#34; class=&#34;headerlink&#34; title=&#34;修改站点权限&#34;&gt;&lt;/a&gt;修改站点权限&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 777 yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www-data:www-data yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd yanji,wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chgrp -R www storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod -R ug+rwx storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;修改-nginx-配置&#34;&gt;&lt;a href=&#34;#修改-nginx-配置&#34; class=&#34;headerlink&#34; title=&#34;修改 nginx 配置&#34;&gt;&lt;/a&gt;修改 nginx 配置&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /usr/local/nginx/conf/vhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim yanji.wkarrow.top.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h1&gt;&lt;p&gt;前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库&lt;/p&gt;
+&lt;h1 id=&#34;数据库迁移&#34;&gt;&lt;a href=&#34;#数据库迁移&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移&#34;&gt;&lt;/a&gt;数据库迁移&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

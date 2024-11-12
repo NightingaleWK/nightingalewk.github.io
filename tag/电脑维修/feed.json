@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"电脑维修\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2020/12/08/11.%20%E9%9D%99%E7%94%B5%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/",
+            "url": "https://nightingalewk.cn/2020/12/08/11.%20%E9%9D%99%E7%94%B5%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/",
+            "title": "静电导致电脑无法开机问题记录",
+            "date_published": "2020-12-08T04:26:00.000Z",
+            "content_html": "<h2 id=\"现象\"><a href=\"#现象\" class=\"headerlink\" title=\"现象\"></a>现象</h2><p>今天早上起床开机，电脑运行，但是显示器无画面，体现为无信号传输到显示器上，通过控制变量法排除问题，最终预估是显卡或者主板的事情，故保修 Dell 售后，其后电脑断电放置一边等待明天上门的更换</p>\n<p>随后一段时间，工程师来电让我再测试一次，结果电脑居然顺利的开机并显示画面</p>\n<h2 id=\"解决\"><a href=\"#解决\" class=\"headerlink\" title=\"解决\"></a>解决</h2><p>冬季干燥，地暖高温，导致室内湿度低温度高，很容易产生静电，以致电脑无法开机</p>\n<p>冬季在屋子里注意适度温度，打开加湿器保证室内湿度，防止静电对电子元件的干扰和损伤</p>\n",
+            "tags": [
+                "电脑维修"
+            ]
+        }
+    ]
+}

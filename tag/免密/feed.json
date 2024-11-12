@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"免密\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2021/12/15/35.%20Coding%20%E6%97%A0%E5%AF%86%E7%A0%81%E6%8E%A8%E6%8B%89%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/",
+            "url": "https://nightingalewk.cn/2021/12/15/35.%20Coding%20%E6%97%A0%E5%AF%86%E7%A0%81%E6%8E%A8%E6%8B%89%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/",
+            "title": "Coding 无密码推拉代码的方法",
+            "date_published": "2021-12-15T05:00:00.000Z",
+            "content_html": "<h2 id=\"生成公钥\"><a href=\"#生成公钥\" class=\"headerlink\" title=\"生成公钥\"></a>生成公钥</h2><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br><span class=\"line\">6</span><br><span class=\"line\">7</span><br><span class=\"line\">8</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">// 创建新的 SSH 私钥与公钥秘钥对，输入你的邮箱作为标签</span><br><span class=\"line\">ssh-keygen -m PEM -t rsa -b 4096 -C &quot;your.email@example.com&quot;  </span><br><span class=\"line\"></span><br><span class=\"line\">// 推荐使用默认地址</span><br><span class=\"line\">Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  </span><br><span class=\"line\"></span><br><span class=\"line\">// 此处直接回车即可；若设置密码，则每次使用 SSH 方式推送代码时都会要求输入密码</span><br><span class=\"line\">Enter passphrase (empty for no passphrase):  </span><br></pre></td></tr></table></figure>\n<span id=\"more\"></span>\n\n<h2 id=\"添加公钥\"><a href=\"#添加公钥\" class=\"headerlink\" title=\"添加公钥\"></a>添加公钥</h2><ol>\n<li>打开上文中生成的秘钥对的地址（通常为 ~&#x2F;.ssh&#x2F;）找到后缀为 pub 的公钥文件，使用 cat 命令输出所有内容并复制。</li>\n<li>登录 CODING，点击右上角个人头像进入「个人账户设置」-&gt;「SSH 公钥」页面，然后点击新建公钥按钮，粘贴复制的公钥全文。</li>\n<li>完成后，在本地运行首次连接时的公钥认证命令： <code>ssh -T git@e.coding.net</code></li>\n</ol>\n",
+            "tags": [
+                "免密"
+            ]
+        }
+    ]
+}

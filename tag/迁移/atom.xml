@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;迁移&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2023-11-07T02:57:43.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/</id>
+        <title>哎，又把博客迁移了</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;就结果来说，我还是回归 hexo 的怀抱了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本来我的博客部署在自己的腾讯云轻量服务器，但是最近手头的项目需要部署测试，就可能对服务器进行一些变动和修改，甚至重装，这就对博客的稳定造成了影响。为了追求稳定，我决定还是把网站部署到 github pages 上，虽然可能存在部分打不开的情况，但至少是免费的，我再把我的域名指向默认地址上，就没问题了。&lt;/p&gt;
+&lt;p&gt;其实 typecho 用得好好的，非常顺手，要不是服务器有其他用处，我才不换呢。&lt;/p&gt;
+&lt;p&gt;啥也没丢，啥都可以正常运行，而且 github 为我们提供稳定可靠谱的服务，我觉得就足够了&lt;/p&gt;
+&lt;p&gt;回顾一路走来的博客路线，从 wordpress，再到 hexo，再到 typecho，再回到 hexo，个人的偏好从一开始追寻花里胡哨，大而全，慢慢的转为简单简约，稳定可靠。慢慢回归博客的记录本质。&lt;/p&gt;
+&lt;p&gt;在发文的时候，我把该转移的资源都完成了转移，那就让我们继续在 github pages 强力驱动下的 hexo 里继续记录我的成长历程吧&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;生命不息，折腾不止&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="迁移" />
+        <updated>2023-11-07T02:57:43.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/</id>
+        <title>又一次更换博客系统辣</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2022/11/24/50.%20%E5%8F%88%E4%B8%80%E6%AC%A1%E6%9B%B4%E6%8D%A2%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F%E8%BE%A3/"/>
+        <content type="html">&lt;p&gt;当你看到这个文章的时候，我已经从 hexo 换回到 typecho 了，最近发现作者开始更新，版本到 1.2.0 ，普大喜奔🫡&lt;/p&gt;
+&lt;p&gt;我花了点时间把之前的博客迁移到了 typecho，以后就用它啦&lt;/p&gt;
+&lt;p&gt;另外，最近抢了一台腾讯云的轻量云服务器，333元3年，2C2G 配置，感觉完全可以做本站及其其他博客站等需要长期部署不太动的东西，所以借此机会把我的站点搬到新服务器上，原来的老服务器性能更好，我等给他重装一下，专用于部署自己的测试商业项目，实现了个人生活与工作需要的服务器分离。&lt;/p&gt;
+&lt;p&gt;哦对了，新房子现在家具都到了，最近收拾一下，跑跑味，结一下尾，明年小家电一买，哎嘿，我和我对象就以火箭般的速度光速入住我的小窝&lt;/p&gt;
+&lt;p&gt;总之就是好耶！&lt;/p&gt;
+</content>
+        <category term="迁移" />
+        <updated>2022-11-24T08:57:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/10/03/1.%20%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/</id>
+        <title>博客迁移</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/10/03/1.%20%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB/"/>
+        <content type="html">&lt;p&gt;从今天开始，我的博客站将全面从 wordpress 转移到 hexo 上，佛系的迁移吧，慢慢来，我倒是不着急。&lt;/p&gt;
+&lt;p&gt;因为 wordpress 的国内体验实在是越来越差，后台反应慢、更新不可能、功能臃肿我用不到，花里胡哨的固然有好处，可视化编辑器确实很香，但是用了快2年，不想再折腾了，于是就选择 hexo 了&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;而且最大的优势就是我可以把站点部署在 Coding 平台，然后开启静态页面服务，也就是不用再花钱买服务器了，我只要解析个自己的域名，配置配置就搞定，舒心&lt;/del&gt; （ 2020.11.30 Coding 的静态网站服务强制转移到腾讯云并收费了，不讲武德，当前站点现已部署到个人阿里云服务器上 ）&lt;/p&gt;
+&lt;p&gt;转来转去，博客吧，我还是想回归写作的本质，排除一切繁杂，保留最原始的初心&lt;/p&gt;
+&lt;p&gt;该玩的骚操作都玩过之后，就只剩下回归初心了&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;回归写作、回归思考、回归独立&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;2017-08-11，买了人生中第一台云服务器，阿里云的，开始自己部署 wordpress 玩博客，同时，也开启了我的码农生涯。&lt;/li&gt;
+&lt;li&gt;2020-10-03，从 Wordpress 迁移到 Hexo，因为 wp 实在是太慢了，真不如静态页面来的速度。&lt;/li&gt;
+&lt;li&gt;2021-09-22，5 年的阿里云服务器到期了，转入腾讯云。&lt;/li&gt;
+&lt;li&gt;2022-11-24，Hexo 转 typecho。因为作者把版本诈尸般的更新到 1.2.0，想体验。&lt;/li&gt;
+&lt;li&gt;2023-11-07，typecho 转 Hexo。因为这么多年了，折腾不动了。整个静态网站部署到 github pages 上养老就行了。&lt;/li&gt;
+&lt;li&gt;2024-01-15，Hexo 转微信公众号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一开始，按月学生价白嫖服务器，经常升级系统，LNMP 环境换了又换，各种东西装了又装，各种插件试了又试，生命不息，折腾不止。&lt;/p&gt;
+&lt;p&gt;再后来，工作后的业余时间与极客热情慢慢减少，博客对我来说逐渐趋向于一个放在手边的“笔记本”，自己的工作经验和常用手册就放在博客里，我需要的慢慢就是一个稳定，可靠的环境，来沉淀我的记忆。所以不再折腾 wp，用上了急速、可靠、便捷的 Hexo，编辑方式也从 wp 的古腾堡，改为了 markdown。&lt;/p&gt;
+&lt;p&gt;最后，服务器已经不能只作为自己的兴趣爱好了，工作上的测试项目需要不断变动我的服务器，这种不确定性与博客稳定的环境需求产生了很大的矛盾，于是我索性直接把站点部署到 github pages 服务上，哪怕外网慢一点，不稳定一点，每次部署都要重新配置 dns 信息，那也愿意，至少我的文章，会一直留在 github，一定不会随我而消失。&lt;/p&gt;
+&lt;p&gt;现在，为什么我换成公众号了呢？因为我最重要的需求，也就是我的“笔记本”，经常在没有科学上网的情况下，无法访问，这违背了我对博客最基本的要求。既然公众号也是文章的归宿，微信的体量，我相信也不会说倒就倒，那我不如把我的“笔记本”放在这里。&lt;/p&gt;
+&lt;p&gt;不追求格式，不需要效果，不在乎外表，只需要一个忠实记录着我人生轨迹的工具。&lt;/p&gt;
+&lt;p&gt;至于为什么不用 MSDN、博客园？算了吧，太 low 了，我现在天天问 chatgp、翻官方文档，也不会去看 MSDN 的无营养文章了，浪费生命。&lt;/p&gt;
+</content>
+        <category term="迁移" />
+        <updated>2020-10-03T02:51:10.000Z</updated>
+    </entry>
+</feed>

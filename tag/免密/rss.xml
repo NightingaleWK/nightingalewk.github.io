@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;免密&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 15 Dec 2021 13:00:00 +0800</pubDate>
+        <lastBuildDate>Wed, 15 Dec 2021 13:00:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/12/15/35.%20Coding%20%E6%97%A0%E5%AF%86%E7%A0%81%E6%8E%A8%E6%8B%89%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+            <title>Coding 无密码推拉代码的方法</title>
+            <link>https://nightingalewk.cn/2021/12/15/35.%20Coding%20%E6%97%A0%E5%AF%86%E7%A0%81%E6%8E%A8%E6%8B%89%E4%BB%A3%E7%A0%81%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+            <category>免密</category>
+            <pubDate>Wed, 15 Dec 2021 13:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;生成公钥&#34;&gt;&lt;a href=&#34;#生成公钥&#34; class=&#34;headerlink&#34; title=&#34;生成公钥&#34;&gt;&lt;/a&gt;生成公钥&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;// 创建新的 SSH 私钥与公钥秘钥对，输入你的邮箱作为标签&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ssh-keygen -m PEM -t rsa -b 4096 -C &amp;quot;your.email@example.com&amp;quot;  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 推荐使用默认地址&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 此处直接回车即可；若设置密码，则每次使用 SSH 方式推送代码时都会要求输入密码&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;Enter passphrase (empty for no passphrase):  &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;添加公钥&#34;&gt;&lt;a href=&#34;#添加公钥&#34; class=&#34;headerlink&#34; title=&#34;添加公钥&#34;&gt;&lt;/a&gt;添加公钥&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;打开上文中生成的秘钥对的地址（通常为 ~&amp;#x2F;.ssh&amp;#x2F;）找到后缀为 pub 的公钥文件，使用 cat 命令输出所有内容并复制。&lt;/li&gt;
+&lt;li&gt;登录 CODING，点击右上角个人头像进入「个人账户设置」-&amp;gt;「SSH 公钥」页面，然后点击新建公钥按钮，粘贴复制的公钥全文。&lt;/li&gt;
+&lt;li&gt;完成后，在本地运行首次连接时的公钥认证命令： &lt;code&gt;ssh -T git@e.coding.net&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

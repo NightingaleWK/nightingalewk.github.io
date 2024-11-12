@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;vs code&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 02 Mar 2022 17:00:00 +0800</pubDate>
+        <lastBuildDate>Wed, 02 Mar 2022 17:00:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <title>VS Code 使用公钥配合 Remote SSH 登录远程服务器</title>
+            <link>https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <category>vs code</category>
+            <pubDate>Wed, 02 Mar 2022 17:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;为了随时随地的使用不同设备链接同一个开发环境，也因为电脑赢弱的性能带不动开发环境，我决定使用远端开发的思路，于是就有了如何免密访问服务器的方案&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h1 id=&#34;1-生成公钥私钥&#34;&gt;&lt;a href=&#34;#1-生成公钥私钥&#34; class=&#34;headerlink&#34; title=&#34;1.生成公钥私钥&#34;&gt;&lt;/a&gt;1.生成公钥私钥&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa&lt;/code&gt; 生成密钥，想安全级别更高 &lt;code&gt;ssh-keygen -b 4096 -t rsa&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;其中，生成的公钥保存在 &lt;code&gt;.ssh/id_rsa&lt;/code&gt; ,私钥在 &lt;code&gt;.ssh/id_rsa.pub&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2-上传公钥到远程服务器&#34;&gt;&lt;a href=&#34;#2-上传公钥到远程服务器&#34; class=&#34;headerlink&#34; title=&#34;2.上传公钥到远程服务器&#34;&gt;&lt;/a&gt;2.上传公钥到远程服务器&lt;/h1&gt;&lt;p&gt;执行 &lt;code&gt;vim /etc/ssh/sshd_config&lt;/code&gt; ，确保以下三项是这个样子的，没有的可以自己加进去&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;RSAAuthentication yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;PubkeyAuthentication yes&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;AuthorizedKeysFile .ssh/authorized_keys&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;然后 &lt;code&gt;service sshd restart&lt;/code&gt; 重启 ssh 服务&lt;/p&gt;
+&lt;p&gt;在本地打开 git bash 输入 &lt;code&gt;ssh-copy-id user@host&lt;/code&gt;，该指令将实现公钥上传到远程服务器的 .ssh&amp;#x2F;authorized_keys 的功能&lt;/p&gt;
+&lt;p&gt;至此，本地电脑访问远程服务器就不需要密码了&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

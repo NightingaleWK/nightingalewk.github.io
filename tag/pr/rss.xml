@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;pr&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 21 Jan 2021 12:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 21 Jan 2021 12:00:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/</guid>
+            <title>B 站上传视频防压参数</title>
+            <link>https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/</link>
+            <category>pr</category>
+            <category>bilibili</category>
+            <pubDate>Thu, 21 Jan 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;使用的是 PR ，这里只记录导出时的参数，自用防忘&lt;/p&gt;
+&lt;h2 id=&#34;导出设置&#34;&gt;&lt;a href=&#34;#导出设置&#34; class=&#34;headerlink&#34; title=&#34;导出设置&#34;&gt;&lt;/a&gt;导出设置&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;格式：H264&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;视频&#34;&gt;&lt;a href=&#34;#视频&#34; class=&#34;headerlink&#34; title=&#34;视频&#34;&gt;&lt;/a&gt;视频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;宽度：1920&lt;/li&gt;
+&lt;li&gt;高度：1080&lt;/li&gt;
+&lt;li&gt;帧速率：60&lt;/li&gt;
+&lt;li&gt;√ 以最大深度渲染&lt;/li&gt;
+&lt;li&gt;比特率编码：VBR，2次&lt;/li&gt;
+&lt;li&gt;目标比特率：19&lt;/li&gt;
+&lt;li&gt;最大比特率：50&lt;/li&gt;
+&lt;li&gt;关键帧距离：72&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;音频&#34;&gt;&lt;a href=&#34;#音频&#34; class=&#34;headerlink&#34; title=&#34;音频&#34;&gt;&lt;/a&gt;音频&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;采样率：44100 Hz&lt;/li&gt;
+&lt;li&gt;比特率：320&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;其他&#34;&gt;&lt;a href=&#34;#其他&#34; class=&#34;headerlink&#34; title=&#34;其他&#34;&gt;&lt;/a&gt;其他&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;√ 使用最高渲染质量&lt;/li&gt;
+&lt;li&gt;bilibili 上传助手的单个文件最大 4 GB&lt;br&gt;以上参数注意修改，其他保持默认&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

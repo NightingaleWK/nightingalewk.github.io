@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"awk\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/",
+            "url": "https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/",
+            "title": "sshpass 中使用 awk 的坑",
+            "date_published": "2022-08-30T06:20:00.000Z",
+            "content_html": "<p>之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。</p>\n<p>最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。</p>\n<span id=\"more\"></span>\n\n<p>原语句：<code>free -m | sed -n &#39;2p&#39; | awk &#39;&#123;print &quot;Mem used is &quot;$3/$2*100&#125;&#39;</code></p>\n<p>想在 sshpass 中执行正确，就应该把 <code>&amp;</code> 转义，在其前面加上 <code>\\</code> 即可，最终结果为：</p>\n<figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">sshpass -p Password ssh root@192.168.1.1 &quot;free -m | sed -n &#x27;2p&#x27; | awk &#x27;&#123;print &quot;Mem used is &quot;\\$3/\\$2*100&#125;&#x27;&quot; &gt;&gt;test.txt</span><br></pre></td></tr></table></figure>",
+            "tags": [
+                "sshppass",
+                "awk"
+            ]
+        }
+    ]
+}

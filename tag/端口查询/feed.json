@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "雪漫城的风宅 • All posts by \"端口查询\" tag",
+    "description": "この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-",
+    "home_page_url": "https://nightingalewk.cn",
+    "items": [
+        {
+            "id": "https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/",
+            "url": "https://nightingalewk.cn/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/",
+            "title": "检测服务端口的方法",
+            "date_published": "2022-11-24T08:10:00.000Z",
+            "content_html": "<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p>\n<h2 id=\"1-Linux-系统\"><a href=\"#1-Linux-系统\" class=\"headerlink\" title=\"1. Linux 系统\"></a>1. Linux 系统</h2><h3 id=\"1-1-查询-etc-services-找端口\"><a href=\"#1-1-查询-etc-services-找端口\" class=\"headerlink\" title=\"1.1 查询 &#x2F;etc&#x2F;services 找端口\"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br><span class=\"line\">5</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">cat /etc/services | grep postgres</span><br><span class=\"line\"> </span><br><span class=\"line\">postgres 5432/tcp postgresql # POSTGRES</span><br><span class=\"line\"> </span><br><span class=\"line\">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure>\n<p>注意：如果用户没有配置services的话，这个方法就无效。</p>\n<h3 id=\"1-2-netstat-命令查看\"><a href=\"#1-2-netstat-命令查看\" class=\"headerlink\" title=\"1.2 netstat 命令查看\"></a>1.2 netstat 命令查看</h3><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br></pre></td><td class=\"code\"><pre><span class=\"line\"># netstat -a | grep PGSQL</span><br><span class=\"line\"> </span><br><span class=\"line\">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure>\n\n<h2 id=\"2-Windows-系统\"><a href=\"#2-Windows-系统\" class=\"headerlink\" title=\"2. Windows 系统\"></a>2. Windows 系统</h2><p>待补充</p>\n",
+            "tags": [
+                "端口查询"
+            ]
+        }
+    ]
+}

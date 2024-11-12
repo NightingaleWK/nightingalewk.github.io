@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;php&#34; category</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 22 Mar 2022 13:38:00 +0800</pubDate>
+        <lastBuildDate>Tue, 22 Mar 2022 13:38:00 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>迁移</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>海鲜</category>
+        <category>汤</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>甜品</category>
+        <category>homestead</category>
+        <category>梦境</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>debug</category>
+        <category>oh-my-zsh</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>端口查询</category>
+        <category>swap</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>表单验证</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>粥</category>
+        <category>特色小吃</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>artisan 指令</category>
+        <category>linux</category>
+        <category>screen</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2022/03/22/39.%20PHP%20%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%20fileinfo%20%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF/</guid>
+            <title>PHP 无法安装 fileinfo 的一种解决思路</title>
+            <link>https://nightingalewk.cn/2022/03/22/39.%20PHP%20%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%20fileinfo%20%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF/</link>
+            <category>fileinfo</category>
+            <pubDate>Tue, 22 Mar 2022 13:38:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;最近拿到我司数据中心给的一台 8C16G 的虚机，预装 centos 7.9.2009 最新版本，使用 oneinstack 一键安装 lnmp 运行环境，硬是没给我装上 fileinfo 扩展，导致我的 laravel 8 项目中读取文件的各类操作均报错，这个问题还没找到解决方案。如下是我个人的一种解决思路，供大家参考&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h1 id=&#34;系统环境介绍&#34;&gt;&lt;a href=&#34;#系统环境介绍&#34; class=&#34;headerlink&#34; title=&#34;系统环境介绍&#34;&gt;&lt;/a&gt;系统环境介绍&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;centos 7.9.2009 最小化安装 （使用 &lt;code&gt;cat /etc/redhat-release&lt;/code&gt; 指令便可查看当前你的曹祖系统具体的版本）&lt;/li&gt;
+&lt;li&gt;oneinstack 2022-03-14 版本&lt;/li&gt;
+&lt;li&gt;nginx 1.20.2&lt;/li&gt;
+&lt;li&gt;mysql 8.0&lt;/li&gt;
+&lt;li&gt;php 8.1.3&lt;/li&gt;
+&lt;li&gt;php 扩展：zendguardloader,ioncube,sourceguardian,imagick,fileinfo,imap,ldap,phalcon,yaf,redis,memcached,mongodb,swoole（因为机器性能强劲，随便造，注意，这里安装前我选择了 fileinfo，虽然最后自动模式下没装上）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以看出，我这里能新则新，截止发稿时，我用的都是最新的版本，想的就是体验新的技术，而我们的问题则是在 php 8.1.3 下装 fileinfo 出的&lt;/p&gt;
+&lt;h1 id=&#34;网友们的思路&#34;&gt;&lt;a href=&#34;#网友们的思路&#34; class=&#34;headerlink&#34; title=&#34;网友们的思路&#34;&gt;&lt;/a&gt;网友们的思路&lt;/h1&gt;&lt;p&gt;大家的思路无非就两种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;思路一：内存太小。编译 fileinfo 需要吃系统硬件资源，内存小于 1G 的很难编译通过，所以升配或者添加swap空间就可解决问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;思路二：适配问题。当我们不存在硬件瓶颈的时候，提示报错，这里的问题绝大部分是再编译过程中使用 std&amp;#x3D;c99 选项来重新编译 &lt;code&gt;make &amp;amp;&amp;amp; make install&lt;/code&gt;，这样就可以通过&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上两种方式相信自己搜索过的同学都知道该怎么处理&lt;/p&gt;
+&lt;p&gt;但这以上的问题对我来说均不是问题，我遇到了思路二的问题 + 一个c语言指针的问题，后者的错误是我不想去修改的，毕竟根本跟我代码没什么关系的事情，纯粹就是 php 或者 fileinfo 的问题，不如交给他们的开发者去研究修复，但是不改没法用 fileinfo 的功能，而且网上都没有我说的这个问题&lt;/p&gt;
+&lt;h1 id=&#34;解决方案&#34;&gt;&lt;a href=&#34;#解决方案&#34; class=&#34;headerlink&#34; title=&#34;解决方案&#34;&gt;&lt;/a&gt;解决方案&lt;/h1&gt;&lt;p&gt;解决方案很无脑：&lt;strong&gt;找一个 php 8.1 版本的、编译通过的 fileinfo.so 文件，放到系统里，就什么问题都解决了&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文件下载好，放到 oneinstack 默认的扩展存放位置 &lt;code&gt;/usr/local/php/lib/php/extensions/no-debug-non-zts-20210902/&lt;/code&gt; 中，然后再回到 &lt;code&gt;php.ini&lt;/code&gt;，将 &lt;code&gt;extension=fileinfo&lt;/code&gt; 前面的 # 删掉，重启 php 服务 &lt;code&gt;service php-fpm restart&lt;/code&gt;，即可&lt;/p&gt;
+&lt;p&gt;这时候我们使用 &lt;code&gt;php -m&lt;/code&gt; 就可以看到 fileinfo 就在其中，解决问题！&lt;/p&gt;
+&lt;p&gt;毕竟我们费劲编译到最后的目的就是生成这个 fileinfo.so，好像这个解决方案有点投机取巧，但是在是研究一整天无果后，这是最让我安心的方式了，爷累了&lt;/p&gt;
+&lt;p&gt;追求最新的技术注定要面对这样需要自己折腾的问题，适配啊、不兼容啊、没文档啊等等，但这次问题解决的过程缺会让你提升很多&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;开发&#34; category</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2021-09-13T04:00:00.000Z</updated>
+    <category term="hexo" />
+    <category term="迁移" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="海鲜" />
+    <category term="汤" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="甜品" />
+    <category term="homestead" />
+    <category term="梦境" />
+    <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="debug" />
+    <category term="oh-my-zsh" />
+    <category term="道歉信" />
+    <category term="指令" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="端口查询" />
+    <category term="swap" />
+    <category term="事件" />
+    <category term="blade" />
+    <category term="表单验证" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="粥" />
+    <category term="特色小吃" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="artisan 指令" />
+    <category term="linux" />
+    <category term="screen" />
+    <entry>
+        <id>https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+        <title>ERR_CONNECTION_TIMED_OUT 解决方法</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+        <content type="html">&lt;p&gt;平日正常访问的站点突然无法访问，提示&lt;code&gt;ERR_CONNECTION_TIMED_OUT&lt;/code&gt;，排除服务端的问题后，不如排查一下本地的问题，我们可以清理浏览器各类缓存试试&lt;/p&gt;
+&lt;p&gt;若依旧存在问题，我们可以重置一下系统的网络环境，在&lt;code&gt;CMD&lt;/code&gt;或者&lt;code&gt;PowerShell&lt;/code&gt;下逐次运行以下指令&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /renew&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /registerdns&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /flushdns&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ipconfig /release&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;问题即可解决&lt;/p&gt;
+</content>
+        <category term="debug" />
+        <updated>2021-09-13T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</id>
+        <title>我开发用到的各种技术参数</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+        <content type="html">&lt;p&gt; 开发环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;homestead V12.3&lt;/li&gt;
+&lt;li&gt;Settler v11.3.0 (Ubuntu 20.04)&lt;/li&gt;
+&lt;li&gt;Ubuntu LTS 20.04&lt;/li&gt;
+&lt;li&gt;PHP 8.0.1 (cli)  &lt;/li&gt;
+&lt;li&gt;mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))&lt;/li&gt;
+&lt;li&gt;nginx 1.18.0 (Ubuntu)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;开发工具&#34;&gt;&lt;a href=&#34;#开发工具&#34; class=&#34;headerlink&#34; title=&#34;开发工具&#34;&gt;&lt;/a&gt;开发工具&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Visual Studio Code 1.56.2&lt;/li&gt;
+&lt;li&gt;Navicat Premium 15（15.0.25）&lt;/li&gt;
+&lt;li&gt;Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)&lt;/li&gt;
+&lt;li&gt;Github Desktiop Version 2.8.2 (x64)&lt;/li&gt;
+&lt;li&gt;Termius 7.12.0（Windows store version）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;浏览器调试&#34;&gt;&lt;a href=&#34;#浏览器调试&#34; class=&#34;headerlink&#34; title=&#34;浏览器调试&#34;&gt;&lt;/a&gt;浏览器调试&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Google Chrome 91.0.4472.77（正式版本）（64 位）&lt;/li&gt;
+&lt;li&gt;Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）&lt;/li&gt;
+&lt;li&gt;360极速浏览器 13.0.2250.0&lt;/li&gt;
+&lt;li&gt;IE 21H1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;技术版本&#34;&gt;&lt;a href=&#34;#技术版本&#34; class=&#34;headerlink&#34; title=&#34;技术版本&#34;&gt;&lt;/a&gt;技术版本&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;laravel 8&lt;/li&gt;
+&lt;li&gt;Dcat Admin 2&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <updated>2021-06-08T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/</id>
+        <title>Personal PAC list</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2020/11/16/4.%20Personal%20PAC%20list/"/>
+        <content type="html">&lt;p&gt;我自己总结整理的 PAC 清单，在这里记录一下，以备不时之需&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;justmysocks.net,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;wallhaven.cc,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;alphacoders.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pixiv.net,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;alphacoders.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nexusmods.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;iwara.tv,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;rule34.xxx,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pixiv.net,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;pximg.net,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;steamcommunity.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;fontawesome.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;ichr.me,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;github.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;e-hentai.org,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nightlifeporn.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;zchan.moe,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;alphacoders.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;dribbble.com,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;manypixels.co,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;minecraft.net,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;winscp.net&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="PAC 清单" />
+        <updated>2020-11-16T06:00:00.000Z</updated>
+    </entry>
+</feed>
