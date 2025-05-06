@@ -6,41 +6,41 @@
     <updated>2020-11-20T15:07:00.000Z</updated>
     <category term="迁移" />
     <category term="hexo" />
-    <category term="主食" />
+    <category term="电脑维修" />
     <category term="pr" />
     <category term="bilibili" />
-    <category term="电脑维修" />
-    <category term="热菜" />
     <category term="学习笔记" />
-    <category term="汤" />
+    <category term="主食" />
+    <category term="热菜" />
     <category term="甜品" />
-    <category term="海鲜" />
+    <category term="汤" />
     <category term="梦境" />
-    <category term="代码部署" />
+    <category term="海鲜" />
+    <category term="homestead" />
+    <category term="代码更新" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="dcat admin" />
     <category term="oh-my-zsh" />
-    <category term="homestead" />
     <category term="debug" />
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="fileinfo" />
     <category term="vs code" />
+    <category term="fileinfo" />
     <category term="PAC 清单" />
     <category term="定时任务" />
     <category term="laravel sail" />
+    <category term="gpg" />
+    <category term="net time" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="net time" />
-    <category term="gpg" />
     <category term="swap" />
-    <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
     <category term="blade" />
+    <category term="端口查询" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
@@ -62,6 +62,9 @@
     <category term="cursor" />
     <category term="人工智能" />
     <category term="prompt" />
+    <category term="打印机" />
+    <category term="京瓷" />
+    <category term="教程" />
     <entry>
         <id>https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</id>
         <title>用 Cloudreve 自建网盘的注意点</title>
