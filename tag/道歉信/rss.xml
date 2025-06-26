@@ -7,16 +7,16 @@
         <language>zh-CN</language>
         <pubDate>Thu, 02 Dec 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Thu, 02 Dec 2021 12:00:00 +0800</lastBuildDate>
-        <category>hexo</category>
         <category>迁移</category>
+        <category>hexo</category>
         <category>电脑维修</category>
         <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
         <category>热菜</category>
-        <category>甜品</category>
         <category>汤</category>
+        <category>甜品</category>
         <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
@@ -30,17 +30,17 @@
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
-        <category>vs code</category>
         <category>laravel sail</category>
+        <category>vs code</category>
         <category>fileinfo</category>
-        <category>定时任务</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
-        <category>端口查询</category>
         <category>swap</category>
+        <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
@@ -71,6 +71,8 @@
         <category>Git</category>
         <category>GitHub</category>
         <category>版本控制</category>
+        <category>Monorepo</category>
+        <category>DevOps</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/12/02/33.%20%E8%AF%9A%E6%81%B3%E7%9A%84%E9%81%93%E6%AD%89%E5%97%B7/</guid>
             <title>诚恳的道歉嗷 🫡</title>

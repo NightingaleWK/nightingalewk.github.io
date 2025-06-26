@@ -7,16 +7,16 @@
         <language>zh-CN</language>
         <pubDate>Mon, 10 Jul 2023 14:21:00 +0800</pubDate>
         <lastBuildDate>Mon, 10 Jul 2023 14:21:00 +0800</lastBuildDate>
-        <category>hexo</category>
         <category>迁移</category>
+        <category>hexo</category>
         <category>电脑维修</category>
         <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
         <category>热菜</category>
-        <category>甜品</category>
         <category>汤</category>
+        <category>甜品</category>
         <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
@@ -30,17 +30,17 @@
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
-        <category>vs code</category>
         <category>laravel sail</category>
+        <category>vs code</category>
         <category>fileinfo</category>
-        <category>定时任务</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
-        <category>端口查询</category>
         <category>swap</category>
+        <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
@@ -71,6 +71,8 @@
         <category>Git</category>
         <category>GitHub</category>
         <category>版本控制</category>
+        <category>Monorepo</category>
+        <category>DevOps</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
             <title>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</title>

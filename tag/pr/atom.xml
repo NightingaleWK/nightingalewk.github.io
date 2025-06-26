@@ -4,16 +4,16 @@
     <title>雪漫城的风宅 • Posts by &#34;pr&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2021-01-21T04:00:00.000Z</updated>
-    <category term="hexo" />
     <category term="迁移" />
+    <category term="hexo" />
     <category term="电脑维修" />
     <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
@@ -27,17 +27,17 @@
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="vs code" />
     <category term="laravel sail" />
+    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="定时任务" />
     <category term="PAC 清单" />
+    <category term="定时任务" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
     <category term="net time" />
-    <category term="端口查询" />
     <category term="swap" />
+    <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
     <category term="blade" />
@@ -68,6 +68,8 @@
     <category term="Git" />
     <category term="GitHub" />
     <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <entry>
         <id>https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/</id>
         <title>B 站上传视频防压参数</title>

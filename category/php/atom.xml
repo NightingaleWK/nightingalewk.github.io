@@ -4,16 +4,16 @@
     <title>雪漫城的风宅 • Posts by &#34;php&#34; category</title>
     <link href="https://nightingalewk.cn" />
     <updated>2022-03-22T05:38:00.000Z</updated>
-    <category term="hexo" />
     <category term="迁移" />
+    <category term="hexo" />
     <category term="电脑维修" />
     <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
@@ -27,17 +27,17 @@
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="vs code" />
     <category term="laravel sail" />
+    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="定时任务" />
     <category term="PAC 清单" />
+    <category term="定时任务" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
     <category term="net time" />
-    <category term="端口查询" />
     <category term="swap" />
+    <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
     <category term="blade" />
@@ -68,6 +68,8 @@
     <category term="Git" />
     <category term="GitHub" />
     <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <entry>
         <id>https://nightingalewk.cn/2022/03/22/39.%20PHP%20%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%20fileinfo%20%E7%9A%84%E4%B8%80%E7%A7%8D%E8%A7%A3%E5%86%B3%E6%80%9D%E8%B7%AF/</id>
         <title>PHP 无法安装 fileinfo 的一种解决思路</title>

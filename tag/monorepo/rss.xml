@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;monorepo&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Jun 2025 10:00:00 +0800</lastBuildDate>
+        <category>迁移</category>
+        <category>hexo</category>
+        <category>电脑维修</category>
+        <category>主食</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>汤</category>
+        <category>甜品</category>
+        <category>梦境</category>
+        <category>海鲜</category>
+        <category>homestead</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>代码更新</category>
+        <category>dcat admin</category>
+        <category>oh-my-zsh</category>
+        <category>debug</category>
+        <category>指令</category>
+        <category>道歉信</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>swap</category>
+        <category>端口查询</category>
+        <category>表单验证</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>特色小吃</category>
+        <category>粥</category>
+        <category>Cloudreve</category>
+        <category>artisan 指令</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>linux</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>screen</category>
+        <category>cursor</category>
+        <category>人工智能</category>
+        <category>prompt</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
+        <category>Monorepo</category>
+        <category>DevOps</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</guid>
+            <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
+            <link>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</link>
+            <category>Git</category>
+            <category>Monorepo</category>
+            <category>DevOps</category>
+            <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;核心思路&#34;&gt;&lt;a href=&#34;#核心思路&#34; class=&#34;headerlink&#34; title=&#34;核心思路&#34;&gt;&lt;/a&gt;核心思路&lt;/h2&gt;&lt;p&gt;我们的目标是创建一个全新的仓库 &lt;code&gt;sushang-combined&lt;/code&gt;，并将 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 两个仓库的所有内容和历史记录，分别完整地移入 &lt;code&gt;sushang-combined&lt;/code&gt; 下的 &lt;code&gt;sushang-v1/&lt;/code&gt; 和 &lt;code&gt;sushang-v2/&lt;/code&gt; 子目录中。&lt;/p&gt;
+&lt;h2 id=&#34;第一阶段：环境准备&#34;&gt;&lt;a href=&#34;#第一阶段：环境准备&#34; class=&#34;headerlink&#34; title=&#34;第一阶段：环境准备&#34;&gt;&lt;/a&gt;第一阶段：环境准备&lt;/h2&gt;&lt;p&gt;首先，创建工作区，并克隆所有需要的仓库。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 创建一个专门的工作目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; git-merge-project &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; git-merge-project&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 克隆你的两个源仓库 (请替换为你的实际URL)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;URL_for_sushang-v1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;URL_for_sushang-v2&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 创建并初始化最终要合并到的目标仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第二阶段：重构源仓库&#34;&gt;&lt;a href=&#34;#第二阶段：重构源仓库&#34; class=&#34;headerlink&#34; title=&#34;第二阶段：重构源仓库&#34;&gt;&lt;/a&gt;第二阶段：重构源仓库&lt;/h2&gt;&lt;p&gt;此阶段是关键。我们需要在每个源仓库中，将所有文件移入一个与仓库同名的子目录。&lt;strong&gt;这个过程需要对 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 分别执行一次。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面以 &lt;code&gt;sushang-v1&lt;/code&gt; 为例：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 进入 sushang-v1 的本地克隆目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ../sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 创建子目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 将所有文件和目录移动到新子目录中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 使用 git mv 至关重要，它能让 Git 追踪文件移动，保留历史记录！&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# -k 标志会忽略移动过程中可能出现的无关紧要的错误&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; -k * sushang-v1/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. 单独处理以点开头的隐藏文件（如 .gitignore, .github 等）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; .gitignore sushang-v1/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 5. 提交这次结构调整&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;chore: Restructure repository for monorepo merge&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;请返回上一级目录，对 &lt;code&gt;sushang-v2&lt;/code&gt; 仓库重复上述 1-5 步。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第三阶段：执行合并&#34;&gt;&lt;a href=&#34;#第三阶段：执行合并&#34; class=&#34;headerlink&#34; title=&#34;第三阶段：执行合并&#34;&gt;&lt;/a&gt;第三阶段：执行合并&lt;/h2&gt;&lt;p&gt;现在，所有准备工作就绪，可以开始真正的合并操作。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 返回合并目标仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ../sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 合并 sushang-v1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    将本地重构后的 sushang-v1 仓库添加为名为 v1 的远程源&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add v1 ../sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    从 v1 拉取所有历史数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git fetch v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    合并 v1 的主分支，--allow-unrelated-histories 是关键！&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge v1/main --allow-unrelated-histories -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: Merge sushang-v1 history&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 合并 sushang-v2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    以同样的方式添加并合并 v2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add v2 ../sushang-v2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git fetch v2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge v2/main --allow-unrelated-histories -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: Merge sushang-v2 history&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. 验证结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    执行 ls，应能看到 sushang-v1 和 sushang-v2 两个目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    执行 git log --graph --oneline --all 查看合并后的历史图谱&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;ls&lt;/span&gt; -la&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第四阶段：发布到-GitHub&#34;&gt;&lt;a href=&#34;#第四阶段：发布到-GitHub&#34; class=&#34;headerlink&#34; title=&#34;第四阶段：发布到 GitHub&#34;&gt;&lt;/a&gt;第四阶段：发布到 GitHub&lt;/h2&gt;&lt;p&gt;将本地合并好的新仓库推送到远程。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 在 GitHub 上创建一个新的、空的仓库，例如 sushang-combined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 在本地 sushang-combined 目录中，关联到你刚创建的远程仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin &amp;lt;URL_for_new_github_repo&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 将本地的完整历史推送到 GitHub&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    -u 选项会建立本地 main 分支与远程 origin/main 分支的追踪关系&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. (可选) 清理本地的临时远程源&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; v2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第五阶段：归档旧仓库&#34;&gt;&lt;a href=&#34;#第五阶段：归档旧仓库&#34; class=&#34;headerlink&#34; title=&#34;第五阶段：归档旧仓库&#34;&gt;&lt;/a&gt;第五阶段：归档旧仓库&lt;/h2&gt;&lt;p&gt;为了避免混淆，并完整保留 Issues、Pull Requests 等宝贵信息，最佳实践是&lt;strong&gt;归档&lt;/strong&gt;（Archive）而不是删除旧仓库。&lt;/p&gt;
+&lt;p&gt;对 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 在 GitHub 上的仓库，分别执行以下操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;更新仓库描述&lt;/strong&gt;：在仓库主页点击 “Edit”，修改描述，明确指出项目已归档，并提供新仓库 &lt;code&gt;sushang-combined&lt;/code&gt; 的链接。例如：“**[ARCHIVED]** Development continues at [link to sushang-combined].”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新 README&lt;/strong&gt;：在 &lt;code&gt;README.md&lt;/code&gt; 文件顶部添加醒目通知，引导访问者前往新仓库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行归档&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;进入仓库的 &lt;code&gt;Settings&lt;/code&gt; 页面。&lt;/li&gt;
+&lt;li&gt;滚动到底部的 &lt;code&gt;Danger Zone&lt;/code&gt;（危险区域）。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;Archive this repository&lt;/code&gt;（归档此仓库）。&lt;/li&gt;
+&lt;li&gt;按提示输入仓库名称进行确认。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;至此，您已成功将两个独立仓库完整地合并为一个，并完成了所有后续整理工作。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

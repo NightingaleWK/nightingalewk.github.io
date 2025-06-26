@@ -3,17 +3,17 @@
     <id>https://nightingalewk.cn</id>
     <title>雪漫城的风宅</title>
     <link href="https://nightingalewk.cn" />
-    <updated>2025-06-26T01:15:00.000Z</updated>
-    <category term="hexo" />
+    <updated>2025-06-26T02:00:00.000Z</updated>
     <category term="迁移" />
+    <category term="hexo" />
     <category term="电脑维修" />
     <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
@@ -27,17 +27,17 @@
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="vs code" />
     <category term="laravel sail" />
+    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="定时任务" />
     <category term="PAC 清单" />
+    <category term="定时任务" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
     <category term="net time" />
-    <category term="端口查询" />
     <category term="swap" />
+    <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
     <category term="blade" />
@@ -68,6 +68,50 @@
     <category term="Git" />
     <category term="GitHub" />
     <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
+    <entry>
+        <id>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</id>
+        <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/"/>
+        <content type="html">&lt;p&gt;本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+
+&lt;h2 id=&#34;核心思路&#34;&gt;&lt;a href=&#34;#核心思路&#34; class=&#34;headerlink&#34; title=&#34;核心思路&#34;&gt;&lt;/a&gt;核心思路&lt;/h2&gt;&lt;p&gt;我们的目标是创建一个全新的仓库 &lt;code&gt;sushang-combined&lt;/code&gt;，并将 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 两个仓库的所有内容和历史记录，分别完整地移入 &lt;code&gt;sushang-combined&lt;/code&gt; 下的 &lt;code&gt;sushang-v1/&lt;/code&gt; 和 &lt;code&gt;sushang-v2/&lt;/code&gt; 子目录中。&lt;/p&gt;
+&lt;h2 id=&#34;第一阶段：环境准备&#34;&gt;&lt;a href=&#34;#第一阶段：环境准备&#34; class=&#34;headerlink&#34; title=&#34;第一阶段：环境准备&#34;&gt;&lt;/a&gt;第一阶段：环境准备&lt;/h2&gt;&lt;p&gt;首先，创建工作区，并克隆所有需要的仓库。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 创建一个专门的工作目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; git-merge-project &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; git-merge-project&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 克隆你的两个源仓库 (请替换为你的实际URL)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;URL_for_sushang-v1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;URL_for_sushang-v2&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 创建并初始化最终要合并到的目标仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第二阶段：重构源仓库&#34;&gt;&lt;a href=&#34;#第二阶段：重构源仓库&#34; class=&#34;headerlink&#34; title=&#34;第二阶段：重构源仓库&#34;&gt;&lt;/a&gt;第二阶段：重构源仓库&lt;/h2&gt;&lt;p&gt;此阶段是关键。我们需要在每个源仓库中，将所有文件移入一个与仓库同名的子目录。&lt;strong&gt;这个过程需要对 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 分别执行一次。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面以 &lt;code&gt;sushang-v1&lt;/code&gt; 为例：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 进入 sushang-v1 的本地克隆目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ../sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 创建子目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 将所有文件和目录移动到新子目录中&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 使用 git mv 至关重要，它能让 Git 追踪文件移动，保留历史记录！&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# -k 标志会忽略移动过程中可能出现的无关紧要的错误&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; -k * sushang-v1/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. 单独处理以点开头的隐藏文件（如 .gitignore, .github 等）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; .gitignore sushang-v1/&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 5. 提交这次结构调整&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;chore: Restructure repository for monorepo merge&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;请返回上一级目录，对 &lt;code&gt;sushang-v2&lt;/code&gt; 仓库重复上述 1-5 步。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;第三阶段：执行合并&#34;&gt;&lt;a href=&#34;#第三阶段：执行合并&#34; class=&#34;headerlink&#34; title=&#34;第三阶段：执行合并&#34;&gt;&lt;/a&gt;第三阶段：执行合并&lt;/h2&gt;&lt;p&gt;现在，所有准备工作就绪，可以开始真正的合并操作。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 返回合并目标仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ../sushang-combined&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 合并 sushang-v1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    将本地重构后的 sushang-v1 仓库添加为名为 v1 的远程源&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add v1 ../sushang-v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    从 v1 拉取所有历史数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git fetch v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    合并 v1 的主分支，--allow-unrelated-histories 是关键！&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge v1/main --allow-unrelated-histories -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: Merge sushang-v1 history&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 合并 sushang-v2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    以同样的方式添加并合并 v2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add v2 ../sushang-v2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git fetch v2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git merge v2/main --allow-unrelated-histories -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: Merge sushang-v2 history&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. 验证结果&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    执行 ls，应能看到 sushang-v1 和 sushang-v2 两个目录&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    执行 git log --graph --oneline --all 查看合并后的历史图谱&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;ls&lt;/span&gt; -la&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第四阶段：发布到-GitHub&#34;&gt;&lt;a href=&#34;#第四阶段：发布到-GitHub&#34; class=&#34;headerlink&#34; title=&#34;第四阶段：发布到 GitHub&#34;&gt;&lt;/a&gt;第四阶段：发布到 GitHub&lt;/h2&gt;&lt;p&gt;将本地合并好的新仓库推送到远程。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 在 GitHub 上创建一个新的、空的仓库，例如 sushang-combined&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 在本地 sushang-combined 目录中，关联到你刚创建的远程仓库&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin &amp;lt;URL_for_new_github_repo&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 3. 将本地的完整历史推送到 GitHub&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;#    -u 选项会建立本地 main 分支与远程 origin/main 分支的追踪关系&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 4. (可选) 清理本地的临时远程源&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; v1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; v2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;第五阶段：归档旧仓库&#34;&gt;&lt;a href=&#34;#第五阶段：归档旧仓库&#34; class=&#34;headerlink&#34; title=&#34;第五阶段：归档旧仓库&#34;&gt;&lt;/a&gt;第五阶段：归档旧仓库&lt;/h2&gt;&lt;p&gt;为了避免混淆，并完整保留 Issues、Pull Requests 等宝贵信息，最佳实践是&lt;strong&gt;归档&lt;/strong&gt;（Archive）而不是删除旧仓库。&lt;/p&gt;
+&lt;p&gt;对 &lt;code&gt;sushang-v1&lt;/code&gt; 和 &lt;code&gt;sushang-v2&lt;/code&gt; 在 GitHub 上的仓库，分别执行以下操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;更新仓库描述&lt;/strong&gt;：在仓库主页点击 “Edit”，修改描述，明确指出项目已归档，并提供新仓库 &lt;code&gt;sushang-combined&lt;/code&gt; 的链接。例如：“**[ARCHIVED]** Development continues at [link to sushang-combined].”&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;更新 README&lt;/strong&gt;：在 &lt;code&gt;README.md&lt;/code&gt; 文件顶部添加醒目通知，引导访问者前往新仓库。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行归档&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;进入仓库的 &lt;code&gt;Settings&lt;/code&gt; 页面。&lt;/li&gt;
+&lt;li&gt;滚动到底部的 &lt;code&gt;Danger Zone&lt;/code&gt;（危险区域）。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;Archive this repository&lt;/code&gt;（归档此仓库）。&lt;/li&gt;
+&lt;li&gt;按提示输入仓库名称进行确认。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;至此，您已成功将两个独立仓库完整地合并为一个，并完成了所有后续整理工作。&lt;/p&gt;
+</content>
+        <category term="Git" />
+        <category term="Monorepo" />
+        <category term="DevOps" />
+        <updated>2025-06-26T02:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</id>
         <title>如何将 Git 仓库的默认分支从 master 修改为 main</title>
@@ -1253,44 +1297,5 @@ n. [Final action]
         <content type="html">&lt;p&gt;本地代码执行如下命令，可将代码同时提交到 github 和 coding 两个平台：&lt;/p&gt;
 &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add -A&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;初始化项目&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git branch -M main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:NightingaleWK/jiepade.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote set-url --add origin git@e.coding.net:nightingalewk/jiepade/v1.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <updated>2023-07-06T00:36:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://nightingalewk.cn/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/</id>
-        <title>（更新中）将 homestead 中的项目迁移到 laravel sail 中进行开发</title>
-        <link rel="alternate" href="https://nightingalewk.cn/2023/05/09/56.%20%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89%E5%B0%86%20homestead%20%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%BF%81%E7%A7%BB%E5%88%B0%20laravel%20sail%20%E4%B8%AD%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%8F%91/"/>
-        <content type="html">&lt;p&gt;本文的目的是：将原本跑 homestead 环境下的 laravel 项目，迁移到官方最新推荐的 laravel sail 开发环境中。下面我分享一下我的操作方法。&lt;/p&gt;
-&lt;p&gt;在文章开始之前，我们默认大家均已拥有一个 homestead 开发环境，且你也是在其之上本地开发多次的开发者，而且你的需求是将你的 homestead 开发环境转换成 laravel sail，希望借助 docker 技术来提升系统的&lt;/p&gt;
-&lt;h2 id=&#34;1-项目克隆&#34;&gt;&lt;a href=&#34;#1-项目克隆&#34; class=&#34;headerlink&#34; title=&#34;1. 项目克隆&#34;&gt;&lt;/a&gt;1. 项目克隆&lt;/h2&gt;&lt;p&gt;首先我们你将线上仓库的代码clone到本地&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git clone git@github.com:NightingaleWK/larabbs.git larabbs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;然后我们启动 homestead ，并在 homestead 的 linux 环境中执行接下来的工作。&lt;/p&gt;
-&lt;p&gt;我们先来到项目根目录复制一份 .env 文件&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim .env&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// 编辑一下 .env 文件并保存&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;2-项目改造&#34;&gt;&lt;a href=&#34;#2-项目改造&#34; class=&#34;headerlink&#34; title=&#34;2. 项目改造&#34;&gt;&lt;/a&gt;2. 项目改造&lt;/h2&gt;&lt;p&gt;然后在已运行的应用中安装 Composer 依赖，以下指令执行后，其余未安装的以来也将一并安装，毕竟我们没有执行过 composer i 嘛&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer require laravel/sail --dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;在 Sail 完成安装后，你可以运行 Artisan 命令 sail:install。这个命令将会发布 Sail 的 docker-compose.yml 文件到你应用程序的根目录：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan sail:install --with=mysql,redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;以上这一步的执行可能会花费很长时间，网上有很多修改相关配置的来提高速度，大家可以自己搜索，至于为什么我不用，那就是希望追求纯粹正统，composer 阿里云的源与官方源完全跟不上，composer u 执行完简直是反向升级，以后再也不相信国内的源了。&lt;/p&gt;
-&lt;p&gt;然后我再说一下 with 后面的该怎么填写，你可以尝试执行不带 with 的命令，可以看到几个可选的选项，这些就是填写在 with 后面的内容，按需选择安装即可。&lt;/p&gt;
-&lt;p&gt;上述步骤安装完毕会系统会提示 Sail build successful. 这就代表着这一阶段任务完成&lt;/p&gt;
-&lt;p&gt;然后我们把项目推送到线上仓库&lt;/p&gt;
-&lt;h2 id=&#34;3-代码上传&#34;&gt;&lt;a href=&#34;#3-代码上传&#34; class=&#34;headerlink&#34; title=&#34;3. 代码上传&#34;&gt;&lt;/a&gt;3. 代码上传&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git add -A&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;ready for docker&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;4-代码部署&#34;&gt;&lt;a href=&#34;#4-代码部署&#34; class=&#34;headerlink&#34; title=&#34;4. 代码部署&#34;&gt;&lt;/a&gt;4. 代码部署&lt;/h2&gt;&lt;p&gt;然后我们回到我们的sail环境中，把最新的项目代码从仓库拉下来&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git clone git@github.com:NightingaleWK/larabbs.git larabbs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;之后我们也是重新配置 .env 文件&lt;/p&gt;
-&lt;p&gt;然后我们执行 composer 命令，安装在 sail 环境下的依赖&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --rm \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -u &amp;quot;$(id -u):$(id -g)&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v &amp;quot;$(pwd):/var/www/html&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -w /var/www/html \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    laravelsail/php82-composer:latest \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    composer install --ignore-platform-reqs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这里与在 homestead 中不同的是，我们 sail 环境不包括 composer 命令，这个命令使用一个包含 PHP 与 Composer 的小型 Docker 容器进行应用程序依赖的安装。&lt;/p&gt;
-&lt;p&gt;当你使用 laravelsail&amp;#x2F;phpXX-composer 镜像时，你应该选择和你的应用程序所用环境相同的 PHP 版本（74、80、81 或 82）。&lt;/p&gt;
-&lt;h2 id=&#34;5-环境运行&#34;&gt;&lt;a href=&#34;#5-环境运行&#34; class=&#34;headerlink&#34; title=&#34;5. 环境运行&#34;&gt;&lt;/a&gt;5. 环境运行&lt;/h2&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;// -d 表示后台运行，去掉那就是前台运行，需要 ctrl + c 来结束。加入带着 -d，那么我们退出的话则需要输入 sail down 来结束&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-</content>
-        <category term="homestead" />
-        <category term="laravel sail" />
-        <updated>2023-05-09T01:43:00.000Z</updated>
     </entry>
 </feed>

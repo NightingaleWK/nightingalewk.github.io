@@ -4,16 +4,16 @@
     <title>雪漫城的风宅 • Posts by &#34;screen&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2020-11-23T09:26:00.000Z</updated>
-    <category term="hexo" />
     <category term="迁移" />
+    <category term="hexo" />
     <category term="电脑维修" />
     <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
@@ -27,17 +27,17 @@
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="vs code" />
     <category term="laravel sail" />
+    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="定时任务" />
     <category term="PAC 清单" />
+    <category term="定时任务" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
     <category term="net time" />
-    <category term="端口查询" />
     <category term="swap" />
+    <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
     <category term="blade" />
@@ -68,6 +68,8 @@
     <category term="Git" />
     <category term="GitHub" />
     <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <entry>
         <id>https://nightingalewk.cn/2020/11/23/8.%20%E2%80%9C%20%E5%86%8D%E7%BB%99%E6%88%91%E5%8D%81%E7%A7%92%E5%90%A7%EF%BC%8C%E6%89%98%E5%85%8B%20%E2%80%9D/</id>
         <title>“ 再给我十秒吧，托克 ”</title>

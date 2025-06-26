@@ -7,16 +7,16 @@
         <language>zh-CN</language>
         <pubDate>Tue, 26 Jul 2022 17:45:00 +0800</pubDate>
         <lastBuildDate>Tue, 26 Jul 2022 17:45:00 +0800</lastBuildDate>
-        <category>hexo</category>
         <category>迁移</category>
+        <category>hexo</category>
         <category>电脑维修</category>
         <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
         <category>热菜</category>
-        <category>甜品</category>
         <category>汤</category>
+        <category>甜品</category>
         <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
@@ -30,17 +30,17 @@
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
-        <category>vs code</category>
         <category>laravel sail</category>
+        <category>vs code</category>
         <category>fileinfo</category>
-        <category>定时任务</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
-        <category>端口查询</category>
         <category>swap</category>
+        <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
@@ -71,6 +71,8 @@
         <category>Git</category>
         <category>GitHub</category>
         <category>版本控制</category>
+        <category>Monorepo</category>
+        <category>DevOps</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/</guid>
             <title>在 GIT 中 使用 GPG 签名</title>
