@@ -5,42 +5,42 @@
     <link href="https://nightingalewk.cn" />
     <updated>2023-07-10T06:21:00.000Z</updated>
     <category term="迁移" />
-    <category term="hexo" />
     <category term="电脑维修" />
+    <category term="hexo" />
+    <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
-    <category term="主食" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="dcat admin" />
     <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
+    <category term="laravel sail" />
     <category term="vs code" />
     <category term="fileinfo" />
     <category term="PAC 清单" />
     <category term="定时任务" />
-    <category term="laravel sail" />
     <category term="gpg" />
-    <category term="net time" />
     <category term="sshppass" />
     <category term="awk" />
+    <category term="net time" />
     <category term="swap" />
-    <category term="表单验证" />
-    <category term="事件" />
-    <category term="blade" />
     <category term="端口查询" />
+    <category term="表单验证" />
+    <category term="blade" />
+    <category term="事件" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
@@ -48,9 +48,9 @@
     <category term="粥" />
     <category term="Cloudreve" />
     <category term="artisan 指令" />
-    <category term="故障排除" />
     <category term="Font Awesome" />
     <category term="vite" />
+    <category term="故障排除" />
     <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
@@ -65,6 +65,9 @@
     <category term="打印机" />
     <category term="京瓷" />
     <category term="教程" />
+    <category term="Git" />
+    <category term="GitHub" />
+    <category term="版本控制" />
     <entry>
         <id>https://nightingalewk.cn/2023/07/10/57.%20%E9%85%8D%E7%BD%AE%E5%B9%B6%E9%83%A8%E7%BD%B2%20laravel%2010%20%E9%A1%B9%E7%9B%AE%E5%88%B0%20ubuntu%2022.04.2%20%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
         <title>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</title>
@@ -161,9 +164,9 @@
 
 &lt;h1 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h1&gt;&lt;p&gt;前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库&lt;/p&gt;
 &lt;h1 id=&#34;数据库迁移&#34;&gt;&lt;a href=&#34;#数据库迁移&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移&#34;&gt;&lt;/a&gt;数据库迁移&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="代码部署" />
         <category term="oneinstack" />
         <category term="lnmp" />
-        <category term="代码部署" />
         <updated>2021-06-08T04:00:00.000Z</updated>
     </entry>
 </feed>

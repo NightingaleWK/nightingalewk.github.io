@@ -5,42 +5,42 @@
     <link href="https://nightingalewk.cn" />
     <updated>2022-04-14T05:39:00.000Z</updated>
     <category term="迁移" />
-    <category term="hexo" />
     <category term="电脑维修" />
+    <category term="hexo" />
+    <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
-    <category term="主食" />
     <category term="热菜" />
-    <category term="甜品" />
     <category term="汤" />
+    <category term="甜品" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="dcat admin" />
     <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
+    <category term="laravel sail" />
     <category term="vs code" />
     <category term="fileinfo" />
     <category term="PAC 清单" />
     <category term="定时任务" />
-    <category term="laravel sail" />
     <category term="gpg" />
-    <category term="net time" />
     <category term="sshppass" />
     <category term="awk" />
+    <category term="net time" />
     <category term="swap" />
-    <category term="表单验证" />
-    <category term="事件" />
-    <category term="blade" />
     <category term="端口查询" />
+    <category term="表单验证" />
+    <category term="blade" />
+    <category term="事件" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
@@ -48,9 +48,9 @@
     <category term="粥" />
     <category term="Cloudreve" />
     <category term="artisan 指令" />
-    <category term="故障排除" />
     <category term="Font Awesome" />
     <category term="vite" />
+    <category term="故障排除" />
     <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
@@ -65,6 +65,9 @@
     <category term="打印机" />
     <category term="京瓷" />
     <category term="教程" />
+    <category term="Git" />
+    <category term="GitHub" />
+    <category term="版本控制" />
     <entry>
         <id>https://nightingalewk.cn/2022/04/14/40.%20Laravel%20%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/</id>
         <title>laravel 定时任务配置方式</title>

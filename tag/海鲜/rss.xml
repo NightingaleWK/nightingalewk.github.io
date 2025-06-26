@@ -8,42 +8,42 @@
         <pubDate>Tue, 18 May 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 18 May 2021 12:00:00 +0800</lastBuildDate>
         <category>迁移</category>
-        <category>hexo</category>
         <category>电脑维修</category>
+        <category>hexo</category>
+        <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
-        <category>主食</category>
         <category>热菜</category>
-        <category>甜品</category>
         <category>汤</category>
+        <category>甜品</category>
         <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
-        <category>代码更新</category>
+        <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
+        <category>laravel sail</category>
         <category>vs code</category>
         <category>fileinfo</category>
         <category>PAC 清单</category>
         <category>定时任务</category>
-        <category>laravel sail</category>
         <category>gpg</category>
-        <category>net time</category>
         <category>sshppass</category>
         <category>awk</category>
+        <category>net time</category>
         <category>swap</category>
-        <category>表单验证</category>
-        <category>事件</category>
-        <category>blade</category>
         <category>端口查询</category>
+        <category>表单验证</category>
+        <category>blade</category>
+        <category>事件</category>
         <category>wordpress</category>
         <category>队列</category>
         <category>redis</category>
@@ -51,9 +51,9 @@
         <category>粥</category>
         <category>Cloudreve</category>
         <category>artisan 指令</category>
-        <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
+        <category>故障排除</category>
         <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
@@ -68,6 +68,9 @@
         <category>打印机</category>
         <category>京瓷</category>
         <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/05/18/20.%20%E5%8D%81%E4%B8%89%E9%A6%99%E5%B0%8F%E9%BE%99%E8%99%BE/</guid>
             <title>十三香小龙虾</title>

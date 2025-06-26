@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;技术&#34; category</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2025-06-26T01:15:00.000Z</updated>
+    <category term="迁移" />
+    <category term="电脑维修" />
+    <category term="hexo" />
+    <category term="主食" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="学习笔记" />
+    <category term="热菜" />
+    <category term="汤" />
+    <category term="甜品" />
+    <category term="梦境" />
+    <category term="海鲜" />
+    <category term="homestead" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="代码更新" />
+    <category term="dcat admin" />
+    <category term="oh-my-zsh" />
+    <category term="debug" />
+    <category term="指令" />
+    <category term="道歉信" />
+    <category term="免密" />
+    <category term="laravel sail" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="gpg" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="swap" />
+    <category term="端口查询" />
+    <category term="表单验证" />
+    <category term="blade" />
+    <category term="事件" />
+    <category term="wordpress" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="特色小吃" />
+    <category term="粥" />
+    <category term="Cloudreve" />
+    <category term="artisan 指令" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="故障排除" />
+    <category term="linux" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="screen" />
+    <category term="cursor" />
+    <category term="人工智能" />
+    <category term="prompt" />
+    <category term="打印机" />
+    <category term="京瓷" />
+    <category term="教程" />
+    <category term="Git" />
+    <category term="GitHub" />
+    <category term="版本控制" />
+    <entry>
+        <id>https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</id>
+        <title>如何将 Git 仓库的默认分支从 master 修改为 main</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/"/>
+        <content type="html">&lt;p&gt;随着技术社区对包容性语言的倡导，将 Git 仓库的默认分支从 &lt;code&gt;master&lt;/code&gt; 修改为 &lt;code&gt;main&lt;/code&gt; 已成为一种普遍的推荐做法。本文将提供一个详细、安全的操作指南，帮助你顺利完成这一迁移。&lt;/p&gt;
+&lt;p&gt;整个过程主要分为四个核心步骤，外加一个针对团队协作的同步步骤。我们将依次进行操作，确保万无一失。&lt;/p&gt;
+&lt;h2 id=&#34;1-重命名本地分支&#34;&gt;&lt;a href=&#34;#1-重命名本地分支&#34; class=&#34;headerlink&#34; title=&#34;1. 重命名本地分支&#34;&gt;&lt;/a&gt;1. 重命名本地分支&lt;/h2&gt;&lt;p&gt;首先，我们需要在本地的 Git 仓库中进行操作。打开你的项目终端或命令行工具。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;切换到 &lt;code&gt;master&lt;/code&gt; 分支并拉取最新代码&lt;/strong&gt;，确保本地与远程是同步的。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git checkout master&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull origin master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;使用 &lt;code&gt;-m&lt;/code&gt; (&lt;code&gt;--move&lt;/code&gt;) 参数重命名分支&lt;/strong&gt;。这将把本地的 &lt;code&gt;master&lt;/code&gt; 分支直接更名为 &lt;code&gt;main&lt;/code&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git branch -m master main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;执行后，你的本地主分支名就修改完成了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;2-推送新分支到远程仓库&#34;&gt;&lt;a href=&#34;#2-推送新分支到远程仓库&#34; class=&#34;headerlink&#34; title=&#34;2. 推送新分支到远程仓库&#34;&gt;&lt;/a&gt;2. 推送新分支到远程仓库&lt;/h2&gt;&lt;p&gt;本地分支改名后，需要将这个新的 &lt;code&gt;main&lt;/code&gt; 分支推送到你的远程仓库（如 GitHub 或 GitLab），并建立跟踪关系。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;推送 &lt;code&gt;main&lt;/code&gt; 分支&lt;/strong&gt;。使用 &lt;code&gt;-u&lt;/code&gt; (&lt;code&gt;--set-upstream&lt;/code&gt;) 参数，这样 Git 会记住本地 &lt;code&gt;main&lt;/code&gt; 分支对应远程的 &lt;code&gt;main&lt;/code&gt; 分支，方便以后直接使用 &lt;code&gt;git push&lt;/code&gt; 和 &lt;code&gt;git pull&lt;/code&gt;。&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+此时，你的远程仓库会同时存在 &lt;code&gt;master&lt;/code&gt; 和 &lt;code&gt;main&lt;/code&gt; 两个分支，它们的内容完全相同。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;3-修改平台的默认分支（关键步骤）&#34;&gt;&lt;a href=&#34;#3-修改平台的默认分支（关键步骤）&#34; class=&#34;headerlink&#34; title=&#34;3. 修改平台的默认分支（关键步骤）&#34;&gt;&lt;/a&gt;3. 修改平台的默认分支（关键步骤）&lt;/h2&gt;&lt;p&gt;这是整个流程中最关键的一步，必须在代码托管平台的网页上完成。**只有修改了默认分支，新的克隆 (clone) 和拉取请求 (Pull Request) 才会默认指向 &lt;code&gt;main&lt;/code&gt;**。&lt;/p&gt;
+&lt;p&gt;以 &lt;strong&gt;GitHub&lt;/strong&gt; 为例：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进入你的仓库主页，点击右上角的 &lt;strong&gt;Settings&lt;/strong&gt; (设置)。&lt;/li&gt;
+&lt;li&gt;在左侧菜单栏找到并点击 &lt;strong&gt;Branches&lt;/strong&gt; (分支)。&lt;/li&gt;
+&lt;li&gt;在 “Default branch” (默认分支) 区域，点击切换按钮（通常是两个箭头图标）。&lt;/li&gt;
+&lt;li&gt;在弹出的窗口中，将默认分支从 &lt;code&gt;master&lt;/code&gt; 选为 &lt;code&gt;main&lt;/code&gt;，然后点击 &lt;strong&gt;Update&lt;/strong&gt; 确认。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其他平台（如 GitLab, Gitee）的操作也类似，通常都在仓库的“设置”或“仓库管理”中的“分支”选项里。&lt;/p&gt;
+&lt;h2 id=&#34;4-清理远程的-master-分支&#34;&gt;&lt;a href=&#34;#4-清理远程的-master-分支&#34; class=&#34;headerlink&#34; title=&#34;4. 清理远程的 master 分支&#34;&gt;&lt;/a&gt;4. 清理远程的 master 分支&lt;/h2&gt;&lt;p&gt;在确认 &lt;code&gt;main&lt;/code&gt; 已成为默认分支，并且所有相关的自动化流程（如 CI&amp;#x2F;CD）都已更新后，你就可以安全地删除远程的 &lt;code&gt;master&lt;/code&gt; 分支了，以避免团队成员产生混淆。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;执行删除命令&lt;/strong&gt;：&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git push origin --delete master&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;至此，你的仓库就完全迁移到 &lt;code&gt;main&lt;/code&gt; 作为主分支了。&lt;/p&gt;
+&lt;h2 id=&#34;注意事项与协作者指南&#34;&gt;&lt;a href=&#34;#注意事项与协作者指南&#34; class=&#34;headerlink&#34; title=&#34;注意事项与协作者指南&#34;&gt;&lt;/a&gt;注意事项与协作者指南&lt;/h2&gt;&lt;p&gt;如果你的项目是多人协作的，请务必通知所有成员，并让他们在自己的本地仓库执行以下命令来同步变更：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;# 1. 切换到旧的 master 分支
+git checkout master
+
+# 2. 从远程拉取最新的分支结构信息
+git fetch origin
+
+# 3. 将本地的 master 也重命名为 main
+git branch -m master main
+
+# 4. 重新设置本地 main 分支去跟踪远程的 main 分支
+git branch --set-upstream-to=origin/main main
+
+# 5. (推荐) 清理本地无效的远程跟踪分支
+git remote prune origin
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="教程" />
+        <category term="Git" />
+        <category term="GitHub" />
+        <category term="版本控制" />
+        <updated>2025-06-26T01:15:00.000Z</updated>
+    </entry>
+</feed>
