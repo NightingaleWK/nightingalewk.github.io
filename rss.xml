@@ -5,12 +5,12 @@
         <link>https://nightingalewk.cn</link>
         <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 26 Jun 2025 10:00:00 +0800</lastBuildDate>
+        <pubDate>Thu, 26 Jun 2025 17:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Jun 2025 17:00:00 +0800</lastBuildDate>
         <category>迁移</category>
-        <category>电脑维修</category>
         <category>hexo</category>
         <category>主食</category>
+        <category>电脑维修</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
@@ -23,8 +23,8 @@
         <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>dcat admin</category>
         <category>代码更新</category>
+        <category>dcat admin</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
@@ -43,12 +43,12 @@
         <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
+        <category>blade</category>
         <category>wordpress</category>
         <category>队列</category>
         <category>redis</category>
         <category>特色小吃</category>
         <category>粥</category>
-        <category>blade</category>
         <category>Cloudreve</category>
         <category>artisan 指令</category>
         <category>故障排除</category>
@@ -73,6 +73,33 @@
         <category>版本控制</category>
         <category>Monorepo</category>
         <category>DevOps</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/</guid>
+            <title>修改本地 git 仓库的 remote 地址为新地址</title>
+            <link>https://nightingalewk.cn/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/</link>
+            <category>Git</category>
+            <category>DevOps</category>
+            <pubDate>Thu, 26 Jun 2025 17:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;1-我的需求&#34;&gt;&lt;a href=&#34;#1-我的需求&#34; class=&#34;headerlink&#34; title=&#34;1. 我的需求&#34;&gt;&lt;/a&gt;1. 我的需求&lt;/h2&gt;&lt;p&gt;假设本地有一个 laravel 项目，使用 git 进行版本管理，且已连接到 2 个远端的仓库，这里假设远端仓库地址为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Coding&lt;/code&gt; 的 &lt;code&gt;git@e.coding.net:nightingalewk/sushang/v2.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Github&lt;/code&gt; 的 &lt;code&gt;git@github.com:NightingaleWK/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在因需求变动，需要将代码上传到新的 2 个远端仓库，地址为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Gitee&lt;/code&gt; 的 &lt;code&gt;git@gitee.com:LiyueHarbor/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Github&lt;/code&gt; 的 &lt;code&gt;git@github.com:Liyue-Harbor/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意，四个地址均不一致，想要实现期望的结果，具体操作方法如下：&lt;/p&gt;
+&lt;h2 id=&#34;2-解决方案&#34;&gt;&lt;a href=&#34;#2-解决方案&#34; class=&#34;headerlink&#34; title=&#34;2. 解决方案&#34;&gt;&lt;/a&gt;2. 解决方案&lt;/h2&gt;&lt;p&gt;git 无法单独修改某个地址，只能全部删除远端地址后重新设定，所以我们第一步先清理本地 laravel 项目的 remote 信息：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; sushang&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote remove origin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后设置新的远端地址：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@gitee.com:LiyueHarbor/sushang.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote set-url --add origin git@github.com:Liyue-Harbor/sushang.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后将代码推送到 2 个新仓库中：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</guid>
             <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
@@ -1292,14 +1319,6 @@ n. [Final action]
 
 &lt;p&gt;之后访问 http:&amp;#x2F;&amp;#x2F;[你的 IP 地址]:2333&amp;#x2F; 就可以看到你的项目辣，项目部署到此结束&lt;/p&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
-            <title>git 同时推送本地代码到远端 2 个仓库</title>
-            <link>https://nightingalewk.cn/2023/07/06/58.%20git%20%E5%90%8C%E6%97%B6%E6%8E%A8%E9%80%81%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0%E8%BF%9C%E7%AB%AF%202%20%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
-            <pubDate>Thu, 06 Jul 2023 08:36:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;本地代码执行如下命令，可将代码同时提交到 github 和 coding 两个平台：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add -A&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &amp;quot;初始化项目&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git branch -M main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:NightingaleWK/jiepade.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote set-url --add origin git@e.coding.net:nightingalewk/jiepade/v1.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
     </channel>
 </rss>

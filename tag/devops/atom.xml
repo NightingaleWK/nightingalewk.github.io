@@ -3,11 +3,11 @@
     <id>https://nightingalewk.cn</id>
     <title>雪漫城的风宅 • Posts by &#34;devops&#34; tag</title>
     <link href="https://nightingalewk.cn" />
-    <updated>2025-06-26T02:00:00.000Z</updated>
+    <updated>2025-06-26T09:00:00.000Z</updated>
     <category term="迁移" />
-    <category term="电脑维修" />
     <category term="hexo" />
     <category term="主食" />
+    <category term="电脑维修" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
@@ -20,8 +20,8 @@
     <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="dcat admin" />
     <category term="代码更新" />
+    <category term="dcat admin" />
     <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
@@ -40,12 +40,12 @@
     <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
+    <category term="blade" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
-    <category term="blade" />
     <category term="Cloudreve" />
     <category term="artisan 指令" />
     <category term="故障排除" />
@@ -70,6 +70,33 @@
     <category term="版本控制" />
     <category term="Monorepo" />
     <category term="DevOps" />
+    <entry>
+        <id>https://nightingalewk.cn/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/</id>
+        <title>修改本地 git 仓库的 remote 地址为新地址</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/"/>
+        <content type="html">&lt;h2 id=&#34;1-我的需求&#34;&gt;&lt;a href=&#34;#1-我的需求&#34; class=&#34;headerlink&#34; title=&#34;1. 我的需求&#34;&gt;&lt;/a&gt;1. 我的需求&lt;/h2&gt;&lt;p&gt;假设本地有一个 laravel 项目，使用 git 进行版本管理，且已连接到 2 个远端的仓库，这里假设远端仓库地址为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Coding&lt;/code&gt; 的 &lt;code&gt;git@e.coding.net:nightingalewk/sushang/v2.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Github&lt;/code&gt; 的 &lt;code&gt;git@github.com:NightingaleWK/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在因需求变动，需要将代码上传到新的 2 个远端仓库，地址为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Gitee&lt;/code&gt; 的 &lt;code&gt;git@gitee.com:LiyueHarbor/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Github&lt;/code&gt; 的 &lt;code&gt;git@github.com:Liyue-Harbor/sushang.git&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意，四个地址均不一致，想要实现期望的结果，具体操作方法如下：&lt;/p&gt;
+&lt;h2 id=&#34;2-解决方案&#34;&gt;&lt;a href=&#34;#2-解决方案&#34; class=&#34;headerlink&#34; title=&#34;2. 解决方案&#34;&gt;&lt;/a&gt;2. 解决方案&lt;/h2&gt;&lt;p&gt;git 无法单独修改某个地址，只能全部删除远端地址后重新设定，所以我们第一步先清理本地 laravel 项目的 remote 信息：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; sushang&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote remove origin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后设置新的远端地址：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@gitee.com:LiyueHarbor/sushang.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote set-url --add origin git@github.com:Liyue-Harbor/sushang.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;然后将代码推送到 2 个新仓库中：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="Git" />
+        <category term="DevOps" />
+        <updated>2025-06-26T09:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</id>
         <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
