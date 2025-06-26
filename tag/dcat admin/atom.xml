@@ -5,8 +5,8 @@
     <link href="https://nightingalewk.cn" />
     <updated>2021-08-03T04:00:00.000Z</updated>
     <category term="迁移" />
-    <category term="hexo" />
     <category term="电脑维修" />
+    <category term="hexo" />
     <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
@@ -20,8 +20,8 @@
     <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码更新" />
     <category term="dcat admin" />
+    <category term="代码更新" />
     <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
@@ -40,12 +40,12 @@
     <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
-    <category term="blade" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
+    <category term="blade" />
     <category term="Cloudreve" />
     <category term="artisan 指令" />
     <category term="故障排除" />

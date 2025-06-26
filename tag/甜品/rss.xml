@@ -8,8 +8,8 @@
         <pubDate>Mon, 03 May 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 03 May 2021 12:00:00 +0800</lastBuildDate>
         <category>迁移</category>
-        <category>hexo</category>
         <category>电脑维修</category>
+        <category>hexo</category>
         <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
@@ -23,8 +23,8 @@
         <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码更新</category>
         <category>dcat admin</category>
+        <category>代码更新</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
@@ -43,12 +43,12 @@
         <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
-        <category>blade</category>
         <category>wordpress</category>
         <category>队列</category>
         <category>redis</category>
         <category>特色小吃</category>
         <category>粥</category>
+        <category>blade</category>
         <category>Cloudreve</category>
         <category>artisan 指令</category>
         <category>故障排除</category>
