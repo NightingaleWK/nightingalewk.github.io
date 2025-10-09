@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/rss.xml%7D" />
+  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/atom.xml" />
+  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="本文记录了公司在信创化改造过程中，使用东方通 TongHttpServer V6.0 替换 Nginx 的详细过程。从前期准备、工具申请、软件安装、防火墙配置、服务启动到最终验证，提供了在飞腾 2000 + 处理器和银河麒麟操作系统的完整部署指南，包含所有必要的命令和配置步骤。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="东方通负载均衡软件 TongHttpServer V6.0 安装步骤">
+<meta property="og:url" content="https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="本文记录了公司在信创化改造过程中，使用东方通 TongHttpServer V6.0 替换 Nginx 的详细过程。从前期准备、工具申请、软件安装、防火墙配置、服务启动到最终验证，提供了在飞腾 2000 + 处理器和银河麒麟操作系统的完整部署指南，包含所有必要的命令和配置步骤。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-29T06:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-29T06:23:52.985Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="国产化">
+<meta property="article:tag" content="信创">
+<meta property="article:tag" content="TongHttpServer">
+<meta name="twitter:card" content="summary">
+    
+      
+        
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            东方通负载均衡软件 TongHttpServer V6.0 安装步骤
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
+
+
+                                                            <!-- Umami Analytics -->
+
+
+                                                              <!-- styles -->
+                                                              
+<link rel="stylesheet" href="/css/style.css">
+
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2025/10/09/78.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Docker%20%E5%8C%96%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4%E6%89%8B%E5%86%8C/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&text=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&is_video=false&description=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=东方通负载均衡软件 TongHttpServer V6.0 安装步骤&body=Check out this article: https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&name=东方通负载均衡软件 TongHttpServer V6.0 安装步骤&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&t=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">1. 写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">2. 前期准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B7%A5%E5%85%B7%E7%94%B3%E8%AF%B7"><span class="toc-number">3.</span> <span class="toc-text">3. 工具申请</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">4. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C"><span class="toc-number">5.</span> <span class="toc-text">5. 防火墙放行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-THS-%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8"><span class="toc-number">6.</span> <span class="toc-text">6. THS 服务启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-number">7.</span> <span class="toc-text">验证</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        东方通负载均衡软件 TongHttpServer V6.0 安装步骤
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-09-29T06:00:00.000Z" class="dt-published" itemprop="datePublished">2025-09-29</time>
+        
+        (Updated: <time datetime="2025-09-29T06:23:52.985Z" class="dt-updated" itemprop="dateModified">2025-09-29</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/linux/">linux</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/TongHttpServer/" rel="tag">TongHttpServer</a>, <a class="p-category" href="/tags/%E4%BF%A1%E5%88%9B/" rel="tag">信创</a>, <a class="p-category" href="/tags/%E5%9B%BD%E4%BA%A7%E5%8C%96/" rel="tag">国产化</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1. 写在前面"></a>1. 写在前面</h2><p>本文的出发点是公司开始信创化改造工作，需要对已有的工具进行国产化替换。我计划使用东方通负载均衡软件 TongHttpServer V6.0 替换经常使用的 Nginx，之后我将简称 TongHttpServer 为 ths。本文则是在此情况下编写的。</p>
+<h2 id="2-前期准备"><a href="#2-前期准备" class="headerlink" title="2. 前期准备"></a>2. 前期准备</h2><p>首先需要一台国产化服务器，这里公司给我开了一台虚机，使用的是银河麒麟操作系统 v10</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@zyzdsz-01 bin]# uname -a</span><br><span class="line">Linux zyzdsz-01 4.19.90-17.ky10.aarch64 #1 SMP Sun Jun 28 14:27:40 CST 2020 aarch64 aarch64 aarch64 GNU/Linux</span><br></pre></td></tr></table></figure>
+
+<p>硬件方面，我申请的是 8C 16G 300GB 的配置，处理器也是信创的飞腾 2000+，是一颗 ARM 架构处理器。IP 则为我分配的是 10.1.100.11，同时开通外网访问能力，但无法通过外网访问到本机，ssh 和 ftp 等操作需要使用跳板机（10.1.120. 段均可）跳转使用</p>
+<p>这里跳板机使用的是 10.1.120.11，一台 windows server 服务器。后续将使用这台服务器访问 ths 的控制面板。</p>
+<h2 id="3-工具申请"><a href="#3-工具申请" class="headerlink" title="3. 工具申请"></a>3. 工具申请</h2><p>东方通的官方提供测试版本安装包，在官方发起试用申请，稍后会有专门的工作人员加你微信，根据提示交流后，将会给你百度网盘上的安装包和试用证书。</p>
+<h2 id="4-安装"><a href="#4-安装" class="headerlink" title="4. 安装"></a>4. 安装</h2><p>我们在服务器的 &#x2F;opt 目录下将安装包的压缩包放在这里，并解压缩</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt</span><br><span class="line">unzip THS6.0.1.3.zip</span><br></pre></td></tr></table></figure>
+
+<p>根据操作系统和处理器特征，我们需要使用 linux 版本下的 aarch64 架构下的 TongHttpServer_6.0.1.3_alpine_aarch64.tar.gz 这个压缩包的内容，我们解压一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/THS6.0.1.3/linux</span><br><span class="line">tar -zxvf TongHttpServer_6.0.1.3_alpine_aarch64.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压后将得到一个 THS 的压缩包，这就是本体的全部内容了</p>
+<h2 id="5-防火墙放行"><a href="#5-防火墙放行" class="headerlink" title="5. 防火墙放行"></a>5. 防火墙放行</h2><p>工具需要的访问端口，我们需要在系统的防火墙上进行放行，具体为：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --add-port=8000/tcp --permanent  # console 管理端界面</span><br><span class="line">firewall-cmd --add-port=8080/tcp --permanent  # 默认访问的端口</span><br><span class="line"></span><br><span class="line">firewall-cmd --reload  # 使刚才的配置生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --list-all  # 查看具体的配置</span><br></pre></td></tr></table></figure>
+
+<p>我们可以去 windows server 服务器上测试一下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">验证 8080 端口</span></span><br><span class="line">telnet 10.1.100.11 8080</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">验证 8000 端口</span></span><br><span class="line">telnet 10.1.100.11 8000</span><br></pre></td></tr></table></figure>
+
+<p>如果端口是通的（成功）：命令行窗口会变黑，并且只有一个闪烁的光标。这意味着您的 Windows Server 成功连接到了 Linux 主机上的该端口。</p>
+<p>如果端口不通（失败）：命令可能会卡住一段时间，然后显示类似 “无法打开到主机的连接，在端口 xxxx: 连接失败” 或 “正在连接到…” 后直接退出。这表明连接被防火墙拒绝或 Linux 主机上没有程序在监听该端口。</p>
+<h2 id="6-THS-服务启动"><a href="#6-THS-服务启动" class="headerlink" title="6. THS 服务启动"></a>6. THS 服务启动</h2><p>前往 THS 根目录，启动我们需要的服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/THS6.0.1.3/linux/bin</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">./start</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">若需要停止，则：</span></span><br><span class="line">./start.sh stop</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">热加载为：</span></span><br><span class="line">./start.sh reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">优雅停止为：</span></span><br><span class="line">./start.sh -s quit</span><br></pre></td></tr></table></figure>
+
+<p>我们再启动 console 控制台</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/THS6.0.1.3/linux/bin</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">./startConsole.sh</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">若需要停止，则：</span></span><br><span class="line">./startConsole.sh stop</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启为：</span></span><br><span class="line">./startConsole.sh reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重置密码为：</span></span><br><span class="line">./startConsole.sh -passwd=THS#123.com#</span><br></pre></td></tr></table></figure>
+
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>至此，我们的服务正常启动了，同时控制台也可以访问了，我们测试一下服务。前往 windows server 服务器，打开浏览器，访问 <code>http://10.1.100.11:8080/</code> 可看到空白默认页</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Welcome to TongHttpServer!<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">      <span class="selector-tag">body</span> &#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">width</span>: <span class="number">35em</span>;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">margin</span>: <span class="number">0</span> auto;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-family</span>: Tahoma, Verdana, Arial, sans-serif;</span></span><br><span class="line"><span class="language-css">      &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>Welcome to TongHttpServer!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      If you see this page, the web server is successfully installed and</span><br><span class="line">      working. Further configuration is required.</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>Thank you for using TongHttpServer.<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>访问 console 控制台 <code>http://10.1.100.11:8000/admin/login</code> 输入默认账号密码 <code>admin</code> 与 <code>Ths#123.com</code>，首次访问需要修改密码，跟着改了就行。</p>
+<p>对 THS 的全部配置均可在控制台中进行，操作完不用了记得关闭控制台</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/THS6.0.1.3/linux/bin</span><br><span class="line"></span><br><span class="line">./startConsole.sh stop</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text">1. 写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">2. 前期准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B7%A5%E5%85%B7%E7%94%B3%E8%AF%B7"><span class="toc-number">3.</span> <span class="toc-text">3. 工具申请</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">4. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C"><span class="toc-number">5.</span> <span class="toc-text">5. 防火墙放行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-THS-%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8"><span class="toc-number">6.</span> <span class="toc-text">6. THS 服务启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-number">7.</span> <span class="toc-text">验证</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&text=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&is_video=false&description=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=东方通负载均衡软件 TongHttpServer V6.0 安装步骤&body=Check out this article: https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&title=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&name=东方通负载均衡软件 TongHttpServer V6.0 安装步骤&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/&t=东方通负载均衡软件 TongHttpServer V6.0 安装步骤"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+      
+        
+          2020-2025
+            NightingaleWK
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
+  </div>
+  <div class="footer-right"></div>
+</footer>
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

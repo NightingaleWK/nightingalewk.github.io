@@ -7,22 +7,22 @@
         <language>zh-CN</language>
         <pubDate>Sat, 20 Feb 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Sat, 20 Feb 2021 12:00:00 +0800</lastBuildDate>
-        <category>迁移</category>
         <category>hexo</category>
-        <category>主食</category>
+        <category>迁移</category>
         <category>电脑维修</category>
+        <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
         <category>热菜</category>
         <category>汤</category>
-        <category>甜品</category>
-        <category>梦境</category>
         <category>海鲜</category>
-        <category>homestead</category>
+        <category>甜品</category>
         <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
+        <category>homestead</category>
+        <category>梦境</category>
         <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
@@ -33,15 +33,15 @@
         <category>laravel sail</category>
         <category>vs code</category>
         <category>fileinfo</category>
-        <category>PAC 清单</category>
         <category>定时任务</category>
+        <category>PAC 清单</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
         <category>swap</category>
-        <category>端口查询</category>
         <category>表单验证</category>
+        <category>端口查询</category>
         <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
@@ -54,13 +54,13 @@
         <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
@@ -73,6 +73,14 @@
         <category>版本控制</category>
         <category>Monorepo</category>
         <category>DevOps</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Laravel</category>
+        <category>Docker</category>
+        <category>容器化</category>
+        <category>部署</category>
+        <category>运维</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/02/20/16.%20%E9%BB%91%E6%A4%92%E6%84%8F%E9%9D%A2/</guid>
             <title>黑椒意面</title>

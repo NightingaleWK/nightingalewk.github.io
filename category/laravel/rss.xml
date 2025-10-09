@@ -7,22 +7,22 @@
         <language>zh-CN</language>
         <pubDate>Tue, 21 Nov 2023 18:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 21 Nov 2023 18:00:00 +0800</lastBuildDate>
-        <category>迁移</category>
         <category>hexo</category>
-        <category>主食</category>
+        <category>迁移</category>
         <category>电脑维修</category>
+        <category>主食</category>
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
         <category>热菜</category>
         <category>汤</category>
-        <category>甜品</category>
-        <category>梦境</category>
         <category>海鲜</category>
-        <category>homestead</category>
+        <category>甜品</category>
         <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
+        <category>homestead</category>
+        <category>梦境</category>
         <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
@@ -33,15 +33,15 @@
         <category>laravel sail</category>
         <category>vs code</category>
         <category>fileinfo</category>
-        <category>PAC 清单</category>
         <category>定时任务</category>
+        <category>PAC 清单</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
         <category>swap</category>
-        <category>端口查询</category>
         <category>表单验证</category>
+        <category>端口查询</category>
         <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
@@ -54,13 +54,13 @@
         <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
@@ -73,6 +73,14 @@
         <category>版本控制</category>
         <category>Monorepo</category>
         <category>DevOps</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Laravel</category>
+        <category>Docker</category>
+        <category>容器化</category>
+        <category>部署</category>
+        <category>运维</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/</guid>
             <title>laravel 10 在 vite 工作流中引入并使用 Font Awesome 6</title>
@@ -618,6 +626,27 @@
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</guid>
+            <title>laravel 项目部署到服务器的流程</title>
+            <link>https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</link>
+            <category>代码部署</category>
+            <category>oneinstack</category>
+            <category>lnmp</category>
+            <pubDate>Tue, 08 Jun 2021 12:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;新建虚拟站点&#34;&gt;&lt;a href=&#34;#新建虚拟站点&#34; class=&#34;headerlink&#34; title=&#34;新建虚拟站点&#34;&gt;&lt;/a&gt;新建虚拟站点&lt;/h1&gt;&lt;p&gt;进入到 oneinstack 根目录，输入 &lt;code&gt;./vhost&lt;/code&gt; 新建虚拟主机，在开始之前首先申请好指向本测试服务器的域名，ssl 证书可使用 oneinstack 自动生成并自动续期，一路完成后会有如下提示即可&lt;/p&gt;
+&lt;p&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; #       OneinStack for CentOS&amp;#x2F;RedHat 6+ Debian 8+ and Ubuntu 14+      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #       For more information please visit &lt;a href=&#34;https://oneinstack.com/&#34;&gt;https://oneinstack.com&lt;/a&gt;      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; Your domain:                  yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Virtualhost conf:             &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;vhost&amp;#x2F;yanji.wkarrow.top.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Directory of:                 &amp;#x2F;data&amp;#x2F;wwwroot&amp;#x2F;yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Rewrite rule:                 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;rewrite&amp;#x2F;laravel.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Let’s Encrypt SSL Certificate:&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.crt&lt;br&gt;&amp;#x2F;&amp;#x2F; SSL Private Key:              &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.key&lt;/p&gt;
+&lt;h1 id=&#34;git-clone-拷贝线上仓库数据到本地&#34;&gt;&lt;a href=&#34;#git-clone-拷贝线上仓库数据到本地&#34; class=&#34;headerlink&#34; title=&#34;git clone 拷贝线上仓库数据到本地&#34;&gt;&lt;/a&gt;git clone 拷贝线上仓库数据到本地&lt;/h1&gt;&lt;p&gt;cd 到 &lt;code&gt;/date/wwwroot/yanji.wkarrow.top&lt;/code&gt; 目录中，执行&lt;br&gt; &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1 id=&#34;修改-env-文件&#34;&gt;&lt;a href=&#34;#修改-env-文件&#34; class=&#34;headerlink&#34; title=&#34;修改 .env 文件&#34;&gt;&lt;/a&gt;修改 .env 文件&lt;/h1&gt;&lt;p&gt;在项目根目录下执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后 &lt;code&gt;vim .env&lt;/code&gt; 配置站点数据&lt;/p&gt;
+&lt;h1 id=&#34;修改站点权限&#34;&gt;&lt;a href=&#34;#修改站点权限&#34; class=&#34;headerlink&#34; title=&#34;修改站点权限&#34;&gt;&lt;/a&gt;修改站点权限&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 777 yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www-data:www-data yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd yanji,wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chgrp -R www storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod -R ug+rwx storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;修改-nginx-配置&#34;&gt;&lt;a href=&#34;#修改-nginx-配置&#34; class=&#34;headerlink&#34; title=&#34;修改 nginx 配置&#34;&gt;&lt;/a&gt;修改 nginx 配置&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /usr/local/nginx/conf/vhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim yanji.wkarrow.top.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h1&gt;&lt;p&gt;前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库&lt;/p&gt;
+&lt;h1 id=&#34;数据库迁移&#34;&gt;&lt;a href=&#34;#数据库迁移&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移&#34;&gt;&lt;/a&gt;数据库迁移&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</guid>
             <title>laravel 项目 Homestead 开发环境的搭建</title>
             <link>https://nightingalewk.cn/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</link>
@@ -667,27 +696,6 @@
 
 &lt;h1 id=&#34;开发常用指令&#34;&gt;&lt;a href=&#34;#开发常用指令&#34; class=&#34;headerlink&#34; title=&#34;开发常用指令&#34;&gt;&lt;/a&gt;开发常用指令&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//清理各类缓存&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan cache:clear &amp;amp;&amp;amp; php artisan config:clear &amp;amp;&amp;amp; php artisan route:clear &amp;amp;&amp;amp; php artisan view:clear&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</guid>
-            <title>laravel 项目部署到服务器的流程</title>
-            <link>https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</link>
-            <category>代码部署</category>
-            <category>oneinstack</category>
-            <category>lnmp</category>
-            <pubDate>Tue, 08 Jun 2021 12:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;新建虚拟站点&#34;&gt;&lt;a href=&#34;#新建虚拟站点&#34; class=&#34;headerlink&#34; title=&#34;新建虚拟站点&#34;&gt;&lt;/a&gt;新建虚拟站点&lt;/h1&gt;&lt;p&gt;进入到 oneinstack 根目录，输入 &lt;code&gt;./vhost&lt;/code&gt; 新建虚拟主机，在开始之前首先申请好指向本测试服务器的域名，ssl 证书可使用 oneinstack 自动生成并自动续期，一路完成后会有如下提示即可&lt;/p&gt;
-&lt;p&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; #       OneinStack for CentOS&amp;#x2F;RedHat 6+ Debian 8+ and Ubuntu 14+      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #       For more information please visit &lt;a href=&#34;https://oneinstack.com/&#34;&gt;https://oneinstack.com&lt;/a&gt;      #&lt;br&gt;&amp;#x2F;&amp;#x2F; #######################################################################&lt;br&gt;&amp;#x2F;&amp;#x2F; Your domain:                  yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Virtualhost conf:             &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;vhost&amp;#x2F;yanji.wkarrow.top.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Directory of:                 &amp;#x2F;data&amp;#x2F;wwwroot&amp;#x2F;yanji.wkarrow.top&lt;br&gt;&amp;#x2F;&amp;#x2F; Rewrite rule:                 &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;rewrite&amp;#x2F;laravel.conf&lt;br&gt;&amp;#x2F;&amp;#x2F; Let’s Encrypt SSL Certificate:&amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.crt&lt;br&gt;&amp;#x2F;&amp;#x2F; SSL Private Key:              &amp;#x2F;usr&amp;#x2F;local&amp;#x2F;nginx&amp;#x2F;conf&amp;#x2F;ssl&amp;#x2F;yanji.wkarrow.top.key&lt;/p&gt;
-&lt;h1 id=&#34;git-clone-拷贝线上仓库数据到本地&#34;&gt;&lt;a href=&#34;#git-clone-拷贝线上仓库数据到本地&#34; class=&#34;headerlink&#34; title=&#34;git clone 拷贝线上仓库数据到本地&#34;&gt;&lt;/a&gt;git clone 拷贝线上仓库数据到本地&lt;/h1&gt;&lt;p&gt;cd 到 &lt;code&gt;/date/wwwroot/yanji.wkarrow.top&lt;/code&gt; 目录中，执行&lt;br&gt; &lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h1 id=&#34;修改-env-文件&#34;&gt;&lt;a href=&#34;#修改-env-文件&#34; class=&#34;headerlink&#34; title=&#34;修改 .env 文件&#34;&gt;&lt;/a&gt;修改 .env 文件&lt;/h1&gt;&lt;p&gt;在项目根目录下执行&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cp .env.example .env&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;之后 &lt;code&gt;vim .env&lt;/code&gt; 配置站点数据&lt;/p&gt;
-&lt;h1 id=&#34;修改站点权限&#34;&gt;&lt;a href=&#34;#修改站点权限&#34; class=&#34;headerlink&#34; title=&#34;修改站点权限&#34;&gt;&lt;/a&gt;修改站点权限&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chmod -R 777 yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chown -R www-data:www-data yanji.wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd yanji,wkarrow.top&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chgrp -R www storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;chmod -R ug+rwx storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&#34;修改-nginx-配置&#34;&gt;&lt;a href=&#34;#修改-nginx-配置&#34; class=&#34;headerlink&#34; title=&#34;修改 nginx 配置&#34;&gt;&lt;/a&gt;修改 nginx 配置&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cd /usr/local/nginx/conf/vhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vim yanji.wkarrow.top.conf&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h1&gt;&lt;p&gt;前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库&lt;/p&gt;
-&lt;h1 id=&#34;数据库迁移&#34;&gt;&lt;a href=&#34;#数据库迁移&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移&#34;&gt;&lt;/a&gt;数据库迁移&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</guid>
