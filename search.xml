@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title>在 Ubuntu 24.04 安装最新的 Docker Engine 的方法</title>
+      <title>在 Ubuntu 24.04 用 APT 安装最新的 Docker Engine 的方法</title>
       <link href="/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/</url>
       
@@ -144,9 +144,9 @@
             
             <tag> Git </tag>
             
-            <tag> DevOps </tag>
-            
             <tag> Monorepo </tag>
+            
+            <tag> DevOps </tag>
             
         </tags>
       
@@ -959,31 +959,6 @@
     
     
     <entry>
-      <title>检测服务端口的方法</title>
-      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 端口查询 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 表单请求验证简明示例</title>
       <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
       <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
@@ -1001,6 +976,31 @@
         <tags>
             
             <tag> 表单验证 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>检测服务端口的方法</title>
+      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 端口查询 </tag>
             
         </tags>
       
@@ -1518,6 +1518,25 @@
     
     
     <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>laravel 项目 Homestead 开发环境的搭建</title>
       <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
       <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
@@ -1566,25 +1585,6 @@
             <tag> lnmp </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
       
     </entry>
     
