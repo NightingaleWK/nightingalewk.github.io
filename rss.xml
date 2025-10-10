@@ -5,10 +5,10 @@
         <link>https://nightingalewk.cn</link>
         <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
         <language>zh-CN</language>
-        <pubDate>Thu, 09 Oct 2025 16:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 09 Oct 2025 16:00:00 +0800</lastBuildDate>
-        <category>hexo</category>
+        <pubDate>Fri, 10 Oct 2025 10:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 10 Oct 2025 10:00:00 +0800</lastBuildDate>
         <category>迁移</category>
+        <category>hexo</category>
         <category>电脑维修</category>
         <category>主食</category>
         <category>pr</category>
@@ -16,32 +16,32 @@
         <category>学习笔记</category>
         <category>热菜</category>
         <category>汤</category>
-        <category>海鲜</category>
         <category>甜品</category>
+        <category>梦境</category>
+        <category>海鲜</category>
+        <category>homestead</category>
         <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>homestead</category>
-        <category>梦境</category>
-        <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
+        <category>代码更新</category>
         <category>debug</category>
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
-        <category>laravel sail</category>
         <category>vs code</category>
         <category>fileinfo</category>
-        <category>定时任务</category>
+        <category>laravel sail</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
         <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
         <category>swap</category>
-        <category>表单验证</category>
         <category>端口查询</category>
+        <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
@@ -50,17 +50,17 @@
         <category>特色小吃</category>
         <category>粥</category>
         <category>Cloudreve</category>
-        <category>artisan 指令</category>
         <category>故障排除</category>
+        <category>artisan 指令</category>
         <category>Font Awesome</category>
         <category>vite</category>
+        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
-        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
@@ -71,8 +71,8 @@
         <category>Git</category>
         <category>GitHub</category>
         <category>版本控制</category>
-        <category>Monorepo</category>
         <category>DevOps</category>
+        <category>Monorepo</category>
         <category>国产化</category>
         <category>信创</category>
         <category>TongHttpServer</category>
@@ -81,6 +81,33 @@
         <category>容器化</category>
         <category>部署</category>
         <category>运维</category>
+        <category>Ubuntu</category>
+        <category>安装指南</category>
+        <category>阿里云</category>
+        <category>镜像源</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+            <title>在 Ubuntu 24.04 安装最新的 Docker Engine 的方法</title>
+            <link>https://nightingalewk.cn/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+            <category>Docker</category>
+            <category>Ubuntu</category>
+            <category>安装指南</category>
+            <category>阿里云</category>
+            <category>镜像源</category>
+            <pubDate>Fri, 10 Oct 2025 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;文本将记录当前如何在阿里云 CES 服务器上，使用 APT 方式，安装最新的 Docker Engine 到 Ubuntu Server 24.04 上。主要解决的是国内因网络环境导致的资源无法下载、获取的问题。&lt;/p&gt;
+&lt;p&gt;本文全部操作是基于&lt;a href=&#34;https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository&#34;&gt;官方的完整文档&lt;/a&gt;，仅对网络故障进行了处理，其他步骤均未改变。&lt;/p&gt;
+&lt;h2 id=&#34;1-设置-Docker-的-apt-存储库&#34;&gt;&lt;a href=&#34;#1-设置-Docker-的-apt-存储库&#34; class=&#34;headerlink&#34; title=&#34;1. 设置 Docker 的 apt 存储库&#34;&gt;&lt;/a&gt;1. 设置 Docker 的 apt 存储库&lt;/h2&gt;&lt;p&gt;在全新干净的服务器上，配置 apt 存储库，原本官方的方法是这样的：&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Add Docker&amp;#x27;s official GPG key:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get install ca-certificates curl&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; install -m 0755 -d /etc/apt/keyrings&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; a+r /etc/apt/keyrings/docker.asc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Add the repository to Apt sources:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;string&#34;&gt;&amp;quot;deb [arch=&lt;span class=&#34;subst&#34;&gt;$(dpkg --print-architecture)&lt;/span&gt; signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;  &lt;span class=&#34;subst&#34;&gt;$(. /etc/os-release &amp;amp;&amp;amp; echo &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;variable&#34;&gt;$&amp;#123;UBUNTU_CODENAME:-&lt;span class=&#34;variable&#34;&gt;$VERSION_CODENAME&lt;/span&gt;&amp;#125;&lt;/span&gt;&amp;quot;&lt;/span&gt;)&lt;/span&gt; stable&amp;quot;&lt;/span&gt; | \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;tee&lt;/span&gt; /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;很明显，基于 docker.com 的资源都被墙的七七八八了，根本无法顺利执行完毕，我们这里替换清华源：&lt;/p&gt;
+&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 添加阿里云镜像站的 Docker GPG Key:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get install ca-certificates curl&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; install -m 0755 -d /etc/apt/keyrings&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; curl -fsSL https://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | &lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; gpg --dearmor -o /etc/apt/keyrings/docker.gpg&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; a+r /etc/apt/keyrings/docker.asc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 添加阿里云的 Docker APT 软件源（替换官方源）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;string&#34;&gt;&amp;quot;deb [arch=&lt;span class=&#34;subst&#34;&gt;$(dpkg --print-architecture)&lt;/span&gt; signed-by=/etc/apt/keyrings/docker.gpg] https://mirrors.aliyun.com/docker-ce/linux/ubuntu \&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;string&#34;&gt;  &lt;span class=&#34;subst&#34;&gt;$(. /etc/os-release &amp;amp;&amp;amp; echo &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;variable&#34;&gt;$&amp;#123;UBUNTU_CODENAME:-&lt;span class=&#34;variable&#34;&gt;$VERSION_CODENAME&lt;/span&gt;&amp;#125;&lt;/span&gt;&amp;quot;&lt;/span&gt;)&lt;/span&gt; stable&amp;quot;&lt;/span&gt; | \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;tee&lt;/span&gt; /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 再次更新索引&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt update&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;2-安装-Docker-包&#34;&gt;&lt;a href=&#34;#2-安装-Docker-包&#34; class=&#34;headerlink&#34; title=&#34;2. 安装 Docker 包&#34;&gt;&lt;/a&gt;2. 安装 Docker 包&lt;/h2&gt;&lt;figure class=&#34;highlight sh&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;后续的按照官方文档操作即可，不再赘述了。&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2025/10/09/78.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Docker%20%E5%8C%96%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4%E6%89%8B%E5%86%8C/</guid>
             <title>Laravel 项目 Docker 化部署与运维手册</title>
@@ -305,8 +332,8 @@
             <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
             <link>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</link>
             <category>Git</category>
-            <category>Monorepo</category>
             <category>DevOps</category>
+            <category>Monorepo</category>
             <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -1368,58 +1395,6 @@ n. [Final action]
 &lt;p&gt;这个问题就是我们本机的 80 端口被占用了，我个人的电脑是 windows 11，系统服务默认开启一个叫 &lt;code&gt;World Wide Web 发布服务&lt;/code&gt; 的服务，他是自动启动的，该服务通过 Internet Information Services 管理器提供 Web 连接和管理，默认占用 80 端口，这个服务我们很明显用不到，给他禁用掉，然后再 sail up 就 ok 了。&lt;/p&gt;
 &lt;p&gt;一点小小的经验分享 😁&lt;/p&gt;
  ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/</guid>
-            <title>laravel artisan route 用法</title>
-            <link>https://nightingalewk.cn/2023/11/15/60.%20laravel%20artisan%20route%20%E7%94%A8%E6%B3%95/</link>
-            <category>artisan 指令</category>
-            <pubDate>Wed, 15 Nov 2023 17:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;基本用法是：&lt;/p&gt;
-&lt;figure class=&#34;highlight php&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;laravel artisan route 用法&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;可添加的后缀有：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;后缀参数&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;th&gt;默认值&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;–method&amp;#x3D;&lt;TERM&gt;&lt;/td&gt;
-&lt;td&gt;Filters the routes by method.&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;–name&amp;#x3D;&lt;TERM&gt;&lt;/td&gt;
-&lt;td&gt;Filters the routes by name.&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;–path&amp;#x3D;&lt;TERM&gt;&lt;/td&gt;
-&lt;td&gt;Filters the routes by path (URI).&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;–reverse&lt;/td&gt;
-&lt;td&gt;Reverses the order the routes are displayed in the table.&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;-r&lt;/td&gt;
-&lt;td&gt;Reverses the order the routes are displayed in the table (shortcut to –reverse).&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;–sort&lt;/td&gt;
-&lt;td&gt;The column to sort by. Accepted values are host, method, uri, name, action or middleware.&lt;/td&gt;
-&lt;td&gt;uri&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;p&gt;举例：&lt;/p&gt;
-&lt;figure class=&#34;highlight php&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Filter the route list by name.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --name=account&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Filter the route list by URI.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --path=&lt;span class=&#34;string&#34;&gt;&amp;#x27;api/v1/&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Filter the route list by method.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --method=GET&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# The filters can be combined; results will be aggregated using &amp;quot;and&amp;quot; logic. The following command:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --path=account --method=GET&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Filter the routes and display them in reverse order.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --method=GET --reverse&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# The following is equivalent to the previous example.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --method=GET -r&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# Filter the routes and sort `name` column.&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan route:&lt;span class=&#34;keyword&#34;&gt;list&lt;/span&gt; --method=GET --sort=name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
     </channel>
 </rss>
