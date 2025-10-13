@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;nginx&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 13 Oct 2025 10:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 13 Oct 2025 10:00:00 +0800</lastBuildDate>
+        <category>迁移</category>
+        <category>hexo</category>
+        <category>电脑维修</category>
+        <category>主食</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>汤</category>
+        <category>热菜</category>
+        <category>甜品</category>
+        <category>梦境</category>
+        <category>海鲜</category>
+        <category>homestead</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>代码更新</category>
+        <category>dcat admin</category>
+        <category>oh-my-zsh</category>
+        <category>debug</category>
+        <category>道歉信</category>
+        <category>指令</category>
+        <category>免密</category>
+        <category>vs code</category>
+        <category>PAC 清单</category>
+        <category>laravel sail</category>
+        <category>fileinfo</category>
+        <category>定时任务</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>net time</category>
+        <category>swap</category>
+        <category>端口查询</category>
+        <category>表单验证</category>
+        <category>blade</category>
+        <category>事件</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>wordpress</category>
+        <category>特色小吃</category>
+        <category>粥</category>
+        <category>Cloudreve</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>故障排除</category>
+        <category>linux</category>
+        <category>artisan 指令</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>screen</category>
+        <category>cursor</category>
+        <category>人工智能</category>
+        <category>prompt</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Docker</category>
+        <category>Ubuntu</category>
+        <category>安装指南</category>
+        <category>阿里云</category>
+        <category>镜像源</category>
+        <category>Laravel</category>
+        <category>容器化</category>
+        <category>部署</category>
+        <category>运维</category>
+        <category>Nginx</category>
+        <category>反向代理</category>
+        <category>NPM</category>
+        <category>HTTPS</category>
+        <category>问题排查</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+            <title>Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案</title>
+            <link>https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+            <category>Docker</category>
+            <category>Laravel</category>
+            <category>Nginx</category>
+            <category>反向代理</category>
+            <category>NPM</category>
+            <category>HTTPS</category>
+            <category>问题排查</category>
+            <pubDate>Mon, 13 Oct 2025 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#前言&#34; class=&#34;headerlink&#34; title=&#34;前言&#34;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;最近在阿里云服务器上部署一个基于 Laravel 12 + Filament v4 的项目（代号“土豆食堂”），使用 Docker Compose 容器化部署，后端 Nginx + PHP-FPM，前端通过 Nginx Proxy Manager (NPM) 实现 HTTPS 反向代理。部署完成后，一切看似正常，但访问应用时发现前端资源（如 Filament 的 &lt;code&gt;app.js&lt;/code&gt;）的 URL 被错误生成成 &lt;code&gt;https://lynx.wkarrow.top:80/js/filament/filament/app.js?v=4.1.6.0&lt;/code&gt;，多出的 &lt;code&gt;:80&lt;/code&gt; 端口导致浏览器无法加载资源，报 404 错误。&lt;/p&gt;
+&lt;p&gt;这不是代码 bug，而是典型的 HTTPS 代理到 HTTP 后端的头部传递问题。NPM 默认将 &lt;code&gt;X-Forwarded-Port&lt;/code&gt; 设置为后端端口 80，而 Laravel 在生成资产 URL 时会根据此头部附加端口，导致与 HTTPS scheme 不匹配。&lt;/p&gt;
+&lt;p&gt;本文记录了问题排查与最终解决方案，重点分享后端 Nginx 的备选修复方法（适用于 NPM 配置无效的情况）。希望对类似部署遇到坑的开发者有帮助！&lt;/p&gt;
+&lt;h2 id=&#34;问题复现与分析&#34;&gt;&lt;a href=&#34;#问题复现与分析&#34; class=&#34;headerlink&#34; title=&#34;问题复现与分析&#34;&gt;&lt;/a&gt;问题复现与分析&lt;/h2&gt;&lt;h3 id=&#34;环境概述&#34;&gt;&lt;a href=&#34;#环境概述&#34; class=&#34;headerlink&#34; title=&#34;环境概述&#34;&gt;&lt;/a&gt;环境概述&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;项目&lt;/strong&gt;：Laravel 12 + Filament v4，使用 Vite 构建前端资源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;部署&lt;/strong&gt;：Docker Compose（&lt;code&gt;docker-compose.internet.yml&lt;/code&gt;），包含 app (PHP-FPM)、nginx、mysql、redis 等服务。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代理&lt;/strong&gt;：NPM 监听 443 端口，强制 HTTPS，转发到后端 Nginx 的 80 端口。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nginx 配置&lt;/strong&gt;：&lt;code&gt;default.conf&lt;/code&gt; 中已传递 &lt;code&gt;X-Forwarded-*&lt;/code&gt; 头部到 PHP-FPM。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;故障现象&#34;&gt;&lt;a href=&#34;#故障现象&#34; class=&#34;headerlink&#34; title=&#34;故障现象&#34;&gt;&lt;/a&gt;故障现象&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;正常预期：&lt;code&gt;https://lynx.wkarrow.top/js/filament/filament/app.js?v=4.1.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;实际生成：&lt;code&gt;https://lynx.wkarrow.top:80/js/filament/filament/app.js?v=4.1.6.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;影响：浏览器 Network 面板显示资源 404，应用界面 JS&amp;#x2F;CSS 加载失败，Filament 面板无法交互。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;根因分析&#34;&gt;&lt;a href=&#34;#根因分析&#34; class=&#34;headerlink&#34; title=&#34;根因分析&#34;&gt;&lt;/a&gt;根因分析&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;NPM 作为前端代理，添加 &lt;code&gt;X-Forwarded-Proto: https&lt;/code&gt; 和 &lt;code&gt;X-Forwarded-Port: 80&lt;/code&gt;（后端端口）。&lt;/li&gt;
+&lt;li&gt;后端 Nginx 将这些头部传递给 PHP-FPM（&lt;code&gt;fastcgi_param HTTP_X_FORWARDED_PORT $http_x_forwarded_port;&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;Laravel 的 &lt;code&gt;Request&lt;/code&gt; 对象信任代理头部（&lt;code&gt;config/trustedproxies.php&lt;/code&gt;），读取 &lt;code&gt;X-Forwarded-Port=80&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;URL 生成器（如 &lt;code&gt;asset()&lt;/code&gt; 或 Filament 的资源 URL）检测到端口非 HTTPS 默认 443，故附加 &lt;code&gt;:80&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;参考 Laravel 12 文档（HTTP Requests 部分）：&lt;code&gt;request()-&amp;gt;getPort()&lt;/code&gt; 优先从 &lt;code&gt;X-Forwarded-Port&lt;/code&gt; 取值，导致畸形 URL。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这是一个常见痛点，尤其在 Docker + 反向代理环境中。&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;&lt;a href=&#34;#解决方案&#34; class=&#34;headerlink&#34; title=&#34;解决方案&#34;&gt;&lt;/a&gt;解决方案&lt;/h2&gt;&lt;p&gt;我先尝试了在 NPM 的 Advanced 选项卡添加 &lt;code&gt;proxy_set_header X-Forwarded-Port 443;&lt;/code&gt;，但由于 NPM 的自定义配置有时不稳定（可能与版本或缓存相关），最终选择了后端 Nginx 的备选修复——直接在 &lt;code&gt;default.conf&lt;/code&gt; 中覆盖端口逻辑。这方法更可靠，且不依赖代理工具。&lt;/p&gt;
+&lt;h3 id=&#34;步骤：修改后端-Nginx-配置&#34;&gt;&lt;a href=&#34;#步骤：修改后端-Nginx-配置&#34; class=&#34;headerlink&#34; title=&#34;步骤：修改后端 Nginx 配置&#34;&gt;&lt;/a&gt;步骤：修改后端 Nginx 配置&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;编辑配置文件&lt;/strong&gt;：在项目目录下，打开 &lt;code&gt;./docker-internet/nginx/default.conf&lt;/code&gt;（或挂载路径 &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;定位 PHP 处理块&lt;/strong&gt;：找到 &lt;code&gt;location ~ \.php$&lt;/code&gt; 部分（已存在 FastCGI 配置）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;添加覆盖逻辑&lt;/strong&gt;：在 &lt;code&gt;fastcgi_param&lt;/code&gt; 相关行后，插入以下 Nginx 指令：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;location ~ \.php$ &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    try_files $uri =404;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_split_path_info ^(.+\.php)(/.+)$;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_pass app:9000;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_index index.php;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    include fastcgi_params;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param PATH_INFO $fastcgi_path_info;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # 原有头部传递&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param HTTP_X_FORWARDED_FOR $http_x_forwarded_for;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param HTTP_X_FORWARDED_PROTO $http_x_forwarded_proto;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param HTTP_X_FORWARDED_HOST $http_x_forwarded_host;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param HTTP_X_FORWARDED_PORT $http_x_forwarded_port;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    # 新增：基于 proto 覆盖端口，确保 HTTPS 时为 443&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    set $real_port $http_x_forwarded_port;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    if ($http_x_forwarded_proto = &amp;quot;https&amp;quot;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        set $real_port &amp;quot;443&amp;quot;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    fastcgi_param HTTP_X_FORWARDED_PORT $real_port;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;解释&lt;/strong&gt;：&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;set $real_port $http_x_forwarded_port;&lt;/code&gt;：默认使用传入端口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;if ($http_x_forwarded_proto = &amp;quot;https&amp;quot;) &amp;#123; set $real_port &amp;quot;443&amp;quot;; &amp;#125;&lt;/code&gt;：如果 scheme 是 HTTPS，则强制覆盖为 443（忽略后端 80）。&lt;/li&gt;
+&lt;li&gt;最后用 &lt;code&gt;$real_port&lt;/code&gt; 替换原参数，确保 Laravel 读取正确端口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;保存并重启服务&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo docker compose -f docker-compose.internet.yml restart nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nginx 会优雅重载，无需重建整个容器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;辅助优化&lt;/strong&gt;（可选，但推荐）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;确认 &lt;code&gt;.env&lt;/code&gt; 中的 &lt;code&gt;APP_URL=https://lynx.wkarrow.top&lt;/code&gt;（无端口）。&lt;/li&gt;
+&lt;li&gt;清除 Laravel 缓存：&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo docker compose -f docker-compose.internet.yml exec app php artisan config:clear&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo docker compose -f docker-compose.internet.yml exec app php artisan cache:clear&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sudo docker compose -f docker-compose.internet.yml exec app php artisan optimize&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;验证与测试&#34;&gt;&lt;a href=&#34;#验证与测试&#34; class=&#34;headerlink&#34; title=&#34;验证与测试&#34;&gt;&lt;/a&gt;验证与测试&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;浏览器测试&lt;/strong&gt;：清空缓存，访问 &lt;code&gt;https://lynx.wkarrow.top&lt;/code&gt;，打开 F12 &amp;gt; Network，检查资源 URL（如 &lt;code&gt;app.js&lt;/code&gt;）是否无 &lt;code&gt;:80&lt;/code&gt;，并确认 200 OK。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命令行验证&lt;/strong&gt;：&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -I https://lynx.wkarrow.top/js/filament/filament/app.js&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+预期返回 200，无重定向或 404。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日志检查&lt;/strong&gt;：若仍有问题，查看容器日志：&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sudo docker compose -f docker-compose.internet.yml logs nginx app | grep -i &amp;quot;forwarded\|port&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;修复后，Filament 面板加载顺畅，前端交互完美！&lt;/p&gt;
+&lt;h2 id=&#34;总结与建议&#34;&gt;&lt;a href=&#34;#总结与建议&#34; class=&#34;headerlink&#34; title=&#34;总结与建议&#34;&gt;&lt;/a&gt;总结与建议&lt;/h2&gt;&lt;p&gt;这个坑让我意识到，在容器化部署中，代理头部的处理至关重要。优先尝试 NPM 的 Advanced 配置，如果无效，后端 Nginx 的 &lt;code&gt;if&lt;/code&gt; 逻辑是稳妥备选。未来更新项目时，记得 git pull 后检查此配置是否覆盖。&lt;/p&gt;
+&lt;p&gt;如果您也遇到类似问题，欢迎评论区交流！项目源码在 &lt;a href=&#34;https://github.com/NightingaleWK/lynx&#34;&gt;GitHub&lt;/a&gt; 开源中，星标支持下～&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Laravel 12 文档：HTTP Requests&lt;/li&gt;
+&lt;li&gt;Nginx Proxy Manager 官方指南：Advanced Tab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文基于实际部署经验撰写，如有疑问，欢迎讨论。&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
