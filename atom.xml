@@ -3,54 +3,54 @@
     <id>https://nightingalewk.cn</id>
     <title>雪漫城的风宅</title>
     <link href="https://nightingalewk.cn" />
-    <updated>2025-10-13T02:00:00.000Z</updated>
+    <updated>2025-12-09T06:00:00.000Z</updated>
     <category term="迁移" />
     <category term="hexo" />
-    <category term="电脑维修" />
-    <category term="主食" />
     <category term="pr" />
     <category term="bilibili" />
+    <category term="电脑维修" />
     <category term="学习笔记" />
+    <category term="主食" />
     <category term="热菜" />
-    <category term="汤" />
     <category term="甜品" />
+    <category term="汤" />
     <category term="梦境" />
     <category term="海鲜" />
     <category term="homestead" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码更新" />
-    <category term="dcat admin" />
+    <category term="代码部署" />
     <category term="oh-my-zsh" />
+    <category term="dcat admin" />
     <category term="debug" />
-    <category term="道歉信" />
     <category term="指令" />
+    <category term="道歉信" />
     <category term="免密" />
+    <category term="laravel sail" />
     <category term="vs code" />
     <category term="fileinfo" />
     <category term="PAC 清单" />
-    <category term="定时任务" />
-    <category term="laravel sail" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="net time" />
+    <category term="定时任务" />
     <category term="swap" />
     <category term="端口查询" />
+    <category term="net time" />
     <category term="表单验证" />
-    <category term="blade" />
     <category term="事件" />
+    <category term="blade" />
     <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
-    <category term="Cloudreve" />
     <category term="artisan 指令" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
     <category term="Font Awesome" />
     <category term="vite" />
-    <category term="故障排除" />
     <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
@@ -68,16 +68,16 @@
     <category term="Git" />
     <category term="GitHub" />
     <category term="版本控制" />
-    <category term="Monorepo" />
     <category term="DevOps" />
+    <category term="Monorepo" />
+    <category term="国产化" />
+    <category term="信创" />
+    <category term="TongHttpServer" />
     <category term="Laravel" />
     <category term="Docker" />
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
-    <category term="国产化" />
-    <category term="信创" />
-    <category term="TongHttpServer" />
     <category term="Ubuntu" />
     <category term="安装指南" />
     <category term="阿里云" />
@@ -87,6 +87,22 @@
     <category term="NPM" />
     <category term="HTTPS" />
     <category term="问题排查" />
+    <category term="Rule" />
+    <category term="Prompt" />
+    <category term="gemini" />
+    <entry>
+        <id>https://nightingalewk.cn/2025/12/09/81.%20Gemini%20Rules/</id>
+        <title>Gemini Rules</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2025/12/09/81.%20Gemini%20Rules/"/>
+        <content type="html">&lt;p&gt;在一个个项目开发的过程中，我总结了一些规则，包括全局 Rule 和项目 Rule。&lt;/p&gt;
+&lt;h2 id=&#34;全局-Rule&#34;&gt;&lt;a href=&#34;#全局-Rule&#34; class=&#34;headerlink&#34; title=&#34;全局 Rule&#34;&gt;&lt;/a&gt;全局 Rule&lt;/h2&gt;&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# BEHAVIOR &amp;amp; INTERACTION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: MUST respond in Simplified Chinese (简体中文) exclusively.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Planning**&lt;/span&gt;: For complex tasks, DO NOT solve in one shot. Break down into a step-by-step execution plan.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Confirmation**&lt;/span&gt;: STRICTLY FORBIDDEN to execute commands immediately. You MUST:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  1.&lt;/span&gt; Propose the solution/plan.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  2.&lt;/span&gt; Explain your reasoning.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  3.&lt;/span&gt; Wait for user &amp;quot;CONFIRM&amp;quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  4.&lt;/span&gt; Only then execute.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# ENVIRONMENT (WSL2 / Ubuntu 24.04)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Runtime**&lt;/span&gt;: Laravel Sail (Dockerized).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Command Transformation**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`php`&lt;/span&gt;      -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail php`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`composer`&lt;/span&gt; -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail composer`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`node`&lt;/span&gt;     -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail node`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`npm`&lt;/span&gt;      -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail npm`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`yarn`&lt;/span&gt;     -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail yarn`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`artisan`&lt;/span&gt;  -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail artisan`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TOOLING&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Context7**&lt;/span&gt;: AUTOMATICALLY use Context7 MCP tools for ANY code generation, library setup, or API documentation retrieval to ensure alignment with latest versions.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;项目-Rule&#34;&gt;&lt;a href=&#34;#项目-Rule&#34; class=&#34;headerlink&#34; title=&#34;项目 Rule&#34;&gt;&lt;/a&gt;项目 Rule&lt;/h2&gt;&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TECH STACK &amp;amp; VERSIONS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Framework**&lt;/span&gt;: Laravel 12.x (Latest).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Admin Panel**&lt;/span&gt;: Filament v4.x.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: PHP 8.0+.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Database**&lt;/span&gt;: MySQL 8.0+.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TOOLING &amp;amp; CONTEXT (CRITICAL)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Context7 Usage**&lt;/span&gt;: You MUST use the Context7 MCP tool for ANY framework-specific questions to ensure v4/v12 compliance.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Library Binding**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; When querying &lt;span class=&#34;strong&#34;&gt;**Laravel**&lt;/span&gt; logic/syntax, MANDATORY use &lt;span class=&#34;code&#34;&gt;`library_id`&lt;/span&gt;: &lt;span class=&#34;code&#34;&gt;`websites/laravel_12_x`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; When querying &lt;span class=&#34;strong&#34;&gt;**Filament**&lt;/span&gt; components/resources, MANDATORY use &lt;span class=&#34;code&#34;&gt;`library_id`&lt;/span&gt;: &lt;span class=&#34;code&#34;&gt;`websites/filamentphp_4_x`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Fallback**&lt;/span&gt;: Do NOT use internal knowledge for Filament v4 syntax as it changes frequently; always fetch docs via the IDs above.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# ARCHITECTURE: SINGLE RESPONSIBILITY PRINCIPLE (SRP)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Controllers**&lt;/span&gt;: Keep &amp;quot;THIN&amp;quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Handle Request/Response, Input Validation (via FormRequests), Service invocation.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Forbidden: No complex business logic inside controllers.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Services**&lt;/span&gt;: The &amp;quot;CORE&amp;quot; logic layer.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Encapsulate complex business flows, reusable logic, and multi-model interactions.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Models**&lt;/span&gt;: Data layer ONLY.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Relations, Casts (&lt;span class=&#34;code&#34;&gt;`$casts`&lt;/span&gt;), Accessors/Mutators, Scopes.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Forbidden: No business flow logic (prevents &amp;quot;Fat Models&amp;quot;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Observers**&lt;/span&gt;: &amp;quot;Triggers&amp;quot; only.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Listen to events (&lt;span class=&#34;code&#34;&gt;`created`&lt;/span&gt;, &lt;span class=&#34;code&#34;&gt;`updated`&lt;/span&gt;). Trigger Services or Jobs.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Form Requests**&lt;/span&gt;: MANDATORY for validation.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Handle validation rules for all non-trivial &lt;span class=&#34;code&#34;&gt;`POST/PUT/PATCH`&lt;/span&gt; requests.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# NAMING CONVENTIONS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Models**&lt;/span&gt;: Singular CamelCase (e.g., &lt;span class=&#34;code&#34;&gt;`User`&lt;/span&gt;, &lt;span class=&#34;code&#34;&gt;`WorkOrder`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Controllers**&lt;/span&gt;: Suffix &lt;span class=&#34;code&#34;&gt;`Controller`&lt;/span&gt; (e.g., &lt;span class=&#34;code&#34;&gt;`WorkOrderController`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Filament**&lt;/span&gt;: Suffix &lt;span class=&#34;code&#34;&gt;`Resource`&lt;/span&gt; (e.g., &lt;span class=&#34;code&#34;&gt;`WorkOrderResource`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Tables**&lt;/span&gt;: Plural snake&lt;span class=&#34;emphasis&#34;&gt;_case (e.g., `work_&lt;/span&gt;orders`).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Routes**&lt;/span&gt;: Dot notation, lowercase (e.g., &lt;span class=&#34;code&#34;&gt;`work_orders.index`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# DOCUMENTATION &amp;amp; COMMENTS (STRICT)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: ALL comments (PHPDoc, inline, DB comments) MUST be in Simplified Chinese (简体中文).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**PHPDoc**&lt;/span&gt;: Required for all Classes and public methods.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# DATABASE WORKFLOW&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Migration Policy (Dev)**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Do NOT create new migrations for small changes during dev. Modify existing files and run &lt;span class=&#34;code&#34;&gt;`migrate:fresh`&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**MANDATORY**&lt;/span&gt;: Every column/table MUST have &lt;span class=&#34;code&#34;&gt;`-&amp;gt;comment(&amp;#x27;中文说明&amp;#x27;)`&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="Rule" />
+        <category term="Prompt" />
+        <category term="gemini" />
+        <updated>2025-12-09T06:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
         <title>Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案</title>
@@ -452,8 +468,8 @@
 &lt;p&gt;至此，您已成功将两个独立仓库完整地合并为一个，并完成了所有后续整理工作。&lt;/p&gt;
 </content>
         <category term="Git" />
-        <category term="Monorepo" />
         <category term="DevOps" />
+        <category term="Monorepo" />
         <updated>2025-06-26T02:00:00.000Z</updated>
     </entry>
     <entry>
@@ -1448,25 +1464,5 @@ n. [Final action]
 </content>
         <category term="linux" />
         <updated>2024-10-10T01:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/</id>
-        <title>laravel 10 在 vite 工作流中引入并使用 Font Awesome 6</title>
-        <link rel="alternate" href="https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/"/>
-        <content type="html">&lt;p&gt;引入 Font Awesome 组件到 Laravel 项目的 Vite 构建中涉及一些步骤。以下是一般的指南：&lt;/p&gt;
-&lt;h2 id=&#34;1-安装-Font-Awesome：&#34;&gt;&lt;a href=&#34;#1-安装-Font-Awesome：&#34; class=&#34;headerlink&#34; title=&#34;1. 安装 Font Awesome：&#34;&gt;&lt;/a&gt;1. 安装 Font Awesome：&lt;/h2&gt;&lt;p&gt;通过 npm 或 yarn 安装 Font Awesome。在项目根目录下运行：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm install @fortawesome/fontawesome-free&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;或者使用 yarn：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yarn add @fortawesome/fontawesome-free&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;2-引入-Font-Awesome-样式：&#34;&gt;&lt;a href=&#34;#2-引入-Font-Awesome-样式：&#34; class=&#34;headerlink&#34; title=&#34;2. 引入 Font Awesome 样式：&#34;&gt;&lt;/a&gt;2. 引入 Font Awesome 样式：&lt;/h2&gt;&lt;p&gt;在 Vite 项目中，你可以在入口文件（通常是 main.js 或 main.ts,laravel 默认是 app.js ）中引入 Font Awesome 样式。&lt;/p&gt;
-&lt;figure class=&#34;highlight javascript&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// src/main.js or src/main.ts or resources/js/app.js&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;@fortawesome/fontawesome-free/css/all.css&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 其他的入口文件内容...&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;这将引入 Font Awesome 的所有样式。如果你只需要使用特定图标的样式，你可以根据需要引入 solid、regular 或 brands 中的子集。&lt;/p&gt;
-&lt;h2 id=&#34;4-npm-构建&#34;&gt;&lt;a href=&#34;#4-npm-构建&#34; class=&#34;headerlink&#34; title=&#34;4. npm 构建&#34;&gt;&lt;/a&gt;4. npm 构建&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;npm run dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;## laravel sail 环境需要添加 sail 前缀&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run dev&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;3-开始使用&#34;&gt;&lt;a href=&#34;#3-开始使用&#34; class=&#34;headerlink&#34; title=&#34;3. 开始使用&#34;&gt;&lt;/a&gt;3. 开始使用&lt;/h2&gt;&lt;p&gt;然后你就可以使用 Font Awesome 图标了。&lt;/p&gt;
-</content>
-        <category term="Font Awesome" />
-        <category term="vite" />
-        <updated>2023-11-21T10:00:00.000Z</updated>
     </entry>
 </feed>

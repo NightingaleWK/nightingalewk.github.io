@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;ai&#34; category</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 09 Dec 2025 14:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 09 Dec 2025 14:00:00 +0800</lastBuildDate>
+        <category>迁移</category>
+        <category>hexo</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>电脑维修</category>
+        <category>学习笔记</category>
+        <category>主食</category>
+        <category>热菜</category>
+        <category>甜品</category>
+        <category>汤</category>
+        <category>梦境</category>
+        <category>海鲜</category>
+        <category>homestead</category>
+        <category>代码更新</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>代码部署</category>
+        <category>oh-my-zsh</category>
+        <category>dcat admin</category>
+        <category>debug</category>
+        <category>指令</category>
+        <category>道歉信</category>
+        <category>免密</category>
+        <category>laravel sail</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>PAC 清单</category>
+        <category>gpg</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>定时任务</category>
+        <category>swap</category>
+        <category>端口查询</category>
+        <category>net time</category>
+        <category>表单验证</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>wordpress</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>特色小吃</category>
+        <category>粥</category>
+        <category>artisan 指令</category>
+        <category>Cloudreve</category>
+        <category>故障排除</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>linux</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>screen</category>
+        <category>cursor</category>
+        <category>人工智能</category>
+        <category>prompt</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Laravel</category>
+        <category>Docker</category>
+        <category>容器化</category>
+        <category>部署</category>
+        <category>运维</category>
+        <category>Ubuntu</category>
+        <category>安装指南</category>
+        <category>阿里云</category>
+        <category>镜像源</category>
+        <category>Nginx</category>
+        <category>反向代理</category>
+        <category>NPM</category>
+        <category>HTTPS</category>
+        <category>问题排查</category>
+        <category>Rule</category>
+        <category>Prompt</category>
+        <category>gemini</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2025/12/09/81.%20Gemini%20Rules/</guid>
+            <title>Gemini Rules</title>
+            <link>https://nightingalewk.cn/2025/12/09/81.%20Gemini%20Rules/</link>
+            <category>Rule</category>
+            <category>Prompt</category>
+            <category>gemini</category>
+            <pubDate>Tue, 09 Dec 2025 14:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;在一个个项目开发的过程中，我总结了一些规则，包括全局 Rule 和项目 Rule。&lt;/p&gt;
+&lt;h2 id=&#34;全局-Rule&#34;&gt;&lt;a href=&#34;#全局-Rule&#34; class=&#34;headerlink&#34; title=&#34;全局 Rule&#34;&gt;&lt;/a&gt;全局 Rule&lt;/h2&gt;&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# BEHAVIOR &amp;amp; INTERACTION&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: MUST respond in Simplified Chinese (简体中文) exclusively.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Planning**&lt;/span&gt;: For complex tasks, DO NOT solve in one shot. Break down into a step-by-step execution plan.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Confirmation**&lt;/span&gt;: STRICTLY FORBIDDEN to execute commands immediately. You MUST:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  1.&lt;/span&gt; Propose the solution/plan.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  2.&lt;/span&gt; Explain your reasoning.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  3.&lt;/span&gt; Wait for user &amp;quot;CONFIRM&amp;quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  4.&lt;/span&gt; Only then execute.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# ENVIRONMENT (WSL2 / Ubuntu 24.04)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Runtime**&lt;/span&gt;: Laravel Sail (Dockerized).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Command Transformation**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`php`&lt;/span&gt;      -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail php`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`composer`&lt;/span&gt; -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail composer`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`node`&lt;/span&gt;     -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail node`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`npm`&lt;/span&gt;      -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail npm`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`yarn`&lt;/span&gt;     -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail yarn`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;code&#34;&gt;`artisan`&lt;/span&gt;  -&amp;gt; &lt;span class=&#34;code&#34;&gt;`sail artisan`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TOOLING&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Context7**&lt;/span&gt;: AUTOMATICALLY use Context7 MCP tools for ANY code generation, library setup, or API documentation retrieval to ensure alignment with latest versions.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h2 id=&#34;项目-Rule&#34;&gt;&lt;a href=&#34;#项目-Rule&#34; class=&#34;headerlink&#34; title=&#34;项目 Rule&#34;&gt;&lt;/a&gt;项目 Rule&lt;/h2&gt;&lt;figure class=&#34;highlight markdown&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;41&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;42&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TECH STACK &amp;amp; VERSIONS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Framework**&lt;/span&gt;: Laravel 12.x (Latest).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Admin Panel**&lt;/span&gt;: Filament v4.x.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: PHP 8.0+.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Database**&lt;/span&gt;: MySQL 8.0+.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# TOOLING &amp;amp; CONTEXT (CRITICAL)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Context7 Usage**&lt;/span&gt;: You MUST use the Context7 MCP tool for ANY framework-specific questions to ensure v4/v12 compliance.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Library Binding**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; When querying &lt;span class=&#34;strong&#34;&gt;**Laravel**&lt;/span&gt; logic/syntax, MANDATORY use &lt;span class=&#34;code&#34;&gt;`library_id`&lt;/span&gt;: &lt;span class=&#34;code&#34;&gt;`websites/laravel_12_x`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; When querying &lt;span class=&#34;strong&#34;&gt;**Filament**&lt;/span&gt; components/resources, MANDATORY use &lt;span class=&#34;code&#34;&gt;`library_id`&lt;/span&gt;: &lt;span class=&#34;code&#34;&gt;`websites/filamentphp_4_x`&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Fallback**&lt;/span&gt;: Do NOT use internal knowledge for Filament v4 syntax as it changes frequently; always fetch docs via the IDs above.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# ARCHITECTURE: SINGLE RESPONSIBILITY PRINCIPLE (SRP)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Controllers**&lt;/span&gt;: Keep &amp;quot;THIN&amp;quot;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Handle Request/Response, Input Validation (via FormRequests), Service invocation.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Forbidden: No complex business logic inside controllers.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Services**&lt;/span&gt;: The &amp;quot;CORE&amp;quot; logic layer.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Encapsulate complex business flows, reusable logic, and multi-model interactions.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Models**&lt;/span&gt;: Data layer ONLY.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Relations, Casts (&lt;span class=&#34;code&#34;&gt;`$casts`&lt;/span&gt;), Accessors/Mutators, Scopes.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Forbidden: No business flow logic (prevents &amp;quot;Fat Models&amp;quot;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Observers**&lt;/span&gt;: &amp;quot;Triggers&amp;quot; only.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Listen to events (&lt;span class=&#34;code&#34;&gt;`created`&lt;/span&gt;, &lt;span class=&#34;code&#34;&gt;`updated`&lt;/span&gt;). Trigger Services or Jobs.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Form Requests**&lt;/span&gt;: MANDATORY for validation.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Role: Handle validation rules for all non-trivial &lt;span class=&#34;code&#34;&gt;`POST/PUT/PATCH`&lt;/span&gt; requests.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# NAMING CONVENTIONS&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Models**&lt;/span&gt;: Singular CamelCase (e.g., &lt;span class=&#34;code&#34;&gt;`User`&lt;/span&gt;, &lt;span class=&#34;code&#34;&gt;`WorkOrder`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Controllers**&lt;/span&gt;: Suffix &lt;span class=&#34;code&#34;&gt;`Controller`&lt;/span&gt; (e.g., &lt;span class=&#34;code&#34;&gt;`WorkOrderController`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Filament**&lt;/span&gt;: Suffix &lt;span class=&#34;code&#34;&gt;`Resource`&lt;/span&gt; (e.g., &lt;span class=&#34;code&#34;&gt;`WorkOrderResource`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Tables**&lt;/span&gt;: Plural snake&lt;span class=&#34;emphasis&#34;&gt;_case (e.g., `work_&lt;/span&gt;orders`).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Routes**&lt;/span&gt;: Dot notation, lowercase (e.g., &lt;span class=&#34;code&#34;&gt;`work_orders.index`&lt;/span&gt;).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# DOCUMENTATION &amp;amp; COMMENTS (STRICT)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Language**&lt;/span&gt;: ALL comments (PHPDoc, inline, DB comments) MUST be in Simplified Chinese (简体中文).&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**PHPDoc**&lt;/span&gt;: Required for all Classes and public methods.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;# DATABASE WORKFLOW&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**Migration Policy (Dev)**&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; Do NOT create new migrations for small changes during dev. Modify existing files and run &lt;span class=&#34;code&#34;&gt;`migrate:fresh`&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;bullet&#34;&gt;  -&lt;/span&gt; &lt;span class=&#34;strong&#34;&gt;**MANDATORY**&lt;/span&gt;: Every column/table MUST have &lt;span class=&#34;code&#34;&gt;`-&amp;gt;comment(&amp;#x27;中文说明&amp;#x27;)`&lt;/span&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

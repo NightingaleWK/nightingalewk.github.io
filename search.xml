@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Gemini Rules</title>
+      <link href="/2025/12/09/81.%20Gemini%20Rules/"/>
+      <url>/2025/12/09/81.%20Gemini%20Rules/</url>
+      
+        <content type="html"><![CDATA[<p>在一个个项目开发的过程中，我总结了一些规则，包括全局 Rule 和项目 Rule。</p><h2 id="全局-Rule"><a href="#全局-Rule" class="headerlink" title="全局 Rule"></a>全局 Rule</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># BEHAVIOR &amp; INTERACTION</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Language**</span>: MUST respond in Simplified Chinese (简体中文) exclusively.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Planning**</span>: For complex tasks, DO NOT solve in one shot. Break down into a step-by-step execution plan.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Confirmation**</span>: STRICTLY FORBIDDEN to execute commands immediately. You MUST:</span><br><span class="line"><span class="bullet">  1.</span> Propose the solution/plan.</span><br><span class="line"><span class="bullet">  2.</span> Explain your reasoning.</span><br><span class="line"><span class="bullet">  3.</span> Wait for user &quot;CONFIRM&quot;.</span><br><span class="line"><span class="bullet">  4.</span> Only then execute.</span><br><span class="line"></span><br><span class="line"><span class="section"># ENVIRONMENT (WSL2 / Ubuntu 24.04)</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Runtime**</span>: Laravel Sail (Dockerized).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Command Transformation**</span>:</span><br><span class="line"><span class="bullet">  -</span> <span class="code">`php`</span>      -&gt; <span class="code">`sail php`</span></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`composer`</span> -&gt; <span class="code">`sail composer`</span></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`node`</span>     -&gt; <span class="code">`sail node`</span></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`npm`</span>      -&gt; <span class="code">`sail npm`</span></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`yarn`</span>     -&gt; <span class="code">`sail yarn`</span></span><br><span class="line"><span class="bullet">  -</span> <span class="code">`artisan`</span>  -&gt; <span class="code">`sail artisan`</span></span><br><span class="line"></span><br><span class="line"><span class="section"># TOOLING</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Context7**</span>: AUTOMATICALLY use Context7 MCP tools for ANY code generation, library setup, or API documentation retrieval to ensure alignment with latest versions.</span><br></pre></td></tr></table></figure><h2 id="项目-Rule"><a href="#项目-Rule" class="headerlink" title="项目 Rule"></a>项目 Rule</h2><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># TECH STACK &amp; VERSIONS</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Framework**</span>: Laravel 12.x (Latest).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Admin Panel**</span>: Filament v4.x.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Language**</span>: PHP 8.0+.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Database**</span>: MySQL 8.0+.</span><br><span class="line"></span><br><span class="line"><span class="section"># TOOLING &amp; CONTEXT (CRITICAL)</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Context7 Usage**</span>: You MUST use the Context7 MCP tool for ANY framework-specific questions to ensure v4/v12 compliance.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Library Binding**</span>:</span><br><span class="line"><span class="bullet">  -</span> When querying <span class="strong">**Laravel**</span> logic/syntax, MANDATORY use <span class="code">`library_id`</span>: <span class="code">`websites/laravel_12_x`</span></span><br><span class="line"><span class="bullet">  -</span> When querying <span class="strong">**Filament**</span> components/resources, MANDATORY use <span class="code">`library_id`</span>: <span class="code">`websites/filamentphp_4_x`</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Fallback**</span>: Do NOT use internal knowledge for Filament v4 syntax as it changes frequently; always fetch docs via the IDs above.</span><br><span class="line"></span><br><span class="line"><span class="section"># ARCHITECTURE: SINGLE RESPONSIBILITY PRINCIPLE (SRP)</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Controllers**</span>: Keep &quot;THIN&quot;.</span><br><span class="line"><span class="bullet">  -</span> Role: Handle Request/Response, Input Validation (via FormRequests), Service invocation.</span><br><span class="line"><span class="bullet">  -</span> Forbidden: No complex business logic inside controllers.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Services**</span>: The &quot;CORE&quot; logic layer.</span><br><span class="line"><span class="bullet">  -</span> Role: Encapsulate complex business flows, reusable logic, and multi-model interactions.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Models**</span>: Data layer ONLY.</span><br><span class="line"><span class="bullet">  -</span> Role: Relations, Casts (<span class="code">`$casts`</span>), Accessors/Mutators, Scopes.</span><br><span class="line"><span class="bullet">  -</span> Forbidden: No business flow logic (prevents &quot;Fat Models&quot;).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Observers**</span>: &quot;Triggers&quot; only.</span><br><span class="line"><span class="bullet">  -</span> Role: Listen to events (<span class="code">`created`</span>, <span class="code">`updated`</span>). Trigger Services or Jobs.</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Form Requests**</span>: MANDATORY for validation.</span><br><span class="line"><span class="bullet">  -</span> Role: Handle validation rules for all non-trivial <span class="code">`POST/PUT/PATCH`</span> requests.</span><br><span class="line"></span><br><span class="line"><span class="section"># NAMING CONVENTIONS</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Models**</span>: Singular CamelCase (e.g., <span class="code">`User`</span>, <span class="code">`WorkOrder`</span>).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Controllers**</span>: Suffix <span class="code">`Controller`</span> (e.g., <span class="code">`WorkOrderController`</span>).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Filament**</span>: Suffix <span class="code">`Resource`</span> (e.g., <span class="code">`WorkOrderResource`</span>).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Tables**</span>: Plural snake<span class="emphasis">_case (e.g., `work_</span>orders`).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Routes**</span>: Dot notation, lowercase (e.g., <span class="code">`work_orders.index`</span>).</span><br><span class="line"></span><br><span class="line"><span class="section"># DOCUMENTATION &amp; COMMENTS (STRICT)</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Language**</span>: ALL comments (PHPDoc, inline, DB comments) MUST be in Simplified Chinese (简体中文).</span><br><span class="line"><span class="bullet">-</span> <span class="strong">**PHPDoc**</span>: Required for all Classes and public methods.</span><br><span class="line"></span><br><span class="line"><span class="section"># DATABASE WORKFLOW</span></span><br><span class="line"><span class="bullet">-</span> <span class="strong">**Migration Policy (Dev)**</span>:</span><br><span class="line"><span class="bullet">  -</span> Do NOT create new migrations for small changes during dev. Modify existing files and run <span class="code">`migrate:fresh`</span>.</span><br><span class="line"><span class="bullet">  -</span> <span class="strong">**MANDATORY**</span>: Every column/table MUST have <span class="code">`-&gt;comment(&#x27;中文说明&#x27;)`</span>.</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Rule </tag>
+            
+            <tag> Prompt </tag>
+            
+            <tag> gemini </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案</title>
       <link href="/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
       <url>/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</url>
@@ -181,9 +210,9 @@
             
             <tag> Git </tag>
             
-            <tag> Monorepo </tag>
-            
             <tag> DevOps </tag>
+            
+            <tag> Monorepo </tag>
             
         </tags>
       
@@ -1555,6 +1584,25 @@
     
     
     <entry>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>laravel 项目 Homestead 开发环境的搭建</title>
       <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
       <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
@@ -1580,19 +1628,29 @@
     
     
     <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
       
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
           
-          <category> 开发 </category>
+          <category> laravel </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> 代码更新 </tag>
+            
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
+        </tags>
       
     </entry>
     
@@ -1615,40 +1673,11 @@
       
         <tags>
             
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
             <tag> 代码部署 </tag>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
-      
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-            <tag> 代码更新 </tag>
             
         </tags>
       
