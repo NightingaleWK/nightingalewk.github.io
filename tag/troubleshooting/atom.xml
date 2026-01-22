@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;troubleshooting&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2026-01-26T02:00:00.000Z</updated>
+    <category term="迁移" />
+    <category term="hexo" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="学习笔记" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="热菜" />
+    <category term="汤" />
+    <category term="甜品" />
+    <category term="梦境" />
+    <category term="海鲜" />
+    <category term="homestead" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="代码更新" />
+    <category term="dcat admin" />
+    <category term="oh-my-zsh" />
+    <category term="debug" />
+    <category term="指令" />
+    <category term="道歉信" />
+    <category term="免密" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="gpg" />
+    <category term="laravel sail" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="swap" />
+    <category term="端口查询" />
+    <category term="表单验证" />
+    <category term="blade" />
+    <category term="wordpress" />
+    <category term="事件" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="特色小吃" />
+    <category term="粥" />
+    <category term="Cloudreve" />
+    <category term="artisan 指令" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="linux" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="screen" />
+    <category term="打印机" />
+    <category term="京瓷" />
+    <category term="教程" />
+    <category term="cursor" />
+    <category term="人工智能" />
+    <category term="prompt" />
+    <category term="Git" />
+    <category term="GitHub" />
+    <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
+    <category term="Laravel" />
+    <category term="Docker" />
+    <category term="容器化" />
+    <category term="部署" />
+    <category term="运维" />
+    <category term="Ubuntu" />
+    <category term="安装指南" />
+    <category term="阿里云" />
+    <category term="镜像源" />
+    <category term="国产化" />
+    <category term="信创" />
+    <category term="TongHttpServer" />
+    <category term="Rule" />
+    <category term="Prompt" />
+    <category term="gemini" />
+    <category term="Sail" />
+    <category term="Nginx" />
+    <category term="反向代理" />
+    <category term="NPM" />
+    <category term="HTTPS" />
+    <category term="问题排查" />
+    <category term="WSL2" />
+    <category term="Troubleshooting" />
+    <category term="Hardware" />
+    <category term="Tooling" />
+    <category term="Artisan" />
+    <category term="Composer" />
+    <entry>
+        <id>https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/</id>
+        <title>Laravel Sail 开发环境部署一把过（疑难杂症篇）</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"/>
+        <content type="html">&lt;h1 id=&#34;写在最后&#34;&gt;&lt;a href=&#34;#写在最后&#34; class=&#34;headerlink&#34; title=&#34;写在最后&#34;&gt;&lt;/a&gt;写在最后&lt;/h1&gt;&lt;p&gt;作为《Laravel Sail 开发环境部署一把过》系列的收官之作，本文旨在汇总大家在使用过程中最容易遇到的“坑”。&lt;br&gt;如果你遇到了报错，请先按 &lt;code&gt;Ctrl + F&lt;/code&gt; 在本文搜索关键词，说不定就能立刻解决。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;0-网络问题-The-Great-Firewall&#34;&gt;&lt;a href=&#34;#0-网络问题-The-Great-Firewall&#34; class=&#34;headerlink&#34; title=&#34;0. 网络问题 (The Great Firewall)&#34;&gt;&lt;/a&gt;0. 网络问题 (The Great Firewall)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;这是中国大陆用户面临的最大 BOSS。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;curl -s https://laravel.build/example-app | bash&lt;/code&gt; 卡住不动或报错 &lt;code&gt;Connection refused&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail up&lt;/code&gt; 拉取镜像时速度为 0 或直接超时。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;composer install&lt;/code&gt; 慢如蜗牛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;残酷的现实&lt;/strong&gt;：&lt;br&gt;Docker 的镜像源服务器大部分在国外。虽然国内有镜像加速，但这两年（你懂的）越来越不稳定。&lt;br&gt;&lt;strong&gt;假如你无法解决“科学上网”的问题，那么使用 Laravel Sail 这条路将极其痛苦，我建议你趁早放弃，去选择 PhpStudy 或其他国产集成环境。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;唯一的终极解法&lt;/strong&gt;：&lt;br&gt;别去整什么 Docker 换源、HTTP 代理环境变量，&lt;strong&gt;都不好使&lt;/strong&gt;。&lt;br&gt;我的推荐思路只有一条：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：本机安装 &lt;strong&gt;v2rayN&lt;/strong&gt; (或其他同类软件)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模式&lt;/strong&gt;：开启 &lt;strong&gt;TUN模式&lt;/strong&gt; (Tun Mode)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务商&lt;/strong&gt;：我个人推荐 &lt;a href=&#34;https://justmysocks.net/members/aff.php?aff=3236&#34;&gt;&lt;strong&gt;Just My Socks&lt;/strong&gt;&lt;/a&gt; （搬瓦工官方出品，稳）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;开启 TUN 模式后，你的所有网络流量（包括 WSL2 和 Docker 拉取镜像的流量）都会自动走代理，从此告别一切网络玄学。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-端口冲突-Port-is-already-allocated&#34;&gt;&lt;a href=&#34;#1-端口冲突-Port-is-already-allocated&#34; class=&#34;headerlink&#34; title=&#34;1. 端口冲突 (Port is already allocated)&#34;&gt;&lt;/a&gt;1. 端口冲突 (Port is already allocated)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行 &lt;code&gt;sail up&lt;/code&gt; 时，报错：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;Sail 默认使用 &lt;strong&gt;80&lt;/strong&gt; 端口（Web）和 &lt;strong&gt;3306&lt;/strong&gt; 端口（MySQL）。如果这台电脑上已经装了 IIS、Apache、Nginx 或者本地已经装了 MySQL，端口就会打架。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;只需要在项目根目录的 &lt;code&gt;.env&lt;/code&gt; 文件中修改端口配置即可（如果没有这些行，手动加上）：&lt;/p&gt;
+&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Web 端口改为 8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;APP_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 MySQL 端口改为 33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_DB_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Redis 端口改为 63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_REDIS_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改完后，重启 Sail：&lt;code&gt;sail up -d&lt;/code&gt;。&lt;br&gt;以后访问网站就变成：&lt;code&gt;http://localhost:8000&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-网站运行极其缓慢-Slow-Performance&#34;&gt;&lt;a href=&#34;#2-网站运行极其缓慢-Slow-Performance&#34; class=&#34;headerlink&#34; title=&#34;2. 网站运行极其缓慢 (Slow Performance)&#34;&gt;&lt;/a&gt;2. 网站运行极其缓慢 (Slow Performance)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;打开一个页面需要 2-3 秒，甚至更久。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;这是新手最容易犯的错误！&lt;/strong&gt;&lt;br&gt;你把项目代码放在了 Windows 的磁盘里（比如 &lt;code&gt;/mnt/c/Users/...&lt;/code&gt;），然后让 WSL 去读取。由于跨文件系统的 I&amp;#x2F;O 性能极差，会导致速度慢到无法接受。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;一定要把代码放在 WSL 自己的文件系统里！&lt;/strong&gt;&lt;br&gt;也就是上面的教程中反复强调的 &lt;code&gt;~/code&lt;/code&gt; (即 &lt;code&gt;/home/your-username/code&lt;/code&gt;) 目录下。&lt;br&gt;千万不要在 Windows 的文件资源管理器里直接把项目拖到 C 盘或 D 盘。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-权限问题-Permission-Denied&#34;&gt;&lt;a href=&#34;#3-权限问题-Permission-Denied&#34; class=&#34;headerlink&#34; title=&#34;3. 权限问题 (Permission Denied)&#34;&gt;&lt;/a&gt;3. 权限问题 (Permission Denied)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行某些命令或生成日志时，提示 &lt;code&gt;Permission denied&lt;/code&gt; 或 &lt;code&gt;Unable to write to directory&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;通常是因为你不小心用了 &lt;code&gt;sudo&lt;/code&gt; 或者以 &lt;code&gt;root&lt;/code&gt; 身份运行了该目录下的命令（比如 &lt;code&gt;sudo npm install&lt;/code&gt; 或 &lt;code&gt;sudo composer ...&lt;/code&gt;），导致生成的文件夹归属权变成了 &lt;code&gt;root&lt;/code&gt;，而 Sail 容器内的默认用户 &lt;code&gt;sail&lt;/code&gt; 无法写入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;预防与解决&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;核心建议&lt;/strong&gt;：&lt;strong&gt;在开发过程中，非必要不要去手动修改文件权限或使用 sudo&lt;/strong&gt;。请始终保持在 &lt;code&gt;sail&lt;/code&gt; 角色下（即直接运行 &lt;code&gt;sail xxx&lt;/code&gt;）执行各类默认操作。实在需要 &lt;code&gt;root&lt;/code&gt; 权限的时候（比如安装系统软件），务必想清楚你在干什么。&lt;/p&gt;
+&lt;p&gt;如果已经乱了，Sail 提供了一个快速修复所属权的命令。在项目根目录下运行：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chown&lt;/span&gt; -R sail:sail .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;或者，如果你想“暴力”一点（仅限开发环境）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; -R 777 storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;4-数据库连接不上-Navicat-TablePlus&#34;&gt;&lt;a href=&#34;#4-数据库连接不上-Navicat-TablePlus&#34; class=&#34;headerlink&#34; title=&#34;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&#34;&gt;&lt;/a&gt;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;想用电脑上的 Navicat 连接 Docker 里的 MySQL，却连不上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;: &lt;code&gt;localhost&lt;/code&gt; (或者 &lt;code&gt;127.0.0.1&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt;: 默认为 &lt;code&gt;3306&lt;/code&gt;。**但在 Docker 中，请检查 &lt;code&gt;.env&lt;/code&gt; 里的 &lt;code&gt;FORWARD_DB_PORT&lt;/code&gt;**。如果没改过，就是 3306。如果改成了 33060，这里也要填 33060。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Username&lt;/strong&gt;: &lt;code&gt;sail&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Password&lt;/strong&gt;: &lt;code&gt;password&lt;/code&gt; (默认是 password，除非你在 .env 里改了 &lt;code&gt;DB_PASSWORD&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不要填 Docker 容器的 IP，直接填 localhost 即可，因为 Docker Desktop 做了端口转发。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;5-sail-命令找不到-Command-not-found&#34;&gt;&lt;a href=&#34;#5-sail-命令找不到-Command-not-found&#34; class=&#34;headerlink&#34; title=&#34;5. sail 命令找不到 (Command not found)&#34;&gt;&lt;/a&gt;5. &lt;code&gt;sail&lt;/code&gt; 命令找不到 (Command not found)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;输入 &lt;code&gt;sail up&lt;/code&gt;，提示 &lt;code&gt;bash: sail: command not found&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;这通常是因为别名失效了，或者没有重新加载配置文件。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确保你按照《环境配置篇》在 &lt;code&gt;~/.bashrc&lt;/code&gt; 里加了 alias。&lt;/li&gt;
+&lt;li&gt;尝试运行 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 刷新配置。&lt;/li&gt;
+&lt;li&gt;如果还是不行，老老实实打全路径验证一下：&lt;code&gt;./vendor/bin/sail up&lt;/code&gt;。如果全路径能用，说明就是 alias 配置的问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h1&gt;&lt;p&gt;至此，&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt; 系列的技术教程部分就彻底完结了。&lt;/p&gt;
+&lt;p&gt;从概念介绍，到 WSL 环境搭建，再到 Git 多机协同，最后到日常命令与故障排查。希望能帮助 Windows 下的 PHPer 彻底摆脱环境配置的噩梦，把宝贵的时间花在写出优雅的代码上。&lt;/p&gt;
+&lt;p&gt;如果你对“跑得顺 Sail 到底需要什么样的电脑”感兴趣，欢迎阅读最后一篇番外：&lt;br&gt;&lt;strong&gt;《番外篇：工欲善其事——我的三套开发装备大公开》&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Happy Coding with Sail! ⛵&lt;/strong&gt;&lt;/p&gt;
+</content>
+        <category term="Laravel" />
+        <category term="Sail" />
+        <category term="Troubleshooting" />
+        <updated>2026-01-26T02:00:00.000Z</updated>
+    </entry>
+</feed>

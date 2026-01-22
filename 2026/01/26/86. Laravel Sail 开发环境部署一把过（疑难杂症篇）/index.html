@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/rss.xml%7D" />
+  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/atom.xml" />
+  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="Laravel Sail 开发环境部署一把过（疑难杂症篇）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel Sail 开发环境部署一把过（疑难杂症篇）">
+<meta property="og:url" content="https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="Laravel Sail 开发环境部署一把过（疑难杂症篇）">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-26T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-22T01:42:01.602Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="Laravel">
+<meta property="article:tag" content="Sail">
+<meta property="article:tag" content="Troubleshooting">
+<meta name="twitter:card" content="summary">
+    
+      
+        
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            Laravel Sail 开发环境部署一把过（疑难杂症篇）
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
+
+
+                                                            <!-- Umami Analytics -->
+
+
+                                                              <!-- styles -->
+                                                              
+<link rel="stylesheet" href="/css/style.css">
+
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（疑难杂症篇）&body=Check out this article: https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（疑难杂症篇）&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">1.</span> <span class="toc-text">写在最后</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98-The-Great-Firewall"><span class="toc-number">2.</span> <span class="toc-text">0. 网络问题 (The Great Firewall)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81-Port-is-already-allocated"><span class="toc-number">3.</span> <span class="toc-text">1. 端口冲突 (Port is already allocated)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%9E%81%E5%85%B6%E7%BC%93%E6%85%A2-Slow-Performance"><span class="toc-number">4.</span> <span class="toc-text">2. 网站运行极其缓慢 (Slow Performance)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98-Permission-Denied"><span class="toc-number">5.</span> <span class="toc-text">3. 权限问题 (Permission Denied)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Navicat-TablePlus"><span class="toc-number">6.</span> <span class="toc-text">4. 数据库连接不上 (Navicat &#x2F; TablePlus)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-sail-%E5%91%BD%E4%BB%A4%E6%89%BE%E4%B8%8D%E5%88%B0-Command-not-found"><span class="toc-number">7.</span> <span class="toc-text">5. sail 命令找不到 (Command not found)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">8.</span> <span class="toc-text">结语</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Laravel Sail 开发环境部署一把过（疑难杂症篇）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-01-26T02:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-26</time>
+        
+        (Updated: <time datetime="2026-01-22T01:42:01.602Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Laravel/">Laravel</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Laravel/" rel="tag">Laravel</a>, <a class="p-category" href="/tags/Sail/" rel="tag">Sail</a>, <a class="p-category" href="/tags/Troubleshooting/" rel="tag">Troubleshooting</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>作为《Laravel Sail 开发环境部署一把过》系列的收官之作，本文旨在汇总大家在使用过程中最容易遇到的“坑”。<br>如果你遇到了报错，请先按 <code>Ctrl + F</code> 在本文搜索关键词，说不定就能立刻解决。</p>
+<hr>
+<h1 id="0-网络问题-The-Great-Firewall"><a href="#0-网络问题-The-Great-Firewall" class="headerlink" title="0. 网络问题 (The Great Firewall)"></a>0. 网络问题 (The Great Firewall)</h1><p><strong>这是中国大陆用户面临的最大 BOSS。</strong></p>
+<p><strong>症状</strong>：</p>
+<ul>
+<li><code>curl -s https://laravel.build/example-app | bash</code> 卡住不动或报错 <code>Connection refused</code>。</li>
+<li><code>sail up</code> 拉取镜像时速度为 0 或直接超时。</li>
+<li><code>composer install</code> 慢如蜗牛。</li>
+</ul>
+<p><strong>残酷的现实</strong>：<br>Docker 的镜像源服务器大部分在国外。虽然国内有镜像加速，但这两年（你懂的）越来越不稳定。<br><strong>假如你无法解决“科学上网”的问题，那么使用 Laravel Sail 这条路将极其痛苦，我建议你趁早放弃，去选择 PhpStudy 或其他国产集成环境。</strong></p>
+<p><strong>唯一的终极解法</strong>：<br>别去整什么 Docker 换源、HTTP 代理环境变量，<strong>都不好使</strong>。<br>我的推荐思路只有一条：</p>
+<ol>
+<li><strong>工具</strong>：本机安装 <strong>v2rayN</strong> (或其他同类软件)。</li>
+<li><strong>模式</strong>：开启 <strong>TUN模式</strong> (Tun Mode)。</li>
+<li><strong>服务商</strong>：我个人推荐 <a target="_blank" rel="noopener" href="https://justmysocks.net/members/aff.php?aff=3236"><strong>Just My Socks</strong></a> （搬瓦工官方出品，稳）。</li>
+</ol>
+<p>开启 TUN 模式后，你的所有网络流量（包括 WSL2 和 Docker 拉取镜像的流量）都会自动走代理，从此告别一切网络玄学。</p>
+<hr>
+<h1 id="1-端口冲突-Port-is-already-allocated"><a href="#1-端口冲突-Port-is-already-allocated" class="headerlink" title="1. 端口冲突 (Port is already allocated)"></a>1. 端口冲突 (Port is already allocated)</h1><p><strong>症状</strong>：<br>运行 <code>sail up</code> 时，报错：</p>
+<blockquote>
+<p><code>Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.</code></p>
+</blockquote>
+<p><strong>原因</strong>：<br>Sail 默认使用 <strong>80</strong> 端口（Web）和 <strong>3306</strong> 端口（MySQL）。如果这台电脑上已经装了 IIS、Apache、Nginx 或者本地已经装了 MySQL，端口就会打架。</p>
+<p><strong>解决方法</strong>：<br>只需要在项目根目录的 <code>.env</code> 文件中修改端口配置即可（如果没有这些行，手动加上）：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将 Web 端口改为 8000</span></span><br><span class="line"><span class="attr">APP_PORT</span>=<span class="number">8000</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 MySQL 端口改为 33060</span></span><br><span class="line"><span class="attr">FORWARD_DB_PORT</span>=<span class="number">33060</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 将 Redis 端口改为 63790</span></span><br><span class="line"><span class="attr">FORWARD_REDIS_PORT</span>=<span class="number">63790</span></span><br></pre></td></tr></table></figure>
+<p>修改完后，重启 Sail：<code>sail up -d</code>。<br>以后访问网站就变成：<code>http://localhost:8000</code>。</p>
+<hr>
+<h1 id="2-网站运行极其缓慢-Slow-Performance"><a href="#2-网站运行极其缓慢-Slow-Performance" class="headerlink" title="2. 网站运行极其缓慢 (Slow Performance)"></a>2. 网站运行极其缓慢 (Slow Performance)</h1><p><strong>症状</strong>：<br>打开一个页面需要 2-3 秒，甚至更久。</p>
+<p><strong>原因</strong>：<br><strong>这是新手最容易犯的错误！</strong><br>你把项目代码放在了 Windows 的磁盘里（比如 <code>/mnt/c/Users/...</code>），然后让 WSL 去读取。由于跨文件系统的 I&#x2F;O 性能极差，会导致速度慢到无法接受。</p>
+<p><strong>解决方法</strong>：<br><strong>一定要把代码放在 WSL 自己的文件系统里！</strong><br>也就是上面的教程中反复强调的 <code>~/code</code> (即 <code>/home/your-username/code</code>) 目录下。<br>千万不要在 Windows 的文件资源管理器里直接把项目拖到 C 盘或 D 盘。</p>
+<hr>
+<h1 id="3-权限问题-Permission-Denied"><a href="#3-权限问题-Permission-Denied" class="headerlink" title="3. 权限问题 (Permission Denied)"></a>3. 权限问题 (Permission Denied)</h1><p><strong>症状</strong>：<br>运行某些命令或生成日志时，提示 <code>Permission denied</code> 或 <code>Unable to write to directory</code>.</p>
+<p><strong>原因</strong>：<br>通常是因为你不小心用了 <code>sudo</code> 或者以 <code>root</code> 身份运行了该目录下的命令（比如 <code>sudo npm install</code> 或 <code>sudo composer ...</code>），导致生成的文件夹归属权变成了 <code>root</code>，而 Sail 容器内的默认用户 <code>sail</code> 无法写入。</p>
+<p><strong>预防与解决</strong>：<br><strong>核心建议</strong>：<strong>在开发过程中，非必要不要去手动修改文件权限或使用 sudo</strong>。请始终保持在 <code>sail</code> 角色下（即直接运行 <code>sail xxx</code>）执行各类默认操作。实在需要 <code>root</code> 权限的时候（比如安装系统软件），务必想清楚你在干什么。</p>
+<p>如果已经乱了，Sail 提供了一个快速修复所属权的命令。在项目根目录下运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail root-shell <span class="built_in">chown</span> -R sail:sail .</span><br></pre></td></tr></table></figure>
+<p>或者，如果你想“暴力”一点（仅限开发环境）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail root-shell <span class="built_in">chmod</span> -R 777 storage bootstrap/cache</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="4-数据库连接不上-Navicat-TablePlus"><a href="#4-数据库连接不上-Navicat-TablePlus" class="headerlink" title="4. 数据库连接不上 (Navicat &#x2F; TablePlus)"></a>4. 数据库连接不上 (Navicat &#x2F; TablePlus)</h1><p><strong>症状</strong>：<br>想用电脑上的 Navicat 连接 Docker 里的 MySQL，却连不上。</p>
+<p><strong>解决方法</strong>：</p>
+<ol>
+<li><strong>Host</strong>: <code>localhost</code> (或者 <code>127.0.0.1</code>)</li>
+<li><strong>Port</strong>: 默认为 <code>3306</code>。**但在 Docker 中，请检查 <code>.env</code> 里的 <code>FORWARD_DB_PORT</code>**。如果没改过，就是 3306。如果改成了 33060，这里也要填 33060。</li>
+<li><strong>Username</strong>: <code>sail</code></li>
+<li><strong>Password</strong>: <code>password</code> (默认是 password，除非你在 .env 里改了 <code>DB_PASSWORD</code>)</li>
+</ol>
+<blockquote>
+<p><strong>注意</strong>：不要填 Docker 容器的 IP，直接填 localhost 即可，因为 Docker Desktop 做了端口转发。</p>
+</blockquote>
+<hr>
+<h1 id="5-sail-命令找不到-Command-not-found"><a href="#5-sail-命令找不到-Command-not-found" class="headerlink" title="5. sail 命令找不到 (Command not found)"></a>5. <code>sail</code> 命令找不到 (Command not found)</h1><p><strong>症状</strong>：<br>输入 <code>sail up</code>，提示 <code>bash: sail: command not found</code>。</p>
+<p><strong>解决方法</strong>：<br>这通常是因为别名失效了，或者没有重新加载配置文件。</p>
+<ol>
+<li>确保你按照《环境配置篇》在 <code>~/.bashrc</code> 里加了 alias。</li>
+<li>尝试运行 <code>source ~/.bashrc</code> 刷新配置。</li>
+<li>如果还是不行，老老实实打全路径验证一下：<code>./vendor/bin/sail up</code>。如果全路径能用，说明就是 alias 配置的问题。</li>
+</ol>
+<hr>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>至此，<strong>《Laravel Sail 开发环境部署一把过》</strong> 系列的技术教程部分就彻底完结了。</p>
+<p>从概念介绍，到 WSL 环境搭建，再到 Git 多机协同，最后到日常命令与故障排查。希望能帮助 Windows 下的 PHPer 彻底摆脱环境配置的噩梦，把宝贵的时间花在写出优雅的代码上。</p>
+<p>如果你对“跑得顺 Sail 到底需要什么样的电脑”感兴趣，欢迎阅读最后一篇番外：<br><strong>《番外篇：工欲善其事——我的三套开发装备大公开》</strong></p>
+<p><strong>Happy Coding with Sail! ⛵</strong></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="toc-number">1.</span> <span class="toc-text">写在最后</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0-%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98-The-Great-Firewall"><span class="toc-number">2.</span> <span class="toc-text">0. 网络问题 (The Great Firewall)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81-Port-is-already-allocated"><span class="toc-number">3.</span> <span class="toc-text">1. 端口冲突 (Port is already allocated)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E7%BD%91%E7%AB%99%E8%BF%90%E8%A1%8C%E6%9E%81%E5%85%B6%E7%BC%93%E6%85%A2-Slow-Performance"><span class="toc-number">4.</span> <span class="toc-text">2. 网站运行极其缓慢 (Slow Performance)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98-Permission-Denied"><span class="toc-number">5.</span> <span class="toc-text">3. 权限问题 (Permission Denied)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E4%B8%8D%E4%B8%8A-Navicat-TablePlus"><span class="toc-number">6.</span> <span class="toc-text">4. 数据库连接不上 (Navicat &#x2F; TablePlus)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-sail-%E5%91%BD%E4%BB%A4%E6%89%BE%E4%B8%8D%E5%88%B0-Command-not-found"><span class="toc-number">7.</span> <span class="toc-text">5. sail 命令找不到 (Command not found)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">8.</span> <span class="toc-text">结语</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（疑难杂症篇）&body=Check out this article: https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（疑难杂症篇）&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（疑难杂症篇）"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+      
+        
+          2020-2026
+            NightingaleWK
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
+  </div>
+  <div class="footer-right"></div>
+</footer>
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

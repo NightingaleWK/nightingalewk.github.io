@@ -5,52 +5,52 @@
         <link>https://nightingalewk.cn</link>
         <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 09 Dec 2025 14:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 09 Dec 2025 14:00:00 +0800</lastBuildDate>
+        <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
+        <lastBuildDate>Tue, 27 Jan 2026 10:00:00 +0800</lastBuildDate>
         <category>迁移</category>
         <category>hexo</category>
-        <category>pr</category>
-        <category>bilibili</category>
+        <category>主食</category>
         <category>电脑维修</category>
         <category>学习笔记</category>
-        <category>主食</category>
+        <category>pr</category>
+        <category>bilibili</category>
         <category>热菜</category>
-        <category>甜品</category>
         <category>汤</category>
+        <category>甜品</category>
         <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
-        <category>代码更新</category>
+        <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码部署</category>
-        <category>oh-my-zsh</category>
+        <category>代码更新</category>
         <category>dcat admin</category>
+        <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
         <category>道歉信</category>
         <category>免密</category>
-        <category>laravel sail</category>
         <category>vs code</category>
         <category>fileinfo</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
         <category>gpg</category>
+        <category>laravel sail</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>定时任务</category>
+        <category>net time</category>
         <category>swap</category>
         <category>端口查询</category>
-        <category>net time</category>
         <category>表单验证</category>
-        <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
+        <category>事件</category>
         <category>队列</category>
         <category>redis</category>
         <category>特色小吃</category>
         <category>粥</category>
-        <category>artisan 指令</category>
         <category>Cloudreve</category>
+        <category>artisan 指令</category>
         <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
@@ -62,20 +62,17 @@
         <category>realms</category>
         <category>公告</category>
         <category>screen</category>
-        <category>cursor</category>
-        <category>人工智能</category>
-        <category>prompt</category>
         <category>打印机</category>
         <category>京瓷</category>
         <category>教程</category>
+        <category>cursor</category>
+        <category>人工智能</category>
+        <category>prompt</category>
         <category>Git</category>
         <category>GitHub</category>
         <category>版本控制</category>
-        <category>DevOps</category>
         <category>Monorepo</category>
-        <category>国产化</category>
-        <category>信创</category>
-        <category>TongHttpServer</category>
+        <category>DevOps</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
@@ -85,14 +82,576 @@
         <category>安装指南</category>
         <category>阿里云</category>
         <category>镜像源</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Rule</category>
+        <category>Prompt</category>
+        <category>gemini</category>
+        <category>Sail</category>
         <category>Nginx</category>
         <category>反向代理</category>
         <category>NPM</category>
         <category>HTTPS</category>
         <category>问题排查</category>
-        <category>Rule</category>
-        <category>Prompt</category>
-        <category>gemini</category>
+        <category>WSL2</category>
+        <category>Troubleshooting</category>
+        <category>Hardware</category>
+        <category>Tooling</category>
+        <category>Artisan</category>
+        <category>Composer</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
+            <link>https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</link>
+            <category>Laravel</category>
+            <category>Sail</category>
+            <category>Hardware</category>
+            <category>Tooling</category>
+            <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;写在前面&#34;&gt;&lt;a href=&#34;#写在前面&#34; class=&#34;headerlink&#34; title=&#34;写在前面&#34;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;经常有读者问：“大佬，我的电脑比较老，跑 Docker 会不会卡？”或者“我想换台电脑写代码，有什么推荐配置吗？”&lt;/p&gt;
+&lt;p&gt;确实，&lt;strong&gt;Laravel Sail (Docker + WSL2)&lt;/strong&gt; 虽然优雅，但它对硬件资源（特别是内存和磁盘 I&amp;#x2F;O）是有一定门槛的。它不像当年跑一个 WampServer 那么省资源。&lt;/p&gt;
+&lt;p&gt;在本系列的最后，我公开一下我目前正在使用的三套开发环境配置的高低搭配，供大家选购或升级时参考。这也是为了证明：&lt;strong&gt;只要配置得当，无论是工作站、家用台式还是轻薄本，都能愉快地 Sail 起来。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-主力重装：单位工作站-Workstation&#34;&gt;&lt;a href=&#34;#1-主力重装：单位工作站-Workstation&#34; class=&#34;headerlink&#34; title=&#34;1. 主力重装：单位工作站 (Workstation)&#34;&gt;&lt;/a&gt;1. 主力重装：单位工作站 (Workstation)&lt;/h1&gt;&lt;p&gt;这是我在公司的主力生产力工具，负责最繁重的开发任务。稳定性压倒一切。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Dell Precision 7920 Tower&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon Silver 4210R @ 2.40GHz (服务器级处理器)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 32.0 GB (ECC 内存)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;显卡&lt;/strong&gt;: NVIDIA Quadro RTX 4000&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统&lt;/strong&gt;: Windows 11 专业工作站版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;对于 Docker 开发来说，&lt;strong&gt;32GB 内存是“甜点线”&lt;/strong&gt;。&lt;br&gt;WSL2 在大内存下表现极其从容，我可以同时开启多个 Laravel 项目（微服务架构），同时跑 MySQL, Redis, Meilisearch, 甚至本地跑一个 LLM 模型，完全不感觉到卡顿。Xeon 处理器虽然单核频率不一定最高，但在多容器并发编译时非常稳。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-全能战将：家中台式机-Desktop&#34;&gt;&lt;a href=&#34;#2-全能战将：家中台式机-Desktop&#34; class=&#34;headerlink&#34; title=&#34;2. 全能战将：家中台式机 (Desktop)&#34;&gt;&lt;/a&gt;2. 全能战将：家中台式机 (Desktop)&lt;/h1&gt;&lt;p&gt;下班回家后的主力机，兼顾代码开发和（偶尔的）游戏娱乐。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Dell XPS 8930&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7-8700K (6核12线程，当年的神U)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 16.0 GB DDR4 2666MHz&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;显卡&lt;/strong&gt;: NVIDIA GeForce GTX 1080 8GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬盘&lt;/strong&gt;: 512GB SSD + 2TB HDD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;这套配置代表了&lt;strong&gt;绝大多数开发者的“主流水平”&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;16GB 内存是 Sail 的“及格线”&lt;/strong&gt;。在 16GB 环境下，跑 1-2 个 Sail 项目完全没问题。但如果同时开着几十个 Chrome 标签页 + PHPStorm + Docker，内存占用率通常会飙到 85% 以上。&lt;br&gt;&lt;em&gt;注意：在 16GB 内存的机器上，我建议在 &lt;code&gt;.wslconfig&lt;/code&gt; 文件中限制一下 WSL 的最大内存占用（比如限制为 8GB），防止它把宿主机的内存吃光导致死机。&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-移动突击：便携二合一-Portable&#34;&gt;&lt;a href=&#34;#3-移动突击：便携二合一-Portable&#34; class=&#34;headerlink&#34; title=&#34;3. 移动突击：便携二合一 (Portable)&#34;&gt;&lt;/a&gt;3. 移动突击：便携二合一 (Portable)&lt;/h1&gt;&lt;p&gt;出差、开会、星巴克写代码时的选择。主打一个轻便。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Microsoft Surface Pro 7&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7-1065G7 @ 1.30GHz&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 16.0 GB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬盘&lt;/strong&gt;: 256GB SSD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;很多人认为轻薄本跑不动 Docker，其实不然。&lt;br&gt;只要是近几年的 &lt;strong&gt;i5&amp;#x2F;i7 低压处理器 + 16GB 内存&lt;/strong&gt;，配合高速 SSD，运行 Sail 依然丝般顺滑。&lt;br&gt;重点在于 &lt;strong&gt;SSD&lt;/strong&gt;。Surface 的磁盘性能很好，这对于 Docker 容器启动和大量小文件读写（vendor 目录）至关重要。&lt;br&gt;&lt;em&gt;警告：千万别尝试在 8GB 内存的轻薄本上跑 Sail，那会是幻灯片般的体验。&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结与建议（硬件篇）&#34;&gt;&lt;a href=&#34;#总结与建议（硬件篇）&#34; class=&#34;headerlink&#34; title=&#34;总结与建议（硬件篇）&#34;&gt;&lt;/a&gt;总结与建议（硬件篇）&lt;/h1&gt;&lt;p&gt;结合我的三套设备体验，如果你正准备为 Laravel Sail 准备硬件，我的建议是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;**内存 (RAM)**：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;8GB&lt;/strong&gt;：❌ 别想了，折磨自己。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;16GB&lt;/strong&gt;：✅ &lt;strong&gt;及格&lt;/strong&gt;。够用，但要注意节制，偶尔需要清理内存。&lt;/li&gt;
+&lt;li&gt;**32GB+**：🚀 &lt;strong&gt;推荐&lt;/strong&gt;。为所欲为，从容不迫。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;**硬盘 (Storage)**：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须是 &lt;strong&gt;SSD&lt;/strong&gt; (固态硬盘)，最好是 NVMe 协议的。&lt;/li&gt;
+&lt;li&gt;Docker 对随机读写要求极高，机械硬盘 (HDD) 基本上告别 Docker 开发了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CPU&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心数比主频更重要。Docker 容器多起来后，多核优势明显。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;必须支持虚拟化技术 (Virtualization)&lt;/strong&gt; 并在 BIOS 中开启。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;4-软实力：我的全栈工具箱-Software-Stack&#34;&gt;&lt;a href=&#34;#4-软实力：我的全栈工具箱-Software-Stack&#34; class=&#34;headerlink&#34; title=&#34;4. 软实力：我的全栈工具箱 (Software Stack)&#34;&gt;&lt;/a&gt;4. 软实力：我的全栈工具箱 (Software Stack)&lt;/h1&gt;&lt;p&gt;硬件只是底座，要让开发效率起飞，软件的选择同样至关重要。这也并非是“唯工具论”，而是找到最顺手的兵器。以下是我目前的标准配置：&lt;/p&gt;
+&lt;h3 id=&#34;核心开发&#34;&gt;&lt;a href=&#34;#核心开发&#34; class=&#34;headerlink&#34; title=&#34;核心开发&#34;&gt;&lt;/a&gt;核心开发&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE &amp;#x2F; 编辑器&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; (主推)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：目前我最舒适的开发环境。配合 &lt;strong&gt;Google Gemini 3 Pro&lt;/strong&gt; 大模型，写代码简直是降维打击。我自己开了 Gemini Advanced 会员（$20&amp;#x2F;月），Antigravity 对接后额度更高，体验拉满。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;备选&lt;/em&gt;：Trae, VS Code。我不死磕某一个工具，谁好用也没必要踩一捧一，配合使用效率最高。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据库管理&lt;/strong&gt;: &lt;strong&gt;DBeaver Community&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：免费、开源、跨平台、支持所有数据库。相比于收费昂贵的 Navicat，DBeaver 社区版真香，功能完全够用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;终端 (Terminal)&lt;/strong&gt;: &lt;strong&gt;Antigravity 内置终端&lt;/strong&gt; &amp;#x2F; &lt;strong&gt;Windows Terminal&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Antigravity 的内置终端深度集成，而 Windows Terminal 则是目前 Win 下最现代化的终端 App，颜值能打。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;运维与部署&#34;&gt;&lt;a href=&#34;#运维与部署&#34; class=&#34;headerlink&#34; title=&#34;运维与部署&#34;&gt;&lt;/a&gt;运维与部署&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;远程连接&lt;/strong&gt;: &lt;strong&gt;Xshell &amp;amp; Xftp&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：老牌劲旅。现在对家庭和教育用户&lt;strong&gt;完全免费&lt;/strong&gt;了，功能强大且稳定，比 putty 那些好用太多。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测试服务器&lt;/strong&gt;: &lt;strong&gt;阿里云 &amp;#x2F; 腾讯云 (轻量应用服务器)&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国内做站首选，轻量服务器便宜量大，适合部署测试环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;远程桌面&lt;/strong&gt;: &lt;strong&gt;ToDesk&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国产远控之光，速度快，不限速，关键时刻救急用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;知识管理与协作&#34;&gt;&lt;a href=&#34;#知识管理与协作&#34; class=&#34;headerlink&#34; title=&#34;知识管理与协作&#34;&gt;&lt;/a&gt;知识管理与协作&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;笔记与文档&lt;/strong&gt;: &lt;strong&gt;OneNote&lt;/strong&gt; (Microsoft 365)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：开了 Microsoft 365 会员，拥有 1TB OneDrive 空间。笔记、设计稿、文档全部云端同步，多端无缝切换，不用担心数据丢失。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;流程&amp;#x2F;架构图&lt;/strong&gt;: &lt;a href=&#34;https://app.diagrams.net/&#34;&gt;&lt;strong&gt;Diagrams.net (draw.io)&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Web 端最强画图工具，免费，支持存到 OneDrive&amp;#x2F;GitHub。画架构图、ER 图首选。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;项目管理&lt;/strong&gt;: &lt;strong&gt;PingCode&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国产优秀的研发项目管理工具，适合敏捷开发管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码托管&lt;/strong&gt;: &lt;strong&gt;GitHub&lt;/strong&gt; (主) + &lt;strong&gt;Gitee&lt;/strong&gt; (备)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：鸡蛋不放在同一个篮子里。GitHub 是世界中心，Gitee 是国内速度保障。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;效率神器&#34;&gt;&lt;a href=&#34;#效率神器&#34; class=&#34;headerlink&#34; title=&#34;效率神器&#34;&gt;&lt;/a&gt;效率神器&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;文档阅读&lt;/strong&gt;: &lt;strong&gt;沉浸式翻译&lt;/strong&gt; (浏览器插件)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：看英文官方文档的神器。双语对照显示，翻译质量极高，从此不再畏惧英文文档。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;截图贴图&lt;/strong&gt;: &lt;strong&gt;Snipaste&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：F1 截图，F3 贴图。把要参考的代码或报错信息直接“钉”在屏幕上，对照着写，效率提升 100%。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器&lt;/strong&gt;: &lt;strong&gt;Chrome&lt;/strong&gt; &amp;amp; &lt;strong&gt;Edge&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Web 开发标配双雄。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h1&gt;&lt;p&gt;工欲善其事，必先利其器。&lt;br&gt;愿大家都能有一台趁手的兵器，在 Laravel 的海洋里乘风破浪！&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（疑难杂症篇）</title>
+            <link>https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/</link>
+            <category>Laravel</category>
+            <category>Sail</category>
+            <category>Troubleshooting</category>
+            <pubDate>Mon, 26 Jan 2026 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;写在最后&#34;&gt;&lt;a href=&#34;#写在最后&#34; class=&#34;headerlink&#34; title=&#34;写在最后&#34;&gt;&lt;/a&gt;写在最后&lt;/h1&gt;&lt;p&gt;作为《Laravel Sail 开发环境部署一把过》系列的收官之作，本文旨在汇总大家在使用过程中最容易遇到的“坑”。&lt;br&gt;如果你遇到了报错，请先按 &lt;code&gt;Ctrl + F&lt;/code&gt; 在本文搜索关键词，说不定就能立刻解决。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;0-网络问题-The-Great-Firewall&#34;&gt;&lt;a href=&#34;#0-网络问题-The-Great-Firewall&#34; class=&#34;headerlink&#34; title=&#34;0. 网络问题 (The Great Firewall)&#34;&gt;&lt;/a&gt;0. 网络问题 (The Great Firewall)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;这是中国大陆用户面临的最大 BOSS。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;curl -s https://laravel.build/example-app | bash&lt;/code&gt; 卡住不动或报错 &lt;code&gt;Connection refused&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail up&lt;/code&gt; 拉取镜像时速度为 0 或直接超时。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;composer install&lt;/code&gt; 慢如蜗牛。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;残酷的现实&lt;/strong&gt;：&lt;br&gt;Docker 的镜像源服务器大部分在国外。虽然国内有镜像加速，但这两年（你懂的）越来越不稳定。&lt;br&gt;&lt;strong&gt;假如你无法解决“科学上网”的问题，那么使用 Laravel Sail 这条路将极其痛苦，我建议你趁早放弃，去选择 PhpStudy 或其他国产集成环境。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;唯一的终极解法&lt;/strong&gt;：&lt;br&gt;别去整什么 Docker 换源、HTTP 代理环境变量，&lt;strong&gt;都不好使&lt;/strong&gt;。&lt;br&gt;我的推荐思路只有一条：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：本机安装 &lt;strong&gt;v2rayN&lt;/strong&gt; (或其他同类软件)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;模式&lt;/strong&gt;：开启 &lt;strong&gt;TUN模式&lt;/strong&gt; (Tun Mode)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;服务商&lt;/strong&gt;：我个人推荐 &lt;a href=&#34;https://justmysocks.net/members/aff.php?aff=3236&#34;&gt;&lt;strong&gt;Just My Socks&lt;/strong&gt;&lt;/a&gt; （搬瓦工官方出品，稳）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;开启 TUN 模式后，你的所有网络流量（包括 WSL2 和 Docker 拉取镜像的流量）都会自动走代理，从此告别一切网络玄学。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-端口冲突-Port-is-already-allocated&#34;&gt;&lt;a href=&#34;#1-端口冲突-Port-is-already-allocated&#34; class=&#34;headerlink&#34; title=&#34;1. 端口冲突 (Port is already allocated)&#34;&gt;&lt;/a&gt;1. 端口冲突 (Port is already allocated)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行 &lt;code&gt;sail up&lt;/code&gt; 时，报错：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;Sail 默认使用 &lt;strong&gt;80&lt;/strong&gt; 端口（Web）和 &lt;strong&gt;3306&lt;/strong&gt; 端口（MySQL）。如果这台电脑上已经装了 IIS、Apache、Nginx 或者本地已经装了 MySQL，端口就会打架。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;只需要在项目根目录的 &lt;code&gt;.env&lt;/code&gt; 文件中修改端口配置即可（如果没有这些行，手动加上）：&lt;/p&gt;
+&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Web 端口改为 8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;APP_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 MySQL 端口改为 33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_DB_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Redis 端口改为 63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_REDIS_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;修改完后，重启 Sail：&lt;code&gt;sail up -d&lt;/code&gt;。&lt;br&gt;以后访问网站就变成：&lt;code&gt;http://localhost:8000&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-网站运行极其缓慢-Slow-Performance&#34;&gt;&lt;a href=&#34;#2-网站运行极其缓慢-Slow-Performance&#34; class=&#34;headerlink&#34; title=&#34;2. 网站运行极其缓慢 (Slow Performance)&#34;&gt;&lt;/a&gt;2. 网站运行极其缓慢 (Slow Performance)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;打开一个页面需要 2-3 秒，甚至更久。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;这是新手最容易犯的错误！&lt;/strong&gt;&lt;br&gt;你把项目代码放在了 Windows 的磁盘里（比如 &lt;code&gt;/mnt/c/Users/...&lt;/code&gt;），然后让 WSL 去读取。由于跨文件系统的 I&amp;#x2F;O 性能极差，会导致速度慢到无法接受。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;一定要把代码放在 WSL 自己的文件系统里！&lt;/strong&gt;&lt;br&gt;也就是上面的教程中反复强调的 &lt;code&gt;~/code&lt;/code&gt; (即 &lt;code&gt;/home/your-username/code&lt;/code&gt;) 目录下。&lt;br&gt;千万不要在 Windows 的文件资源管理器里直接把项目拖到 C 盘或 D 盘。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-权限问题-Permission-Denied&#34;&gt;&lt;a href=&#34;#3-权限问题-Permission-Denied&#34; class=&#34;headerlink&#34; title=&#34;3. 权限问题 (Permission Denied)&#34;&gt;&lt;/a&gt;3. 权限问题 (Permission Denied)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行某些命令或生成日志时，提示 &lt;code&gt;Permission denied&lt;/code&gt; 或 &lt;code&gt;Unable to write to directory&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;通常是因为你不小心用了 &lt;code&gt;sudo&lt;/code&gt; 或者以 &lt;code&gt;root&lt;/code&gt; 身份运行了该目录下的命令（比如 &lt;code&gt;sudo npm install&lt;/code&gt; 或 &lt;code&gt;sudo composer ...&lt;/code&gt;），导致生成的文件夹归属权变成了 &lt;code&gt;root&lt;/code&gt;，而 Sail 容器内的默认用户 &lt;code&gt;sail&lt;/code&gt; 无法写入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;预防与解决&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;核心建议&lt;/strong&gt;：&lt;strong&gt;在开发过程中，非必要不要去手动修改文件权限或使用 sudo&lt;/strong&gt;。请始终保持在 &lt;code&gt;sail&lt;/code&gt; 角色下（即直接运行 &lt;code&gt;sail xxx&lt;/code&gt;）执行各类默认操作。实在需要 &lt;code&gt;root&lt;/code&gt; 权限的时候（比如安装系统软件），务必想清楚你在干什么。&lt;/p&gt;
+&lt;p&gt;如果已经乱了，Sail 提供了一个快速修复所属权的命令。在项目根目录下运行：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chown&lt;/span&gt; -R sail:sail .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;或者，如果你想“暴力”一点（仅限开发环境）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; -R 777 storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h1 id=&#34;4-数据库连接不上-Navicat-TablePlus&#34;&gt;&lt;a href=&#34;#4-数据库连接不上-Navicat-TablePlus&#34; class=&#34;headerlink&#34; title=&#34;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&#34;&gt;&lt;/a&gt;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;想用电脑上的 Navicat 连接 Docker 里的 MySQL，却连不上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;: &lt;code&gt;localhost&lt;/code&gt; (或者 &lt;code&gt;127.0.0.1&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt;: 默认为 &lt;code&gt;3306&lt;/code&gt;。**但在 Docker 中，请检查 &lt;code&gt;.env&lt;/code&gt; 里的 &lt;code&gt;FORWARD_DB_PORT&lt;/code&gt;**。如果没改过，就是 3306。如果改成了 33060，这里也要填 33060。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Username&lt;/strong&gt;: &lt;code&gt;sail&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Password&lt;/strong&gt;: &lt;code&gt;password&lt;/code&gt; (默认是 password，除非你在 .env 里改了 &lt;code&gt;DB_PASSWORD&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不要填 Docker 容器的 IP，直接填 localhost 即可，因为 Docker Desktop 做了端口转发。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;5-sail-命令找不到-Command-not-found&#34;&gt;&lt;a href=&#34;#5-sail-命令找不到-Command-not-found&#34; class=&#34;headerlink&#34; title=&#34;5. sail 命令找不到 (Command not found)&#34;&gt;&lt;/a&gt;5. &lt;code&gt;sail&lt;/code&gt; 命令找不到 (Command not found)&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;输入 &lt;code&gt;sail up&lt;/code&gt;，提示 &lt;code&gt;bash: sail: command not found&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;这通常是因为别名失效了，或者没有重新加载配置文件。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确保你按照《环境配置篇》在 &lt;code&gt;~/.bashrc&lt;/code&gt; 里加了 alias。&lt;/li&gt;
+&lt;li&gt;尝试运行 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 刷新配置。&lt;/li&gt;
+&lt;li&gt;如果还是不行，老老实实打全路径验证一下：&lt;code&gt;./vendor/bin/sail up&lt;/code&gt;。如果全路径能用，说明就是 alias 配置的问题。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h1&gt;&lt;p&gt;至此，&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt; 系列的技术教程部分就彻底完结了。&lt;/p&gt;
+&lt;p&gt;从概念介绍，到 WSL 环境搭建，再到 Git 多机协同，最后到日常命令与故障排查。希望能帮助 Windows 下的 PHPer 彻底摆脱环境配置的噩梦，把宝贵的时间花在写出优雅的代码上。&lt;/p&gt;
+&lt;p&gt;如果你对“跑得顺 Sail 到底需要什么样的电脑”感兴趣，欢迎阅读最后一篇番外：&lt;br&gt;&lt;strong&gt;《番外篇：工欲善其事——我的三套开发装备大公开》&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Happy Coding with Sail! ⛵&lt;/strong&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（日常使用篇）</title>
+            <link>https://nightingalewk.cn/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/</link>
+            <category>Laravel</category>
+            <category>Sail</category>
+            <category>Artisan</category>
+            <category>Composer</category>
+            <pubDate>Sun, 25 Jan 2026 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;a href=&#34;#核心心法：忘掉本地环境&#34; class=&#34;headerlink&#34; title=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;/a&gt;核心心法：忘掉本地环境&lt;/h1&gt;&lt;p&gt;进入 Sail 的世界后，你需要修改一个肌肉记忆。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以前你的操作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;php artisan migrate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;现在 Sail 的操作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sail artisan migrate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail npm run dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;心法口诀&lt;/strong&gt;：&lt;strong&gt;凡是需要运行环境的命令，前面统统加 &lt;code&gt;sail&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;：你已经按照《环境配置篇》配置好了 &lt;code&gt;alias sail=&amp;#39;...&amp;#39;&lt;/code&gt; 别名。如果没有，请手动输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-Artisan-命令：得心应手&#34;&gt;&lt;a href=&#34;#1-Artisan-命令：得心应手&#34; class=&#34;headerlink&#34; title=&#34;1. Artisan 命令：得心应手&#34;&gt;&lt;/a&gt;1. Artisan 命令：得心应手&lt;/h1&gt;&lt;p&gt;在 Laravel 开发中，Artisan 是我们最常用的工具。在 Sail 中使用它没有任何区别，仅仅是换了个前缀。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成控制器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:controller UserController&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 路由列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan route:list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：当你输入 &lt;code&gt;sail artisan ...&lt;/code&gt; 时，Sail 会自动把命令转发到正在运行的 Docker 容器中去执行。这意味着&lt;strong&gt;你的电脑完全不需要安装 PHP&lt;/strong&gt;，也能执行 PHP 代码。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-Composer：依赖管理&#34;&gt;&lt;a href=&#34;#2-Composer：依赖管理&#34; class=&#34;headerlink&#34; title=&#34;2. Composer：依赖管理&#34;&gt;&lt;/a&gt;2. Composer：依赖管理&lt;/h1&gt;&lt;p&gt;安装新包、更新依赖，也全部通过 Sail 进行。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装扩展包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/breeze --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 更新所有依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：哪怕你的 Windows&amp;#x2F;WSL 里装了 Composer，我也&lt;strong&gt;强烈建议&lt;/strong&gt;使用 &lt;code&gt;sail composer&lt;/code&gt;。因为这样能确保依赖的 PHP 版本与容器内的 PHP 版本（真实运行环境）完全一致，避免版本冲突。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-前端编译：Node-NPM&#34;&gt;&lt;a href=&#34;#3-前端编译：Node-NPM&#34; class=&#34;headerlink&#34; title=&#34;3. 前端编译：Node &amp;amp; NPM&#34;&gt;&lt;/a&gt;3. 前端编译：Node &amp;amp; NPM&lt;/h1&gt;&lt;p&gt;这是很多新手容易混淆的地方。&lt;br&gt;虽然你可以在 WSL 里安装 Node.js，但 Sail 实际上也为你准备好了一套 Node 环境。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装前端依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行开发服务器 (Vite)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 编译生产环境代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run build&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;当运行 &lt;code&gt;sail npm run dev&lt;/code&gt; 时，Vite 服务器实际上是在 Docker 容器里跑的，但通过端口映射，你依然可以在 Windows 浏览器里无缝访问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;4-服务管理：掌控全局&#34;&gt;&lt;a href=&#34;#4-服务管理：掌控全局&#34; class=&#34;headerlink&#34; title=&#34;4. 服务管理：掌控全局&#34;&gt;&lt;/a&gt;4. 服务管理：掌控全局&lt;/h1&gt;&lt;p&gt;Sail 本质上是 Docker Compose 的封装，所以管理服务变得很简单。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;启动环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(每天开机第一件事)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;停止环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(下班关机前，或者你想省点内存时)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;重启环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(当你修改了 &lt;code&gt;docker-compose.yml&lt;/code&gt; 配置后需要用到)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;查看运行状态&lt;/strong&gt;：&lt;br&gt;查看当前有哪些容器在跑，以及它们的状态：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;5-进阶：直接进入“母体”&#34;&gt;&lt;a href=&#34;#5-进阶：直接进入“母体”&#34; class=&#34;headerlink&#34; title=&#34;5. 进阶：直接进入“母体”&#34;&gt;&lt;/a&gt;5. 进阶：直接进入“母体”&lt;/h1&gt;&lt;p&gt;有时候，你可能想进去容器里面看看文件，或者运行一些奇怪的 Linux 命令。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以默认用户 (sail) 进入应用容器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail shell&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以 root 用户进入应用容器（拥有最高权限）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;进入后，你就身处一个标准的 Ubuntu 环境中了，你的项目代码在 &lt;code&gt;/var/www/html&lt;/code&gt; 目录下。输入 &lt;code&gt;exit&lt;/code&gt; 即可退出。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;6-炫技：临时共享站点&#34;&gt;&lt;a href=&#34;#6-炫技：临时共享站点&#34; class=&#34;headerlink&#34; title=&#34;6. 炫技：临时共享站点&#34;&gt;&lt;/a&gt;6. 炫技：临时共享站点&lt;/h1&gt;&lt;p&gt;如果你想把现在的像本地项目展示给远在异地的同事或者客户看，不需要部署上线，Sail 自带了一个神奇的命令（基于 Expose）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail share&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行后，它会给你一个临时的公网 URL（例如 &lt;code&gt;http://your-site.sharedwithexpose.com&lt;/code&gt;）。把这个链接发给这一秒需要看演示的人，他们就能直接访问你本地开发环境的内容了！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;使用 Sail 开发的每一天，其实就是不断重复 &lt;strong&gt;“Sail + 命令”&lt;/strong&gt; 的过程。一旦习惯了这个前缀，你会发现它提供的隔离感和安全感是前所未有的。&lt;/p&gt;
+&lt;p&gt;下一篇，也是本系列的终章：&lt;strong&gt;《疑难杂症篇》&lt;/strong&gt;。虽然 Sail 很稳，但常在河边走哪有不湿鞋？我们将汇总一些常见的报错（端口占用、权限问题、网络连接等）并提供解决方案。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）</title>
+            <link>https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/</link>
+            <category>Git</category>
+            <category>GitHub</category>
+            <category>Laravel</category>
+            <category>Sail</category>
+            <pubDate>Sat, 24 Jan 2026 10:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;场景描述&#34;&gt;&lt;a href=&#34;#场景描述&#34; class=&#34;headerlink&#34; title=&#34;场景描述&#34;&gt;&lt;/a&gt;场景描述&lt;/h1&gt;&lt;p&gt;上一篇我们成功在电脑 A（比如公司电脑）上搭建了环境并运行了 Laravel。&lt;br&gt;现在的问题是：&lt;strong&gt;我下班回家了，想用家里的电脑 B 接着写，该怎么办？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;很多人会卡在这里，因为 Laravel 项目默认的 &lt;code&gt;.gitignore&lt;/code&gt; 规则会忽略 &lt;code&gt;vendor&lt;/code&gt; 目录（存放依赖包的地方）和 &lt;code&gt;.env&lt;/code&gt; 文件（存放敏感配置的地方）。&lt;br&gt;而 &lt;code&gt;sail&lt;/code&gt; 命令脚本本身就躺在 &lt;code&gt;vendor/bin&lt;/code&gt; 目录下。&lt;/p&gt;
+&lt;p&gt;这意味着：&lt;strong&gt;当你把代码拉到新电脑上时，你没有 &lt;code&gt;vendor&lt;/code&gt; 目录，也就没有 &lt;code&gt;sail&lt;/code&gt; 命令。你无法启动 Sail，也就无法用 Sail 安装 &lt;code&gt;vendor&lt;/code&gt;……&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这就陷入了一个“先有鸡还是先有蛋”的死循环。&lt;br&gt;别慌，本文就是为了解决这个问题而生的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第一步：在电脑-A-提交代码&#34;&gt;&lt;a href=&#34;#第一步：在电脑-A-提交代码&#34; class=&#34;headerlink&#34; title=&#34;第一步：在电脑 A 提交代码&#34;&gt;&lt;/a&gt;第一步：在电脑 A 提交代码&lt;/h1&gt;&lt;p&gt;首先，我们需要把项目上传到代码仓库（GitHub &amp;#x2F; GitLab &amp;#x2F; Gitee）。这里以 GitHub 为例。&lt;/p&gt;
+&lt;p&gt;确保你在 WSL 的项目根目录下（比如 &lt;code&gt;~/code/example-app&lt;/code&gt;）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;初始化 Git 仓库&lt;/strong&gt;（如果还没初始化）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;提交代码&lt;/strong&gt;：&lt;br&gt;Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已经非常完善了，千万&lt;strong&gt;不要&lt;/strong&gt;手动去把 &lt;code&gt;vendor&lt;/code&gt; 或 &lt;code&gt;.env&lt;/code&gt; 强行加进来。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git add -A&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;推送到远程仓库&lt;/strong&gt;：&lt;br&gt;先在 GitHub 创建一个空仓库，然后关联并推送：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:your-username/your-repo.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第二步：在电脑-B-拉取代码&#34;&gt;&lt;a href=&#34;#第二步：在电脑-B-拉取代码&#34; class=&#34;headerlink&#34; title=&#34;第二步：在电脑 B 拉取代码&#34;&gt;&lt;/a&gt;第二步：在电脑 B 拉取代码&lt;/h1&gt;&lt;p&gt;现在我们来到了&lt;strong&gt;电脑 B&lt;/strong&gt;（比如家里的电脑）。&lt;br&gt;&lt;strong&gt;前提&lt;/strong&gt;：这台电脑也必须安装好 &lt;strong&gt;WSL2&lt;/strong&gt; 和 &lt;strong&gt;Docker Desktop&lt;/strong&gt;（参考上一篇教程）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;克隆代码&lt;/strong&gt;：&lt;br&gt;打开 Ubuntu 终端，进入我们规定的代码存放目录（如果不存在则先创建）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; git@github.com:your-username/your-repo.git project-b&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; project-b&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;此时的尴尬现状&lt;/strong&gt;：&lt;br&gt;如果你现在尝试运行 &lt;code&gt;./vendor/bin/sail up&lt;/code&gt;，系统会无情地告诉你：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;bash: ./vendor/bin/sail: No such file or directory&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原因前面说了：Git 不会同步 &lt;code&gt;vendor&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;a href=&#34;#第三步：解决“鸡生蛋”问题（安装依赖）&#34; class=&#34;headerlink&#34; title=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;/a&gt;第三步：解决“鸡生蛋”问题（安装依赖）&lt;/h1&gt;&lt;p&gt;我们需要在没有 &lt;code&gt;sail&lt;/code&gt; 的情况下，利用 Docker 帮我们运行一次 Composer 安装命令。&lt;br&gt;Laravel 官方非常贴心地提供了一个一次性的 Docker 运行命令，专门用来处理这个“初次引导”的问题。&lt;/p&gt;
+&lt;p&gt;在项目根目录下，执行下面这行&lt;strong&gt;神奇的长命令&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -u &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(id -u)&lt;/span&gt;:&lt;span class=&#34;subst&#34;&gt;$(id -g)&lt;/span&gt;&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(pwd)&lt;/span&gt;:/var/www/html&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -w /var/www/html \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    laravelsail/php82-composer:latest \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    composer install --ignore-platform-reqs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;em&gt;解析：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;这是一个临时的 Docker 容器，用完即焚 (&lt;code&gt;--rm&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;它挂载了当前目录 (&lt;code&gt;-v&lt;/code&gt;)，并使用当前用户的权限 (&lt;code&gt;-u&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;它使用的是 &lt;code&gt;php82-composer&lt;/code&gt; 镜像（如果你用的是 PHP 8.1 或 8.0，改一下数字即可）。&lt;/li&gt;
+&lt;li&gt;它执行了 &lt;code&gt;composer install&lt;/code&gt;，帮我们把 &lt;code&gt;vendor&lt;/code&gt; 目录及里面的 &lt;code&gt;sail&lt;/code&gt; 脚本都下载回来了！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;等待命令执行完成&lt;/strong&gt;（具体取决于网速），你会发现项目里多了一个 &lt;code&gt;vendor&lt;/code&gt; 文件夹。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第四步：配置环境与启动&#34;&gt;&lt;a href=&#34;#第四步：配置环境与启动&#34; class=&#34;headerlink&#34; title=&#34;第四步：配置环境与启动&#34;&gt;&lt;/a&gt;第四步：配置环境与启动&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;恢复配置文件&lt;/strong&gt;：&lt;br&gt;由于 &lt;code&gt;.env&lt;/code&gt; 被 Git 忽略了，我们需要从模版复制一份：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; .env.example .&lt;span class=&#34;built_in&#34;&gt;env&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;注意：如果你的项目有特殊的数据库密码或 API Key，记得手动编辑 &lt;code&gt;.env&lt;/code&gt; 填进去。但在 Sail 环境下，数据库连接通常默认都在 &lt;code&gt;docker-compose.yml&lt;/code&gt; 里配置好了环境变量，直接用可能就行。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;启动 Sail&lt;/strong&gt;：&lt;br&gt;现在 &lt;code&gt;vendor&lt;/code&gt; 有了，我们终于可以召唤神龙了（记得像上一篇一样配置好 &lt;code&gt;sail&lt;/code&gt; 别名）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;生成应用密钥&lt;/strong&gt;：&lt;br&gt;新的 &lt;code&gt;.env&lt;/code&gt; 里 &lt;code&gt;APP_KEY&lt;/code&gt; 是空的，需要生成一个：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;运行数据库迁移&lt;/strong&gt;：&lt;br&gt;全新的环境数据库是空的，需要创建表结构：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第五步：验证&#34;&gt;&lt;a href=&#34;#第五步：验证&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证&#34;&gt;&lt;/a&gt;第五步：验证&lt;/h1&gt;&lt;p&gt;打开浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;你应该能看到与公司电脑一模一样的项目已经在运行了。&lt;/p&gt;
+&lt;p&gt;从此以后，你只需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;在公司&lt;/strong&gt;：写代码 -&amp;gt; &lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在家里&lt;/strong&gt;：&lt;code&gt;git pull&lt;/code&gt; -&amp;gt; &lt;code&gt;./vendor/bin/sail up -d&lt;/code&gt; -&amp;gt; 开造！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;这就是 Docker + Sail 带来的极致一致性体验。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;本篇解决了异地开发最麻烦的“环境同步”和“依赖安装”问题。&lt;br&gt;核心技巧在于那行&lt;strong&gt;用于“引导”的 Docker 命令&lt;/strong&gt;，它帮我们跨越了“没有 PHP 环境就没法安装 Sail，没有 Sail 就没法启动 PHP 环境”的鸿沟。&lt;/p&gt;
+&lt;p&gt;下一篇，我们将进入实战深水区：&lt;strong&gt;《日常使用篇》&lt;/strong&gt;，教你如何像在本地一样运行 Artisan 命令、使用 npm 编译前端、以及配置 Shell 别名让 &lt;code&gt;sail&lt;/code&gt; 变成更短的 &lt;code&gt;s&lt;/code&gt;。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（环境配置篇）</title>
+            <link>https://nightingalewk.cn/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/</link>
+            <category>Laravel</category>
+            <category>Docker</category>
+            <category>Sail</category>
+            <category>WSL2</category>
+            <pubDate>Fri, 23 Jan 2026 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;目标&#34;&gt;&lt;a href=&#34;#目标&#34; class=&#34;headerlink&#34; title=&#34;目标&#34;&gt;&lt;/a&gt;目标&lt;/h1&gt;&lt;p&gt;本文的目标非常明确：&lt;strong&gt;从一台刚装好系统的全新 Windows 11 电脑开始，直到浏览器成功访问 Laravel 默认欢迎页面。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中间我们将完成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开启 BIOS 虚拟化。&lt;/li&gt;
+&lt;li&gt;安装 WSL 2 (Windows Subsystem for Linux)。&lt;/li&gt;
+&lt;li&gt;安装 Docker Desktop。&lt;/li&gt;
+&lt;li&gt;使用 Sail 命令行一键创建并启动项目。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前置要求&lt;/strong&gt;：你的 Windows 11 版本需要是最新的（或者至少是近两年的版本）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第一步：检查虚拟化-Virtualization&#34;&gt;&lt;a href=&#34;#第一步：检查虚拟化-Virtualization&#34; class=&#34;headerlink&#34; title=&#34;第一步：检查虚拟化 (Virtualization)&#34;&gt;&lt;/a&gt;第一步：检查虚拟化 (Virtualization)&lt;/h1&gt;&lt;p&gt;Docker 和 WSL2 的运行依赖于 CPU 的虚拟化技术。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 &lt;strong&gt;任务管理器 (Task Manager)&lt;/strong&gt; (&lt;code&gt;Ctrl + Shift + Esc&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;切换到 &lt;strong&gt;性能 (Performance)&lt;/strong&gt; -&amp;gt; &lt;strong&gt;CPU&lt;/strong&gt; 选项卡。&lt;/li&gt;
+&lt;li&gt;查看右下角的 &lt;strong&gt;虚拟化 (Virtualization)&lt;/strong&gt; 状态。&lt;ul&gt;
+&lt;li&gt;**已启用 (Enabled)**：✅通过，直接进入下一步。&lt;/li&gt;
+&lt;li&gt;**已禁用 (Disabled)**：❌需要重启电脑进入 BIOS 开启。不同品牌主板开启方式不同（通常在 &lt;code&gt;Advanced&lt;/code&gt; -&amp;gt; &lt;code&gt;CPU Configuration&lt;/code&gt; -&amp;gt; &lt;code&gt;Intel VT-x&lt;/code&gt; 或 &lt;code&gt;AMD-V&lt;/code&gt;），请自行搜索“主板品牌 + 开启虚拟化”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第二步：安装-WSL-2&#34;&gt;&lt;a href=&#34;#第二步：安装-WSL-2&#34; class=&#34;headerlink&#34; title=&#34;第二步：安装 WSL 2&#34;&gt;&lt;/a&gt;第二步：安装 WSL 2&lt;/h1&gt;&lt;p&gt;现在的 Windows 安装 Linux 子系统已经简单到令人发指，不需要再去控制面板勾选那一堆复杂的“Windows 功能”了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;鼠标右键点击 &lt;strong&gt;开始菜单&lt;/strong&gt;，选择 &lt;strong&gt;终端管理员 (Terminal Admin)&lt;/strong&gt; 或 **PowerShell (管理员)**。&lt;/li&gt;
+&lt;li&gt;输入以下命令并回车：&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl &lt;span class=&#34;literal&#34;&gt;--install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;等待进度条跑完&lt;/strong&gt;。系统会自动下载并安装 Ubuntu 发行版。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重启电脑&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;重启后的操作&lt;/strong&gt;：&lt;br&gt;电脑重启后，会自动弹出一个黑色的终端窗口（Ubuntu）。它会提示你：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enter new UNIX username: （输入你想用的用户名，全小写，如 &lt;code&gt;wang&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;Enter new UNIX password: （设置密码，输入时屏幕不会显示，输完回车即可）&lt;/li&gt;
+&lt;li&gt;Retype new UNIX password: （确认密码）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;搞定后，如果你通过 &lt;code&gt;wsl -l -v&lt;/code&gt; 命令查看，应该能看到一个 &lt;code&gt;Ubuntu&lt;/code&gt; 正在运行，且 Version 为 2。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第三步：安装-Docker-Desktop&#34;&gt;&lt;a href=&#34;#第三步：安装-Docker-Desktop&#34; class=&#34;headerlink&#34; title=&#34;第三步：安装 Docker Desktop&#34;&gt;&lt;/a&gt;第三步：安装 Docker Desktop&lt;/h1&gt;&lt;p&gt;Docker Desktop 是 Docker 在 Windows 上的图形化管理工具，它会自动接管 WSL2 中的 Docker 后端。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&#34;https://www.docker.com/products/docker-desktop/&#34;&gt;Docker 官网&lt;/a&gt; 下载 &lt;strong&gt;Docker Desktop for Windows&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;双击安装。&lt;strong&gt;注意&lt;/strong&gt;：在安装界面的 Configuration 步骤中，务必勾选：&lt;ul&gt;
+&lt;li&gt;✅ &lt;strong&gt;Use WSL 2 instead of Hyper-V (recommended)&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装完成后，打开 Docker Desktop。&lt;ul&gt;
+&lt;li&gt;它可能会让你登录，你可以选择 Skip 暂时跳过。&lt;/li&gt;
+&lt;li&gt;看到左下角变为 &lt;strong&gt;绿色&lt;/strong&gt; 的 Engine running，说明 Docker 启动成功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;关键配置：开启 WSL 集成&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击 Docker Desktop右上角的齿轮图标 ⚙️ (Settings)。&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;Resources&lt;/strong&gt; -&amp;gt; &lt;strong&gt;WSL Integration&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;确保 “Enable integration with my default WSL distro” 是 &lt;strong&gt;勾选&lt;/strong&gt; 状态。&lt;/li&gt;
+&lt;li&gt;如果下方出现了 &lt;code&gt;Ubuntu&lt;/code&gt; 的开关，也把它打开 (Toggle On)。&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;Apply &amp;amp; Restart&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第四步：创建并启动-Laravel-项目&#34;&gt;&lt;a href=&#34;#第四步：创建并启动-Laravel-项目&#34; class=&#34;headerlink&#34; title=&#34;第四步：创建并启动 Laravel 项目&#34;&gt;&lt;/a&gt;第四步：创建并启动 Laravel 项目&lt;/h1&gt;&lt;p&gt;见证奇迹的时刻到了。我们所有的操作都在 WSL (Ubuntu) 中进行。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;打开 &lt;strong&gt;Windows Terminal&lt;/strong&gt;，点击标题栏的下拉箭头，选择 &lt;strong&gt;Ubuntu&lt;/strong&gt; 这里就是你的 Linux 世界。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;创建并进入代码目录&lt;/strong&gt;：&lt;br&gt;为了保持（也就是 Linux 系统里的家目录）整洁，我们推荐新建一个 &lt;code&gt;code&lt;/code&gt; 文件夹来存放未来的所有项目：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;直接运行 Laravel 官方构建命令&lt;/strong&gt;：&lt;br&gt;把下面的 &lt;code&gt;example-app&lt;/code&gt; 换成你想要的项目名字（比如 &lt;code&gt;blog&lt;/code&gt;）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -s https://laravel.build/example-app | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;这行命令会自动拉取由 Laravel 官方维护的 Docker 镜像，并开始下载所有依赖。第一次运行可能会受网速影响，请耐心等待（建议科学上网环境，或者配置 Docker 镜像加速）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;进入项目目录&lt;/strong&gt;：&lt;br&gt;当命令跑完，提示 “Thank you! We hope you build something incredible.” 时，执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; example-app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;配置快捷指令（强烈推荐）&lt;/strong&gt;：&lt;br&gt;每次都输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt; 太麻烦了。我们配置一个 &lt;code&gt;sail&lt;/code&gt;别名（官方推荐做法）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;alias sail=&amp;#x27;[ -f sail ] &amp;amp;&amp;amp; bash sail || bash vendor/bin/sail&amp;#x27;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;这样以后你在任何目录下，只要敲 &lt;code&gt;sail&lt;/code&gt; 就能调用命令了。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;**启动 Sail (Docker 环境)**：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;up&lt;/code&gt;：启动服务。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-d&lt;/code&gt;：后台运行 (Detached mode)，这样你的终端窗口不会被日志霸占。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;第一次启动会拉取 MySQL、Redis 等镜像，可能需要一点时间。&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;第五步：验证成果&#34;&gt;&lt;a href=&#34;#第五步：验证成果&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证成果&#34;&gt;&lt;/a&gt;第五步：验证成果&lt;/h1&gt;&lt;p&gt;打开你的浏览器（Chrome&amp;#x2F;Edge），在地址栏输入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost/&#34;&gt;http://localhost&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你看到那个巨大的、红色的（或白色的）Laravel Logo，以及醒目的版本号。&lt;/p&gt;
+&lt;p&gt;🎉 &lt;strong&gt;恭喜你！你已经成功在 Windows 上部署了一套最先进的 Laravel Docker 开发环境！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;此时：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你的电脑里没有安装 PHP。&lt;/li&gt;
+&lt;li&gt;你的电脑里没有安装 MySQL。&lt;/li&gt;
+&lt;li&gt;你的电脑里没有安装 Nginx。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;但它们都在为你服务。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;下集预告&#34;&gt;&lt;a href=&#34;#下集预告&#34; class=&#34;headerlink&#34; title=&#34;下集预告&#34;&gt;&lt;/a&gt;下集预告&lt;/h1&gt;&lt;p&gt;环境通了，代码也在跑了。但我们怎么把代码存起来？怎么在公司写一半，回家换台电脑拉下来接着写？&lt;br&gt;下一篇：&lt;strong&gt;《Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）》&lt;/strong&gt;，我们将配置 GitHub 仓库，并演示“异地开发，无感切换”的丝滑体验。&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/22/82.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E4%BB%8B%E7%BB%8D%E7%AF%87%EF%BC%89/</guid>
+            <title>Laravel Sail 开发环境部署一把过（介绍篇）</title>
+            <link>https://nightingalewk.cn/2026/01/22/82.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E4%BB%8B%E7%BB%8D%E7%AF%87%EF%BC%89/</link>
+            <category>Laravel</category>
+            <category>Sail</category>
+            <pubDate>Thu, 22 Jan 2026 14:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 开始阅读前，必读！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本系列教程所涉及的技术栈（Docker, WSL2, Composer 等）强烈依赖“科学上网”环境。&lt;/strong&gt;&lt;br&gt;如果您无法解决稳定的网络连接问题（访问 Google&amp;#x2F;GitHub 慢），&lt;strong&gt;请直接放弃本方案&lt;/strong&gt;，转而使用 PhpStudy、宝塔面板等国产集成环境，否则您的部署过程将充满痛苦与报错。&lt;br&gt;（关于网络问题的终极解决方案，可见系列最后一篇《疑难杂症篇》）&lt;/p&gt;
+&lt;p&gt;身为开发者，拥有获取各类信息的 &lt;strong&gt;工具&lt;/strong&gt; 和能力，比开发更重要&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;写在前面&#34;&gt;&lt;a href=&#34;#写在前面&#34; class=&#34;headerlink&#34; title=&#34;写在前面&#34;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;在 Windows 下开发 PHP 一直是一个让人纠结的话题。从早期的 XAMPP、WAMP，到后来国产方便快捷的 PhpStudy（小皮面板）、宝塔面板，再到更为现代化的 Docker 方案。每一个阶段都有它的痛点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;集成环境（XAMPP&amp;#x2F;小皮等）&lt;/strong&gt;：虽然安装简单，但往往环境版本更新滞后，且配置修改（如 php.ini）容易被覆盖或难以版本控制。还会把各种服务注册到 Windows 系统服务里，造成“环境污染”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;虚拟机（Vagrant &amp;#x2F; Homestead）&lt;/strong&gt;：虽然隔离性好了，但资源占用巨大，启动慢，文件同步性能一直是痛点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本机硬撸（手动安装 PHP&amp;#x2F;Composer&amp;#x2F;Node）&lt;/strong&gt;：最硬核，但也最脆弱。当你同时维护一个 PHP 7.4 的老项目和一个 PHP 8.2 的新项目时，不断的切换环境变量与版本会让你怀疑人生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在这个文档及其未来的文档，我计划开一个系列博客文章，叫做&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt;，旨在为 Windows (WSL2) 用户提供目前最优雅、最舒适的 Laravel 开发环境解决方案。&lt;/p&gt;
+&lt;h2 id=&#34;系列计划&#34;&gt;&lt;a href=&#34;#系列计划&#34; class=&#34;headerlink&#34; title=&#34;系列计划&#34;&gt;&lt;/a&gt;系列计划&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;介绍篇（本文）&lt;/strong&gt;：什么是 Laravel Sail？为什么它是终极方案？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;环境配置篇&lt;/strong&gt;：WSL2、Docker Desktop 安装与 Sail 初始化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git 同步与多机开发篇&lt;/strong&gt;：异地开发、Docker 引导依赖安装。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日常使用篇&lt;/strong&gt;：常用命令、别名配置、服务管理、Xdebug 调试。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;疑难杂症篇&lt;/strong&gt;：常见报错解决与性能优化技巧。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;番外篇&lt;/strong&gt;：工欲善其事——我的三套开发装备大公开（参考配置）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;什么是-Laravel-Sail？&#34;&gt;&lt;a href=&#34;#什么是-Laravel-Sail？&#34; class=&#34;headerlink&#34; title=&#34;什么是 Laravel Sail？&#34;&gt;&lt;/a&gt;什么是 Laravel Sail？&lt;/h1&gt;&lt;p&gt;在动手配置之前，我们需要先理清几个概念，防止新手朋友云里雾里。&lt;/p&gt;
+&lt;h3 id=&#34;1-Laravel&#34;&gt;&lt;a href=&#34;#1-Laravel&#34; class=&#34;headerlink&#34; title=&#34;1. Laravel&#34;&gt;&lt;/a&gt;1. Laravel&lt;/h3&gt;&lt;p&gt;Laravel 是目前 PHP 生态中最流行、最优雅的 Web 开发框架。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;约定大于配置&lt;/strong&gt;：这是 Laravel 的核心理念。这一特性在 AI 时代尤为重要——因为代码结构规范、可预测，&lt;strong&gt;非常适合 AI (LLM) 理解并生成高质量代码&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;全能架构与繁荣生态&lt;/strong&gt;：它提供了极度完善的工具链，“什么都有”。得益于 PHP 多年的积累，拥有一种老牌语言特有的从容自信。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;老将新春&lt;/strong&gt;：最新的 PHP 和 Laravel 都在积极拥抱 AI，在保持稳定性的同时不断焕发新的活力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-Docker&#34;&gt;&lt;a href=&#34;#2-Docker&#34; class=&#34;headerlink&#34; title=&#34;2. Docker&#34;&gt;&lt;/a&gt;2. Docker&lt;/h3&gt;&lt;p&gt;Docker 是目前全球最流行的容器化技术。你可以把它想象成一种轻量级的“虚拟机”。&lt;br&gt;在 Docker 的世界里，所有的服务（PHP, MySQL, Redis）都是一个个独立的&lt;strong&gt;容器&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你需要 MySQL？启动一个 MySQL 容器。&lt;/li&gt;
+&lt;li&gt;你需要 Redis？启动一个 Redis 容器。&lt;/li&gt;
+&lt;li&gt;用完了？删掉容器，你的电脑依然干干净净，不留一丝痕迹。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-Laravel-Sail&#34;&gt;&lt;a href=&#34;#3-Laravel-Sail&#34; class=&#34;headerlink&#34; title=&#34;3. Laravel Sail&#34;&gt;&lt;/a&gt;3. Laravel Sail&lt;/h3&gt;&lt;p&gt;虽然 Docker 很强大，但是 &lt;code&gt;docker run&lt;/code&gt;、&lt;code&gt;docker-compose&lt;/code&gt;、&lt;code&gt;Dockerfile&lt;/code&gt; 这些复杂的配置文件和命令对于只想安心写代码的开发者来说，门槛还是太高了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Laravel Sail 就是 Laravel 官方为了解决这个问题而推出的&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Sail 本质上是一个轻量级的命令行界面（CLI），它帮你把复杂的 Docker 命令封装成了极为简单的 &lt;code&gt;sail&lt;/code&gt; 命令。你不需要去研究怎么写 &lt;code&gt;docker-compose.yml&lt;/code&gt;（虽然它在项目里，你也可以改），你只需要输入 &lt;code&gt;sail up&lt;/code&gt;，你的整套开发环境（PHP, MySQL, Redis, 甚至邮件测试服务 Mailpit）就全部启动了。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;为什么选择-Sail？&#34;&gt;&lt;a href=&#34;#为什么选择-Sail？&#34; class=&#34;headerlink&#34; title=&#34;为什么选择 Sail？&#34;&gt;&lt;/a&gt;为什么选择 Sail？&lt;/h1&gt;&lt;p&gt;市面上方案那么多，为什么我强烈推荐 Sail？&lt;/p&gt;
+&lt;h2 id=&#34;1-彻底的“环境隔离”与“零污染”&#34;&gt;&lt;a href=&#34;#1-彻底的“环境隔离”与“零污染”&#34; class=&#34;headerlink&#34; title=&#34;1. 彻底的“环境隔离”与“零污染”&#34;&gt;&lt;/a&gt;1. 彻底的“环境隔离”与“零污染”&lt;/h2&gt;&lt;p&gt;这是最核心的理由。&lt;br&gt;使用 Sail，你的 Windows 本机&lt;strong&gt;不需要安装 PHP&lt;/strong&gt;，&lt;strong&gt;不需要安装 Composer&lt;/strong&gt;，&lt;strong&gt;不需要安装 Node.js&lt;/strong&gt;，甚至&lt;strong&gt;不需要安装 MySQL&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;所有的这一切，都运行在 Docker 容器里（配合 WSL2）。&lt;br&gt;这意味着：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;多版本共存&lt;/strong&gt;：你可以同时开启 Project A (PHP 8.2) 和 Project B (PHP 7.4)，互不干扰。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电脑洁癖福音&lt;/strong&gt;：不想开发了？关掉 Docker，你的电脑就是一台纯净的办公本，没有任何残留服务在后台跑。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极高的容错率&lt;/strong&gt;：无论你在容器里怎么折腾，哪怕把环境搞挂了，它绝对不会影响你的 Windows 原系统。大不了把 Docker 里的容器删了，甚至重装 Docker，然后只需一句 &lt;code&gt;sail up -d&lt;/code&gt;，环境瞬间满血复活。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-团队环境-100-一致&#34;&gt;&lt;a href=&#34;#2-团队环境-100-一致&#34; class=&#34;headerlink&#34; title=&#34;2. 团队环境 100% 一致&#34;&gt;&lt;/a&gt;2. 团队环境 100% 一致&lt;/h2&gt;&lt;p&gt;曾经无数次遇到过这种对话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“老王，为什么这个代码我跑报错？”&lt;br&gt;“不可能啊，我本地是好的。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这种 “It works on my machine” 的问题，通常是因为大家本地的 PHP 扩展不一样，或者 MySQL 版本有细微差异。&lt;br&gt;使用 Sail，项目根目录下的 &lt;code&gt;docker-compose.yml&lt;/code&gt; 规定了环境的一切。&lt;strong&gt;代码库里长什么样，大家的开发环境就是什么样&lt;/strong&gt;。新人入职，拉下代码，&lt;code&gt;sail up&lt;/code&gt;，环境就配好了，不再需要写长长的 Wiki 告诉新人要装什么扩展。&lt;/p&gt;
+&lt;h2 id=&#34;3-官方原生支持，开箱即用&#34;&gt;&lt;a href=&#34;#3-官方原生支持，开箱即用&#34; class=&#34;headerlink&#34; title=&#34;3. 官方原生支持，开箱即用&#34;&gt;&lt;/a&gt;3. 官方原生支持，开箱即用&lt;/h2&gt;&lt;p&gt;Sail 是 Laravel 默认自带的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它自动配置好了 PHP 运行环境。&lt;/li&gt;
+&lt;li&gt;它集成好了 Node&amp;#x2F;NPM&amp;#x2F;Vite 前端编译环境。&lt;/li&gt;
+&lt;li&gt;它甚至预装好了各种常用扩展（ZIP, BCMath, GD, Redis …）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你不需要去网上找各种野路子教程，官方文档就是最好的说明书。&lt;/p&gt;
+&lt;h2 id=&#34;4-这里的坑，我来帮你踩&#34;&gt;&lt;a href=&#34;#4-这里的坑，我来帮你踩&#34; class=&#34;headerlink&#34; title=&#34;4. 这里的坑，我来帮你踩&#34;&gt;&lt;/a&gt;4. 这里的坑，我来帮你踩&lt;/h2&gt;&lt;p&gt;虽然 Sail 很好，但在国内的网络环境下，从 Docker 镜像下载到 WSL2 的配置，还是有一些坑点的。这也是我写这个《一把过》系列的初衷——&lt;strong&gt;让原本可能报错的步骤，变得丝般顺滑&lt;/strong&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;如果你是一名 Laravel 开发者，或者正准备入坑 Laravel，&lt;strong&gt;Laravel Sail + WSL2 + Docker&lt;/strong&gt; 绝对是 Windows 平台上体验最好、最符合国际主流标准的开发环境配置。&lt;/p&gt;
+&lt;p&gt;下一篇，我们将正式动手，从零开始搭建这套环境。准备好你的终端，我们开始吧！&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2025/12/09/81.%20Gemini%20Rules/</guid>
             <title>Gemini Rules</title>
@@ -438,8 +997,8 @@
             <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
             <link>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</link>
             <category>Git</category>
-            <category>DevOps</category>
             <category>Monorepo</category>
+            <category>DevOps</category>
             <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -1072,400 +1631,6 @@ n. [Final action]
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/1.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/2.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/3.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/4.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/5.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/6.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/7.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/8.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/9.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/10.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/11.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/12.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/13.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/14.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/15.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/16.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/17.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/18.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/19.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/20.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/21.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/22.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/23.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/24.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/25.png&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/24/67.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%BC%80%E5%9D%90%E6%A0%87/</guid>
-            <title>膝盖中箭之地 坐标公开</title>
-            <link>https://nightingalewk.cn/2024/10/24/67.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%BC%80%E5%9D%90%E6%A0%87/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Thu, 24 Oct 2024 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;适用周目：17 周目&lt;/p&gt;
-&lt;p&gt;数据来源：realms 故事&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;h3 id=&#34;🌴-主世界&#34;&gt;&lt;a href=&#34;#🌴-主世界&#34; class=&#34;headerlink&#34; title=&#34;🌴 主世界&#34;&gt;&lt;/a&gt;🌴 主世界&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;出生点&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;0, 64, 0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;掠夺者前哨站&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-3386, 97, -3402&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;森林府邸&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;5263, 89, 3542&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;地狱要塞&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;-380, 73, 807&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;海底神殿&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1671, 62, -3431&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;蘑菇岛&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;894, 64, -3539&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;⚠️-地狱&#34;&gt;&lt;a href=&#34;#⚠️-地狱&#34; class=&#34;headerlink&#34; title=&#34;⚠️ 地狱&#34;&gt;&lt;/a&gt;⚠️ 地狱&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;烈焰人刷怪塔&lt;ul&gt;
-&lt;li&gt;1, 114, 22&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;村民交易所&lt;ul&gt;
-&lt;li&gt;-11, 114, 42&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;⭕-下界&#34;&gt;&lt;a href=&#34;#⭕-下界&#34; class=&#34;headerlink&#34; title=&#34;⭕ 下界&#34;&gt;&lt;/a&gt;⭕ 下界&lt;/h3&gt;&lt;p&gt;暂无&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</guid>
-            <title>膝盖中箭之地 addon 使用说明</title>
-            <link>https://nightingalewk.cn/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Wed, 23 Oct 2024 13:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;写在前面&#34;&gt;&lt;a href=&#34;#写在前面&#34; class=&#34;headerlink&#34; title=&#34;写在前面&#34;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;本文将列举服务器当前使用过的插件的使用指南，便于快速查找使用方法。&lt;/li&gt;
-&lt;li&gt;善用右侧的导航栏，快速定位到您需要的内容。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;1-World-Utilities-实用工具&#34;&gt;&lt;a href=&#34;#1-World-Utilities-实用工具&#34; class=&#34;headerlink&#34; title=&#34;1. World Utilities - 实用工具&#34;&gt;&lt;/a&gt;1. World Utilities - 实用工具&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;✅ Guide Book - 指南书&lt;ul&gt;
-&lt;li&gt;介绍：死亡后丢掉了合成指南？不要紧，找个工作台，简单的原料就可以再做一本，World Utilities 的全部合成指南都在书里，英语好的家人们可直接看书，而无需看下方内容了。&lt;/li&gt;
-&lt;li&gt;材料准备：&lt;ul&gt;
-&lt;li&gt;[B]书 x1&lt;/li&gt;
-&lt;li&gt;[P]木稿 x1&lt;/li&gt;
-&lt;li&gt;[S]木铲 x1&lt;/li&gt;
-&lt;li&gt;[A]木斧 x1&lt;/li&gt;
-&lt;li&gt;[W]木剑 x1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;合成方式：&lt;ul&gt;
-&lt;li&gt;[&amp;nbsp;&amp;nbsp;&amp;nbsp;][P][&amp;nbsp;&amp;nbsp;&amp;nbsp;]&lt;/li&gt;
-&lt;li&gt;[W][B][A]&lt;/li&gt;
-&lt;li&gt;[&amp;nbsp;&amp;nbsp;&amp;nbsp;][S][&amp;nbsp;&amp;nbsp;&amp;nbsp;]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;✅ homes - 快速传送&lt;ul&gt;
-&lt;li&gt;介绍：该功能实现了快速传送到指定位置的功能，合成后右键使用，可记录当前所在位置，共开放了 10 个位置&lt;/li&gt;
-&lt;li&gt;材料准备：&lt;ul&gt;
-&lt;li&gt;[C]原石 x5&lt;/li&gt;
-&lt;li&gt;[P]木板 x1&lt;/li&gt;
-&lt;li&gt;[D]木门（任意） x1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;合成方式：&lt;ul&gt;
-&lt;li&gt;[&amp;nbsp;&amp;nbsp;&amp;nbsp;][P][&amp;nbsp;&amp;nbsp;&amp;nbsp;]&lt;/li&gt;
-&lt;li&gt;[C][D][C]&lt;/li&gt;
-&lt;li&gt;[C][C][C]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;✅ Multiblock Pickaxe - 多方块挖掘镐&lt;ul&gt;
-&lt;li&gt;介绍：现在挖一次方块就等于挖了 9 个方块，挖掘区域为下稿子的方块周围一圈，也就是9个，而区域方向为挖掘方块受击面所在平面，极大提升了下矿体验。&lt;/li&gt;
-&lt;li&gt;材料准备：&lt;ul&gt;
-&lt;li&gt;[D]钻石镐 x3&lt;/li&gt;
-&lt;li&gt;[S]木棍 x2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;合成方式：&lt;ul&gt;
-&lt;li&gt;[D][D][D]&lt;/li&gt;
-&lt;li&gt;[&amp;nbsp;&amp;nbsp;&amp;nbsp;][S][&amp;nbsp;&amp;nbsp;&amp;nbsp;]&lt;/li&gt;
-&lt;li&gt;[&amp;nbsp;&amp;nbsp;&amp;nbsp;][S][&amp;nbsp;&amp;nbsp;&amp;nbsp;]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;✅ Omni Tool - 多功能工具&lt;ul&gt;
-&lt;li&gt;介绍：使用这个多功能工具优化你的库存空间。这使你能够像使用镐、斧头或铲子一样打破任何方块。出门带着一个就行了，大大提高跑图体验。&lt;/li&gt;
-&lt;li&gt;材料准备：&lt;ul&gt;
-&lt;li&gt;[H]蜂蜜块 x6&lt;/li&gt;
-&lt;li&gt;[A]钻石斧 x1&lt;/li&gt;
-&lt;li&gt;[P]钻石镐 x1&lt;/li&gt;
-&lt;li&gt;[S]钻石铲 x1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;合成方式：&lt;ul&gt;
-&lt;li&gt;[H][A][H]&lt;/li&gt;
-&lt;li&gt;[H][P][H]&lt;/li&gt;
-&lt;li&gt;[H][S][H]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;✅ Harvester Hoe - 收割者锄&lt;ul&gt;
-&lt;li&gt;介绍：收割的作物将自动重新种植，掉落的物品将添加到您的库存中，除了用于重新种植所需的种子！这将适用于小麦、胡萝卜、甜菜根、土豆、瓜类、南瓜、可可豆和下界疣。&lt;/li&gt;
-&lt;li&gt;材料准备：&lt;ul&gt;
-&lt;li&gt;[H]钻石锄 x1&lt;/li&gt;
-&lt;li&gt;[W]小麦种子 x1&lt;/li&gt;
-&lt;li&gt;[M]西瓜种子 x1&lt;/li&gt;
-&lt;li&gt;[U]南瓜种子 x1&lt;/li&gt;
-&lt;li&gt;[O]可可豆 x1&lt;/li&gt;
-&lt;li&gt;[X]小麦种子 x1&lt;/li&gt;
-&lt;li&gt;[B]甜菜根种子 x1&lt;/li&gt;
-&lt;li&gt;[P]土豆 x1&lt;/li&gt;
-&lt;li&gt;[C]胡萝卜 x1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;合成方式：&lt;ul&gt;
-&lt;li&gt;[W][M][U]&lt;/li&gt;
-&lt;li&gt;[O][H][X]&lt;/li&gt;
-&lt;li&gt;[B][P][C]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</guid>
-            <title>膝盖中箭之地 常见问题</title>
-            <link>https://nightingalewk.cn/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Wed, 23 Oct 2024 12:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;一、写在前面&#34;&gt;&lt;a href=&#34;#一、写在前面&#34; class=&#34;headerlink&#34; title=&#34;一、写在前面&#34;&gt;&lt;/a&gt;一、写在前面&lt;/h2&gt;&lt;p&gt;本文将集中回答网友们回复的各类问题，毕竟很多问题回答的次数多了我也烦，还不如在这里列一个问答列表，方便大家查阅&lt;/p&gt;
-&lt;p&gt;本文最后更新时间：2024年10月23日&lt;/p&gt;
-&lt;h2 id=&#34;二、常见问题&#34;&gt;&lt;a href=&#34;#二、常见问题&#34; class=&#34;headerlink&#34; title=&#34;二、常见问题&#34;&gt;&lt;/a&gt;二、常见问题&lt;/h2&gt;&lt;h3 id=&#34;Q：服务器换图的原则和频率是怎么规定的？&#34;&gt;&lt;a href=&#34;#Q：服务器换图的原则和频率是怎么规定的？&#34; class=&#34;headerlink&#34; title=&#34;Q：服务器换图的原则和频率是怎么规定的？&#34;&gt;&lt;/a&gt;Q：服务器换图的原则和频率是怎么规定的？&lt;/h3&gt;&lt;p&gt;除非当前图已经无法满足新版本的需求，否则一直不换，稳定游玩到底。&lt;/p&gt;
-&lt;h3 id=&#34;Q：服务器是不是收费的&#34;&gt;&lt;a href=&#34;#Q：服务器是不是收费的&#34; class=&#34;headerlink&#34; title=&#34;Q：服务器是不是收费的&#34;&gt;&lt;/a&gt;Q：服务器是不是收费的&lt;/h3&gt;&lt;p&gt;永久免费，欢迎赞助（要恰饭的嘛）&lt;/p&gt;
-&lt;h3 id=&#34;Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？&#34;&gt;&lt;a href=&#34;#Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？&#34; class=&#34;headerlink&#34; title=&#34;Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？&#34;&gt;&lt;/a&gt;Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？&lt;/h3&gt;&lt;p&gt;我有事业、爱人、家人、朋友，游戏审核啥的只能放后面，理解万岁！婚后男人你懂的 ~&lt;/p&gt;
-&lt;p&gt;你们的问题我都会看，请耐心等待。&lt;/p&gt;
-&lt;p&gt;当然对于你的申请来说，要是你的申请流程没按照审核群置顶公告的流程来，我肯定不理你鸭，回去看看流程补齐缺失的就好了&lt;/p&gt;
-&lt;h3 id=&#34;Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？&#34;&gt;&lt;a href=&#34;#Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？&#34; class=&#34;headerlink&#34; title=&#34;Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？&#34;&gt;&lt;/a&gt;Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？&lt;/h3&gt;&lt;p&gt;对于这样的人，一眼DJ，鉴定为纯纯的铸币。&lt;/p&gt;
-&lt;p&gt;回到正题，有问题你可以这样问：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;建议服务器 …&lt;/li&gt;
-&lt;li&gt;我觉得加上 … 更好&lt;/li&gt;
-&lt;li&gt;不知道加上 … 服务器是不是会更好&lt;/li&gt;
-&lt;li&gt;请问 …&lt;/li&gt;
-&lt;li&gt;可否 …&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我欢迎大家积极发表理性的意见和建议，“会说话”是一个人的基本素养。&lt;/p&gt;
-&lt;h3 id=&#34;Q：我要是不想玩了，组织会怎么处理？&#34;&gt;&lt;a href=&#34;#Q：我要是不想玩了，组织会怎么处理？&#34; class=&#34;headerlink&#34; title=&#34;Q：我要是不想玩了，组织会怎么处理？&#34;&gt;&lt;/a&gt;Q：我要是不想玩了，组织会怎么处理？&lt;/h3&gt;&lt;p&gt;一般玩家都在自行退群或者跟我说声不想玩的，我都是走“三删除”的逻辑：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;删除 xbox 好友&lt;/li&gt;
-&lt;li&gt;剥夺服务器玩家用户权限&lt;/li&gt;
-&lt;li&gt;踢群&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;一旦有人退群，不管是有意无意的，一律走“三删除”的逻辑。&lt;/p&gt;
-&lt;h3 id=&#34;Q：服务器掉线？高延时？&#34;&gt;&lt;a href=&#34;#Q：服务器掉线？高延时？&#34; class=&#34;headerlink&#34; title=&#34;Q：服务器掉线？高延时？&#34;&gt;&lt;/a&gt;Q：服务器掉线？高延时？&lt;/h3&gt;&lt;p&gt;在群里反馈一下，只要有一个人能玩，就代表着服务器没问题。那就只有是你的问题了，看看网络是不是不顺畅，看看设备是不是不给力。&lt;/p&gt;
-&lt;p&gt;若都反应上不去等问题，那就是领域服务器崩了，等待微软自行修复即可。&lt;/p&gt;
-&lt;h3 id=&#34;Q：主群的管理员身份有啥用？不是群主一人独裁了吗？&#34;&gt;&lt;a href=&#34;#Q：主群的管理员身份有啥用？不是群主一人独裁了吗？&#34; class=&#34;headerlink&#34; title=&#34;Q：主群的管理员身份有啥用？不是群主一人独裁了吗？&#34;&gt;&lt;/a&gt;Q：主群的管理员身份有啥用？不是群主一人独裁了吗？&lt;/h3&gt;&lt;p&gt;仅作纪念意义。主群的管理员从建群到现在就一直这几个人，从来没变，其实可以把它当作是一种身份 —— 一个在群里待得比其他绝大部分群员久且很幸运的身份（类似绝版徽章）&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/23/65.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%8A%A0%E5%85%A5%E6%96%B9%E5%BC%8F/</guid>
-            <title>膝盖中箭之地 加入方式</title>
-            <link>https://nightingalewk.cn/2024/10/23/65.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%8A%A0%E5%85%A5%E6%96%B9%E5%BC%8F/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Wed, 23 Oct 2024 11:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
-&lt;li&gt;首先加入 QQ 审核群 417396863&lt;/li&gt;
-&lt;li&gt;填写 &lt;strong&gt;问卷调查&lt;/strong&gt;（&lt;a href=&#34;https://docs.qq.com/form/page/DQlBhdmFMc1BxQUxU?_w_tencentdocx_form=1&#34;&gt;点我填问卷&lt;/a&gt;）&lt;/li&gt;
-&lt;li&gt;看 &lt;strong&gt;玩家守则&lt;/strong&gt;（&lt;a href=&#34;https://nightingalewk.cn/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/&#34;&gt;点我看守则&lt;/a&gt;），找关键字（在文末，一句话）&lt;/li&gt;
-&lt;li&gt;找审核群的群主，回复【&lt;strong&gt;关键字&lt;/strong&gt;】和【&lt;strong&gt;XboxID&lt;/strong&gt;】&lt;/li&gt;
-&lt;li&gt;等待审批&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;等通过审核进主群后，你就可以正常游玩了。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/</guid>
-            <title>膝盖中箭之地 玩家守则</title>
-            <link>https://nightingalewk.cn/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Wed, 23 Oct 2024 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;本文将通过 3 小节来为您清晰条例的说明游玩时必须遵守的文件 —— 玩家守则，全篇阅读大约需要 5 分钟&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;h2 id=&#34;一、自我介绍&#34;&gt;&lt;a href=&#34;#一、自我介绍&#34; class=&#34;headerlink&#34; title=&#34;一、自我介绍&#34;&gt;&lt;/a&gt;一、自我介绍&lt;/h2&gt;&lt;p&gt;称呼我 wk 就行，XboxID：LexingtonWK，Java 账户昵称：NightingaleWK，毕业于&lt;a href=&#34;https://www.sdut.edu.cn/&#34;&gt;山东理工大学&lt;/a&gt;，计算机专业，曾任 Laravel 工程师职务与项目经理职务，现任 CEC 的某地数字城市，是一名 TALL STACK developer，本人是 1.7.2 入的坑，喜欢这款游戏的同时，同时不甘于一个人自己玩，于是买了个领域服务器，从 17 年一直开到现在。&lt;/p&gt;
-&lt;h2 id=&#34;二、服务器介绍&#34;&gt;&lt;a href=&#34;#二、服务器介绍&#34; class=&#34;headerlink&#34; title=&#34;二、服务器介绍&#34;&gt;&lt;/a&gt;二、服务器介绍&lt;/h2&gt;&lt;h3 id=&#34;1-配置&#34;&gt;&lt;a href=&#34;#1-配置&#34; class=&#34;headerlink&#34; title=&#34;1.配置&#34;&gt;&lt;/a&gt;1.配置&lt;/h3&gt;&lt;p&gt;目前提供 &lt;strong&gt;1 个&lt;/strong&gt; 服务器供玩家游玩：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;JAVA 版&lt;/strong&gt; 服务器&lt;ul&gt;
-&lt;li&gt;目前版本：1.21.41；&lt;/li&gt;
-&lt;li&gt;Addon 列表 ：&lt;ol&gt;
-&lt;li&gt;耐久显示&lt;/li&gt;
-&lt;li&gt;Damage Indicator Addon&lt;/li&gt;
-&lt;li&gt;Item Info+ &lt;/li&gt;
-&lt;li&gt;Hiker’s Friend Addon&lt;/li&gt;
-&lt;li&gt;Poisonous Potato Addon&lt;/li&gt;
-&lt;li&gt;Spark Pets Lite Addon&lt;/li&gt;
-&lt;li&gt;Spark Portals Addon&lt;/li&gt;
-&lt;li&gt;Combine Ores Addon&lt;/li&gt;
-&lt;li&gt;Gravestone Addon&lt;/li&gt;
-&lt;li&gt;World Utilities Addon&lt;/li&gt;
-&lt;li&gt;Planes Pro Addon&lt;/li&gt;
-&lt;li&gt;Security Addon&lt;/li&gt;
-&lt;li&gt;Furniture Addon&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-管理&#34;&gt;&lt;a href=&#34;#2-管理&#34; class=&#34;headerlink&#34; title=&#34;2.管理&#34;&gt;&lt;/a&gt;2.管理&lt;/h3&gt;&lt;p&gt;个人独裁。腐竹拥有一切条例解释权和所有行为裁定权；&lt;/p&gt;
-&lt;p&gt;没有乱七八糟的组织结构，就我一个人，我会尽最大可能公正客观的对待每一次提意，我所做的目的就是为了我更好的管理服务器、玩家更好的进行游戏；&lt;/p&gt;
-&lt;p&gt;回复和审批处理不会很及时，但我看见了的都会去给处理的，大家放心。&lt;/p&gt;
-&lt;h2 id=&#34;三、玩家守则&#34;&gt;&lt;a href=&#34;#三、玩家守则&#34; class=&#34;headerlink&#34; title=&#34;三、玩家守则&#34;&gt;&lt;/a&gt;三、玩家守则&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;生存不易，让自己坚强起来，不要无脑的等待他人的恩赐。用自己的实际行动在游戏里创造价值，赢得他人尊重；&lt;/li&gt;
-&lt;li&gt;不拿取他人物品、不杀害他人拥有的生物、不破坏他人领地方块、不恶意伤人，未经他人允许，请勿对他人及其所有财产进行抢、偷、借、损等行为；&lt;/li&gt;
-&lt;li&gt;对于作弊、卡恶性 Bug，造成游戏失衡、影响他人游戏体验的人，第一次警告，第二次飞机；&lt;/li&gt;
-&lt;li&gt;禁止高频红石、禁止高空流水（岩浆）；&lt;/li&gt;
-&lt;li&gt;游戏内外禁止污蔑诽谤、人身攻击、网络暴力等行为，若发现直接飞机并保留对其发起民事行驶处理的权利；&lt;/li&gt;
-&lt;li&gt;出生点周围区域为主城位置，建设请遵循群主安排，符合主城设计思路与风格。群主有权对不符合主城设计的建筑进行拆除，拆除后会给玩家进行一定的补偿；&lt;/li&gt;
-&lt;li&gt;生存发展时，建议圈地，若周围已有其他人，请与其协商，做到双方和谐共处；&lt;/li&gt;
-&lt;li&gt;请自觉把苦力怕的坑填上；&lt;/li&gt;
-&lt;li&gt;请大家通过自己的言行举止在建造领域积极向上的游戏氛围，双标党、优越狗、素质低下党、撕 13 党和小学生无脑言论党均是踢群的对象。有问题多沟通，有分歧互理解，没什么是沟通解决不了的，若有，那我就踢个群试试；&lt;/li&gt;
-&lt;li&gt;多利用牌子来表述自己的想法，比如“抱歉，误伤了您的牛，这是赔偿”、“一不小心地给你踩了，给你补种了”、“绝了，这是谁建的这么好看”、“你的红石设备被我一不小心玩坏了，需要怎么配合群里叫我，我帮你修”等；&lt;/li&gt;
-&lt;li&gt;谁提出谁实现。服务器推荐大家自己挖坑自己填，对自己的工程负责，当然，完全可以找志同道合的小伙伴一起实现；&lt;/li&gt;
-&lt;li&gt;严禁在服务器内的任何地方拉人，禁止宣传其他服务器。若您想自建服务器并找人，请您自己去贴吧知乎上努力，本服务器发现拉人情况直接飞机；&lt;/li&gt;
-&lt;li&gt;砍树请砍完。不要留个够不到的数头在那。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🔑 &lt;strong&gt;关键词：苟利国家生死以&lt;/strong&gt; 🔑&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</guid>
-            <title>从 0 开始部署 LNMP 生产环境</title>
-            <link>https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</link>
-            <category>linux</category>
-            <pubDate>Thu, 10 Oct 2024 09:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;前置准备工作&#34;&gt;&lt;a href=&#34;#前置准备工作&#34; class=&#34;headerlink&#34; title=&#34;前置准备工作&#34;&gt;&lt;/a&gt;前置准备工作&lt;/h2&gt;&lt;p&gt;本文章将指导您如何使用一台空白的云服务器（这里演示的是腾讯云的轻量服务器），在仅安装 ubuntu 24.04 操作系统的情况下，一步步完成 LNMP 环境的配置&lt;/p&gt;
-&lt;h2 id=&#34;1-初始化-root-账户密码&#34;&gt;&lt;a href=&#34;#1-初始化-root-账户密码&#34; class=&#34;headerlink&#34; title=&#34;1. 初始化 root 账户密码&#34;&gt;&lt;/a&gt;1. 初始化 root 账户密码&lt;/h2&gt;&lt;p&gt;一行指令即可实现，其中需要输入两次密码，自己要记住。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; passwd root&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;即便如此，这个 root 账户我们基本不用，但是初始化一下又没啥问题。&lt;/p&gt;
-&lt;h2 id=&#34;2-更新系统&#34;&gt;&lt;a href=&#34;#2-更新系统&#34; class=&#34;headerlink&#34; title=&#34;2. 更新系统&#34;&gt;&lt;/a&gt;2. 更新系统&lt;/h2&gt;&lt;p&gt;目的是确保系统的所有软件包都是最新的。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt update &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt upgrade -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;其中，-y 是 apt upgrade 命令中的一个选项，它的作用是自动回答 “yes”（是） 以确认安装或升级过程中的所有提示。&lt;/p&gt;
-&lt;h2 id=&#34;3-安装-Nginx&#34;&gt;&lt;a href=&#34;#3-安装-Nginx&#34; class=&#34;headerlink&#34; title=&#34;3. 安装 Nginx&#34;&gt;&lt;/a&gt;3. 安装 Nginx&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install nginx -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;安装完成后，可以使用以下命令检查 Nginx 是否已经正确启动：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl status nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;访问服务器的 IP 地址（例如：&lt;a href=&#34;http://your_server_ip),你应该能看到/&#34;&gt;http://your_server_ip），你应该能看到&lt;/a&gt; Nginx 的默认页面。&lt;/p&gt;
-&lt;h2 id=&#34;4-安装-MySQL&#34;&gt;&lt;a href=&#34;#4-安装-MySQL&#34; class=&#34;headerlink&#34; title=&#34;4. 安装 MySQL&#34;&gt;&lt;/a&gt;4. 安装 MySQL&lt;/h2&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install mysql-server -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;安装完成后，执行以下命令对 MySQL 进行安全性设置：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql_secure_installation&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;完成后，登录 MySQL 检查：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证&#34;&gt;&lt;a href=&#34;#4-修改-MySQL-的认证机制从-auth-socket-插件认证改为密码验证&#34; class=&#34;headerlink&#34; title=&#34;4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证&#34;&gt;&lt;/a&gt;4. 修改 MySQL 的认证机制从 auth_socket 插件认证改为密码验证&lt;/h2&gt;&lt;p&gt;在新的 MySQL 版本中，root 用户默认使用 auth_socket 插件进行身份验证，这意味着只有在系统中以 root 或 sudo 权限运行的用户才可以登录 MySQL，而无需密码。&lt;/p&gt;
-&lt;p&gt;但是这个机制不是我们需要的，如果不为 MySQL 的 root 用户设置密码，Laravel 将无法通过默认的 DB_USERNAME&amp;#x3D;root 和 DB_PASSWORD 来连接到数据库。因为 Laravel 的数据库连接需要使用传统的用户名和密码进行身份验证，而不是通过 auth_socket 插件的方式。&lt;/p&gt;
-&lt;p&gt;为了确保 Laravel 能够成功连接 MySQL 数据库，需要按照以下步骤操作：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;登录 MySQL：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; mysql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;查看 root 用户的身份验证插件：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;user&lt;/span&gt;, host, plugin &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; mysql.user;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;检查 root 用户的 plugin 是否为 auth_socket。&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;设置 root 用户的密码，并将身份验证插件更改为 mysql_native_password（或者 caching_sha2_password）：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;USER&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;root&amp;#x27;&lt;/span&gt;@&lt;span class=&#34;string&#34;&gt;&amp;#x27;localhost&amp;#x27;&lt;/span&gt; IDENTIFIED &lt;span class=&#34;keyword&#34;&gt;WITH&lt;/span&gt; mysql_native_password &lt;span class=&#34;keyword&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;your_new_password&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;或者使用 caching_sha2_password 插件：&lt;/p&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;ALTER&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;USER&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;root&amp;#x27;&lt;/span&gt;@&lt;span class=&#34;string&#34;&gt;&amp;#x27;localhost&amp;#x27;&lt;/span&gt; IDENTIFIED &lt;span class=&#34;keyword&#34;&gt;WITH&lt;/span&gt; caching_sha2_password &lt;span class=&#34;keyword&#34;&gt;BY&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;your_new_password&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;小课堂：MySQL 8.0 及之后的版本中，mysql_native_password 和 caching_sha2_password 是 MySQL 中两种不同的身份验证插件，它们在安全性和性能上有一定的区别。以下是它们的详细对比：&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1. mysql_native_password 插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 概述：mysql_native_password 是 MySQL 较早版本（5.7 及以前）中的默认身份验证插件，它通过哈希算法（SHA1）加密用户密码，并用于验证用户身份。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 优点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 兼容性好：与 MySQL 早期版本、PHP 及其他数据库驱动程序（如 PDO、MySQLi）都有很好的兼容性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 配置简单：不需要额外的密码加密设置，容易理解和使用。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 缺点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 安全性较低：使用 SHA1 作为哈希算法，而 SHA1 已被证明存在安全漏洞，因此使用该插件的密码容易受到彩虹表攻击和其他哈希破解技术的攻击。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 适用场景：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 与旧版本 MySQL 或旧版本客户端程序的兼容性需求。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 出于兼容性考虑，推荐在低风险环境或开发环境中使用。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. caching_sha2_password 插件&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 概述：caching_sha2_password 是 MySQL 8.0 及之后的默认身份验证插件，使用更安全的 SHA-256 哈希算法来加密密码，并带有密码缓存功能，可以提高身份验证的效率。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 优点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 更高的安全性：SHA-256 比 SHA1 更强大，能够更好地抵御暴力破解和其他类型的密码攻击。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 提高性能：使用了客户端和服务器的身份验证缓存机制，可以减少重复身份验证时的性能开销，提升性能表现。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 加密连接：支持加密连接（TLS/SSL），在不安全的网络中也可以保证传输中的数据安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    缺点：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 兼容性问题：由于 caching_sha2_password 是 MySQL 8.0 中引入的新插件，因此可能与旧版本的 MySQL 客户端和驱动程序不兼容。例如：一些旧版本的 PHP 和 MySQLi 扩展可能无法直接连接到使用 caching_sha2_password 插件的 MySQL 数据库。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 适用场景：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 强安全性需求：在生产环境中，推荐使用 caching_sha2_password 来确保数据安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        - 高性能需求：由于缓存机制的存在，适用于高并发和频繁数据库访问的场景。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;在选择建议方面：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1. 兼容性优先时使用 mysql_native_password：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 如果你的 Laravel 项目、PHP 版本较旧（例如 PHP 7.x），或者使用了旧的 MySQL 客户端库（如 MySQLi），可能会遇到 caching_sha2_password 不兼容的问题。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 在这种情况下，可以选择 mysql_native_password 作为过渡解决方案，以保证 Laravel 项目能够正常连接到数据库。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. 安全性优先时使用 caching_sha2_password：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 在生产环境中，如果你的 Laravel 项目、PHP 版本以及 MySQL 客户端均支持 MySQL 8.0 及以上，并且支持 caching_sha2_password 插件，建议使用该插件以提高密码安全性。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    - 另外，如果需要使用 SSL/TLS 加密的连接，也建议使用 caching_sha2_password。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;这里我选择的是 &lt;strong&gt;caching_sha2_password&lt;/strong&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;刷新权限表：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;FLUSH PRIVILEGES;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;退出 MySQL：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;exit;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;验证 root 密码是否生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mysql -u root -p&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;5-安装-PHP&#34;&gt;&lt;a href=&#34;#5-安装-PHP&#34; class=&#34;headerlink&#34; title=&#34;5. 安装 PHP&#34;&gt;&lt;/a&gt;5. 安装 PHP&lt;/h2&gt;&lt;p&gt;安装 PHP 及其扩展：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; apt install php-fpm php-mysql php-cli php-xml php-mbstring php-curl php-zip php-gd php-imagick -y&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;截稿时最新版本为 8.3&lt;/p&gt;
-&lt;p&gt;配置 PHP-FPM： 编辑 PHP 配置文件 php.ini：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; vim /etc/php/8.3/fpm/php.ini&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;确保以下参数值正确（如果没有则手动添加或修改）：&lt;/p&gt;
-&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;cgi.fix_pathinfo&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;memory_limit&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;512&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;upload_max_filesize&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;post_max_size&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;50&lt;/span&gt;M&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;max_execution_time&lt;/span&gt; = &lt;span class=&#34;number&#34;&gt;300&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;重启 PHP-FPM 服务：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl restart php8.3-fpm&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;6-配置-Nginx-以支持-PHP&#34;&gt;&lt;a href=&#34;#6-配置-Nginx-以支持-PHP&#34; class=&#34;headerlink&#34; title=&#34;6. 配置 Nginx 以支持 PHP&#34;&gt;&lt;/a&gt;6. 配置 Nginx 以支持 PHP&lt;/h2&gt;&lt;p&gt;创建一个新的 Nginx 配置文件，或者修改默认的配置文件：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; vim /etc/nginx/sites-available/laravel&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;在文件中添加以下内容（确保与 Laravel 项目目录匹配）：&lt;/p&gt;
-&lt;figure class=&#34;highlight nginx&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;section&#34;&gt;server&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;listen&lt;/span&gt; &lt;span class=&#34;number&#34;&gt;80&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;server_name&lt;/span&gt; your_domain_or_ip;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;root&lt;/span&gt; /var/www/laravel/public;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;attribute&#34;&gt;index&lt;/span&gt; index.php index.html index.htm;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; / &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;try_files&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;$uri&lt;/span&gt;/ /index.php?&lt;span class=&#34;variable&#34;&gt;$query_string&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;regexp&#34;&gt;~ \.php$&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;include&lt;/span&gt; snippets/fastcgi-php.conf;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;fastcgi_pass&lt;/span&gt; unix:/var/run/php/php8.1-fpm.sock;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;fastcgi_param&lt;/span&gt; SCRIPT_FILENAME &lt;span class=&#34;variable&#34;&gt;$document_root&lt;/span&gt;&lt;span class=&#34;variable&#34;&gt;$fastcgi_script_name&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;include&lt;/span&gt; fastcgi_params;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;section&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;regexp&#34;&gt;~ /\.ht&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;attribute&#34;&gt;deny&lt;/span&gt; all;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;启用此配置文件：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;ln&lt;/span&gt; -s /etc/nginx/sites-available/laravel /etc/nginx/sites-enabled/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;检查 Nginx 配置语法：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; nginx -t&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;重启 Nginx：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; systemctl restart nginx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;安装-Composer&#34;&gt;&lt;a href=&#34;#安装-Composer&#34; class=&#34;headerlink&#34; title=&#34;安装 Composer&#34;&gt;&lt;/a&gt;安装 Composer&lt;/h2&gt;&lt;p&gt;全局安装 Composer：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -sS https://getcomposer.org/installer | php&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;mv&lt;/span&gt; composer.phar /usr/local/bin/composer&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;验证：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;composer --version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h2 id=&#34;完事儿&#34;&gt;&lt;a href=&#34;#完事儿&#34; class=&#34;headerlink&#34; title=&#34;完事儿&#34;&gt;&lt;/a&gt;完事儿&lt;/h2&gt;&lt;p&gt;至此，一个崭新的 LNMP 环境就配置好了，下一篇文章我将继续介绍如何在此基础上部署一个 Laravel 项目。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/rss.xml%7D" />
+  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/atom.xml" />
+  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）">
+<meta property="og:url" content="https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-24T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-22T01:19:05.950Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Laravel">
+<meta property="article:tag" content="Sail">
+<meta name="twitter:card" content="summary">
+    
+      
+        
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
+
+
+                                                            <!-- Umami Analytics -->
+
+
+                                                              <!-- styles -->
+                                                              
+<link rel="stylesheet" href="/css/style.css">
+
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）&body=Check out this article: https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">场景描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91-A-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">第一步：在电脑 A 提交代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91-B-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">第二步：在电脑 B 拉取代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%A7%A3%E5%86%B3%E2%80%9C%E9%B8%A1%E7%94%9F%E8%9B%8B%E2%80%9D%E9%97%AE%E9%A2%98%EF%BC%88%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">第三步：解决“鸡生蛋”问题（安装依赖）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="toc-number">5.</span> <span class="toc-text">第四步：配置环境与启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-01-24T02:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-24</time>
+        
+        (Updated: <time datetime="2026-01-22T01:19:05.950Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Laravel/">Laravel</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Git/" rel="tag">Git</a>, <a class="p-category" href="/tags/GitHub/" rel="tag">GitHub</a>, <a class="p-category" href="/tags/Laravel/" rel="tag">Laravel</a>, <a class="p-category" href="/tags/Sail/" rel="tag">Sail</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="场景描述"><a href="#场景描述" class="headerlink" title="场景描述"></a>场景描述</h1><p>上一篇我们成功在电脑 A（比如公司电脑）上搭建了环境并运行了 Laravel。<br>现在的问题是：<strong>我下班回家了，想用家里的电脑 B 接着写，该怎么办？</strong></p>
+<p>很多人会卡在这里，因为 Laravel 项目默认的 <code>.gitignore</code> 规则会忽略 <code>vendor</code> 目录（存放依赖包的地方）和 <code>.env</code> 文件（存放敏感配置的地方）。<br>而 <code>sail</code> 命令脚本本身就躺在 <code>vendor/bin</code> 目录下。</p>
+<p>这意味着：<strong>当你把代码拉到新电脑上时，你没有 <code>vendor</code> 目录，也就没有 <code>sail</code> 命令。你无法启动 Sail，也就无法用 Sail 安装 <code>vendor</code>……</strong></p>
+<p>这就陷入了一个“先有鸡还是先有蛋”的死循环。<br>别慌，本文就是为了解决这个问题而生的。</p>
+<hr>
+<h1 id="第一步：在电脑-A-提交代码"><a href="#第一步：在电脑-A-提交代码" class="headerlink" title="第一步：在电脑 A 提交代码"></a>第一步：在电脑 A 提交代码</h1><p>首先，我们需要把项目上传到代码仓库（GitHub &#x2F; GitLab &#x2F; Gitee）。这里以 GitHub 为例。</p>
+<p>确保你在 WSL 的项目根目录下（比如 <code>~/code/example-app</code>）：</p>
+<ol>
+<li><p><strong>初始化 Git 仓库</strong>（如果还没初始化）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git checkout -b main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>提交代码</strong>：<br>Laravel 默认的 <code>.gitignore</code> 已经非常完善了，千万<strong>不要</strong>手动去把 <code>vendor</code> 或 <code>.env</code> 强行加进来。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">&quot;Initial commit&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>推送到远程仓库</strong>：<br>先在 GitHub 创建一个空仓库，然后关联并推送：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:your-username/your-repo.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="第二步：在电脑-B-拉取代码"><a href="#第二步：在电脑-B-拉取代码" class="headerlink" title="第二步：在电脑 B 拉取代码"></a>第二步：在电脑 B 拉取代码</h1><p>现在我们来到了<strong>电脑 B</strong>（比如家里的电脑）。<br><strong>前提</strong>：这台电脑也必须安装好 <strong>WSL2</strong> 和 <strong>Docker Desktop</strong>（参考上一篇教程）。</p>
+<ol>
+<li><p><strong>克隆代码</strong>：<br>打开 Ubuntu 终端，进入我们规定的代码存放目录（如果不存在则先创建）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/code</span><br><span class="line"><span class="built_in">cd</span> ~/code</span><br><span class="line">git <span class="built_in">clone</span> git@github.com:your-username/your-repo.git project-b</span><br><span class="line"><span class="built_in">cd</span> project-b</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>此时的尴尬现状</strong>：<br>如果你现在尝试运行 <code>./vendor/bin/sail up</code>，系统会无情地告诉你：</p>
+<blockquote>
+<p><code>bash: ./vendor/bin/sail: No such file or directory</code></p>
+</blockquote>
+<p>原因前面说了：Git 不会同步 <code>vendor</code> 目录。</p>
+</li>
+</ol>
+<hr>
+<h1 id="第三步：解决“鸡生蛋”问题（安装依赖）"><a href="#第三步：解决“鸡生蛋”问题（安装依赖）" class="headerlink" title="第三步：解决“鸡生蛋”问题（安装依赖）"></a>第三步：解决“鸡生蛋”问题（安装依赖）</h1><p>我们需要在没有 <code>sail</code> 的情况下，利用 Docker 帮我们运行一次 Composer 安装命令。<br>Laravel 官方非常贴心地提供了一个一次性的 Docker 运行命令，专门用来处理这个“初次引导”的问题。</p>
+<p>在项目根目录下，执行下面这行<strong>神奇的长命令</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> \</span><br><span class="line">    -u <span class="string">&quot;<span class="subst">$(id -u)</span>:<span class="subst">$(id -g)</span>&quot;</span> \</span><br><span class="line">    -v <span class="string">&quot;<span class="subst">$(pwd)</span>:/var/www/html&quot;</span> \</span><br><span class="line">    -w /var/www/html \</span><br><span class="line">    laravelsail/php82-composer:latest \</span><br><span class="line">    composer install --ignore-platform-reqs</span><br></pre></td></tr></table></figure>
+
+<p><em>解析：</em></p>
+<ul>
+<li>这是一个临时的 Docker 容器，用完即焚 (<code>--rm</code>)。</li>
+<li>它挂载了当前目录 (<code>-v</code>)，并使用当前用户的权限 (<code>-u</code>)。</li>
+<li>它使用的是 <code>php82-composer</code> 镜像（如果你用的是 PHP 8.1 或 8.0，改一下数字即可）。</li>
+<li>它执行了 <code>composer install</code>，帮我们把 <code>vendor</code> 目录及里面的 <code>sail</code> 脚本都下载回来了！</li>
+</ul>
+<p><strong>等待命令执行完成</strong>（具体取决于网速），你会发现项目里多了一个 <code>vendor</code> 文件夹。</p>
+<hr>
+<h1 id="第四步：配置环境与启动"><a href="#第四步：配置环境与启动" class="headerlink" title="第四步：配置环境与启动"></a>第四步：配置环境与启动</h1><ol>
+<li><p><strong>恢复配置文件</strong>：<br>由于 <code>.env</code> 被 Git 忽略了，我们需要从模版复制一份：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> .env.example .<span class="built_in">env</span></span><br></pre></td></tr></table></figure>
+<p><em>注意：如果你的项目有特殊的数据库密码或 API Key，记得手动编辑 <code>.env</code> 填进去。但在 Sail 环境下，数据库连接通常默认都在 <code>docker-compose.yml</code> 里配置好了环境变量，直接用可能就行。</em></p>
+</li>
+<li><p><strong>启动 Sail</strong>：<br>现在 <code>vendor</code> 有了，我们终于可以召唤神龙了（记得像上一篇一样配置好 <code>sail</code> 别名）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail up -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生成应用密钥</strong>：<br>新的 <code>.env</code> 里 <code>APP_KEY</code> 是空的，需要生成一个：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail artisan key:generate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>运行数据库迁移</strong>：<br>全新的环境数据库是空的，需要创建表结构：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail artisan migrate</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="第五步：验证"><a href="#第五步：验证" class="headerlink" title="第五步：验证"></a>第五步：验证</h1><p>打开浏览器访问 <code>http://localhost</code>。<br>你应该能看到与公司电脑一模一样的项目已经在运行了。</p>
+<p>从此以后，你只需要：</p>
+<ul>
+<li><strong>在公司</strong>：写代码 -&gt; <code>git push</code></li>
+<li><strong>在家里</strong>：<code>git pull</code> -&gt; <code>./vendor/bin/sail up -d</code> -&gt; 开造！</li>
+</ul>
+<p><strong>这就是 Docker + Sail 带来的极致一致性体验。</strong></p>
+<hr>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本篇解决了异地开发最麻烦的“环境同步”和“依赖安装”问题。<br>核心技巧在于那行<strong>用于“引导”的 Docker 命令</strong>，它帮我们跨越了“没有 PHP 环境就没法安装 Sail，没有 Sail 就没法启动 PHP 环境”的鸿沟。</p>
+<p>下一篇，我们将进入实战深水区：<strong>《日常使用篇》</strong>，教你如何像在本地一样运行 Artisan 命令、使用 npm 编译前端、以及配置 Shell 别名让 <code>sail</code> 变成更短的 <code>s</code>。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">场景描述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91-A-%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">第一步：在电脑 A 提交代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91-B-%E6%8B%89%E5%8F%96%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text">第二步：在电脑 B 拉取代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%A7%A3%E5%86%B3%E2%80%9C%E9%B8%A1%E7%94%9F%E8%9B%8B%E2%80%9D%E9%97%AE%E9%A2%98%EF%BC%88%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">第三步：解决“鸡生蛋”问题（安装依赖）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="toc-number">5.</span> <span class="toc-text">第四步：配置环境与启动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）&body=Check out this article: https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+      
+        
+          2020-2026
+            NightingaleWK
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
+  </div>
+  <div class="footer-right"></div>
+</footer>
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

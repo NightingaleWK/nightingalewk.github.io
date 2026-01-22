@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://nightingalewk.cn</id>
+    <title>雪漫城的风宅 • Posts by &#34;artisan&#34; tag</title>
+    <link href="https://nightingalewk.cn" />
+    <updated>2026-01-25T02:00:00.000Z</updated>
+    <category term="迁移" />
+    <category term="hexo" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="学习笔记" />
+    <category term="pr" />
+    <category term="bilibili" />
+    <category term="热菜" />
+    <category term="汤" />
+    <category term="甜品" />
+    <category term="梦境" />
+    <category term="海鲜" />
+    <category term="homestead" />
+    <category term="代码部署" />
+    <category term="oneinstack" />
+    <category term="lnmp" />
+    <category term="代码更新" />
+    <category term="dcat admin" />
+    <category term="oh-my-zsh" />
+    <category term="debug" />
+    <category term="指令" />
+    <category term="道歉信" />
+    <category term="免密" />
+    <category term="vs code" />
+    <category term="fileinfo" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
+    <category term="gpg" />
+    <category term="laravel sail" />
+    <category term="sshppass" />
+    <category term="awk" />
+    <category term="net time" />
+    <category term="swap" />
+    <category term="端口查询" />
+    <category term="表单验证" />
+    <category term="blade" />
+    <category term="wordpress" />
+    <category term="事件" />
+    <category term="队列" />
+    <category term="redis" />
+    <category term="特色小吃" />
+    <category term="粥" />
+    <category term="Cloudreve" />
+    <category term="artisan 指令" />
+    <category term="故障排除" />
+    <category term="Font Awesome" />
+    <category term="vite" />
+    <category term="linux" />
+    <category term="我的世界" />
+    <category term="Minecraft" />
+    <category term="膝盖中箭之地" />
+    <category term="领域" />
+    <category term="realms" />
+    <category term="公告" />
+    <category term="screen" />
+    <category term="打印机" />
+    <category term="京瓷" />
+    <category term="教程" />
+    <category term="cursor" />
+    <category term="人工智能" />
+    <category term="prompt" />
+    <category term="Git" />
+    <category term="GitHub" />
+    <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
+    <category term="Laravel" />
+    <category term="Docker" />
+    <category term="容器化" />
+    <category term="部署" />
+    <category term="运维" />
+    <category term="Ubuntu" />
+    <category term="安装指南" />
+    <category term="阿里云" />
+    <category term="镜像源" />
+    <category term="国产化" />
+    <category term="信创" />
+    <category term="TongHttpServer" />
+    <category term="Rule" />
+    <category term="Prompt" />
+    <category term="gemini" />
+    <category term="Sail" />
+    <category term="Nginx" />
+    <category term="反向代理" />
+    <category term="NPM" />
+    <category term="HTTPS" />
+    <category term="问题排查" />
+    <category term="WSL2" />
+    <category term="Troubleshooting" />
+    <category term="Hardware" />
+    <category term="Tooling" />
+    <category term="Artisan" />
+    <category term="Composer" />
+    <entry>
+        <id>https://nightingalewk.cn/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/</id>
+        <title>Laravel Sail 开发环境部署一把过（日常使用篇）</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2026/01/25/85.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%AF%87%EF%BC%89/"/>
+        <content type="html">&lt;h1 id=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;a href=&#34;#核心心法：忘掉本地环境&#34; class=&#34;headerlink&#34; title=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;/a&gt;核心心法：忘掉本地环境&lt;/h1&gt;&lt;p&gt;进入 Sail 的世界后，你需要修改一个肌肉记忆。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以前你的操作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;php artisan migrate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm run dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;现在 Sail 的操作：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;sail artisan migrate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sail npm run dev&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;心法口诀&lt;/strong&gt;：&lt;strong&gt;凡是需要运行环境的命令，前面统统加 &lt;code&gt;sail&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;：你已经按照《环境配置篇》配置好了 &lt;code&gt;alias sail=&amp;#39;...&amp;#39;&lt;/code&gt; 别名。如果没有，请手动输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;1-Artisan-命令：得心应手&#34;&gt;&lt;a href=&#34;#1-Artisan-命令：得心应手&#34; class=&#34;headerlink&#34; title=&#34;1. Artisan 命令：得心应手&#34;&gt;&lt;/a&gt;1. Artisan 命令：得心应手&lt;/h1&gt;&lt;p&gt;在 Laravel 开发中，Artisan 是我们最常用的工具。在 Sail 中使用它没有任何区别，仅仅是换了个前缀。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成控制器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:controller UserController&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 路由列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan route:list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：当你输入 &lt;code&gt;sail artisan ...&lt;/code&gt; 时，Sail 会自动把命令转发到正在运行的 Docker 容器中去执行。这意味着&lt;strong&gt;你的电脑完全不需要安装 PHP&lt;/strong&gt;，也能执行 PHP 代码。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;2-Composer：依赖管理&#34;&gt;&lt;a href=&#34;#2-Composer：依赖管理&#34; class=&#34;headerlink&#34; title=&#34;2. Composer：依赖管理&#34;&gt;&lt;/a&gt;2. Composer：依赖管理&lt;/h1&gt;&lt;p&gt;安装新包、更新依赖，也全部通过 Sail 进行。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装扩展包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/breeze --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 更新所有依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：哪怕你的 Windows&amp;#x2F;WSL 里装了 Composer，我也&lt;strong&gt;强烈建议&lt;/strong&gt;使用 &lt;code&gt;sail composer&lt;/code&gt;。因为这样能确保依赖的 PHP 版本与容器内的 PHP 版本（真实运行环境）完全一致，避免版本冲突。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;3-前端编译：Node-NPM&#34;&gt;&lt;a href=&#34;#3-前端编译：Node-NPM&#34; class=&#34;headerlink&#34; title=&#34;3. 前端编译：Node &amp;amp; NPM&#34;&gt;&lt;/a&gt;3. 前端编译：Node &amp;amp; NPM&lt;/h1&gt;&lt;p&gt;这是很多新手容易混淆的地方。&lt;br&gt;虽然你可以在 WSL 里安装 Node.js，但 Sail 实际上也为你准备好了一套 Node 环境。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装前端依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行开发服务器 (Vite)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 编译生产环境代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run build&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;当运行 &lt;code&gt;sail npm run dev&lt;/code&gt; 时，Vite 服务器实际上是在 Docker 容器里跑的，但通过端口映射，你依然可以在 Windows 浏览器里无缝访问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;4-服务管理：掌控全局&#34;&gt;&lt;a href=&#34;#4-服务管理：掌控全局&#34; class=&#34;headerlink&#34; title=&#34;4. 服务管理：掌控全局&#34;&gt;&lt;/a&gt;4. 服务管理：掌控全局&lt;/h1&gt;&lt;p&gt;Sail 本质上是 Docker Compose 的封装，所以管理服务变得很简单。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;启动环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(每天开机第一件事)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;停止环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(下班关机前，或者你想省点内存时)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;重启环境&lt;/strong&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;em&gt;(当你修改了 &lt;code&gt;docker-compose.yml&lt;/code&gt; 配置后需要用到)&lt;/em&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;查看运行状态&lt;/strong&gt;：&lt;br&gt;查看当前有哪些容器在跑，以及它们的状态：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;5-进阶：直接进入“母体”&#34;&gt;&lt;a href=&#34;#5-进阶：直接进入“母体”&#34; class=&#34;headerlink&#34; title=&#34;5. 进阶：直接进入“母体”&#34;&gt;&lt;/a&gt;5. 进阶：直接进入“母体”&lt;/h1&gt;&lt;p&gt;有时候，你可能想进去容器里面看看文件，或者运行一些奇怪的 Linux 命令。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以默认用户 (sail) 进入应用容器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail shell&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以 root 用户进入应用容器（拥有最高权限）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;进入后，你就身处一个标准的 Ubuntu 环境中了，你的项目代码在 &lt;code&gt;/var/www/html&lt;/code&gt; 目录下。输入 &lt;code&gt;exit&lt;/code&gt; 即可退出。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;6-炫技：临时共享站点&#34;&gt;&lt;a href=&#34;#6-炫技：临时共享站点&#34; class=&#34;headerlink&#34; title=&#34;6. 炫技：临时共享站点&#34;&gt;&lt;/a&gt;6. 炫技：临时共享站点&lt;/h1&gt;&lt;p&gt;如果你想把现在的像本地项目展示给远在异地的同事或者客户看，不需要部署上线，Sail 自带了一个神奇的命令（基于 Expose）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail share&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;运行后，它会给你一个临时的公网 URL（例如 &lt;code&gt;http://your-site.sharedwithexpose.com&lt;/code&gt;）。把这个链接发给这一秒需要看演示的人，他们就能直接访问你本地开发环境的内容了！&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;使用 Sail 开发的每一天，其实就是不断重复 &lt;strong&gt;“Sail + 命令”&lt;/strong&gt; 的过程。一旦习惯了这个前缀，你会发现它提供的隔离感和安全感是前所未有的。&lt;/p&gt;
+&lt;p&gt;下一篇，也是本系列的终章：&lt;strong&gt;《疑难杂症篇》&lt;/strong&gt;。虽然 Sail 很稳，但常在河边走哪有不湿鞋？我们将汇总一些常见的报错（端口占用、权限问题、网络连接等）并提供解决方案。&lt;/p&gt;
+</content>
+        <category term="Laravel" />
+        <category term="Sail" />
+        <category term="Artisan" />
+        <category term="Composer" />
+        <updated>2026-01-25T02:00:00.000Z</updated>
+    </entry>
+</feed>
