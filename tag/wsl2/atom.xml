@@ -4,51 +4,51 @@
     <title>雪漫城的风宅 • Posts by &#34;wsl2&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2026-01-23T10:00:00.000Z</updated>
-    <category term="hexo" />
     <category term="迁移" />
+    <category term="hexo" />
+    <category term="主食" />
+    <category term="电脑维修" />
+    <category term="学习笔记" />
     <category term="pr" />
     <category term="bilibili" />
-    <category term="电脑维修" />
-    <category term="主食" />
-    <category term="学习笔记" />
     <category term="热菜" />
-    <category term="汤" />
-    <category term="甜品" />
-    <category term="海鲜" />
     <category term="梦境" />
+    <category term="甜品" />
+    <category term="汤" />
+    <category term="海鲜" />
     <category term="homestead" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码更新" />
-    <category term="oh-my-zsh" />
+    <category term="代码部署" />
     <category term="dcat admin" />
+    <category term="oh-my-zsh" />
     <category term="debug" />
-    <category term="道歉信" />
     <category term="指令" />
-    <category term="vs code" />
-    <category term="PAC 清单" />
-    <category term="定时任务" />
+    <category term="道歉信" />
     <category term="免密" />
+    <category term="vs code" />
     <category term="laravel sail" />
+    <category term="PAC 清单" />
+    <category term="fileinfo" />
+    <category term="定时任务" />
+    <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="fileinfo" />
-    <category term="gpg" />
     <category term="net time" />
+    <category term="swap" />
     <category term="端口查询" />
     <category term="表单验证" />
     <category term="事件" />
+    <category term="blade" />
     <category term="wordpress" />
-    <category term="swap" />
     <category term="队列" />
     <category term="redis" />
-    <category term="blade" />
     <category term="特色小吃" />
     <category term="粥" />
-    <category term="artisan 指令" />
     <category term="Cloudreve" />
     <category term="故障排除" />
+    <category term="artisan 指令" />
     <category term="Font Awesome" />
     <category term="vite" />
     <category term="linux" />
@@ -66,149 +66,92 @@
     <category term="京瓷" />
     <category term="教程" />
     <category term="Git" />
-    <category term="Monorepo" />
-    <category term="DevOps" />
     <category term="GitHub" />
     <category term="版本控制" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <category term="Laravel" />
     <category term="Docker" />
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
+    <category term="国产化" />
+    <category term="信创" />
+    <category term="TongHttpServer" />
     <category term="Ubuntu" />
     <category term="安装指南" />
     <category term="阿里云" />
     <category term="镜像源" />
-    <category term="国产化" />
-    <category term="信创" />
-    <category term="TongHttpServer" />
+    <category term="Rule" />
+    <category term="Prompt" />
+    <category term="gemini" />
     <category term="Nginx" />
     <category term="反向代理" />
     <category term="NPM" />
     <category term="HTTPS" />
     <category term="问题排查" />
-    <category term="Rule" />
-    <category term="Prompt" />
-    <category term="gemini" />
     <category term="Sail" />
+    <category term="WSL2" />
     <category term="Artisan" />
     <category term="Composer" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
-    <category term="WSL2" />
     <entry>
         <id>https://nightingalewk.cn/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/</id>
         <title>Laravel Sail 开发环境部署一把过（环境配置篇）</title>
         <link rel="alternate" href="https://nightingalewk.cn/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/"/>
-        <content type="html">&lt;h2 id=&#34;目标&#34;&gt;&lt;a href=&#34;#目标&#34; class=&#34;headerlink&#34; title=&#34;目标&#34;&gt;&lt;/a&gt;目标&lt;/h2&gt;&lt;p&gt;本文的目标非常明确：&lt;strong&gt;从一台刚装好系统的全新 Windows 11 电脑开始，直到浏览器成功访问 Laravel 默认欢迎页面。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;中间我们将完成：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;开启 BIOS 虚拟化。&lt;/li&gt;
-&lt;li&gt;安装 WSL 2 (Windows Subsystem for Linux)。&lt;/li&gt;
-&lt;li&gt;安装 Docker Desktop。&lt;/li&gt;
-&lt;li&gt;使用 Sail 命令行一键创建并启动项目。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;前置要求&lt;/strong&gt;：你的 Windows 11 版本需要是最新的（或者至少是近两年的版本）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第一步：检查虚拟化-Virtualization&#34;&gt;&lt;a href=&#34;#第一步：检查虚拟化-Virtualization&#34; class=&#34;headerlink&#34; title=&#34;第一步：检查虚拟化 (Virtualization)&#34;&gt;&lt;/a&gt;第一步：检查虚拟化 (Virtualization)&lt;/h2&gt;&lt;p&gt;Docker 和 WSL2 的运行依赖于 CPU 的虚拟化技术。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 &lt;strong&gt;任务管理器 (Task Manager)&lt;/strong&gt; (&lt;code&gt;Ctrl + Shift + Esc&lt;/code&gt;)。&lt;/li&gt;
-&lt;li&gt;切换到 &lt;strong&gt;性能 (Performance)&lt;/strong&gt; -&amp;gt; &lt;strong&gt;CPU&lt;/strong&gt; 选项卡。&lt;/li&gt;
-&lt;li&gt;查看右下角的 &lt;strong&gt;虚拟化 (Virtualization)&lt;/strong&gt; 状态。&lt;ul&gt;
-&lt;li&gt;**已启用 (Enabled)**：✅通过，直接进入下一步。&lt;/li&gt;
-&lt;li&gt;**已禁用 (Disabled)**：❌需要重启电脑进入 BIOS 开启。不同品牌主板开启方式不同（通常在 &lt;code&gt;Advanced&lt;/code&gt; -&amp;gt; &lt;code&gt;CPU Configuration&lt;/code&gt; -&amp;gt; &lt;code&gt;Intel VT-x&lt;/code&gt; 或 &lt;code&gt;AMD-V&lt;/code&gt;），请自行搜索“主板品牌 + 开启虚拟化”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第二步：安装-WSL-2&#34;&gt;&lt;a href=&#34;#第二步：安装-WSL-2&#34; class=&#34;headerlink&#34; title=&#34;第二步：安装 WSL 2&#34;&gt;&lt;/a&gt;第二步：安装 WSL 2&lt;/h2&gt;&lt;p&gt;现在的 Windows 安装 Linux 子系统已经简单到令人发指，不需要再去控制面板勾选那一堆复杂的“Windows 功能”了。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;鼠标右键点击 &lt;strong&gt;开始菜单&lt;/strong&gt;，选择 &lt;strong&gt;终端管理员 (Terminal Admin)&lt;/strong&gt; 或 **PowerShell (管理员)**。&lt;/li&gt;
-&lt;li&gt;输入以下命令并回车：&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl &lt;span class=&#34;literal&#34;&gt;--install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;等待进度条跑完&lt;/strong&gt;。系统会自动下载并安装 Ubuntu 发行版。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;重启电脑&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;重启后的操作&lt;/strong&gt;：&lt;br&gt;电脑重启后，会自动弹出一个黑色的终端窗口（Ubuntu）。它会提示你：&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;部署目标&#34;&gt;&lt;a href=&#34;#部署目标&#34; class=&#34;headerlink&#34; title=&#34;部署目标&#34;&gt;&lt;/a&gt;部署目标&lt;/h2&gt;&lt;p&gt;本文将从零开始构建基于 &lt;strong&gt;WSL2 (Windows Subsystem for Linux 2)&lt;/strong&gt; 的标准化 Docker 开发环境，并完成首个 Laravel Sail 项目的初始化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;环境要求&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Enter new UNIX username: （输入你想用的用户名，全小写，如 &lt;code&gt;wang&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;Enter new UNIX password: （设置密码，输入时屏幕不会显示，输完回车即可）&lt;/li&gt;
-&lt;li&gt;Retype new UNIX password: （确认密码）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;: Windows 11 (Build 22000+) 或 Windows 10 (Build 19041+).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BIOS&lt;/strong&gt;: 开启 CPU 虚拟化 (Virtualization Technology).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;搞定后，如果你通过 &lt;code&gt;wsl -l -v&lt;/code&gt; 命令查看，应该能看到一个 &lt;code&gt;Ubuntu&lt;/code&gt; 正在运行，且 Version 为 2。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第三步：安装-Docker-Desktop&#34;&gt;&lt;a href=&#34;#第三步：安装-Docker-Desktop&#34; class=&#34;headerlink&#34; title=&#34;第三步：安装 Docker Desktop&#34;&gt;&lt;/a&gt;第三步：安装 Docker Desktop&lt;/h2&gt;&lt;p&gt;Docker Desktop 是 Docker 在 Windows 上的图形化管理工具，它会自动接管 WSL2 中的 Docker 后端。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&#34;https://www.docker.com/products/docker-desktop/&#34;&gt;Docker 官网&lt;/a&gt; 下载 &lt;strong&gt;Docker Desktop for Windows&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;双击安装。&lt;strong&gt;注意&lt;/strong&gt;：在安装界面的 Configuration 步骤中，务必勾选：&lt;ul&gt;
-&lt;li&gt;✅ &lt;strong&gt;Use WSL 2 instead of Hyper-V (recommended)&lt;/strong&gt;&lt;/li&gt;
+&lt;h2 id=&#34;1-基础设施准备&#34;&gt;&lt;a href=&#34;#1-基础设施准备&#34; class=&#34;headerlink&#34; title=&#34;1. 基础设施准备&#34;&gt;&lt;/a&gt;1. 基础设施准备&lt;/h2&gt;&lt;h3 id=&#34;1-1-验证虚拟化支持&#34;&gt;&lt;a href=&#34;#1-1-验证虚拟化支持&#34; class=&#34;headerlink&#34; title=&#34;1.1 验证虚拟化支持&#34;&gt;&lt;/a&gt;1.1 验证虚拟化支持&lt;/h3&gt;&lt;p&gt;Docker Desktop 依赖 Hypervisor 层支持。请确保 BIOS&amp;#x2F;UEFI 中已开启虚拟化（Intel VT-x 或 AMD-V）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;验证方式&lt;/em&gt;：任务管理器 -&amp;gt; 性能 -&amp;gt; CPU -&amp;gt; &lt;strong&gt;虚拟化：已启用&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;安装完成后，打开 Docker Desktop。&lt;ul&gt;
-&lt;li&gt;它可能会让你登录，你可以选择 Skip 暂时跳过。&lt;/li&gt;
-&lt;li&gt;看到左下角变为 &lt;strong&gt;绿色&lt;/strong&gt; 的 Engine running，说明 Docker 启动成功。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;1-2-部署-WSL2&#34;&gt;&lt;a href=&#34;#1-2-部署-WSL2&#34; class=&#34;headerlink&#34; title=&#34;1.2 部署 WSL2&#34;&gt;&lt;/a&gt;1.2 部署 WSL2&lt;/h3&gt;&lt;p&gt;使用管理员权限打开 PowerShell 或 Windows Terminal，执行以下指令完成 WSL2 及 Ubuntu 发行版的自动安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl &lt;span class=&#34;literal&#34;&gt;--install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关键配置：开启 WSL 集成&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;点击 Docker Desktop右上角的齿轮图标 ⚙️ (Settings)。&lt;/li&gt;
-&lt;li&gt;进入 &lt;strong&gt;Resources&lt;/strong&gt; -&amp;gt; &lt;strong&gt;WSL Integration&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;确保 “Enable integration with my default WSL distro” 是 &lt;strong&gt;勾选&lt;/strong&gt; 状态。&lt;/li&gt;
-&lt;li&gt;如果下方出现了 &lt;code&gt;Ubuntu&lt;/code&gt; 的开关，也把它打开 (Toggle On)。&lt;/li&gt;
-&lt;li&gt;点击 &lt;strong&gt;Apply &amp;amp; Restart&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: 安装完成后需&lt;strong&gt;重启系统&lt;/strong&gt;。重启后会自动弹出终端窗口，按提示设置 UNIX 用户名与密码即可。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第四步：创建并启动-Laravel-项目&#34;&gt;&lt;a href=&#34;#第四步：创建并启动-Laravel-项目&#34; class=&#34;headerlink&#34; title=&#34;第四步：创建并启动 Laravel 项目&#34;&gt;&lt;/a&gt;第四步：创建并启动 Laravel 项目&lt;/h2&gt;&lt;p&gt;见证奇迹的时刻到了。我们所有的操作都在 WSL (Ubuntu) 中进行。&lt;/p&gt;
+&lt;h3 id=&#34;1-3-安装-Docker-Desktop&#34;&gt;&lt;a href=&#34;#1-3-安装-Docker-Desktop&#34; class=&#34;headerlink&#34; title=&#34;1.3 安装 Docker Desktop&#34;&gt;&lt;/a&gt;1.3 安装 Docker Desktop&lt;/h3&gt;&lt;p&gt;下载并安装 &lt;a href=&#34;https://www.docker.com/products/docker-desktop/&#34;&gt;Docker Desktop for Windows&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键配置检查&lt;/strong&gt;：&lt;br&gt;安装向导中务必勾选 &lt;strong&gt;Use WSL 2 instead of Hyper-V&lt;/strong&gt;（通常为默认选中）。&lt;br&gt;启动后，进入 Settings -&amp;gt; Resources -&amp;gt; WSL Integration：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;打开 &lt;strong&gt;Windows Terminal&lt;/strong&gt;，点击标题栏的下拉箭头，选择 &lt;strong&gt;Ubuntu&lt;/strong&gt; 这里就是你的 Linux 世界。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;创建并进入代码目录&lt;/strong&gt;：&lt;br&gt;为了保持（也就是 Linux 系统里的家目录）整洁，我们推荐新建一个 &lt;code&gt;code&lt;/code&gt; 文件夹来存放未来的所有项目：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;直接运行 Laravel 官方构建命令&lt;/strong&gt;：&lt;br&gt;把下面的 &lt;code&gt;example-app&lt;/code&gt; 换成你想要的项目名字（比如 &lt;code&gt;blog&lt;/code&gt;）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -s https://laravel.build/example-app | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;这行命令会自动拉取由 Laravel 官方维护的 Docker 镜像，并开始下载所有依赖。第一次运行可能会受网速影响，请耐心等待（建议科学上网环境，或者配置 Docker 镜像加速）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;进入项目目录&lt;/strong&gt;：&lt;br&gt;当命令跑完，提示 “Thank you! We hope you build something incredible.” 时，执行：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; example-app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;配置快捷指令（强烈推荐）&lt;/strong&gt;：&lt;br&gt;每次都输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt; 太麻烦了。我们配置一个 &lt;code&gt;sail&lt;/code&gt;别名（官方推荐做法）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;alias sail=&amp;#x27;[ -f sail ] &amp;amp;&amp;amp; bash sail || bash vendor/bin/sail&amp;#x27;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;这样以后你在任何目录下，只要敲 &lt;code&gt;sail&lt;/code&gt; 就能调用命令了。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;**启动 Sail (Docker 环境)**：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;up&lt;/code&gt;：启动服务。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-d&lt;/code&gt;：后台运行 (Detached mode)，这样你的终端窗口不会被日志霸占。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;第一次启动会拉取 MySQL、Redis 等镜像，可能需要一点时间。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;确保 &lt;strong&gt;Enable integration with my default WSL distro&lt;/strong&gt; 为开启状态。&lt;/li&gt;
+&lt;li&gt;在下方 distro 列表中，确保 &lt;strong&gt;Ubuntu&lt;/strong&gt; 处于开启状态。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第五步：验证成果&#34;&gt;&lt;a href=&#34;#第五步：验证成果&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证成果&#34;&gt;&lt;/a&gt;第五步：验证成果&lt;/h2&gt;&lt;p&gt;打开你的浏览器（Chrome&amp;#x2F;Edge），在地址栏输入：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost/&#34;&gt;http://localhost&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果你看到那个巨大的、红色的（或白色的）Laravel Logo，以及醒目的版本号。&lt;/p&gt;
-&lt;p&gt;🎉 &lt;strong&gt;恭喜你！你已经成功在 Windows 上部署了一套最先进的 Laravel Docker 开发环境！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;此时：&lt;/p&gt;
+&lt;h2 id=&#34;2-初始化-Laravel-Sail-项目&#34;&gt;&lt;a href=&#34;#2-初始化-Laravel-Sail-项目&#34; class=&#34;headerlink&#34; title=&#34;2. 初始化 Laravel Sail 项目&#34;&gt;&lt;/a&gt;2. 初始化 Laravel Sail 项目&lt;/h2&gt;&lt;p&gt;所有后续操作建议直接在 WSL2 终端（Ubuntu）中执行，以获得原生的 Linux 开发体验。&lt;/p&gt;
+&lt;h3 id=&#34;2-1-创建工作区&#34;&gt;&lt;a href=&#34;#2-1-创建工作区&#34; class=&#34;headerlink&#34; title=&#34;2.1 创建工作区&#34;&gt;&lt;/a&gt;2.1 创建工作区&lt;/h3&gt;&lt;p&gt;建议在 WSL 用户主目录下统一管理项目，避免 Windows 文件系统 (NTFS) 挂载带来的 I&amp;#x2F;O 性能损耗。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;2-2-构建项目&#34;&gt;&lt;a href=&#34;#2-2-构建项目&#34; class=&#34;headerlink&#34; title=&#34;2.2 构建项目&#34;&gt;&lt;/a&gt;2.2 构建项目&lt;/h3&gt;&lt;p&gt;使用 Laravel 官方构建脚本初始化项目（通过临时 Docker 容器）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 请将 &amp;#x27;example-app&amp;#x27; 替换为实际项目名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;curl -s https://laravel.build/example-app | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;该指令会自动拉取 &lt;code&gt;php-cli&lt;/code&gt; 镜像及相关依赖。&lt;/p&gt;
+&lt;h3 id=&#34;2-3-配置-Shell-Alias-推荐&#34;&gt;&lt;a href=&#34;#2-3-配置-Shell-Alias-推荐&#34; class=&#34;headerlink&#34; title=&#34;2.3 配置 Shell Alias (推荐)&#34;&gt;&lt;/a&gt;2.3 配置 Shell Alias (推荐)&lt;/h3&gt;&lt;p&gt;为简化操作，建议将 &lt;code&gt;sail&lt;/code&gt; 执行脚本映射为 Shell 别名。编辑 &lt;code&gt;~/.bashrc&lt;/code&gt; 或 &lt;code&gt;~/.zshrc&lt;/code&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 添加至配置文件末尾&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;alias&lt;/span&gt; sail=&lt;span class=&#34;string&#34;&gt;&amp;#x27;[ -f sail ] &amp;amp;&amp;amp; bash sail || bash vendor/bin/sail&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;加载生效：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;3-启动与验证&#34;&gt;&lt;a href=&#34;#3-启动与验证&#34; class=&#34;headerlink&#34; title=&#34;3. 启动与验证&#34;&gt;&lt;/a&gt;3. 启动与验证&lt;/h2&gt;&lt;h3 id=&#34;3-1-启动环境&#34;&gt;&lt;a href=&#34;#3-1-启动环境&#34; class=&#34;headerlink&#34; title=&#34;3.1 启动环境&#34;&gt;&lt;/a&gt;3.1 启动环境&lt;/h3&gt;&lt;p&gt;进入项目目录并后台启动 Sail 服务栈：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code/example-app&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sail 将根据 &lt;code&gt;docker-compose.yml&lt;/code&gt;编排启动 PHP、MySQL、Redis 等容器。首次启动涉及镜像拉取，耗时取决于网络环境。&lt;/p&gt;
+&lt;h3 id=&#34;3-2-服务验证&#34;&gt;&lt;a href=&#34;#3-2-服务验证&#34; class=&#34;headerlink&#34; title=&#34;3.2 服务验证&#34;&gt;&lt;/a&gt;3.2 服务验证&lt;/h3&gt;&lt;p&gt;服务启动后，通过宿主机浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;若显示 Laravel 欢迎页，即表示：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;你的电脑里没有安装 PHP。&lt;/li&gt;
-&lt;li&gt;你的电脑里没有安装 MySQL。&lt;/li&gt;
-&lt;li&gt;你的电脑里没有安装 Nginx。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;但它们都在为你服务。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✅ Docker 容器运行正常&lt;/li&gt;
+&lt;li&gt;✅ 端口转发 (Port Forwarding) 正常&lt;/li&gt;
+&lt;li&gt;✅ PHP 运行时挂载正常&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;下集预告&#34;&gt;&lt;a href=&#34;#下集预告&#34; class=&#34;headerlink&#34; title=&#34;下集预告&#34;&gt;&lt;/a&gt;下集预告&lt;/h2&gt;&lt;p&gt;环境通了，代码也在跑了。但我们怎么把代码存起来？怎么在公司写一半，回家换台电脑拉下来接着写？&lt;br&gt;下一篇：&lt;strong&gt;《Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）》&lt;/strong&gt;，我们将配置 GitHub 仓库，并演示“异地开发，无感切换”的丝滑体验。&lt;/p&gt;
+&lt;h2 id=&#34;下一步&#34;&gt;&lt;a href=&#34;#下一步&#34; class=&#34;headerlink&#34; title=&#34;下一步&#34;&gt;&lt;/a&gt;下一步&lt;/h2&gt;&lt;p&gt;基础环境已就绪。下一章节我们将讨论&lt;strong&gt;多端协作场景&lt;/strong&gt;：如何基于 Git 管理代码，并在不同设备间实现无缝的依赖引导与环境同步。&lt;/p&gt;
 </content>
         <category term="Laravel" />
         <category term="Docker" />

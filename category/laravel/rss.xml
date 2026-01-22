@@ -7,51 +7,51 @@
         <language>zh-CN</language>
         <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 27 Jan 2026 10:00:00 +0800</lastBuildDate>
-        <category>hexo</category>
         <category>迁移</category>
+        <category>hexo</category>
+        <category>主食</category>
+        <category>电脑维修</category>
+        <category>学习笔记</category>
         <category>pr</category>
         <category>bilibili</category>
-        <category>电脑维修</category>
-        <category>主食</category>
-        <category>学习笔记</category>
         <category>热菜</category>
-        <category>汤</category>
-        <category>甜品</category>
-        <category>海鲜</category>
         <category>梦境</category>
+        <category>甜品</category>
+        <category>汤</category>
+        <category>海鲜</category>
         <category>homestead</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码更新</category>
-        <category>oh-my-zsh</category>
+        <category>代码部署</category>
         <category>dcat admin</category>
+        <category>oh-my-zsh</category>
         <category>debug</category>
-        <category>道歉信</category>
         <category>指令</category>
-        <category>vs code</category>
-        <category>PAC 清单</category>
-        <category>定时任务</category>
+        <category>道歉信</category>
         <category>免密</category>
+        <category>vs code</category>
         <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>fileinfo</category>
+        <category>定时任务</category>
+        <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>fileinfo</category>
-        <category>gpg</category>
         <category>net time</category>
+        <category>swap</category>
         <category>端口查询</category>
         <category>表单验证</category>
         <category>事件</category>
+        <category>blade</category>
         <category>wordpress</category>
-        <category>swap</category>
         <category>队列</category>
         <category>redis</category>
-        <category>blade</category>
         <category>特色小吃</category>
         <category>粥</category>
-        <category>artisan 指令</category>
         <category>Cloudreve</category>
         <category>故障排除</category>
+        <category>artisan 指令</category>
         <category>Font Awesome</category>
         <category>vite</category>
         <category>linux</category>
@@ -69,37 +69,37 @@
         <category>京瓷</category>
         <category>教程</category>
         <category>Git</category>
-        <category>Monorepo</category>
-        <category>DevOps</category>
         <category>GitHub</category>
         <category>版本控制</category>
+        <category>Monorepo</category>
+        <category>DevOps</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
         <category>部署</category>
         <category>运维</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
         <category>Ubuntu</category>
         <category>安装指南</category>
         <category>阿里云</category>
         <category>镜像源</category>
-        <category>国产化</category>
-        <category>信创</category>
-        <category>TongHttpServer</category>
+        <category>Rule</category>
+        <category>Prompt</category>
+        <category>gemini</category>
         <category>Nginx</category>
         <category>反向代理</category>
         <category>NPM</category>
         <category>HTTPS</category>
         <category>问题排查</category>
-        <category>Rule</category>
-        <category>Prompt</category>
-        <category>gemini</category>
         <category>Sail</category>
+        <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
         <category>Troubleshooting</category>
         <category>Hardware</category>
         <category>Tooling</category>
-        <category>WSL2</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</guid>
             <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
@@ -109,126 +109,108 @@
             <category>Hardware</category>
             <category>Tooling</category>
             <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;写在前面&#34;&gt;&lt;a href=&#34;#写在前面&#34; class=&#34;headerlink&#34; title=&#34;写在前面&#34;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;经常有读者问：“大佬，我的电脑比较老，跑 Docker 会不会卡？”或者“我想换台电脑写代码，有什么推荐配置吗？”&lt;/p&gt;
-&lt;p&gt;确实，&lt;strong&gt;Laravel Sail (Docker + WSL2)&lt;/strong&gt; 虽然优雅，但它对硬件资源（特别是内存和磁盘 I&amp;#x2F;O）是有一定门槛的。它不像当年跑一个 WampServer 那么省资源。&lt;/p&gt;
-&lt;p&gt;在本系列的最后，我公开一下我目前正在使用的三套开发环境配置的高低搭配，供大家选购或升级时参考。这也是为了证明：&lt;strong&gt;只要配置得当，无论是工作站、家用台式还是轻薄本，都能愉快地 Sail 起来。&lt;/strong&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;硬件选型参考-Hardware-Reference&#34;&gt;&lt;a href=&#34;#硬件选型参考-Hardware-Reference&#34; class=&#34;headerlink&#34; title=&#34;硬件选型参考 (Hardware Reference)&#34;&gt;&lt;/a&gt;硬件选型参考 (Hardware Reference)&lt;/h2&gt;&lt;p&gt;硬件部分是我自己正在使用的配置，可供参考。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Laravel Sail&lt;/strong&gt; 基于 Docker 容器化架构，其对硬件资源（特别是内存与 I&amp;#x2F;O）的需求显著高于传统集成环境。以下基于实际生产场景，提供不同层级的配置基准供选购参考。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-主力重装：单位工作站-Workstation&#34;&gt;&lt;a href=&#34;#1-主力重装：单位工作站-Workstation&#34; class=&#34;headerlink&#34; title=&#34;1. 主力重装：单位工作站 (Workstation)&#34;&gt;&lt;/a&gt;1. 主力重装：单位工作站 (Workstation)&lt;/h2&gt;&lt;p&gt;这是我在公司的主力生产力工具，负责最繁重的开发任务。稳定性压倒一切。&lt;/p&gt;
+&lt;h2 id=&#34;1-生产力工作站-Workstation&#34;&gt;&lt;a href=&#34;#1-生产力工作站-Workstation&#34; class=&#34;headerlink&#34; title=&#34;1. 生产力工作站 (Workstation)&#34;&gt;&lt;/a&gt;1. 生产力工作站 (Workstation)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：重度开发、微服务架构、本地 LLM 运行、多项目并行。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Dell Precision 7920 Tower&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon Silver 4210R @ 2.40GHz (服务器级处理器)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 32.0 GB (ECC 内存)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;显卡&lt;/strong&gt;: NVIDIA Quadro RTX 4000&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;系统&lt;/strong&gt;: Windows 11 专业工作站版&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon &amp;#x2F; Core i9 &amp;#x2F; AMD Ryzen 9 (多核性能优先)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 32GB ECC&amp;#x2F;Non-ECC&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD (Gen4&amp;#x2F;Gen5)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;: Windows 11 Pro for Workstations&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;对于 Docker 开发来说，&lt;strong&gt;32GB 内存是“甜点线”&lt;/strong&gt;。&lt;br&gt;WSL2 在大内存下表现极其从容，我可以同时开启多个 Laravel 项目（微服务架构），同时跑 MySQL, Redis, Meilisearch, 甚至本地跑一个 LLM 模型，完全不感觉到卡顿。Xeon 处理器虽然单核频率不一定最高，但在多容器并发编译时非常稳。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;32GB 内存是 Docker 下流畅运行复杂栈（如 PHP + MySQL + Redis + Meilisearch + Selenium）的&lt;strong&gt;推荐配置&lt;/strong&gt;。充裕的内存允许 WSL2 保持较大的 Page Cache，显著减少磁盘 Swap 交换，提升容器冷启动速度。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-全能战将：家中台式机-Desktop&#34;&gt;&lt;a href=&#34;#2-全能战将：家中台式机-Desktop&#34; class=&#34;headerlink&#34; title=&#34;2. 全能战将：家中台式机 (Desktop)&#34;&gt;&lt;/a&gt;2. 全能战将：家中台式机 (Desktop)&lt;/h2&gt;&lt;p&gt;下班回家后的主力机，兼顾代码开发和（偶尔的）游戏娱乐。&lt;/p&gt;
+&lt;h2 id=&#34;2-主流开发配置-Standard-Desktop&#34;&gt;&lt;a href=&#34;#2-主流开发配置-Standard-Desktop&#34; class=&#34;headerlink&#34; title=&#34;2. 主流开发配置 (Standard Desktop)&#34;&gt;&lt;/a&gt;2. 主流开发配置 (Standard Desktop)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：标准全栈开发、常规 Laravel 项目。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Dell XPS 8930&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7-8700K (6核12线程，当年的神U)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 16.0 GB DDR4 2666MHz&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;显卡&lt;/strong&gt;: NVIDIA GeForce GTX 1080 8GB&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;硬盘&lt;/strong&gt;: 512GB SSD + 2TB HDD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7 &amp;#x2F; AMD Ryzen 7&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 16GB DDR4&amp;#x2F;DDR5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD (512GB+)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;这套配置代表了&lt;strong&gt;绝大多数开发者的“主流水平”&lt;/strong&gt;。&lt;br&gt;&lt;strong&gt;16GB 内存是 Sail 的“及格线”&lt;/strong&gt;。在 16GB 环境下，跑 1-2 个 Sail 项目完全没问题。但如果同时开着几十个 Chrome 标签页 + PHPStorm + Docker，内存占用率通常会飙到 85% 以上。&lt;br&gt;&lt;em&gt;注意：在 16GB 内存的机器上，我建议在 &lt;code&gt;.wslconfig&lt;/code&gt; 文件中限制一下 WSL 的最大内存占用（比如限制为 8GB），防止它把宿主机的内存吃光导致死机。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;16GB 内存是运行 Docker 开发环境的&lt;strong&gt;基准要求&lt;/strong&gt;。在并发运行 1-2 个 Sail 项目时表现良好。建议在 &lt;code&gt;.wslconfig&lt;/code&gt; 中限制 WSL2 最大内存占用（如 &lt;code&gt;memory=8GB&lt;/code&gt;），以避免宿主机系统卡顿。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-移动突击：便携二合一-Portable&#34;&gt;&lt;a href=&#34;#3-移动突击：便携二合一-Portable&#34; class=&#34;headerlink&#34; title=&#34;3. 移动突击：便携二合一 (Portable)&#34;&gt;&lt;/a&gt;3. 移动突击：便携二合一 (Portable)&lt;/h2&gt;&lt;p&gt;出差、开会、星巴克写代码时的选择。主打一个轻便。&lt;/p&gt;
+&lt;h2 id=&#34;3-便携移动端-Portable&#34;&gt;&lt;a href=&#34;#3-便携移动端-Portable&#34; class=&#34;headerlink&#34; title=&#34;3. 便携移动端 (Portable)&#34;&gt;&lt;/a&gt;3. 便携移动端 (Portable)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：临时维护、远程办公、轻量级编码。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;型号&lt;/strong&gt;: Microsoft Surface Pro 7&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7-1065G7 @ 1.30GHz&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;内存&lt;/strong&gt;: 16.0 GB&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;硬盘&lt;/strong&gt;: 256GB SSD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: Surface Pro &amp;#x2F; MacBook Air &amp;#x2F; XPS 13&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spec&lt;/strong&gt;: Core i5&amp;#x2F;i7 (Low Voltage) + 16GB RAM + SSD&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;点评&lt;/strong&gt;：&lt;br&gt;很多人认为轻薄本跑不动 Docker，其实不然。&lt;br&gt;只要是近几年的 &lt;strong&gt;i5&amp;#x2F;i7 低压处理器 + 16GB 内存&lt;/strong&gt;，配合高速 SSD，运行 Sail 依然丝般顺滑。&lt;br&gt;重点在于 &lt;strong&gt;SSD&lt;/strong&gt;。Surface 的磁盘性能很好，这对于 Docker 容器启动和大量小文件读写（vendor 目录）至关重要。&lt;br&gt;&lt;em&gt;警告：千万别尝试在 8GB 内存的轻薄本上跑 Sail，那会是幻灯片般的体验。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;对于轻薄本，&lt;strong&gt;SSD 性能是瓶颈所在&lt;/strong&gt;。Docker 的 OverlayFS 对随机读写极其敏感。务必确保项目文件存储于 WSL2 内部文件系统，以规避跨系统文件协议（9P）带来的 I&amp;#x2F;O 延迟。&lt;br&gt;&lt;em&gt;Note: 不推荐在 8GB 内存设备上运行完整的 Docker 开发栈。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结与建议（硬件篇）&#34;&gt;&lt;a href=&#34;#总结与建议（硬件篇）&#34; class=&#34;headerlink&#34; title=&#34;总结与建议（硬件篇）&#34;&gt;&lt;/a&gt;总结与建议（硬件篇）&lt;/h2&gt;&lt;p&gt;结合我的三套设备体验，如果你正准备为 Laravel Sail 准备硬件，我的建议是：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;**内存 (RAM)**：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;8GB&lt;/strong&gt;：❌ 别想了，折磨自己。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;16GB&lt;/strong&gt;：✅ &lt;strong&gt;及格&lt;/strong&gt;。够用，但要注意节制，偶尔需要清理内存。&lt;/li&gt;
-&lt;li&gt;**32GB+**：🚀 &lt;strong&gt;推荐&lt;/strong&gt;。为所欲为，从容不迫。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;**硬盘 (Storage)**：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;必须是 &lt;strong&gt;SSD&lt;/strong&gt; (固态硬盘)，最好是 NVMe 协议的。&lt;/li&gt;
-&lt;li&gt;Docker 对随机读写要求极高，机械硬盘 (HDD) 基本上告别 Docker 开发了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;CPU&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;核心数比主频更重要。Docker 容器多起来后，多核优势明显。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;必须支持虚拟化技术 (Virtualization)&lt;/strong&gt; 并在 BIOS 中开启。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;硬件选型总结&#34;&gt;&lt;a href=&#34;#硬件选型总结&#34; class=&#34;headerlink&#34; title=&#34;硬件选型总结&#34;&gt;&lt;/a&gt;硬件选型总结&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;组件&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;关键指标&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;建议&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;内存 (RAM)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;容量&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;16GB (Min)&lt;/strong&gt; &amp;#x2F; **32GB (Rec)**。Docker 是内存密集型应用。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;磁盘 (Storage)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I&amp;#x2F;O 吞吐&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;必选 **SSD (NVMe)**。HDD 机械硬盘不具备运行容器环境的可行性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;处理器 (CPU)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;虚拟化&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;必须支持并开启 &lt;strong&gt;VT-x &amp;#x2F; AMD-V&lt;/strong&gt;。多核优势大于单核高频。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-软实力：我的全栈工具箱-Software-Stack&#34;&gt;&lt;a href=&#34;#4-软实力：我的全栈工具箱-Software-Stack&#34; class=&#34;headerlink&#34; title=&#34;4. 软实力：我的全栈工具箱 (Software Stack)&#34;&gt;&lt;/a&gt;4. 软实力：我的全栈工具箱 (Software Stack)&lt;/h2&gt;&lt;p&gt;硬件只是底座，要让开发效率起飞，软件的选择同样至关重要。这也并非是“唯工具论”，而是找到最顺手的兵器。以下是我目前的标准配置：&lt;/p&gt;
-&lt;h3 id=&#34;核心开发&#34;&gt;&lt;a href=&#34;#核心开发&#34; class=&#34;headerlink&#34; title=&#34;核心开发&#34;&gt;&lt;/a&gt;核心开发&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;IDE &amp;#x2F; 编辑器&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; (主推)&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：目前我最舒适的开发环境。配合 &lt;strong&gt;Google Gemini 3 Pro&lt;/strong&gt; 大模型，写代码简直是降维打击。我自己开了 Gemini Advanced 会员（$20&amp;#x2F;月），Antigravity 对接后额度更高，体验拉满。&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;备选&lt;/em&gt;：Trae, VS Code。我不死磕某一个工具，谁好用也没必要踩一捧一，配合使用效率最高。&lt;/li&gt;
+&lt;h2 id=&#34;4-全栈工具链-Software-Toolchain&#34;&gt;&lt;a href=&#34;#4-全栈工具链-Software-Toolchain&#34; class=&#34;headerlink&#34; title=&#34;4. 全栈工具链 (Software Toolchain)&#34;&gt;&lt;/a&gt;4. 全栈工具链 (Software Toolchain)&lt;/h2&gt;&lt;p&gt;高效的开发离不开标准化的工具栈。以下是推荐的现代化 PHP 全栈开发方案。&lt;/p&gt;
+&lt;h3 id=&#34;核心开发环境&#34;&gt;&lt;a href=&#34;#核心开发环境&#34; class=&#34;headerlink&#34; title=&#34;核心开发环境&#34;&gt;&lt;/a&gt;核心开发环境&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; (配合 &lt;strong&gt;Gemini Advanced&lt;/strong&gt;)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：AI-Native 集成开发环境。利用大模型上下文理解能力实现代码生成与重构。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;数据库管理&lt;/strong&gt;: &lt;strong&gt;DBeaver Community&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：免费、开源、跨平台、支持所有数据库。相比于收费昂贵的 Navicat，DBeaver 社区版真香，功能完全够用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DBMS&lt;/strong&gt;: &lt;strong&gt;DBeaver Community&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：通用数据库管理工具。支持 MySQL, PostgreSQL, Redis 等，开源且跨平台。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;终端 (Terminal)&lt;/strong&gt;: &lt;strong&gt;Antigravity 内置终端&lt;/strong&gt; &amp;#x2F; &lt;strong&gt;Windows Terminal&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Antigravity 的内置终端深度集成，而 Windows Terminal 则是目前 Win 下最现代化的终端 App，颜值能打。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;运维与部署&#34;&gt;&lt;a href=&#34;#运维与部署&#34; class=&#34;headerlink&#34; title=&#34;运维与部署&#34;&gt;&lt;/a&gt;运维与部署&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;远程连接&lt;/strong&gt;: &lt;strong&gt;Xshell &amp;amp; Xftp&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：老牌劲旅。现在对家庭和教育用户&lt;strong&gt;完全免费&lt;/strong&gt;了，功能强大且稳定，比 putty 那些好用太多。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;测试服务器&lt;/strong&gt;: &lt;strong&gt;阿里云 &amp;#x2F; 腾讯云 (轻量应用服务器)&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国内做站首选，轻量服务器便宜量大，适合部署测试环境。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;远程桌面&lt;/strong&gt;: &lt;strong&gt;ToDesk&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国产远控之光，速度快，不限速，关键时刻救急用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal&lt;/strong&gt;: &lt;strong&gt;Windows Terminal&lt;/strong&gt; &amp;#x2F; &lt;strong&gt;Antigravity Integrated Terminal&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：现代化终端仿真器。支持多 Tab、GPU 加速渲染及 WSL 集成。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;知识管理与协作&#34;&gt;&lt;a href=&#34;#知识管理与协作&#34; class=&#34;headerlink&#34; title=&#34;知识管理与协作&#34;&gt;&lt;/a&gt;知识管理与协作&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;笔记与文档&lt;/strong&gt;: &lt;strong&gt;OneNote&lt;/strong&gt; (Microsoft 365)&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：开了 Microsoft 365 会员，拥有 1TB OneDrive 空间。笔记、设计稿、文档全部云端同步，多端无缝切换，不用担心数据丢失。&lt;/li&gt;
+&lt;h3 id=&#34;基础设施与运维&#34;&gt;&lt;a href=&#34;#基础设施与运维&#34; class=&#34;headerlink&#34; title=&#34;基础设施与运维&#34;&gt;&lt;/a&gt;基础设施与运维&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SSH Client&lt;/strong&gt;: &lt;strong&gt;Xshell &amp;#x2F; Xftp&lt;/strong&gt; (Free for Home&amp;#x2F;School)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：企业级终端模拟软件，连接稳定性优于开源替代品。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;流程&amp;#x2F;架构图&lt;/strong&gt;: &lt;a href=&#34;https://app.diagrams.net/&#34;&gt;&lt;strong&gt;Diagrams.net (draw.io)&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Web 端最强画图工具，免费，支持存到 OneDrive&amp;#x2F;GitHub。画架构图、ER 图首选。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remote Desktop&lt;/strong&gt;: &lt;strong&gt;ToDesk&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：低延迟远程桌面控制，适用于远程协助或应急运维。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;项目管理&lt;/strong&gt;: &lt;strong&gt;PingCode&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：国产优秀的研发项目管理工具，适合敏捷开发管理。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;代码托管&lt;/strong&gt;: &lt;strong&gt;GitHub&lt;/strong&gt; (主) + &lt;strong&gt;Gitee&lt;/strong&gt; (备)&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：鸡蛋不放在同一个篮子里。GitHub 是世界中心，Gitee 是国内速度保障。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cloud Provider&lt;/strong&gt;: &lt;strong&gt;Aliyun &amp;#x2F; Tencent Cloud&lt;/strong&gt; (Lightweight Server)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：高性价比的测试&amp;#x2F;预发布环境托管。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;效率神器&#34;&gt;&lt;a href=&#34;#效率神器&#34; class=&#34;headerlink&#34; title=&#34;效率神器&#34;&gt;&lt;/a&gt;效率神器&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;文档阅读&lt;/strong&gt;: &lt;strong&gt;沉浸式翻译&lt;/strong&gt; (浏览器插件)&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：看英文官方文档的神器。双语对照显示，翻译质量极高，从此不再畏惧英文文档。&lt;/li&gt;
+&lt;h3 id=&#34;协作与生产力&#34;&gt;&lt;a href=&#34;#协作与生产力&#34; class=&#34;headerlink&#34; title=&#34;协作与生产力&#34;&gt;&lt;/a&gt;协作与生产力&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;: &lt;strong&gt;Microsoft OneNote&lt;/strong&gt; (M365)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：云同步笔记与技术文档归档。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;截图贴图&lt;/strong&gt;: &lt;strong&gt;Snipaste&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：F1 截图，F3 贴图。把要参考的代码或报错信息直接“钉”在屏幕上，对照着写，效率提升 100%。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diagramming&lt;/strong&gt;: &lt;strong&gt;Diagrams.net (draw.io)&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：基于 Web 的架构图&amp;#x2F;ER 图绘制工具，支持 Git 存储后端。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;浏览器&lt;/strong&gt;: &lt;strong&gt;Chrome&lt;/strong&gt; &amp;amp; &lt;strong&gt;Edge&lt;/strong&gt;&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;理由&lt;/em&gt;：Web 开发标配双雄。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Project Management&lt;/strong&gt;: &lt;strong&gt;PingCode&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：敏捷研发项目管理系统。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;VCS&lt;/strong&gt;: &lt;strong&gt;GitHub&lt;/strong&gt; (Primary) &amp;#x2F; &lt;strong&gt;Gitee&lt;/strong&gt; (Mirror)&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：分布式版本控制与代码托管。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Utility&lt;/strong&gt;: &lt;strong&gt;Snipaste&lt;/strong&gt; (截图&amp;#x2F;贴图) &amp;#x2F; &lt;strong&gt;Immersive Translate&lt;/strong&gt; (沉浸式翻译)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h2&gt;&lt;p&gt;工欲善其事，必先利其器。&lt;br&gt;愿大家都能有一台趁手的兵器，在 Laravel 的海洋里乘风破浪！&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;工欲善其事，必先利其器&lt;/strong&gt;。&lt;br&gt;标准化的硬件基准与现代化的软件工具链，是保障开发效率与代码质量的物理基础。希望这份清单能为团队的技术选型提供参考。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -239,70 +221,71 @@
             <category>Sail</category>
             <category>Troubleshooting</category>
             <pubDate>Mon, 26 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;写在最后&#34;&gt;&lt;a href=&#34;#写在最后&#34; class=&#34;headerlink&#34; title=&#34;写在最后&#34;&gt;&lt;/a&gt;写在最后&lt;/h2&gt;&lt;p&gt;作为《Laravel Sail 开发环境部署一把过》系列的收官之作，本文旨在汇总大家在使用过程中最容易遇到的“坑”。&lt;br&gt;如果你遇到了报错，请先按 &lt;code&gt;Ctrl + F&lt;/code&gt; 在本文搜索关键词，说不定就能立刻解决。&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;故障排查概览&#34;&gt;&lt;a href=&#34;#故障排查概览&#34; class=&#34;headerlink&#34; title=&#34;故障排查概览&#34;&gt;&lt;/a&gt;故障排查概览&lt;/h2&gt;&lt;p&gt;本文汇总了在 Windows (WSL2) + Docker 环境下运行 Laravel Sail 时可能遇到的高频问题。我们将从网络、资源、权限与性能四个维度进行分析与解决。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;0-网络问题-The-Great-Firewall&#34;&gt;&lt;a href=&#34;#0-网络问题-The-Great-Firewall&#34; class=&#34;headerlink&#34; title=&#34;0. 网络问题 (The Great Firewall)&#34;&gt;&lt;/a&gt;0. 网络问题 (The Great Firewall)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;这是中国大陆用户面临的最大 BOSS。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;/p&gt;
+&lt;h2 id=&#34;1-网络连接问题-Network-Connectivity&#34;&gt;&lt;a href=&#34;#1-网络连接问题-Network-Connectivity&#34; class=&#34;headerlink&#34; title=&#34;1. 网络连接问题 (Network Connectivity)&#34;&gt;&lt;/a&gt;1. 网络连接问题 (Network Connectivity)&lt;/h2&gt;&lt;p&gt;由于 Docker 镜像拉取及 Composer 依赖安装均需访问境外服务器，网络连接稳定性是环境部署的首要前提。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;curl -s https://laravel.build/example-app | bash&lt;/code&gt; 卡住不动或报错 &lt;code&gt;Connection refused&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sail up&lt;/code&gt; 拉取镜像时速度为 0 或直接超时。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;composer install&lt;/code&gt; 慢如蜗牛。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;curl&lt;/code&gt; 安装脚本连接超时 (&lt;code&gt;Connection refused&lt;/code&gt;)。&lt;/li&gt;
+&lt;li&gt;Docker 镜像拉取速度极慢或卡顿。&lt;/li&gt;
+&lt;li&gt;Composer 依赖安装失败。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;残酷的现实&lt;/strong&gt;：&lt;br&gt;Docker 的镜像源服务器大部分在国外。虽然国内有镜像加速，但这两年（你懂的）越来越不稳定。&lt;br&gt;&lt;strong&gt;假如你无法解决“科学上网”的问题，那么使用 Laravel Sail 这条路将极其痛苦，我建议你趁早放弃，去选择 PhpStudy 或其他国产集成环境。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;唯一的终极解法&lt;/strong&gt;：&lt;br&gt;别去整什么 Docker 换源、HTTP 代理环境变量，&lt;strong&gt;都不好使&lt;/strong&gt;。&lt;br&gt;我的推荐思路只有一条：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;工具&lt;/strong&gt;：本机安装 &lt;strong&gt;v2rayN&lt;/strong&gt; (或其他同类软件)。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;模式&lt;/strong&gt;：开启 &lt;strong&gt;TUN模式&lt;/strong&gt; (Tun Mode)。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;服务商&lt;/strong&gt;：我个人推荐 &lt;a href=&#34;https://justmysocks.net/members/aff.php?aff=3236&#34;&gt;&lt;strong&gt;Just My Socks&lt;/strong&gt;&lt;/a&gt; （搬瓦工官方出品，稳）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;开启 TUN 模式后，你的所有网络流量（包括 WSL2 和 Docker 拉取镜像的流量）都会自动走代理，从此告别一切网络玄学。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;br&gt;建议在宿主机配置能够处理 TUN 流量的代理工具（如 v2rayN 开启 TUN 模式）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：TUN 模式在网络层接管所有流量，能够自动代理 WSL2 及 Docker 容器发出的请求，无需单独配置复杂的 HTTP_PROXY 环境变量或 Docker 镜像源。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-端口冲突-Port-is-already-allocated&#34;&gt;&lt;a href=&#34;#1-端口冲突-Port-is-already-allocated&#34; class=&#34;headerlink&#34; title=&#34;1. 端口冲突 (Port is already allocated)&#34;&gt;&lt;/a&gt;1. 端口冲突 (Port is already allocated)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行 &lt;code&gt;sail up&lt;/code&gt; 时，报错：&lt;/p&gt;
+&lt;h2 id=&#34;2-端口冲突-Port-Conflicts&#34;&gt;&lt;a href=&#34;#2-端口冲突-Port-Conflicts&#34; class=&#34;headerlink&#34; title=&#34;2. 端口冲突 (Port Conflicts)&#34;&gt;&lt;/a&gt;2. 端口冲突 (Port Conflicts)&lt;/h2&gt;&lt;p&gt;Docker 容器尝试绑定的宿主机端口已被占用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;&lt;code&gt;sail up&lt;/code&gt; 启动失败，报错：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;Sail 默认使用 &lt;strong&gt;80&lt;/strong&gt; 端口（Web）和 &lt;strong&gt;3306&lt;/strong&gt; 端口（MySQL）。如果这台电脑上已经装了 IIS、Apache、Nginx 或者本地已经装了 MySQL，端口就会打架。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;只需要在项目根目录的 &lt;code&gt;.env&lt;/code&gt; 文件中修改端口配置即可（如果没有这些行，手动加上）：&lt;/p&gt;
-&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Web 端口改为 8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;APP_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 MySQL 端口改为 33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_DB_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 将 Redis 端口改为 63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_REDIS_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;修改完后，重启 Sail：&lt;code&gt;sail up -d&lt;/code&gt;。&lt;br&gt;以后访问网站就变成：&lt;code&gt;http://localhost:8000&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：&lt;br&gt;Sail 默认绑定端口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;APP_PORT: 80 (常被 IIS, Apache, 或其他 Web 服务占用)&lt;/li&gt;
+&lt;li&gt;MySQL: 3306 (常被本地 MySQL 服务占用)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;br&gt;修改项目根目录 &lt;code&gt;.env&lt;/code&gt; 文件，重映射 Docker 端口：&lt;/p&gt;
+&lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;APP_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_DB_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_REDIS_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;重启服务生效：&lt;code&gt;sail up -d&lt;/code&gt;。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-网站运行极其缓慢-Slow-Performance&#34;&gt;&lt;a href=&#34;#2-网站运行极其缓慢-Slow-Performance&#34; class=&#34;headerlink&#34; title=&#34;2. 网站运行极其缓慢 (Slow Performance)&#34;&gt;&lt;/a&gt;2. 网站运行极其缓慢 (Slow Performance)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;打开一个页面需要 2-3 秒，甚至更久。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;这是新手最容易犯的错误！&lt;/strong&gt;&lt;br&gt;你把项目代码放在了 Windows 的磁盘里（比如 &lt;code&gt;/mnt/c/Users/...&lt;/code&gt;），然后让 WSL 去读取。由于跨文件系统的 I&amp;#x2F;O 性能极差，会导致速度慢到无法接受。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;一定要把代码放在 WSL 自己的文件系统里！&lt;/strong&gt;&lt;br&gt;也就是上面的教程中反复强调的 &lt;code&gt;~/code&lt;/code&gt; (即 &lt;code&gt;/home/your-username/code&lt;/code&gt;) 目录下。&lt;br&gt;千万不要在 Windows 的文件资源管理器里直接把项目拖到 C 盘或 D 盘。&lt;/p&gt;
+&lt;h2 id=&#34;3-I-O-性能严重下降-Slow-Performance&#34;&gt;&lt;a href=&#34;#3-I-O-性能严重下降-Slow-Performance&#34; class=&#34;headerlink&#34; title=&#34;3. I&amp;#x2F;O 性能严重下降 (Slow Performance)&#34;&gt;&lt;/a&gt;3. I&amp;#x2F;O 性能严重下降 (Slow Performance)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;页面加载延迟极高（&amp;gt;2s），文件读写缓慢。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;跨文件系统访问&lt;/strong&gt;。若项目代码存放于 Windows 文件系统（如 &lt;code&gt;/mnt/c/Users/...&lt;/code&gt;），WSL2 需通过 9P 协议进行跨跨系统文件读写，性能损耗巨大。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最佳实践&lt;/strong&gt;：&lt;br&gt;务必将项目代码存储于 WSL2 原生文件系统中（如 &lt;code&gt;~/code&lt;/code&gt; 或 &lt;code&gt;/var/www&lt;/code&gt;）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;错误路径&lt;/em&gt;：&lt;code&gt;/mnt/c/Users/Admin/code/project&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;正确路径&lt;/em&gt;：&lt;code&gt;/home/Admin/code/project&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-权限问题-Permission-Denied&#34;&gt;&lt;a href=&#34;#3-权限问题-Permission-Denied&#34; class=&#34;headerlink&#34; title=&#34;3. 权限问题 (Permission Denied)&#34;&gt;&lt;/a&gt;3. 权限问题 (Permission Denied)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;运行某些命令或生成日志时，提示 &lt;code&gt;Permission denied&lt;/code&gt; 或 &lt;code&gt;Unable to write to directory&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;br&gt;通常是因为你不小心用了 &lt;code&gt;sudo&lt;/code&gt; 或者以 &lt;code&gt;root&lt;/code&gt; 身份运行了该目录下的命令（比如 &lt;code&gt;sudo npm install&lt;/code&gt; 或 &lt;code&gt;sudo composer ...&lt;/code&gt;），导致生成的文件夹归属权变成了 &lt;code&gt;root&lt;/code&gt;，而 Sail 容器内的默认用户 &lt;code&gt;sail&lt;/code&gt; 无法写入。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;预防与解决&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;核心建议&lt;/strong&gt;：&lt;strong&gt;在开发过程中，非必要不要去手动修改文件权限或使用 sudo&lt;/strong&gt;。请始终保持在 &lt;code&gt;sail&lt;/code&gt; 角色下（即直接运行 &lt;code&gt;sail xxx&lt;/code&gt;）执行各类默认操作。实在需要 &lt;code&gt;root&lt;/code&gt; 权限的时候（比如安装系统软件），务必想清楚你在干什么。&lt;/p&gt;
-&lt;p&gt;如果已经乱了，Sail 提供了一个快速修复所属权的命令。在项目根目录下运行：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chown&lt;/span&gt; -R sail:sail .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;或者，如果你想“暴力”一点（仅限开发环境）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chmod&lt;/span&gt; -R 777 storage bootstrap/cache&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;hr&gt;
-&lt;h2 id=&#34;4-数据库连接不上-Navicat-TablePlus&#34;&gt;&lt;a href=&#34;#4-数据库连接不上-Navicat-TablePlus&#34; class=&#34;headerlink&#34; title=&#34;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&#34;&gt;&lt;/a&gt;4. 数据库连接不上 (Navicat &amp;#x2F; TablePlus)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;想用电脑上的 Navicat 连接 Docker 里的 MySQL，却连不上。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;/p&gt;
+&lt;h2 id=&#34;4-文件权限问题-Permission-Denied&#34;&gt;&lt;a href=&#34;#4-文件权限问题-Permission-Denied&#34; class=&#34;headerlink&#34; title=&#34;4. 文件权限问题 (Permission Denied)&#34;&gt;&lt;/a&gt;4. 文件权限问题 (Permission Denied)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;应用日志无法写入，或缓存文件生成失败。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：&lt;br&gt;如果在 WSL2 中使用 &lt;code&gt;root&lt;/code&gt; 用户（或通过 &lt;code&gt;sudo&lt;/code&gt;）执行了生成文件的命令，会导致文件所有者变为 &lt;code&gt;root&lt;/code&gt;，而 Sail 容器内的 &lt;code&gt;sail&lt;/code&gt; 用户（UID 1000）无权写入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;: &lt;code&gt;localhost&lt;/code&gt; (或者 &lt;code&gt;127.0.0.1&lt;/code&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt;: 默认为 &lt;code&gt;3306&lt;/code&gt;。**但在 Docker 中，请检查 &lt;code&gt;.env&lt;/code&gt; 里的 &lt;code&gt;FORWARD_DB_PORT&lt;/code&gt;**。如果没改过，就是 3306。如果改成了 33060，这里也要填 33060。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Username&lt;/strong&gt;: &lt;code&gt;sail&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Password&lt;/strong&gt;: &lt;code&gt;password&lt;/code&gt; (默认是 password，除非你在 .env 里改了 &lt;code&gt;DB_PASSWORD&lt;/code&gt;)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不要填 Docker 容器的 IP，直接填 localhost 即可，因为 Docker Desktop 做了端口转发。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;5-sail-命令找不到-Command-not-found&#34;&gt;&lt;a href=&#34;#5-sail-命令找不到-Command-not-found&#34; class=&#34;headerlink&#34; title=&#34;5. sail 命令找不到 (Command not found)&#34;&gt;&lt;/a&gt;5. &lt;code&gt;sail&lt;/code&gt; 命令找不到 (Command not found)&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;症状&lt;/strong&gt;：&lt;br&gt;输入 &lt;code&gt;sail up&lt;/code&gt;，提示 &lt;code&gt;bash: sail: command not found&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法&lt;/strong&gt;：&lt;br&gt;这通常是因为别名失效了，或者没有重新加载配置文件。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;确保你按照《环境配置篇》在 &lt;code&gt;~/.bashrc&lt;/code&gt; 里加了 alias。&lt;/li&gt;
-&lt;li&gt;尝试运行 &lt;code&gt;source ~/.bashrc&lt;/code&gt; 刷新配置。&lt;/li&gt;
-&lt;li&gt;如果还是不行，老老实实打全路径验证一下：&lt;code&gt;./vendor/bin/sail up&lt;/code&gt;。如果全路径能用，说明就是 alias 配置的问题。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;修复权限&lt;/strong&gt;：使用 Sail 提供的辅助命令重置项目目录权限：&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell &lt;span class=&#34;built_in&#34;&gt;chown&lt;/span&gt; -R sail:sail .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预防措施&lt;/strong&gt;：始终通过 &lt;code&gt;sail&lt;/code&gt; 别名执行命令（如 &lt;code&gt;sail npm install&lt;/code&gt;），避免直接使用 &lt;code&gt;sudo&lt;/code&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h2&gt;&lt;p&gt;至此，&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt; 系列的技术教程部分就彻底完结了。&lt;/p&gt;
-&lt;p&gt;从概念介绍，到 WSL 环境搭建，再到 Git 多机协同，最后到日常命令与故障排查。希望能帮助 Windows 下的 PHPer 彻底摆脱环境配置的噩梦，把宝贵的时间花在写出优雅的代码上。&lt;/p&gt;
-&lt;p&gt;如果你对“跑得顺 Sail 到底需要什么样的电脑”感兴趣，欢迎阅读最后一篇番外：&lt;br&gt;&lt;strong&gt;《番外篇：工欲善其事——我的三套开发装备大公开》&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Happy Coding with Sail! ⛵&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;5-外部数据库连接&#34;&gt;&lt;a href=&#34;#5-外部数据库连接&#34; class=&#34;headerlink&#34; title=&#34;5. 外部数据库连接&#34;&gt;&lt;/a&gt;5. 外部数据库连接&lt;/h2&gt;&lt;p&gt;若需使用宿主机的 GUI 工具（如 Navicat, TablePlus）连接容器数据库：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Host&lt;/strong&gt;: &lt;code&gt;localhost&lt;/code&gt; (Docker Desktop 会自动将端口转发至宿主机)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Port&lt;/strong&gt;: &lt;code&gt;3306&lt;/code&gt; (或 &lt;code&gt;.env&lt;/code&gt; 中定义的 &lt;code&gt;FORWARD_DB_PORT&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;User&lt;/strong&gt;: &lt;code&gt;sail&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Password&lt;/strong&gt;: &lt;code&gt;password&lt;/code&gt; (或 &lt;code&gt;.env&lt;/code&gt; 中定义的 &lt;code&gt;DB_PASSWORD&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-磁盘空间回收-Disk-Space-Reclamation&#34;&gt;&lt;a href=&#34;#6-磁盘空间回收-Disk-Space-Reclamation&#34; class=&#34;headerlink&#34; title=&#34;6. 磁盘空间回收 (Disk Space Reclamation)&#34;&gt;&lt;/a&gt;6. 磁盘空间回收 (Disk Space Reclamation)&lt;/h2&gt;&lt;p&gt;Docker Desktop 在 Windows 上使用 &lt;code&gt;ext4.vhdx&lt;/code&gt; 虚拟磁盘文件存储数据。该文件具有“动态增长，但不自动缩容”的特性，长期使用可能导致占用大量磁盘空间。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案：Purge Data&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;若需释放空间，可使用 Docker Desktop 自带的清理功能（注意：此操作将&lt;strong&gt;即时删除所有&lt;/strong&gt;容器、镜像及数据卷）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Docker Desktop -&amp;gt; &lt;strong&gt;Troubleshoot&lt;/strong&gt; (右上角甲虫图标)。&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;Clean &amp;#x2F; Purge data&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;勾选 &lt;strong&gt;Disk image&lt;/strong&gt; 并点击 Delete。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;重建环境&lt;/strong&gt;：&lt;br&gt;清理完成后，只需在 WSL2 项目目录中执行两步即可完全恢复环境：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 重新拉取镜像并启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 重建数据库结构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate:fresh --seed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这也体现了 &lt;strong&gt;Infrastructure as Code&lt;/strong&gt; 的优势：开发环境是可被快速销毁并重建的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h2&gt;&lt;p&gt;至此，&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt; 系列的技术内容告一段落。&lt;br&gt;通过标准化、容器化的开发环境，我们消除了环境差异带来的不确定性。希望本系列能协助 Windows 开发者构建高效、稳定的 Laravel 工作流。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -314,71 +297,68 @@
             <category>Artisan</category>
             <category>Composer</category>
             <pubDate>Sun, 25 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;a href=&#34;#核心心法：忘掉本地环境&#34; class=&#34;headerlink&#34; title=&#34;核心心法：忘掉本地环境&#34;&gt;&lt;/a&gt;核心心法：忘掉本地环境&lt;/h2&gt;&lt;p&gt;进入 Sail 的世界后，你需要修改一个肌肉记忆。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以前你的操作：&lt;/strong&gt;&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;容器化开发范式-Development-Paradigm&#34;&gt;&lt;a href=&#34;#容器化开发范式-Development-Paradigm&#34; class=&#34;headerlink&#34; title=&#34;容器化开发范式 (Development Paradigm)&#34;&gt;&lt;/a&gt;容器化开发范式 (Development Paradigm)&lt;/h2&gt;&lt;p&gt;迁移至 Sail 环境后，开发者的核心工作流将发生本质变化：&lt;strong&gt;从调用本机二进制文件转向调用容器内运行时&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Sail 本质上封装了 &lt;code&gt;docker-compose exec&lt;/code&gt; 指令。所有开发命令均应通过 &lt;code&gt;sail&lt;/code&gt; 代理执行，以确保运行环境与生产环境（容器镜像）的高度一致性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;映射关系示例&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;left&#34;&gt;本地命令 (Deprecated)&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;容器化命令 (Recommended)&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;执行上下文&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;php artisan ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;sail artisan ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;laravel.test&lt;/code&gt; 容器 (PHP CLI)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;composer ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;sail composer ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;laravel.test&lt;/code&gt; 容器 (Composer)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;npm run ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;sail npm run ...&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;laravel.test&lt;/code&gt; 容器 (Node)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;mysql&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;sail mysql&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;code&gt;mysql&lt;/code&gt; 容器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-后端工作流：Artisan-Composer&#34;&gt;&lt;a href=&#34;#1-后端工作流：Artisan-Composer&#34; class=&#34;headerlink&#34; title=&#34;1. 后端工作流：Artisan &amp;amp; Composer&#34;&gt;&lt;/a&gt;1. 后端工作流：Artisan &amp;amp; Composer&lt;/h2&gt;&lt;h3 id=&#34;1-1-Artisan-CLI&#34;&gt;&lt;a href=&#34;#1-1-Artisan-CLI&#34; class=&#34;headerlink&#34; title=&#34;1.1 Artisan CLI&#34;&gt;&lt;/a&gt;1.1 Artisan CLI&lt;/h3&gt;&lt;p&gt;在容器内执行 Artisan 命令，无需在宿主机配置 PHP 环境。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成资源 (Controller, Model, etc.)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:model Order -m&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行数据库迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 开启队列监听&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan queue:work&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;1-2-依赖管理-Composer&#34;&gt;&lt;a href=&#34;#1-2-依赖管理-Composer&#34; class=&#34;headerlink&#34; title=&#34;1.2 依赖管理 (Composer)&#34;&gt;&lt;/a&gt;1.2 依赖管理 (Composer)&lt;/h3&gt;&lt;p&gt;使用 Sail 管理依赖可解决 PHP 版本不匹配问题（例如宿主机 PHP 8.0 而项目需 PHP 8.2）。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装生产依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require guzzlehttp/guzzle&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装开发依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/pint --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload -o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;2-前端工作流：Node-Vite&#34;&gt;&lt;a href=&#34;#2-前端工作流：Node-Vite&#34; class=&#34;headerlink&#34; title=&#34;2. 前端工作流：Node &amp;amp; Vite&#34;&gt;&lt;/a&gt;2. 前端工作流：Node &amp;amp; Vite&lt;/h2&gt;&lt;p&gt;Sail 默认集成了 Node.js 运行时，支持现代化的前端构建流程。这意味着宿主机也&lt;strong&gt;无需安装 Node&amp;#x2F;NPM&lt;/strong&gt;。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装前端依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 启动开发服务器 (HMR hot-reload enabled)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 构建生产资源&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run build&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sail 会自动处理 Docker 端口映射（默认 5173），确保 WSL2 中的 Vite Server 可被宿主机浏览器访问。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-服务生命周期管理&#34;&gt;&lt;a href=&#34;#3-服务生命周期管理&#34; class=&#34;headerlink&#34; title=&#34;3. 服务生命周期管理&#34;&gt;&lt;/a&gt;3. 服务生命周期管理&lt;/h2&gt;&lt;p&gt;基于 Docker Compose 的服务治理。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;php artisan migrate&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;npm run dev&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;现在 Sail 的操作：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;sail artisan migrate&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sail composer require guzzlehttp/guzzle&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sail npm run dev&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;心法口诀&lt;/strong&gt;：&lt;strong&gt;凡是需要运行环境的命令，前面统统加 &lt;code&gt;sail&lt;/code&gt;。&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;前提&lt;/strong&gt;：你已经按照《环境配置篇》配置好了 &lt;code&gt;alias sail=&amp;#39;...&amp;#39;&lt;/code&gt; 别名。如果没有，请手动输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;1-Artisan-命令：得心应手&#34;&gt;&lt;a href=&#34;#1-Artisan-命令：得心应手&#34; class=&#34;headerlink&#34; title=&#34;1. Artisan 命令：得心应手&#34;&gt;&lt;/a&gt;1. Artisan 命令：得心应手&lt;/h2&gt;&lt;p&gt;在 Laravel 开发中，Artisan 是我们最常用的工具。在 Sail 中使用它没有任何区别，仅仅是换了个前缀。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成控制器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:controller UserController&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 路由列表&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan route:list&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：当你输入 &lt;code&gt;sail artisan ...&lt;/code&gt; 时，Sail 会自动把命令转发到正在运行的 Docker 容器中去执行。这意味着&lt;strong&gt;你的电脑完全不需要安装 PHP&lt;/strong&gt;，也能执行 PHP 代码。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;2-Composer：依赖管理&#34;&gt;&lt;a href=&#34;#2-Composer：依赖管理&#34; class=&#34;headerlink&#34; title=&#34;2. Composer：依赖管理&#34;&gt;&lt;/a&gt;2. Composer：依赖管理&lt;/h2&gt;&lt;p&gt;安装新包、更新依赖，也全部通过 Sail 进行。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装扩展包&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/breeze --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 更新所有依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer update&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：哪怕你的 Windows&amp;#x2F;WSL 里装了 Composer，我也&lt;strong&gt;强烈建议&lt;/strong&gt;使用 &lt;code&gt;sail composer&lt;/code&gt;。因为这样能确保依赖的 PHP 版本与容器内的 PHP 版本（真实运行环境）完全一致，避免版本冲突。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;3-前端编译：Node-NPM&#34;&gt;&lt;a href=&#34;#3-前端编译：Node-NPM&#34; class=&#34;headerlink&#34; title=&#34;3. 前端编译：Node &amp;amp; NPM&#34;&gt;&lt;/a&gt;3. 前端编译：Node &amp;amp; NPM&lt;/h2&gt;&lt;p&gt;这是很多新手容易混淆的地方。&lt;br&gt;虽然你可以在 WSL 里安装 Node.js，但 Sail 实际上也为你准备好了一套 Node 环境。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装前端依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm install&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 运行开发服务器 (Vite)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 编译生产环境代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail npm run build&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;当运行 &lt;code&gt;sail npm run dev&lt;/code&gt; 时，Vite 服务器实际上是在 Docker 容器里跑的，但通过端口映射，你依然可以在 Windows 浏览器里无缝访问。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;4-服务管理：掌控全局&#34;&gt;&lt;a href=&#34;#4-服务管理：掌控全局&#34; class=&#34;headerlink&#34; title=&#34;4. 服务管理：掌控全局&#34;&gt;&lt;/a&gt;4. 服务管理：掌控全局&lt;/h2&gt;&lt;p&gt;Sail 本质上是 Docker Compose 的封装，所以管理服务变得很简单。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;启动环境&lt;/strong&gt;：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;(每天开机第一件事)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;停止环境&lt;/strong&gt;：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;(下班关机前，或者你想省点内存时)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;重启环境&lt;/strong&gt;：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail restart&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;(当你修改了 &lt;code&gt;docker-compose.yml&lt;/code&gt; 配置后需要用到)&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;查看运行状态&lt;/strong&gt;：&lt;br&gt;查看当前有哪些容器在跑，以及它们的状态：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启动服务栈&lt;/strong&gt; (Detached Mode):&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;停止服务栈&lt;/strong&gt;:&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail stop&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;查看容器状态&lt;/strong&gt;:&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail ps&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;em&gt;Output 示例&lt;/em&gt;:&lt;figure class=&#34;highlight text&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;NAME                    COMMAND                  STATUS              PORTS&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;example-app-laravel.test-1   &amp;quot;start-container&amp;quot;        Up                  0.0.0.0:80-&amp;gt;80/tcp&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;example-app-mysql-1          &amp;quot;docker-entrypoint...&amp;quot;   Up                  0.0.0.0:3306-&amp;gt;3306/tcp&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;5-进阶：直接进入“母体”&#34;&gt;&lt;a href=&#34;#5-进阶：直接进入“母体”&#34; class=&#34;headerlink&#34; title=&#34;5. 进阶：直接进入“母体”&#34;&gt;&lt;/a&gt;5. 进阶：直接进入“母体”&lt;/h2&gt;&lt;p&gt;有时候，你可能想进去容器里面看看文件，或者运行一些奇怪的 Linux 命令。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以默认用户 (sail) 进入应用容器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail shell&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以 root 用户进入应用容器（拥有最高权限）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;4-容器访问与调试&#34;&gt;&lt;a href=&#34;#4-容器访问与调试&#34; class=&#34;headerlink&#34; title=&#34;4. 容器访问与调试&#34;&gt;&lt;/a&gt;4. 容器访问与调试&lt;/h2&gt;&lt;h3 id=&#34;4-1-Shell-Access&#34;&gt;&lt;a href=&#34;#4-1-Shell-Access&#34; class=&#34;headerlink&#34; title=&#34;4.1 Shell Access&#34;&gt;&lt;/a&gt;4.1 Shell Access&lt;/h3&gt;&lt;p&gt;在特定场景下（如检查日志、手动调试脚本），需直接进入容器 Shell：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以 workspace 用户 (sail) 进入应用容器&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail shell&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 以 root 用户进入 (主要用于安装系统级依赖)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail root-shell&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;进入后，你就身处一个标准的 Ubuntu 环境中了，你的项目代码在 &lt;code&gt;/var/www/html&lt;/code&gt; 目录下。输入 &lt;code&gt;exit&lt;/code&gt; 即可退出。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;6-炫技：临时共享站点&#34;&gt;&lt;a href=&#34;#6-炫技：临时共享站点&#34; class=&#34;headerlink&#34; title=&#34;6. 炫技：临时共享站点&#34;&gt;&lt;/a&gt;6. 炫技：临时共享站点&lt;/h2&gt;&lt;p&gt;如果你想把现在的像本地项目展示给远在异地的同事或者客户看，不需要部署上线，Sail 自带了一个神奇的命令（基于 Expose）：&lt;/p&gt;
+&lt;h3 id=&#34;4-2-临时站点共享-Expose&#34;&gt;&lt;a href=&#34;#4-2-临时站点共享-Expose&#34; class=&#34;headerlink&#34; title=&#34;4.2 临时站点共享 (Expose)&#34;&gt;&lt;/a&gt;4.2 临时站点共享 (Expose)&lt;/h3&gt;&lt;p&gt;基于 &lt;code&gt;ngrok&lt;/code&gt; 或 &lt;code&gt;expose&lt;/code&gt; 的隧道服务，将本地开发环境暴露至公网，便于 Webhook 调试或远程演示。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail share&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;运行后，它会给你一个临时的公网 URL（例如 &lt;code&gt;http://your-site.sharedwithexpose.com&lt;/code&gt;）。把这个链接发给这一秒需要看演示的人，他们就能直接访问你本地开发环境的内容了！&lt;/p&gt;
+&lt;p&gt;执行后将获得一个 &lt;code&gt;http://&amp;lt;random&amp;gt;.sharedwithexpose.com&lt;/code&gt; 的公网链接。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;使用 Sail 开发的每一天，其实就是不断重复 &lt;strong&gt;“Sail + 命令”&lt;/strong&gt; 的过程。一旦习惯了这个前缀，你会发现它提供的隔离感和安全感是前所未有的。&lt;/p&gt;
-&lt;p&gt;下一篇，也是本系列的终章：&lt;strong&gt;《疑难杂症篇》&lt;/strong&gt;。虽然 Sail 很稳，但常在河边走哪有不湿鞋？我们将汇总一些常见的报错（端口占用、权限问题、网络连接等）并提供解决方案。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;Sail 构建了一套完整的**容器化工具链 (Containerized Toolchain)**。通过简单的 CLI 封装，它屏蔽了 Docker 底层的复杂性，同时保留了容器化开发的所有优势：隔离、一致、可移植。&lt;/p&gt;
+&lt;p&gt;在下一章《疑难杂症篇》中，我们将深入解决 Docker 环境下常见的运行时问题（网络、IO、权限）。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -390,75 +370,45 @@
             <category>Laravel</category>
             <category>Sail</category>
             <pubDate>Sat, 24 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;场景描述&#34;&gt;&lt;a href=&#34;#场景描述&#34; class=&#34;headerlink&#34; title=&#34;场景描述&#34;&gt;&lt;/a&gt;场景描述&lt;/h2&gt;&lt;p&gt;上一篇我们成功在电脑 A（比如公司电脑）上搭建了环境并运行了 Laravel。&lt;br&gt;现在的问题是：&lt;strong&gt;我下班回家了，想用家里的电脑 B 接着写，该怎么办？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;很多人会卡在这里，因为 Laravel 项目默认的 &lt;code&gt;.gitignore&lt;/code&gt; 规则会忽略 &lt;code&gt;vendor&lt;/code&gt; 目录（存放依赖包的地方）和 &lt;code&gt;.env&lt;/code&gt; 文件（存放敏感配置的地方）。&lt;br&gt;而 &lt;code&gt;sail&lt;/code&gt; 命令脚本本身就躺在 &lt;code&gt;vendor/bin&lt;/code&gt; 目录下。&lt;/p&gt;
-&lt;p&gt;这意味着：&lt;strong&gt;当你把代码拉到新电脑上时，你没有 &lt;code&gt;vendor&lt;/code&gt; 目录，也就没有 &lt;code&gt;sail&lt;/code&gt; 命令。你无法启动 Sail，也就无法用 Sail 安装 &lt;code&gt;vendor&lt;/code&gt;……&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这就陷入了一个“先有鸡还是先有蛋”的死循环。&lt;br&gt;别慌，本文就是为了解决这个问题而生的。&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;协同工作流概述&#34;&gt;&lt;a href=&#34;#协同工作流概述&#34; class=&#34;headerlink&#34; title=&#34;协同工作流概述&#34;&gt;&lt;/a&gt;协同工作流概述&lt;/h2&gt;&lt;p&gt;在多设备（如公司工作站与家用 PC）间同步 Laravel Sail 项目时，核心挑战在于&lt;strong&gt;依赖的引导与恢复&lt;/strong&gt;。&lt;br&gt;由于 &lt;code&gt;sail&lt;/code&gt; 命令行脚本位于 &lt;code&gt;/vendor/bin&lt;/code&gt; 目录下，而 &lt;code&gt;/vendor&lt;/code&gt; 目录通常被 Git 忽略。这导致在新设备拉取代码后，因缺少 &lt;code&gt;vendor&lt;/code&gt; 目录而无法直接调用 &lt;code&gt;sail&lt;/code&gt; 命令启动环境，进而无法安装依赖——这是一个典型的死锁问题。&lt;/p&gt;
+&lt;p&gt;本文将介绍标准化的多机协同方案，通过 Docker 临时容器完成依赖的**初始化引导 (Bootstrapping)**。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第一步：在电脑-A-提交代码&#34;&gt;&lt;a href=&#34;#第一步：在电脑-A-提交代码&#34; class=&#34;headerlink&#34; title=&#34;第一步：在电脑 A 提交代码&#34;&gt;&lt;/a&gt;第一步：在电脑 A 提交代码&lt;/h2&gt;&lt;p&gt;首先，我们需要把项目上传到代码仓库（GitHub &amp;#x2F; GitLab &amp;#x2F; Gitee）。这里以 GitHub 为例。&lt;/p&gt;
-&lt;p&gt;确保你在 WSL 的项目根目录下（比如 &lt;code&gt;~/code/example-app&lt;/code&gt;）：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;初始化 Git 仓库&lt;/strong&gt;（如果还没初始化）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;提交代码&lt;/strong&gt;：&lt;br&gt;Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已经非常完善了，千万&lt;strong&gt;不要&lt;/strong&gt;手动去把 &lt;code&gt;vendor&lt;/code&gt; 或 &lt;code&gt;.env&lt;/code&gt; 强行加进来。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git add -A&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;Initial commit&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;推送到远程仓库&lt;/strong&gt;：&lt;br&gt;先在 GitHub 创建一个空仓库，然后关联并推送：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:your-username/your-repo.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&#34;1-源代码提交-Source-Control&#34;&gt;&lt;a href=&#34;#1-源代码提交-Source-Control&#34; class=&#34;headerlink&#34; title=&#34;1. 源代码提交 (Source Control)&#34;&gt;&lt;/a&gt;1. 源代码提交 (Source Control)&lt;/h2&gt;&lt;p&gt;在首台设备（如初始化项目的机器）上，需确保 Git 忽略规则符合标准。Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已包含 &lt;code&gt;/vendor&lt;/code&gt; 与 &lt;code&gt;.env&lt;/code&gt;，请遵循此规范，&lt;strong&gt;切勿&lt;/strong&gt;将依赖包或敏感配置提交至版本控制系统。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 标准 Git 初始化流程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: project init&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin &amp;lt;repository_url&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;hr&gt;
-&lt;h2 id=&#34;第二步：在电脑-B-拉取代码&#34;&gt;&lt;a href=&#34;#第二步：在电脑-B-拉取代码&#34; class=&#34;headerlink&#34; title=&#34;第二步：在电脑 B 拉取代码&#34;&gt;&lt;/a&gt;第二步：在电脑 B 拉取代码&lt;/h2&gt;&lt;p&gt;现在我们来到了&lt;strong&gt;电脑 B&lt;/strong&gt;（比如家里的电脑）。&lt;br&gt;&lt;strong&gt;前提&lt;/strong&gt;：这台电脑也必须安装好 &lt;strong&gt;WSL2&lt;/strong&gt; 和 &lt;strong&gt;Docker Desktop&lt;/strong&gt;（参考上一篇教程）。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;克隆代码&lt;/strong&gt;：&lt;br&gt;打开 Ubuntu 终端，进入我们规定的代码存放目录（如果不存在则先创建）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; git@github.com:your-username/your-repo.git project-b&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; project-b&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;此时的尴尬现状&lt;/strong&gt;：&lt;br&gt;如果你现在尝试运行 &lt;code&gt;./vendor/bin/sail up&lt;/code&gt;，系统会无情地告诉你：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;bash: ./vendor/bin/sail: No such file or directory&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;原因前面说了：Git 不会同步 &lt;code&gt;vendor&lt;/code&gt; 目录。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;a href=&#34;#第三步：解决“鸡生蛋”问题（安装依赖）&#34; class=&#34;headerlink&#34; title=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;/a&gt;第三步：解决“鸡生蛋”问题（安装依赖）&lt;/h2&gt;&lt;p&gt;我们需要在没有 &lt;code&gt;sail&lt;/code&gt; 的情况下，利用 Docker 帮我们运行一次 Composer 安装命令。&lt;br&gt;Laravel 官方非常贴心地提供了一个一次性的 Docker 运行命令，专门用来处理这个“初次引导”的问题。&lt;/p&gt;
-&lt;p&gt;在项目根目录下，执行下面这行&lt;strong&gt;神奇的长命令&lt;/strong&gt;：&lt;/p&gt;
+&lt;h2 id=&#34;2-新环境拉取与依赖引导&#34;&gt;&lt;a href=&#34;#2-新环境拉取与依赖引导&#34; class=&#34;headerlink&#34; title=&#34;2. 新环境拉取与依赖引导&#34;&gt;&lt;/a&gt;2. 新环境拉取与依赖引导&lt;/h2&gt;&lt;p&gt;在第二台设备上，确保已部署好 WSL2 与 Docker Desktop 环境。&lt;/p&gt;
+&lt;h3 id=&#34;2-1-克隆代码&#34;&gt;&lt;a href=&#34;#2-1-克隆代码&#34; class=&#34;headerlink&#34; title=&#34;2.1 克隆代码&#34;&gt;&lt;/a&gt;2.1 克隆代码&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;repository_url&amp;gt; project-name&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; project-name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;2-2-依赖引导-Dependency-Bootstrapping&#34;&gt;&lt;a href=&#34;#2-2-依赖引导-Dependency-Bootstrapping&#34; class=&#34;headerlink&#34; title=&#34;2.2 依赖引导 (Dependency Bootstrapping)&#34;&gt;&lt;/a&gt;2.2 依赖引导 (Dependency Bootstrapping)&lt;/h3&gt;&lt;p&gt;此时无法直接运行 &lt;code&gt;sail up&lt;/code&gt;。我们需要通过 Docker 运行一个一次性的 PHP 容器来执行 &lt;code&gt;composer install&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;执行以下指令（Laravle 官方推荐方案）：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -u &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(id -u)&lt;/span&gt;:&lt;span class=&#34;subst&#34;&gt;$(id -g)&lt;/span&gt;&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(pwd)&lt;/span&gt;:/var/www/html&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -w /var/www/html \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    laravelsail/php82-composer:latest \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    composer install --ignore-platform-reqs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;em&gt;解析：&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;指令解析&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;这是一个临时的 Docker 容器，用完即焚 (&lt;code&gt;--rm&lt;/code&gt;)。&lt;/li&gt;
-&lt;li&gt;它挂载了当前目录 (&lt;code&gt;-v&lt;/code&gt;)，并使用当前用户的权限 (&lt;code&gt;-u&lt;/code&gt;)。&lt;/li&gt;
-&lt;li&gt;它使用的是 &lt;code&gt;php82-composer&lt;/code&gt; 镜像（如果你用的是 PHP 8.1 或 8.0，改一下数字即可）。&lt;/li&gt;
-&lt;li&gt;它执行了 &lt;code&gt;composer install&lt;/code&gt;，帮我们把 &lt;code&gt;vendor&lt;/code&gt; 目录及里面的 &lt;code&gt;sail&lt;/code&gt; 脚本都下载回来了！&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--rm&lt;/code&gt;: 容器执行完毕后自动删除，不残留垃圾。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-u &amp;quot;$(id -u):$(id -g)&amp;quot;&lt;/code&gt;: 使用当前宿主机用户 ID 运行容器内进程，&lt;strong&gt;确保生成的 vendor 文件权限正确&lt;/strong&gt;（避免 root 权限问题）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v &amp;quot;$(pwd):/var/www/html&amp;quot;&lt;/code&gt;: 将当前项目目录挂载至容器。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;laravelsail/php82-composer&lt;/code&gt;: 使用包含 PHP 8.2 和 Composer 的专用镜像。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;等待命令执行完成&lt;/strong&gt;（具体取决于网速），你会发现项目里多了一个 &lt;code&gt;vendor&lt;/code&gt; 文件夹。&lt;/p&gt;
+&lt;p&gt;执行完毕后，宿主机目录下将生成标准的 &lt;code&gt;vendor&lt;/code&gt; 目录，此时 &lt;code&gt;sail&lt;/code&gt; 脚本已就位。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第四步：配置环境与启动&#34;&gt;&lt;a href=&#34;#第四步：配置环境与启动&#34; class=&#34;headerlink&#34; title=&#34;第四步：配置环境与启动&#34;&gt;&lt;/a&gt;第四步：配置环境与启动&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;恢复配置文件&lt;/strong&gt;：&lt;br&gt;由于 &lt;code&gt;.env&lt;/code&gt; 被 Git 忽略了，我们需要从模版复制一份：&lt;/p&gt;
+&lt;h2 id=&#34;3-环境配置与启动&#34;&gt;&lt;a href=&#34;#3-环境配置与启动&#34; class=&#34;headerlink&#34; title=&#34;3. 环境配置与启动&#34;&gt;&lt;/a&gt;3. 环境配置与启动&lt;/h2&gt;&lt;h3 id=&#34;3-1-配置文件初始化&#34;&gt;&lt;a href=&#34;#3-1-配置文件初始化&#34; class=&#34;headerlink&#34; title=&#34;3.1 配置文件初始化&#34;&gt;&lt;/a&gt;3.1 配置文件初始化&lt;/h3&gt;&lt;p&gt;复制环境变量模版文件。注意：生产环境密钥或特定基础设施配置（如 AWS Keys）需单独配置，不应包含在仓库中。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; .env.example .&lt;span class=&#34;built_in&#34;&gt;env&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;注意：如果你的项目有特殊的数据库密码或 API Key，记得手动编辑 &lt;code&gt;.env&lt;/code&gt; 填进去。但在 Sail 环境下，数据库连接通常默认都在 &lt;code&gt;docker-compose.yml&lt;/code&gt; 里配置好了环境变量，直接用可能就行。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;启动 Sail&lt;/strong&gt;：&lt;br&gt;现在 &lt;code&gt;vendor&lt;/code&gt; 有了，我们终于可以召唤神龙了（记得像上一篇一样配置好 &lt;code&gt;sail&lt;/code&gt; 别名）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;生成应用密钥&lt;/strong&gt;：&lt;br&gt;新的 &lt;code&gt;.env&lt;/code&gt; 里 &lt;code&gt;APP_KEY&lt;/code&gt; 是空的，需要生成一个：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;运行数据库迁移&lt;/strong&gt;：&lt;br&gt;全新的环境数据库是空的，需要创建表结构：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+
+&lt;h3 id=&#34;3-2-启动容器栈&#34;&gt;&lt;a href=&#34;#3-2-启动容器栈&#34; class=&#34;headerlink&#34; title=&#34;3.2 启动容器栈&#34;&gt;&lt;/a&gt;3.2 启动容器栈&lt;/h3&gt;&lt;p&gt;拥有 &lt;code&gt;vendor&lt;/code&gt; 目录后，即可正常调用 Sail：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 启动环境&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成应用密钥&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan key:generate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行数据库迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;4-验证与总结&#34;&gt;&lt;a href=&#34;#4-验证与总结&#34; class=&#34;headerlink&#34; title=&#34;4. 验证与总结&#34;&gt;&lt;/a&gt;4. 验证与总结&lt;/h2&gt;&lt;p&gt;访问 &lt;code&gt;http://localhost&lt;/code&gt; 确认服务运行正常。&lt;/p&gt;
+&lt;p&gt;至此，我们建立了一套基于 &lt;strong&gt;Git + Docker Bootstrapping&lt;/strong&gt; 的标准化工作流：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;提交&lt;/strong&gt;：仅提交业务代码与声明文件 (&lt;code&gt;composer.json&lt;/code&gt;, &lt;code&gt;docker-compose.yml&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拉取&lt;/strong&gt;：在任意新设备获取代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;引导&lt;/strong&gt;：使用 &lt;code&gt;docker run&lt;/code&gt; 引导安装依赖。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启动&lt;/strong&gt;：使用 &lt;code&gt;sail up&lt;/code&gt; 一键拉起完整环境。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第五步：验证&#34;&gt;&lt;a href=&#34;#第五步：验证&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证&#34;&gt;&lt;/a&gt;第五步：验证&lt;/h2&gt;&lt;p&gt;打开浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;你应该能看到与公司电脑一模一样的项目已经在运行了。&lt;/p&gt;
-&lt;p&gt;从此以后，你只需要：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;在公司&lt;/strong&gt;：写代码 -&amp;gt; &lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;在家里&lt;/strong&gt;：&lt;code&gt;git pull&lt;/code&gt; -&amp;gt; &lt;code&gt;./vendor/bin/sail up -d&lt;/code&gt; -&amp;gt; 开造！&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;这就是 Docker + Sail 带来的极致一致性体验。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;本篇解决了异地开发最麻烦的“环境同步”和“依赖安装”问题。&lt;br&gt;核心技巧在于那行&lt;strong&gt;用于“引导”的 Docker 命令&lt;/strong&gt;，它帮我们跨越了“没有 PHP 环境就没法安装 Sail，没有 Sail 就没法启动 PHP 环境”的鸿沟。&lt;/p&gt;
-&lt;p&gt;下一篇，我们将进入实战深水区：&lt;strong&gt;《日常使用篇》&lt;/strong&gt;，教你如何像在本地一样运行 Artisan 命令、使用 npm 编译前端、以及配置 Shell 别名让 &lt;code&gt;sail&lt;/code&gt; 变成更短的 &lt;code&gt;s&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这种工作流确保了，无论在哪台设备，只要有 Docker，就能 100% 复刻出完全一致的开发环境。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -470,114 +420,57 @@
             <category>Sail</category>
             <category>WSL2</category>
             <pubDate>Fri, 23 Jan 2026 18:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;目标&#34;&gt;&lt;a href=&#34;#目标&#34; class=&#34;headerlink&#34; title=&#34;目标&#34;&gt;&lt;/a&gt;目标&lt;/h2&gt;&lt;p&gt;本文的目标非常明确：&lt;strong&gt;从一台刚装好系统的全新 Windows 11 电脑开始，直到浏览器成功访问 Laravel 默认欢迎页面。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;中间我们将完成：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;开启 BIOS 虚拟化。&lt;/li&gt;
-&lt;li&gt;安装 WSL 2 (Windows Subsystem for Linux)。&lt;/li&gt;
-&lt;li&gt;安装 Docker Desktop。&lt;/li&gt;
-&lt;li&gt;使用 Sail 命令行一键创建并启动项目。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;前置要求&lt;/strong&gt;：你的 Windows 11 版本需要是最新的（或者至少是近两年的版本）。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第一步：检查虚拟化-Virtualization&#34;&gt;&lt;a href=&#34;#第一步：检查虚拟化-Virtualization&#34; class=&#34;headerlink&#34; title=&#34;第一步：检查虚拟化 (Virtualization)&#34;&gt;&lt;/a&gt;第一步：检查虚拟化 (Virtualization)&lt;/h2&gt;&lt;p&gt;Docker 和 WSL2 的运行依赖于 CPU 的虚拟化技术。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 &lt;strong&gt;任务管理器 (Task Manager)&lt;/strong&gt; (&lt;code&gt;Ctrl + Shift + Esc&lt;/code&gt;)。&lt;/li&gt;
-&lt;li&gt;切换到 &lt;strong&gt;性能 (Performance)&lt;/strong&gt; -&amp;gt; &lt;strong&gt;CPU&lt;/strong&gt; 选项卡。&lt;/li&gt;
-&lt;li&gt;查看右下角的 &lt;strong&gt;虚拟化 (Virtualization)&lt;/strong&gt; 状态。&lt;ul&gt;
-&lt;li&gt;**已启用 (Enabled)**：✅通过，直接进入下一步。&lt;/li&gt;
-&lt;li&gt;**已禁用 (Disabled)**：❌需要重启电脑进入 BIOS 开启。不同品牌主板开启方式不同（通常在 &lt;code&gt;Advanced&lt;/code&gt; -&amp;gt; &lt;code&gt;CPU Configuration&lt;/code&gt; -&amp;gt; &lt;code&gt;Intel VT-x&lt;/code&gt; 或 &lt;code&gt;AMD-V&lt;/code&gt;），请自行搜索“主板品牌 + 开启虚拟化”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第二步：安装-WSL-2&#34;&gt;&lt;a href=&#34;#第二步：安装-WSL-2&#34; class=&#34;headerlink&#34; title=&#34;第二步：安装 WSL 2&#34;&gt;&lt;/a&gt;第二步：安装 WSL 2&lt;/h2&gt;&lt;p&gt;现在的 Windows 安装 Linux 子系统已经简单到令人发指，不需要再去控制面板勾选那一堆复杂的“Windows 功能”了。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;鼠标右键点击 &lt;strong&gt;开始菜单&lt;/strong&gt;，选择 &lt;strong&gt;终端管理员 (Terminal Admin)&lt;/strong&gt; 或 **PowerShell (管理员)**。&lt;/li&gt;
-&lt;li&gt;输入以下命令并回车：&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl &lt;span class=&#34;literal&#34;&gt;--install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;等待进度条跑完&lt;/strong&gt;。系统会自动下载并安装 Ubuntu 发行版。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;重启电脑&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;重启后的操作&lt;/strong&gt;：&lt;br&gt;电脑重启后，会自动弹出一个黑色的终端窗口（Ubuntu）。它会提示你：&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;部署目标&#34;&gt;&lt;a href=&#34;#部署目标&#34; class=&#34;headerlink&#34; title=&#34;部署目标&#34;&gt;&lt;/a&gt;部署目标&lt;/h2&gt;&lt;p&gt;本文将从零开始构建基于 &lt;strong&gt;WSL2 (Windows Subsystem for Linux 2)&lt;/strong&gt; 的标准化 Docker 开发环境，并完成首个 Laravel Sail 项目的初始化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;环境要求&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Enter new UNIX username: （输入你想用的用户名，全小写，如 &lt;code&gt;wang&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;Enter new UNIX password: （设置密码，输入时屏幕不会显示，输完回车即可）&lt;/li&gt;
-&lt;li&gt;Retype new UNIX password: （确认密码）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;: Windows 11 (Build 22000+) 或 Windows 10 (Build 19041+).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;BIOS&lt;/strong&gt;: 开启 CPU 虚拟化 (Virtualization Technology).&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;搞定后，如果你通过 &lt;code&gt;wsl -l -v&lt;/code&gt; 命令查看，应该能看到一个 &lt;code&gt;Ubuntu&lt;/code&gt; 正在运行，且 Version 为 2。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第三步：安装-Docker-Desktop&#34;&gt;&lt;a href=&#34;#第三步：安装-Docker-Desktop&#34; class=&#34;headerlink&#34; title=&#34;第三步：安装 Docker Desktop&#34;&gt;&lt;/a&gt;第三步：安装 Docker Desktop&lt;/h2&gt;&lt;p&gt;Docker Desktop 是 Docker 在 Windows 上的图形化管理工具，它会自动接管 WSL2 中的 Docker 后端。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&#34;https://www.docker.com/products/docker-desktop/&#34;&gt;Docker 官网&lt;/a&gt; 下载 &lt;strong&gt;Docker Desktop for Windows&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;双击安装。&lt;strong&gt;注意&lt;/strong&gt;：在安装界面的 Configuration 步骤中，务必勾选：&lt;ul&gt;
-&lt;li&gt;✅ &lt;strong&gt;Use WSL 2 instead of Hyper-V (recommended)&lt;/strong&gt;&lt;/li&gt;
+&lt;h2 id=&#34;1-基础设施准备&#34;&gt;&lt;a href=&#34;#1-基础设施准备&#34; class=&#34;headerlink&#34; title=&#34;1. 基础设施准备&#34;&gt;&lt;/a&gt;1. 基础设施准备&lt;/h2&gt;&lt;h3 id=&#34;1-1-验证虚拟化支持&#34;&gt;&lt;a href=&#34;#1-1-验证虚拟化支持&#34; class=&#34;headerlink&#34; title=&#34;1.1 验证虚拟化支持&#34;&gt;&lt;/a&gt;1.1 验证虚拟化支持&lt;/h3&gt;&lt;p&gt;Docker Desktop 依赖 Hypervisor 层支持。请确保 BIOS&amp;#x2F;UEFI 中已开启虚拟化（Intel VT-x 或 AMD-V）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;验证方式&lt;/em&gt;：任务管理器 -&amp;gt; 性能 -&amp;gt; CPU -&amp;gt; &lt;strong&gt;虚拟化：已启用&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;安装完成后，打开 Docker Desktop。&lt;ul&gt;
-&lt;li&gt;它可能会让你登录，你可以选择 Skip 暂时跳过。&lt;/li&gt;
-&lt;li&gt;看到左下角变为 &lt;strong&gt;绿色&lt;/strong&gt; 的 Engine running，说明 Docker 启动成功。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&#34;1-2-部署-WSL2&#34;&gt;&lt;a href=&#34;#1-2-部署-WSL2&#34; class=&#34;headerlink&#34; title=&#34;1.2 部署 WSL2&#34;&gt;&lt;/a&gt;1.2 部署 WSL2&lt;/h3&gt;&lt;p&gt;使用管理员权限打开 PowerShell 或 Windows Terminal，执行以下指令完成 WSL2 及 Ubuntu 发行版的自动安装：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wsl &lt;span class=&#34;literal&#34;&gt;--install&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;关键配置：开启 WSL 集成&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;点击 Docker Desktop右上角的齿轮图标 ⚙️ (Settings)。&lt;/li&gt;
-&lt;li&gt;进入 &lt;strong&gt;Resources&lt;/strong&gt; -&amp;gt; &lt;strong&gt;WSL Integration&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;确保 “Enable integration with my default WSL distro” 是 &lt;strong&gt;勾选&lt;/strong&gt; 状态。&lt;/li&gt;
-&lt;li&gt;如果下方出现了 &lt;code&gt;Ubuntu&lt;/code&gt; 的开关，也把它打开 (Toggle On)。&lt;/li&gt;
-&lt;li&gt;点击 &lt;strong&gt;Apply &amp;amp; Restart&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: 安装完成后需&lt;strong&gt;重启系统&lt;/strong&gt;。重启后会自动弹出终端窗口，按提示设置 UNIX 用户名与密码即可。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;第四步：创建并启动-Laravel-项目&#34;&gt;&lt;a href=&#34;#第四步：创建并启动-Laravel-项目&#34; class=&#34;headerlink&#34; title=&#34;第四步：创建并启动 Laravel 项目&#34;&gt;&lt;/a&gt;第四步：创建并启动 Laravel 项目&lt;/h2&gt;&lt;p&gt;见证奇迹的时刻到了。我们所有的操作都在 WSL (Ubuntu) 中进行。&lt;/p&gt;
+&lt;h3 id=&#34;1-3-安装-Docker-Desktop&#34;&gt;&lt;a href=&#34;#1-3-安装-Docker-Desktop&#34; class=&#34;headerlink&#34; title=&#34;1.3 安装 Docker Desktop&#34;&gt;&lt;/a&gt;1.3 安装 Docker Desktop&lt;/h3&gt;&lt;p&gt;下载并安装 &lt;a href=&#34;https://www.docker.com/products/docker-desktop/&#34;&gt;Docker Desktop for Windows&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键配置检查&lt;/strong&gt;：&lt;br&gt;安装向导中务必勾选 &lt;strong&gt;Use WSL 2 instead of Hyper-V&lt;/strong&gt;（通常为默认选中）。&lt;br&gt;启动后，进入 Settings -&amp;gt; Resources -&amp;gt; WSL Integration：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;打开 &lt;strong&gt;Windows Terminal&lt;/strong&gt;，点击标题栏的下拉箭头，选择 &lt;strong&gt;Ubuntu&lt;/strong&gt; 这里就是你的 Linux 世界。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;创建并进入代码目录&lt;/strong&gt;：&lt;br&gt;为了保持（也就是 Linux 系统里的家目录）整洁，我们推荐新建一个 &lt;code&gt;code&lt;/code&gt; 文件夹来存放未来的所有项目：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;直接运行 Laravel 官方构建命令&lt;/strong&gt;：&lt;br&gt;把下面的 &lt;code&gt;example-app&lt;/code&gt; 换成你想要的项目名字（比如 &lt;code&gt;blog&lt;/code&gt;）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;curl -s https://laravel.build/example-app | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;这行命令会自动拉取由 Laravel 官方维护的 Docker 镜像，并开始下载所有依赖。第一次运行可能会受网速影响，请耐心等待（建议科学上网环境，或者配置 Docker 镜像加速）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;进入项目目录&lt;/strong&gt;：&lt;br&gt;当命令跑完，提示 “Thank you! We hope you build something incredible.” 时，执行：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; example-app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;配置快捷指令（强烈推荐）&lt;/strong&gt;：&lt;br&gt;每次都输入 &lt;code&gt;./vendor/bin/sail&lt;/code&gt; 太麻烦了。我们配置一个 &lt;code&gt;sail&lt;/code&gt;别名（官方推荐做法）：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;quot;alias sail=&amp;#x27;[ -f sail ] &amp;amp;&amp;amp; bash sail || bash vendor/bin/sail&amp;#x27;&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;em&gt;这样以后你在任何目录下，只要敲 &lt;code&gt;sail&lt;/code&gt; 就能调用命令了。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;**启动 Sail (Docker 环境)**：&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;up&lt;/code&gt;：启动服务。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;-d&lt;/code&gt;：后台运行 (Detached mode)，这样你的终端窗口不会被日志霸占。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;第一次启动会拉取 MySQL、Redis 等镜像，可能需要一点时间。&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;确保 &lt;strong&gt;Enable integration with my default WSL distro&lt;/strong&gt; 为开启状态。&lt;/li&gt;
+&lt;li&gt;在下方 distro 列表中，确保 &lt;strong&gt;Ubuntu&lt;/strong&gt; 处于开启状态。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;第五步：验证成果&#34;&gt;&lt;a href=&#34;#第五步：验证成果&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证成果&#34;&gt;&lt;/a&gt;第五步：验证成果&lt;/h2&gt;&lt;p&gt;打开你的浏览器（Chrome&amp;#x2F;Edge），在地址栏输入：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;http://localhost/&#34;&gt;http://localhost&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;如果你看到那个巨大的、红色的（或白色的）Laravel Logo，以及醒目的版本号。&lt;/p&gt;
-&lt;p&gt;🎉 &lt;strong&gt;恭喜你！你已经成功在 Windows 上部署了一套最先进的 Laravel Docker 开发环境！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;此时：&lt;/p&gt;
+&lt;h2 id=&#34;2-初始化-Laravel-Sail-项目&#34;&gt;&lt;a href=&#34;#2-初始化-Laravel-Sail-项目&#34; class=&#34;headerlink&#34; title=&#34;2. 初始化 Laravel Sail 项目&#34;&gt;&lt;/a&gt;2. 初始化 Laravel Sail 项目&lt;/h2&gt;&lt;p&gt;所有后续操作建议直接在 WSL2 终端（Ubuntu）中执行，以获得原生的 Linux 开发体验。&lt;/p&gt;
+&lt;h3 id=&#34;2-1-创建工作区&#34;&gt;&lt;a href=&#34;#2-1-创建工作区&#34; class=&#34;headerlink&#34; title=&#34;2.1 创建工作区&#34;&gt;&lt;/a&gt;2.1 创建工作区&lt;/h3&gt;&lt;p&gt;建议在 WSL 用户主目录下统一管理项目，避免 Windows 文件系统 (NTFS) 挂载带来的 I&amp;#x2F;O 性能损耗。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;2-2-构建项目&#34;&gt;&lt;a href=&#34;#2-2-构建项目&#34; class=&#34;headerlink&#34; title=&#34;2.2 构建项目&#34;&gt;&lt;/a&gt;2.2 构建项目&lt;/h3&gt;&lt;p&gt;使用 Laravel 官方构建脚本初始化项目（通过临时 Docker 容器）：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 请将 &amp;#x27;example-app&amp;#x27; 替换为实际项目名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;curl -s https://laravel.build/example-app | bash&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;该指令会自动拉取 &lt;code&gt;php-cli&lt;/code&gt; 镜像及相关依赖。&lt;/p&gt;
+&lt;h3 id=&#34;2-3-配置-Shell-Alias-推荐&#34;&gt;&lt;a href=&#34;#2-3-配置-Shell-Alias-推荐&#34; class=&#34;headerlink&#34; title=&#34;2.3 配置 Shell Alias (推荐)&#34;&gt;&lt;/a&gt;2.3 配置 Shell Alias (推荐)&lt;/h3&gt;&lt;p&gt;为简化操作，建议将 &lt;code&gt;sail&lt;/code&gt; 执行脚本映射为 Shell 别名。编辑 &lt;code&gt;~/.bashrc&lt;/code&gt; 或 &lt;code&gt;~/.zshrc&lt;/code&gt;：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 添加至配置文件末尾&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;alias&lt;/span&gt; sail=&lt;span class=&#34;string&#34;&gt;&amp;#x27;[ -f sail ] &amp;amp;&amp;amp; bash sail || bash vendor/bin/sail&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;加载生效：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;3-启动与验证&#34;&gt;&lt;a href=&#34;#3-启动与验证&#34; class=&#34;headerlink&#34; title=&#34;3. 启动与验证&#34;&gt;&lt;/a&gt;3. 启动与验证&lt;/h2&gt;&lt;h3 id=&#34;3-1-启动环境&#34;&gt;&lt;a href=&#34;#3-1-启动环境&#34; class=&#34;headerlink&#34; title=&#34;3.1 启动环境&#34;&gt;&lt;/a&gt;3.1 启动环境&lt;/h3&gt;&lt;p&gt;进入项目目录并后台启动 Sail 服务栈：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code/example-app&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;Sail 将根据 &lt;code&gt;docker-compose.yml&lt;/code&gt;编排启动 PHP、MySQL、Redis 等容器。首次启动涉及镜像拉取，耗时取决于网络环境。&lt;/p&gt;
+&lt;h3 id=&#34;3-2-服务验证&#34;&gt;&lt;a href=&#34;#3-2-服务验证&#34; class=&#34;headerlink&#34; title=&#34;3.2 服务验证&#34;&gt;&lt;/a&gt;3.2 服务验证&lt;/h3&gt;&lt;p&gt;服务启动后，通过宿主机浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;若显示 Laravel 欢迎页，即表示：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;你的电脑里没有安装 PHP。&lt;/li&gt;
-&lt;li&gt;你的电脑里没有安装 MySQL。&lt;/li&gt;
-&lt;li&gt;你的电脑里没有安装 Nginx。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;但它们都在为你服务。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;✅ Docker 容器运行正常&lt;/li&gt;
+&lt;li&gt;✅ 端口转发 (Port Forwarding) 正常&lt;/li&gt;
+&lt;li&gt;✅ PHP 运行时挂载正常&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;下集预告&#34;&gt;&lt;a href=&#34;#下集预告&#34; class=&#34;headerlink&#34; title=&#34;下集预告&#34;&gt;&lt;/a&gt;下集预告&lt;/h2&gt;&lt;p&gt;环境通了，代码也在跑了。但我们怎么把代码存起来？怎么在公司写一半，回家换台电脑拉下来接着写？&lt;br&gt;下一篇：&lt;strong&gt;《Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）》&lt;/strong&gt;，我们将配置 GitHub 仓库，并演示“异地开发，无感切换”的丝滑体验。&lt;/p&gt;
+&lt;h2 id=&#34;下一步&#34;&gt;&lt;a href=&#34;#下一步&#34; class=&#34;headerlink&#34; title=&#34;下一步&#34;&gt;&lt;/a&gt;下一步&lt;/h2&gt;&lt;p&gt;基础环境已就绪。下一章节我们将讨论&lt;strong&gt;多端协作场景&lt;/strong&gt;：如何基于 Git 管理代码，并在不同设备间实现无缝的依赖引导与环境同步。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -588,67 +481,50 @@
             <category>Sail</category>
             <pubDate>Thu, 22 Jan 2026 14:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;⚠️ 开始阅读前，必读！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;本系列教程所涉及的技术栈（Docker, WSL2, Composer 等）强烈依赖“科学上网”环境。&lt;/strong&gt;&lt;br&gt;如果您无法解决稳定的网络连接问题（访问 Google&amp;#x2F;GitHub 慢），&lt;strong&gt;请直接放弃本方案&lt;/strong&gt;，转而使用 PhpStudy、宝塔面板等国产集成环境，否则您的部署过程将充满痛苦与报错。&lt;br&gt;（关于网络问题的终极解决方案，可见系列最后一篇《疑难杂症篇》）&lt;/p&gt;
-&lt;p&gt;身为开发者，拥有获取各类信息的 &lt;strong&gt;工具&lt;/strong&gt; 和能力，比开发更重要&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 前置要求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本系列涉及的技术栈（Docker, WSL2, Composer）依赖稳定的国际互联网连接。&lt;/strong&gt;&lt;br&gt;如果无法解决网络访问问题（如 Docker Hub 镜像拉取），这套方案将难以实施。建议优先解决网络层设施，或退而求其次选择传统集成环境。&lt;br&gt;（网络解决方案详见系列第五篇《疑难杂症篇》）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;写在前面&#34;&gt;&lt;a href=&#34;#写在前面&#34; class=&#34;headerlink&#34; title=&#34;写在前面&#34;&gt;&lt;/a&gt;写在前面&lt;/h2&gt;&lt;p&gt;在 Windows 下开发 PHP 一直是一个让人纠结的话题。从早期的 XAMPP、WAMP，到后来国产方便快捷的 PhpStudy（小皮面板）、宝塔面板，再到更为现代化的 Docker 方案。每一个阶段都有它的痛点：&lt;/p&gt;
+&lt;h2 id=&#34;引言&#34;&gt;&lt;a href=&#34;#引言&#34; class=&#34;headerlink&#34; title=&#34;引言&#34;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;在 Windows 平台搭建标准的 PHP 开发环境，历来有多种技术选型。从早期的集成包（XAMPP&amp;#x2F;WAMP），到国产面板（PhpStudy&amp;#x2F;宝塔），再到完全虚拟化（Vagrant&amp;#x2F;Homestead）。每种方案在解决特定问题的同时，也引入了新的维护成本：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;集成环境（XAMPP&amp;#x2F;小皮等）&lt;/strong&gt;：虽然安装简单，但往往环境版本更新滞后，且配置修改（如 php.ini）容易被覆盖或难以版本控制。还会把各种服务注册到 Windows 系统服务里，造成“环境污染”。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;虚拟机（Vagrant &amp;#x2F; Homestead）&lt;/strong&gt;：虽然隔离性好了，但资源占用巨大，启动慢，文件同步性能一直是痛点。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;本机硬撸（手动安装 PHP&amp;#x2F;Composer&amp;#x2F;Node）&lt;/strong&gt;：最硬核，但也最脆弱。当你同时维护一个 PHP 7.4 的老项目和一个 PHP 8.2 的新项目时，不断的切换环境变量与版本会让你怀疑人生。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集成环境&lt;/strong&gt;：安装便捷，但环境版本耦合严重，配置（如 php.ini）管理混乱，且会对宿主机注册大量系统服务，造成“环境污染”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;虚拟机&lt;/strong&gt;：实现了隔离，但系统资源开销大，启动缓慢，且文件系统同步（I&amp;#x2F;O）性能始终是瓶颈。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本机原生安装&lt;/strong&gt;：依赖手动管理 PHP 系统路径和扩展，多版本共存（e.g., Maintain PHP 7.4 Legacy &amp;amp; PHP 8.2 New Project）维护极其繁琐。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;在这个文档及其未来的文档，我计划开一个系列博客文章，叫做&lt;strong&gt;《Laravel Sail 开发环境部署一把过》&lt;/strong&gt;，旨在为 Windows (WSL2) 用户提供目前最优雅、最舒适的 Laravel 开发环境解决方案。&lt;/p&gt;
-&lt;h3 id=&#34;系列计划&#34;&gt;&lt;a href=&#34;#系列计划&#34; class=&#34;headerlink&#34; title=&#34;系列计划&#34;&gt;&lt;/a&gt;系列计划&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;介绍篇（本文）&lt;/strong&gt;：什么是 Laravel Sail？为什么它是终极方案？&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;环境配置篇&lt;/strong&gt;：WSL2、Docker Desktop 安装与 Sail 初始化。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Git 同步与多机开发篇&lt;/strong&gt;：异地开发、Docker 引导依赖安装。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;日常使用篇&lt;/strong&gt;：常用命令、别名配置、服务管理、Xdebug 调试。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;疑难杂症篇&lt;/strong&gt;：常见报错解决与性能优化技巧。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;番外篇&lt;/strong&gt;：工欲善其事——我的三套开发装备大公开（参考配置）。&lt;/li&gt;
+&lt;p&gt;本系列文章旨在为 Windows (WSL2) 用户提供一套基于 &lt;strong&gt;Laravel Sail&lt;/strong&gt; 的现代化开发环境最佳实践，涵盖从环境初始化到团队协作的全流程。&lt;/p&gt;
+&lt;h3 id=&#34;系列大纲&#34;&gt;&lt;a href=&#34;#系列大纲&#34; class=&#34;headerlink&#34; title=&#34;系列大纲&#34;&gt;&lt;/a&gt;系列大纲&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;介绍篇（本文）&lt;/strong&gt;：架构原理解析与技术选型优势。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;环境配置篇&lt;/strong&gt;：WSL2、Docker Desktop 安装及 Sail 项目初始化。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git 同步与多机开发篇&lt;/strong&gt;：基于 Docker 临时容器的依赖引导与多端同步。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日常使用篇&lt;/strong&gt;：Sail CLI 命令映射、服务管理与 Shell 常用技巧。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;疑难杂症篇&lt;/strong&gt;：常见网络、端口、权限及性能问题排查。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;番外篇&lt;/strong&gt;：开发设备选型与全栈工具链参考。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;什么是-Laravel-Sail？&#34;&gt;&lt;a href=&#34;#什么是-Laravel-Sail？&#34; class=&#34;headerlink&#34; title=&#34;什么是 Laravel Sail？&#34;&gt;&lt;/a&gt;什么是 Laravel Sail？&lt;/h2&gt;&lt;p&gt;在动手配置之前，我们需要先理清几个概念，防止新手朋友云里雾里。&lt;/p&gt;
-&lt;h3 id=&#34;1-Laravel&#34;&gt;&lt;a href=&#34;#1-Laravel&#34; class=&#34;headerlink&#34; title=&#34;1. Laravel&#34;&gt;&lt;/a&gt;1. Laravel&lt;/h3&gt;&lt;p&gt;Laravel 是目前 PHP 生态中最流行、最优雅的 Web 开发框架。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;约定大于配置&lt;/strong&gt;：这是 Laravel 的核心理念。这一特性在 AI 时代尤为重要——因为代码结构规范、可预测，&lt;strong&gt;非常适合 AI (LLM) 理解并生成高质量代码&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;全能架构与繁荣生态&lt;/strong&gt;：它提供了极度完善的工具链，“什么都有”。得益于 PHP 多年的积累，拥有一种老牌语言特有的从容自信。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;老将新春&lt;/strong&gt;：最新的 PHP 和 Laravel 都在积极拥抱 AI，在保持稳定性的同时不断焕发新的活力。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;2-Docker&#34;&gt;&lt;a href=&#34;#2-Docker&#34; class=&#34;headerlink&#34; title=&#34;2. Docker&#34;&gt;&lt;/a&gt;2. Docker&lt;/h3&gt;&lt;p&gt;Docker 是目前全球最流行的容器化技术。你可以把它想象成一种轻量级的“虚拟机”。&lt;br&gt;在 Docker 的世界里，所有的服务（PHP, MySQL, Redis）都是一个个独立的&lt;strong&gt;容器&lt;/strong&gt;。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;你需要 MySQL？启动一个 MySQL 容器。&lt;/li&gt;
-&lt;li&gt;你需要 Redis？启动一个 Redis 容器。&lt;/li&gt;
-&lt;li&gt;用完了？删掉容器，你的电脑依然干干净净，不留一丝痕迹。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;3-Laravel-Sail&#34;&gt;&lt;a href=&#34;#3-Laravel-Sail&#34; class=&#34;headerlink&#34; title=&#34;3. Laravel Sail&#34;&gt;&lt;/a&gt;3. Laravel Sail&lt;/h3&gt;&lt;p&gt;虽然 Docker 很强大，但是 &lt;code&gt;docker run&lt;/code&gt;、&lt;code&gt;docker-compose&lt;/code&gt;、&lt;code&gt;Dockerfile&lt;/code&gt; 这些复杂的配置文件和命令对于只想安心写代码的开发者来说，门槛还是太高了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Laravel Sail 就是 Laravel 官方为了解决这个问题而推出的&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;Sail 本质上是一个轻量级的命令行界面（CLI），它帮你把复杂的 Docker 命令封装成了极为简单的 &lt;code&gt;sail&lt;/code&gt; 命令。你不需要去研究怎么写 &lt;code&gt;docker-compose.yml&lt;/code&gt;（虽然它在项目里，你也可以改），你只需要输入 &lt;code&gt;sail up&lt;/code&gt;，你的整套开发环境（PHP, MySQL, Redis, 甚至邮件测试服务 Mailpit）就全部启动了。&lt;/p&gt;
+&lt;h2 id=&#34;什么是-Laravel-Sail？&#34;&gt;&lt;a href=&#34;#什么是-Laravel-Sail？&#34; class=&#34;headerlink&#34; title=&#34;什么是 Laravel Sail？&#34;&gt;&lt;/a&gt;什么是 Laravel Sail？&lt;/h2&gt;&lt;p&gt;在进入实操前，需明确其核心组件与设计理念。&lt;/p&gt;
+&lt;h3 id=&#34;1-框架层：Laravel&#34;&gt;&lt;a href=&#34;#1-框架层：Laravel&#34; class=&#34;headerlink&#34; title=&#34;1. 框架层：Laravel&#34;&gt;&lt;/a&gt;1. 框架层：Laravel&lt;/h3&gt;&lt;p&gt;作为 PHP 生态中最主流的 Web 框架，Laravel 强调 **Convention over Configuration (约定优于配置)**。这一理念使得代码结构具有高度的可预测性，不仅利于团队协作，也使得当前的 AI 辅助编程工具（如 Copilot, Gemini）能更准确地理解上下文并生成高质量代码。&lt;/p&gt;
+&lt;h3 id=&#34;2-容器层：Docker&#34;&gt;&lt;a href=&#34;#2-容器层：Docker&#34; class=&#34;headerlink&#34; title=&#34;2. 容器层：Docker&#34;&gt;&lt;/a&gt;2. 容器层：Docker&lt;/h3&gt;&lt;p&gt;Docker 提供了独立于宿主机的运行环境。在 Docker 架构中，应用及其依赖（Runtime, Database, Cache）被封装为标准化的**容器 (Container)**。这实现了“用完即焚”的轻量化管理，从根本上解决了环境残留问题。&lt;/p&gt;
+&lt;h3 id=&#34;3-本地编排：Laravel-Sail&#34;&gt;&lt;a href=&#34;#3-本地编排：Laravel-Sail&#34; class=&#34;headerlink&#34; title=&#34;3. 本地编排：Laravel Sail&#34;&gt;&lt;/a&gt;3. 本地编排：Laravel Sail&lt;/h3&gt;&lt;p&gt;虽然 Docker 强大，但编写和维护 &lt;code&gt;Dockerfile&lt;/code&gt; 与 &lt;code&gt;docker-compose.yml&lt;/code&gt; 具有一定的学习曲线。&lt;br&gt;&lt;strong&gt;Laravel Sail 是 Laravel 官方提供的轻量级 CLI 接口&lt;/strong&gt;，用于与 Docker 开发环境进行交互。&lt;/p&gt;
+&lt;p&gt;它本质上是对 docker-compose 的封装。开发者无需手动执行复杂的 Docker 指令，只需通过简单的 &lt;code&gt;sail&lt;/code&gt; 命令即可管理包含 PHP, MySQL, Redis 等服务的完整技术栈。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;为什么选择-Sail？&#34;&gt;&lt;a href=&#34;#为什么选择-Sail？&#34; class=&#34;headerlink&#34; title=&#34;为什么选择 Sail？&#34;&gt;&lt;/a&gt;为什么选择 Sail？&lt;/h2&gt;&lt;p&gt;市面上方案那么多，为什么我强烈推荐 Sail？&lt;/p&gt;
-&lt;h3 id=&#34;1-彻底的“环境隔离”与“零污染”&#34;&gt;&lt;a href=&#34;#1-彻底的“环境隔离”与“零污染”&#34; class=&#34;headerlink&#34; title=&#34;1. 彻底的“环境隔离”与“零污染”&#34;&gt;&lt;/a&gt;1. 彻底的“环境隔离”与“零污染”&lt;/h3&gt;&lt;p&gt;这是最核心的理由。&lt;br&gt;使用 Sail，你的 Windows 本机&lt;strong&gt;不需要安装 PHP&lt;/strong&gt;，&lt;strong&gt;不需要安装 Composer&lt;/strong&gt;，&lt;strong&gt;不需要安装 Node.js&lt;/strong&gt;，甚至&lt;strong&gt;不需要安装 MySQL&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;所有的这一切，都运行在 Docker 容器里（配合 WSL2）。&lt;br&gt;这意味着：&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择-Sail？&#34;&gt;&lt;a href=&#34;#为什么选择-Sail？&#34; class=&#34;headerlink&#34; title=&#34;为什么选择 Sail？&#34;&gt;&lt;/a&gt;为什么选择 Sail？&lt;/h2&gt;&lt;p&gt;在众多方案中推荐 Sail，主要基于以下技术考量：&lt;/p&gt;
+&lt;h3 id=&#34;1-彻底的环境隔离-Isolation&#34;&gt;&lt;a href=&#34;#1-彻底的环境隔离-Isolation&#34; class=&#34;headerlink&#34; title=&#34;1. 彻底的环境隔离 (Isolation)&#34;&gt;&lt;/a&gt;1. 彻底的环境隔离 (Isolation)&lt;/h3&gt;&lt;p&gt;这是现代化开发环境的核心诉求。&lt;br&gt;在 Sail 架构下，&lt;strong&gt;宿主机（Host OS）无需安装 PHP、Composer、Node.js 或 MySQL&lt;/strong&gt;。所有运行时均托管于 Docker 容器内。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;多版本共存&lt;/strong&gt;：你可以同时开启 Project A (PHP 8.2) 和 Project B (PHP 7.4)，互不干扰。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;电脑洁癖福音&lt;/strong&gt;：不想开发了？关掉 Docker，你的电脑就是一台纯净的办公本，没有任何残留服务在后台跑。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;极高的容错率&lt;/strong&gt;：无论你在容器里怎么折腾，哪怕把环境搞挂了，它绝对不会影响你的 Windows 原系统。大不了把 Docker 里的容器删了，甚至重装 Docker，然后只需一句 &lt;code&gt;sail up -d&lt;/code&gt;，环境瞬间满血复活。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多版本并行&lt;/strong&gt;：可同时运行基于不同 PHP 版本的项目，容器间网络与文件系统互不干扰。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;零污染&lt;/strong&gt;：开发服务不占用本地系统服务资源，容器停止后，宿主机保持纯净。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;高容错&lt;/strong&gt;：环境配置失误仅影响容器本身，通过重建容器即可快速恢复。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;2-团队环境-100-一致&#34;&gt;&lt;a href=&#34;#2-团队环境-100-一致&#34; class=&#34;headerlink&#34; title=&#34;2. 团队环境 100% 一致&#34;&gt;&lt;/a&gt;2. 团队环境 100% 一致&lt;/h3&gt;&lt;p&gt;曾经无数次遇到过这种对话：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“老王，为什么这个代码我跑报错？”&lt;br&gt;“不可能啊，我本地是好的。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;这种 “It works on my machine” 的问题，通常是因为大家本地的 PHP 扩展不一样，或者 MySQL 版本有细微差异。&lt;br&gt;使用 Sail，项目根目录下的 &lt;code&gt;docker-compose.yml&lt;/code&gt; 规定了环境的一切。&lt;strong&gt;代码库里长什么样，大家的开发环境就是什么样&lt;/strong&gt;。新人入职，拉下代码，&lt;code&gt;sail up&lt;/code&gt;，环境就配好了，不再需要写长长的 Wiki 告诉新人要装什么扩展。&lt;/p&gt;
-&lt;h3 id=&#34;3-官方原生支持，开箱即用&#34;&gt;&lt;a href=&#34;#3-官方原生支持，开箱即用&#34; class=&#34;headerlink&#34; title=&#34;3. 官方原生支持，开箱即用&#34;&gt;&lt;/a&gt;3. 官方原生支持，开箱即用&lt;/h3&gt;&lt;p&gt;Sail 是 Laravel 默认自带的。&lt;/p&gt;
+&lt;h3 id=&#34;2-Infrastructure-as-Code-IaC-与环境一致性&#34;&gt;&lt;a href=&#34;#2-Infrastructure-as-Code-IaC-与环境一致性&#34; class=&#34;headerlink&#34; title=&#34;2. Infrastructure as Code (IaC) 与环境一致性&#34;&gt;&lt;/a&gt;2. Infrastructure as Code (IaC) 与环境一致性&lt;/h3&gt;&lt;p&gt;“Look, it works on my machine” 是团队协作中的典型低效场景，通常源于本地扩展、库版本或配置文件的细微差异。&lt;br&gt;Sail 项目根目录下的 &lt;code&gt;docker-compose.yml&lt;/code&gt; 显式定义了环境拓扑。&lt;strong&gt;代码库即环境&lt;/strong&gt;。新成员拉取代码后，只需执行启动命令，即可获得与 CI&amp;#x2F;CD 管道及生产环境高度一致的运行环境，显著降低了 Onboarding 成本。&lt;/p&gt;
+&lt;h3 id=&#34;3-官方原生支持&#34;&gt;&lt;a href=&#34;#3-官方原生支持&#34; class=&#34;headerlink&#34; title=&#34;3. 官方原生支持&#34;&gt;&lt;/a&gt;3. 官方原生支持&lt;/h3&gt;&lt;p&gt;作为框架的一等公民（First-party Integration）：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;它自动配置好了 PHP 运行环境。&lt;/li&gt;
-&lt;li&gt;它集成好了 Node&amp;#x2F;NPM&amp;#x2F;Vite 前端编译环境。&lt;/li&gt;
-&lt;li&gt;它甚至预装好了各种常用扩展（ZIP, BCMath, GD, Redis …）。&lt;/li&gt;
+&lt;li&gt;预置了适配 Laravel 的 &lt;code&gt;php.ini&lt;/code&gt; 配置。&lt;/li&gt;
+&lt;li&gt;集成了 Node&amp;#x2F;NPM 及 Vite 热更新支持。&lt;/li&gt;
+&lt;li&gt;内置了常用 PHP 扩展（BCMath, Intl, GD 等）及辅助服务（Mailpit, Selenium）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;你不需要去网上找各种野路子教程，官方文档就是最好的说明书。&lt;/p&gt;
-&lt;h3 id=&#34;4-这里的坑，我来帮你踩&#34;&gt;&lt;a href=&#34;#4-这里的坑，我来帮你踩&#34; class=&#34;headerlink&#34; title=&#34;4. 这里的坑，我来帮你踩&#34;&gt;&lt;/a&gt;4. 这里的坑，我来帮你踩&lt;/h3&gt;&lt;p&gt;虽然 Sail 很好，但在国内的网络环境下，从 Docker 镜像下载到 WSL2 的配置，还是有一些坑点的。这也是我写这个《一把过》系列的初衷——&lt;strong&gt;让原本可能报错的步骤，变得丝般顺滑&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;官方维护保证了环境镜像的安全性与更新及时性。&lt;/p&gt;
+&lt;h3 id=&#34;4-针对性优化&#34;&gt;&lt;a href=&#34;#4-针对性优化&#34; class=&#34;headerlink&#34; title=&#34;4. 针对性优化&#34;&gt;&lt;/a&gt;4. 针对性优化&lt;/h3&gt;&lt;p&gt;尽管 Docker on Windows 体验已大幅提升，但在文件系统（NTFS vs ext4）和网络层面仍存在特定坑点。本系列将针对国内网络环境及 WSL2 的 I&amp;#x2F;O 性能特性，提供经过验证的最佳实践配置。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;如果你是一名 Laravel 开发者，或者正准备入坑 Laravel，&lt;strong&gt;Laravel Sail + WSL2 + Docker&lt;/strong&gt; 绝对是 Windows 平台上体验最好、最符合国际主流标准的开发环境配置。&lt;/p&gt;
-&lt;p&gt;下一篇，我们将正式动手，从零开始搭建这套环境。准备好你的终端，我们开始吧！&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;对于追求工程标准化的 Laravel 开发者，&lt;strong&gt;Laravel Sail + WSL2 + Docker&lt;/strong&gt; 是目前 Windows 平台上最符合业界标准的开发环境方案。&lt;/p&gt;
+&lt;p&gt;下一章我们将进入实施阶段，完成基础环境的搭建。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
