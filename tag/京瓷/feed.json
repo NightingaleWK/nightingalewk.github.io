@@ -11,9 +11,9 @@
             "date_published": "2025-05-06T08:00:00.000Z",
             "content_html": "<p>本文将详细介绍如何通过京瓷打印机将扫描的文件发送到电脑，包括设置地址簿、添加用户、配置文件夹共享以及测试连接等步骤。</p>\n<span id=\"more\"></span>\n\n<h2 id=\"1-打开地址簿\"><a href=\"#1-打开地址簿\" class=\"headerlink\" title=\"1. 打开地址簿\"></a>1. 打开地址簿</h2><ol>\n<li>打开京瓷打印机的 web 端后台管理界面（我司的是 <a href=\"http://192.168.10.19/\">http://192.168.10.19/</a>，根据实际访问即可，此打印机默认账号密码均为 <code>Admin</code>）。</li>\n<li>左侧点击<code>地址簿</code> - <code>机器地址簿</code></li>\n</ol>\n<h2 id=\"2-添加新用户\"><a href=\"#2-添加新用户\" class=\"headerlink\" title=\"2. 添加新用户\"></a>2. 添加新用户</h2><ol>\n<li>点击 <code>添加</code> 按钮。</li>\n<li>在弹出的界面中，填写相关信息，具体为：<ul>\n<li><strong>编号</strong>：一个数字，只要不重复就行，范围在 <code>001</code> 到 <code>250</code>，自行选择。</li>\n<li><strong>姓名</strong>：如：夜莺之刃。</li>\n<li><strong>名称</strong>：拼音，如：yeyingzhiren。</li>\n<li>SMB<ul>\n<li><strong>主机名</strong>：你电脑在内网的固定ip地址，如：192.168.10.233（确保电脑与打印机在同一网络下）</li>\n<li><strong>端口编号</strong>：445</li>\n<li><strong>路径</strong>：在你电脑共享出去的那个文件夹的 <code>属性</code> - <code>共享</code> 页面中的 <code>网络地址</code> 上有写，如<code>\\\\PRECISION-7920\\Users\\djsyw\\OneDrive\\扫描</code>，那我们就填入 <code>Users\\djsyw\\OneDrive\\扫描</code> 即可。这个我们在后面会配置上。</li>\n<li><strong>登录用户名</strong>：也就是你电脑的实际登陆时的用户名。是微软账户登录的就是你微软账户，比如 <code>yeyingzhiren@outlook.com</code>，否则就是你装机的时候填写的那个，比如 <code>Admin</code>。</li>\n<li><strong>登录密码</strong>：也就是上述登录名配套的那个密码，填入即可。</li>\n</ul>\n</li>\n</ul>\n</li>\n</ol>\n<p>至此用户信息填写完毕，没提及的就是非必填项目，最后点击提交即可。</p>\n<p>在此期间，若对填写的信息不把握，不知道通不通，就可以尝试点击连接测试按钮，会进行连通性测试。</p>\n<h2 id=\"3-配置电脑共享文件夹\"><a href=\"#3-配置电脑共享文件夹\" class=\"headerlink\" title=\"3. 配置电脑共享文件夹\"></a>3. 配置电脑共享文件夹</h2><ol>\n<li>在您的电脑上选择一个合适的位置，创建一个新的文件夹。</li>\n<li>右键点击该文件夹，选择 <code>属性</code>。</li>\n<li>转到 <code>共享</code> 选项卡，点击 <code>共享</code> 按钮。</li>\n<li>在共享设置中，添加 <code>Everyone</code> 用户，并设置相应的权限（读取&#x2F;写入）。</li>\n<li>点击 <code>共享</code> 完成文件夹共享设置。</li>\n</ol>\n<h2 id=\"注意事项\"><a href=\"#注意事项\" class=\"headerlink\" title=\"注意事项\"></a>注意事项</h2><ul>\n<li>确保电脑与打印机连接在同一网络下，以便打印机能够访问共享文件夹。</li>\n<li>在设置共享文件夹时，注意权限设置，确保打印机有足够的权限将文件保存到该文件夹。</li>\n<li>如果在测试连接时遇到问题，请检查网络连接、IP地址设置以及文件夹共享设置是否正确。</li>\n</ul>\n",
             "tags": [
+                "教程",
                 "打印机",
-                "京瓷",
-                "教程"
+                "京瓷"
             ]
         }
     ]
