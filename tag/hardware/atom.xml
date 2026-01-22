@@ -5,22 +5,22 @@
     <link href="https://nightingalewk.cn" />
     <updated>2026-01-27T02:00:00.000Z</updated>
     <category term="迁移" />
+    <category term="电脑维修" />
     <category term="hexo" />
     <category term="主食" />
-    <category term="电脑维修" />
-    <category term="学习笔记" />
     <category term="pr" />
     <category term="bilibili" />
+    <category term="学习笔记" />
     <category term="热菜" />
+    <category term="汤" />
     <category term="梦境" />
     <category term="甜品" />
-    <category term="汤" />
     <category term="海鲜" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="dcat admin" />
     <category term="oh-my-zsh" />
     <category term="debug" />
@@ -28,29 +28,29 @@
     <category term="道歉信" />
     <category term="免密" />
     <category term="vs code" />
-    <category term="laravel sail" />
-    <category term="PAC 清单" />
     <category term="fileinfo" />
+    <category term="laravel sail" />
     <category term="定时任务" />
+    <category term="PAC 清单" />
     <category term="gpg" />
     <category term="sshppass" />
     <category term="awk" />
     <category term="net time" />
-    <category term="swap" />
     <category term="端口查询" />
-    <category term="表单验证" />
+    <category term="swap" />
     <category term="事件" />
-    <category term="blade" />
+    <category term="表单验证" />
     <category term="wordpress" />
+    <category term="blade" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
     <category term="Cloudreve" />
-    <category term="故障排除" />
     <category term="artisan 指令" />
     <category term="Font Awesome" />
     <category term="vite" />
+    <category term="故障排除" />
     <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
@@ -70,30 +70,30 @@
     <category term="版本控制" />
     <category term="Monorepo" />
     <category term="DevOps" />
-    <category term="Laravel" />
     <category term="Docker" />
+    <category term="Ubuntu" />
+    <category term="安装指南" />
+    <category term="阿里云" />
+    <category term="镜像源" />
+    <category term="Laravel" />
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
     <category term="国产化" />
     <category term="信创" />
     <category term="TongHttpServer" />
-    <category term="Ubuntu" />
-    <category term="安装指南" />
-    <category term="阿里云" />
-    <category term="镜像源" />
-    <category term="Rule" />
-    <category term="Prompt" />
-    <category term="gemini" />
     <category term="Nginx" />
     <category term="反向代理" />
     <category term="NPM" />
     <category term="HTTPS" />
     <category term="问题排查" />
+    <category term="Rule" />
+    <category term="Prompt" />
+    <category term="gemini" />
     <category term="Sail" />
-    <category term="WSL2" />
     <category term="Artisan" />
     <category term="Composer" />
+    <category term="WSL2" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
@@ -101,30 +101,30 @@
         <id>https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</id>
         <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
         <link rel="alternate" href="https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"/>
-        <content type="html">&lt;h2 id=&#34;硬件选型参考-Hardware-Reference&#34;&gt;&lt;a href=&#34;#硬件选型参考-Hardware-Reference&#34; class=&#34;headerlink&#34; title=&#34;硬件选型参考 (Hardware Reference)&#34;&gt;&lt;/a&gt;硬件选型参考 (Hardware Reference)&lt;/h2&gt;&lt;p&gt;硬件部分是我自己正在使用的配置，可供参考。&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;硬件选型参考-（Hardware-Reference）&#34;&gt;&lt;a href=&#34;#硬件选型参考-（Hardware-Reference）&#34; class=&#34;headerlink&#34; title=&#34;硬件选型参考 （Hardware Reference）&#34;&gt;&lt;/a&gt;硬件选型参考 （Hardware Reference）&lt;/h2&gt;&lt;p&gt;硬件部分是我自己正在使用的配置，可供参考。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Laravel Sail&lt;/strong&gt; 基于 Docker 容器化架构，其对硬件资源（特别是内存与 I&amp;#x2F;O）的需求显著高于传统集成环境。以下基于实际生产场景，提供不同层级的配置基准供选购参考。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-生产力工作站-Workstation&#34;&gt;&lt;a href=&#34;#1-生产力工作站-Workstation&#34; class=&#34;headerlink&#34; title=&#34;1. 生产力工作站 (Workstation)&#34;&gt;&lt;/a&gt;1. 生产力工作站 (Workstation)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：重度开发、微服务架构、本地 LLM 运行、多项目并行。&lt;/p&gt;
+&lt;h2 id=&#34;1-生产力工作站-（Workstation）&#34;&gt;&lt;a href=&#34;#1-生产力工作站-（Workstation）&#34; class=&#34;headerlink&#34; title=&#34;1. 生产力工作站 （Workstation）&#34;&gt;&lt;/a&gt;1. 生产力工作站 （Workstation）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：重度开发、微服务架构、本地 LLM 运行、多项目并行。&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon &amp;#x2F; Core i9 &amp;#x2F; AMD Ryzen 9 (多核性能优先)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon &amp;#x2F; Core i9 &amp;#x2F; AMD Ryzen 9 （多核性能优先）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 32GB ECC&amp;#x2F;Non-ECC&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD (Gen4&amp;#x2F;Gen5)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD （Gen4&amp;#x2F;Gen5）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;: Windows 11 Pro for Workstations&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;32GB 内存是 Docker 下流畅运行复杂栈（如 PHP + MySQL + Redis + Meilisearch + Selenium）的&lt;strong&gt;推荐配置&lt;/strong&gt;。充裕的内存允许 WSL2 保持较大的 Page Cache，显著减少磁盘 Swap 交换，提升容器冷启动速度。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-主流开发配置-Standard-Desktop&#34;&gt;&lt;a href=&#34;#2-主流开发配置-Standard-Desktop&#34; class=&#34;headerlink&#34; title=&#34;2. 主流开发配置 (Standard Desktop)&#34;&gt;&lt;/a&gt;2. 主流开发配置 (Standard Desktop)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：标准全栈开发、常规 Laravel 项目。&lt;/p&gt;
+&lt;h2 id=&#34;2-主流开发配置-（Standard-Desktop）&#34;&gt;&lt;a href=&#34;#2-主流开发配置-（Standard-Desktop）&#34; class=&#34;headerlink&#34; title=&#34;2. 主流开发配置 （Standard Desktop）&#34;&gt;&lt;/a&gt;2. 主流开发配置 （Standard Desktop）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：标准全栈开发、常规 Laravel 项目。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7 &amp;#x2F; AMD Ryzen 7&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 16GB DDR4&amp;#x2F;DDR5&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD (512GB+)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage&lt;/strong&gt;: NVMe SSD （512GB+）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;16GB 内存是运行 Docker 开发环境的&lt;strong&gt;基准要求&lt;/strong&gt;。在并发运行 1-2 个 Sail 项目时表现良好。建议在 &lt;code&gt;.wslconfig&lt;/code&gt; 中限制 WSL2 最大内存占用（如 &lt;code&gt;memory=8GB&lt;/code&gt;），以避免宿主机系统卡顿。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-便携移动端-Portable&#34;&gt;&lt;a href=&#34;#3-便携移动端-Portable&#34; class=&#34;headerlink&#34; title=&#34;3. 便携移动端 (Portable)&#34;&gt;&lt;/a&gt;3. 便携移动端 (Portable)&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：临时维护、远程办公、轻量级编码。&lt;/p&gt;
+&lt;h2 id=&#34;3-便携移动端-（Portable）&#34;&gt;&lt;a href=&#34;#3-便携移动端-（Portable）&#34; class=&#34;headerlink&#34; title=&#34;3. 便携移动端 （Portable）&#34;&gt;&lt;/a&gt;3. 便携移动端 （Portable）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：临时维护、远程办公、轻量级编码。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: Surface Pro &amp;#x2F; MacBook Air &amp;#x2F; XPS 13&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spec&lt;/strong&gt;: Core i5&amp;#x2F;i7 (Low Voltage) + 16GB RAM + SSD&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spec&lt;/strong&gt;: Core i5&amp;#x2F;i7 （Low Voltage） + 16GB RAM + SSD&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;对于轻薄本，&lt;strong&gt;SSD 性能是瓶颈所在&lt;/strong&gt;。Docker 的 OverlayFS 对随机读写极其敏感。务必确保项目文件存储于 WSL2 内部文件系统，以规避跨系统文件协议（9P）带来的 I&amp;#x2F;O 延迟。&lt;br&gt;&lt;em&gt;Note: 不推荐在 8GB 内存设备上运行完整的 Docker 开发栈。&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -137,25 +137,25 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;&lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;内存 (RAM)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;内存 （RAM）&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;容量&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;16GB (Min)&lt;/strong&gt; &amp;#x2F; **32GB (Rec)**。Docker 是内存密集型应用。&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;16GB （Min）&lt;/strong&gt; &amp;#x2F; &lt;strong&gt;32GB （Rec）&lt;/strong&gt;。Docker 是内存密集型应用。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;磁盘 (Storage)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;磁盘 （Storage）&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;I&amp;#x2F;O 吞吐&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;必选 **SSD (NVMe)**。HDD 机械硬盘不具备运行容器环境的可行性。&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;必选 &lt;strong&gt;SSD （NVMe）&lt;/strong&gt;。HDD 机械硬盘不具备运行容器环境的可行性。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;处理器 (CPU)&lt;/strong&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;strong&gt;处理器 （CPU）&lt;/strong&gt;&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;虚拟化&lt;/td&gt;
 &lt;td align=&#34;left&#34;&gt;必须支持并开启 &lt;strong&gt;VT-x &amp;#x2F; AMD-V&lt;/strong&gt;。多核优势大于单核高频。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-全栈工具链-Software-Toolchain&#34;&gt;&lt;a href=&#34;#4-全栈工具链-Software-Toolchain&#34; class=&#34;headerlink&#34; title=&#34;4. 全栈工具链 (Software Toolchain)&#34;&gt;&lt;/a&gt;4. 全栈工具链 (Software Toolchain)&lt;/h2&gt;&lt;p&gt;高效的开发离不开标准化的工具栈。以下是推荐的现代化 PHP 全栈开发方案。&lt;/p&gt;
+&lt;h2 id=&#34;4-全栈工具链-（Software-Toolchain）&#34;&gt;&lt;a href=&#34;#4-全栈工具链-（Software-Toolchain）&#34; class=&#34;headerlink&#34; title=&#34;4. 全栈工具链 （Software Toolchain）&#34;&gt;&lt;/a&gt;4. 全栈工具链 （Software Toolchain）&lt;/h2&gt;&lt;p&gt;高效的开发离不开标准化的工具栈。以下是推荐的现代化 PHP 全栈开发方案。&lt;/p&gt;
 &lt;h3 id=&#34;核心开发环境&#34;&gt;&lt;a href=&#34;#核心开发环境&#34; class=&#34;headerlink&#34; title=&#34;核心开发环境&#34;&gt;&lt;/a&gt;核心开发环境&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; (配合 &lt;strong&gt;Gemini Advanced&lt;/strong&gt;)&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; （配合 &lt;strong&gt;Gemini Advanced&lt;/strong&gt;）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：AI-Native 集成开发环境。利用大模型上下文理解能力实现代码生成与重构。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -169,7 +169,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;基础设施与运维&#34;&gt;&lt;a href=&#34;#基础设施与运维&#34; class=&#34;headerlink&#34; title=&#34;基础设施与运维&#34;&gt;&lt;/a&gt;基础设施与运维&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;SSH Client&lt;/strong&gt;: &lt;strong&gt;Xshell &amp;#x2F; Xftp&lt;/strong&gt; (Free for Home&amp;#x2F;School)&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SSH Client&lt;/strong&gt;: &lt;strong&gt;Xshell &amp;#x2F; Xftp&lt;/strong&gt; （Free for Home&amp;#x2F;School）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：企业级终端模拟软件，连接稳定性优于开源替代品。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -177,17 +177,17 @@
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：低延迟远程桌面控制，适用于远程协助或应急运维。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cloud Provider&lt;/strong&gt;: &lt;strong&gt;Aliyun &amp;#x2F; Tencent Cloud&lt;/strong&gt; (Lightweight Server)&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cloud Provider&lt;/strong&gt;: &lt;strong&gt;Aliyun &amp;#x2F; Tencent Cloud&lt;/strong&gt; （Lightweight Server）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：高性价比的测试&amp;#x2F;预发布环境托管。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;协作与生产力&#34;&gt;&lt;a href=&#34;#协作与生产力&#34; class=&#34;headerlink&#34; title=&#34;协作与生产力&#34;&gt;&lt;/a&gt;协作与生产力&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;: &lt;strong&gt;Microsoft OneNote&lt;/strong&gt; (M365)&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Knowledge Base&lt;/strong&gt;: &lt;strong&gt;Microsoft OneNote&lt;/strong&gt; （M365）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：云同步笔记与技术文档归档。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Diagramming&lt;/strong&gt;: &lt;strong&gt;Diagrams.net (draw.io)&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Diagramming&lt;/strong&gt;: &lt;strong&gt;Diagrams.net （draw.io）&lt;/strong&gt;&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：基于 Web 的架构图&amp;#x2F;ER 图绘制工具，支持 Git 存储后端。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -195,11 +195,11 @@
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：敏捷研发项目管理系统。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;VCS&lt;/strong&gt;: &lt;strong&gt;GitHub&lt;/strong&gt; (Primary) &amp;#x2F; &lt;strong&gt;Gitee&lt;/strong&gt; (Mirror)&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;VCS&lt;/strong&gt;: &lt;strong&gt;GitHub&lt;/strong&gt; （Primary） &amp;#x2F; &lt;strong&gt;Gitee&lt;/strong&gt; （Mirror）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：分布式版本控制与代码托管。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Utility&lt;/strong&gt;: &lt;strong&gt;Snipaste&lt;/strong&gt; (截图&amp;#x2F;贴图) &amp;#x2F; &lt;strong&gt;Immersive Translate&lt;/strong&gt; (沉浸式翻译)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Utility&lt;/strong&gt;: &lt;strong&gt;Snipaste&lt;/strong&gt; （截图&amp;#x2F;贴图） &amp;#x2F; &lt;strong&gt;Immersive Translate&lt;/strong&gt; （沉浸式翻译）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;结语&#34;&gt;&lt;a href=&#34;#结语&#34; class=&#34;headerlink&#34; title=&#34;结语&#34;&gt;&lt;/a&gt;结语&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;工欲善其事，必先利其器&lt;/strong&gt;。&lt;br&gt;标准化的硬件基准与现代化的软件工具链，是保障开发效率与代码质量的物理基础。希望这份清单能为团队的技术选型提供参考。&lt;/p&gt;

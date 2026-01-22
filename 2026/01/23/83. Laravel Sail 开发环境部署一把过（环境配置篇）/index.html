@@ -12,18 +12,18 @@
     href="https://nightingalewk.cn/atom.xml" />
   <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
   <meta name="sogou_site_verification" content="J617qA05Ne" />
-  <meta name="description" content="Laravel Sail 开发环境部署一把过（环境配置篇）：涵盖 BIOS 虚拟化开启验证、WSL2 子系统部署、Docker Desktop (WSL Backend) 配置及 Sail 项目构建全流程。">
+  <meta name="description" content="Laravel Sail 开发环境部署一把过（环境配置篇）：涵盖 BIOS 虚拟化开启验证、WSL2 子系统部署、Docker Desktop （WSL Backend） 配置及 Sail 项目构建全流程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel Sail 开发环境部署一把过（环境配置篇）">
 <meta property="og:url" content="https://nightingalewk.cn/2026/01/23/83.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E7%AF%87%EF%BC%89/index.html">
 <meta property="og:site_name" content="雪漫城的风宅">
-<meta property="og:description" content="Laravel Sail 开发环境部署一把过（环境配置篇）：涵盖 BIOS 虚拟化开启验证、WSL2 子系统部署、Docker Desktop (WSL Backend) 配置及 Sail 项目构建全流程。">
+<meta property="og:description" content="Laravel Sail 开发环境部署一把过（环境配置篇）：涵盖 BIOS 虚拟化开启验证、WSL2 子系统部署、Docker Desktop （WSL Backend） 配置及 Sail 项目构建全流程。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-23T10:00:00.000Z">
-<meta property="article:modified_time" content="2026-01-22T05:43:40.259Z">
+<meta property="article:modified_time" content="2026-01-22T05:57:48.846Z">
 <meta property="article:author" content="NightingaleWK">
-<meta property="article:tag" content="Laravel">
 <meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Laravel">
 <meta property="article:tag" content="Sail">
 <meta property="article:tag" content="WSL2">
 <meta name="twitter:card" content="summary">
@@ -138,7 +138,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">部署目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">1. 基础设施准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%AA%8C%E8%AF%81%E8%99%9A%E6%8B%9F%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 验证虚拟化支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%83%A8%E7%BD%B2-WSL2"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 部署 WSL2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 安装 Docker Desktop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96-Laravel-Sail-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 初始化 Laravel Sail 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 创建工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%85%8D%E7%BD%AE-Shell-Alias-%E6%8E%A8%E8%8D%90"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 配置 Shell Alias (推荐)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">3. 启动与验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%90%AF%E5%8A%A8%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 启动环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9C%8D%E5%8A%A1%E9%AA%8C%E8%AF%81"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 服务验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">下一步</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">部署目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">1. 基础设施准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%AA%8C%E8%AF%81%E8%99%9A%E6%8B%9F%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 验证虚拟化支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%83%A8%E7%BD%B2-WSL2"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 部署 WSL2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 安装 Docker Desktop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96-Laravel-Sail-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 初始化 Laravel Sail 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 创建工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%85%8D%E7%BD%AE-Shell-Alias-%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 配置 Shell Alias （推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">3. 启动与验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%90%AF%E5%8A%A8%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 启动环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9C%8D%E5%8A%A1%E9%AA%8C%E8%AF%81"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 服务验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">下一步</span></a></li></ol>
       </div>
     
   </span>
@@ -165,7 +165,7 @@
       
         <time datetime="2026-01-23T10:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-23</time>
         
-        (Updated: <time datetime="2026-01-22T05:43:40.259Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
+        (Updated: <time datetime="2026-01-22T05:57:48.846Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
         
       
     </div>
@@ -190,11 +190,11 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h2 id="部署目标"><a href="#部署目标" class="headerlink" title="部署目标"></a>部署目标</h2><p>本文将从零开始构建基于 <strong>WSL2 (Windows Subsystem for Linux 2)</strong> 的标准化 Docker 开发环境，并完成首个 Laravel Sail 项目的初始化。</p>
+    <h2 id="部署目标"><a href="#部署目标" class="headerlink" title="部署目标"></a>部署目标</h2><p>本文将从零开始构建基于 <strong>WSL2 （Windows Subsystem for Linux 2）</strong> 的标准化 Docker 开发环境，并完成首个 Laravel Sail 项目的初始化。</p>
 <p><strong>环境要求</strong>：</p>
 <ul>
-<li><strong>OS</strong>: Windows 11 (Build 22000+) 或 Windows 10 (Build 19041+).</li>
-<li><strong>BIOS</strong>: 开启 CPU 虚拟化 (Virtualization Technology).</li>
+<li><strong>OS</strong>: Windows 11 （Build 22000+） 或 Windows 10 （Build 19041+）.</li>
+<li><strong>BIOS</strong>: 开启 CPU 虚拟化 （Virtualization Technology）.</li>
 </ul>
 <hr>
 <h2 id="1-基础设施准备"><a href="#1-基础设施准备" class="headerlink" title="1. 基础设施准备"></a>1. 基础设施准备</h2><h3 id="1-1-验证虚拟化支持"><a href="#1-1-验证虚拟化支持" class="headerlink" title="1.1 验证虚拟化支持"></a>1.1 验证虚拟化支持</h3><p>Docker Desktop 依赖 Hypervisor 层支持。请确保 BIOS&#x2F;UEFI 中已开启虚拟化（Intel VT-x 或 AMD-V）。</p>
@@ -215,14 +215,14 @@
 </ol>
 <hr>
 <h2 id="2-初始化-Laravel-Sail-项目"><a href="#2-初始化-Laravel-Sail-项目" class="headerlink" title="2. 初始化 Laravel Sail 项目"></a>2. 初始化 Laravel Sail 项目</h2><p>所有后续操作建议直接在 WSL2 终端（Ubuntu）中执行，以获得原生的 Linux 开发体验。</p>
-<h3 id="2-1-创建工作区"><a href="#2-1-创建工作区" class="headerlink" title="2.1 创建工作区"></a>2.1 创建工作区</h3><p>建议在 WSL 用户主目录下统一管理项目，避免 Windows 文件系统 (NTFS) 挂载带来的 I&#x2F;O 性能损耗。</p>
+<h3 id="2-1-创建工作区"><a href="#2-1-创建工作区" class="headerlink" title="2.1 创建工作区"></a>2.1 创建工作区</h3><p>建议在 WSL 用户主目录下统一管理项目，避免 Windows 文件系统 （NTFS） 挂载带来的 I&#x2F;O 性能损耗。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/code &amp;&amp; <span class="built_in">cd</span> ~/code</span><br></pre></td></tr></table></figure>
 
 <h3 id="2-2-构建项目"><a href="#2-2-构建项目" class="headerlink" title="2.2 构建项目"></a>2.2 构建项目</h3><p>使用 Laravel 官方构建脚本初始化项目（通过临时 Docker 容器）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 请将 &#x27;example-app&#x27; 替换为实际项目名</span></span><br><span class="line">curl -s https://laravel.build/example-app | bash</span><br></pre></td></tr></table></figure>
 
 <p>该指令会自动拉取 <code>php-cli</code> 镜像及相关依赖。</p>
-<h3 id="2-3-配置-Shell-Alias-推荐"><a href="#2-3-配置-Shell-Alias-推荐" class="headerlink" title="2.3 配置 Shell Alias (推荐)"></a>2.3 配置 Shell Alias (推荐)</h3><p>为简化操作，建议将 <code>sail</code> 执行脚本映射为 Shell 别名。编辑 <code>~/.bashrc</code> 或 <code>~/.zshrc</code>：</p>
+<h3 id="2-3-配置-Shell-Alias-（推荐）"><a href="#2-3-配置-Shell-Alias-（推荐）" class="headerlink" title="2.3 配置 Shell Alias （推荐）"></a>2.3 配置 Shell Alias （推荐）</h3><p>为简化操作，建议将 <code>sail</code> 执行脚本映射为 Shell 别名。编辑 <code>~/.bashrc</code> 或 <code>~/.zshrc</code>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加至配置文件末尾</span></span><br><span class="line"><span class="built_in">alias</span> sail=<span class="string">&#x27;[ -f sail ] &amp;&amp; bash sail || bash vendor/bin/sail&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <p>加载生效：</p>
@@ -236,7 +236,7 @@
 <h3 id="3-2-服务验证"><a href="#3-2-服务验证" class="headerlink" title="3.2 服务验证"></a>3.2 服务验证</h3><p>服务启动后，通过宿主机浏览器访问 <code>http://localhost</code>。<br>若显示 Laravel 欢迎页，即表示：</p>
 <ul>
 <li>✅ Docker 容器运行正常</li>
-<li>✅ 端口转发 (Port Forwarding) 正常</li>
+<li>✅ 端口转发 （Port Forwarding） 正常</li>
 <li>✅ PHP 运行时挂载正常</li>
 </ul>
 <hr>
@@ -274,7 +274,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">部署目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">1. 基础设施准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%AA%8C%E8%AF%81%E8%99%9A%E6%8B%9F%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 验证虚拟化支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%83%A8%E7%BD%B2-WSL2"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 部署 WSL2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 安装 Docker Desktop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96-Laravel-Sail-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 初始化 Laravel Sail 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 创建工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%85%8D%E7%BD%AE-Shell-Alias-%E6%8E%A8%E8%8D%90"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 配置 Shell Alias (推荐)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">3. 启动与验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%90%AF%E5%8A%A8%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 启动环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9C%8D%E5%8A%A1%E9%AA%8C%E8%AF%81"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 服务验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">下一步</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">部署目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">1. 基础设施准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E9%AA%8C%E8%AF%81%E8%99%9A%E6%8B%9F%E5%8C%96%E6%94%AF%E6%8C%81"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 验证虚拟化支持</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E9%83%A8%E7%BD%B2-WSL2"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 部署 WSL2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 安装 Docker Desktop</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96-Laravel-Sail-%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 初始化 Laravel Sail 项目</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 创建工作区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E6%9E%84%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 构建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E9%85%8D%E7%BD%AE-Shell-Alias-%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 配置 Shell Alias （推荐）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">3. 启动与验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%90%AF%E5%8A%A8%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 启动环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E6%9C%8D%E5%8A%A1%E9%AA%8C%E8%AF%81"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 服务验证</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">下一步</span></a></li></ol>
       </div>
     
 
