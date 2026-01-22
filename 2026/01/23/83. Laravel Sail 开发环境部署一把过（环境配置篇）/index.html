@@ -20,7 +20,7 @@
 <meta property="og:description" content="Laravel Sail 开发环境部署一把过（环境配置篇）：保姆级教程，涵盖 BIOS 虚拟化检查、WSL2 一键安装、Docker Desktop 避坑指南及 Sail 初次初始化。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-23T10:00:00.000Z">
-<meta property="article:modified_time" content="2026-01-22T01:55:59.550Z">
+<meta property="article:modified_time" content="2026-01-22T02:15:46.128Z">
 <meta property="article:author" content="NightingaleWK">
 <meta property="article:tag" content="Laravel">
 <meta property="article:tag" content="Docker">
@@ -138,7 +138,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%A3%80%E6%9F%A5%E8%99%9A%E6%8B%9F%E5%8C%96-Virtualization"><span class="toc-number">2.</span> <span class="toc-text">第一步：检查虚拟化 (Virtualization)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-WSL-2"><span class="toc-number">3.</span> <span class="toc-text">第二步：安装 WSL 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">4.</span> <span class="toc-text">第三步：安装 Docker Desktop</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%90%AF%E5%8A%A8-Laravel-%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建并启动 Laravel 项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%88%90%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证成果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E9%9B%86%E9%A2%84%E5%91%8A"><span class="toc-number">7.</span> <span class="toc-text">下集预告</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%A3%80%E6%9F%A5%E8%99%9A%E6%8B%9F%E5%8C%96-Virtualization"><span class="toc-number">2.</span> <span class="toc-text">第一步：检查虚拟化 (Virtualization)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-WSL-2"><span class="toc-number">3.</span> <span class="toc-text">第二步：安装 WSL 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">4.</span> <span class="toc-text">第三步：安装 Docker Desktop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%90%AF%E5%8A%A8-Laravel-%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建并启动 Laravel 项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%88%90%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证成果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9B%86%E9%A2%84%E5%91%8A"><span class="toc-number">7.</span> <span class="toc-text">下集预告</span></a></li></ol>
       </div>
     
   </span>
@@ -165,7 +165,7 @@
       
         <time datetime="2026-01-23T10:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-23</time>
         
-        (Updated: <time datetime="2026-01-22T01:55:59.550Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
+        (Updated: <time datetime="2026-01-22T02:15:46.128Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
         
       
     </div>
@@ -190,7 +190,7 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><p>本文的目标非常明确：<strong>从一台刚装好系统的全新 Windows 11 电脑开始，直到浏览器成功访问 Laravel 默认欢迎页面。</strong></p>
+    <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>本文的目标非常明确：<strong>从一台刚装好系统的全新 Windows 11 电脑开始，直到浏览器成功访问 Laravel 默认欢迎页面。</strong></p>
 <p>中间我们将完成：</p>
 <ol>
 <li>开启 BIOS 虚拟化。</li>
@@ -202,7 +202,7 @@
 <p><strong>前置要求</strong>：你的 Windows 11 版本需要是最新的（或者至少是近两年的版本）。</p>
 </blockquote>
 <hr>
-<h1 id="第一步：检查虚拟化-Virtualization"><a href="#第一步：检查虚拟化-Virtualization" class="headerlink" title="第一步：检查虚拟化 (Virtualization)"></a>第一步：检查虚拟化 (Virtualization)</h1><p>Docker 和 WSL2 的运行依赖于 CPU 的虚拟化技术。</p>
+<h2 id="第一步：检查虚拟化-Virtualization"><a href="#第一步：检查虚拟化-Virtualization" class="headerlink" title="第一步：检查虚拟化 (Virtualization)"></a>第一步：检查虚拟化 (Virtualization)</h2><p>Docker 和 WSL2 的运行依赖于 CPU 的虚拟化技术。</p>
 <ol>
 <li>打开 <strong>任务管理器 (Task Manager)</strong> (<code>Ctrl + Shift + Esc</code>)。</li>
 <li>切换到 <strong>性能 (Performance)</strong> -&gt; <strong>CPU</strong> 选项卡。</li>
@@ -213,7 +213,7 @@
 </li>
 </ol>
 <hr>
-<h1 id="第二步：安装-WSL-2"><a href="#第二步：安装-WSL-2" class="headerlink" title="第二步：安装 WSL 2"></a>第二步：安装 WSL 2</h1><p>现在的 Windows 安装 Linux 子系统已经简单到令人发指，不需要再去控制面板勾选那一堆复杂的“Windows 功能”了。</p>
+<h2 id="第二步：安装-WSL-2"><a href="#第二步：安装-WSL-2" class="headerlink" title="第二步：安装 WSL 2"></a>第二步：安装 WSL 2</h2><p>现在的 Windows 安装 Linux 子系统已经简单到令人发指，不需要再去控制面板勾选那一堆复杂的“Windows 功能”了。</p>
 <ol>
 <li>鼠标右键点击 <strong>开始菜单</strong>，选择 <strong>终端管理员 (Terminal Admin)</strong> 或 **PowerShell (管理员)**。</li>
 <li>输入以下命令并回车：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--install</span></span><br></pre></td></tr></table></figure></li>
@@ -230,7 +230,7 @@
 <p>搞定后，如果你通过 <code>wsl -l -v</code> 命令查看，应该能看到一个 <code>Ubuntu</code> 正在运行，且 Version 为 2。</p>
 </blockquote>
 <hr>
-<h1 id="第三步：安装-Docker-Desktop"><a href="#第三步：安装-Docker-Desktop" class="headerlink" title="第三步：安装 Docker Desktop"></a>第三步：安装 Docker Desktop</h1><p>Docker Desktop 是 Docker 在 Windows 上的图形化管理工具，它会自动接管 WSL2 中的 Docker 后端。</p>
+<h2 id="第三步：安装-Docker-Desktop"><a href="#第三步：安装-Docker-Desktop" class="headerlink" title="第三步：安装 Docker Desktop"></a>第三步：安装 Docker Desktop</h2><p>Docker Desktop 是 Docker 在 Windows 上的图形化管理工具，它会自动接管 WSL2 中的 Docker 后端。</p>
 <ol>
 <li>前往 <a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop/">Docker 官网</a> 下载 <strong>Docker Desktop for Windows</strong>。</li>
 <li>双击安装。<strong>注意</strong>：在安装界面的 Configuration 步骤中，务必勾选：<ul>
@@ -254,7 +254,7 @@
 </ol>
 </blockquote>
 <hr>
-<h1 id="第四步：创建并启动-Laravel-项目"><a href="#第四步：创建并启动-Laravel-项目" class="headerlink" title="第四步：创建并启动 Laravel 项目"></a>第四步：创建并启动 Laravel 项目</h1><p>见证奇迹的时刻到了。我们所有的操作都在 WSL (Ubuntu) 中进行。</p>
+<h2 id="第四步：创建并启动-Laravel-项目"><a href="#第四步：创建并启动-Laravel-项目" class="headerlink" title="第四步：创建并启动 Laravel 项目"></a>第四步：创建并启动 Laravel 项目</h2><p>见证奇迹的时刻到了。我们所有的操作都在 WSL (Ubuntu) 中进行。</p>
 <ol>
 <li><p>打开 <strong>Windows Terminal</strong>，点击标题栏的下拉箭头，选择 <strong>Ubuntu</strong> 这里就是你的 Linux 世界。</p>
 </li>
@@ -283,7 +283,7 @@
 </li>
 </ol>
 <hr>
-<h1 id="第五步：验证成果"><a href="#第五步：验证成果" class="headerlink" title="第五步：验证成果"></a>第五步：验证成果</h1><p>打开你的浏览器（Chrome&#x2F;Edge），在地址栏输入：</p>
+<h2 id="第五步：验证成果"><a href="#第五步：验证成果" class="headerlink" title="第五步：验证成果"></a>第五步：验证成果</h2><p>打开你的浏览器（Chrome&#x2F;Edge），在地址栏输入：</p>
 <blockquote>
 <p><strong><a target="_blank" rel="noopener" href="http://localhost/">http://localhost</a></strong></p>
 </blockquote>
@@ -297,7 +297,7 @@
 <li><strong>但它们都在为你服务。</strong></li>
 </ul>
 <hr>
-<h1 id="下集预告"><a href="#下集预告" class="headerlink" title="下集预告"></a>下集预告</h1><p>环境通了，代码也在跑了。但我们怎么把代码存起来？怎么在公司写一半，回家换台电脑拉下来接着写？<br>下一篇：<strong>《Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）》</strong>，我们将配置 GitHub 仓库，并演示“异地开发，无感切换”的丝滑体验。</p>
+<h2 id="下集预告"><a href="#下集预告" class="headerlink" title="下集预告"></a>下集预告</h2><p>环境通了，代码也在跑了。但我们怎么把代码存起来？怎么在公司写一半，回家换台电脑拉下来接着写？<br>下一篇：<strong>《Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）》</strong>，我们将配置 GitHub 仓库，并演示“异地开发，无感切换”的丝滑体验。</p>
 
   </div>
 </article>
@@ -331,7 +331,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%A3%80%E6%9F%A5%E8%99%9A%E6%8B%9F%E5%8C%96-Virtualization"><span class="toc-number">2.</span> <span class="toc-text">第一步：检查虚拟化 (Virtualization)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-WSL-2"><span class="toc-number">3.</span> <span class="toc-text">第二步：安装 WSL 2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">4.</span> <span class="toc-text">第三步：安装 Docker Desktop</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%90%AF%E5%8A%A8-Laravel-%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建并启动 Laravel 项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%88%90%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证成果</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E9%9B%86%E9%A2%84%E5%91%8A"><span class="toc-number">7.</span> <span class="toc-text">下集预告</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E6%A3%80%E6%9F%A5%E8%99%9A%E6%8B%9F%E5%8C%96-Virtualization"><span class="toc-number">2.</span> <span class="toc-text">第一步：检查虚拟化 (Virtualization)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-WSL-2"><span class="toc-number">3.</span> <span class="toc-text">第二步：安装 WSL 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%AE%89%E8%A3%85-Docker-Desktop"><span class="toc-number">4.</span> <span class="toc-text">第三步：安装 Docker Desktop</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%90%AF%E5%8A%A8-Laravel-%E9%A1%B9%E7%9B%AE"><span class="toc-number">5.</span> <span class="toc-text">第四步：创建并启动 Laravel 项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E9%AA%8C%E8%AF%81%E6%88%90%E6%9E%9C"><span class="toc-number">6.</span> <span class="toc-text">第五步：验证成果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E9%9B%86%E9%A2%84%E5%91%8A"><span class="toc-number">7.</span> <span class="toc-text">下集预告</span></a></li></ol>
       </div>
     
 

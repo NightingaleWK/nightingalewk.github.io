@@ -4,109 +4,109 @@
     <title>雪漫城的风宅 • Posts by &#34;git&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2026-01-24T02:00:00.000Z</updated>
-    <category term="迁移" />
     <category term="hexo" />
-    <category term="主食" />
+    <category term="迁移" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="电脑维修" />
+    <category term="主食" />
     <category term="学习笔记" />
     <category term="热菜" />
     <category term="汤" />
-    <category term="梦境" />
-    <category term="海鲜" />
     <category term="甜品" />
+    <category term="海鲜" />
+    <category term="梦境" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码部署" />
-    <category term="dcat admin" />
+    <category term="代码更新" />
     <category term="oh-my-zsh" />
+    <category term="dcat admin" />
     <category term="debug" />
     <category term="道歉信" />
     <category term="指令" />
+    <category term="vs code" />
+    <category term="PAC 清单" />
+    <category term="定时任务" />
     <category term="免密" />
     <category term="laravel sail" />
-    <category term="vs code" />
-    <category term="fileinfo" />
-    <category term="PAC 清单" />
-    <category term="gpg" />
-    <category term="定时任务" />
     <category term="sshppass" />
     <category term="awk" />
+    <category term="fileinfo" />
+    <category term="gpg" />
     <category term="net time" />
-    <category term="swap" />
-    <category term="事件" />
     <category term="端口查询" />
     <category term="表单验证" />
-    <category term="blade" />
+    <category term="事件" />
     <category term="wordpress" />
-    <category term="特色小吃" />
+    <category term="swap" />
     <category term="队列" />
     <category term="redis" />
+    <category term="blade" />
+    <category term="特色小吃" />
     <category term="粥" />
-    <category term="Cloudreve" />
     <category term="artisan 指令" />
+    <category term="Cloudreve" />
+    <category term="故障排除" />
     <category term="Font Awesome" />
     <category term="vite" />
-    <category term="故障排除" />
+    <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
     <category term="膝盖中箭之地" />
     <category term="领域" />
     <category term="realms" />
     <category term="公告" />
-    <category term="linux" />
+    <category term="screen" />
     <category term="cursor" />
     <category term="人工智能" />
     <category term="prompt" />
-    <category term="screen" />
-    <category term="Git" />
-    <category term="GitHub" />
-    <category term="教程" />
-    <category term="版本控制" />
     <category term="打印机" />
     <category term="京瓷" />
-    <category term="国产化" />
-    <category term="信创" />
-    <category term="TongHttpServer" />
+    <category term="教程" />
+    <category term="Git" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
+    <category term="GitHub" />
+    <category term="版本控制" />
     <category term="Laravel" />
     <category term="Docker" />
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
-    <category term="Monorepo" />
-    <category term="DevOps" />
     <category term="Ubuntu" />
     <category term="安装指南" />
     <category term="阿里云" />
     <category term="镜像源" />
+    <category term="国产化" />
+    <category term="信创" />
+    <category term="TongHttpServer" />
     <category term="Nginx" />
     <category term="反向代理" />
     <category term="NPM" />
     <category term="HTTPS" />
     <category term="问题排查" />
-    <category term="Sail" />
     <category term="Rule" />
     <category term="Prompt" />
     <category term="gemini" />
-    <category term="WSL2" />
+    <category term="Sail" />
     <category term="Artisan" />
     <category term="Composer" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
+    <category term="WSL2" />
     <entry>
         <id>https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/</id>
         <title>Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）</title>
         <link rel="alternate" href="https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/"/>
-        <content type="html">&lt;h1 id=&#34;场景描述&#34;&gt;&lt;a href=&#34;#场景描述&#34; class=&#34;headerlink&#34; title=&#34;场景描述&#34;&gt;&lt;/a&gt;场景描述&lt;/h1&gt;&lt;p&gt;上一篇我们成功在电脑 A（比如公司电脑）上搭建了环境并运行了 Laravel。&lt;br&gt;现在的问题是：&lt;strong&gt;我下班回家了，想用家里的电脑 B 接着写，该怎么办？&lt;/strong&gt;&lt;/p&gt;
+        <content type="html">&lt;h2 id=&#34;场景描述&#34;&gt;&lt;a href=&#34;#场景描述&#34; class=&#34;headerlink&#34; title=&#34;场景描述&#34;&gt;&lt;/a&gt;场景描述&lt;/h2&gt;&lt;p&gt;上一篇我们成功在电脑 A（比如公司电脑）上搭建了环境并运行了 Laravel。&lt;br&gt;现在的问题是：&lt;strong&gt;我下班回家了，想用家里的电脑 B 接着写，该怎么办？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;很多人会卡在这里，因为 Laravel 项目默认的 &lt;code&gt;.gitignore&lt;/code&gt; 规则会忽略 &lt;code&gt;vendor&lt;/code&gt; 目录（存放依赖包的地方）和 &lt;code&gt;.env&lt;/code&gt; 文件（存放敏感配置的地方）。&lt;br&gt;而 &lt;code&gt;sail&lt;/code&gt; 命令脚本本身就躺在 &lt;code&gt;vendor/bin&lt;/code&gt; 目录下。&lt;/p&gt;
 &lt;p&gt;这意味着：&lt;strong&gt;当你把代码拉到新电脑上时，你没有 &lt;code&gt;vendor&lt;/code&gt; 目录，也就没有 &lt;code&gt;sail&lt;/code&gt; 命令。你无法启动 Sail，也就无法用 Sail 安装 &lt;code&gt;vendor&lt;/code&gt;……&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这就陷入了一个“先有鸡还是先有蛋”的死循环。&lt;br&gt;别慌，本文就是为了解决这个问题而生的。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;第一步：在电脑-A-提交代码&#34;&gt;&lt;a href=&#34;#第一步：在电脑-A-提交代码&#34; class=&#34;headerlink&#34; title=&#34;第一步：在电脑 A 提交代码&#34;&gt;&lt;/a&gt;第一步：在电脑 A 提交代码&lt;/h1&gt;&lt;p&gt;首先，我们需要把项目上传到代码仓库（GitHub &amp;#x2F; GitLab &amp;#x2F; Gitee）。这里以 GitHub 为例。&lt;/p&gt;
+&lt;h2 id=&#34;第一步：在电脑-A-提交代码&#34;&gt;&lt;a href=&#34;#第一步：在电脑-A-提交代码&#34; class=&#34;headerlink&#34; title=&#34;第一步：在电脑 A 提交代码&#34;&gt;&lt;/a&gt;第一步：在电脑 A 提交代码&lt;/h2&gt;&lt;p&gt;首先，我们需要把项目上传到代码仓库（GitHub &amp;#x2F; GitLab &amp;#x2F; Gitee）。这里以 GitHub 为例。&lt;/p&gt;
 &lt;p&gt;确保你在 WSL 的项目根目录下（比如 &lt;code&gt;~/code/example-app&lt;/code&gt;）：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;初始化 Git 仓库&lt;/strong&gt;（如果还没初始化）：&lt;/p&gt;
@@ -119,7 +119,7 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin git@github.com:your-username/your-repo.git&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;第二步：在电脑-B-拉取代码&#34;&gt;&lt;a href=&#34;#第二步：在电脑-B-拉取代码&#34; class=&#34;headerlink&#34; title=&#34;第二步：在电脑 B 拉取代码&#34;&gt;&lt;/a&gt;第二步：在电脑 B 拉取代码&lt;/h1&gt;&lt;p&gt;现在我们来到了&lt;strong&gt;电脑 B&lt;/strong&gt;（比如家里的电脑）。&lt;br&gt;&lt;strong&gt;前提&lt;/strong&gt;：这台电脑也必须安装好 &lt;strong&gt;WSL2&lt;/strong&gt; 和 &lt;strong&gt;Docker Desktop&lt;/strong&gt;（参考上一篇教程）。&lt;/p&gt;
+&lt;h2 id=&#34;第二步：在电脑-B-拉取代码&#34;&gt;&lt;a href=&#34;#第二步：在电脑-B-拉取代码&#34; class=&#34;headerlink&#34; title=&#34;第二步：在电脑 B 拉取代码&#34;&gt;&lt;/a&gt;第二步：在电脑 B 拉取代码&lt;/h2&gt;&lt;p&gt;现在我们来到了&lt;strong&gt;电脑 B&lt;/strong&gt;（比如家里的电脑）。&lt;br&gt;&lt;strong&gt;前提&lt;/strong&gt;：这台电脑也必须安装好 &lt;strong&gt;WSL2&lt;/strong&gt; 和 &lt;strong&gt;Docker Desktop&lt;/strong&gt;（参考上一篇教程）。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;克隆代码&lt;/strong&gt;：&lt;br&gt;打开 Ubuntu 终端，进入我们规定的代码存放目录（如果不存在则先创建）：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; git@github.com:your-username/your-repo.git project-b&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; project-b&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -132,7 +132,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;a href=&#34;#第三步：解决“鸡生蛋”问题（安装依赖）&#34; class=&#34;headerlink&#34; title=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;/a&gt;第三步：解决“鸡生蛋”问题（安装依赖）&lt;/h1&gt;&lt;p&gt;我们需要在没有 &lt;code&gt;sail&lt;/code&gt; 的情况下，利用 Docker 帮我们运行一次 Composer 安装命令。&lt;br&gt;Laravel 官方非常贴心地提供了一个一次性的 Docker 运行命令，专门用来处理这个“初次引导”的问题。&lt;/p&gt;
+&lt;h2 id=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;a href=&#34;#第三步：解决“鸡生蛋”问题（安装依赖）&#34; class=&#34;headerlink&#34; title=&#34;第三步：解决“鸡生蛋”问题（安装依赖）&#34;&gt;&lt;/a&gt;第三步：解决“鸡生蛋”问题（安装依赖）&lt;/h2&gt;&lt;p&gt;我们需要在没有 &lt;code&gt;sail&lt;/code&gt; 的情况下，利用 Docker 帮我们运行一次 Composer 安装命令。&lt;br&gt;Laravel 官方非常贴心地提供了一个一次性的 Docker 运行命令，专门用来处理这个“初次引导”的问题。&lt;/p&gt;
 &lt;p&gt;在项目根目录下，执行下面这行&lt;strong&gt;神奇的长命令&lt;/strong&gt;：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -u &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(id -u)&lt;/span&gt;:&lt;span class=&#34;subst&#34;&gt;$(id -g)&lt;/span&gt;&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(pwd)&lt;/span&gt;:/var/www/html&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -w /var/www/html \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    laravelsail/php82-composer:latest \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    composer install --ignore-platform-reqs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
@@ -145,7 +145,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;等待命令执行完成&lt;/strong&gt;（具体取决于网速），你会发现项目里多了一个 &lt;code&gt;vendor&lt;/code&gt; 文件夹。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;第四步：配置环境与启动&#34;&gt;&lt;a href=&#34;#第四步：配置环境与启动&#34; class=&#34;headerlink&#34; title=&#34;第四步：配置环境与启动&#34;&gt;&lt;/a&gt;第四步：配置环境与启动&lt;/h1&gt;&lt;ol&gt;
+&lt;h2 id=&#34;第四步：配置环境与启动&#34;&gt;&lt;a href=&#34;#第四步：配置环境与启动&#34; class=&#34;headerlink&#34; title=&#34;第四步：配置环境与启动&#34;&gt;&lt;/a&gt;第四步：配置环境与启动&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;恢复配置文件&lt;/strong&gt;：&lt;br&gt;由于 &lt;code&gt;.env&lt;/code&gt; 被 Git 忽略了，我们需要从模版复制一份：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cp&lt;/span&gt; .env.example .&lt;span class=&#34;built_in&#34;&gt;env&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;&lt;em&gt;注意：如果你的项目有特殊的数据库密码或 API Key，记得手动编辑 &lt;code&gt;.env&lt;/code&gt; 填进去。但在 Sail 环境下，数据库连接通常默认都在 &lt;code&gt;docker-compose.yml&lt;/code&gt; 里配置好了环境变量，直接用可能就行。&lt;/em&gt;&lt;/p&gt;
@@ -160,7 +160,7 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;第五步：验证&#34;&gt;&lt;a href=&#34;#第五步：验证&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证&#34;&gt;&lt;/a&gt;第五步：验证&lt;/h1&gt;&lt;p&gt;打开浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;你应该能看到与公司电脑一模一样的项目已经在运行了。&lt;/p&gt;
+&lt;h2 id=&#34;第五步：验证&#34;&gt;&lt;a href=&#34;#第五步：验证&#34; class=&#34;headerlink&#34; title=&#34;第五步：验证&#34;&gt;&lt;/a&gt;第五步：验证&lt;/h2&gt;&lt;p&gt;打开浏览器访问 &lt;code&gt;http://localhost&lt;/code&gt;。&lt;br&gt;你应该能看到与公司电脑一模一样的项目已经在运行了。&lt;/p&gt;
 &lt;p&gt;从此以后，你只需要：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;在公司&lt;/strong&gt;：写代码 -&amp;gt; &lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
@@ -168,7 +168,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;这就是 Docker + Sail 带来的极致一致性体验。&lt;/strong&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;本篇解决了异地开发最麻烦的“环境同步”和“依赖安装”问题。&lt;br&gt;核心技巧在于那行&lt;strong&gt;用于“引导”的 Docker 命令&lt;/strong&gt;，它帮我们跨越了“没有 PHP 环境就没法安装 Sail，没有 Sail 就没法启动 PHP 环境”的鸿沟。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;本篇解决了异地开发最麻烦的“环境同步”和“依赖安装”问题。&lt;br&gt;核心技巧在于那行&lt;strong&gt;用于“引导”的 Docker 命令&lt;/strong&gt;，它帮我们跨越了“没有 PHP 环境就没法安装 Sail，没有 Sail 就没法启动 PHP 环境”的鸿沟。&lt;/p&gt;
 &lt;p&gt;下一篇，我们将进入实战深水区：&lt;strong&gt;《日常使用篇》&lt;/strong&gt;，教你如何像在本地一样运行 Artisan 命令、使用 npm 编译前端、以及配置 Shell 别名让 &lt;code&gt;sail&lt;/code&gt; 变成更短的 &lt;code&gt;s&lt;/code&gt;。&lt;/p&gt;
 </content>
         <category term="Git" />
@@ -298,9 +298,9 @@ git branch --set-upstream-to=origin/main main
 git remote prune origin
 &lt;/code&gt;&lt;/pre&gt;
 </content>
+        <category term="教程" />
         <category term="Git" />
         <category term="GitHub" />
-        <category term="教程" />
         <category term="版本控制" />
         <updated>2025-06-26T01:15:00.000Z</updated>
     </entry>
