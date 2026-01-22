@@ -7,75 +7,75 @@
         <language>zh-CN</language>
         <pubDate>Sun, 25 Jan 2026 10:00:00 +0800</pubDate>
         <lastBuildDate>Sun, 25 Jan 2026 10:00:00 +0800</lastBuildDate>
-        <category>hexo</category>
-        <category>主食</category>
-        <category>电脑维修</category>
         <category>迁移</category>
+        <category>电脑维修</category>
+        <category>hexo</category>
         <category>pr</category>
         <category>bilibili</category>
+        <category>主食</category>
         <category>学习笔记</category>
-        <category>热菜</category>
         <category>汤</category>
+        <category>热菜</category>
         <category>梦境</category>
-        <category>海鲜</category>
         <category>甜品</category>
+        <category>海鲜</category>
         <category>homestead</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>oneinstack</category>
         <category>lnmp</category>
+        <category>代码部署</category>
         <category>dcat admin</category>
-        <category>代码更新</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
-        <category>道歉信</category>
         <category>免密</category>
-        <category>fileinfo</category>
+        <category>道歉信</category>
         <category>vs code</category>
+        <category>laravel sail</category>
+        <category>fileinfo</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>定时任务</category>
-        <category>laravel sail</category>
-        <category>gpg</category>
         <category>net time</category>
-        <category>swap</category>
         <category>端口查询</category>
+        <category>swap</category>
         <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
+        <category>特色小吃</category>
         <category>队列</category>
         <category>redis</category>
-        <category>特色小吃</category>
         <category>粥</category>
         <category>artisan 指令</category>
         <category>Cloudreve</category>
-        <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>linux</category>
+        <category>故障排除</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
         <category>prompt</category>
-        <category>Git</category>
-        <category>GitHub</category>
-        <category>教程</category>
-        <category>版本控制</category>
         <category>打印机</category>
         <category>京瓷</category>
-        <category>Monorepo</category>
-        <category>DevOps</category>
+        <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
         <category>国产化</category>
         <category>信创</category>
         <category>TongHttpServer</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
@@ -94,10 +94,10 @@
         <category>HTTPS</category>
         <category>问题排查</category>
         <category>Sail</category>
+        <category>Troubleshooting</category>
         <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
-        <category>Troubleshooting</category>
         <category>Hardware</category>
         <category>Tooling</category>
         <item>
@@ -109,7 +109,7 @@
             <category>Artisan</category>
             <category>Composer</category>
             <pubDate>Sun, 25 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;容器化开发范式-（Development-Paradigm）&#34;&gt;&lt;a href=&#34;#容器化开发范式-（Development-Paradigm）&#34; class=&#34;headerlink&#34; title=&#34;容器化开发范式 （Development Paradigm）&#34;&gt;&lt;/a&gt;容器化开发范式 （Development Paradigm）&lt;/h2&gt;&lt;p&gt;迁移至 Sail 环境后，开发者的核心工作流将发生本质变化：&lt;strong&gt;从调用本机二进制文件转向调用容器内运行时&lt;/strong&gt;。&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;容器化开发范式&#34;&gt;&lt;a href=&#34;#容器化开发范式&#34; class=&#34;headerlink&#34; title=&#34;容器化开发范式&#34;&gt;&lt;/a&gt;容器化开发范式&lt;/h2&gt;&lt;p&gt;迁移至 Sail 环境后，开发者的核心工作流将发生本质变化：&lt;strong&gt;从调用本机二进制文件转向调用容器内运行时&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;Sail 本质上封装了 &lt;code&gt;docker-compose exec&lt;/code&gt; 指令。所有开发命令均应通过 &lt;code&gt;sail&lt;/code&gt; 代理执行，以确保运行环境与生产环境（容器镜像）的高度一致性。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;映射关系示例&lt;/strong&gt;：&lt;/p&gt;
 &lt;table&gt;
@@ -145,7 +145,7 @@
 &lt;h2 id=&#34;1-后端工作流：Artisan-Composer&#34;&gt;&lt;a href=&#34;#1-后端工作流：Artisan-Composer&#34; class=&#34;headerlink&#34; title=&#34;1. 后端工作流：Artisan &amp;amp; Composer&#34;&gt;&lt;/a&gt;1. 后端工作流：Artisan &amp;amp; Composer&lt;/h2&gt;&lt;h3 id=&#34;1-1-Artisan-CLI&#34;&gt;&lt;a href=&#34;#1-1-Artisan-CLI&#34; class=&#34;headerlink&#34; title=&#34;1.1 Artisan CLI&#34;&gt;&lt;/a&gt;1.1 Artisan CLI&lt;/h3&gt;&lt;p&gt;在容器内执行 Artisan 命令，无需在宿主机配置 PHP 环境。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成资源 （Controller, Model, etc.）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:model Order -m&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行数据库迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 开启队列监听&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan queue:work&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;h3 id=&#34;1-2-依赖管理-（Composer）&#34;&gt;&lt;a href=&#34;#1-2-依赖管理-（Composer）&#34; class=&#34;headerlink&#34; title=&#34;1.2 依赖管理 （Composer）&#34;&gt;&lt;/a&gt;1.2 依赖管理 （Composer）&lt;/h3&gt;&lt;p&gt;使用 Sail 管理依赖可解决 PHP 版本不匹配问题（例如宿主机 PHP 8.0 而项目需 PHP 8.2）。&lt;/p&gt;
+&lt;h3 id=&#34;1-2-依赖管理&#34;&gt;&lt;a href=&#34;#1-2-依赖管理&#34; class=&#34;headerlink&#34; title=&#34;1.2 依赖管理&#34;&gt;&lt;/a&gt;1.2 依赖管理&lt;/h3&gt;&lt;p&gt;使用 Sail 管理依赖可解决 PHP 版本不匹配问题（例如宿主机 PHP 8.0 而项目需 PHP 8.2）。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装生产依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require guzzlehttp/guzzle&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装开发依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/pint --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload -o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;hr&gt;

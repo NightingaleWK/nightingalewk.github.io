@@ -7,75 +7,75 @@
         <language>zh-CN</language>
         <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
         <lastBuildDate>Tue, 27 Jan 2026 10:00:00 +0800</lastBuildDate>
-        <category>hexo</category>
-        <category>主食</category>
-        <category>电脑维修</category>
         <category>迁移</category>
+        <category>电脑维修</category>
+        <category>hexo</category>
         <category>pr</category>
         <category>bilibili</category>
+        <category>主食</category>
         <category>学习笔记</category>
-        <category>热菜</category>
         <category>汤</category>
+        <category>热菜</category>
         <category>梦境</category>
-        <category>海鲜</category>
         <category>甜品</category>
+        <category>海鲜</category>
         <category>homestead</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>oneinstack</category>
         <category>lnmp</category>
+        <category>代码部署</category>
         <category>dcat admin</category>
-        <category>代码更新</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
-        <category>道歉信</category>
         <category>免密</category>
-        <category>fileinfo</category>
+        <category>道歉信</category>
         <category>vs code</category>
+        <category>laravel sail</category>
+        <category>fileinfo</category>
         <category>PAC 清单</category>
+        <category>定时任务</category>
+        <category>gpg</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>定时任务</category>
-        <category>laravel sail</category>
-        <category>gpg</category>
         <category>net time</category>
-        <category>swap</category>
         <category>端口查询</category>
+        <category>swap</category>
         <category>表单验证</category>
         <category>事件</category>
         <category>blade</category>
         <category>wordpress</category>
+        <category>特色小吃</category>
         <category>队列</category>
         <category>redis</category>
-        <category>特色小吃</category>
         <category>粥</category>
         <category>artisan 指令</category>
         <category>Cloudreve</category>
-        <category>故障排除</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>linux</category>
+        <category>故障排除</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
         <category>prompt</category>
-        <category>Git</category>
-        <category>GitHub</category>
-        <category>教程</category>
-        <category>版本控制</category>
         <category>打印机</category>
         <category>京瓷</category>
-        <category>Monorepo</category>
-        <category>DevOps</category>
+        <category>教程</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
         <category>国产化</category>
         <category>信创</category>
         <category>TongHttpServer</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
@@ -94,10 +94,10 @@
         <category>HTTPS</category>
         <category>问题排查</category>
         <category>Sail</category>
+        <category>Troubleshooting</category>
         <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
-        <category>Troubleshooting</category>
         <category>Hardware</category>
         <category>Tooling</category>
         <item>
@@ -109,10 +109,10 @@
             <category>Hardware</category>
             <category>Tooling</category>
             <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;硬件选型参考-（Hardware-Reference）&#34;&gt;&lt;a href=&#34;#硬件选型参考-（Hardware-Reference）&#34; class=&#34;headerlink&#34; title=&#34;硬件选型参考 （Hardware Reference）&#34;&gt;&lt;/a&gt;硬件选型参考 （Hardware Reference）&lt;/h2&gt;&lt;p&gt;硬件部分是我自己正在使用的配置，可供参考。&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;硬件选型参考&#34;&gt;&lt;a href=&#34;#硬件选型参考&#34; class=&#34;headerlink&#34; title=&#34;硬件选型参考&#34;&gt;&lt;/a&gt;硬件选型参考&lt;/h2&gt;&lt;p&gt;硬件部分是我自己正在使用的配置，可供参考。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Laravel Sail&lt;/strong&gt; 基于 Docker 容器化架构，其对硬件资源（特别是内存与 I&amp;#x2F;O）的需求显著高于传统集成环境。以下基于实际生产场景，提供不同层级的配置基准供选购参考。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-生产力工作站-（Workstation）&#34;&gt;&lt;a href=&#34;#1-生产力工作站-（Workstation）&#34; class=&#34;headerlink&#34; title=&#34;1. 生产力工作站 （Workstation）&#34;&gt;&lt;/a&gt;1. 生产力工作站 （Workstation）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：重度开发、微服务架构、本地 LLM 运行、多项目并行。&lt;/p&gt;
+&lt;h2 id=&#34;1-生产力工作站&#34;&gt;&lt;a href=&#34;#1-生产力工作站&#34; class=&#34;headerlink&#34; title=&#34;1. 生产力工作站&#34;&gt;&lt;/a&gt;1. 生产力工作站&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：重度开发、微服务架构、本地 LLM 运行、多项目并行。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Xeon &amp;#x2F; Core i9 &amp;#x2F; AMD Ryzen 9 （多核性能优先）&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 32GB ECC&amp;#x2F;Non-ECC&lt;/li&gt;
@@ -121,7 +121,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;32GB 内存是 Docker 下流畅运行复杂栈（如 PHP + MySQL + Redis + Meilisearch + Selenium）的&lt;strong&gt;推荐配置&lt;/strong&gt;。充裕的内存允许 WSL2 保持较大的 Page Cache，显著减少磁盘 Swap 交换，提升容器冷启动速度。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-主流开发配置-（Standard-Desktop）&#34;&gt;&lt;a href=&#34;#2-主流开发配置-（Standard-Desktop）&#34; class=&#34;headerlink&#34; title=&#34;2. 主流开发配置 （Standard Desktop）&#34;&gt;&lt;/a&gt;2. 主流开发配置 （Standard Desktop）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：标准全栈开发、常规 Laravel 项目。&lt;/p&gt;
+&lt;h2 id=&#34;2-主流开发配置&#34;&gt;&lt;a href=&#34;#2-主流开发配置&#34; class=&#34;headerlink&#34; title=&#34;2. 主流开发配置&#34;&gt;&lt;/a&gt;2. 主流开发配置&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：标准全栈开发、常规 Laravel 项目。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;CPU&lt;/strong&gt;: Intel Core i7 &amp;#x2F; AMD Ryzen 7&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;RAM&lt;/strong&gt;: 16GB DDR4&amp;#x2F;DDR5&lt;/li&gt;
@@ -129,7 +129,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;技术分析&lt;/strong&gt;：&lt;br&gt;16GB 内存是运行 Docker 开发环境的&lt;strong&gt;基准要求&lt;/strong&gt;。在并发运行 1-2 个 Sail 项目时表现良好。建议在 &lt;code&gt;.wslconfig&lt;/code&gt; 中限制 WSL2 最大内存占用（如 &lt;code&gt;memory=8GB&lt;/code&gt;），以避免宿主机系统卡顿。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-便携移动端-（Portable）&#34;&gt;&lt;a href=&#34;#3-便携移动端-（Portable）&#34; class=&#34;headerlink&#34; title=&#34;3. 便携移动端 （Portable）&#34;&gt;&lt;/a&gt;3. 便携移动端 （Portable）&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：临时维护、远程办公、轻量级编码。&lt;/p&gt;
+&lt;h2 id=&#34;3-便携移动端&#34;&gt;&lt;a href=&#34;#3-便携移动端&#34; class=&#34;headerlink&#34; title=&#34;3. 便携移动端&#34;&gt;&lt;/a&gt;3. 便携移动端&lt;/h2&gt;&lt;p&gt;&lt;em&gt;适用场景&lt;/em&gt;：临时维护、远程办公、轻量级编码。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Device&lt;/strong&gt;: Surface Pro &amp;#x2F; MacBook Air &amp;#x2F; XPS 13&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Spec&lt;/strong&gt;: Core i5&amp;#x2F;i7 （Low Voltage） + 16GB RAM + SSD&lt;/li&gt;
@@ -161,7 +161,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-全栈工具链-（Software-Toolchain）&#34;&gt;&lt;a href=&#34;#4-全栈工具链-（Software-Toolchain）&#34; class=&#34;headerlink&#34; title=&#34;4. 全栈工具链 （Software Toolchain）&#34;&gt;&lt;/a&gt;4. 全栈工具链 （Software Toolchain）&lt;/h2&gt;&lt;p&gt;高效的开发离不开标准化的工具栈。以下是推荐的现代化 PHP 全栈开发方案。&lt;/p&gt;
+&lt;h2 id=&#34;4-全栈工具链&#34;&gt;&lt;a href=&#34;#4-全栈工具链&#34; class=&#34;headerlink&#34; title=&#34;4. 全栈工具链&#34;&gt;&lt;/a&gt;4. 全栈工具链&lt;/h2&gt;&lt;p&gt;高效的开发离不开标准化的工具栈。以下是推荐的现代化 PHP 全栈开发方案。&lt;/p&gt;
 &lt;h3 id=&#34;核心开发环境&#34;&gt;&lt;a href=&#34;#核心开发环境&#34; class=&#34;headerlink&#34; title=&#34;核心开发环境&#34;&gt;&lt;/a&gt;核心开发环境&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;IDE&lt;/strong&gt;: &lt;strong&gt;Antigravity&lt;/strong&gt; （配合 &lt;strong&gt;Gemini Advanced&lt;/strong&gt;）&lt;ul&gt;
 &lt;li&gt;&lt;em&gt;定位&lt;/em&gt;：AI-Native 集成开发环境。利用大模型上下文理解能力实现代码生成与重构。&lt;/li&gt;
@@ -298,7 +298,7 @@
             <category>Artisan</category>
             <category>Composer</category>
             <pubDate>Sun, 25 Jan 2026 10:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h2 id=&#34;容器化开发范式-（Development-Paradigm）&#34;&gt;&lt;a href=&#34;#容器化开发范式-（Development-Paradigm）&#34; class=&#34;headerlink&#34; title=&#34;容器化开发范式 （Development Paradigm）&#34;&gt;&lt;/a&gt;容器化开发范式 （Development Paradigm）&lt;/h2&gt;&lt;p&gt;迁移至 Sail 环境后，开发者的核心工作流将发生本质变化：&lt;strong&gt;从调用本机二进制文件转向调用容器内运行时&lt;/strong&gt;。&lt;/p&gt;
+            <description><![CDATA[ &lt;h2 id=&#34;容器化开发范式&#34;&gt;&lt;a href=&#34;#容器化开发范式&#34; class=&#34;headerlink&#34; title=&#34;容器化开发范式&#34;&gt;&lt;/a&gt;容器化开发范式&lt;/h2&gt;&lt;p&gt;迁移至 Sail 环境后，开发者的核心工作流将发生本质变化：&lt;strong&gt;从调用本机二进制文件转向调用容器内运行时&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;Sail 本质上封装了 &lt;code&gt;docker-compose exec&lt;/code&gt; 指令。所有开发命令均应通过 &lt;code&gt;sail&lt;/code&gt; 代理执行，以确保运行环境与生产环境（容器镜像）的高度一致性。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;映射关系示例&lt;/strong&gt;：&lt;/p&gt;
 &lt;table&gt;
@@ -334,7 +334,7 @@
 &lt;h2 id=&#34;1-后端工作流：Artisan-Composer&#34;&gt;&lt;a href=&#34;#1-后端工作流：Artisan-Composer&#34; class=&#34;headerlink&#34; title=&#34;1. 后端工作流：Artisan &amp;amp; Composer&#34;&gt;&lt;/a&gt;1. 后端工作流：Artisan &amp;amp; Composer&lt;/h2&gt;&lt;h3 id=&#34;1-1-Artisan-CLI&#34;&gt;&lt;a href=&#34;#1-1-Artisan-CLI&#34; class=&#34;headerlink&#34; title=&#34;1.1 Artisan CLI&#34;&gt;&lt;/a&gt;1.1 Artisan CLI&lt;/h3&gt;&lt;p&gt;在容器内执行 Artisan 命令，无需在宿主机配置 PHP 环境。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 生成资源 （Controller, Model, etc.）&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan make:model Order -m&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行数据库迁移&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 开启队列监听&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan queue:work&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;h3 id=&#34;1-2-依赖管理-（Composer）&#34;&gt;&lt;a href=&#34;#1-2-依赖管理-（Composer）&#34; class=&#34;headerlink&#34; title=&#34;1.2 依赖管理 （Composer）&#34;&gt;&lt;/a&gt;1.2 依赖管理 （Composer）&lt;/h3&gt;&lt;p&gt;使用 Sail 管理依赖可解决 PHP 版本不匹配问题（例如宿主机 PHP 8.0 而项目需 PHP 8.2）。&lt;/p&gt;
+&lt;h3 id=&#34;1-2-依赖管理&#34;&gt;&lt;a href=&#34;#1-2-依赖管理&#34; class=&#34;headerlink&#34; title=&#34;1.2 依赖管理&#34;&gt;&lt;/a&gt;1.2 依赖管理&lt;/h3&gt;&lt;p&gt;使用 Sail 管理依赖可解决 PHP 版本不匹配问题（例如宿主机 PHP 8.0 而项目需 PHP 8.2）。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装生产依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require guzzlehttp/guzzle&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 安装开发依赖&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer require laravel/pint --dev&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 执行自动加载优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail composer dump-autoload -o&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;hr&gt;
@@ -374,14 +374,14 @@
             <description><![CDATA[ &lt;h2 id=&#34;协同工作流概述&#34;&gt;&lt;a href=&#34;#协同工作流概述&#34; class=&#34;headerlink&#34; title=&#34;协同工作流概述&#34;&gt;&lt;/a&gt;协同工作流概述&lt;/h2&gt;&lt;p&gt;在多设备（如公司工作站与家用 PC）间同步 Laravel Sail 项目时，核心挑战在于&lt;strong&gt;依赖的引导与恢复&lt;/strong&gt;。&lt;br&gt;由于 &lt;code&gt;sail&lt;/code&gt; 命令行脚本位于 &lt;code&gt;/vendor/bin&lt;/code&gt; 目录下，而 &lt;code&gt;/vendor&lt;/code&gt; 目录通常被 Git 忽略。这导致在新设备拉取代码后，因缺少 &lt;code&gt;vendor&lt;/code&gt; 目录而无法直接调用 &lt;code&gt;sail&lt;/code&gt; 命令启动环境，进而无法安装依赖——这是一个典型的死锁问题。&lt;/p&gt;
 &lt;p&gt;本文将介绍标准化的多机协同方案，通过 Docker 临时容器完成依赖的 &lt;strong&gt;初始化引导 （Bootstrapping）&lt;/strong&gt;。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-源代码提交-（Source-Control）&#34;&gt;&lt;a href=&#34;#1-源代码提交-（Source-Control）&#34; class=&#34;headerlink&#34; title=&#34;1. 源代码提交 （Source Control）&#34;&gt;&lt;/a&gt;1. 源代码提交 （Source Control）&lt;/h2&gt;&lt;p&gt;在首台设备（如初始化项目的机器）上，需确保 Git 忽略规则符合标准。Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已包含 &lt;code&gt;/vendor&lt;/code&gt; 与 &lt;code&gt;.env&lt;/code&gt;，请遵循此规范，&lt;strong&gt;切勿&lt;/strong&gt;将依赖包或敏感配置提交至版本控制系统。&lt;/p&gt;
+&lt;h2 id=&#34;1-源代码提交&#34;&gt;&lt;a href=&#34;#1-源代码提交&#34; class=&#34;headerlink&#34; title=&#34;1. 源代码提交&#34;&gt;&lt;/a&gt;1. 源代码提交&lt;/h2&gt;&lt;p&gt;在首台设备（如初始化项目的机器）上，需确保 Git 忽略规则符合标准。Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已包含 &lt;code&gt;/vendor&lt;/code&gt; 与 &lt;code&gt;.env&lt;/code&gt;，请遵循此规范，&lt;strong&gt;切勿&lt;/strong&gt;将依赖包或敏感配置提交至版本控制系统。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 标准 Git 初始化流程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: project init&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin &amp;lt;repository_url&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;hr&gt;
 &lt;h2 id=&#34;2-新环境拉取与依赖引导&#34;&gt;&lt;a href=&#34;#2-新环境拉取与依赖引导&#34; class=&#34;headerlink&#34; title=&#34;2. 新环境拉取与依赖引导&#34;&gt;&lt;/a&gt;2. 新环境拉取与依赖引导&lt;/h2&gt;&lt;p&gt;在第二台设备上，确保已部署好 WSL2 与 Docker Desktop 环境。&lt;/p&gt;
 &lt;h3 id=&#34;2-1-克隆代码&#34;&gt;&lt;a href=&#34;#2-1-克隆代码&#34; class=&#34;headerlink&#34; title=&#34;2.1 克隆代码&#34;&gt;&lt;/a&gt;2.1 克隆代码&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;mkdir&lt;/span&gt; -p ~/code &amp;amp;&amp;amp; &lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; ~/code&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git &lt;span class=&#34;built_in&#34;&gt;clone&lt;/span&gt; &amp;lt;repository_url&amp;gt; project-name&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;cd&lt;/span&gt; project-name&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;h3 id=&#34;2-2-依赖引导-（Dependency-Bootstrapping）&#34;&gt;&lt;a href=&#34;#2-2-依赖引导-（Dependency-Bootstrapping）&#34; class=&#34;headerlink&#34; title=&#34;2.2 依赖引导 （Dependency Bootstrapping）&#34;&gt;&lt;/a&gt;2.2 依赖引导 （Dependency Bootstrapping）&lt;/h3&gt;&lt;p&gt;此时无法直接运行 &lt;code&gt;sail up&lt;/code&gt;。我们需要通过 Docker 运行一个一次性的 PHP 容器来执行 &lt;code&gt;composer install&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;2-2-依赖引导&#34;&gt;&lt;a href=&#34;#2-2-依赖引导&#34; class=&#34;headerlink&#34; title=&#34;2.2 依赖引导&#34;&gt;&lt;/a&gt;2.2 依赖引导&lt;/h3&gt;&lt;p&gt;此时无法直接运行 &lt;code&gt;sail up&lt;/code&gt;。我们需要通过 Docker 运行一个一次性的 PHP 容器来执行 &lt;code&gt;composer install&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;执行以下指令（Laravel 官方推荐方案）：&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -u &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(id -u)&lt;/span&gt;:&lt;span class=&#34;subst&#34;&gt;$(id -g)&lt;/span&gt;&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v &lt;span class=&#34;string&#34;&gt;&amp;quot;&lt;span class=&#34;subst&#34;&gt;$(pwd)&lt;/span&gt;:/var/www/html&amp;quot;&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -w /var/www/html \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    laravelsail/php82-composer:latest \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    composer install --ignore-platform-reqs&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
@@ -508,7 +508,7 @@
 &lt;p&gt;它本质上是对 docker-compose 的封装。开发者无需手动执行复杂的 Docker 指令，只需通过简单的 &lt;code&gt;sail&lt;/code&gt; 命令即可管理包含 PHP, MySQL, Redis 等服务的完整技术栈。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;为什么选择-Sail？&#34;&gt;&lt;a href=&#34;#为什么选择-Sail？&#34; class=&#34;headerlink&#34; title=&#34;为什么选择 Sail？&#34;&gt;&lt;/a&gt;为什么选择 Sail？&lt;/h2&gt;&lt;p&gt;在众多方案中推荐 Sail，主要基于以下技术考量：&lt;/p&gt;
-&lt;h3 id=&#34;1-彻底的环境隔离（Isolation）&#34;&gt;&lt;a href=&#34;#1-彻底的环境隔离（Isolation）&#34; class=&#34;headerlink&#34; title=&#34;1. 彻底的环境隔离（Isolation）&#34;&gt;&lt;/a&gt;1. 彻底的环境隔离（Isolation）&lt;/h3&gt;&lt;p&gt;这是现代化开发环境的核心诉求。&lt;br&gt;在 Sail 架构下，&lt;strong&gt;宿主机（Host OS）无需安装 PHP、Composer、Node.js 或 MySQL&lt;/strong&gt;。所有运行时均托管于 Docker 容器内。&lt;/p&gt;
+&lt;h3 id=&#34;1-彻底的环境隔离&#34;&gt;&lt;a href=&#34;#1-彻底的环境隔离&#34; class=&#34;headerlink&#34; title=&#34;1. 彻底的环境隔离&#34;&gt;&lt;/a&gt;1. 彻底的环境隔离&lt;/h3&gt;&lt;p&gt;这是现代化开发环境的核心诉求。&lt;br&gt;在 Sail 架构下，&lt;strong&gt;宿主机（Host OS）无需安装 PHP、Composer、Node.js 或 MySQL&lt;/strong&gt;。所有运行时均托管于 Docker 容器内。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;多版本并行&lt;/strong&gt;：可同时运行基于不同 PHP 版本的项目，容器间网络与文件系统互不干扰。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;零污染&lt;/strong&gt;：开发服务不占用本地系统服务资源，容器停止后，宿主机保持纯净。&lt;/li&gt;
@@ -873,8 +873,8 @@
             <title>如何合并两个独立的 Git 仓库（Monorepo 实践）</title>
             <link>https://nightingalewk.cn/2025/06/26/75.%20%E5%A6%82%E4%BD%95%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%20Git%20%E4%BB%93%E5%BA%93%EF%BC%88Monorepo%20%E5%AE%9E%E8%B7%B5%EF%BC%89/</link>
             <category>Git</category>
-            <category>Monorepo</category>
             <category>DevOps</category>
+            <category>Monorepo</category>
             <pubDate>Thu, 26 Jun 2025 10:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -914,9 +914,9 @@
             <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</guid>
             <title>如何将 Git 仓库的默认分支从 master 修改为 main</title>
             <link>https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</link>
+            <category>教程</category>
             <category>Git</category>
             <category>GitHub</category>
-            <category>教程</category>
             <category>版本控制</category>
             <pubDate>Thu, 26 Jun 2025 09:15:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;随着技术社区对包容性语言的倡导，将 Git 仓库的默认分支从 &lt;code&gt;master&lt;/code&gt; 修改为 &lt;code&gt;main&lt;/code&gt; 已成为一种普遍的推荐做法。本文将提供一个详细、安全的操作指南，帮助你顺利完成这一迁移。&lt;/p&gt;
@@ -972,9 +972,9 @@ git remote prune origin
             <guid isPermalink="true">https://nightingalewk.cn/2025/05/06/73.%20%E4%BA%AC%E7%93%B7%E6%89%93%E5%8D%B0%E6%9C%BA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E5%88%B0%E7%94%B5%E8%84%91%E6%95%99%E7%A8%8B/</guid>
             <title>京瓷打印机文件发送到电脑教程</title>
             <link>https://nightingalewk.cn/2025/05/06/73.%20%E4%BA%AC%E7%93%B7%E6%89%93%E5%8D%B0%E6%9C%BA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E5%88%B0%E7%94%B5%E8%84%91%E6%95%99%E7%A8%8B/</link>
-            <category>教程</category>
             <category>打印机</category>
             <category>京瓷</category>
+            <category>教程</category>
             <pubDate>Tue, 06 May 2025 16:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文将详细介绍如何通过京瓷打印机将扫描的文件发送到电脑，包括设置地址簿、添加用户、配置文件夹共享以及测试连接等步骤。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
