@@ -14,35 +14,35 @@
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
+        <category>甜品</category>
         <category>热菜</category>
         <category>汤</category>
         <category>梦境</category>
-        <category>甜品</category>
         <category>海鲜</category>
-        <category>homestead</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码更新</category>
-        <category>dcat admin</category>
+        <category>homestead</category>
         <category>oh-my-zsh</category>
+        <category>dcat admin</category>
+        <category>代码部署</category>
         <category>debug</category>
         <category>指令</category>
-        <category>道歉信</category>
         <category>免密</category>
-        <category>vs code</category>
         <category>fileinfo</category>
-        <category>laravel sail</category>
+        <category>道歉信</category>
         <category>定时任务</category>
         <category>PAC 清单</category>
+        <category>vs code</category>
+        <category>laravel sail</category>
         <category>gpg</category>
+        <category>swap</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>net time</category>
         <category>端口查询</category>
-        <category>swap</category>
-        <category>事件</category>
         <category>表单验证</category>
+        <category>net time</category>
+        <category>事件</category>
         <category>wordpress</category>
         <category>blade</category>
         <category>队列</category>
@@ -50,17 +50,17 @@
         <category>特色小吃</category>
         <category>粥</category>
         <category>Cloudreve</category>
+        <category>故障排除</category>
         <category>artisan 指令</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>故障排除</category>
-        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
@@ -94,9 +94,9 @@
         <category>Prompt</category>
         <category>gemini</category>
         <category>Sail</category>
+        <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
-        <category>WSL2</category>
         <category>Troubleshooting</category>
         <category>Hardware</category>
         <category>Tooling</category>
@@ -110,7 +110,7 @@
             <category>Sail</category>
             <pubDate>Sat, 24 Jan 2026 10:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;协同工作流概述&#34;&gt;&lt;a href=&#34;#协同工作流概述&#34; class=&#34;headerlink&#34; title=&#34;协同工作流概述&#34;&gt;&lt;/a&gt;协同工作流概述&lt;/h2&gt;&lt;p&gt;在多设备（如公司工作站与家用 PC）间同步 Laravel Sail 项目时，核心挑战在于&lt;strong&gt;依赖的引导与恢复&lt;/strong&gt;。&lt;br&gt;由于 &lt;code&gt;sail&lt;/code&gt; 命令行脚本位于 &lt;code&gt;/vendor/bin&lt;/code&gt; 目录下，而 &lt;code&gt;/vendor&lt;/code&gt; 目录通常被 Git 忽略。这导致在新设备拉取代码后，因缺少 &lt;code&gt;vendor&lt;/code&gt; 目录而无法直接调用 &lt;code&gt;sail&lt;/code&gt; 命令启动环境，进而无法安装依赖——这是一个典型的死锁问题。&lt;/p&gt;
-&lt;p&gt;本文将介绍标准化的多机协同方案，通过 Docker 临时容器完成依赖的&lt;strong&gt;初始化引导 （Bootstrapping）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;本文将介绍标准化的多机协同方案，通过 Docker 临时容器完成依赖的 &lt;strong&gt;初始化引导 （Bootstrapping）&lt;/strong&gt;。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;1-源代码提交-（Source-Control）&#34;&gt;&lt;a href=&#34;#1-源代码提交-（Source-Control）&#34; class=&#34;headerlink&#34; title=&#34;1. 源代码提交 （Source Control）&#34;&gt;&lt;/a&gt;1. 源代码提交 （Source Control）&lt;/h2&gt;&lt;p&gt;在首台设备（如初始化项目的机器）上，需确保 Git 忽略规则符合标准。Laravel 默认的 &lt;code&gt;.gitignore&lt;/code&gt; 已包含 &lt;code&gt;/vendor&lt;/code&gt; 与 &lt;code&gt;.env&lt;/code&gt;，请遵循此规范，&lt;strong&gt;切勿&lt;/strong&gt;将依赖包或敏感配置提交至版本控制系统。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 标准 Git 初始化流程&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git checkout -b main&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git add .&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git commit -m &lt;span class=&#34;string&#34;&gt;&amp;quot;feat: project init&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git remote add origin &amp;lt;repository_url&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git push -u origin main&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;

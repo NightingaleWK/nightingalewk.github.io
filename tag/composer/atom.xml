@@ -11,35 +11,35 @@
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
+    <category term="甜品" />
     <category term="热菜" />
     <category term="汤" />
     <category term="梦境" />
-    <category term="甜品" />
     <category term="海鲜" />
-    <category term="homestead" />
-    <category term="代码部署" />
+    <category term="代码更新" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="代码更新" />
-    <category term="dcat admin" />
+    <category term="homestead" />
     <category term="oh-my-zsh" />
+    <category term="dcat admin" />
+    <category term="代码部署" />
     <category term="debug" />
     <category term="指令" />
-    <category term="道歉信" />
     <category term="免密" />
-    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="laravel sail" />
+    <category term="道歉信" />
     <category term="定时任务" />
     <category term="PAC 清单" />
+    <category term="vs code" />
+    <category term="laravel sail" />
     <category term="gpg" />
+    <category term="swap" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="net time" />
     <category term="端口查询" />
-    <category term="swap" />
-    <category term="事件" />
     <category term="表单验证" />
+    <category term="net time" />
+    <category term="事件" />
     <category term="wordpress" />
     <category term="blade" />
     <category term="队列" />
@@ -47,17 +47,17 @@
     <category term="特色小吃" />
     <category term="粥" />
     <category term="Cloudreve" />
+    <category term="故障排除" />
     <category term="artisan 指令" />
     <category term="Font Awesome" />
     <category term="vite" />
-    <category term="故障排除" />
-    <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
     <category term="膝盖中箭之地" />
     <category term="领域" />
     <category term="realms" />
     <category term="公告" />
+    <category term="linux" />
     <category term="screen" />
     <category term="cursor" />
     <category term="人工智能" />
@@ -91,9 +91,9 @@
     <category term="Prompt" />
     <category term="gemini" />
     <category term="Sail" />
+    <category term="WSL2" />
     <category term="Artisan" />
     <category term="Composer" />
-    <category term="WSL2" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
@@ -161,7 +161,7 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail share&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;执行后将获得一个 &lt;code&gt;http://&amp;lt;random&amp;gt;.sharedwithexpose.com&lt;/code&gt; 的公网链接。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;Sail 构建了一套完整的&lt;strong&gt;容器化工具链 （Containerized Toolchain）&lt;/strong&gt;。通过简单的 CLI 封装，它屏蔽了 Docker 底层的复杂性，同时保留了容器化开发的所有优势：隔离、一致、可移植。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;Sail 构建了一套完整的 &lt;strong&gt;容器化工具链 （Containerized Toolchain）&lt;/strong&gt;。通过简单的 CLI 封装，它屏蔽了 Docker 底层的复杂性，同时保留了容器化开发的所有优势：隔离、一致、可移植。&lt;/p&gt;
 &lt;p&gt;在下一章《疑难杂症篇》中，我们将深入解决 Docker 环境下常见的运行时问题（网络、IO、权限）。&lt;/p&gt;
 </content>
         <category term="Laravel" />

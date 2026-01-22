@@ -14,35 +14,35 @@
         <category>pr</category>
         <category>bilibili</category>
         <category>学习笔记</category>
+        <category>甜品</category>
         <category>热菜</category>
         <category>汤</category>
         <category>梦境</category>
-        <category>甜品</category>
         <category>海鲜</category>
-        <category>homestead</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码更新</category>
-        <category>dcat admin</category>
+        <category>homestead</category>
         <category>oh-my-zsh</category>
+        <category>dcat admin</category>
+        <category>代码部署</category>
         <category>debug</category>
         <category>指令</category>
-        <category>道歉信</category>
         <category>免密</category>
-        <category>vs code</category>
         <category>fileinfo</category>
-        <category>laravel sail</category>
+        <category>道歉信</category>
         <category>定时任务</category>
         <category>PAC 清单</category>
+        <category>vs code</category>
+        <category>laravel sail</category>
         <category>gpg</category>
+        <category>swap</category>
         <category>sshppass</category>
         <category>awk</category>
-        <category>net time</category>
         <category>端口查询</category>
-        <category>swap</category>
-        <category>事件</category>
         <category>表单验证</category>
+        <category>net time</category>
+        <category>事件</category>
         <category>wordpress</category>
         <category>blade</category>
         <category>队列</category>
@@ -50,17 +50,17 @@
         <category>特色小吃</category>
         <category>粥</category>
         <category>Cloudreve</category>
+        <category>故障排除</category>
         <category>artisan 指令</category>
         <category>Font Awesome</category>
         <category>vite</category>
-        <category>故障排除</category>
-        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
+        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
@@ -94,9 +94,9 @@
         <category>Prompt</category>
         <category>gemini</category>
         <category>Sail</category>
+        <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
-        <category>WSL2</category>
         <category>Troubleshooting</category>
         <category>Hardware</category>
         <category>Tooling</category>
@@ -169,7 +169,7 @@
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;sail share&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;执行后将获得一个 &lt;code&gt;http://&amp;lt;random&amp;gt;.sharedwithexpose.com&lt;/code&gt; 的公网链接。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;Sail 构建了一套完整的&lt;strong&gt;容器化工具链 （Containerized Toolchain）&lt;/strong&gt;。通过简单的 CLI 封装，它屏蔽了 Docker 底层的复杂性，同时保留了容器化开发的所有优势：隔离、一致、可移植。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;&lt;a href=&#34;#总结&#34; class=&#34;headerlink&#34; title=&#34;总结&#34;&gt;&lt;/a&gt;总结&lt;/h2&gt;&lt;p&gt;Sail 构建了一套完整的 &lt;strong&gt;容器化工具链 （Containerized Toolchain）&lt;/strong&gt;。通过简单的 CLI 封装，它屏蔽了 Docker 底层的复杂性，同时保留了容器化开发的所有优势：隔离、一致、可移植。&lt;/p&gt;
 &lt;p&gt;在下一章《疑难杂症篇》中，我们将深入解决 Docker 环境下常见的运行时问题（网络、IO、权限）。&lt;/p&gt;
  ]]></description>
         </item>
