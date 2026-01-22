@@ -39,7 +39,7 @@
       <link href="/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"/>
       <url>/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<h2 id="故障排查概览"><a href="#故障排查概览" class="headerlink" title="故障排查概览"></a>故障排查概览</h2><p>本文汇总了在 Windows （WSL2） + Docker 环境下运行 Laravel Sail 时可能遇到的高频问题。我们将从网络、资源、权限与性能四个维度进行分析与解决。</p><hr><h2 id="1-网络连接问题-（Network-Connectivity）"><a href="#1-网络连接问题-（Network-Connectivity）" class="headerlink" title="1. 网络连接问题 （Network Connectivity）"></a>1. 网络连接问题 （Network Connectivity）</h2><p>由于 Docker 镜像拉取及 Composer 依赖安装均需访问境外服务器，网络连接稳定性是环境部署的首要前提。</p><p><strong>典型症状</strong>：</p><ul><li><code>curl</code> 安装脚本连接超时 （<code>Connection refused</code>）。</li><li>Docker 镜像拉取速度极慢或卡顿。</li><li>Composer 依赖安装失败。</li></ul><p><strong>解决方案</strong>：<br>建议在宿主机配置能够处理 TUN 流量的代理工具（如 v2rayN 开启 TUN 模式）。</p><ul><li><strong>原理</strong>：TUN 模式在网络层接管所有流量，能够自动代理 WSL2 及 Docker 容器发出的请求，无需单独配置复杂的 HTTP_PROXY 环境变量或 Docker 镜像源。</li></ul><hr><h2 id="2-端口冲突-（Port-Conflicts）"><a href="#2-端口冲突-（Port-Conflicts）" class="headerlink" title="2. 端口冲突 （Port Conflicts）"></a>2. 端口冲突 （Port Conflicts）</h2><p>Docker 容器尝试绑定的宿主机端口已被占用。</p><p><strong>典型症状</strong>：<br><code>sail up</code> 启动失败，报错：</p><blockquote><p><code>Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.</code></p></blockquote><p><strong>根本原因</strong>：<br>Sail 默认绑定端口：</p><ul><li>APP_PORT: 80 （常被 IIS, Apache, 或其他 Web 服务占用）</li><li>MySQL: 3306 （常被本地 MySQL 服务占用）</li></ul><p><strong>解决方案</strong>：<br>修改项目根目录 <code>.env</code> 文件，重映射 Docker 端口：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">APP_PORT</span>=<span class="number">8000</span></span><br><span class="line"><span class="attr">FORWARD_DB_PORT</span>=<span class="number">33060</span></span><br><span class="line"><span class="attr">FORWARD_REDIS_PORT</span>=<span class="number">63790</span></span><br></pre></td></tr></table></figure><p>重启服务生效：<code>sail up -d</code>。</p><hr><h2 id="3-I-O-性能严重下降-（Slow-Performance）"><a href="#3-I-O-性能严重下降-（Slow-Performance）" class="headerlink" title="3. I&#x2F;O 性能严重下降 （Slow Performance）"></a>3. I&#x2F;O 性能严重下降 （Slow Performance）</h2><p><strong>典型症状</strong>：<br>页面加载延迟极高（&gt;2s），文件读写缓慢。</p><p><strong>根本原因</strong>：<br><strong>跨文件系统访问</strong>。若项目代码存放于 Windows 文件系统（如 <code>/mnt/c/Users/...</code>），WSL2 需通过 9P 协议进行跨系统文件读写，性能损耗巨大。</p><p><strong>最佳实践</strong>：<br>务必将项目代码存储于 WSL2 原生文件系统中（如 <code>~/code</code> 或 <code>/var/www</code>）。</p><ul><li><em>错误路径</em>：<code>/mnt/c/Users/code/project</code></li><li><em>正确路径</em>：<code>/home/code/project</code></li></ul><hr><h2 id="4-文件权限问题-（Permission-Denied）"><a href="#4-文件权限问题-（Permission-Denied）" class="headerlink" title="4. 文件权限问题 （Permission Denied）"></a>4. 文件权限问题 （Permission Denied）</h2><p><strong>典型症状</strong>：<br>应用日志无法写入，或缓存文件生成失败。</p><p><strong>根本原因</strong>：<br>如果在 WSL2 中使用 <code>root</code> 用户（或者通过 <code>sudo</code>）执行了生成文件的命令，会导致文件所有者变为 <code>root</code>，而 Sail 容器内的 <code>sail</code> 用户（UID 1000）无权写入。</p><p><strong>解决方案</strong>：</p><ol><li><strong>修复权限</strong>：使用 Sail 提供的辅助命令重置项目目录权限：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail root-shell <span class="built_in">chown</span> -R sail:sail .</span><br></pre></td></tr></table></figure></li><li><strong>预防措施</strong>：始终通过 <code>sail</code> 别名执行命令（如 <code>sail npm install</code>），避免直接使用 <code>sudo</code>。</li></ol><hr><h2 id="5-外部数据库连接"><a href="#5-外部数据库连接" class="headerlink" title="5. 外部数据库连接"></a>5. 外部数据库连接</h2><p>若需使用宿主机的 GUI 工具（如 Navicat, TablePlus）连接容器数据库：</p><ul><li><strong>Host</strong>: <code>localhost</code> （Docker Desktop 会自动将端口转发至宿主机）</li><li><strong>Port</strong>: <code>3306</code> （或 <code>.env</code> 中定义的 <code>FORWARD_DB_PORT</code>）</li><li><strong>User</strong>: <code>sail</code></li><li><strong>Password</strong>: <code>password</code> （或 <code>.env</code> 中定义的 <code>DB_PASSWORD</code>）</li></ul><hr><h2 id="6-磁盘空间回收-（Disk-Space-Reclamation）"><a href="#6-磁盘空间回收-（Disk-Space-Reclamation）" class="headerlink" title="6. 磁盘空间回收 （Disk Space Reclamation）"></a>6. 磁盘空间回收 （Disk Space Reclamation）</h2><p>Docker Desktop 在 Windows 上使用 <code>ext4.vhdx</code> 虚拟磁盘文件存储数据。该文件具有“动态增长，但不自动缩容”的特性，长期使用可能导致占用大量磁盘空间。</p><p><strong>解决方案：Purge Data</strong></p><p>若需释放空间，可使用 Docker Desktop 自带的清理功能（注意：此操作将<strong>即时删除所有</strong>容器、镜像及数据卷）：</p><ol><li>打开 Docker Desktop -&gt; <strong>Troubleshoot</strong> （右上角甲虫图标）。</li><li>选择 <strong>Clean &#x2F; Purge data</strong>。</li><li>勾选 <strong>Disk image</strong> 并点击 Delete。</li></ol><p><strong>重建环境</strong>：<br>清理完成后，只需在 WSL2 项目目录中执行两步即可完全恢复环境：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 重新拉取镜像并启动</span></span><br><span class="line">sail up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重建数据库结构</span></span><br><span class="line">sail artisan migrate:fresh --seed</span><br></pre></td></tr></table></figure><p>这也体现了 <strong>Infrastructure as Code</strong> 的优势：开发环境是可被快速销毁并重建的。</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，<strong>《Laravel Sail 开发环境部署一把过》</strong> 系列的技术内容告一段落。<br>通过标准化、容器化的开发环境，我们消除了环境差异带来的不确定性。希望本系列能协助 Windows 开发者构建高效、稳定的 Laravel 工作流。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="故障排查概览"><a href="#故障排查概览" class="headerlink" title="故障排查概览"></a>故障排查概览</h2><p>本文汇总了在 Windows （WSL2） + Docker 环境下运行 Laravel Sail 时可能遇到的高频问题。我们将从网络、资源、权限与性能四个维度进行分析与解决。</p><hr><h2 id="1-网络连接问题"><a href="#1-网络连接问题" class="headerlink" title="1. 网络连接问题"></a>1. 网络连接问题</h2><p>由于 Docker 镜像拉取及 Composer 依赖安装均需访问境外服务器，网络连接稳定性是环境部署的首要前提。</p><p><strong>典型症状</strong>：</p><ul><li><code>curl</code> 安装脚本连接超时 （<code>Connection refused</code>）。</li><li>Docker 镜像拉取速度极慢或卡顿。</li><li>Composer 依赖安装失败。</li></ul><p><strong>解决方案</strong>：<br>建议在宿主机配置能够处理 TUN 流量的代理工具（如 v2rayN 开启 TUN 模式）。</p><ul><li><strong>原理</strong>：TUN 模式在网络层接管所有流量，能够自动代理 WSL2 及 Docker 容器发出的请求，无需单独配置复杂的 HTTP_PROXY 环境变量或 Docker 镜像源。</li></ul><hr><h2 id="2-端口冲突"><a href="#2-端口冲突" class="headerlink" title="2. 端口冲突"></a>2. 端口冲突</h2><p>Docker 容器尝试绑定的宿主机端口已被占用。</p><p><strong>典型症状</strong>：<br><code>sail up</code> 启动失败，报错：</p><blockquote><p><code>Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.</code></p></blockquote><p><strong>根本原因</strong>：<br>Sail 默认绑定端口：</p><ul><li>APP_PORT: 80 （常被 IIS, Apache, 或其他 Web 服务占用）</li><li>MySQL: 3306 （常被本地 MySQL 服务占用）</li></ul><p><strong>解决方案</strong>：<br>修改项目根目录 <code>.env</code> 文件，重映射 Docker 端口：</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">APP_PORT</span>=<span class="number">8000</span></span><br><span class="line"><span class="attr">FORWARD_DB_PORT</span>=<span class="number">33060</span></span><br><span class="line"><span class="attr">FORWARD_REDIS_PORT</span>=<span class="number">63790</span></span><br></pre></td></tr></table></figure><p>重启服务生效：<code>sail up -d</code>。</p><hr><h2 id="3-I-O-性能严重下降"><a href="#3-I-O-性能严重下降" class="headerlink" title="3. I&#x2F;O 性能严重下降"></a>3. I&#x2F;O 性能严重下降</h2><p><strong>典型症状</strong>：<br>页面加载延迟极高（&gt;2s），文件读写缓慢。</p><p><strong>根本原因</strong>：<br><strong>跨文件系统访问</strong>。若项目代码存放于 Windows 文件系统（如 <code>/mnt/c/Users/...</code>），WSL2 需通过 9P 协议进行跨系统文件读写，性能损耗巨大。</p><p><strong>最佳实践</strong>：<br>务必将项目代码存储于 WSL2 原生文件系统中（如 <code>~/code</code> 或 <code>/var/www</code>）。</p><ul><li><em>错误路径</em>：<code>/mnt/c/Users/code/project</code></li><li><em>正确路径</em>：<code>/home/code/project</code></li></ul><hr><h2 id="4-文件权限问题"><a href="#4-文件权限问题" class="headerlink" title="4. 文件权限问题"></a>4. 文件权限问题</h2><p><strong>典型症状</strong>：<br>应用日志无法写入，或缓存文件生成失败。</p><p><strong>根本原因</strong>：<br>如果在 WSL2 中使用 <code>root</code> 用户（或者通过 <code>sudo</code>）执行了生成文件的命令，会导致文件所有者变为 <code>root</code>，而 Sail 容器内的 <code>sail</code> 用户（UID 1000）无权写入。</p><p><strong>解决方案</strong>：</p><ol><li><strong>修复权限</strong>：使用 Sail 提供的辅助命令重置项目目录权限：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sail root-shell <span class="built_in">chown</span> -R sail:sail .</span><br></pre></td></tr></table></figure></li><li><strong>预防措施</strong>：始终通过 <code>sail</code> 别名执行命令（如 <code>sail npm install</code>），避免直接使用 <code>sudo</code>。</li></ol><hr><h2 id="5-外部数据库连接"><a href="#5-外部数据库连接" class="headerlink" title="5. 外部数据库连接"></a>5. 外部数据库连接</h2><p>若需使用宿主机的 GUI 工具（如 Navicat, TablePlus）连接容器数据库：</p><ul><li><strong>Host</strong>: <code>localhost</code> （Docker Desktop 会自动将端口转发至宿主机）</li><li><strong>Port</strong>: <code>3306</code> （或 <code>.env</code> 中定义的 <code>FORWARD_DB_PORT</code>）</li><li><strong>User</strong>: <code>sail</code></li><li><strong>Password</strong>: <code>password</code> （或 <code>.env</code> 中定义的 <code>DB_PASSWORD</code>）</li></ul><hr><h2 id="6-磁盘空间回收"><a href="#6-磁盘空间回收" class="headerlink" title="6. 磁盘空间回收"></a>6. 磁盘空间回收</h2><p>Docker Desktop 在 Windows 上使用 <code>ext4.vhdx</code> 虚拟磁盘文件存储数据。该文件具有“动态增长，但不自动缩容”的特性，长期使用可能导致占用大量磁盘空间。</p><p><strong>解决方案：Purge Data</strong></p><p>若需释放空间，可使用 Docker Desktop 自带的清理功能（注意：此操作将<strong>即时删除所有</strong>容器、镜像及数据卷）：</p><ol><li>打开 Docker Desktop -&gt; <strong>Troubleshoot</strong> （左下角启停按钮跟前的三个点的列表中）。</li><li>选择 <strong>Clean &#x2F; Purge data</strong>。</li><li>勾选 <strong>Disk image</strong> 并点击 Delete。</li></ol><p><strong>重建环境</strong>：<br>清理完成后，只需在 WSL2 项目目录中执行两步即可完全恢复环境：</p><p>当然，若此过程进展不顺利，您大可放心删除 docker desktop，重新安装即可。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 重新拉取镜像并启动</span></span><br><span class="line">sail up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 重建数据库结构</span></span><br><span class="line">sail artisan migrate:fresh --seed</span><br></pre></td></tr></table></figure><p>这也体现了 <strong>Infrastructure as Code</strong> 的优势：开发环境是可被快速销毁并重建的。</p><hr><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>至此，<strong>《Laravel Sail 开发环境部署一把过》</strong> 系列的技术内容告一段落。<br>通过标准化、容器化的开发环境，我们消除了环境差异带来的不确定性。希望本系列能协助 Windows 开发者构建高效、稳定的 Laravel 工作流。</p>]]></content>
       
       
       <categories>
@@ -390,9 +390,9 @@
             
             <tag> Git </tag>
             
-            <tag> DevOps </tag>
-            
             <tag> Monorepo </tag>
+            
+            <tag> DevOps </tag>
             
         </tags>
       
@@ -1670,31 +1670,6 @@
     
     
     <entry>
-      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
-      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> oh-my-zsh </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo 博客升级流程</title>
       <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
@@ -1712,6 +1687,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
+      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oh-my-zsh </tag>
             
         </tags>
       
@@ -1808,35 +1808,6 @@
     
     
     <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
-      
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 代码更新 </tag>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 项目部署到服务器的流程</title>
       <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
@@ -1853,11 +1824,40 @@
       
         <tags>
             
+            <tag> 代码部署 </tag>
+            
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
             
-            <tag> 代码部署 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
+            <tag> 代码更新 </tag>
             
         </tags>
       
@@ -1916,31 +1916,6 @@
     
     
     <entry>
-      <title>西红柿土豆丁浓汤</title>
-      <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
-      <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
-      
-        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>西红柿</li><li>土豆</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>西红柿和土豆切丁</li><li>起锅烧油，放入西红柿，翻炒至软烂</li><li>倒入土豆继续翻炒数下</li><li>加水没过食材，加入生抽和盐</li><li>大火煮沸，转中小火炖 5 分钟</li><li>出锅前撒入些许鸡精，完成</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 美食 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 汤 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>秘制特色鸡蛋</title>
       <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
       <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
@@ -1958,6 +1933,31 @@
         <tags>
             
             <tag> 热菜 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>西红柿土豆丁浓汤</title>
+      <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
+      <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>西红柿</li><li>土豆</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>西红柿和土豆切丁</li><li>起锅烧油，放入西红柿，翻炒至软烂</li><li>倒入土豆继续翻炒数下</li><li>加水没过食材，加入生抽和盐</li><li>大火煮沸，转中小火炖 5 分钟</li><li>出锅前撒入些许鸡精，完成</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美食 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 汤 </tag>
             
         </tags>
       

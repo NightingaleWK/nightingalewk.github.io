@@ -4,54 +4,54 @@
     <title>雪漫城的风宅 • Posts by &#34;lnmp&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2021-06-08T04:00:00.000Z</updated>
-    <category term="迁移" />
     <category term="hexo" />
     <category term="主食" />
     <category term="电脑维修" />
+    <category term="迁移" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
-    <category term="汤" />
     <category term="热菜" />
-    <category term="甜品" />
-    <category term="海鲜" />
+    <category term="汤" />
     <category term="梦境" />
+    <category term="海鲜" />
+    <category term="甜品" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="oh-my-zsh" />
-    <category term="代码部署" />
     <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="laravel sail" />
-    <category term="PAC 清单" />
-    <category term="定时任务" />
-    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="gpg" />
+    <category term="vs code" />
+    <category term="PAC 清单" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="swap" />
+    <category term="定时任务" />
+    <category term="laravel sail" />
+    <category term="gpg" />
     <category term="net time" />
+    <category term="swap" />
     <category term="端口查询" />
-    <category term="事件" />
-    <category term="wordpress" />
     <category term="表单验证" />
+    <category term="事件" />
     <category term="blade" />
+    <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
-    <category term="Cloudreve" />
     <category term="artisan 指令" />
+    <category term="Cloudreve" />
     <category term="故障排除" />
-    <category term="linux" />
     <category term="Font Awesome" />
     <category term="vite" />
+    <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
     <category term="膝盖中箭之地" />
@@ -66,10 +66,10 @@
     <category term="GitHub" />
     <category term="教程" />
     <category term="版本控制" />
-    <category term="DevOps" />
-    <category term="Monorepo" />
     <category term="打印机" />
     <category term="京瓷" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <category term="国产化" />
     <category term="信创" />
     <category term="TongHttpServer" />
@@ -78,11 +78,6 @@
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
-    <category term="Nginx" />
-    <category term="反向代理" />
-    <category term="NPM" />
-    <category term="HTTPS" />
-    <category term="问题排查" />
     <category term="Ubuntu" />
     <category term="安装指南" />
     <category term="阿里云" />
@@ -90,32 +85,18 @@
     <category term="Rule" />
     <category term="Prompt" />
     <category term="gemini" />
+    <category term="Nginx" />
+    <category term="反向代理" />
+    <category term="NPM" />
+    <category term="HTTPS" />
+    <category term="问题排查" />
     <category term="Sail" />
     <category term="WSL2" />
+    <category term="Artisan" />
+    <category term="Composer" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
-    <category term="Artisan" />
-    <category term="Composer" />
-    <entry>
-        <id>https://nightingalewk.cn/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</id>
-        <title>laravel 项目在服务器上的更新</title>
-        <link rel="alternate" href="https://nightingalewk.cn/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-        <content type="html">&lt;p&gt;代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下&lt;/p&gt;
-&lt;h1 id=&#34;强制覆盖&#34;&gt;&lt;a href=&#34;#强制覆盖&#34; class=&#34;headerlink&#34; title=&#34;强制覆盖&#34;&gt;&lt;/a&gt;强制覆盖&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git fetch --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git reset --hard origin/master &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&#34;修改-config-配置文件&#34;&gt;&lt;a href=&#34;#修改-config-配置文件&#34; class=&#34;headerlink&#34; title=&#34;修改 config 配置文件&#34;&gt;&lt;/a&gt;修改 config 配置文件&lt;/h1&gt;&lt;p&gt;&amp;#x2F;data&amp;#x2F;wwwroot&amp;#x2F;yanji.wkarrow.top&amp;#x2F;config&amp;#x2F;admin.php&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &amp;#x27;https&amp;#x27; =&amp;gt; env(&amp;#x27;ADMIN_HTTPS&amp;#x27;, ture),&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;之后重启 nginx 服务并清理缓存&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//清理各类缓存&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan cache:clear &amp;amp;&amp;amp; php artisan config:clear &amp;amp;&amp;amp; php artisan route:clear &amp;amp;&amp;amp; php artisan view:clear&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&#34;数据库迁移并填充&#34;&gt;&lt;a href=&#34;#数据库迁移并填充&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移并填充&#34;&gt;&lt;/a&gt;数据库迁移并填充&lt;/h1&gt;&lt;p&gt;若有需要可以执行&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate:regresh --seed&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan admin:install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="代码更新" />
-        <category term="oneinstack" />
-        <category term="lnmp" />
-        <updated>2021-06-08T04:00:00.000Z</updated>
-    </entry>
     <entry>
         <id>https://nightingalewk.cn/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</id>
         <title>laravel 项目部署到服务器的流程</title>
@@ -132,9 +113,28 @@
 
 &lt;h1 id=&#34;创建数据库&#34;&gt;&lt;a href=&#34;#创建数据库&#34; class=&#34;headerlink&#34; title=&#34;创建数据库&#34;&gt;&lt;/a&gt;创建数据库&lt;/h1&gt;&lt;p&gt;前往 oneinstack 自带的 phpMyAdmin 新建一个名为“岩脊”数据库&lt;/p&gt;
 &lt;h1 id=&#34;数据库迁移&#34;&gt;&lt;a href=&#34;#数据库迁移&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移&#34;&gt;&lt;/a&gt;数据库迁移&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="代码部署" />
         <category term="oneinstack" />
         <category term="lnmp" />
-        <category term="代码部署" />
+        <updated>2021-06-08T04:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://nightingalewk.cn/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</id>
+        <title>laravel 项目在服务器上的更新</title>
+        <link rel="alternate" href="https://nightingalewk.cn/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+        <content type="html">&lt;p&gt;代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下&lt;/p&gt;
+&lt;h1 id=&#34;强制覆盖&#34;&gt;&lt;a href=&#34;#强制覆盖&#34; class=&#34;headerlink&#34; title=&#34;强制覆盖&#34;&gt;&lt;/a&gt;强制覆盖&lt;/h1&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;git fetch --all&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git reset --hard origin/master &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;git pull&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;修改-config-配置文件&#34;&gt;&lt;a href=&#34;#修改-config-配置文件&#34; class=&#34;headerlink&#34; title=&#34;修改 config 配置文件&#34;&gt;&lt;/a&gt;修改 config 配置文件&lt;/h1&gt;&lt;p&gt;&amp;#x2F;data&amp;#x2F;wwwroot&amp;#x2F;yanji.wkarrow.top&amp;#x2F;config&amp;#x2F;admin.php&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &amp;#x27;https&amp;#x27; =&amp;gt; env(&amp;#x27;ADMIN_HTTPS&amp;#x27;, ture),&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;之后重启 nginx 服务并清理缓存&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;service nginx restart&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;//清理各类缓存&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan cache:clear &amp;amp;&amp;amp; php artisan config:clear &amp;amp;&amp;amp; php artisan route:clear &amp;amp;&amp;amp; php artisan view:clear&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;数据库迁移并填充&#34;&gt;&lt;a href=&#34;#数据库迁移并填充&#34; class=&#34;headerlink&#34; title=&#34;数据库迁移并填充&#34;&gt;&lt;/a&gt;数据库迁移并填充&lt;/h1&gt;&lt;p&gt;若有需要可以执行&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;php artisan migrate:regresh --seed&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;php artisan admin:install&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="oneinstack" />
+        <category term="lnmp" />
+        <category term="代码更新" />
         <updated>2021-06-08T04:00:00.000Z</updated>
     </entry>
 </feed>

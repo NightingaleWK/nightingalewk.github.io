@@ -4,54 +4,54 @@
     <title>雪漫城的风宅 • Posts by &#34;laravel&#34; tag</title>
     <link href="https://nightingalewk.cn" />
     <updated>2026-01-27T02:00:00.000Z</updated>
-    <category term="迁移" />
     <category term="hexo" />
     <category term="主食" />
     <category term="电脑维修" />
+    <category term="迁移" />
     <category term="pr" />
     <category term="bilibili" />
     <category term="学习笔记" />
-    <category term="汤" />
     <category term="热菜" />
-    <category term="甜品" />
-    <category term="海鲜" />
+    <category term="汤" />
     <category term="梦境" />
+    <category term="海鲜" />
+    <category term="甜品" />
     <category term="homestead" />
-    <category term="代码更新" />
+    <category term="代码部署" />
     <category term="oneinstack" />
     <category term="lnmp" />
-    <category term="oh-my-zsh" />
-    <category term="代码部署" />
     <category term="dcat admin" />
+    <category term="代码更新" />
+    <category term="oh-my-zsh" />
     <category term="debug" />
     <category term="指令" />
     <category term="道歉信" />
     <category term="免密" />
-    <category term="laravel sail" />
-    <category term="PAC 清单" />
-    <category term="定时任务" />
-    <category term="vs code" />
     <category term="fileinfo" />
-    <category term="gpg" />
+    <category term="vs code" />
+    <category term="PAC 清单" />
     <category term="sshppass" />
     <category term="awk" />
-    <category term="swap" />
+    <category term="定时任务" />
+    <category term="laravel sail" />
+    <category term="gpg" />
     <category term="net time" />
+    <category term="swap" />
     <category term="端口查询" />
-    <category term="事件" />
-    <category term="wordpress" />
     <category term="表单验证" />
+    <category term="事件" />
     <category term="blade" />
+    <category term="wordpress" />
     <category term="队列" />
     <category term="redis" />
     <category term="特色小吃" />
     <category term="粥" />
-    <category term="Cloudreve" />
     <category term="artisan 指令" />
+    <category term="Cloudreve" />
     <category term="故障排除" />
-    <category term="linux" />
     <category term="Font Awesome" />
     <category term="vite" />
+    <category term="linux" />
     <category term="我的世界" />
     <category term="Minecraft" />
     <category term="膝盖中箭之地" />
@@ -66,10 +66,10 @@
     <category term="GitHub" />
     <category term="教程" />
     <category term="版本控制" />
-    <category term="DevOps" />
-    <category term="Monorepo" />
     <category term="打印机" />
     <category term="京瓷" />
+    <category term="Monorepo" />
+    <category term="DevOps" />
     <category term="国产化" />
     <category term="信创" />
     <category term="TongHttpServer" />
@@ -78,11 +78,6 @@
     <category term="容器化" />
     <category term="部署" />
     <category term="运维" />
-    <category term="Nginx" />
-    <category term="反向代理" />
-    <category term="NPM" />
-    <category term="HTTPS" />
-    <category term="问题排查" />
     <category term="Ubuntu" />
     <category term="安装指南" />
     <category term="阿里云" />
@@ -90,13 +85,18 @@
     <category term="Rule" />
     <category term="Prompt" />
     <category term="gemini" />
+    <category term="Nginx" />
+    <category term="反向代理" />
+    <category term="NPM" />
+    <category term="HTTPS" />
+    <category term="问题排查" />
     <category term="Sail" />
     <category term="WSL2" />
+    <category term="Artisan" />
+    <category term="Composer" />
     <category term="Troubleshooting" />
     <category term="Hardware" />
     <category term="Tooling" />
-    <category term="Artisan" />
-    <category term="Composer" />
     <entry>
         <id>https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</id>
         <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
@@ -216,7 +216,7 @@
         <link rel="alternate" href="https://nightingalewk.cn/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"/>
         <content type="html">&lt;h2 id=&#34;故障排查概览&#34;&gt;&lt;a href=&#34;#故障排查概览&#34; class=&#34;headerlink&#34; title=&#34;故障排查概览&#34;&gt;&lt;/a&gt;故障排查概览&lt;/h2&gt;&lt;p&gt;本文汇总了在 Windows （WSL2） + Docker 环境下运行 Laravel Sail 时可能遇到的高频问题。我们将从网络、资源、权限与性能四个维度进行分析与解决。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;1-网络连接问题-（Network-Connectivity）&#34;&gt;&lt;a href=&#34;#1-网络连接问题-（Network-Connectivity）&#34; class=&#34;headerlink&#34; title=&#34;1. 网络连接问题 （Network Connectivity）&#34;&gt;&lt;/a&gt;1. 网络连接问题 （Network Connectivity）&lt;/h2&gt;&lt;p&gt;由于 Docker 镜像拉取及 Composer 依赖安装均需访问境外服务器，网络连接稳定性是环境部署的首要前提。&lt;/p&gt;
+&lt;h2 id=&#34;1-网络连接问题&#34;&gt;&lt;a href=&#34;#1-网络连接问题&#34; class=&#34;headerlink&#34; title=&#34;1. 网络连接问题&#34;&gt;&lt;/a&gt;1. 网络连接问题&lt;/h2&gt;&lt;p&gt;由于 Docker 镜像拉取及 Composer 依赖安装均需访问境外服务器，网络连接稳定性是环境部署的首要前提。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;curl&lt;/code&gt; 安装脚本连接超时 （&lt;code&gt;Connection refused&lt;/code&gt;）。&lt;/li&gt;
@@ -228,7 +228,7 @@
 &lt;li&gt;&lt;strong&gt;原理&lt;/strong&gt;：TUN 模式在网络层接管所有流量，能够自动代理 WSL2 及 Docker 容器发出的请求，无需单独配置复杂的 HTTP_PROXY 环境变量或 Docker 镜像源。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;2-端口冲突-（Port-Conflicts）&#34;&gt;&lt;a href=&#34;#2-端口冲突-（Port-Conflicts）&#34; class=&#34;headerlink&#34; title=&#34;2. 端口冲突 （Port Conflicts）&#34;&gt;&lt;/a&gt;2. 端口冲突 （Port Conflicts）&lt;/h2&gt;&lt;p&gt;Docker 容器尝试绑定的宿主机端口已被占用。&lt;/p&gt;
+&lt;h2 id=&#34;2-端口冲突&#34;&gt;&lt;a href=&#34;#2-端口冲突&#34; class=&#34;headerlink&#34; title=&#34;2. 端口冲突&#34;&gt;&lt;/a&gt;2. 端口冲突&lt;/h2&gt;&lt;p&gt;Docker 容器尝试绑定的宿主机端口已被占用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;&lt;code&gt;sail up&lt;/code&gt; 启动失败，报错：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;Error response from daemon: Ports are not available: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions.&lt;/code&gt;&lt;/p&gt;
@@ -242,7 +242,7 @@
 &lt;figure class=&#34;highlight ini&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;APP_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;8000&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_DB_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;33060&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;attr&#34;&gt;FORWARD_REDIS_PORT&lt;/span&gt;=&lt;span class=&#34;number&#34;&gt;63790&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;重启服务生效：&lt;code&gt;sail up -d&lt;/code&gt;。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;3-I-O-性能严重下降-（Slow-Performance）&#34;&gt;&lt;a href=&#34;#3-I-O-性能严重下降-（Slow-Performance）&#34; class=&#34;headerlink&#34; title=&#34;3. I&amp;#x2F;O 性能严重下降 （Slow Performance）&#34;&gt;&lt;/a&gt;3. I&amp;#x2F;O 性能严重下降 （Slow Performance）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;页面加载延迟极高（&amp;gt;2s），文件读写缓慢。&lt;/p&gt;
+&lt;h2 id=&#34;3-I-O-性能严重下降&#34;&gt;&lt;a href=&#34;#3-I-O-性能严重下降&#34; class=&#34;headerlink&#34; title=&#34;3. I&amp;#x2F;O 性能严重下降&#34;&gt;&lt;/a&gt;3. I&amp;#x2F;O 性能严重下降&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;页面加载延迟极高（&amp;gt;2s），文件读写缓慢。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;跨文件系统访问&lt;/strong&gt;。若项目代码存放于 Windows 文件系统（如 &lt;code&gt;/mnt/c/Users/...&lt;/code&gt;），WSL2 需通过 9P 协议进行跨系统文件读写，性能损耗巨大。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;最佳实践&lt;/strong&gt;：&lt;br&gt;务必将项目代码存储于 WSL2 原生文件系统中（如 &lt;code&gt;~/code&lt;/code&gt; 或 &lt;code&gt;/var/www&lt;/code&gt;）。&lt;/p&gt;
 &lt;ul&gt;
@@ -250,7 +250,7 @@
 &lt;li&gt;&lt;em&gt;正确路径&lt;/em&gt;：&lt;code&gt;/home/code/project&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;4-文件权限问题-（Permission-Denied）&#34;&gt;&lt;a href=&#34;#4-文件权限问题-（Permission-Denied）&#34; class=&#34;headerlink&#34; title=&#34;4. 文件权限问题 （Permission Denied）&#34;&gt;&lt;/a&gt;4. 文件权限问题 （Permission Denied）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;应用日志无法写入，或缓存文件生成失败。&lt;/p&gt;
+&lt;h2 id=&#34;4-文件权限问题&#34;&gt;&lt;a href=&#34;#4-文件权限问题&#34; class=&#34;headerlink&#34; title=&#34;4. 文件权限问题&#34;&gt;&lt;/a&gt;4. 文件权限问题&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;典型症状&lt;/strong&gt;：&lt;br&gt;应用日志无法写入，或缓存文件生成失败。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;根本原因&lt;/strong&gt;：&lt;br&gt;如果在 WSL2 中使用 &lt;code&gt;root&lt;/code&gt; 用户（或者通过 &lt;code&gt;sudo&lt;/code&gt;）执行了生成文件的命令，会导致文件所有者变为 &lt;code&gt;root&lt;/code&gt;，而 Sail 容器内的 &lt;code&gt;sail&lt;/code&gt; 用户（UID 1000）无权写入。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -266,15 +266,16 @@
 &lt;li&gt;&lt;strong&gt;Password&lt;/strong&gt;: &lt;code&gt;password&lt;/code&gt; （或 &lt;code&gt;.env&lt;/code&gt; 中定义的 &lt;code&gt;DB_PASSWORD&lt;/code&gt;）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;6-磁盘空间回收-（Disk-Space-Reclamation）&#34;&gt;&lt;a href=&#34;#6-磁盘空间回收-（Disk-Space-Reclamation）&#34; class=&#34;headerlink&#34; title=&#34;6. 磁盘空间回收 （Disk Space Reclamation）&#34;&gt;&lt;/a&gt;6. 磁盘空间回收 （Disk Space Reclamation）&lt;/h2&gt;&lt;p&gt;Docker Desktop 在 Windows 上使用 &lt;code&gt;ext4.vhdx&lt;/code&gt; 虚拟磁盘文件存储数据。该文件具有“动态增长，但不自动缩容”的特性，长期使用可能导致占用大量磁盘空间。&lt;/p&gt;
+&lt;h2 id=&#34;6-磁盘空间回收&#34;&gt;&lt;a href=&#34;#6-磁盘空间回收&#34; class=&#34;headerlink&#34; title=&#34;6. 磁盘空间回收&#34;&gt;&lt;/a&gt;6. 磁盘空间回收&lt;/h2&gt;&lt;p&gt;Docker Desktop 在 Windows 上使用 &lt;code&gt;ext4.vhdx&lt;/code&gt; 虚拟磁盘文件存储数据。该文件具有“动态增长，但不自动缩容”的特性，长期使用可能导致占用大量磁盘空间。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决方案：Purge Data&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;若需释放空间，可使用 Docker Desktop 自带的清理功能（注意：此操作将&lt;strong&gt;即时删除所有&lt;/strong&gt;容器、镜像及数据卷）：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;打开 Docker Desktop -&amp;gt; &lt;strong&gt;Troubleshoot&lt;/strong&gt; （右上角甲虫图标）。&lt;/li&gt;
+&lt;li&gt;打开 Docker Desktop -&amp;gt; &lt;strong&gt;Troubleshoot&lt;/strong&gt; （左下角启停按钮跟前的三个点的列表中）。&lt;/li&gt;
 &lt;li&gt;选择 &lt;strong&gt;Clean &amp;#x2F; Purge data&lt;/strong&gt;。&lt;/li&gt;
 &lt;li&gt;勾选 &lt;strong&gt;Disk image&lt;/strong&gt; 并点击 Delete。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;strong&gt;重建环境&lt;/strong&gt;：&lt;br&gt;清理完成后，只需在 WSL2 项目目录中执行两步即可完全恢复环境：&lt;/p&gt;
+&lt;p&gt;当然，若此过程进展不顺利，您大可放心删除 docker desktop，重新安装即可。&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 1. 重新拉取镜像并启动&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail up -d&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 2. 重建数据库结构&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;sail artisan migrate:fresh --seed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;这也体现了 &lt;strong&gt;Infrastructure as Code&lt;/strong&gt; 的优势：开发环境是可被快速销毁并重建的。&lt;/p&gt;
 &lt;hr&gt;
