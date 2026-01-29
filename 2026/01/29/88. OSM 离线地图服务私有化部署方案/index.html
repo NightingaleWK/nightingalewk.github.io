@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+  <!-- so meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/rss.xml%7D" />
+  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
+    href="https://nightingalewk.cn/atom.xml" />
+  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
+  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="description" content="OSM 离线地图服务私有化部署方案：基于 Docker、PostgreSQL + PostGIS、Renderd 的高性能瓦片地图服务部署指南，支持 Filament (Laravel 12) 集成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OSM 离线地图服务私有化部署方案">
+<meta property="og:url" content="https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="OSM 离线地图服务私有化部署方案：基于 Docker、PostgreSQL + PostGIS、Renderd 的高性能瓦片地图服务部署指南，支持 Filament (Laravel 12) 集成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-01-29T10:00:00.000Z">
+<meta property="article:modified_time" content="2026-01-29T09:26:15.004Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="OSM">
+<meta property="article:tag" content="PostGIS">
+<meta property="article:tag" content="Filament">
+<meta name="twitter:card" content="summary">
+    
+      
+        
+          
+                    <link rel="shortcut icon" href="/images/favicon.ico">
+                    
+                      
+                        
+                          
+                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
+                                      sizes="192x192">
+                                    
+                                      
+                                        
+                                          
+                                                    <link rel="apple-touch-icon" sizes="180x180"
+                                                      href="/images/apple-touch-icon.png">
+                                                    
+                                                      
+                                                        
+                                                          <!-- title -->
+                                                          <title>
+                                                            OSM 离线地图服务私有化部署方案
+                                                          </title>
+                                                          <!-- async scripts -->
+                                                          <!-- Google Analytics -->
+
+
+                                                            <!-- Umami Analytics -->
+
+
+                                                              <!-- styles -->
+                                                              
+<link rel="stylesheet" href="/css/style.css">
+
+                                                                <!-- persian styles -->
+                                                                
+                                                                      <!-- rss -->
+                                                                      
+                                                                            
+                                                                              <link rel="alternate"
+                                                                                href="/true"
+                                                                                title="雪漫城的风宅"
+                                                                                type="application/atom+xml" />
+                                                                              
+                                                                                <!-- mathjax -->
+                                                                                
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&text=OSM 离线地图服务私有化部署方案"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&is_video=false&description=OSM 离线地图服务私有化部署方案"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OSM 离线地图服务私有化部署方案&body=Check out this article: https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&name=OSM 离线地图服务私有化部署方案&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&t=OSM 离线地图服务私有化部署方案"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87%E4%B8%8E%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">1. 部署目标与环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%B8%E5%BF%83%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B-Docker"><span class="toc-number">2.</span> <span class="toc-text">2. 核心部署流程 (Docker)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.1.</span> <span class="toc-text">第一步：环境初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%AB%98%E6%80%A7%E8%83%BD%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5-Import"><span class="toc-number">2.2.</span> <span class="toc-text">第二步：高性能数据导入 (Import)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-Run"><span class="toc-number">2.3.</span> <span class="toc-text">第三步：启动服务 (Run)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%8D%E5%8A%A1%E5%8F%AF%E7%94%A8%E6%80%A7%E9%AA%8C%E8%AF%81"><span class="toc-number">3.</span> <span class="toc-text">3. 服务可用性验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-A%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B1%82%E6%A0%B8%E9%AA%8C"><span class="toc-number">3.1.</span> <span class="toc-text">方式 A：数据库层核验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-B%EF%BC%9A%E7%93%A6%E7%89%87%E6%9C%8D%E5%8A%A1%E7%9B%B4%E8%BF%9E"><span class="toc-number">3.2.</span> <span class="toc-text">方式 B：瓦片服务直连</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%89%8D%E7%AB%AF%E9%9B%86%E6%88%90%E6%96%B9%E6%A1%88-Filament-PHP"><span class="toc-number">4.</span> <span class="toc-text">4. 前端集成方案 (Filament PHP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%89%A9%E5%B1%95%E6%96%B9%E6%A1%88%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%BA%E5%9F%9F%E5%88%87%E5%89%B2-%E5%8F%AF%E9%80%89"><span class="toc-number">5.</span> <span class="toc-text">5. 扩展方案：自定义区域切割 (可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BF%90%E7%BB%B4%E5%8F%82%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">6. 运维参数</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        OSM 离线地图服务私有化部署方案
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">NightingaleWK</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-01-29T10:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-29</time>
+        
+        (Updated: <time datetime="2026-01-29T09:26:15.004Z" class="dt-updated" itemprop="dateModified">2026-01-29</time>)
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/GIS/">GIS</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Docker/" rel="tag">Docker</a>, <a class="p-category" href="/tags/Filament/" rel="tag">Filament</a>, <a class="p-category" href="/tags/OSM/" rel="tag">OSM</a>, <a class="p-category" href="/tags/PostGIS/" rel="tag">PostGIS</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="1-部署目标与环境"><a href="#1-部署目标与环境" class="headerlink" title="1. 部署目标与环境"></a>1. 部署目标与环境</h2><ul>
+<li><strong>目标</strong>：构建完全离线、内网可用的 OSM 瓦片地图服务，为 Filament (Laravel 12) 系统提供底层地图支持。</li>
+<li><strong>硬件环境</strong>：Dell Precision 7920 工作站 (Xeon Silver 4210R &#x2F; 32GB 内存 &#x2F; SSD RAID)。</li>
+<li><strong>数据范围</strong>：山东省全量矢量数据 (包含招远市全境)。</li>
+<li><strong>核心技术栈</strong>：Docker, PostgreSQL + PostGIS, Renderd, Apache&#x2F;Mod_tile。</li>
+</ul>
+<hr>
+<h2 id="2-核心部署流程-Docker"><a href="#2-核心部署流程-Docker" class="headerlink" title="2. 核心部署流程 (Docker)"></a>2. 核心部署流程 (Docker)</h2><p>为确保数据索引完整且避免镜像自动下载示例数据（卢森堡问题），采用<strong>全量导入 + 绝对路径挂载</strong>策略。</p>
+<h3 id="第一步：环境初始化"><a href="#第一步：环境初始化" class="headerlink" title="第一步：环境初始化"></a>第一步：环境初始化</h3><p>确保无脏数据残留。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">rm</span> -f osm-server</span><br><span class="line">docker volume <span class="built_in">rm</span> osm-data-volume</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二步：高性能数据导入-Import"><a href="#第二步：高性能数据导入-Import" class="headerlink" title="第二步：高性能数据导入 (Import)"></a>第二步：高性能数据导入 (Import)</h3><p>针对 Xeon 处理器和 SSD RAID 进行参数调优，最大化利用硬件性能。</p>
+<ul>
+<li><strong>源文件</strong>：<code>shandong-latest.osm.pbf</code> (约 67MB)。</li>
+<li><strong>挂载策略</strong>：必须将宿主机文件挂载到容器内的 <code>/data/region.osm.pbf</code>，以覆盖默认行为。</li>
+<li><strong>性能参数</strong>：</li>
+<li><code>THREADS=18</code>：利用多核并行处理。</li>
+<li><code>OSM2PGSQL_CACHE=8000</code>：分配 8GB 内存用于构建空间索引。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> \</span><br><span class="line">    -v /home/wangkai/code/osm/shandong-260128.osm.pbf:/data/region.osm.pbf \</span><br><span class="line">    -v osm-data-volume:/var/lib/postgresql/15/main \</span><br><span class="line">    -e THREADS=18 \</span><br><span class="line">    -e OSM2PGSQL_CACHE=8000 \</span><br><span class="line">    overv/openstreetmap-tile-server \</span><br><span class="line">    import</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步：启动服务-Run"><a href="#第三步：启动服务-Run" class="headerlink" title="第三步：启动服务 (Run)"></a>第三步：启动服务 (Run)</h3><p>启动渲染引擎与 Web 服务。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 \</span><br><span class="line">    -v osm-data-volume:/var/lib/postgresql/15/main \</span><br><span class="line">    -d --name osm-server \</span><br><span class="line">    overv/openstreetmap-tile-server \</span><br><span class="line">    run</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="3-服务可用性验证"><a href="#3-服务可用性验证" class="headerlink" title="3. 服务可用性验证"></a>3. 服务可用性验证</h2><h3 id="方式-A：数据库层核验"><a href="#方式-A：数据库层核验" class="headerlink" title="方式 A：数据库层核验"></a>方式 A：数据库层核验</h3><p>通过 SQL 确认地理实体是否已入库（以招远地标为例）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 验证道路数据</span></span><br><span class="line"><span class="keyword">SELECT</span> name, ST_AsText(way) <span class="keyword">FROM</span> planet_osm_line <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;罗峰路&#x27;</span>;</span><br><span class="line"><span class="comment">-- 验证区域数据</span></span><br><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> planet_osm_point <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;%招远%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="方式-B：瓦片服务直连"><a href="#方式-B：瓦片服务直连" class="headerlink" title="方式 B：瓦片服务直连"></a>方式 B：瓦片服务直连</h3><p>访问招远市中心坐标对应的瓦片 URL，确认渲染正常。</p>
+<ul>
+<li><strong>测试地址</strong>：<code>http://localhost:8080/tile/15/27331/13146.png</code></li>
+<li><strong>预期结果</strong>：返回包含中文街道信息的 PNG 图片。</li>
+</ul>
+<hr>
+<h2 id="4-前端集成方案-Filament-PHP"><a href="#4-前端集成方案-Filament-PHP" class="headerlink" title="4. 前端集成方案 (Filament PHP)"></a>4. 前端集成方案 (Filament PHP)</h2><p>在 Laravel&#x2F;Filament 系统中接入离线底图。核心逻辑是<strong>锁定初始视口</strong>，确保用户打开地图即聚焦于目标区域。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">DotsWan</span>\<span class="title">FilamentMap</span>\<span class="title">Fields</span>\<span class="title">Map</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">form</span>(<span class="params">Form <span class="variable">$form</span></span>): <span class="title">Form</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$form</span>-&gt;<span class="title function_ invoke__">schema</span>([</span><br><span class="line">        <span class="title class_">Map</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;location&#x27;</span>)</span><br><span class="line">            -&gt;<span class="title function_ invoke__">label</span>(<span class="string">&#x27;地理位置选择&#x27;</span>) // 通用标签</span><br><span class="line">            -&gt;<span class="title function_ invoke__">leafletOptions</span>([</span><br><span class="line">                // 指向本地 Docker 瓦片服务</span><br><span class="line">                <span class="string">&#x27;tileLayer&#x27;</span> =&gt; <span class="string">&#x27;http://localhost:8080/tile/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;.png&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;attribution&#x27;</span> =&gt; <span class="string">&#x27;© OpenStreetMap contributors&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;maxZoom&#x27;</span> =&gt; <span class="number">18</span>,</span><br><span class="line">            ])</span><br><span class="line">            // 【关键配置】初始化聚焦坐标：招远市中心</span><br><span class="line">            -&gt;<span class="title function_ invoke__">defaultLocation</span>([<span class="number">37.3615</span>, <span class="number">120.4042</span>]) </span><br><span class="line">            -&gt;<span class="title function_ invoke__">zoom</span>(<span class="number">15</span>) // 街道级默认缩放</span><br><span class="line">            -&gt;<span class="title function_ invoke__">clickable</span>(<span class="literal">true</span>)</span><br><span class="line">    ]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>·</p>
+<h2 id="5-扩展方案：自定义区域切割-可选"><a href="#5-扩展方案：自定义区域切割-可选" class="headerlink" title="5. 扩展方案：自定义区域切割 (可选)"></a>5. 扩展方案：自定义区域切割 (可选)</h2><p>若需剥离特定行政区划（如仅保留招远市轮廓），可使用 <code>osmium</code> 工具链。</p>
+<ol>
+<li><strong>定义边界</strong>：使用 <a target="_blank" rel="noopener" href="https://geojson.io/">GeoJSON</a> 定义多边形范围，并导出为 zhaoyuan.geojson。</li>
+<li><strong>执行切割</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">osmium extract -p zhaoyuan.geojson shandong-latest.osm.pbf -o zhaoyuan.osm.pbf</span><br></pre></td></tr></table></figure></li>
+<li><strong>重载数据</strong>：使用新生成的 <code>.pbf</code> 文件重复“第二步”导入流程。</li>
+</ol>
+<hr>
+<h2 id="6-运维参数"><a href="#6-运维参数" class="headerlink" title="6. 运维参数"></a>6. 运维参数</h2><ul>
+<li><p><strong>资源占用</strong>：</p>
+</li>
+<li><p>磁盘：约 2GB - 3GB (含数据库与基础缓存)。</p>
+</li>
+<li><p>内存：建议预留 4GB 以上给 Docker 容器。</p>
+</li>
+<li><p><strong>数据更新</strong>：只需下载最新的山东省 PBF 文件，重新执行 Clean -&gt; Import 流程即可（耗时 &lt; 5分钟）。</p>
+</li>
+<li><p><strong>网络要求</strong>：部署过程中需短暂联网下载全球水体数据（约 800MB），之后运行过程<strong>完全离线</strong>。</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/search/">搜索</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E9%83%A8%E7%BD%B2%E7%9B%AE%E6%A0%87%E4%B8%8E%E7%8E%AF%E5%A2%83"><span class="toc-number">1.</span> <span class="toc-text">1. 部署目标与环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A0%B8%E5%BF%83%E9%83%A8%E7%BD%B2%E6%B5%81%E7%A8%8B-Docker"><span class="toc-number">2.</span> <span class="toc-text">2. 核心部署流程 (Docker)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E7%8E%AF%E5%A2%83%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">2.1.</span> <span class="toc-text">第一步：环境初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E9%AB%98%E6%80%A7%E8%83%BD%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5-Import"><span class="toc-number">2.2.</span> <span class="toc-text">第二步：高性能数据导入 (Import)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-Run"><span class="toc-number">2.3.</span> <span class="toc-text">第三步：启动服务 (Run)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%8D%E5%8A%A1%E5%8F%AF%E7%94%A8%E6%80%A7%E9%AA%8C%E8%AF%81"><span class="toc-number">3.</span> <span class="toc-text">3. 服务可用性验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-A%EF%BC%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B1%82%E6%A0%B8%E9%AA%8C"><span class="toc-number">3.1.</span> <span class="toc-text">方式 A：数据库层核验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F-B%EF%BC%9A%E7%93%A6%E7%89%87%E6%9C%8D%E5%8A%A1%E7%9B%B4%E8%BF%9E"><span class="toc-number">3.2.</span> <span class="toc-text">方式 B：瓦片服务直连</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%89%8D%E7%AB%AF%E9%9B%86%E6%88%90%E6%96%B9%E6%A1%88-Filament-PHP"><span class="toc-number">4.</span> <span class="toc-text">4. 前端集成方案 (Filament PHP)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%89%A9%E5%B1%95%E6%96%B9%E6%A1%88%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8C%BA%E5%9F%9F%E5%88%87%E5%89%B2-%E5%8F%AF%E9%80%89"><span class="toc-number">5.</span> <span class="toc-text">5. 扩展方案：自定义区域切割 (可选)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E8%BF%90%E7%BB%B4%E5%8F%82%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">6. 运维参数</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&text=OSM 离线地图服务私有化部署方案"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&is_video=false&description=OSM 离线地图服务私有化部署方案"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OSM 离线地图服务私有化部署方案&body=Check out this article: https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&title=OSM 离线地图服务私有化部署方案"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&name=OSM 离线地图服务私有化部署方案&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/&t=OSM 离线地图服务私有化部署方案"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+      
+        
+          2020-2026
+            NightingaleWK
+              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
+  </div>
+  <div class="footer-right"></div>
+</footer>
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>OSM 离线地图服务私有化部署方案</title>
+      <link href="/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"/>
+      <url>/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-部署目标与环境"><a href="#1-部署目标与环境" class="headerlink" title="1. 部署目标与环境"></a>1. 部署目标与环境</h2><ul><li><strong>目标</strong>：构建完全离线、内网可用的 OSM 瓦片地图服务，为 Filament (Laravel 12) 系统提供底层地图支持。</li><li><strong>硬件环境</strong>：Dell Precision 7920 工作站 (Xeon Silver 4210R &#x2F; 32GB 内存 &#x2F; SSD RAID)。</li><li><strong>数据范围</strong>：山东省全量矢量数据 (包含招远市全境)。</li><li><strong>核心技术栈</strong>：Docker, PostgreSQL + PostGIS, Renderd, Apache&#x2F;Mod_tile。</li></ul><hr><h2 id="2-核心部署流程-Docker"><a href="#2-核心部署流程-Docker" class="headerlink" title="2. 核心部署流程 (Docker)"></a>2. 核心部署流程 (Docker)</h2><p>为确保数据索引完整且避免镜像自动下载示例数据（卢森堡问题），采用<strong>全量导入 + 绝对路径挂载</strong>策略。</p><h3 id="第一步：环境初始化"><a href="#第一步：环境初始化" class="headerlink" title="第一步：环境初始化"></a>第一步：环境初始化</h3><p>确保无脏数据残留。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">rm</span> -f osm-server</span><br><span class="line">docker volume <span class="built_in">rm</span> osm-data-volume</span><br></pre></td></tr></table></figure><h3 id="第二步：高性能数据导入-Import"><a href="#第二步：高性能数据导入-Import" class="headerlink" title="第二步：高性能数据导入 (Import)"></a>第二步：高性能数据导入 (Import)</h3><p>针对 Xeon 处理器和 SSD RAID 进行参数调优，最大化利用硬件性能。</p><ul><li><strong>源文件</strong>：<code>shandong-latest.osm.pbf</code> (约 67MB)。</li><li><strong>挂载策略</strong>：必须将宿主机文件挂载到容器内的 <code>/data/region.osm.pbf</code>，以覆盖默认行为。</li><li><strong>性能参数</strong>：</li><li><code>THREADS=18</code>：利用多核并行处理。</li><li><code>OSM2PGSQL_CACHE=8000</code>：分配 8GB 内存用于构建空间索引。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run --<span class="built_in">rm</span> \</span><br><span class="line">    -v /home/wangkai/code/osm/shandong-260128.osm.pbf:/data/region.osm.pbf \</span><br><span class="line">    -v osm-data-volume:/var/lib/postgresql/15/main \</span><br><span class="line">    -e THREADS=18 \</span><br><span class="line">    -e OSM2PGSQL_CACHE=8000 \</span><br><span class="line">    overv/openstreetmap-tile-server \</span><br><span class="line">    import</span><br></pre></td></tr></table></figure><h3 id="第三步：启动服务-Run"><a href="#第三步：启动服务-Run" class="headerlink" title="第三步：启动服务 (Run)"></a>第三步：启动服务 (Run)</h3><p>启动渲染引擎与 Web 服务。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 \</span><br><span class="line">    -v osm-data-volume:/var/lib/postgresql/15/main \</span><br><span class="line">    -d --name osm-server \</span><br><span class="line">    overv/openstreetmap-tile-server \</span><br><span class="line">    run</span><br></pre></td></tr></table></figure><hr><h2 id="3-服务可用性验证"><a href="#3-服务可用性验证" class="headerlink" title="3. 服务可用性验证"></a>3. 服务可用性验证</h2><h3 id="方式-A：数据库层核验"><a href="#方式-A：数据库层核验" class="headerlink" title="方式 A：数据库层核验"></a>方式 A：数据库层核验</h3><p>通过 SQL 确认地理实体是否已入库（以招远地标为例）。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 验证道路数据</span></span><br><span class="line"><span class="keyword">SELECT</span> name, ST_AsText(way) <span class="keyword">FROM</span> planet_osm_line <span class="keyword">WHERE</span> name <span class="operator">=</span> <span class="string">&#x27;罗峰路&#x27;</span>;</span><br><span class="line"><span class="comment">-- 验证区域数据</span></span><br><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">FROM</span> planet_osm_point <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;%招远%&#x27;</span>;</span><br></pre></td></tr></table></figure><h3 id="方式-B：瓦片服务直连"><a href="#方式-B：瓦片服务直连" class="headerlink" title="方式 B：瓦片服务直连"></a>方式 B：瓦片服务直连</h3><p>访问招远市中心坐标对应的瓦片 URL，确认渲染正常。</p><ul><li><strong>测试地址</strong>：<code>http://localhost:8080/tile/15/27331/13146.png</code></li><li><strong>预期结果</strong>：返回包含中文街道信息的 PNG 图片。</li></ul><hr><h2 id="4-前端集成方案-Filament-PHP"><a href="#4-前端集成方案-Filament-PHP" class="headerlink" title="4. 前端集成方案 (Filament PHP)"></a>4. 前端集成方案 (Filament PHP)</h2><p>在 Laravel&#x2F;Filament 系统中接入离线底图。核心逻辑是<strong>锁定初始视口</strong>，确保用户打开地图即聚焦于目标区域。</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">DotsWan</span>\<span class="title">FilamentMap</span>\<span class="title">Fields</span>\<span class="title">Map</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">form</span>(<span class="params">Form <span class="variable">$form</span></span>): <span class="title">Form</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$form</span>-&gt;<span class="title function_ invoke__">schema</span>([</span><br><span class="line">        <span class="title class_">Map</span>::<span class="title function_ invoke__">make</span>(<span class="string">&#x27;location&#x27;</span>)</span><br><span class="line">            -&gt;<span class="title function_ invoke__">label</span>(<span class="string">&#x27;地理位置选择&#x27;</span>) // 通用标签</span><br><span class="line">            -&gt;<span class="title function_ invoke__">leafletOptions</span>([</span><br><span class="line">                // 指向本地 Docker 瓦片服务</span><br><span class="line">                <span class="string">&#x27;tileLayer&#x27;</span> =&gt; <span class="string">&#x27;http://localhost:8080/tile/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;.png&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;attribution&#x27;</span> =&gt; <span class="string">&#x27;© OpenStreetMap contributors&#x27;</span>,</span><br><span class="line">                <span class="string">&#x27;maxZoom&#x27;</span> =&gt; <span class="number">18</span>,</span><br><span class="line">            ])</span><br><span class="line">            // 【关键配置】初始化聚焦坐标：招远市中心</span><br><span class="line">            -&gt;<span class="title function_ invoke__">defaultLocation</span>([<span class="number">37.3615</span>, <span class="number">120.4042</span>]) </span><br><span class="line">            -&gt;<span class="title function_ invoke__">zoom</span>(<span class="number">15</span>) // 街道级默认缩放</span><br><span class="line">            -&gt;<span class="title function_ invoke__">clickable</span>(<span class="literal">true</span>)</span><br><span class="line">    ]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><p>·</p><h2 id="5-扩展方案：自定义区域切割-可选"><a href="#5-扩展方案：自定义区域切割-可选" class="headerlink" title="5. 扩展方案：自定义区域切割 (可选)"></a>5. 扩展方案：自定义区域切割 (可选)</h2><p>若需剥离特定行政区划（如仅保留招远市轮廓），可使用 <code>osmium</code> 工具链。</p><ol><li><strong>定义边界</strong>：使用 <a href="https://geojson.io/">GeoJSON</a> 定义多边形范围，并导出为 zhaoyuan.geojson。</li><li><strong>执行切割</strong>：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">osmium extract -p zhaoyuan.geojson shandong-latest.osm.pbf -o zhaoyuan.osm.pbf</span><br></pre></td></tr></table></figure></li><li><strong>重载数据</strong>：使用新生成的 <code>.pbf</code> 文件重复“第二步”导入流程。</li></ol><hr><h2 id="6-运维参数"><a href="#6-运维参数" class="headerlink" title="6. 运维参数"></a>6. 运维参数</h2><ul><li><p><strong>资源占用</strong>：</p></li><li><p>磁盘：约 2GB - 3GB (含数据库与基础缓存)。</p></li><li><p>内存：建议预留 4GB 以上给 Docker 容器。</p></li><li><p><strong>数据更新</strong>：只需下载最新的山东省 PBF 文件，重新执行 Clean -&gt; Import 流程即可（耗时 &lt; 5分钟）。</p></li><li><p><strong>网络要求</strong>：部署过程中需短暂联网下载全球水体数据（约 800MB），之后运行过程<strong>完全离线</strong>。</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> GIS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+            <tag> OSM </tag>
+            
+            <tag> PostGIS </tag>
+            
+            <tag> Filament </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
       <link href="/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"/>
       <url>/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</url>
@@ -417,11 +448,11 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> Git </tag>
             
             <tag> GitHub </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> 版本控制 </tag>
             
@@ -448,11 +479,11 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> 打印机 </tag>
             
             <tag> 京瓷 </tag>
-            
-            <tag> 教程 </tag>
             
         </tags>
       
@@ -1205,31 +1236,6 @@
     
     
     <entry>
-      <title>检测服务端口的方法</title>
-      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 端口查询 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 表单请求验证简明示例</title>
       <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
       <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
@@ -1247,6 +1253,31 @@
         <tags>
             
             <tag> 表单验证 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>检测服务端口的方法</title>
+      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 端口查询 </tag>
             
         </tags>
       
@@ -1764,25 +1795,6 @@
     
     
     <entry>
-      <title>我开发用到的各种技术参数</title>
-      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
-      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 开发 </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 项目 Homestead 开发环境的搭建</title>
       <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
       <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
@@ -1808,29 +1820,19 @@
     
     
     <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      <title>我开发用到的各种技术参数</title>
+      <link href="/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/"/>
+      <url>/2021/06/08/21.%20%E6%88%91%E5%BC%80%E5%8F%91%E7%94%A8%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E6%8A%80%E6%9C%AF%E5%8F%82%E6%95%B0/</url>
       
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p> 开发环境</p><ul><li>homestead V12.3</li><li>Settler v11.3.0 (Ubuntu 20.04)</li><li>Ubuntu LTS 20.04</li><li>PHP 8.0.1 (cli)  </li><li>mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))</li><li>nginx 1.18.0 (Ubuntu)</li></ul><h1 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h1><ul><li>Visual Studio Code 1.56.2</li><li>Navicat Premium 15（15.0.25）</li><li>Oracle VM VirtualBox 6.1.22 r144080 (Qt5.6.2)</li><li>Github Desktiop Version 2.8.2 (x64)</li><li>Termius 7.12.0（Windows store version）</li></ul><h1 id="浏览器调试"><a href="#浏览器调试" class="headerlink" title="浏览器调试"></a>浏览器调试</h1><ul><li>Google Chrome 91.0.4472.77（正式版本）（64 位）</li><li>Microsoft Edge 91.0.864.41 （官方内部版本）（64 位）</li><li>360极速浏览器 13.0.2250.0</li><li>IE 21H1</li></ul><h1 id="技术版本"><a href="#技术版本" class="headerlink" title="技术版本"></a>技术版本</h1><ul><li>laravel 8</li><li>Dcat Admin 2</li></ul>]]></content>
       
       
       <categories>
           
-          <category> laravel </category>
+          <category> 开发 </category>
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> 代码更新 </tag>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-        </tags>
       
     </entry>
     
@@ -1853,11 +1855,40 @@
       
         <tags>
             
+            <tag> 代码部署 </tag>
+            
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
             
-            <tag> 代码部署 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
+            <tag> 代码更新 </tag>
             
         </tags>
       

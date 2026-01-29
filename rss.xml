@@ -5,77 +5,77 @@
         <link>https://nightingalewk.cn</link>
         <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 27 Jan 2026 10:00:00 +0800</pubDate>
-        <lastBuildDate>Tue, 27 Jan 2026 10:00:00 +0800</lastBuildDate>
+        <pubDate>Thu, 29 Jan 2026 18:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 29 Jan 2026 18:00:00 +0800</lastBuildDate>
         <category>迁移</category>
-        <category>电脑维修</category>
         <category>hexo</category>
+        <category>主食</category>
+        <category>电脑维修</category>
         <category>pr</category>
         <category>bilibili</category>
-        <category>主食</category>
         <category>学习笔记</category>
         <category>汤</category>
         <category>热菜</category>
-        <category>梦境</category>
         <category>甜品</category>
+        <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
-        <category>代码更新</category>
+        <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
-        <category>免密</category>
         <category>道歉信</category>
-        <category>vs code</category>
+        <category>免密</category>
         <category>laravel sail</category>
+        <category>vs code</category>
         <category>fileinfo</category>
         <category>PAC 清单</category>
-        <category>定时任务</category>
         <category>gpg</category>
+        <category>定时任务</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
-        <category>端口查询</category>
         <category>swap</category>
         <category>表单验证</category>
         <category>事件</category>
+        <category>端口查询</category>
         <category>blade</category>
         <category>wordpress</category>
-        <category>特色小吃</category>
         <category>队列</category>
         <category>redis</category>
+        <category>特色小吃</category>
         <category>粥</category>
         <category>artisan 指令</category>
         <category>Cloudreve</category>
         <category>Font Awesome</category>
         <category>vite</category>
         <category>故障排除</category>
+        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
-        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
         <category>prompt</category>
-        <category>打印机</category>
-        <category>京瓷</category>
-        <category>教程</category>
         <category>Git</category>
         <category>GitHub</category>
+        <category>教程</category>
         <category>版本控制</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
         <category>国产化</category>
         <category>信创</category>
         <category>TongHttpServer</category>
-        <category>DevOps</category>
-        <category>Monorepo</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
@@ -94,12 +94,84 @@
         <category>HTTPS</category>
         <category>问题排查</category>
         <category>Sail</category>
-        <category>Troubleshooting</category>
         <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
         <category>Hardware</category>
         <category>Tooling</category>
+        <category>Troubleshooting</category>
+        <category>OSM</category>
+        <category>PostGIS</category>
+        <category>Filament</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/</guid>
+            <title>OSM 离线地图服务私有化部署方案</title>
+            <link>https://nightingalewk.cn/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/</link>
+            <category>Docker</category>
+            <category>OSM</category>
+            <category>PostGIS</category>
+            <category>Filament</category>
+            <pubDate>Thu, 29 Jan 2026 18:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;1-部署目标与环境&#34;&gt;&lt;a href=&#34;#1-部署目标与环境&#34; class=&#34;headerlink&#34; title=&#34;1. 部署目标与环境&#34;&gt;&lt;/a&gt;1. 部署目标与环境&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;目标&lt;/strong&gt;：构建完全离线、内网可用的 OSM 瓦片地图服务，为 Filament (Laravel 12) 系统提供底层地图支持。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;硬件环境&lt;/strong&gt;：Dell Precision 7920 工作站 (Xeon Silver 4210R &amp;#x2F; 32GB 内存 &amp;#x2F; SSD RAID)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据范围&lt;/strong&gt;：山东省全量矢量数据 (包含招远市全境)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;核心技术栈&lt;/strong&gt;：Docker, PostgreSQL + PostGIS, Renderd, Apache&amp;#x2F;Mod_tile。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-核心部署流程-Docker&#34;&gt;&lt;a href=&#34;#2-核心部署流程-Docker&#34; class=&#34;headerlink&#34; title=&#34;2. 核心部署流程 (Docker)&#34;&gt;&lt;/a&gt;2. 核心部署流程 (Docker)&lt;/h2&gt;&lt;p&gt;为确保数据索引完整且避免镜像自动下载示例数据（卢森堡问题），采用&lt;strong&gt;全量导入 + 绝对路径挂载&lt;/strong&gt;策略。&lt;/p&gt;
+&lt;h3 id=&#34;第一步：环境初始化&#34;&gt;&lt;a href=&#34;#第一步：环境初始化&#34; class=&#34;headerlink&#34; title=&#34;第一步：环境初始化&#34;&gt;&lt;/a&gt;第一步：环境初始化&lt;/h3&gt;&lt;p&gt;确保无脏数据残留。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; -f osm-server&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;docker volume &lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; osm-data-volume&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;第二步：高性能数据导入-Import&#34;&gt;&lt;a href=&#34;#第二步：高性能数据导入-Import&#34; class=&#34;headerlink&#34; title=&#34;第二步：高性能数据导入 (Import)&#34;&gt;&lt;/a&gt;第二步：高性能数据导入 (Import)&lt;/h3&gt;&lt;p&gt;针对 Xeon 处理器和 SSD RAID 进行参数调优，最大化利用硬件性能。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;源文件&lt;/strong&gt;：&lt;code&gt;shandong-latest.osm.pbf&lt;/code&gt; (约 67MB)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;挂载策略&lt;/strong&gt;：必须将宿主机文件挂载到容器内的 &lt;code&gt;/data/region.osm.pbf&lt;/code&gt;，以覆盖默认行为。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;性能参数&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;THREADS=18&lt;/code&gt;：利用多核并行处理。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;OSM2PGSQL_CACHE=8000&lt;/code&gt;：分配 8GB 内存用于构建空间索引。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run --&lt;span class=&#34;built_in&#34;&gt;rm&lt;/span&gt; \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v /home/wangkai/code/osm/shandong-260128.osm.pbf:/data/region.osm.pbf \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v osm-data-volume:/var/lib/postgresql/15/main \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -e THREADS=18 \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -e OSM2PGSQL_CACHE=8000 \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    overv/openstreetmap-tile-server \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    import&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;第三步：启动服务-Run&#34;&gt;&lt;a href=&#34;#第三步：启动服务-Run&#34; class=&#34;headerlink&#34; title=&#34;第三步：启动服务 (Run)&#34;&gt;&lt;/a&gt;第三步：启动服务 (Run)&lt;/h3&gt;&lt;p&gt;启动渲染引擎与 Web 服务。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;docker run -p 8080:80 \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -v osm-data-volume:/var/lib/postgresql/15/main \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    -d --name osm-server \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    overv/openstreetmap-tile-server \&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    run&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;3-服务可用性验证&#34;&gt;&lt;a href=&#34;#3-服务可用性验证&#34; class=&#34;headerlink&#34; title=&#34;3. 服务可用性验证&#34;&gt;&lt;/a&gt;3. 服务可用性验证&lt;/h2&gt;&lt;h3 id=&#34;方式-A：数据库层核验&#34;&gt;&lt;a href=&#34;#方式-A：数据库层核验&#34; class=&#34;headerlink&#34; title=&#34;方式 A：数据库层核验&#34;&gt;&lt;/a&gt;方式 A：数据库层核验&lt;/h3&gt;&lt;p&gt;通过 SQL 确认地理实体是否已入库（以招远地标为例）。&lt;/p&gt;
+&lt;figure class=&#34;highlight sql&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;-- 验证道路数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name, ST_AsText(way) &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; planet_osm_line &lt;span class=&#34;keyword&#34;&gt;WHERE&lt;/span&gt; name &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;罗峰路&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;-- 验证区域数据&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;SELECT&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;FROM&lt;/span&gt; planet_osm_point &lt;span class=&#34;keyword&#34;&gt;WHERE&lt;/span&gt; name &lt;span class=&#34;keyword&#34;&gt;LIKE&lt;/span&gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;%招远%&amp;#x27;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h3 id=&#34;方式-B：瓦片服务直连&#34;&gt;&lt;a href=&#34;#方式-B：瓦片服务直连&#34; class=&#34;headerlink&#34; title=&#34;方式 B：瓦片服务直连&#34;&gt;&lt;/a&gt;方式 B：瓦片服务直连&lt;/h3&gt;&lt;p&gt;访问招远市中心坐标对应的瓦片 URL，确认渲染正常。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;测试地址&lt;/strong&gt;：&lt;code&gt;http://localhost:8080/tile/15/27331/13146.png&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;预期结果&lt;/strong&gt;：返回包含中文街道信息的 PNG 图片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;4-前端集成方案-Filament-PHP&#34;&gt;&lt;a href=&#34;#4-前端集成方案-Filament-PHP&#34; class=&#34;headerlink&#34; title=&#34;4. 前端集成方案 (Filament PHP)&#34;&gt;&lt;/a&gt;4. 前端集成方案 (Filament PHP)&lt;/h2&gt;&lt;p&gt;在 Laravel&amp;#x2F;Filament 系统中接入离线底图。核心逻辑是&lt;strong&gt;锁定初始视口&lt;/strong&gt;，确保用户打开地图即聚焦于目标区域。&lt;/p&gt;
+&lt;figure class=&#34;highlight php&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;use&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;DotsWan&lt;/span&gt;\&lt;span class=&#34;title&#34;&gt;FilamentMap&lt;/span&gt;\&lt;span class=&#34;title&#34;&gt;Fields&lt;/span&gt;\&lt;span class=&#34;title&#34;&gt;Map&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;built_in&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;function&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;title&#34;&gt;form&lt;/span&gt;(&lt;span class=&#34;params&#34;&gt;Form &lt;span class=&#34;variable&#34;&gt;$form&lt;/span&gt;&lt;/span&gt;): &lt;span class=&#34;title&#34;&gt;Form&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;function&#34;&gt;&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;$form&lt;/span&gt;-&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;schema&lt;/span&gt;([&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;title class_&#34;&gt;Map&lt;/span&gt;::&lt;span class=&#34;title function_ invoke__&#34;&gt;make&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;location&amp;#x27;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            -&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;label&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;#x27;地理位置选择&amp;#x27;&lt;/span&gt;) // 通用标签&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            -&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;leafletOptions&lt;/span&gt;([&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                // 指向本地 Docker 瓦片服务&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;#x27;tileLayer&amp;#x27;&lt;/span&gt; =&amp;gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;http://localhost:8080/tile/&amp;#123;z&amp;#125;/&amp;#123;x&amp;#125;/&amp;#123;y&amp;#125;.png&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;#x27;attribution&amp;#x27;&lt;/span&gt; =&amp;gt; &lt;span class=&#34;string&#34;&gt;&amp;#x27;© OpenStreetMap contributors&amp;#x27;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                &lt;span class=&#34;string&#34;&gt;&amp;#x27;maxZoom&amp;#x27;&lt;/span&gt; =&amp;gt; &lt;span class=&#34;number&#34;&gt;18&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            ])&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            // 【关键配置】初始化聚焦坐标：招远市中心&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            -&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;defaultLocation&lt;/span&gt;([&lt;span class=&#34;number&#34;&gt;37.3615&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;120.4042&lt;/span&gt;]) &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            -&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;zoom&lt;/span&gt;(&lt;span class=&#34;number&#34;&gt;15&lt;/span&gt;) // 街道级默认缩放&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            -&amp;gt;&lt;span class=&#34;title function_ invoke__&#34;&gt;clickable&lt;/span&gt;(&lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    ]);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;p&gt;·&lt;/p&gt;
+&lt;h2 id=&#34;5-扩展方案：自定义区域切割-可选&#34;&gt;&lt;a href=&#34;#5-扩展方案：自定义区域切割-可选&#34; class=&#34;headerlink&#34; title=&#34;5. 扩展方案：自定义区域切割 (可选)&#34;&gt;&lt;/a&gt;5. 扩展方案：自定义区域切割 (可选)&lt;/h2&gt;&lt;p&gt;若需剥离特定行政区划（如仅保留招远市轮廓），可使用 &lt;code&gt;osmium&lt;/code&gt; 工具链。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;定义边界&lt;/strong&gt;：使用 &lt;a href=&#34;https://geojson.io/&#34;&gt;GeoJSON&lt;/a&gt; 定义多边形范围，并导出为 zhaoyuan.geojson。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;执行切割&lt;/strong&gt;：&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;osmium extract -p zhaoyuan.geojson shandong-latest.osm.pbf -o zhaoyuan.osm.pbf&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重载数据&lt;/strong&gt;：使用新生成的 &lt;code&gt;.pbf&lt;/code&gt; 文件重复“第二步”导入流程。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;6-运维参数&#34;&gt;&lt;a href=&#34;#6-运维参数&#34; class=&#34;headerlink&#34; title=&#34;6. 运维参数&#34;&gt;&lt;/a&gt;6. 运维参数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;资源占用&lt;/strong&gt;：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;磁盘：约 2GB - 3GB (含数据库与基础缓存)。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;内存：建议预留 4GB 以上给 Docker 容器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;数据更新&lt;/strong&gt;：只需下载最新的山东省 PBF 文件，重新执行 Clean -&amp;gt; Import 流程即可（耗时 &amp;lt; 5分钟）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;网络要求&lt;/strong&gt;：部署过程中需短暂联网下载全球水体数据（约 800MB），之后运行过程&lt;strong&gt;完全离线&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/</guid>
             <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</title>
@@ -914,9 +986,9 @@
             <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</guid>
             <title>如何将 Git 仓库的默认分支从 master 修改为 main</title>
             <link>https://nightingalewk.cn/2025/06/26/74.%20%E4%BF%AE%E6%94%B9%E7%BA%BF%E4%B8%8A%20git%20%E4%BB%93%E5%BA%93%20master%20%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%BA%20main/</link>
-            <category>教程</category>
             <category>Git</category>
             <category>GitHub</category>
+            <category>教程</category>
             <category>版本控制</category>
             <pubDate>Thu, 26 Jun 2025 09:15:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;随着技术社区对包容性语言的倡导，将 Git 仓库的默认分支从 &lt;code&gt;master&lt;/code&gt; 修改为 &lt;code&gt;main&lt;/code&gt; 已成为一种普遍的推荐做法。本文将提供一个详细、安全的操作指南，帮助你顺利完成这一迁移。&lt;/p&gt;
@@ -972,9 +1044,9 @@ git remote prune origin
             <guid isPermalink="true">https://nightingalewk.cn/2025/05/06/73.%20%E4%BA%AC%E7%93%B7%E6%89%93%E5%8D%B0%E6%9C%BA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E5%88%B0%E7%94%B5%E8%84%91%E6%95%99%E7%A8%8B/</guid>
             <title>京瓷打印机文件发送到电脑教程</title>
             <link>https://nightingalewk.cn/2025/05/06/73.%20%E4%BA%AC%E7%93%B7%E6%89%93%E5%8D%B0%E6%9C%BA%E6%96%87%E4%BB%B6%E5%8F%91%E9%80%81%E5%88%B0%E7%94%B5%E8%84%91%E6%95%99%E7%A8%8B/</link>
+            <category>教程</category>
             <category>打印机</category>
             <category>京瓷</category>
-            <category>教程</category>
             <pubDate>Tue, 06 May 2025 16:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;本文将详细介绍如何通过京瓷打印机将扫描的文件发送到电脑，包括设置地址簿、添加用户、配置文件夹共享以及测试连接等步骤。&lt;/p&gt;
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
@@ -1488,25 +1560,6 @@ n. [Final action]
 &lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-22.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-23.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-24.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-28.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-29.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-30.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-31.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-33.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-36.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-42.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-44.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-47.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-48.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-49.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-50.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-52.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-2.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-1.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-3.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-4.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-5.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-10.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-12.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-13.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-18.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-19.jpg&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.wkarrow.top/wp-content/uploads/2020/05/2020-03-09-20.jpg&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://nightingalewk.cn/2024/10/24/68.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E9%AB%98%E5%85%89%E6%97%B6%E5%88%BB%20S1/</guid>
-            <title>膝盖中箭之地 玩家高光时刻 S1</title>
-            <link>https://nightingalewk.cn/2024/10/24/68.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E9%AB%98%E5%85%89%E6%97%B6%E5%88%BB%20S1/</link>
-            <category>我的世界</category>
-            <category>Minecraft</category>
-            <category>膝盖中箭之地</category>
-            <category>领域</category>
-            <category>realms</category>
-            <category>公告</category>
-            <pubDate>Thu, 24 Oct 2024 11:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;blockquote&gt;
-&lt;p&gt;展示高质量碳基生物的点点滴滴，佛系更新，欢迎大家积极提供素材。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/1.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/2.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/3.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/4.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/5.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/6.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/7.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/8.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/9.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/10.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/11.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/12.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/13.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/14.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/15.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/16.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/17.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/18.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/19.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/20.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/21.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/22.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/23.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/24.png&#34;&gt;&lt;br&gt;&lt;img src=&#34;https://cdn.mc.wkarrow.top/ShiningStars/1-20210920/25.png&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

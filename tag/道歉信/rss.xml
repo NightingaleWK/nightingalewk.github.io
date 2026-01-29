@@ -8,74 +8,74 @@
         <pubDate>Thu, 02 Dec 2021 12:00:00 +0800</pubDate>
         <lastBuildDate>Thu, 02 Dec 2021 12:00:00 +0800</lastBuildDate>
         <category>迁移</category>
-        <category>电脑维修</category>
         <category>hexo</category>
+        <category>主食</category>
+        <category>电脑维修</category>
         <category>pr</category>
         <category>bilibili</category>
-        <category>主食</category>
         <category>学习笔记</category>
         <category>汤</category>
         <category>热菜</category>
-        <category>梦境</category>
         <category>甜品</category>
+        <category>梦境</category>
         <category>海鲜</category>
         <category>homestead</category>
-        <category>代码更新</category>
+        <category>代码部署</category>
         <category>oneinstack</category>
         <category>lnmp</category>
-        <category>代码部署</category>
+        <category>代码更新</category>
         <category>dcat admin</category>
         <category>oh-my-zsh</category>
         <category>debug</category>
         <category>指令</category>
-        <category>免密</category>
         <category>道歉信</category>
-        <category>vs code</category>
+        <category>免密</category>
         <category>laravel sail</category>
+        <category>vs code</category>
         <category>fileinfo</category>
         <category>PAC 清单</category>
-        <category>定时任务</category>
         <category>gpg</category>
+        <category>定时任务</category>
         <category>sshppass</category>
         <category>awk</category>
         <category>net time</category>
-        <category>端口查询</category>
         <category>swap</category>
         <category>表单验证</category>
         <category>事件</category>
+        <category>端口查询</category>
         <category>blade</category>
         <category>wordpress</category>
-        <category>特色小吃</category>
         <category>队列</category>
         <category>redis</category>
+        <category>特色小吃</category>
         <category>粥</category>
         <category>artisan 指令</category>
         <category>Cloudreve</category>
         <category>Font Awesome</category>
         <category>vite</category>
         <category>故障排除</category>
+        <category>linux</category>
         <category>我的世界</category>
         <category>Minecraft</category>
         <category>膝盖中箭之地</category>
         <category>领域</category>
         <category>realms</category>
         <category>公告</category>
-        <category>linux</category>
         <category>screen</category>
         <category>cursor</category>
         <category>人工智能</category>
         <category>prompt</category>
-        <category>打印机</category>
-        <category>京瓷</category>
-        <category>教程</category>
         <category>Git</category>
         <category>GitHub</category>
+        <category>教程</category>
         <category>版本控制</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
         <category>国产化</category>
         <category>信创</category>
         <category>TongHttpServer</category>
-        <category>DevOps</category>
-        <category>Monorepo</category>
         <category>Laravel</category>
         <category>Docker</category>
         <category>容器化</category>
@@ -94,12 +94,15 @@
         <category>HTTPS</category>
         <category>问题排查</category>
         <category>Sail</category>
-        <category>Troubleshooting</category>
         <category>WSL2</category>
         <category>Artisan</category>
         <category>Composer</category>
         <category>Hardware</category>
         <category>Tooling</category>
+        <category>Troubleshooting</category>
+        <category>OSM</category>
+        <category>PostGIS</category>
+        <category>Filament</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/12/02/33.%20%E8%AF%9A%E6%81%B3%E7%9A%84%E9%81%93%E6%AD%89%E5%97%B7/</guid>
             <title>诚恳的道歉嗷 🫡</title>
