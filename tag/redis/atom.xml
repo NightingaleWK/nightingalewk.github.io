@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2022/12/14/52.%20%E5%8F%91%E8%B5%B7%20laravel%20%E9%98%9F%E5%88%97%E4%BB%BB%E5%8A%A1%E4%B8%8D%E7%94%9F%E6%95%88/</id>
         <title>发起 laravel 队列任务不生效</title>

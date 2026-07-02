@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
         <title>VS Code 使用公钥配合 Remote SSH 登录远程服务器</title>

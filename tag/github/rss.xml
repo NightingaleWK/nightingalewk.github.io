@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2026/01/24/84.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88Git%20%E5%90%8C%E6%AD%A5%E4%B8%8E%E5%A4%9A%E6%9C%BA%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/</guid>
             <title>Laravel Sail 开发环境部署一把过（Git 同步与多机开发篇）</title>

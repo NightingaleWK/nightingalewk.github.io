@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2023/11/21/62.%20laravel%2010%20%E5%9C%A8%20vite%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B8%AD%E5%BC%95%E5%85%A5%E5%B9%B6%E4%BD%BF%E7%94%A8%20Font%20Awesome/</guid>
             <title>laravel 10 在 vite 工作流中引入并使用 Font Awesome 6</title>

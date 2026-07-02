@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/</id>
         <title>在 GIT 中 使用 GPG 签名</title>

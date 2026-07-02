@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2023/01/04/54.%20%E7%9A%AE%E8%9B%8B%E7%98%A6%E8%82%89%E7%B2%A5/</id>
         <title>皮蛋瘦肉粥</title>

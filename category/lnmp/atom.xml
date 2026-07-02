@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2024/10/10/63.%20%E4%BB%8E%200%20%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2%20LNMP%20%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83/</id>
         <title>从 0 开始部署 LNMP 生产环境</title>

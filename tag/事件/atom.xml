@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2022/11/24/48.%20laravel%20%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</id>
         <title>laravel 事件系统简明示例</title>

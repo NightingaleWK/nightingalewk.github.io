@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2025/06/26/76.%20%E4%BF%AE%E6%94%B9%E6%9C%AC%E5%9C%B0%20git%20%E4%BB%93%E5%BA%93%E7%9A%84%20remote%20%E5%9C%B0%E5%9D%80%E4%B8%BA%E6%96%B0%E5%9C%B0%E5%9D%80/</guid>
             <title>修改本地 git 仓库的 remote 地址为新地址</title>

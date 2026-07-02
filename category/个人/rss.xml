@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2023/11/07/59.%20%E5%93%8E%EF%BC%8C%E5%8F%88%E6%8A%8A%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E4%BA%86/</guid>
             <title>哎，又把博客迁移了</title>

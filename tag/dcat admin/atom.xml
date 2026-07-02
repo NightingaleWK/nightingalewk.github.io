@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</id>
         <title>Dcat-Admin 主题色变更的避坑方法</title>

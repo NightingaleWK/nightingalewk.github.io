@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2021/01/21/13.%20B%20%E7%AB%99%E4%B8%8A%E4%BC%A0%E8%A7%86%E9%A2%91%E9%98%B2%E5%8E%8B%E5%8F%82%E6%95%B0/</id>
         <title>B 站上传视频防压参数</title>

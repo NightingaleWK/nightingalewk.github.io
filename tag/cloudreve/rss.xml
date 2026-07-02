@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2020/11/20/6.%20%E7%94%A8%20Cloudreve%20%E8%87%AA%E5%BB%BA%E7%BD%91%E7%9B%98%E7%9A%84%E6%B3%A8%E6%84%8F%E7%82%B9/</guid>
             <title>用 Cloudreve 自建网盘的注意点</title>

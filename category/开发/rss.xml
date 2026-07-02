@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2021/09/13/30.%20ERR_CONNECTION_TIMED_OUT%20%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
             <title>ERR_CONNECTION_TIMED_OUT 解决方法</title>

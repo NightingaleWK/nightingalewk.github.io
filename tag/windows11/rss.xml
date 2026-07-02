@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>雪漫城的风宅 • Posts by &#34;windows11&#34; tag</title>
+        <link>https://nightingalewk.cn</link>
+        <description>この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 02 Jul 2026 10:45:00 +0800</pubDate>
+        <lastBuildDate>Thu, 02 Jul 2026 10:45:00 +0800</lastBuildDate>
+        <category>迁移</category>
+        <category>hexo</category>
+        <category>电脑维修</category>
+        <category>主食</category>
+        <category>pr</category>
+        <category>bilibili</category>
+        <category>学习笔记</category>
+        <category>热菜</category>
+        <category>甜品</category>
+        <category>汤</category>
+        <category>梦境</category>
+        <category>海鲜</category>
+        <category>homestead</category>
+        <category>代码部署</category>
+        <category>oneinstack</category>
+        <category>lnmp</category>
+        <category>dcat admin</category>
+        <category>代码更新</category>
+        <category>oh-my-zsh</category>
+        <category>debug</category>
+        <category>指令</category>
+        <category>道歉信</category>
+        <category>免密</category>
+        <category>vs code</category>
+        <category>fileinfo</category>
+        <category>定时任务</category>
+        <category>laravel sail</category>
+        <category>PAC 清单</category>
+        <category>gpg</category>
+        <category>net time</category>
+        <category>swap</category>
+        <category>端口查询</category>
+        <category>表单验证</category>
+        <category>sshppass</category>
+        <category>awk</category>
+        <category>事件</category>
+        <category>blade</category>
+        <category>队列</category>
+        <category>redis</category>
+        <category>wordpress</category>
+        <category>特色小吃</category>
+        <category>粥</category>
+        <category>artisan 指令</category>
+        <category>故障排除</category>
+        <category>Cloudreve</category>
+        <category>Font Awesome</category>
+        <category>vite</category>
+        <category>linux</category>
+        <category>我的世界</category>
+        <category>Minecraft</category>
+        <category>膝盖中箭之地</category>
+        <category>领域</category>
+        <category>realms</category>
+        <category>公告</category>
+        <category>screen</category>
+        <category>打印机</category>
+        <category>京瓷</category>
+        <category>教程</category>
+        <category>cursor</category>
+        <category>人工智能</category>
+        <category>prompt</category>
+        <category>Git</category>
+        <category>GitHub</category>
+        <category>版本控制</category>
+        <category>DevOps</category>
+        <category>Monorepo</category>
+        <category>国产化</category>
+        <category>信创</category>
+        <category>TongHttpServer</category>
+        <category>Docker</category>
+        <category>Ubuntu</category>
+        <category>安装指南</category>
+        <category>阿里云</category>
+        <category>镜像源</category>
+        <category>Laravel</category>
+        <category>Nginx</category>
+        <category>反向代理</category>
+        <category>NPM</category>
+        <category>HTTPS</category>
+        <category>问题排查</category>
+        <category>容器化</category>
+        <category>部署</category>
+        <category>运维</category>
+        <category>Rule</category>
+        <category>Prompt</category>
+        <category>gemini</category>
+        <category>Sail</category>
+        <category>WSL2</category>
+        <category>Troubleshooting</category>
+        <category>Artisan</category>
+        <category>Composer</category>
+        <category>Hardware</category>
+        <category>Tooling</category>
+        <category>OSM</category>
+        <category>PostGIS</category>
+        <category>Filament</category>
+        <category>Linux</category>
+        <category>开发环境</category>
+        <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
+        <item>
+            <guid isPermalink="true">https://nightingalewk.cn/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/</guid>
+            <title>WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案</title>
+            <link>https://nightingalewk.cn/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/</link>
+            <category>Ubuntu</category>
+            <category>WSL</category>
+            <category>Windows11</category>
+            <category>GTK</category>
+            <category>Electron</category>
+            <category>Wayland</category>
+            <category>X11</category>
+            <category>Linux GUI</category>
+            <pubDate>Thu, 02 Jul 2026 10:45:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;一、问题现象&#34;&gt;&lt;a href=&#34;#一、问题现象&#34; class=&#34;headerlink&#34; title=&#34;一、问题现象&#34;&gt;&lt;/a&gt;一、问题现象&lt;/h2&gt;&lt;p&gt;在 Windows 11 + WSL2 Ubuntu 26.04 环境中运行 &lt;code&gt;cc-switch&lt;/code&gt; 时，整体功能可正常使用，但存在以下问题：&lt;/p&gt;
+&lt;h3 id=&#34;具体表现&#34;&gt;&lt;a href=&#34;#具体表现&#34; class=&#34;headerlink&#34; title=&#34;具体表现&#34;&gt;&lt;/a&gt;具体表现&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;启动 &lt;code&gt;cc-switch&lt;/code&gt; 后 UI 正常显示&lt;/li&gt;
+&lt;li&gt;点击 &lt;strong&gt;About（关于）页面&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;界面发生卡死（UI 无响应）&lt;/li&gt;
+&lt;li&gt;进程未退出，但窗口无法关闭&lt;/li&gt;
+&lt;li&gt;必须关闭终端后，GUI 才被强制终止&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;二、问题初步定位&#34;&gt;&lt;a href=&#34;#二、问题初步定位&#34; class=&#34;headerlink&#34; title=&#34;二、问题初步定位&#34;&gt;&lt;/a&gt;二、问题初步定位&lt;/h2&gt;&lt;p&gt;该问题并非简单的应用崩溃，而是典型的：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;UI 事件循环阻塞（event loop deadlock）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 WSL GUI 环境中，主要涉及以下三层因素：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;三、根因分析&#34;&gt;&lt;a href=&#34;#三、根因分析&#34; class=&#34;headerlink&#34; title=&#34;三、根因分析&#34;&gt;&lt;/a&gt;三、根因分析&lt;/h2&gt;&lt;h3 id=&#34;1-WSLg-Wayland-X11-混合渲染问题&#34;&gt;&lt;a href=&#34;#1-WSLg-Wayland-X11-混合渲染问题&#34; class=&#34;headerlink&#34; title=&#34;1. WSLg Wayland &amp;#x2F; X11 混合渲染问题&#34;&gt;&lt;/a&gt;1. WSLg Wayland &amp;#x2F; X11 混合渲染问题&lt;/h3&gt;&lt;p&gt;Windows 11 的 WSLg 默认使用 Wayland：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GTK 应用优先选择 Wayland backend&lt;/li&gt;
+&lt;li&gt;通过 XWayland 进行兼容转换&lt;/li&gt;
+&lt;li&gt;在复杂 UI（如 modal dialog）场景存在兼容性问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 About 页面触发时，可能涉及：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模态窗口（modal dialog）&lt;/li&gt;
+&lt;li&gt;WebView 子窗口&lt;/li&gt;
+&lt;li&gt;UI focus 锁定机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;导致 Wayland compositor 状态异常，从而卡死 UI 事件循环。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-GTK-Electron-Modal-Dialog-阻塞主线程&#34;&gt;&lt;a href=&#34;#2-GTK-Electron-Modal-Dialog-阻塞主线程&#34; class=&#34;headerlink&#34; title=&#34;2. GTK &amp;#x2F; Electron Modal Dialog 阻塞主线程&#34;&gt;&lt;/a&gt;2. GTK &amp;#x2F; Electron Modal Dialog 阻塞主线程&lt;/h3&gt;&lt;p&gt;“About”窗口通常会触发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;应用版本信息读取&lt;/li&gt;
+&lt;li&gt;系统环境检测&lt;/li&gt;
+&lt;li&gt;更新检查逻辑&lt;/li&gt;
+&lt;li&gt;UI 模态窗口创建&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 WSL 环境中，如果：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;异步调用未正确返回&lt;/li&gt;
+&lt;li&gt;子进程（Node &amp;#x2F; shell）阻塞&lt;/li&gt;
+&lt;li&gt;IPC 通道无法响应&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;则会导致主线程 event loop 阻塞，UI 假死。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-SHELL-环境变量异常导致子进程行为不一致&#34;&gt;&lt;a href=&#34;#3-SHELL-环境变量异常导致子进程行为不一致&#34; class=&#34;headerlink&#34; title=&#34;3. SHELL 环境变量异常导致子进程行为不一致&#34;&gt;&lt;/a&gt;3. SHELL 环境变量异常导致子进程行为不一致&lt;/h3&gt;&lt;p&gt;WSL 环境中 GUI 应用可能依赖：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;SHELL&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;````&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;若检测到 bash/zsh，可能触发：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;* 非标准 shell spawn 行为&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;* pty 分配异常&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;* 子进程阻塞&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;---&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;## 四、最终解决方案&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;经过测试验证，采用“环境变量强制规避”方式可稳定解决问题。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;### 1. 使用 alias 包装启动命令&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;将 `cc-switch` 替换为：&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;```bash&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;alias&lt;/span&gt; cc-switch=&lt;span class=&#34;string&#34;&gt;&amp;#x27;env SHELL=/bin/sh GDK_BACKEND=x11 /usr/bin/cc-switch&amp;#x27;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;2-配置位置&#34;&gt;&lt;a href=&#34;#2-配置位置&#34; class=&#34;headerlink&#34; title=&#34;2. 配置位置&#34;&gt;&lt;/a&gt;2. 配置位置&lt;/h3&gt;&lt;p&gt;根据 shell 类型编辑：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nano ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 或&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;nano ~/.zshrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;添加后执行：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.bashrc&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;# 或&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;source&lt;/span&gt; ~/.zshrc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h3 id=&#34;3-实际执行效果&#34;&gt;&lt;a href=&#34;#3-实际执行效果&#34; class=&#34;headerlink&#34; title=&#34;3. 实际执行效果&#34;&gt;&lt;/a&gt;3. 实际执行效果&lt;/h3&gt;&lt;p&gt;原命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;cc-switch&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;实际等价于：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;built_in&#34;&gt;env&lt;/span&gt; SHELL=/bin/sh GDK_BACKEND=x11 /usr/bin/cc-switch&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;hr&gt;
+&lt;h2 id=&#34;五、修复效果验证&#34;&gt;&lt;a href=&#34;#五、修复效果验证&#34; class=&#34;headerlink&#34; title=&#34;五、修复效果验证&#34;&gt;&lt;/a&gt;五、修复效果验证&lt;/h2&gt;&lt;p&gt;修复后表现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;UI 正常启动&lt;/li&gt;
+&lt;li&gt;About 页面不再卡死&lt;/li&gt;
+&lt;li&gt;进程可正常退出&lt;/li&gt;
+&lt;li&gt;无需强制关闭终端&lt;/li&gt;
+&lt;li&gt;WSL GUI 稳定性显著提升&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;六、关键技术点总结&#34;&gt;&lt;a href=&#34;#六、关键技术点总结&#34; class=&#34;headerlink&#34; title=&#34;六、关键技术点总结&#34;&gt;&lt;/a&gt;六、关键技术点总结&lt;/h2&gt;&lt;h3 id=&#34;1-强制-X11-backend&#34;&gt;&lt;a href=&#34;#1-强制-X11-backend&#34; class=&#34;headerlink&#34; title=&#34;1. 强制 X11 backend&#34;&gt;&lt;/a&gt;1. 强制 X11 backend&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;GDK_BACKEND=x11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;作用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;绕过 WSLg Wayland compositor&lt;/li&gt;
+&lt;li&gt;避免 modal dialog 状态死锁&lt;/li&gt;
+&lt;li&gt;提升 GTK 兼容性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-统一-shell-环境&#34;&gt;&lt;a href=&#34;#2-统一-shell-环境&#34; class=&#34;headerlink&#34; title=&#34;2. 统一 shell 环境&#34;&gt;&lt;/a&gt;2. 统一 shell 环境&lt;/h3&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;SHELL=/bin/sh&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;作用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免 bash&amp;#x2F;zsh 差异导致的子进程问题&lt;/li&gt;
+&lt;li&gt;提供最小 POSIX 兼容环境&lt;/li&gt;
+&lt;li&gt;减少 WSL spawn hang 风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-alias-属于-runtime-shim-方案&#34;&gt;&lt;a href=&#34;#3-alias-属于-runtime-shim-方案&#34; class=&#34;headerlink&#34; title=&#34;3. alias 属于 runtime shim 方案&#34;&gt;&lt;/a&gt;3. alias 属于 runtime shim 方案&lt;/h3&gt;&lt;p&gt;该方案属于：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;运行时环境补丁（environment shim）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无需修改源码&lt;/li&gt;
+&lt;li&gt;不依赖 upstream 修复&lt;/li&gt;
+&lt;li&gt;即时生效&lt;/li&gt;
+&lt;li&gt;可回滚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;七、方案边界与局限性&#34;&gt;&lt;a href=&#34;#七、方案边界与局限性&#34; class=&#34;headerlink&#34; title=&#34;七、方案边界与局限性&#34;&gt;&lt;/a&gt;七、方案边界与局限性&lt;/h2&gt;&lt;h3 id=&#34;优点&#34;&gt;&lt;a href=&#34;#优点&#34; class=&#34;headerlink&#34; title=&#34;优点&#34;&gt;&lt;/a&gt;优点&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;快速修复问题&lt;/li&gt;
+&lt;li&gt;零侵入应用本体&lt;/li&gt;
+&lt;li&gt;对 WSL 环境高度适配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;局限性&#34;&gt;&lt;a href=&#34;#局限性&#34; class=&#34;headerlink&#34; title=&#34;局限性&#34;&gt;&lt;/a&gt;局限性&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;未从根本修复 WSLg Wayland 问题&lt;/li&gt;
+&lt;li&gt;依赖 X11 fallback&lt;/li&gt;
+&lt;li&gt;若未来 GTK 行为变化可能复现问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;八、适用场景&#34;&gt;&lt;a href=&#34;#八、适用场景&#34; class=&#34;headerlink&#34; title=&#34;八、适用场景&#34;&gt;&lt;/a&gt;八、适用场景&lt;/h2&gt;&lt;p&gt;本方案适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;WSL2 + Windows 11 GUI 应用&lt;/li&gt;
+&lt;li&gt;GTK &amp;#x2F; Electron 类桌面程序&lt;/li&gt;
+&lt;li&gt;Wayland &amp;#x2F; XWayland 混合环境&lt;/li&gt;
+&lt;li&gt;CLI 包装 GUI 工具启动场景&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;九、结论&#34;&gt;&lt;a href=&#34;#九、结论&#34; class=&#34;headerlink&#34; title=&#34;九、结论&#34;&gt;&lt;/a&gt;九、结论&lt;/h2&gt;&lt;p&gt;cc-switch 在 WSL 环境中的 About 页面卡死问题，本质是 WSLg Wayland + GTK&amp;#x2F;Electron modal dialog 触发的事件循环阻塞问题。&lt;/p&gt;
+&lt;p&gt;通过强制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;X11 backend&lt;/li&gt;
+&lt;li&gt;标准 shell 环境&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以有效绕开该问题，实现稳定运行。&lt;/p&gt;
+&lt;p&gt;在当前 WSL GUI 生态限制下，该方案属于最小成本、最高收益的工程化解法。&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

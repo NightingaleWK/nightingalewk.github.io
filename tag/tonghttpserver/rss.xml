@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2025/09/29/77.%20%E4%B8%9C%E6%96%B9%E9%80%9A%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E8%BD%AF%E4%BB%B6%20TongHttpServer%20V6.0%20%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/</guid>
             <title>东方通负载均衡软件 TongHttpServer V6.0 安装步骤</title>

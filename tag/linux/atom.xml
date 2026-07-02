@@ -103,6 +103,17 @@
     <category term="Linux" />
     <category term="开发环境" />
     <category term="效率办公" />
+    <category term="Chrome" />
+    <category term="Chromium" />
+    <category term="CSS" />
+    <category term="前端兼容性" />
+    <category term="WSL" />
+    <category term="Windows11" />
+    <category term="GTK" />
+    <category term="Electron" />
+    <category term="Wayland" />
+    <category term="X11" />
+    <category term="Linux GUI" />
     <entry>
         <id>https://nightingalewk.cn/2026/03/19/89.%20Ubuntu%2024.04%20%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91%E4%B8%80%E6%96%87%E9%80%9A/</id>
         <title>Ubuntu 24.04 日常使用和 Laravel 开发一文通</title>

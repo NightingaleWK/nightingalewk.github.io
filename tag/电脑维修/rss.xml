@@ -106,6 +106,17 @@
         <category>Linux</category>
         <category>开发环境</category>
         <category>效率办公</category>
+        <category>Chrome</category>
+        <category>Chromium</category>
+        <category>CSS</category>
+        <category>前端兼容性</category>
+        <category>WSL</category>
+        <category>Windows11</category>
+        <category>GTK</category>
+        <category>Electron</category>
+        <category>Wayland</category>
+        <category>X11</category>
+        <category>Linux GUI</category>
         <item>
             <guid isPermalink="true">https://nightingalewk.cn/2020/12/08/11.%20%E9%9D%99%E7%94%B5%E5%AF%BC%E8%87%B4%E7%94%B5%E8%84%91%E6%97%A0%E6%B3%95%E5%BC%80%E6%9C%BA%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</guid>
             <title>静电导致电脑无法开机问题记录</title>
