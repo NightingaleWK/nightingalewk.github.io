@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang=zh>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <!-- so meta -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/rss.xml%7D" />
-  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/atom.xml" />
-  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
-  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Chrome 150 导致 Filament Badge 全宽拉伸故障分析 · 雪漫城的风宅</title>
+  <meta name="description" content="Chrome 150 与 Filament Badge 全宽拉伸故障分析，涵盖问题现象、浏览器版本对照、Tailwind line-clamp 与 -webkit-box 技术根因、影响范围、Chromium 上游撤销记录及 Filament 官方 Issue 跟踪情况。">
+  <link rel="canonical" href="https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/">
   <meta name="description" content="Chrome 150 与 Filament Badge 全宽拉伸故障分析，涵盖问题现象、浏览器版本对照、Tailwind line-clamp 与 -webkit-box 技术根因、影响范围、Chromium 上游撤销记录及 Filament 官方 Issue 跟踪情况。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Chrome 150 导致 Filament Badge 全宽拉伸故障分析">
@@ -29,170 +23,19 @@
 <meta property="article:tag" content="Laravel">
 <meta property="article:tag" content="前端兼容性">
 <meta name="twitter:card" content="summary">
-    
-      
-        
-          
-                    <link rel="shortcut icon" href="/images/favicon.ico">
-                    
-                      
-                        
-                          
-                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
-                                      sizes="192x192">
-                                    
-                                      
-                                        
-                                          
-                                                    <link rel="apple-touch-icon" sizes="180x180"
-                                                      href="/images/apple-touch-icon.png">
-                                                    
-                                                      
-                                                        
-                                                          <!-- title -->
-                                                          <title>
-                                                            Chrome 150 导致 Filament Badge 全宽拉伸故障分析
-                                                          </title>
-                                                          <!-- async scripts -->
-                                                          <!-- Google Analytics -->
-
-
-                                                            <!-- Umami Analytics -->
-
-
-                                                              <!-- styles -->
-                                                              
-<link rel="stylesheet" href="/css/style.css">
-
-                                                                <!-- persian styles -->
-                                                                
-                                                                      <!-- rss -->
-                                                                      
-                                                                            
-                                                                              <link rel="alternate"
-                                                                                href="/true"
-                                                                                title="雪漫城的风宅"
-                                                                                type="application/atom+xml" />
-                                                                              
-                                                                                <!-- mathjax -->
-                                                                                
+  <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/categories/">分类</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
-     -->
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" aria-label="上一篇" href="/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="下一篇" href="/2026/03/19/89.%20Ubuntu%2024.04%20%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91%E4%B8%80%E6%96%87%E9%80%9A/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&text=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&is_video=false&description=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Chrome 150 导致 Filament Badge 全宽拉伸故障分析&body=Check out this article: https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&name=Chrome 150 导致 Filament Badge 全宽拉伸故障分析&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&t=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    
-    
-      <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Chrome-150-%E5%AF%BC%E8%87%B4-Filament-Badge-%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">Chrome 150 导致 Filament Badge 全宽拉伸故障分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E6%91%98%E8%A6%81"><span class="toc-number">1.1.</span> <span class="toc-text">一、问题摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.2.</span> <span class="toc-text">二、故障现象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2-badge-%E7%AD%89%E5%AE%BD%E6%8B%89%E4%BC%B8"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 表格中的颜色 badge 等宽拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D-badge-%E8%A2%AB%E6%8B%89%E4%BC%B8"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 表格中的计量单位 badge 被拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A4%9A%E4%B8%AA%E4%B8%9A%E5%8A%A1%E7%8A%B6%E6%80%81-badge-%E5%90%8C%E6%97%B6%E5%8F%97%E5%BD%B1%E5%93%8D"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 多个业务状态 badge 同时受影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%83%A8%E5%88%86%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%88%97%E8%A1%A8%E7%9C%8B%E8%B5%B7%E6%9D%A5%E6%AD%A3%E5%B8%B8"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 部分移动端列表看起来正常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AF%A6%E6%83%85%E9%A1%B5%E4%BB%8D%E7%84%B6%E5%A4%8D%E7%8E%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 移动端详情页仍然复现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE"><span class="toc-number">1.3.</span> <span class="toc-text">三、运行环境与关键证据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%80%E6%9C%AF%E6%A0%B9%E5%9B%A0"><span class="toc-number">1.4.</span> <span class="toc-text">四、技术根因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Filament-%E7%9A%84-badge-%E5%8E%9F%E6%9C%AC%E6%98%AF%E5%86%85%E5%AE%B9%E5%AE%BD%E5%BA%A6"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 Filament 的 badge 原本是内容宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-TextColumn-%E5%92%8C-TextEntry-%E5%A4%96%E5%B1%82%E4%BD%BF%E7%94%A8%E5%85%A8%E5%AE%BD%E6%96%87%E6%9C%AC%E5%AE%B9%E5%99%A8"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 TextColumn 和 TextEntry 外层使用全宽文本容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9C%AA%E5%AE%9E%E9%99%85%E5%90%AF%E7%94%A8%E6%88%AA%E6%96%AD%E6%97%B6%EF%BC%8Cline-clamp-%E4%BB%8D%E5%88%9B%E5%BB%BA%E6%97%A7%E5%BC%8F-WebKit-Box"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 未实际启用截断时，line-clamp 仍创建旧式 WebKit Box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Chrome-150-%E5%B0%86%E5%85%B6%E5%AD%90%E5%85%83%E7%B4%A0%E2%80%9C%E5%9D%97%E7%BA%A7%E5%8C%96%E2%80%9D"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 Chrome 150 将其子元素“块级化”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%97%A7%E7%89%88%E6%9C%AC%E6%B5%8F%E8%A7%88%E5%99%A8%E6%AD%A3%E5%B8%B8"><span class="toc-number">1.5.</span> <span class="toc-text">五、为什么旧版本浏览器正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%BD%B1%E5%93%8D%E8%8C%83%E5%9B%B4"><span class="toc-number">1.6.</span> <span class="toc-text">六、影响范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%BF%91%E6%9C%9F%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E6%8E%92%E9%99%A4"><span class="toc-number">1.7.</span> <span class="toc-text">七、近期项目变更排除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-FileViewEntry-%E6%8F%92%E4%BB%B6"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1 FileViewEntry 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Filament-4-11-7-%E5%8D%87%E7%BA%A7"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2 Filament 4.11.7 升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-Tailwind-CSS"><span class="toc-number">1.7.3.</span> <span class="toc-text">7.3 Tailwind CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8A%E6%B8%B8%E7%8A%B6%E6%80%81"><span class="toc-number">1.8.</span> <span class="toc-text">八、上游状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%8F%AF%E9%80%89%E5%85%BC%E5%AE%B9%E6%96%B9%E6%A1%88"><span class="toc-number">1.9.</span> <span class="toc-text">九、可选兼容方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%90%8E%E7%BB%AD%E5%A4%84%E7%90%86%E8%AE%A1%E5%88%92"><span class="toc-number">1.10.</span> <span class="toc-text">十、后续处理计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%BB%93%E8%AE%BA"><span class="toc-number">1.11.</span> <span class="toc-text">十一、结论</span></a></li></ol></li></ol>
-      </div>
-    
-  </span>
-</div>
-
-    
-    <div class="content index py4 ">
-        
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle p-name" itemprop="name headline">
-        Chrome 150 导致 Filament Badge 全宽拉伸故障分析
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">NightingaleWK</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2026-07-02T02:00:00.000Z" class="dt-published" itemprop="datePublished">2026-07-02</time>
-        
-        (Updated: <time datetime="2026-07-02T02:25:40.346Z" class="dt-updated" itemprop="dateModified">2026-07-02</time>)
-        
-      
-    </div>
-
-
-      
-    <div class="article-category">
-        <i class="fa-solid fa-archive"></i>
-        <a class="category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fa-solid fa-tag"></i>
-        <a class="p-category" href="/tags/CSS/" rel="tag">CSS</a>, <a class="p-category" href="/tags/Chrome/" rel="tag">Chrome</a>, <a class="p-category" href="/tags/Chromium/" rel="tag">Chromium</a>, <a class="p-category" href="/tags/Filament/" rel="tag">Filament</a>, <a class="p-category" href="/tags/Laravel/" rel="tag">Laravel</a>, <a class="p-category" href="/tags/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7/" rel="tag">前端兼容性</a>
-    </div>
-
-
-    </div>
-  </header>
-  
-
-  <div class="content e-content" itemprop="articleBody">
-    <h1 id="Chrome-150-导致-Filament-Badge-全宽拉伸故障分析"><a href="#Chrome-150-导致-Filament-Badge-全宽拉伸故障分析" class="headerlink" title="Chrome 150 导致 Filament Badge 全宽拉伸故障分析"></a>Chrome 150 导致 Filament Badge 全宽拉伸故障分析</h1><blockquote>
+<body data-search-index="/search-index.json">
+<a class="skip" href="#main">跳到正文</a>
+<header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
+<a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
+<button class="theme" type="button">跟随系统</button></nav></header>
+<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Chrome 150 导致 Filament Badge 全宽拉伸故障分析</h1><div class="meta"><time datetime="2026-07-02T02:00:00.000Z">2026-07-02</time> · NightingaleWK · 更新于 2026-07-02<br><a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a></div></div>
+<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Chrome-150-%E5%AF%BC%E8%87%B4-Filament-Badge-%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90"><span class="toc-text">Chrome 150 导致 Filament Badge 全宽拉伸故障分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E6%91%98%E8%A6%81"><span class="toc-text">一、问题摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-text">二、故障现象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2-badge-%E7%AD%89%E5%AE%BD%E6%8B%89%E4%BC%B8"><span class="toc-text">2.1 表格中的颜色 badge 等宽拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D-badge-%E8%A2%AB%E6%8B%89%E4%BC%B8"><span class="toc-text">2.2 表格中的计量单位 badge 被拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A4%9A%E4%B8%AA%E4%B8%9A%E5%8A%A1%E7%8A%B6%E6%80%81-badge-%E5%90%8C%E6%97%B6%E5%8F%97%E5%BD%B1%E5%93%8D"><span class="toc-text">2.3 多个业务状态 badge 同时受影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%83%A8%E5%88%86%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%88%97%E8%A1%A8%E7%9C%8B%E8%B5%B7%E6%9D%A5%E6%AD%A3%E5%B8%B8"><span class="toc-text">2.4 部分移动端列表看起来正常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AF%A6%E6%83%85%E9%A1%B5%E4%BB%8D%E7%84%B6%E5%A4%8D%E7%8E%B0"><span class="toc-text">2.5 移动端详情页仍然复现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE"><span class="toc-text">三、运行环境与关键证据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%80%E6%9C%AF%E6%A0%B9%E5%9B%A0"><span class="toc-text">四、技术根因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Filament-%E7%9A%84-badge-%E5%8E%9F%E6%9C%AC%E6%98%AF%E5%86%85%E5%AE%B9%E5%AE%BD%E5%BA%A6"><span class="toc-text">4.1 Filament 的 badge 原本是内容宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-TextColumn-%E5%92%8C-TextEntry-%E5%A4%96%E5%B1%82%E4%BD%BF%E7%94%A8%E5%85%A8%E5%AE%BD%E6%96%87%E6%9C%AC%E5%AE%B9%E5%99%A8"><span class="toc-text">4.2 TextColumn 和 TextEntry 外层使用全宽文本容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9C%AA%E5%AE%9E%E9%99%85%E5%90%AF%E7%94%A8%E6%88%AA%E6%96%AD%E6%97%B6%EF%BC%8Cline-clamp-%E4%BB%8D%E5%88%9B%E5%BB%BA%E6%97%A7%E5%BC%8F-WebKit-Box"><span class="toc-text">4.3 未实际启用截断时，line-clamp 仍创建旧式 WebKit Box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Chrome-150-%E5%B0%86%E5%85%B6%E5%AD%90%E5%85%83%E7%B4%A0%E2%80%9C%E5%9D%97%E7%BA%A7%E5%8C%96%E2%80%9D"><span class="toc-text">4.4 Chrome 150 将其子元素“块级化”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%97%A7%E7%89%88%E6%9C%AC%E6%B5%8F%E8%A7%88%E5%99%A8%E6%AD%A3%E5%B8%B8"><span class="toc-text">五、为什么旧版本浏览器正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%BD%B1%E5%93%8D%E8%8C%83%E5%9B%B4"><span class="toc-text">六、影响范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%BF%91%E6%9C%9F%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E6%8E%92%E9%99%A4"><span class="toc-text">七、近期项目变更排除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-FileViewEntry-%E6%8F%92%E4%BB%B6"><span class="toc-text">7.1 FileViewEntry 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Filament-4-11-7-%E5%8D%87%E7%BA%A7"><span class="toc-text">7.2 Filament 4.11.7 升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-Tailwind-CSS"><span class="toc-text">7.3 Tailwind CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8A%E6%B8%B8%E7%8A%B6%E6%80%81"><span class="toc-text">八、上游状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%8F%AF%E9%80%89%E5%85%BC%E5%AE%B9%E6%96%B9%E6%A1%88"><span class="toc-text">九、可选兼容方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%90%8E%E7%BB%AD%E5%A4%84%E7%90%86%E8%AE%A1%E5%88%92"><span class="toc-text">十、后续处理计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%BB%93%E8%AE%BA"><span class="toc-text">十一、结论</span></a></li></ol></li></ol></details>
+<div class="prose"><h1 id="Chrome-150-导致-Filament-Badge-全宽拉伸故障分析"><a href="#Chrome-150-导致-Filament-Badge-全宽拉伸故障分析" class="headerlink" title="Chrome 150 导致 Filament Badge 全宽拉伸故障分析"></a>Chrome 150 导致 Filament Badge 全宽拉伸故障分析</h1><blockquote>
 <p>记录日期：2026 年 7 月 2 日<br>当前决策：暂不在项目中增加兼容代码，等待 Filament 官方修复后再升级验证。</p>
 </blockquote>
 <h2 id="一、问题摘要"><a href="#一、问题摘要" class="headerlink" title="一、问题摘要"></a>一、问题摘要</h2><p>Chrome 升级到 150 后，Filament 表格 <code>TextColumn::badge()</code> 和详情页 <code>TextEntry::badge()</code> 渲染的 badge 不再保持“内容多宽，badge 就多宽”，而是被横向拉伸到所在表格列或 Infolist 字段的可用宽度。</p>
@@ -367,136 +210,9 @@
 </ol>
 <p>Chrome 129、Chromium 148 和 Chrome 150 的对照测试，以及 Chrome 150 中采集到的计算样式，已经形成完整证据链。</p>
 <p>项目选择等待 Filament 或浏览器上游修复，不增加本地兼容代码。</p>
-
-  </div>
-</article>
-
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-        
-          <li><a href="/">首页</a></li>
-        
-          <li><a href="/about/">关于</a></li>
-        
-          <li><a href="/archives/">归档</a></li>
-        
-          <li><a href="/tags/">标签</a></li>
-        
-          <li><a href="/categories/">分类</a></li>
-        
-          <li><a href="/search/">搜索</a></li>
-        
-          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
-        
-      </ul>
-    </div>
-
-    
-    
-      <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Chrome-150-%E5%AF%BC%E8%87%B4-Filament-Badge-%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">Chrome 150 导致 Filament Badge 全宽拉伸故障分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E6%91%98%E8%A6%81"><span class="toc-number">1.1.</span> <span class="toc-text">一、问题摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.2.</span> <span class="toc-text">二、故障现象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E9%A2%9C%E8%89%B2-badge-%E7%AD%89%E5%AE%BD%E6%8B%89%E4%BC%B8"><span class="toc-number">1.2.1.</span> <span class="toc-text">2.1 表格中的颜色 badge 等宽拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E8%A1%A8%E6%A0%BC%E4%B8%AD%E7%9A%84%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D-badge-%E8%A2%AB%E6%8B%89%E4%BC%B8"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.2 表格中的计量单位 badge 被拉伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%A4%9A%E4%B8%AA%E4%B8%9A%E5%8A%A1%E7%8A%B6%E6%80%81-badge-%E5%90%8C%E6%97%B6%E5%8F%97%E5%BD%B1%E5%93%8D"><span class="toc-number">1.2.3.</span> <span class="toc-text">2.3 多个业务状态 badge 同时受影响</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%83%A8%E5%88%86%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%88%97%E8%A1%A8%E7%9C%8B%E8%B5%B7%E6%9D%A5%E6%AD%A3%E5%B8%B8"><span class="toc-number">1.2.4.</span> <span class="toc-text">2.4 部分移动端列表看起来正常</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AF%A6%E6%83%85%E9%A1%B5%E4%BB%8D%E7%84%B6%E5%A4%8D%E7%8E%B0"><span class="toc-number">1.2.5.</span> <span class="toc-text">2.5 移动端详情页仍然复现</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%85%B3%E9%94%AE%E8%AF%81%E6%8D%AE"><span class="toc-number">1.3.</span> <span class="toc-text">三、运行环境与关键证据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8A%80%E6%9C%AF%E6%A0%B9%E5%9B%A0"><span class="toc-number">1.4.</span> <span class="toc-text">四、技术根因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-Filament-%E7%9A%84-badge-%E5%8E%9F%E6%9C%AC%E6%98%AF%E5%86%85%E5%AE%B9%E5%AE%BD%E5%BA%A6"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1 Filament 的 badge 原本是内容宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-TextColumn-%E5%92%8C-TextEntry-%E5%A4%96%E5%B1%82%E4%BD%BF%E7%94%A8%E5%85%A8%E5%AE%BD%E6%96%87%E6%9C%AC%E5%AE%B9%E5%99%A8"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2 TextColumn 和 TextEntry 外层使用全宽文本容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%9C%AA%E5%AE%9E%E9%99%85%E5%90%AF%E7%94%A8%E6%88%AA%E6%96%AD%E6%97%B6%EF%BC%8Cline-clamp-%E4%BB%8D%E5%88%9B%E5%BB%BA%E6%97%A7%E5%BC%8F-WebKit-Box"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3 未实际启用截断时，line-clamp 仍创建旧式 WebKit Box</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-Chrome-150-%E5%B0%86%E5%85%B6%E5%AD%90%E5%85%83%E7%B4%A0%E2%80%9C%E5%9D%97%E7%BA%A7%E5%8C%96%E2%80%9D"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4 Chrome 150 将其子元素“块级化”</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E6%97%A7%E7%89%88%E6%9C%AC%E6%B5%8F%E8%A7%88%E5%99%A8%E6%AD%A3%E5%B8%B8"><span class="toc-number">1.5.</span> <span class="toc-text">五、为什么旧版本浏览器正常</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%BD%B1%E5%93%8D%E8%8C%83%E5%9B%B4"><span class="toc-number">1.6.</span> <span class="toc-text">六、影响范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%BF%91%E6%9C%9F%E9%A1%B9%E7%9B%AE%E5%8F%98%E6%9B%B4%E6%8E%92%E9%99%A4"><span class="toc-number">1.7.</span> <span class="toc-text">七、近期项目变更排除</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-FileViewEntry-%E6%8F%92%E4%BB%B6"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1 FileViewEntry 插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-Filament-4-11-7-%E5%8D%87%E7%BA%A7"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2 Filament 4.11.7 升级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-Tailwind-CSS"><span class="toc-number">1.7.3.</span> <span class="toc-text">7.3 Tailwind CSS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%8A%E6%B8%B8%E7%8A%B6%E6%80%81"><span class="toc-number">1.8.</span> <span class="toc-text">八、上游状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%8F%AF%E9%80%89%E5%85%BC%E5%AE%B9%E6%96%B9%E6%A1%88"><span class="toc-number">1.9.</span> <span class="toc-text">九、可选兼容方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%90%8E%E7%BB%AD%E5%A4%84%E7%90%86%E8%AE%A1%E5%88%92"><span class="toc-number">1.10.</span> <span class="toc-text">十、后续处理计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E7%BB%93%E8%AE%BA"><span class="toc-number">1.11.</span> <span class="toc-text">十一、结论</span></a></li></ol></li></ol>
-      </div>
-    
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&text=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&is_video=false&description=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Chrome 150 导致 Filament Badge 全宽拉伸故障分析&body=Check out this article: https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&title=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&name=Chrome 150 导致 Filament Badge 全宽拉伸故障分析&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/07/02/90.%20Chrome%20150%20%E5%AF%BC%E8%87%B4%20Filament%20Badge%20%E5%85%A8%E5%AE%BD%E6%8B%89%E4%BC%B8%E6%95%85%E9%9A%9C%E5%88%86%E6%9E%90/&t=Chrome 150 导致 Filament Badge 全宽拉伸故障分析"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
 </div>
-
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
-      
-        
-          2020-2026
-            NightingaleWK
-              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
-  </div>
-  <div class="footer-right"></div>
-</footer>
-    </div>
-    <!-- styles -->
-
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
-
-
-
-<!-- clipboard -->
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功！");
-      e.clearSelection();
-    })
-  })
-  </script>
-
-
-<script src="/js/main.js"></script>
-
-<!-- search -->
-
-<!-- Baidu Analytics -->
-
-<!-- Cloudflare Analytics -->
-
-<!-- Disqus Comments -->
-
-<!-- utterances Comments -->
-
-</body>
-</html>
+<div class="inline-links"><a href="/tags/Laravel/">#Laravel</a><a href="/tags/Filament/">#Filament</a><a href="/tags/Chrome/">#Chrome</a><a href="/tags/Chromium/">#Chromium</a><a href="/tags/CSS/">#CSS</a><a href="/tags/%E5%89%8D%E7%AB%AF%E5%85%BC%E5%AE%B9%E6%80%A7/">#前端兼容性</a></div>
+<div class="post-bottom"><a href="/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/">上一篇：WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案</a><a href="/2026/03/19/89.%20Ubuntu%2024.04%20%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%92%8C%E4%BB%A3%E7%A0%81%E5%BC%80%E5%8F%91%E4%B8%80%E6%96%87%E9%80%9A/">下一篇：Ubuntu 24.04 日常使用和 Laravel 开发一文通</a></div></article>
+</main>
+<footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+</body></html>

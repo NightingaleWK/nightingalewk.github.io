@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang=zh>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <!-- so meta -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/rss.xml%7D" />
-  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/atom.xml" />
-  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
-  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案 · 雪漫城的风宅</title>
+  <meta name="description" content="本文记录了 Laravel 12 + Filament v4 项目在 Docker Compose 容器化部署后，通过 NPM 实现 HTTPS 反向代理时遇到的资源链接异常问题。详细分析了 X-Forwarded-Port 头部传递导致 URL 生成器附加端口号的根本原因，并提供了在后端 Nginx 配置中通过条件判断强制覆盖端口的可靠解决方案。包含完整的问题复现、根因分析、配置修改步骤和验证方法，适用于所有使用反向代理部署 Laravel 应用的场景。">
+  <link rel="canonical" href="https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
   <meta name="description" content="本文记录了 Laravel 12 + Filament v4 项目在 Docker Compose 容器化部署后，通过 NPM 实现 HTTPS 反向代理时遇到的资源链接异常问题。详细分析了 X-Forwarded-Port 头部传递导致 URL 生成器附加端口号的根本原因，并提供了在后端 Nginx 配置中通过条件判断强制覆盖端口的可靠解决方案。包含完整的问题复现、根因分析、配置修改步骤和验证方">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案">
@@ -30,170 +24,19 @@
 <meta property="article:tag" content="反向代理">
 <meta property="article:tag" content="问题排查">
 <meta name="twitter:card" content="summary">
-    
-      
-        
-          
-                    <link rel="shortcut icon" href="/images/favicon.ico">
-                    
-                      
-                        
-                          
-                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
-                                      sizes="192x192">
-                                    
-                                      
-                                        
-                                          
-                                                    <link rel="apple-touch-icon" sizes="180x180"
-                                                      href="/images/apple-touch-icon.png">
-                                                    
-                                                      
-                                                        
-                                                          <!-- title -->
-                                                          <title>
-                                                            Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案
-                                                          </title>
-                                                          <!-- async scripts -->
-                                                          <!-- Google Analytics -->
-
-
-                                                            <!-- Umami Analytics -->
-
-
-                                                              <!-- styles -->
-                                                              
-<link rel="stylesheet" href="/css/style.css">
-
-                                                                <!-- persian styles -->
-                                                                
-                                                                      <!-- rss -->
-                                                                      
-                                                                            
-                                                                              <link rel="alternate"
-                                                                                href="/true"
-                                                                                title="雪漫城的风宅"
-                                                                                type="application/atom+xml" />
-                                                                              
-                                                                                <!-- mathjax -->
-                                                                                
+  <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/categories/">分类</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
-     -->
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" aria-label="上一篇" href="/2025/12/09/81.%20Gemini%20Rules/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="下一篇" href="/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&text=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&is_video=false&description=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案&body=Check out this article: https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&name=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&t=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    
-    
-      <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%A4%8D%E7%8E%B0%E4%B8%8E%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">问题复现与分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">环境概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-number">2.2.</span> <span class="toc-text">故障现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">根因分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%8E%E7%AB%AF-Nginx-%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">步骤：修改后端 Nginx 配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text">验证与测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-number">5.</span> <span class="toc-text">总结与建议</span></a></li></ol>
-      </div>
-    
-  </span>
-</div>
-
-    
-    <div class="content index py4 ">
-        
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle p-name" itemprop="name headline">
-        Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">NightingaleWK</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2025-10-13T02:00:00.000Z" class="dt-published" itemprop="datePublished">2025-10-13</time>
-        
-        (Updated: <time datetime="2025-10-13T02:00:37.000Z" class="dt-updated" itemprop="dateModified">2025-10-13</time>)
-        
-      
-    </div>
-
-
-      
-    <div class="article-category">
-        <i class="fa-solid fa-archive"></i>
-        <a class="category-link" href="/categories/Docker/">Docker</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fa-solid fa-tag"></i>
-        <a class="p-category" href="/tags/Docker/" rel="tag">Docker</a>, <a class="p-category" href="/tags/HTTPS/" rel="tag">HTTPS</a>, <a class="p-category" href="/tags/Laravel/" rel="tag">Laravel</a>, <a class="p-category" href="/tags/NPM/" rel="tag">NPM</a>, <a class="p-category" href="/tags/Nginx/" rel="tag">Nginx</a>, <a class="p-category" href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/" rel="tag">反向代理</a>, <a class="p-category" href="/tags/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/" rel="tag">问题排查</a>
-    </div>
-
-
-    </div>
-  </header>
-  
-
-  <div class="content e-content" itemprop="articleBody">
-    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在阿里云服务器上部署一个基于 Laravel 12 + Filament v4 的项目（代号“土豆食堂”），使用 Docker Compose 容器化部署，后端 Nginx + PHP-FPM，前端通过 Nginx Proxy Manager (NPM) 实现 HTTPS 反向代理。部署完成后，一切看似正常，但访问应用时发现前端资源（如 Filament 的 <code>app.js</code>）的 URL 被错误生成成 <code>https://lynx.wkarrow.top:80/js/filament/filament/app.js?v=4.1.6.0</code>，多出的 <code>:80</code> 端口导致浏览器无法加载资源，报 404 错误。</p>
+<body data-search-index="/search-index.json">
+<a class="skip" href="#main">跳到正文</a>
+<header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
+<a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
+<button class="theme" type="button">跟随系统</button></nav></header>
+<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案</h1><div class="meta"><time datetime="2025-10-13T02:00:00.000Z">2025-10-13</time> · NightingaleWK · 更新于 2025-10-13<br><a href="/categories/Docker/">Docker</a></div></div>
+<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%A4%8D%E7%8E%B0%E4%B8%8E%E5%88%86%E6%9E%90"><span class="toc-text">问题复现与分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0"><span class="toc-text">环境概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-text">故障现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-text">根因分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%8E%E7%AB%AF-Nginx-%E9%85%8D%E7%BD%AE"><span class="toc-text">步骤：修改后端 Nginx 配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95"><span class="toc-text">验证与测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-text">总结与建议</span></a></li></ol></details>
+<div class="prose"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近在阿里云服务器上部署一个基于 Laravel 12 + Filament v4 的项目（代号“土豆食堂”），使用 Docker Compose 容器化部署，后端 Nginx + PHP-FPM，前端通过 Nginx Proxy Manager (NPM) 实现 HTTPS 反向代理。部署完成后，一切看似正常，但访问应用时发现前端资源（如 Filament 的 <code>app.js</code>）的 URL 被错误生成成 <code>https://lynx.wkarrow.top:80/js/filament/filament/app.js?v=4.1.6.0</code>，多出的 <code>:80</code> 端口导致浏览器无法加载资源，报 404 错误。</p>
 <p>这不是代码 bug，而是典型的 HTTPS 代理到 HTTP 后端的头部传递问题。NPM 默认将 <code>X-Forwarded-Port</code> 设置为后端端口 80，而 Laravel 在生成资产 URL 时会根据此头部附加端口，导致与 HTTPS scheme 不匹配。</p>
 <p>本文记录了问题排查与最终解决方案，重点分享后端 Nginx 的备选修复方法（适用于 NPM 配置无效的情况）。希望对类似部署遇到坑的开发者有帮助！</p>
 <h2 id="问题复现与分析"><a href="#问题复现与分析" class="headerlink" title="问题复现与分析"></a>问题复现与分析</h2><h3 id="环境概述"><a href="#环境概述" class="headerlink" title="环境概述"></a>环境概述</h3><ul>
@@ -227,7 +70,7 @@
 <ul>
 <li><strong>解释</strong>：<ul>
 <li><code>set $real_port $http_x_forwarded_port;</code>：默认使用传入端口。</li>
-<li><code>if ($http_x_forwarded_proto = &quot;https&quot;) &#123; set $real_port &quot;443&quot;; &#125;</code>：如果 scheme 是 HTTPS，则强制覆盖为 443（忽略后端 80）。</li>
+<li><code>if ($http_x_forwarded_proto = &quot;https&quot;) { set $real_port &quot;443&quot;; }</code>：如果 scheme 是 HTTPS，则强制覆盖为 443（忽略后端 80）。</li>
 <li>最后用 <code>$real_port</code> 替换原参数，确保 Laravel 读取正确端口。</li>
 </ul>
 </li>
@@ -263,136 +106,9 @@
 </ul>
 <hr>
 <p><em>本文基于实际部署经验撰写，如有疑问，欢迎讨论。</em></p>
-
-  </div>
-</article>
-
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-        
-          <li><a href="/">首页</a></li>
-        
-          <li><a href="/about/">关于</a></li>
-        
-          <li><a href="/archives/">归档</a></li>
-        
-          <li><a href="/tags/">标签</a></li>
-        
-          <li><a href="/categories/">分类</a></li>
-        
-          <li><a href="/search/">搜索</a></li>
-        
-          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
-        
-      </ul>
-    </div>
-
-    
-    
-      <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E5%A4%8D%E7%8E%B0%E4%B8%8E%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">问题复现与分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E6%A6%82%E8%BF%B0"><span class="toc-number">2.1.</span> <span class="toc-text">环境概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E7%8E%B0%E8%B1%A1"><span class="toc-number">2.2.</span> <span class="toc-text">故障现象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-number">2.3.</span> <span class="toc-text">根因分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4%EF%BC%9A%E4%BF%AE%E6%94%B9%E5%90%8E%E7%AB%AF-Nginx-%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">步骤：修改后端 Nginx 配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81%E4%B8%8E%E6%B5%8B%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text">验证与测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%BB%BA%E8%AE%AE"><span class="toc-number">5.</span> <span class="toc-text">总结与建议</span></a></li></ol>
-      </div>
-    
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&text=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&is_video=false&description=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案&body=Check out this article: https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&name=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2025/10/13/80.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%AE%B9%E5%99%A8%E5%8C%96%E9%83%A8%E7%BD%B2%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E5%90%8E%EF%BC%8C%E8%B5%84%E6%BA%90%E9%93%BE%E6%8E%A5%E5%A4%9A%E5%87%BA%E4%B8%AA%2080%20%E7%AB%AF%E5%8F%A3%E5%AD%97%E6%A0%B7%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&t=Laravel 项目容器化部署生产环境后，资源链接多出个 80 端口字样解决方案"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
 </div>
-
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
-      
-        
-          2020-2026
-            NightingaleWK
-              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
-  </div>
-  <div class="footer-right"></div>
-</footer>
-    </div>
-    <!-- styles -->
-
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
-
-
-
-<!-- clipboard -->
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功！");
-      e.clearSelection();
-    })
-  })
-  </script>
-
-
-<script src="/js/main.js"></script>
-
-<!-- search -->
-
-<!-- Baidu Analytics -->
-
-<!-- Cloudflare Analytics -->
-
-<!-- Disqus Comments -->
-
-<!-- utterances Comments -->
-
-</body>
-</html>
+<div class="inline-links"><a href="/tags/Laravel/">#Laravel</a><a href="/tags/Docker/">#Docker</a><a href="/tags/Nginx/">#Nginx</a><a href="/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">#反向代理</a><a href="/tags/NPM/">#NPM</a><a href="/tags/HTTPS/">#HTTPS</a><a href="/tags/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/">#问题排查</a></div>
+<div class="post-bottom"><a href="/2025/12/09/81.%20Gemini%20Rules/">上一篇：Gemini Rules</a><a href="/2025/10/10/79.%20%E5%9C%A8%20Ubuntu%2024.04%20%E7%94%A8%20APT%20%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%9A%84%20Docker%20Engine%20%E7%9A%84%E6%96%B9%E6%B3%95/">下一篇：在 Ubuntu 24.04 用 APT 安装最新的 Docker Engine 的方法</a></div></article>
+</main>
+<footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+</body></html>

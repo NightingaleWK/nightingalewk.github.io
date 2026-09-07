@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang=zh>
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <!-- so meta -->
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <link rel="alternate" type="application/rss+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/rss.xml%7D" />
-  <link rel="alternate" type="application/atom+xml" title="雪漫城的风宅"
-    href="https://nightingalewk.cn/atom.xml" />
-  <link rel="alternate" type="application/json" title="雪漫城的风宅" href="https://nightingalewk.cn/feed.json" />
-  <meta name="sogou_site_verification" content="J617qA05Ne" />
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事） · 雪漫城的风宅</title>
+  <meta name="description" content="Laravel Sail 开发环境部署一把过（番外篇）：基于实际生产环境的硬件配置分析（CPU/内存/磁盘）及现代化 PHP 全栈开发工具箱索引。">
+  <link rel="canonical" href="https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/">
   <meta name="description" content="Laravel Sail 开发环境部署一把过（番外篇）：基于实际生产环境的硬件配置分析（CPU&#x2F;内存&#x2F;磁盘）及现代化 PHP 全栈开发工具箱索引。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）">
@@ -20,177 +14,26 @@
 <meta property="og:description" content="Laravel Sail 开发环境部署一把过（番外篇）：基于实际生产环境的硬件配置分析（CPU&#x2F;内存&#x2F;磁盘）及现代化 PHP 全栈开发工具箱索引。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-01-27T02:00:00.000Z">
-<meta property="article:modified_time" content="2026-01-22T06:12:41.942Z">
+<meta property="article:modified_time" content="2026-01-22T06:12:41.000Z">
 <meta property="article:author" content="NightingaleWK">
 <meta property="article:tag" content="Hardware">
 <meta property="article:tag" content="Laravel">
 <meta property="article:tag" content="Sail">
 <meta property="article:tag" content="Tooling">
 <meta name="twitter:card" content="summary">
-    
-      
-        
-          
-                    <link rel="shortcut icon" href="/images/favicon.ico">
-                    
-                      
-                        
-                          
-                                    <link rel="icon" type="image/png" href="/images/favicon-192x192.png"
-                                      sizes="192x192">
-                                    
-                                      
-                                        
-                                          
-                                                    <link rel="apple-touch-icon" sizes="180x180"
-                                                      href="/images/apple-touch-icon.png">
-                                                    
-                                                      
-                                                        
-                                                          <!-- title -->
-                                                          <title>
-                                                            Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）
-                                                          </title>
-                                                          <!-- async scripts -->
-                                                          <!-- Google Analytics -->
-
-
-                                                            <!-- Umami Analytics -->
-
-
-                                                              <!-- styles -->
-                                                              
-<link rel="stylesheet" href="/css/style.css">
-
-                                                                <!-- persian styles -->
-                                                                
-                                                                      <!-- rss -->
-                                                                      
-                                                                            
-                                                                              <link rel="alternate"
-                                                                                href="/true"
-                                                                                title="雪漫城的风宅"
-                                                                                type="application/atom+xml" />
-                                                                              
-                                                                                <!-- mathjax -->
-                                                                                
+  <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="/css/site.css">
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a href="/tags/">标签</a></li><!--
-     --><!--
-       --><li><a href="/categories/">分类</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li><!--
-     -->
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" aria-label="上一篇" href="/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="下一篇" href="/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）&body=Check out this article: https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    
-    
-      <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E5%8F%82%E8%80%83"><span class="toc-number">1.</span> <span class="toc-text">硬件选型参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E4%BD%9C%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">1. 生产力工作站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%BB%E6%B5%81%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 主流开发配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BE%BF%E6%90%BA%E7%A7%BB%E5%8A%A8%E7%AB%AF"><span class="toc-number">4.</span> <span class="toc-text">3. 便携移动端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">硬件选型总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%A8%E6%A0%88%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="toc-number">6.</span> <span class="toc-text">4. 全栈工具链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">6.1.</span> <span class="toc-text">核心开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B8%8E%E8%BF%90%E7%BB%B4"><span class="toc-number">6.2.</span> <span class="toc-text">基础设施与运维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E4%BD%9C%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%8A%9B"><span class="toc-number">6.3.</span> <span class="toc-text">协作与生产力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">7.</span> <span class="toc-text">结语</span></a></li></ol>
-      </div>
-    
-  </span>
-</div>
-
-    
-    <div class="content index py4 ">
-        
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle p-name" itemprop="name headline">
-        Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">NightingaleWK</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2026-01-27T02:00:00.000Z" class="dt-published" itemprop="datePublished">2026-01-27</time>
-        
-        (Updated: <time datetime="2026-01-22T06:12:41.942Z" class="dt-updated" itemprop="dateModified">2026-01-22</time>)
-        
-      
-    </div>
-
-
-      
-    <div class="article-category">
-        <i class="fa-solid fa-archive"></i>
-        <a class="category-link" href="/categories/Laravel/">Laravel</a>
-    </div>
-
-
-      
-    <div class="article-tag">
-        <i class="fa-solid fa-tag"></i>
-        <a class="p-category" href="/tags/Hardware/" rel="tag">Hardware</a>, <a class="p-category" href="/tags/Laravel/" rel="tag">Laravel</a>, <a class="p-category" href="/tags/Sail/" rel="tag">Sail</a>, <a class="p-category" href="/tags/Tooling/" rel="tag">Tooling</a>
-    </div>
-
-
-    </div>
-  </header>
-  
-
-  <div class="content e-content" itemprop="articleBody">
-    <h2 id="硬件选型参考"><a href="#硬件选型参考" class="headerlink" title="硬件选型参考"></a>硬件选型参考</h2><p>硬件部分是我自己正在使用的配置，可供参考。</p>
+<body data-search-index="/search-index.json">
+<a class="skip" href="#main">跳到正文</a>
+<header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
+<a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
+<button class="theme" type="button">跟随系统</button></nav></header>
+<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）</h1><div class="meta"><time datetime="2026-01-27T02:00:00.000Z">2026-01-27</time> · NightingaleWK<br><a href="/categories/Laravel/">Laravel</a></div></div>
+<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E5%8F%82%E8%80%83"><span class="toc-text">硬件选型参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E4%BD%9C%E7%AB%99"><span class="toc-text">1. 生产力工作站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%BB%E6%B5%81%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE"><span class="toc-text">2. 主流开发配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BE%BF%E6%90%BA%E7%A7%BB%E5%8A%A8%E7%AB%AF"><span class="toc-text">3. 便携移动端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="toc-text">硬件选型总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%A8%E6%A0%88%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="toc-text">4. 全栈工具链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-text">核心开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B8%8E%E8%BF%90%E7%BB%B4"><span class="toc-text">基础设施与运维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E4%BD%9C%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%8A%9B"><span class="toc-text">协作与生产力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></details>
+<div class="prose"><h2 id="硬件选型参考"><a href="#硬件选型参考" class="headerlink" title="硬件选型参考"></a>硬件选型参考</h2><p>硬件部分是我自己正在使用的配置，可供参考。</p>
 <p><strong>Laravel Sail</strong> 基于 Docker 容器化架构，其对硬件资源（特别是内存与 I&#x2F;O）的需求显著高于传统集成环境。以下基于实际生产场景，提供不同层级的配置基准供选购参考。</p>
 <hr>
 <h2 id="1-生产力工作站"><a href="#1-生产力工作站" class="headerlink" title="1. 生产力工作站"></a>1. 生产力工作站</h2><p><em>适用场景</em>：重度开发、微服务架构、本地 LLM 运行、多项目并行。</p>
@@ -292,136 +135,9 @@
 </ul>
 <hr>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p><strong>工欲善其事，必先利其器</strong>。<br>标准化的硬件基准与现代化的软件工具链，是保障开发效率与代码质量的物理基础。希望这份清单能为团队的技术选型提供参考。</p>
-
-  </div>
-</article>
-
-
-
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
-
-    <div id="nav-footer" style="display: none">
-      <ul>
-        
-          <li><a href="/">首页</a></li>
-        
-          <li><a href="/about/">关于</a></li>
-        
-          <li><a href="/archives/">归档</a></li>
-        
-          <li><a href="/tags/">标签</a></li>
-        
-          <li><a href="/categories/">分类</a></li>
-        
-          <li><a href="/search/">搜索</a></li>
-        
-          <li><a target="_blank" rel="noopener" href="http://github.com/NightingaleWK">项目</a></li>
-        
-      </ul>
-    </div>
-
-    
-    
-      <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E5%8F%82%E8%80%83"><span class="toc-number">1.</span> <span class="toc-text">硬件选型参考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%9F%E4%BA%A7%E5%8A%9B%E5%B7%A5%E4%BD%9C%E7%AB%99"><span class="toc-number">2.</span> <span class="toc-text">1. 生产力工作站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%BB%E6%B5%81%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">2. 主流开发配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BE%BF%E6%90%BA%E7%A7%BB%E5%8A%A8%E7%AB%AF"><span class="toc-number">4.</span> <span class="toc-text">3. 便携移动端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A1%AC%E4%BB%B6%E9%80%89%E5%9E%8B%E6%80%BB%E7%BB%93"><span class="toc-number">5.</span> <span class="toc-text">硬件选型总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%85%A8%E6%A0%88%E5%B7%A5%E5%85%B7%E9%93%BE"><span class="toc-number">6.</span> <span class="toc-text">4. 全栈工具链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">6.1.</span> <span class="toc-text">核心开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E4%B8%8E%E8%BF%90%E7%BB%B4"><span class="toc-number">6.2.</span> <span class="toc-text">基础设施与运维</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E4%BD%9C%E4%B8%8E%E7%94%9F%E4%BA%A7%E5%8A%9B"><span class="toc-number">6.3.</span> <span class="toc-text">协作与生产力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">7.</span> <span class="toc-text">结语</span></a></li></ol>
-      </div>
-    
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&text=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&is_video=false&description=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）&body=Check out this article: https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&title=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&name=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://nightingalewk.cn/2026/01/27/87.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%95%AA%E5%A4%96%E7%AF%87%EF%BC%9A%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B%EF%BC%89/&t=Laravel Sail 开发环境部署一把过（番外篇：工欲善其事）"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        
-          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
-        
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
 </div>
-
-        
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
-      
-        
-          2020-2026
-            NightingaleWK
-              <a href="https://beian.miit.gov.cn/" target="_blank">鲁ICP备17046331号-3</a>
-  </div>
-  <div class="footer-right"></div>
-</footer>
-    </div>
-    <!-- styles -->
-
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
-
-
-
-<!-- clipboard -->
-
-  
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
-  
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
-      }
-    });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功！");
-      e.clearSelection();
-    })
-  })
-  </script>
-
-
-<script src="/js/main.js"></script>
-
-<!-- search -->
-
-<!-- Baidu Analytics -->
-
-<!-- Cloudflare Analytics -->
-
-<!-- Disqus Comments -->
-
-<!-- utterances Comments -->
-
-</body>
-</html>
+<div class="inline-links"><a href="/tags/Laravel/">#Laravel</a><a href="/tags/Sail/">#Sail</a><a href="/tags/Hardware/">#Hardware</a><a href="/tags/Tooling/">#Tooling</a></div>
+<div class="post-bottom"><a href="/2026/01/29/88.%20OSM%20%E7%A6%BB%E7%BA%BF%E5%9C%B0%E5%9B%BE%E6%9C%8D%E5%8A%A1%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/">上一篇：OSM 离线地图服务私有化部署方案</a><a href="/2026/01/26/86.%20Laravel%20Sail%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2%E4%B8%80%E6%8A%8A%E8%BF%87%EF%BC%88%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E7%AF%87%EF%BC%89/">下一篇：Laravel Sail 开发环境部署一把过（疑难杂症篇）</a></div></article>
+</main>
+<footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+</body></html>
