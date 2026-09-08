@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +23,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -28,7 +33,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</h1><div class="meta"><time datetime="2023-07-10T06:21:00.000Z">2023-07-10</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/laravel/">laravel</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>配置并部署 laravel 10 项目到 ubuntu 22.04.2 服务器</h1><div class="meta"><time datetime="2023-07-10T06:21:00.000Z">2023-07-10</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/laravel/">laravel</a></div></div>
 <details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#ubuntu-%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-text">ubuntu 镜像下载与安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%BF%85%E8%A6%81%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="toc-text">系统必要的配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-oneinstack"><span class="toc-text">安装并配置 oneinstack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE"><span class="toc-text">部署项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#php-%E9%85%8D%E7%BD%AE"><span class="toc-text">php 配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#composer-%E5%AE%89%E8%A3%85%E4%B8%8E%E6%89%A7%E8%A1%8C"><span class="toc-text">composer 安装与执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#laravel-%E5%88%9D%E5%A7%8B%E5%8C%96%E9%85%8D%E7%BD%AE"><span class="toc-text">laravel 初始化配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE-nginx"><span class="toc-text">配置 nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E8%B0%83%E6%95%B4"><span class="toc-text">文件权限调整</span></a></li></ol></details>
 <div class="prose"><h2 id="ubuntu-镜像下载与安装"><a href="#ubuntu-镜像下载与安装" class="headerlink" title="ubuntu 镜像下载与安装"></a>ubuntu 镜像下载与安装</h2><p>ubuntu 官方可免费下载服务器版本的 iso 镜像文件，我们使用本镜像进行最小化安装即可。我自己的操作是把镜像交给我们公司的网络运维工程师，让他给我那这个镜像开了个虚机，分配了一个内网 IP 用来测试。</p>
 <p>记得跟网络运维工程师说一下让服务器通互联网，再配置一下阿里云的源</p>

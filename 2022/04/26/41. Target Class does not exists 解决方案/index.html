@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +23,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -28,7 +33,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Target Class does not exists 解决方案</h1><div class="meta"><time datetime="2022-04-26T04:45:00.000Z">2022-04-26</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/laravel/">laravel</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Target Class does not exists 解决方案</h1><div class="meta"><time datetime="2022-04-26T04:45:00.000Z">2022-04-26</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/laravel/">laravel</a></div></div>
 <details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%83%85%E5%86%B5"><span class="toc-text">问题情况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">2. 解决方案</span></a></li></ol></details>
 <div class="prose"><h2 id="问题情况"><a href="#问题情况" class="headerlink" title="问题情况"></a>问题情况</h2><p>在路由里写了一个 API 路由</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Route::prefix(&#x27;v1&#x27;)-&gt;namespace(&#x27;Api&#x27;)-&gt;name(&#x27;api.v1.&#x27;)-&gt;group(function () &#123;</span><br><span class="line">    // 短信验证码</span><br><span class="line">    Route::post(&#x27;verificationCodes&#x27;, [VerificationCodesController::class, &#x27;store&#x27;])</span><br><span class="line">        -&gt;name(&#x27;verificationCodes.store&#x27;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>

@@ -7,6 +7,7 @@ function applyTheme() {
   const label = {system:'跟随系统',light:'浅色',dark:'深色'}[choice];
   themeButton.textContent = label;
   themeButton.setAttribute('aria-label', `当前${label}，点击切换配色`);
+  document.dispatchEvent(new Event('breezehome:themechange'));
 }
 if (!['system','light','dark'].includes(choice)) choice = 'system';
 applyTheme();
@@ -25,6 +26,9 @@ document.querySelectorAll('.prose > table, .prose table:not(figure.highlight tab
 });
 document.querySelectorAll('.prose figure.highlight, .prose pre').forEach(block => {
   if(block.closest('.code-block') || (block.tagName==='PRE' && block.closest('figure.highlight'))) return;
+  block.tabIndex=0;
+  block.setAttribute('role','region');
+  block.setAttribute('aria-label','可横向滚动的代码');
   const wrapper=document.createElement('div');wrapper.className='code-block';
   const bar=document.createElement('div');bar.className='code-head';
   const label=document.createElement('span');label.textContent=block.className.replace(/highlight|hljs/g,'').trim() || '代码';

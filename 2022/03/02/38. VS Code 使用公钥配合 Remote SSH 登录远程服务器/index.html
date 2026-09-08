@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +23,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -28,7 +33,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>VS Code 使用公钥配合 Remote SSH 登录远程服务器</h1><div class="meta"><time datetime="2022-03-02T09:00:00.000Z">2022-03-02</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>VS Code 使用公钥配合 Remote SSH 登录远程服务器</h1><div class="meta"><time datetime="2022-03-02T09:00:00.000Z">2022-03-02</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></div></div>
 <details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%94%9F%E6%88%90%E5%85%AC%E9%92%A5%E7%A7%81%E9%92%A5"><span class="toc-text">1.生成公钥私钥</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%B8%8A%E4%BC%A0%E5%85%AC%E9%92%A5%E5%88%B0%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">2.上传公钥到远程服务器</span></a></li></ol></details>
 <div class="prose"><p>为了随时随地的使用不同设备链接同一个开发环境，也因为电脑赢弱的性能带不动开发环境，我决定使用远端开发的思路，于是就有了如何免密访问服务器的方案</p>
 <span id="more"></span>

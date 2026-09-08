@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +23,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -28,7 +33,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>解决 swap 占用过高的问题</h1><div class="meta"><time datetime="2022-09-15T08:56:00.000Z">2022-09-15</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/linux/">linux</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>解决 swap 占用过高的问题</h1><div class="meta"><time datetime="2022-09-15T08:56:00.000Z">2022-09-15</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/linux/">linux</a></div></div>
 
 <div class="prose"><p>公司某项目有 2 个机子的 swap 占满了，监控他们的 zabbix 平台一直提示高占用，于是开始着手解决一下这个问题。</p>
 <p>首先我们释放 swap 存储的文件导内存</p>
@@ -40,7 +45,7 @@
 <p>至此操作结束</p>
 </div>
 <div class="inline-links"><a href="/tags/swap/">#swap</a></div>
-<div class="post-bottom"><a href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/">上一篇：laravel 表单请求验证简明示例</a><a href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">下一篇：使用 net time 实现内网时间同步</a></div></article>
+<div class="post-bottom"><a href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/">上一篇：laravel 表单请求验证简明示例</a><a href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/">下一篇：sshpass 中使用 awk 的坑</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
 </body></html>

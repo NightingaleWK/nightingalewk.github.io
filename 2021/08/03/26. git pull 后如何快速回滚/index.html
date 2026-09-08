@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -19,7 +22,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -27,14 +32,14 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>git pull 后如何快速回滚</h1><div class="meta"><time datetime="2021-08-03T04:00:00.000Z">2021-08-03</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/git/">git</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>git pull 后如何快速回滚</h1><div class="meta"><time datetime="2021-08-03T04:00:00.000Z">2021-08-03</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/git/">git</a></div></div>
 
 <div class="prose"><p>在服务器执行 <code>git pull</code> 后发现生产环境报错，急需回滚到上一个安全版本，这时候我们需要运行 <code>git reflog</code> 命令查看你的历史变更记录</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">[root@user www.xxx.com]# git reflog</span><br><span class="line">efb4b67 HEAD@&#123;0&#125;: pull: Fast-forward</span><br><span class="line">fb7675d HEAD@&#123;1&#125;: pull: Fast-forward</span><br><span class="line">77d8371 HEAD@&#123;2&#125;: pull: Fast-forward</span><br><span class="line">3fa69a3 HEAD@&#123;3&#125;: pull: Fast-forward</span><br><span class="line">fa72965 HEAD@&#123;4&#125;: pull: Fast-forward</span><br><span class="line">ffe128e HEAD@&#123;5&#125;: pull: Fast-forward</span><br><span class="line">c511308 HEAD@&#123;6&#125;: pull: Fast-forward</span><br><span class="line">ef21f31 HEAD@&#123;7&#125;: pull: Fast-forward</span><br><span class="line">8082a1b HEAD@&#123;8&#125;: pull: Fast-forward</span><br><span class="line">7551f60 HEAD@&#123;9&#125;: pull: Fast-forward</span><br><span class="line">0486156 HEAD@&#123;10&#125;: pull: Fast-forward</span><br><span class="line">2be1fb0 HEAD@&#123;11&#125;: pull: Fast-forward</span><br><span class="line">b3aec43 HEAD@&#123;12&#125;: pull: Fast-forward</span><br><span class="line">c3318a4 HEAD@&#123;13&#125;: pull: Fast-forward</span><br><span class="line">8ab54e1 HEAD@&#123;14&#125;: pull: Fast-forward</span><br><span class="line">966c7ae HEAD@&#123;15&#125;: pull: Fast-forward</span><br><span class="line">2e8a177 HEAD@&#123;16&#125;: pull: Fast-forward</span><br><span class="line">5800282 HEAD@&#123;17&#125;: pull: Fast-forward</span><br><span class="line">3e70800 HEAD@&#123;18&#125;: pull: Fast-forward</span><br><span class="line">e4f45d9 HEAD@&#123;19&#125;: pull: Fast-forward</span><br><span class="line">9069d11 HEAD@&#123;20&#125;: pull: Fast-forward</span><br><span class="line">8b45ce5 HEAD@&#123;21&#125;: pull: Fast-forward</span><br><span class="line">95a2d13 HEAD@&#123;22&#125;: pull: Fast-forward</span><br><span class="line">d6ac3b6 HEAD@&#123;23&#125;: reset: moving to origin/master</span><br><span class="line">99213c9 HEAD@&#123;24&#125;: pull: Fast-forward</span><br><span class="line">d9b90ca HEAD@&#123;25&#125;: reset: moving to origin/master</span><br><span class="line">d7258c4 HEAD@&#123;26&#125;: clone: from https://e.coding.net/xxxxxxxxxxxxxxxxxxxxxx.git</span><br></pre></td></tr></table></figure>
 <p>最上面的那条记录就是问题的那次，我们需要回滚到上一次，即 <code>fb7675d</code> 这里，输入如下指令即可：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard fb7675d</span><br></pre></td></tr></table></figure></div>
 <div class="inline-links"></div>
-<div class="post-bottom"><a href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/">上一篇：解决 ohmyzsh 读取 git 信息缓慢的问题</a><a href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/">下一篇：Dcat-Admin 主题色变更的避坑方法</a></div></article>
+<div class="post-bottom"><a href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/">上一篇：Hexo 博客升级流程</a><a href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/">下一篇：Dcat-Admin 主题色变更的避坑方法</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
 </body></html>

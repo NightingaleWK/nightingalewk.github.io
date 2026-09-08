@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -21,7 +24,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -29,7 +34,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>sshpass 中使用 awk 的坑</h1><div class="meta"><time datetime="2022-08-30T06:20:00.000Z">2022-08-30</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/linux/">linux</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>sshpass 中使用 awk 的坑</h1><div class="meta"><time datetime="2022-08-30T06:20:00.000Z">2022-08-30</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/linux/">linux</a></div></div>
 
 <div class="prose"><p>之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。</p>
 <p>最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。</p>
@@ -39,7 +44,7 @@
 <p>想在 sshpass 中执行正确，就应该把 <code>&amp;</code> 转义，在其前面加上 <code>\</code> 即可，最终结果为：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshpass -p Password ssh root@192.168.1.1 &quot;free -m | sed -n &#x27;2p&#x27; | awk &#x27;&#123;print &quot;Mem used is &quot;\$3/\$2*100&#125;&#x27;&quot; &gt;&gt;test.txt</span><br></pre></td></tr></table></figure></div>
 <div class="inline-links"><a href="/tags/sshppass/">#sshppass</a><a href="/tags/awk/">#awk</a></div>
-<div class="post-bottom"><a href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">上一篇：使用 net time 实现内网时间同步</a><a href="/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/">下一篇：在 GIT 中 使用 GPG 签名</a></div></article>
+<div class="post-bottom"><a href="/2022/09/15/45.%20%E8%A7%A3%E5%86%B3%20swap%20%E5%8D%A0%E7%94%A8%E8%BF%87%E9%AB%98%E7%9A%84%E9%97%AE%E9%A2%98/">上一篇：解决 swap 占用过高的问题</a><a href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/">下一篇：使用 net time 实现内网时间同步</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
 </body></html>

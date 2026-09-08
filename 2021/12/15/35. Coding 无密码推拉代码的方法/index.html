@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -20,7 +23,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -28,7 +33,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Coding 无密码推拉代码的方法</h1><div class="meta"><time datetime="2021-12-15T05:00:00.000Z">2021-12-15</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/git/">git</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Coding 无密码推拉代码的方法</h1><div class="meta"><time datetime="2021-12-15T05:00:00.000Z">2021-12-15</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/git/">git</a></div></div>
 <details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%85%AC%E9%92%A5"><span class="toc-text">生成公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">添加公钥</span></a></li></ol></details>
 <div class="prose"><h2 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 创建新的 SSH 私钥与公钥秘钥对，输入你的邮箱作为标签</span><br><span class="line">ssh-keygen -m PEM -t rsa -b 4096 -C &quot;your.email@example.com&quot;  </span><br><span class="line"></span><br><span class="line">// 推荐使用默认地址</span><br><span class="line">Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  </span><br><span class="line"></span><br><span class="line">// 此处直接回车即可；若设置密码，则每次使用 SSH 方式推送代码时都会要求输入密码</span><br><span class="line">Enter passphrase (empty for no passphrase):  </span><br></pre></td></tr></table></figure>
 <span id="more"></span>

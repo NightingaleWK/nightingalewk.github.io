@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -21,7 +24,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -29,7 +34,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>laravel 项目执行 sail up 报 80 端口占用问题</h1><div class="meta"><time datetime="2023-11-16T09:00:00.000Z">2023-11-16</time> · NightingaleWK · 更新于 2023-11-16<br><a href="/categories/laravel/">laravel</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>laravel 项目执行 sail up 报 80 端口占用问题</h1><div class="meta"><time datetime="2023-11-16T09:00:00.000Z">2023-11-16</time> · NightingaleWK · 更新于 2023-11-16<br><a href="/categories/laravel/">laravel</a></div></div>
 
 <div class="prose"><p>今天给一台新机器装好 laravel sail 环境后，在最后一步启动项目时，报错如下：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">wangkai@Precision-<span class="number">7920</span>:~/code/daochenglin$ sail up -d</span><br><span class="line">[+] Building <span class="number">0.0</span>s (<span class="number">0</span>/<span class="number">0</span>)                                                                          docker:<span class="keyword">default</span></span><br><span class="line">[+] Running <span class="number">8</span>/<span class="number">8</span></span><br><span class="line"> ✔ Network daochenglin_sail              Created                                                           <span class="number">0.0</span>s</span><br><span class="line"> ✔ Container daochenglin-meilisearch-<span class="number">1</span>   Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-selenium-<span class="number">1</span>      Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-redis-<span class="number">1</span>         Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-memcached-<span class="number">1</span>     Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-mysql-<span class="number">1</span>         Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-mailpit-<span class="number">1</span>       Started                                                           <span class="number">0.1</span>s</span><br><span class="line"> ✔ Container daochenglin-laravel.test-<span class="number">1</span>  Created                                                           <span class="number">0.1</span>s</span><br><span class="line"><span class="built_in">Error</span> response <span class="keyword">from</span> daemon: Ports are not available: exposing port TCP <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">80</span> -&gt; <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">0</span>: listen tcp <span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">80</span>: bind: An attempt was made to access a socket in a way forbidden by its access permissions.</span><br></pre></td></tr></table></figure>

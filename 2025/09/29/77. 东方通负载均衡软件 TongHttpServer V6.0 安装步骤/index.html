@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -22,7 +25,9 @@
 <meta name="twitter:card" content="summary">
   <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
   <link rel="stylesheet" href="/css/site.css">
+  
   <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body data-search-index="/search-index.json">
@@ -30,7 +35,7 @@
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
-<main id="main" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>东方通负载均衡软件 TongHttpServer V6.0 安装步骤</h1><div class="meta"><time datetime="2025-09-29T06:00:00.000Z">2025-09-29</time> · NightingaleWK · 更新于 2025-09-29<br><a href="/categories/linux/">linux</a></div></div>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>东方通负载均衡软件 TongHttpServer V6.0 安装步骤</h1><div class="meta"><time datetime="2025-09-29T06:00:00.000Z">2025-09-29</time> · NightingaleWK · 更新于 2025-09-29<br><a href="/categories/linux/">linux</a></div></div>
 <details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-text">1. 写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87"><span class="toc-text">2. 前期准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B7%A5%E5%85%B7%E7%94%B3%E8%AF%B7"><span class="toc-text">3. 工具申请</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%89%E8%A3%85"><span class="toc-text">4. 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C"><span class="toc-text">5. 防火墙放行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-THS-%E6%9C%8D%E5%8A%A1%E5%90%AF%E5%8A%A8"><span class="toc-text">6. THS 服务启动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AA%8C%E8%AF%81"><span class="toc-text">验证</span></a></li></ol></details>
 <div class="prose"><h2 id="1-写在前面"><a href="#1-写在前面" class="headerlink" title="1. 写在前面"></a>1. 写在前面</h2><p>本文的出发点是公司开始信创化改造工作，需要对已有的工具进行国产化替换。我计划使用东方通负载均衡软件 TongHttpServer V6.0 替换经常使用的 Nginx，之后我将简称 TongHttpServer 为 ths。本文则是在此情况下编写的。</p>
 <h2 id="2-前期准备"><a href="#2-前期准备" class="headerlink" title="2. 前期准备"></a>2. 前期准备</h2><p>首先需要一台国产化服务器，这里公司给我开了一台虚机，使用的是银河麒麟操作系统 v10</p>
