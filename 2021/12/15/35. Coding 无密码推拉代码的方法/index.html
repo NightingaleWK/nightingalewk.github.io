@@ -28,13 +28,13 @@
   
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body data-search-index="/search-index.json">
+<body id="top" data-search-index="/search-index.json">
 <a class="skip" href="#main">跳到正文</a>
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Coding 无密码推拉代码的方法</h1><div class="meta"><time datetime="2021-12-15T05:00:00.000Z">2021-12-15</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/git/">git</a></div></div>
-<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%85%AC%E9%92%A5"><span class="toc-text">生成公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">添加公钥</span></a></li></ol></details>
+<details class="post-toc"><summary>文章目录</summary><div class="toc-scroll" role="navigation" aria-label="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%85%AC%E9%92%A5"><span class="toc-text">生成公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%85%AC%E9%92%A5"><span class="toc-text">添加公钥</span></a></li></ol></div></details>
 <div class="prose"><h2 id="生成公钥"><a href="#生成公钥" class="headerlink" title="生成公钥"></a>生成公钥</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 创建新的 SSH 私钥与公钥秘钥对，输入你的邮箱作为标签</span><br><span class="line">ssh-keygen -m PEM -t rsa -b 4096 -C &quot;your.email@example.com&quot;  </span><br><span class="line"></span><br><span class="line">// 推荐使用默认地址</span><br><span class="line">Enter file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]  </span><br><span class="line"></span><br><span class="line">// 此处直接回车即可；若设置密码，则每次使用 SSH 方式推送代码时都会要求输入密码</span><br><span class="line">Enter passphrase (empty for no passphrase):  </span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
@@ -48,4 +48,5 @@
 <div class="post-bottom"><a href="/2021/12/21/36.%20Git%20Pull%20%E5%BC%BA%E5%88%B6%E6%8B%89%E5%8F%96%E6%AD%A5%E9%AA%A4/">上一篇：Git Pull 强制拉取步骤</a><a href="/2021/12/15/34.%20laravel%20%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">下一篇：laravel 项目常用指令</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+<a class="back-to-top" href="#top" aria-label="回到顶部" title="回到顶部"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-6 6 6-6 6 6"/></svg></a>
 </body></html>

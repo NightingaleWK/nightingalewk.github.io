@@ -28,13 +28,13 @@
   
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body data-search-index="/search-index.json">
+<body id="top" data-search-index="/search-index.json">
 <a class="skip" href="#main">跳到正文</a>
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>使用 net time 实现内网时间同步</h1><div class="meta"><time datetime="2022-08-30T06:20:00.000Z">2022-08-30</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></div></div>
-<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-text">一、写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="toc-text">二、具体流程</span></a></li></ol></details>
+<details class="post-toc"><summary>文章目录</summary><div class="toc-scroll" role="navigation" aria-label="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="toc-text">一、写在前面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B"><span class="toc-text">二、具体流程</span></a></li></ol></div></details>
 <div class="prose"><p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p>
 <span id="more"></span>
 <h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p>
@@ -51,4 +51,5 @@
 <div class="post-bottom"><a href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/">上一篇：sshpass 中使用 awk 的坑</a><a href="/2022/07/26/42.%20%E5%9C%A8%20GIT%20%E4%B8%AD%20%E4%BD%BF%E7%94%A8%20GPG%20%E7%AD%BE%E5%90%8D/">下一篇：在 GIT 中 使用 GPG 签名</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+<a class="back-to-top" href="#top" aria-label="回到顶部" title="回到顶部"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-6 6 6-6 6 6"/></svg></a>
 </body></html>

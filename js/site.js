@@ -43,11 +43,32 @@ document.querySelectorAll('.copy').forEach(button => button.addEventListener('cl
   } catch { button.textContent = '请选中代码复制'; }
   setTimeout(() => button.textContent = '复制', 2000);
 }));
-const toc = document.querySelector('.toc');
+const backToTop = document.querySelector('.back-to-top');
+backToTop?.addEventListener('click', event => {
+  event.preventDefault();
+  window.scrollTo({top:0, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  document.querySelector('.brand')?.focus({preventScroll:true});
+});
+const toc = document.querySelector('.post-toc');
 if (toc) {
-  const wide = matchMedia('(min-width: 1250px)');
+  const wide = matchMedia('(min-width: 1320px)');
   toc.open = wide.matches;
   wide.addEventListener('change', () => {toc.open = wide.matches;});
+  toc.addEventListener('click', event => {
+    if (!wide.matches && event.target.closest('a')) {
+      toc.open = false;
+      toc.querySelector('summary').focus({preventScroll:true});
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !wide.matches && toc.open) {
+      toc.open = false;
+      toc.querySelector('summary').focus({preventScroll:true});
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!wide.matches && !toc.contains(event.target)) toc.open = false;
+  });
 }
 const form = document.querySelector('.search-form');
 if (form) {

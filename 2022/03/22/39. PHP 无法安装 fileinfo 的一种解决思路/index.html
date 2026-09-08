@@ -28,13 +28,13 @@
   
   <script defer src="/js/site.js"></script>
 <meta name="generator" content="Hexo 8.1.2"></head>
-<body data-search-index="/search-index.json">
+<body id="top" data-search-index="/search-index.json">
 <a class="skip" href="#main">跳到正文</a>
 <header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>PHP 无法安装 fileinfo 的一种解决思路</h1><div class="meta"><time datetime="2022-03-22T05:38:00.000Z">2022-03-22</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/php/">php</a></div></div>
-<details class="toc"><summary>文章目录</summary><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E4%BB%8B%E7%BB%8D"><span class="toc-text">系统环境介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E5%8F%8B%E4%BB%AC%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-text">网友们的思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol></details>
+<details class="post-toc"><summary>文章目录</summary><div class="toc-scroll" role="navigation" aria-label="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83%E4%BB%8B%E7%BB%8D"><span class="toc-text">系统环境介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E5%8F%8B%E4%BB%AC%E7%9A%84%E6%80%9D%E8%B7%AF"><span class="toc-text">网友们的思路</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol></div></details>
 <div class="prose"><p>最近拿到我司数据中心给的一台 8C16G 的虚机，预装 centos 7.9.2009 最新版本，使用 oneinstack 一键安装 lnmp 运行环境，硬是没给我装上 fileinfo 扩展，导致我的 laravel 8 项目中读取文件的各类操作均报错，这个问题还没找到解决方案。如下是我个人的一种解决思路，供大家参考</p>
 <span id="more"></span>
 <h1 id="系统环境介绍"><a href="#系统环境介绍" class="headerlink" title="系统环境介绍"></a>系统环境介绍</h1><ul>
@@ -65,4 +65,5 @@
 <div class="post-bottom"><a href="/2022/04/14/40.%20Laravel%20%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E9%85%8D%E7%BD%AE%E6%96%B9%E5%BC%8F/">上一篇：laravel 定时任务配置方式</a><a href="/2022/03/02/38.%20VS%20Code%20%E4%BD%BF%E7%94%A8%E5%85%AC%E9%92%A5%E9%85%8D%E5%90%88%20Remote%20SSH%20%E7%99%BB%E5%BD%95%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8/">下一篇：VS Code 使用公钥配合 Remote SSH 登录远程服务器</a></div></article>
 </main>
 <footer><p>© 2026 NightingaleWK</p><p><a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+<a class="back-to-top" href="#top" aria-label="回到顶部" title="回到顶部"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-6 6 6-6 6 6"/></svg></a>
 </body></html>
