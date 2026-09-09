@@ -118,3 +118,24 @@ if (form) {
   input.value = new URL(location.href).searchParams.get('q') || '';
   search();
 }
+
+const tagDirectory = document.querySelector('.tag-directory');
+if (tagDirectory) {
+  const input = tagDirectory.querySelector('#tag-query');
+  const items = [...tagDirectory.querySelectorAll('#all-tags li')];
+  const status = tagDirectory.querySelector('.tag-status');
+  if (items.length) tagDirectory.querySelector('.tag-filter').hidden = false;
+  function filterTags() {
+    const query = input.value.trim().toLocaleLowerCase();
+    let count = 0;
+    items.forEach(item => {
+      item.hidden = !item.dataset.tagName.toLocaleLowerCase().includes(query);
+      if (!item.hidden) count++;
+    });
+    status.hidden = !query;
+    status.textContent = query ? (count ? `找到 ${count} 个标签` : '没有匹配的标签，试试其他名称。') : '';
+  }
+  input.addEventListener('input', event => {if (!event.isComposing) filterTags();});
+  input.addEventListener('compositionend', filterTags);
+  filterTags();
+}

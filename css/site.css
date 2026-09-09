@@ -54,3 +54,22 @@ main:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--accent);
 .theme[data-mode=system] .theme-icon-system,.theme[data-mode=light] .theme-icon-light,.theme[data-mode=dark] .theme-icon-dark{display:block}
 @media(max-width:650px),(pointer:coarse){.theme{width:44px;height:44px;flex-basis:44px}.theme::before{inset:5px}}
 @media(prefers-reduced-motion:reduce){.theme,.theme::before{transition:none}}
+
+/* Tag directory: quiet emphasis and readable counts. */
+.tag-directory h2{font-size:16px;margin:0;font-weight:600}
+.tag-popular{padding:4px 0 28px;margin-bottom:28px;border-bottom:1px solid var(--line)}
+.tag-popular h2{margin-bottom:14px}
+.tag-directory .taxonomy.tags{gap:10px;margin:0}
+.tag-directory .tags li{max-width:100%;min-width:0}
+.tag-directory .tags a{display:flex;align-items:center;gap:12px;min-height:44px;padding:7px 12px;border:1px solid var(--line);border-radius:6px;font-size:14px;line-height:1.5}
+.tag-directory .tags a span{min-width:0;overflow-wrap:anywhere}
+.tag-directory .tags small{margin:0;padding:1px 6px;min-width:23px;border-radius:4px;background:var(--soft);font-size:11px;text-align:center;font-variant-numeric:tabular-nums;flex-shrink:0}
+.tag-directory .tag-popular a{background:color-mix(in srgb,var(--accent) 7%,var(--bg));border-color:color-mix(in srgb,var(--accent) 20%,var(--line));color:var(--accent)}
+.tag-directory .tag-popular small{background:var(--bg)}
+.tag-directory .tags a:hover,.tag-directory .tags a:focus-visible{border-color:var(--accent);background:var(--soft);color:var(--accent)}
+.tag-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.tag-filter input{width:240px;max-width:100%;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);font-size:14px}
+.tag-filter input::placeholder{color:var(--muted)}
+.tag-status{font-size:13px;margin:0 0 16px}
+@media(max-width:650px){.tag-toolbar{align-items:stretch;flex-direction:column;gap:12px}.tag-filter input{width:100%}.tag-popular{padding-bottom:24px;margin-bottom:24px}.tag-directory .taxonomy.tags{gap:8px}.tag-directory .tags a{padding-inline:10px;gap:9px}}
+@media print{.tag-filter{display:none}}
