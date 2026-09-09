@@ -28,6 +28,16 @@
 /* Print overrides the more specific dark palette. */
 @media (max-width:640px){header{align-items:flex-start;gap:12px;overflow:hidden}header nav{min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;gap:18px;padding-bottom:3px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a,header nav .theme{flex:0 0 auto}.friend-links{grid-template-columns:1fr}}@media print{:root,:root[data-theme=dark]{color-scheme:light;--bg:#fff;--text:#000;--muted:#444;--line:#aaa;--soft:#fff;--accent:#244d39;--code:#eee}}
 
+/* Compact category directory with full-row links. */
+.taxonomy.categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+.taxonomy.categories li{min-width:0;padding:0}
+.taxonomy.categories a{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding:10px 8px;border-radius:4px}
+.taxonomy.categories a:hover,.taxonomy.categories a:focus-visible{background:var(--soft)}
+.taxonomy.categories a span{min-width:0;overflow-wrap:anywhere}
+.taxonomy.categories small{flex-shrink:0;margin-left:0;font-variant-numeric:tabular-nums}
+@media(max-width:900px){.taxonomy.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}}
+@media(max-width:600px){.taxonomy.categories{grid-template-columns:1fr}}
+
 main:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 /* Hexo native highlighting and no-script fallbacks */
 .prose figure.highlight{margin:0;overflow:auto}.prose figure.highlight table{width:auto;border:0}.prose figure.highlight td{border:0;padding:0;min-width:0}.prose figure.highlight pre{padding:12px}.prose figure.highlight .gutter{color:var(--muted);border-right:1px solid var(--line)}.prose figure.highlight .gutter pre{padding-inline:10px}.toc ol{list-style:none;padding-left:12px;margin:6px 0}.toc>.toc{position:static;width:auto;padding:0}.prose>table{display:block;max-width:100%;overflow:auto}.inline-links{flex-wrap:wrap}.prose .keyword,.prose .literal{color:var(--accent)}
