@@ -580,11 +580,11 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> Git </tag>
             
             <tag> GitHub </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> 版本控制 </tag>
             
@@ -611,11 +611,11 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> 打印机 </tag>
             
             <tag> 京瓷 </tag>
-            
-            <tag> 教程 </tag>
             
         </tags>
       
@@ -1443,6 +1443,31 @@
     
     
     <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -1462,31 +1487,6 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
             
         </tags>
       
@@ -1833,31 +1833,6 @@
     
     
     <entry>
-      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
-      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> oh-my-zsh </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo 博客升级流程</title>
       <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
@@ -1875,6 +1850,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
+      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oh-my-zsh </tag>
             
         </tags>
       
@@ -1946,6 +1946,31 @@
     
     
     <entry>
+      <title>laravel 项目 Homestead 开发环境的搭建</title>
+      <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
+      <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="做好准备"><a href="#做好准备" class="headerlink" title="做好准备"></a>做好准备</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead &amp;&amp; vagrant up</span><br><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure><p>在虚拟机中进入 <code>code</code> 文件夹</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/code</span><br></pre></td></tr></table></figure><h1 id="Composer-加速"><a href="#Composer-加速" class="headerlink" title="Composer 加速"></a>Composer 加速</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span><br></pre></td></tr></table></figure><h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project laravel/laravel yourapp</span><br></pre></td></tr></table></figure><h1 id="修改-Hosts"><a href="#修改-Hosts" class="headerlink" title="修改 Hosts"></a>修改 Hosts</h1><p>首先找到 <code>Hosts</code> 文件，<code>Windows</code> 下是在</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:/Windows/System32/Drivers/etc/hosts</span><br></pre></td></tr></table></figure><p>文件成功打开后，在 <code>hosts</code> 文件最后面新增下面一行以完成设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.10.10   yourapp.test</span><br></pre></td></tr></table></figure><h1 id="新增站点"><a href="#新增站点" class="headerlink" title="新增站点"></a>新增站点</h1><p>进入 homestead 的根目录，找到 <code>Homestead.yaml</code> 并打开</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">ip: &quot;192.168.10.10&quot;</span><br><span class="line">memory: 2048</span><br><span class="line">cpus: 2</span><br><span class="line">provider: virtualbox</span><br><span class="line"></span><br><span class="line">authorize: ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">keys:</span><br><span class="line">    - ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">folders:</span><br><span class="line">    - map: ~/Code</span><br><span class="line">      to: /home/vagrant/Code</span><br><span class="line"></span><br><span class="line">sites:</span><br><span class="line">    - map: homestead.test</span><br><span class="line">      to: /home/vagrant/Code/laravel/public</span><br><span class="line">    - map: yourapp.test #  &lt;--- 这里</span><br><span class="line">      to: /home/vagrant/Code/yourapp/public #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">databases:</span><br><span class="line">    - homestead</span><br><span class="line">    - yourapp #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">variables:</span><br><span class="line">    - key: APP_ENV</span><br><span class="line">      value: local</span><br><span class="line"></span><br><span class="line">features:</span><br><span class="line">    - mysql: true</span><br><span class="line"></span><br><span class="line"># blackfire:</span><br><span class="line">#     - id: foo</span><br><span class="line">#       token: bar</span><br><span class="line">#       client-id: foo</span><br><span class="line">#       client-token: bar</span><br><span class="line"></span><br><span class="line"># ports:</span><br><span class="line">#     - send: 93000</span><br><span class="line">#       to: 9300</span><br><span class="line">#     - send: 7777</span><br><span class="line">#       to: 777</span><br><span class="line">#       protocol: udp</span><br></pre></td></tr></table></figure><p>这里主要设置了 <code>sites</code> 和 <code>databases</code> 两项。 <code>sites</code> 会将域名 <code>larabbs.test</code> 映射到虚拟机的 <code>/home/vagrant/Code/yourapp/public</code> 文件夹上，而 <code>databases</code> 则为新创建的项目指定数据库名</p><h1 id="重启虚拟机"><a href="#重启虚拟机" class="headerlink" title="重启虚拟机"></a>重启虚拟机</h1><p>对 <code>Homestead.yaml</code> 文件进行了更改之后，需要运行下面命令来使其更改生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead</span><br><span class="line">vagrant provision</span><br><span class="line">vagrant reload</span><br></pre></td></tr></table></figure><h1 id="env-修改"><a href="#env-修改" class="headerlink" title=".env 修改"></a>.env 修改</h1><p>我们还需要对应用根目录下的 <code>.env</code> 文件进行设置，为应用指定数据库名称 <code>yourapp</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">APP_NAME=yourapp</span><br><span class="line">APP_ENV=local</span><br><span class="line">APP_KEY=your_app_key</span><br><span class="line">APP_DEBUG=true</span><br><span class="line">APP_URL=http://yourapp.test</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">DB_DATABASE=yourapp</span><br><span class="line">DB_USERNAME=homestead</span><br><span class="line">DB_PASSWORD=secret</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><h1 id="统一代码风格"><a href="#统一代码风格" class="headerlink" title="统一代码风格"></a>统一代码风格</h1><p>对项目的 <code>.editorconfig</code> 进行统一修改。这是为了保证我们的代码风格一致，以避免引起不必要的歧义</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">insert_final_newline = true</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 4</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br><span class="line"></span><br><span class="line">[*.&#123;yml,yaml&#125;]</span><br><span class="line">indent_size = 2</span><br><span class="line"></span><br><span class="line">[*.&#123;js,html,blade.php,css,scss,vue&#125;]</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 2</span><br></pre></td></tr></table></figure><h1 id="访问应用"><a href="#访问应用" class="headerlink" title="访问应用"></a>访问应用</h1><p>在 Chrome 浏览器中打开 <code>yourapp.test</code> 即可</p><h1 id="git-版本控制"><a href="#git-版本控制" class="headerlink" title="git 版本控制"></a>git 版本控制</h1><p>线上建立好仓库后，记住 ssh 方式连接的代码仓库名，在虚机的项目根目录下输入如下指令即可</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;初始化项目&quot;</span><br><span class="line">git remote add origin git@e.coding.net:nightingalewk/yanji/yanji.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h1 id="git-分支的使用"><a href="#git-分支的使用" class="headerlink" title="git 分支的使用"></a>git 分支的使用</h1><p>分支使用时，首先执行如下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b static-pages</span><br></pre></td></tr></table></figure><p>当写完一阶段的代码时，需要合并到主分支，需要如下操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m &quot;完成静态页面的建立&quot;</span><br><span class="line">git checkout master</span><br><span class="line">git merge static-pages</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h1 id="启用-Bootstrap"><a href="#启用-Bootstrap" class="headerlink" title="启用 Bootstrap"></a>启用 Bootstrap</h1><p>项目中使用 Bootstrap 前端框架，需要先执行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer require laravel/ui --dev</span><br><span class="line">php artisan ui bootstrap</span><br></pre></td></tr></table></figure><p>开始安装之前，我们需要设置安装器来使用国内的淘宝镜像加速，加速镜像的原理是使用国内的 CDN 来下载所需代码包，会更加顺畅</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=https://registry.npm.taobao.org</span><br><span class="line">yarn config set registry &#x27;https://registry.npm.taobao.org&#x27;</span><br></pre></td></tr></table></figure><p>使用用 Yarn 对扩展包进行安装，请在项目根目录下运行以下命令进行安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn --no-bin-links</span><br><span class="line">yarn add cross-env --no-bin-links</span><br></pre></td></tr></table></figure><h1 id="开发常用指令"><a href="#开发常用指令" class="headerlink" title="开发常用指令"></a>开发常用指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> homestead </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>laravel 项目部署到服务器的流程</title>
       <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
@@ -1967,31 +1992,6 @@
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>laravel 项目 Homestead 开发环境的搭建</title>
-      <link href="/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/"/>
-      <url>/2021/06/08/22.%20Laravel%20%E9%A1%B9%E7%9B%AE%20Homestead%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</url>
-      
-        <content type="html"><![CDATA[<h1 id="做好准备"><a href="#做好准备" class="headerlink" title="做好准备"></a>做好准备</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead &amp;&amp; vagrant up</span><br><span class="line">vagrant ssh</span><br></pre></td></tr></table></figure><p>在虚拟机中进入 <code>code</code> 文件夹</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/code</span><br></pre></td></tr></table></figure><h1 id="Composer-加速"><a href="#Composer-加速" class="headerlink" title="Composer 加速"></a>Composer 加速</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/</span><br></pre></td></tr></table></figure><h1 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composer create-project laravel/laravel yourapp</span><br></pre></td></tr></table></figure><h1 id="修改-Hosts"><a href="#修改-Hosts" class="headerlink" title="修改 Hosts"></a>修改 Hosts</h1><p>首先找到 <code>Hosts</code> 文件，<code>Windows</code> 下是在</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:/Windows/System32/Drivers/etc/hosts</span><br></pre></td></tr></table></figure><p>文件成功打开后，在 <code>hosts</code> 文件最后面新增下面一行以完成设置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">192.168.10.10   yourapp.test</span><br></pre></td></tr></table></figure><h1 id="新增站点"><a href="#新增站点" class="headerlink" title="新增站点"></a>新增站点</h1><p>进入 homestead 的根目录，找到 <code>Homestead.yaml</code> 并打开</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">ip: &quot;192.168.10.10&quot;</span><br><span class="line">memory: 2048</span><br><span class="line">cpus: 2</span><br><span class="line">provider: virtualbox</span><br><span class="line"></span><br><span class="line">authorize: ~/.ssh/id_rsa.pub</span><br><span class="line"></span><br><span class="line">keys:</span><br><span class="line">    - ~/.ssh/id_rsa</span><br><span class="line"></span><br><span class="line">folders:</span><br><span class="line">    - map: ~/Code</span><br><span class="line">      to: /home/vagrant/Code</span><br><span class="line"></span><br><span class="line">sites:</span><br><span class="line">    - map: homestead.test</span><br><span class="line">      to: /home/vagrant/Code/laravel/public</span><br><span class="line">    - map: yourapp.test #  &lt;--- 这里</span><br><span class="line">      to: /home/vagrant/Code/yourapp/public #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">databases:</span><br><span class="line">    - homestead</span><br><span class="line">    - yourapp #  &lt;--- 这里</span><br><span class="line"></span><br><span class="line">variables:</span><br><span class="line">    - key: APP_ENV</span><br><span class="line">      value: local</span><br><span class="line"></span><br><span class="line">features:</span><br><span class="line">    - mysql: true</span><br><span class="line"></span><br><span class="line"># blackfire:</span><br><span class="line">#     - id: foo</span><br><span class="line">#       token: bar</span><br><span class="line">#       client-id: foo</span><br><span class="line">#       client-token: bar</span><br><span class="line"></span><br><span class="line"># ports:</span><br><span class="line">#     - send: 93000</span><br><span class="line">#       to: 9300</span><br><span class="line">#     - send: 7777</span><br><span class="line">#       to: 777</span><br><span class="line">#       protocol: udp</span><br></pre></td></tr></table></figure><p>这里主要设置了 <code>sites</code> 和 <code>databases</code> 两项。 <code>sites</code> 会将域名 <code>larabbs.test</code> 映射到虚拟机的 <code>/home/vagrant/Code/yourapp/public</code> 文件夹上，而 <code>databases</code> 则为新创建的项目指定数据库名</p><h1 id="重启虚拟机"><a href="#重启虚拟机" class="headerlink" title="重启虚拟机"></a>重启虚拟机</h1><p>对 <code>Homestead.yaml</code> 文件进行了更改之后，需要运行下面命令来使其更改生效</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/Homestead</span><br><span class="line">vagrant provision</span><br><span class="line">vagrant reload</span><br></pre></td></tr></table></figure><h1 id="env-修改"><a href="#env-修改" class="headerlink" title=".env 修改"></a>.env 修改</h1><p>我们还需要对应用根目录下的 <code>.env</code> 文件进行设置，为应用指定数据库名称 <code>yourapp</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">APP_NAME=yourapp</span><br><span class="line">APP_ENV=local</span><br><span class="line">APP_KEY=your_app_key</span><br><span class="line">APP_DEBUG=true</span><br><span class="line">APP_URL=http://yourapp.test</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">DB_DATABASE=yourapp</span><br><span class="line">DB_USERNAME=homestead</span><br><span class="line">DB_PASSWORD=secret</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><h1 id="统一代码风格"><a href="#统一代码风格" class="headerlink" title="统一代码风格"></a>统一代码风格</h1><p>对项目的 <code>.editorconfig</code> 进行统一修改。这是为了保证我们的代码风格一致，以避免引起不必要的歧义</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">root = true</span><br><span class="line"></span><br><span class="line">[*]</span><br><span class="line">charset = utf-8</span><br><span class="line">end_of_line = lf</span><br><span class="line">insert_final_newline = true</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 4</span><br><span class="line">trim_trailing_whitespace = true</span><br><span class="line"></span><br><span class="line">[*.md]</span><br><span class="line">trim_trailing_whitespace = false</span><br><span class="line"></span><br><span class="line">[*.&#123;yml,yaml&#125;]</span><br><span class="line">indent_size = 2</span><br><span class="line"></span><br><span class="line">[*.&#123;js,html,blade.php,css,scss,vue&#125;]</span><br><span class="line">indent_style = space</span><br><span class="line">indent_size = 2</span><br></pre></td></tr></table></figure><h1 id="访问应用"><a href="#访问应用" class="headerlink" title="访问应用"></a>访问应用</h1><p>在 Chrome 浏览器中打开 <code>yourapp.test</code> 即可</p><h1 id="git-版本控制"><a href="#git-版本控制" class="headerlink" title="git 版本控制"></a>git 版本控制</h1><p>线上建立好仓库后，记住 ssh 方式连接的代码仓库名，在虚机的项目根目录下输入如下指令即可</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &quot;初始化项目&quot;</span><br><span class="line">git remote add origin git@e.coding.net:nightingalewk/yanji/yanji.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><h1 id="git-分支的使用"><a href="#git-分支的使用" class="headerlink" title="git 分支的使用"></a>git 分支的使用</h1><p>分支使用时，首先执行如下指令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git checkout -b static-pages</span><br></pre></td></tr></table></figure><p>当写完一阶段的代码时，需要合并到主分支，需要如下操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git add -A</span><br><span class="line">git commit -m &quot;完成静态页面的建立&quot;</span><br><span class="line">git checkout master</span><br><span class="line">git merge static-pages</span><br><span class="line">git push</span><br></pre></td></tr></table></figure><h1 id="启用-Bootstrap"><a href="#启用-Bootstrap" class="headerlink" title="启用 Bootstrap"></a>启用 Bootstrap</h1><p>项目中使用 Bootstrap 前端框架，需要先执行以下命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">composer require laravel/ui --dev</span><br><span class="line">php artisan ui bootstrap</span><br></pre></td></tr></table></figure><p>开始安装之前，我们需要设置安装器来使用国内的淘宝镜像加速，加速镜像的原理是使用国内的 CDN 来下载所需代码包，会更加顺畅</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=https://registry.npm.taobao.org</span><br><span class="line">yarn config set registry &#x27;https://registry.npm.taobao.org&#x27;</span><br></pre></td></tr></table></figure><p>使用用 Yarn 对扩展包进行安装，请在项目根目录下运行以下命令进行安装</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SASS_BINARY_SITE=http://npm.taobao.org/mirrors/node-sass yarn --no-bin-links</span><br><span class="line">yarn add cross-env --no-bin-links</span><br></pre></td></tr></table></figure><h1 id="开发常用指令"><a href="#开发常用指令" class="headerlink" title="开发常用指令"></a>开发常用指令</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> homestead </tag>
             
         </tags>
       
@@ -2079,31 +2079,6 @@
     
     
     <entry>
-      <title>秘制特色鸡蛋</title>
-      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
-      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
-      
-        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 美食 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 热菜 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>西红柿土豆丁浓汤</title>
       <link href="/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/"/>
       <url>/2021/02/21/18.%20%E8%A5%BF%E7%BA%A2%E6%9F%BF%E5%9C%9F%E8%B1%86%E4%B8%81%E6%B5%93%E6%B1%A4/</url>
@@ -2121,6 +2096,31 @@
         <tags>
             
             <tag> 汤 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>秘制特色鸡蛋</title>
+      <link href="/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/"/>
+      <url>/2021/02/21/17.%20%E7%A7%98%E5%88%B6%E7%89%B9%E8%89%B2%E9%B8%A1%E8%9B%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="食材"><a href="#食材" class="headerlink" title="食材"></a>食材</h2><ul><li>鸡蛋</li><li>葱末</li><li>香菜末</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><ul><li>鸡蛋打散，加入葱末</li><li>调制秘制酱汁<ul><li>生抽 一勺</li><li>蚝油 一勺</li><li>淀粉 一勺</li><li>胡椒粉 少许</li><li>白糖 少许</li><li>食盐 少许</li><li>凉水 少许，以冲开上述调料</li></ul></li><li>起锅烧油，炒鸡蛋，炒熟炒散后倒入酱汁，大火收汁</li><li>出锅前撒入香菜</li></ul><p>主打一个拌面搭档，或者配合炫米饭也是极好的 😊</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 美食 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 热菜 </tag>
             
         </tags>
       
