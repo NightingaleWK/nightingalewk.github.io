@@ -34,7 +34,11 @@
 <a class="skip" href="#main">跳到正文</a>
 <header><a class="brand" href="/"><img class="brand-logo" src="/images/logo.jpg" alt="" width="32" height="32"><span>雪漫城的风宅</span></a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/links/" >友链</a><a href="/search/" >搜索</a>
-<button class="theme" type="button">跟随系统</button></nav></header>
+<button class="theme" type="button" data-mode="system" aria-label="当前跟随系统，点击切换浅色" title="当前：跟随系统；点击切换浅色">
+<svg class="theme-icon theme-icon-system" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4m-4 0h8"/></svg>
+<svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+<svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.2A9 9 0 0 1 10.8 3.1a9 9 0 1 0 10.1 10.1Z"/></svg>
+</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>Hexo 部署阿里云服务器教程</h1><div class="meta"><time datetime="2020-11-30T10:14:00.000Z">2020-11-30</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/%E5%BB%BA%E7%AB%99/">建站</a></div></div>
 <details class="post-toc"><summary>文章目录</summary><div class="toc-scroll" role="navigation" aria-label="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4"><span class="toc-text">步骤</span></a></li></ol></div></details>
 <div class="prose"><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>我个人的网站都是部署在 Coding pages 服务上，免费够用还方便，之后呢， Coding 被腾讯云收编了，我心思应该不会对我有啥影响吧，而且我还心思 Coding 的静态服务应该在腾讯云的加持下，体验应该更进一步</p>

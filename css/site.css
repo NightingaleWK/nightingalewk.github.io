@@ -34,3 +34,13 @@ main:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--accent);
 .bh-mermaid{margin:22px 0;padding:16px;overflow:auto;border:1px solid var(--line);border-radius:4px;background:var(--soft);text-align:center;white-space:pre-wrap}.bh-mermaid svg{display:block;max-width:100%;height:auto;margin:auto}.bh-mermaid[data-bh-mermaid-error=true]{text-align:left;font:14px/1.7 ui-monospace,Consolas,monospace}.bh-math-block{margin:22px 0;overflow:auto;text-align:center}.bh-math-fallback{white-space:pre-wrap}.bh-footnotes{border-top:1px solid var(--line);margin-top:34px;padding-top:16px;font-size:.92em}.bh-footnotes h2{font-size:18px;margin:0 0 10px}.bh-footnotes ol{margin:0;padding-left:25px}.bh-footnotes li{padding:3px 0}.bh-footnote-ref{font-size:.75em;line-height:0;vertical-align:super}.bh-footnote-ref a,.bh-footnote-backref{color:var(--accent);text-decoration:none}.bh-footnote-backref{margin-left:5px}.bh-footnote-missing{color:var(--muted)}
 
 .brand{display:inline-flex;align-items:center;gap:10px}.brand-logo{display:block;width:32px;height:32px;flex:0 0 32px;object-fit:contain;border-radius:7px}
+
+/* Fixed-size theme control keeps navigation stable across all three modes. */
+.theme{position:relative;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;padding:0;border:0;border-radius:6px;color:var(--text);transition:color .18s}
+.theme::before{content:"";position:absolute;inset:0;border:1px solid color-mix(in srgb,var(--line) 65%,transparent);border-radius:6px;pointer-events:none;transition:background .18s,border-color .18s}
+.theme:hover{background:transparent;color:var(--accent)}
+.theme:hover::before{background:var(--soft);border-color:var(--line)}
+.theme .theme-icon{position:relative;display:none;flex-shrink:0;width:18px;height:18px}
+.theme[data-mode=system] .theme-icon-system,.theme[data-mode=light] .theme-icon-light,.theme[data-mode=dark] .theme-icon-dark{display:block}
+@media(max-width:650px),(pointer:coarse){.theme{width:44px;height:44px;flex-basis:44px}.theme::before{inset:5px}}
+@media(prefers-reduced-motion:reduce){.theme,.theme::before{transition:none}}

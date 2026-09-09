@@ -4,9 +4,12 @@ let choice = 'system';
 try { choice = localStorage.getItem('breeze-theme') || 'system'; } catch {}
 function applyTheme() {
   document.documentElement.dataset.theme = choice === 'system' ? (media.matches ? 'dark' : 'light') : choice;
-  const label = {system:'跟随系统',light:'浅色',dark:'深色'}[choice];
-  themeButton.textContent = label;
-  themeButton.setAttribute('aria-label', `当前${label}，点击切换配色`);
+  const labels = {system:'跟随系统',light:'浅色',dark:'深色'};
+  const label = labels[choice];
+  const nextLabel = labels[{system:'light',light:'dark',dark:'system'}[choice]];
+  themeButton.dataset.mode = choice;
+  themeButton.setAttribute('aria-label', `当前${label}，点击切换${nextLabel}`);
+  themeButton.title = `当前：${label}；点击切换${nextLabel}`;
   document.dispatchEvent(new Event('breezehome:themechange'));
 }
 if (!['system','light','dark'].includes(choice)) choice = 'system';
