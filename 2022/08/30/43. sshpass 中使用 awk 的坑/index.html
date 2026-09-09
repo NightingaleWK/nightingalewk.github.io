@@ -9,6 +9,7 @@
   <title>sshpass 中使用 awk 的坑 · 雪漫城的风宅</title>
   <meta name="description" content="この世界は好都合に未完成 だから知りたいんだ —— チ。-地球の運動について-">
   <link rel="canonical" href="https://nightingalewk.cn/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/">
+  <link rel="icon" href="/favicon.ico">
   <meta name="description" content="之前在使用ssh远程执行命令，当使用到awk的时候总是报错，而sed和grep都没有问题，以为awk不支持远程执行。最近经过测试找到了解决此问题的方法。 最近编写公司项目的自动化运维脚本的时候，想在 sshpass 中使用 awk，本机上直接执行无问题，但是在 sshpass 下却一直报语法错误，其原因并非两者不兼容，而是语法问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sshpass 中使用 awk 的坑">
@@ -32,7 +33,7 @@
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body id="top" data-search-index="/search-index.json">
 <a class="skip" href="#main">跳到正文</a>
-<header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
+<header><a class="brand" href="/"><img class="brand-logo" src="/images/logo.jpg" alt="" width="32" height="32"><span>雪漫城的风宅</span></a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/links/" >友链</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>sshpass 中使用 awk 的坑</h1><div class="meta"><time datetime="2022-08-30T06:20:00.000Z">2022-08-30</time> · NightingaleWK · 更新于 2023-11-07<br><a href="/categories/linux/">linux</a></div></div>

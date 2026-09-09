@@ -9,6 +9,7 @@
   <title>WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案 · 雪漫城的风宅</title>
   <meta name="description" content="记录 cc-switch 在 WSL 环境下 About 页面卡死问题的完整排查过程，分析 GTK/Electron 在 WSLg Wayland 下的事件循环死锁机制，并给出通过 alias 强制 X11 backend 的工程化解决方案。">
   <link rel="canonical" href="https://nightingalewk.cn/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/">
+  <link rel="icon" href="/favicon.ico">
   <meta name="description" content="记录 cc-switch 在 WSL 环境下 About 页面卡死问题的完整排查过程，分析 GTK&#x2F;Electron 在 WSLg Wayland 下的事件循环死锁机制，并给出通过 alias 强制 X11 backend 的工程化解决方案。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案">
@@ -38,7 +39,7 @@
 <meta name="generator" content="Hexo 8.1.2"></head>
 <body id="top" data-search-index="/search-index.json">
 <a class="skip" href="#main">跳到正文</a>
-<header><a class="brand" href="/">雪漫城的风宅</a><nav aria-label="主导航">
+<header><a class="brand" href="/"><img class="brand-logo" src="/images/logo.jpg" alt="" width="32" height="32"><span>雪漫城的风宅</span></a><nav aria-label="主导航">
 <a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/links/" >友链</a><a href="/search/" >搜索</a>
 <button class="theme" type="button">跟随系统</button></nav></header>
 <main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案</h1><div class="meta"><time datetime="2026-07-02T02:45:00.000Z">2026-07-02</time> · NightingaleWK · 更新于 2026-07-02<br><a href="/categories/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/">技术记录</a></div></div>
