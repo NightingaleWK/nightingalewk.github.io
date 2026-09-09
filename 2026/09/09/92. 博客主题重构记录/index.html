@@ -1,0 +1,179 @@
+
+
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>博客主题重构记录 · 雪漫城的风宅</title>
+  <meta name="description" content="个人博客主题重构记录，整理主题调整的思路、过程与体会。">
+  <link rel="canonical" href="https://nightingalewk.cn/2026/09/09/92.%20%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%87%8D%E6%9E%84%E8%AE%B0%E5%BD%95/">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="description" content="个人博客主题重构记录，整理主题调整的思路、过程与体会。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客主题重构记录">
+<meta property="og:url" content="https://nightingalewk.cn/2026/09/09/92.%20%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E9%87%8D%E6%9E%84%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="雪漫城的风宅">
+<meta property="og:description" content="个人博客主题重构记录，整理主题调整的思路、过程与体会。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-09T08:52:02.000Z">
+<meta property="article:modified_time" content="2026-09-09T09:06:15.019Z">
+<meta property="article:author" content="NightingaleWK">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="主题重构">
+<meta name="twitter:card" content="summary">
+  <script>try{let t=localStorage.getItem('breeze-theme');document.documentElement.dataset.theme=t==='light'||t==='dark'?t:matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}catch{document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}</script>
+  <link rel="stylesheet" href="/css/site.css">
+  
+  
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+  
+  <script defer src="/js/site.js"></script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body id="top" data-search-index="/search-index.json">
+<a class="skip" href="#main">跳到正文</a>
+<header><a class="brand" href="/"><img class="brand-logo" src="/images/logo.jpg" alt="" width="32" height="32"><span>雪漫城的风宅</span></a><nav aria-label="主导航">
+<a href="/" >首页</a><a href="/archives/" >归档</a><a href="/categories/" >分类</a><a href="/tags/" >标签</a><a href="/links/" >友链</a><a href="/search/" >搜索</a>
+<button class="theme" type="button" data-mode="system" aria-label="当前跟随系统，点击切换浅色" title="当前：跟随系统；点击切换浅色">
+<svg class="theme-icon theme-icon-system" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M12 16v4m-4 0h8"/></svg>
+<svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+<svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.2A9 9 0 0 1 10.8 3.1a9 9 0 1 0 10.1 10.1Z"/></svg>
+</button></nav></header>
+<main id="main" tabindex="-1" class="post-layout"><article><div class="post-header"><div class="eyebrow"><a href="/archives/">← 归档</a></div><h1>博客主题重构记录</h1><div class="meta"><time datetime="2026-09-09T08:52:02.000Z">2026-09-09</time> · NightingaleWK · 更新于 2026-09-09<br><a href="/categories/%E5%BB%BA%E7%AB%99/">建站</a></div></div>
+<details class="post-toc"><summary>文章目录</summary><div class="toc-scroll" role="navigation" aria-label="文章目录"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E5%BC%80%E5%A7%8B%E5%B0%B1%E4%B8%80%E6%9D%A1%EF%BC%9A%E5%85%8B%E5%88%B6%EF%BC%8C%E5%85%8B%E5%88%B6%EF%BC%8C%E5%86%8D%E5%85%8B%E5%88%B6"><span class="toc-text">一开始就一条：克制，克制，再克制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%88%E5%81%9A%E4%B8%80%E4%B8%AA%E8%83%BD%E7%9C%8B%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%8C%E4%B8%8D%E6%80%A5%E7%9D%80%E5%8A%A8%E6%97%A7%E7%AB%99"><span class="toc-text">先做一个能看的东西，不急着动旧站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%A2%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%A4%96%EF%BC%8C%E8%BF%98%E7%90%86%E4%BA%86%E4%B8%80%E9%81%8D%E6%97%A7%E7%8E%AF%E5%A2%83"><span class="toc-text">换主题之外，还理了一遍旧环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%82%A3%E4%B8%80%E5%A0%86%E8%A6%81%E6%88%91%E4%B8%8D%E5%81%9C%E5%9B%9E%E5%A4%8D%E7%9A%84-n"><span class="toc-text">那一堆要我不停回复的 n</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feed-%E5%92%8C%E5%8C%85%E7%AE%A1%E7%90%86%E4%B9%9F%E5%81%9A%E4%BA%86%E5%87%8F%E6%B3%95"><span class="toc-text">Feed 和包管理也做了减法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E3%80%81%E4%B8%BB%E9%A2%98%E3%80%81%E5%8F%91%E5%B8%83%E7%BB%93%E6%9E%9C%EF%BC%8C%E7%BB%88%E4%BA%8E%E5%90%84%E7%AE%A1%E5%90%84%E7%9A%84"><span class="toc-text">博客、主题、发布结果，终于各管各的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%81%E7%AE%80%E7%9A%84%E6%98%AF%E5%A4%96%E8%A7%82%EF%BC%8C%E4%B8%8D%E6%98%AF%E6%AD%A3%E6%96%87%E8%83%BD%E5%8A%9B"><span class="toc-text">极简的是外观，不是正文能力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%9F%E6%AD%A3%E5%BC%80%E5%A7%8B%E7%94%A8%EF%BC%8C%E6%89%8D%E7%9F%A5%E9%81%93%E5%93%AA%E9%87%8C%E8%BF%98%E5%88%AB%E6%89%AD"><span class="toc-text">真正开始用，才知道哪里还别扭</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E6%96%87%E4%B8%8D%E8%AF%A5%E4%B8%BA%E7%9B%AE%E5%BD%95%E8%AE%A9%E5%BE%97%E6%AD%AA%E5%88%B0%E4%B8%80%E8%BE%B9"><span class="toc-text">正文不该为目录让得歪到一边</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E9%A1%B5%E4%B8%8D%E6%83%B3%E5%86%8D%E5%A1%AB%E4%B8%80%E5%BC%A0%E5%9B%BA%E5%AE%9A%E7%AE%80%E5%8E%86%E8%A1%A8"><span class="toc-text">首页不想再填一张固定简历表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95%E8%BF%99%E4%BB%B6%E5%B0%8F%E4%BA%8B%EF%BC%8C%E5%8F%8D%E8%80%8C%E6%9C%80%E8%83%BD%E8%AF%B4%E6%98%8E%E9%97%AE%E9%A2%98"><span class="toc-text">项目清单这件小事，反而最能说明问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E7%B1%BB%E3%80%81%E6%A0%87%E7%AD%BE%E3%80%81%E5%8F%8B%E9%93%BE%E5%92%8C%E9%82%A3%E4%B8%AA%E6%9C%89%E7%82%B9%E5%A4%A7%E7%9A%84%E6%8C%89%E9%92%AE"><span class="toc-text">分类、标签、友链和那个有点大的按钮</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E6%98%AF%E5%85%A8%E8%87%AA%E5%8A%A8%EF%BC%8C%E4%B9%9F%E6%9C%89-AI-%E5%88%A4%E6%96%AD%E5%A4%B1%E5%87%86%E7%9A%84%E6%97%B6%E5%80%99"><span class="toc-text">不是全自动，也有 AI 判断失准的时候</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%EF%BC%8C%E6%8A%8A%E5%8F%8D%E5%A4%8D%E5%81%9A%E7%9A%84%E4%BA%8B%E5%8F%98%E6%88%90%E5%9B%BA%E5%AE%9A%E6%B5%81%E7%A8%8B"><span class="toc-text">最后，把反复做的事变成固定流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B0%E8%BF%99%E9%87%8C%EF%BC%8C%E5%85%88%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD"><span class="toc-text">到这里，先告一段落</span></a></li></ol></div></details>
+<div class="prose"><p>这两天把博客重新折腾了一遍。</p>
+<p>从原来的 Cactus 换成了现在的 Breezehome，顺便升级 Hexo、整理依赖、拆分源码仓库，把首页、正文、分类、标签和发布流程都过了一轮。主要过程集中在 2026 年 9 月 7 日到 9 日。</p>
+<p>不过，先交代一句：<strong>这些开发工作基本都是 AI 做的。</strong></p>
+<p>不是我写好代码，让 AI 帮忙补几个函数，也不是让它生成一段样式再自己慢慢改。从看旧站、设计原型，到写主题、跑测试、查问题、整理文档，再到获得我确认后的提交和部署，主要执行者都是 Codex。我更多是在说想法、看页面、觉得哪里不对就继续提。</p>
+<p>如果按亲手写了多少代码来算，我确实基本没干啥。甚至这篇记录，也是让 AI 回看整个过程的聊天和最初留下的资料，再帮我整理出来的。</p>
+<p>但它也不是一句“给我做个博客”，然后就一次性完工了。中间有来回调整，有 AI 做复杂了又删回去的东西，也有需要我打开终端亲自接手的地方。正好趁还记得，把这几天记下来。</p>
+<h2 id="一开始就一条：克制，克制，再克制"><a href="#一开始就一条：克制，克制，再克制" class="headerlink" title="一开始就一条：克制，克制，再克制"></a>一开始就一条：克制，克制，再克制</h2><p>9 月 7 日，我跟 AI 说想重新做一个 Hexo 主题。最初的要求里，有一段基本能概括这次改造的方向：</p>
+<blockquote>
+<p>我喜欢用最少的代码，最简单的结构，实现我需要的全部功能，页面设计克制克制再克制，我已经脱离了喜欢炫酷动效的时候了，稳定，快速才是我最大的需求。</p>
+</blockquote>
+<p>我并不是想把博客做成一个什么都没有的白板。</p>
+<p>首页要能介绍我自己和这个网站；文章放进归档，按年份看标题，点击就能读；搜索、分类、标签、明暗切换、各种屏幕尺寸的适配，都得有。尤其正文，不能因为主题追求极简，就把代码、表格、图表这些能力一起省掉。</p>
+<p>另一个很在意的点是信息密度。不要为了显得高级，让一个标题占掉半屏，也不要把几行内容拉成一整页。留白应该帮助阅读，而不是挤掉内容。</p>
+<p>所以，这次想做的不是“功能越少越好”，而是<strong>外表精简，里面该有的东西得扎实</strong>。</p>
+<p>原来的站点是 Hexo 7.3.0 加 Cactus。新主题没有继续在旧主题上叠补丁，而是沿着这个方向单独做了一套，名字就叫 <strong>Breezehome · 风宅</strong>，与博客“雪漫城的风宅”对应。</p>
+<h2 id="先做一个能看的东西，不急着动旧站"><a href="#先做一个能看的东西，不急着动旧站" class="headerlink" title="先做一个能看的东西，不急着动旧站"></a>先做一个能看的东西，不急着动旧站</h2><p>第一步不是直接替换线上主题。</p>
+<p>AI 先读取旧博客的配置、依赖和真实文章，在另一个目录里做了独立原型。最初那份过程记录现在还留着：原型只读旧博客，自己的页面生成到自己的目录，不改原站配置、缓存或部署结果。</p>
+<p>先看看是不是自己想要的，再决定要不要往下做，没必要一开始就拿正常运行的博客冒险。</p>
+<p>这个原型也不只是首页截图。它接入了当时读取到的 92 篇 Markdown 文章，生成归档、正文、分类、标签和搜索页。正文拿真实的技术文章来试：有长代码、有表格，也有带 Mermaid 的长文。</p>
+<p>当时做了桌面和手机宽度的浏览器检查，确认长代码和表格不会把整页撑宽，明暗选择能跨页保留；搜索“Laravel 部署”，能找到对应文章。Mermaid、公式和脚注还没有完成，就明确记在待办里，没有把“页面上看得到源码”算作图表渲染成功。</p>
+<p>我看完第一版，回复的是“挺好”。</p>
+<p>然后才继续把它转成真正可安装的 Hexo 主题：用原生模板接入 Hexo 的文章和归档流程，保留原有文章地址，不拿原型里的临时路径替换正式永久链接。</p>
+<p>我还提了一个要求：主题要放进自己的 GitHub 公开仓库，以后可以按版本维护。于是有了公开的 <code>NightingaleWK/hexo-theme-breezehome</code>，采用 MIT 许可证，第一版标为 <code>v0.1.0-alpha.1</code>。</p>
+<p>注意，是 Alpha。第一版能构建、能看，不代表所有兼容性都已经做完。</p>
+<h2 id="换主题之外，还理了一遍旧环境"><a href="#换主题之外，还理了一遍旧环境" class="headerlink" title="换主题之外，还理了一遍旧环境"></a>换主题之外，还理了一遍旧环境</h2><p>主题方向定下来以后，我又让 AI 把 Hexo 升级到当时核对的稳定版本，实际从 7.3.0 升到了 8.1.2。</p>
+<p>这一步并没有只有一条安装命令那么简单。旧目录里的依赖已经出现文件缺失或读取异常，连正常检查版本都遇到了问题；重装依赖、完成构建后，才继续切换 Breezehome。</p>
+<p>切换完成，我又明确说 Cactus 不用了，只保留一个主题。AI 随后清理了旧主题，以及不再使用的 Landscape 依赖和相关残留，但没有因为换主题就重写历史文章。</p>
+<h3 id="那一堆要我不停回复的-n"><a href="#那一堆要我不停回复的-n" class="headerlink" title="那一堆要我不停回复的 n"></a>那一堆要我不停回复的 n</h3><p>旧博客原来放在 OneDrive 目录里。有一次发布，终端反复询问是否重试删除目录，我只能不停回复 <code>n</code>，最后把日志丢给 AI：怎么回事，累死我了。</p>
+<p>当时查到的是部署临时仓库清理 Git 对象目录失败，结合目录里的 OneDrive 占位和文件访问问题，判断与同步目录的影响有关。它不是“每篇文章都发布失败”，日志里其实已经有成功推送的结果。</p>
+<p>AI 先调整了部署仓库的局部 Git 配置，减少这类清理提示。后来我直接把博客工作目录移到了 <code>D:/blog</code>，明确以后都在这里维护，不再放进 OneDrive。</p>
+<p>这件事倒很有生活气息：前面还在聊极简设计，后面已经变成为什么终端让我一直按 n。</p>
+<h3 id="Feed-和包管理也做了减法"><a href="#Feed-和包管理也做了减法" class="headerlink" title="Feed 和包管理也做了减法"></a>Feed 和包管理也做了减法</h3><p>升级后还发现，旧博客同时装了两套 Feed 插件，其中 <code>hexo-feed</code> 的依赖声明与新的 Hexo 版本有冲突。</p>
+<p>最后采用的方案是只保留 <code>hexo-generator-feed</code>，继续生成原来的 <code>atom.xml</code> 和 <code>rss.xml</code>，不再提供 JSON Feed、分类 Feed 和标签 Feed。这个取舍是讨论后确认的，不是为了消除警告就不管原来的订阅地址。</p>
+<p>根目录里原先还留有 npm、Yarn、pnpm 的锁文件。既然实际只用 npm，就只保留 <code>package-lock.json</code>，不让几套旧记录继续混在一起。</p>
+<p>至于主题兼容范围，我也说得很直接：不打算替自己的博客维护一整套旧版兼容包袱，就跟着新的稳定版走。本次开发和验证的基线因此统一到了 Hexo 8.1.2。</p>
+<h2 id="博客、主题、发布结果，终于各管各的"><a href="#博客、主题、发布结果，终于各管各的" class="headerlink" title="博客、主题、发布结果，终于各管各的"></a>博客、主题、发布结果，终于各管各的</h2><p>另一个之前没有认真整理的问题，是源码管理。</p>
+<p>检查时发现，本地博客的 <code>.git</code> 目录是空的，并没有可直接恢复的提交历史。主题虽然已经有公开仓库，本地安装的那一份却还只是复制进来的文件，并没有接好独立的 Git 管理。</p>
+<p>于是又花了一轮，把关系理清楚：</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>放在哪里</th>
+<th>负责什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>博客源码</td>
+<td>私有的 blog-source 仓库</td>
+<td>文章、个人资料、配置、依赖和主题引用</td>
+</tr>
+<tr>
+<td>Breezehome 主题</td>
+<td>公开的 hexo-theme-breezehome 仓库</td>
+<td>模板、样式、脚本、测试和文档</td>
+</tr>
+<tr>
+<td>网站产物</td>
+<td>原有的 GitHub Pages 仓库</td>
+<td>最终给读者访问的静态网页</td>
+</tr>
+</tbody></table>
+<p>主题通过 Git 子模块放在博客的 <code>themes/breezehome</code> 下。平时依然可以在这里改主题，只是它有自己的提交历史；博客记录的是使用主题的哪一次提交。</p>
+<p>这样，个人文章和站点配置不会跟着通用主题一起放进公开主题仓库，主题也可以独立继续维护。迁移时先备份、核对文件，再重新克隆检查源码和子模块能不能取回来。</p>
+<p>我当时专门问了一句：这会不会和我一直用的 <code>npx hexo g -d</code> 冲突？</p>
+<p>不冲突，但也不是同一件事。</p>
+<p><strong>Git 提交和推送保存源码，Hexo 生成和部署发布网页。</strong> 写完文章，不会因为执行了部署命令就自动拥有源码备份；推送了源码，也不会自动让 Pages 上的网站变成新版本。</p>
+<p>后来我们还真在这里踩了一次坑。友链那轮，主题和博客源码都推送了，AI 的回复却把状态说得像网站也已经发布。我看网站过了很久还是老样子，再查才发现：还差把生成产物部署到 Pages 这一步。</p>
+<p>所以，“源码已推送”“部署命令完成”“线上已经看到新页面”，以后得分开说。这不是文字上的严谨，而是确实会影响我判断事情到底做完没有。</p>
+<h2 id="极简的是外观，不是正文能力"><a href="#极简的是外观，不是正文能力" class="headerlink" title="极简的是外观，不是正文能力"></a>极简的是外观，不是正文能力</h2><p>把主题接起来之后，真正费工夫的是补正文和验证。</p>
+<p>我原来的文章里已经有 Mermaid，不能说新主题不支持，让旧文章自己适应新主题。公式、脚注、宽表、长代码、图片、视频这些，也需要有明确的处理方式。</p>
+<p>后面逐步补上了：</p>
+<ul>
+<li>Mermaid 图表：资源放在本地，只在需要的页面引用，兼顾深浅色切换。</li>
+<li>数学公式：由 KaTeX 在构建时渲染，而不是每个页面都临时处理。</li>
+<li>脚注：支持引用跳转和返回，基本阅读不依赖浏览器脚本。</li>
+<li>长代码和宽表：在内容区域内横向滚动，不把整个手机页面挤宽。</li>
+<li>图片：自适应和懒加载，并检查生成页面里的相关属性。</li>
+<li>搜索：有结果、无结果、加载失败和恢复后重试，都有对应表现。</li>
+</ul>
+<p>这里也不是 AI 一次写对。</p>
+<p>比如 Mermaid 最初仍被当成普通代码块，改了识别方式才生效；后来又发现，判断是否需要生成资源的时机不对，只看部分已渲染内容会漏掉资源，于是继续修正生成逻辑。</p>
+<p>浏览器检查又找到了另外一些问题：深色模式会把打印配色覆盖掉；“跳到正文”看起来滚过去了，但键盘焦点没有真正进入正文；长代码区域也需要能通过键盘操作。它们都不是看一眼首页截图就能发现的。</p>
+<p>为了不往博客里塞测试文章，AI 把包含图片、视频、宽表、代码、公式、脚注和图表的原创样例留在主题测试里，用临时站点检查。后面还验证了真实视频播放、搜索资源请求失败后的恢复，以及安装、升级和回退的几个阶段。</p>
+<p>无脚本场景也做了区分：正文、公式和脚注仍能读，Mermaid 保留源码，而不是假装关掉 JavaScript 后图表仍能正常渲染。</p>
+<p>当然，检查过不等于什么都保证了。窄屏浏览器不是真实手机，图片有 <code>alt</code> 属性也不代表描述写得好；部分独立浏览器、原生放大和真实打印分页，当时没有可靠完成的环境，就仍然记着没验收。</p>
+<p>这次有一个值得保留的做法：<strong>把没做完的事留下来，而不是因为网站已经上线，就顺手宣布主题稳定了。</strong></p>
+<h2 id="真正开始用，才知道哪里还别扭"><a href="#真正开始用，才知道哪里还别扭" class="headerlink" title="真正开始用，才知道哪里还别扭"></a>真正开始用，才知道哪里还别扭</h2><p>后面的修改越来越小，却越来越接近“自己的博客”。</p>
+<h3 id="正文不该为目录让得歪到一边"><a href="#正文不该为目录让得歪到一边" class="headerlink" title="正文不该为目录让得歪到一边"></a>正文不该为目录让得歪到一边</h3><p>上线后，我看文章总觉得正文整体向左偏。查了一下，宽屏样式确实为了右侧目录主动挪了正文。</p>
+<p>最后改成正文居中，宽屏目录固定在右边，长目录自己滚动；手机和平板则用可展开的悬浮目录，选完章节自动收起。右下角再加一个常驻的回到顶部入口。</p>
+<p>我提出的是“看着偏了”“目录滚着滚着没了”，具体怎么处理不同屏幕宽度、怎么关闭目录、怎么兼顾键盘，是 AI 接着实现和检查的。</p>
+<h3 id="首页不想再填一张固定简历表"><a href="#首页不想再填一张固定简历表" class="headerlink" title="首页不想再填一张固定简历表"></a>首页不想再填一张固定简历表</h3><p>最初的首页按“个人介绍、工作经历、人生履历”组织。看了一段时间，我又觉得不对：一个人的首页，不应该只能往几个固定栏位里填东西。</p>
+<p>我更想要的是类似 GitHub 个人 README 的自由度，想写什么就写什么。于是首页改成了 <code>source/index.md</code>，支持 Markdown 和局部 HTML；主题保留统一的导航、排版、明暗切换和页脚，个人专属样式留在博客里。</p>
+<p>后来连“我的工具箱”也改掉了。</p>
+<p>现在我每天的工作已经不只是写某一种语言：需求、文档、PPT、会议纪要、问题排查、数据分析、工具研究、项目开发，AI 几乎都参与。再列一排技术栈，反而不如直接讲“我现在怎么工作”。</p>
+<p>当然，老本行还是 Laravel。只是没必要用一张语言清单限制现在的自己。</p>
+<h3 id="项目清单这件小事，反而最能说明问题"><a href="#项目清单这件小事，反而最能说明问题" class="headerlink" title="项目清单这件小事，反而最能说明问题"></a>项目清单这件小事，反而最能说明问题</h3><p>9 月 9 日整理首页项目时，AI 起初建议继续维护 <code>projects.json</code>，再通过构建脚本把它变成折叠清单。这个方案也实现了，页面正常。</p>
+<p>但我想了想，还是觉得复杂：就这一页、这么一些项目，为什么要为了展示再维护一个数据文件和一段引用逻辑？直接写在首页里不行吗？</p>
+<p>于是又删掉数据文件和脚本，把项目直接写进 <code>index.md</code>，用原生 <code>details</code> 折叠，分成公司项目、小工具、个人项目。重复的“值得看看”也删了，Breezehome 本身放进项目清单。</p>
+<p>这件事很小，却比一句“保持简单”具体多了。</p>
+<p><strong>AI 能把一个方案实现出来，不代表我就需要这个方案。</strong> 有时候更适合自己的优化，不是再加一层，而是删掉一层。</p>
+<h3 id="分类、标签、友链和那个有点大的按钮"><a href="#分类、标签、友链和那个有点大的按钮" class="headerlink" title="分类、标签、友链和那个有点大的按钮"></a>分类、标签、友链和那个有点大的按钮</h3><p>分类页原来一列排到底，名称和数量却占不了多少宽度。后来改成电脑三列、平板两列、手机一列，整项可点击，空间用得舒服多了。</p>
+<p>标签页则增加常用标签、全部标签和即时筛选，把名称与数量分清楚，而不是做成五颜六色、字号忽大忽小的标签云。历史上大小写不同的分类和标签，没有趁改样式一起合并，免得顺手改变旧文章的归属和入口。</p>
+<p>友链单独有了一个页面，第一条真实友链是“白羊小屋”。加完之后，我在手机上没看见入口，又补了移动端导航横向滚动。</p>
+<p>明暗切换也从文字换成了显示器、太阳、月亮三个图标。我看第一版又觉得按钮大了些，于是可见尺寸继续缩小，触屏点击区域仍然保留。还有 favicon、页头 Logo、备案信息，都是这样一点点补上的。</p>
+<p>不是每一处都值得写一篇技术教程，但这些反复，最后决定了它用起来是不是顺手。</p>
+<h2 id="不是全自动，也有-AI-判断失准的时候"><a href="#不是全自动，也有-AI-判断失准的时候" class="headerlink" title="不是全自动，也有 AI 判断失准的时候"></a>不是全自动，也有 AI 判断失准的时候</h2><p>要说整个过程我完全没动手，也不准确。</p>
+<p>有一轮提交，AI 连续遇到 Git 锁文件权限和 SSH 连接错误，让我反复在本机终端尝试处理权限。我确实手动执行过主题和博客仓库的提交、推送，再把结果贴回去让它接着做。</p>
+<p>后面的检查才进一步发现，当前沙箱对 Git 目录的写入有拒绝规则。我的终端能提交，并不等于 AI 所在的执行环境也能提交。前面一味让我重复给用户目录授权，并没有抓住这个区别。</p>
+<p>加上那次把源码推送说成网站发布，以及项目清单先做复杂再简化，这些都不应该从回顾里删掉。否则写出来就像 AI 从第一步到最后一步永远正确，我只负责坐着看结果，和实际经历不是一回事。</p>
+<p>我的确没有去手写主题模板和样式，但我还是会说“这个太大了”“这个重复了”“别搞这么复杂”，也会在它卡住时接一下手。</p>
+<p>至于什么方案适合自己，最后还是得自己看。</p>
+<h2 id="最后，把反复做的事变成固定流程"><a href="#最后，把反复做的事变成固定流程" class="headerlink" title="最后，把反复做的事变成固定流程"></a>最后，把反复做的事变成固定流程</h2><p>9 月 9 日，我又提了一个很实际的需求：以后手动改完文章、首页或主题，能不能运行一个脚本，把验证、源码上传和网站部署都做掉？</p>
+<p>于是有了博客根目录的 <code>publish.ps1</code>。</p>
+<p>它把检查、构建、主题提交推送、博客源码及主题引用提交推送、网站部署串成一个顺序；没有变化的提交会跳过，出错就停下来。也提供只检查、不发布的模式。</p>
+<p>脚本第一轮运行还踩了 Git 暂存排除路径的问题，AI 根据我贴的日志修正了命令。确认能用后，我又让它把自己输出的提示整理了一下：步骤前后留空行，用不同颜色的 STEP、OK、SKIP、ERROR 区分状态，Git 和 Hexo 自己的输出保持原样。</p>
+<p>这也算是这次重构的缩影：先能用，再用一次，发现不顺手的地方继续改。</p>
+<p>脚本并不是替我判断所有改动都该公开。它会提交未被忽略的改动，运行前仍然要知道自己改了什么。最终提示也明确保留了边界：网站产物推送完成后，GitHub Pages 还需要完成发布。</p>
+<p>紧接着又做了一个文章初始化 Skill。以后我说想写什么，它就按已有编号创建 Markdown，填好日期、作者、摘要、分类和标签，默认把正文留空。</p>
+<p>然后就有了这篇文章。初始化完我又想，整个过程都是和 AI 一起做的，聊天里已经有完整经过，正文不如也让它先整理出来。</p>
+<p>兜了一圈，这次重构连自己的记录方式也一起整理了。</p>
+<h2 id="到这里，先告一段落"><a href="#到这里，先告一段落" class="headerlink" title="到这里，先告一段落"></a>到这里，先告一段落</h2><p>截至这篇记录整理时，博客本地使用 Hexo 8.1.2，主题开发版本号是 <code>0.1.0-alpha.3</code>。本地已有的发布标签仍是 alpha.1 和 alpha.2，不能因为开发代码已经用于博客，就把它说成发布了稳定版。</p>
+<p>后面还有兼容性和验收工作，也肯定会有新的小地方想改。这篇不是“全部做完”的宣言，只是记下从旧站走到现在的这一段。</p>
+<p>这次最大的变化，对我来说也不只是页面换了一个样子。</p>
+<p>我没有先去学完一套 Hexo 主题开发，再从模板开始一点点写。更多时候，我只是提出自己想要的效果，让 AI 去拆、去做、去查；看到结果，再继续告诉它哪里不合适。</p>
+<p>听起来我确实没干多少活。但原来那些“有空再改”的东西，这次真的一件件落下来了。</p>
+<p>现在的风宅没有想变成多么炫目的作品。它就是我在互联网上的一间小屋，文字好读，东西好找，以后想改也不太费劲。</p>
+<p>至于代码，感谢这几天一直在干活的天才程序员。下次我大概还是会说：这里感觉差点意思，你再看看。😅</p>
+</div>
+<div class="inline-links"><a href="/tags/hexo/">#hexo</a><a href="/tags/%E4%B8%BB%E9%A2%98%E9%87%8D%E6%9E%84/">#主题重构</a></div>
+<div class="post-bottom"><a href="/2026/07/02/91.%20WSL%20Ubuntu%20%E4%B8%8B%20cc-switch%20%E5%91%BD%E4%BB%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8C%85%E8%A3%85%E6%96%B9%E6%A1%88%E8%AE%B0%E5%BD%95/">下一篇：WSL Ubuntu 下 cc-switch About 页面卡死问题分析与 X11 环境规避方案</a></div></article>
+</main>
+<footer><p>© 2026 NightingaleWK</p><p><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/#/Integrated/index">鲁ICP备17046331号-3</a> · <a href="/atom.xml">RSS</a> · <a target="_blank" rel="noopener" href="https://github.com/NightingaleWK/hexo-theme-breezehome">Breezehome</a></p></footer>
+<a class="back-to-top" href="#top" aria-label="回到顶部" title="回到顶部"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14M12 20V8m-6 6 6-6 6 6"/></svg></a>
+</body></html>
