@@ -73,3 +73,10 @@ main:focus-visible,[tabindex="0"]:focus-visible{outline:2px solid var(--accent);
 .tag-status{font-size:13px;margin:0 0 16px}
 @media(max-width:650px){.tag-toolbar{align-items:stretch;flex-direction:column;gap:12px}.tag-filter input{width:100%}.tag-popular{padding-bottom:24px;margin-bottom:24px}.tag-directory .taxonomy.tags{gap:8px}.tag-directory .tags a{padding-inline:10px;gap:9px}}
 @media print{.tag-filter{display:none}}
+
+.content-badge{display:inline-block;vertical-align:middle;font-size:12px;font-weight:400;line-height:1.6;padding:1px 7px;margin-left:5px;border:1px solid var(--line);border-radius:4px;color:var(--muted);background:var(--soft)}
+.content-badge[data-status=current]{color:var(--accent)}
+.content-notice{border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 18px;margin:0 0 24px;background:var(--soft);border-radius:4px;font-size:14px;overflow-wrap:anywhere}.content-notice p{margin:8px 0}.content-notice small{color:var(--muted);display:block}.content-notice a{display:inline-block;margin-top:8px;color:var(--accent)}
+
+/* Configurable menus wrap instead of clipping links on narrow screens. */
+@media(max-width:800px){header{flex-wrap:wrap;overflow:visible}header nav{width:100%;max-width:100%;flex-wrap:wrap;overflow:visible;gap:8px 16px;padding-bottom:0}}

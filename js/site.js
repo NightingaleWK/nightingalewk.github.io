@@ -108,6 +108,7 @@ if (form) {
         const positions=terms.map(t=>post.text.toLowerCase().indexOf(t)).filter(n=>n>=0);
         const start=Math.max(0,(positions.length?Math.min(...positions):0)-45);
         highlight(p,(start?'…':'')+post.text.slice(start,start+180)+(post.text.length>start+180?'…':''),terms);
+        if(post.status){const badge=document.createElement('span');badge.className='content-badge';badge.textContent=post.status;h.append(' ',badge);}
         row.append(h,p);results.append(row);
       }
     } catch {if(id===requestId)status.textContent='搜索索引加载失败，请再次点击搜索重试。';}
