@@ -105,7 +105,7 @@
 .prose .mc-timeline li {
     position: relative;
     margin: 0;
-    padding: 0 0 22px 22px
+    padding: 0 0 28px 22px
 }
 
 .prose .mc-timeline li:last-child {
@@ -159,6 +159,6 @@
 
 @media(max-width:650px) {
     .prose .mc-timeline li {
-        padding-bottom: 18px
+        padding-bottom: 22px
     }
 }

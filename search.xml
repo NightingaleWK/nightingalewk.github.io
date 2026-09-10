@@ -8,7 +8,7 @@
       <link href="/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/"/>
       <url>/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<p>只记已经确认的时间节点，条目会陆续补全。</p><span id="more"></span><ol class="mc-timeline"><li><time datetime="2017">2017</time><p>开服，使用 Realms 领域服务器。</p></li><li><time datetime="2026-08-14">2026 年 8 月 14 日</time><p>第 17 周目开启，使用自建 Java Paper 服务器。</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<p>膝盖中箭之地的历史最早可追溯至 2017 年。服务器最初以 Minecraft Bedrock&#x2F;Win10 Realm 为主要载体，并逐渐形成“周目制”、地图存档、玩家守则、反熊服管理、坐标数据库和社区官网等完整体系。</p><p>从 2017 年开始，服务器便不断尝试 Java Realm；2019 年进一步搭建独立 Java 自建服务器，2020 年的 Java Realm 甚至形成了独立的“第一周目”。在很长一段时间里，Bedrock Realm 是服务器主线，而 Java 则作为不断探索的支线并行存在。</p><p>2023 年第 16 周目之后，服务器进入一段较长的休整期。2026 年 8 月，第 17 周目重新开启，并正式采用 Java 自建服务器长期运营。至此，Java 服务器第一次真正接过了自 2017 年延续下来的主周目编号，“膝盖中箭之地”也由此进入新的阶段。</p><span id="more"></span><ol class="mc-timeline"><li><time datetime="2017-08">2017 年 8 月</time><p><strong>第 1 周目正式开始。</strong>原地图完成更换，“周目制”正式进入可考历史。同期服务器开始形成早期反作弊、反熊服治理规则，对外挂、Bug 刷物、盗窃和恶意破坏等行为进行管理。</p></li><li><time datetime="2017-09">2017 年 9 月</time><p><strong>进入第 2 周目，并在随后进入第 3 周目阶段。</strong>Realm 更新后开始利用新的权限管理机制加强防熊，同时建立群管理、新人审核等社区管理制度。<strong>同月首次明确尝试 Java Realm</strong>，Java 路线由此开始长期探索。第 2、3 周目后来共同保存为一份地图存档。</p></li><li><time datetime="2017-10">2017 年 10 月</time><p><strong>“膝盖中箭之地”官网正式建立。</strong>自行搭建服务器与博客，<code>wkarrow.top</code> 完成备案并正式作为服务器官网使用，开始承担公告、教程和社区资料沉淀功能。</p></li><li><time datetime="2017-11">2017 年 11 月</time><p><strong>第 4 周目开启。</strong>采用随机生成地图，强调纯生存、无插件、无 Mod；管理权限、反盗窃、反破坏等治理规则进一步成体系。</p></li><li><time datetime="2017-12">2017 年 12 月</time><p><strong>第 5 周目开启。</strong>本周目采用冬季主题，以冰天雪地地图作为主要特色。同期开始进一步利用官网整理和发布服务器重要坐标。</p></li><li><time datetime="2018-01">2018 年 1 月</time><p><strong>第 6 周目开启。</strong>新地图出生点附近以平原为主，继续坚持无作弊纯生存，并采用关闭火焰蔓延、关闭 TNT 爆炸等 Realm 运营设置。</p></li><li><time datetime="2018-02">2018 年 2 月</time><p><strong>第 6 周目社区功能进一步完善。</strong>官网建立专门的周目坐标页面，集中整理玩家基地、重要地点、刷怪笼、传送门等信息；同时开始出现玩家在 B 站直播服务器游玩的记录。</p></li><li><time datetime="2018-04">2018 年 4 月</time><p><strong>第 7 周目开启。</strong>延续纯生存、玩家互助、资产自保等长期理念，并进一步细化出生点周边保护规则。</p></li><li><time datetime="2018-07">2018 年 7 月</time><p><strong>第 8 周目开启。</strong>官网继续为新周目建立独立坐标页面，“周目—地图—坐标—存档”的运营体系逐渐成熟。</p></li><li><time datetime="2018-12">2018 年 12 月</time><p><strong>第 9 周目开启。</strong>继续以 Bedrock/Win10 Realm 为服务器主线，维持原版生存、社区互助和反熊服管理体系。</p></li><li><time datetime="2019-03">2019 年 3 月</time><p><strong>Java 1.13.2 自建服务器上线。</strong>采用白名单制度，并拥有独立服务器后台，在国内网络体验和管理能力上相比 Realm 有明显提升。这是 Java 自建服路线的重要节点。</p></li><li><time datetime="2019-05">2019 年 5 月</time><p><strong>发生一次服务器换图。</strong>当时 Realm 与 Java 服务器已经并行存在；由于现有材料无法确认此次换图具体属于哪条服务器线，也未改变领域服周目编号，因此暂不定义为新的主线周目。</p></li><li><time datetime="2019-10">2019 年 10 月</time><p><strong>第 10 周目正式开启。</strong>新地图强调新人友好；此时服务器已经拥有较完整的玩家守则、邀请教程、Realm 加入教程和 Java 服务器加入教程。</p></li><li><time datetime="2020-03">2020 年 3 月</time><p><strong>Java Realm 再次开启，并形成独立的 Java 周目体系。</strong>采用正版验证、白名单、最多 10 人同时在线、纯原版玩法。现存备份证明这一阶段的 Java Realm 世界被正式命名为“膝盖中箭之地 第一周目”。</p></li><li><time datetime="2020">2020 年上半年</time><p><strong>主线领域服进入第 11 周目。</strong>第 11 周目确实存在，并留下多个地图备份，但目前尚未找到能够精确确认其开启月份的公告。</p></li><li><time datetime="2020-06">2020 年 6 月</time><p><strong>第 12 周目开启。</strong>第 11 周目完成阶段性存档后，领域服开始第 12 周目。同期 Java Realm 第一周目也留下完整世界备份，体现了当时<strong>Bedrock 主线与 Java 支线并行运营</strong>的状态。</p></li><li><time datetime="2021-06">2021 年 6 月</time><p><strong>第 13 周目开启。</strong>出生点保护、反熊服、玩家资产自保和历史地图存档等长期制度已经较为稳定。</p></li><li><time datetime="2021-12">2021 年 12 月</time><p><strong>第 14 周目开启。</strong>恢复更加完整的原版生存机制，包括火焰蔓延、TNT 爆炸以及死亡全部掉落等规则。</p></li><li><time datetime="2022-06">2022 年 6 月</time><p><strong>第 15 周目开启。</strong>基本延续第 14 周目的原版生存规则和成熟的服务器管理体系。</p></li><li><time datetime="2023-06">2023 年 6 月</time><p><strong>第 16 周目开启。</strong>延续出生点管理、玩家守则、资产保护和历史周目存档等传统。这也是 Bedrock/Realm 主线时代目前已知的最后一个正式周目。</p></li><li><time datetime="2024-11">2024 年 11 月</time><p><strong>官网正式改用 <code>nightingalewk.cn</code>。</strong>原 <code>wkarrow.top</code> 地址作废，新域名开始作为服务器与博客的对外入口。</p></li><li><time datetime="2026-08">2026 年 9 月</time><p><strong>第 17 周目开启。</strong>时隔约三年重新全面公测，并计划长期运营。服务器正式采用 <strong>Minecraft Java 26.2 自建服务器</strong>，开启正版验证和白名单，加入少量改善体验的服务端辅助插件，同时保持整体接近原版的生存体验。同时完成了官网主题的重新设计与重构。站点以全新姿态对外展示。</p></li></ol>]]></content>
       
       
       <categories>
@@ -334,9 +334,9 @@
       
         <tags>
             
-            <tag> Docker </tag>
-            
             <tag> Laravel </tag>
+            
+            <tag> Docker </tag>
             
             <tag> Sail </tag>
             
@@ -421,9 +421,9 @@
       
         <tags>
             
-            <tag> Docker </tag>
-            
             <tag> Laravel </tag>
+            
+            <tag> Docker </tag>
             
             <tag> Nginx </tag>
             
@@ -491,9 +491,9 @@
       
         <tags>
             
-            <tag> Docker </tag>
-            
             <tag> Laravel </tag>
+            
+            <tag> Docker </tag>
             
             <tag> 容器化 </tag>
             
@@ -1397,31 +1397,6 @@
     
     
     <entry>
-      <title>检测服务端口的方法</title>
-      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 端口查询 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 表单请求验证简明示例</title>
       <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
       <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
@@ -1439,6 +1414,31 @@
         <tags>
             
             <tag> 表单验证 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>检测服务端口的方法</title>
+      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 端口查询 </tag>
             
         </tags>
       
@@ -1472,31 +1472,6 @@
     
     
     <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -1516,6 +1491,31 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
             
         </tags>
       
@@ -1862,31 +1862,6 @@
     
     
     <entry>
-      <title>Hexo 博客升级流程</title>
-      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
-      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
       <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
       <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
@@ -1904,6 +1879,31 @@
         <tags>
             
             <tag> oh-my-zsh </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo 博客升级流程</title>
+      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
+      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 建站 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       
