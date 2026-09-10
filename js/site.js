@@ -20,6 +20,25 @@ themeButton.addEventListener('click', () => {
   applyTheme();
 });
 media.addEventListener('change', applyTheme);
+const siteNav = document.querySelector('.site-nav');
+if (siteNav) {
+  const wide = matchMedia('(min-width: 801px)');
+  const syncNav = () => { siteNav.open = wide.matches; };
+  syncNav();
+  wide.addEventListener('change', syncNav);
+  siteNav.addEventListener('click', event => {
+    if (!wide.matches && event.target.closest('a')) siteNav.open = false;
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !wide.matches && siteNav.open) {
+      siteNav.open = false;
+      siteNav.querySelector('summary')?.focus({preventScroll:true});
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!wide.matches && !siteNav.contains(event.target)) siteNav.open = false;
+  });
+}
 // Progressive enhancement: the static article remains readable without scripts.
 document.querySelectorAll('.prose > table, .prose table:not(figure.highlight table)').forEach(table => {
   if (table.closest('.table-wrap, figure.highlight')) return;
