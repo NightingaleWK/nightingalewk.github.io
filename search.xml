@@ -334,9 +334,9 @@
       
         <tags>
             
-            <tag> Laravel </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Laravel </tag>
             
             <tag> Sail </tag>
             
@@ -421,9 +421,9 @@
       
         <tags>
             
-            <tag> Laravel </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Laravel </tag>
             
             <tag> Nginx </tag>
             
@@ -491,9 +491,9 @@
       
         <tags>
             
-            <tag> Laravel </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Laravel </tag>
             
             <tag> 容器化 </tag>
             
@@ -609,11 +609,11 @@
       
         <tags>
             
+            <tag> 教程 </tag>
+            
             <tag> Git </tag>
             
             <tag> GitHub </tag>
-            
-            <tag> 教程 </tag>
             
             <tag> 版本控制 </tag>
             
@@ -640,11 +640,11 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> 打印机 </tag>
             
             <tag> 京瓷 </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -820,7 +820,7 @@
       <link href="/2024/10/24/67.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%BC%80%E5%9D%90%E6%A0%87/"/>
       <url>/2024/10/24/67.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%20%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%BC%80%E5%9D%90%E6%A0%87/</url>
       
-        <content type="html"><![CDATA[<p>适用周目：16 周目</p><p>数据来源：realms 故事</p><span id="more"></span><h3 id="🌴-主世界"><a href="#🌴-主世界" class="headerlink" title="🌴 主世界"></a>🌴 主世界</h3><ul><li><p>出生点</p><ul><li>0, 64, 0</li></ul></li><li><p>掠夺者前哨站</p><ul><li>-3386, 97, -3402</li></ul></li><li><p>森林府邸</p><ul><li>5263, 89, 3542</li></ul></li><li><p>地狱要塞</p><ul><li>-380, 73, 807</li></ul></li><li><p>海底神殿</p><ul><li>1671, 62, -3431</li></ul></li><li><p>蘑菇岛</p><ul><li>894, 64, -3539</li></ul></li></ul><h3 id="⚠️-地狱"><a href="#⚠️-地狱" class="headerlink" title="⚠️ 地狱"></a>⚠️ 地狱</h3><ul><li>烈焰人刷怪塔<ul><li>1, 114, 22</li></ul></li><li>村民交易所<ul><li>-11, 114, 42</li></ul></li></ul><h3 id="⭕-下界"><a href="#⭕-下界" class="headerlink" title="⭕ 下界"></a>⭕ 下界</h3><p>暂无</p>]]></content>
+        <content type="html"><![CDATA[<p>适用周目：16 周目</p><span id="more"></span><h3 id="🌴-主世界"><a href="#🌴-主世界" class="headerlink" title="🌴 主世界"></a>🌴 主世界</h3><ul><li><p>出生点</p><ul><li>0, 64, 0</li></ul></li><li><p>掠夺者前哨站</p><ul><li>-3386, 97, -3402</li></ul></li><li><p>森林府邸</p><ul><li>5263, 89, 3542</li></ul></li><li><p>地狱要塞</p><ul><li>-380, 73, 807</li></ul></li><li><p>海底神殿</p><ul><li>1671, 62, -3431</li></ul></li><li><p>蘑菇岛</p><ul><li>894, 64, -3539</li></ul></li></ul><h3 id="⚠️-地狱"><a href="#⚠️-地狱" class="headerlink" title="⚠️ 地狱"></a>⚠️ 地狱</h3><ul><li>烈焰人刷怪塔<ul><li>1, 114, 22</li></ul></li><li>村民交易所<ul><li>-11, 114, 42</li></ul></li></ul><h3 id="⭕-下界"><a href="#⭕-下界" class="headerlink" title="⭕ 下界"></a>⭕ 下界</h3><p>暂无</p>]]></content>
       
       
       <categories>
@@ -855,7 +855,7 @@
       <link href="/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/"/>
       <url>/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20addon%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/</url>
       
-        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ol><li>本文将列举服务器当前使用过的插件的使用指南，便于快速查找使用方法。</li><li>善用右侧的导航栏，快速定位到您需要的内容。</li></ol><h2 id="1-World-Utilities-实用工具"><a href="#1-World-Utilities-实用工具" class="headerlink" title="1. World Utilities - 实用工具"></a>1. World Utilities - 实用工具</h2><ul><li>✅ Guide Book - 指南书<ul><li>介绍：死亡后丢掉了合成指南？不要紧，找个工作台，简单的原料就可以再做一本，World Utilities 的全部合成指南都在书里，英语好的家人们可直接看书，而无需看下方内容了。</li><li>材料准备：<ul><li>[B]书 x1</li><li>[P]木稿 x1</li><li>[S]木铲 x1</li><li>[A]木斧 x1</li><li>[W]木剑 x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[W][B][A]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ homes - 快速传送<ul><li>介绍：该功能实现了快速传送到指定位置的功能，合成后右键使用，可记录当前所在位置，共开放了 10 个位置</li><li>材料准备：<ul><li>[C]原石 x5</li><li>[P]木板 x1</li><li>[D]木门（任意） x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[C][D][C]</li><li>[C][C][C]</li></ul></li></ul></li><li>✅ Multiblock Pickaxe - 多方块挖掘镐<ul><li>介绍：现在挖一次方块就等于挖了 9 个方块，挖掘区域为下稿子的方块周围一圈，也就是9个，而区域方向为挖掘方块受击面所在平面，极大提升了下矿体验。</li><li>材料准备：<ul><li>[D]钻石镐 x3</li><li>[S]木棍 x2</li></ul></li><li>合成方式：<ul><li>[D][D][D]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ Omni Tool - 多功能工具<ul><li>介绍：使用这个多功能工具优化你的库存空间。这使你能够像使用镐、斧头或铲子一样打破任何方块。出门带着一个就行了，大大提高跑图体验。</li><li>材料准备：<ul><li>[H]蜂蜜块 x6</li><li>[A]钻石斧 x1</li><li>[P]钻石镐 x1</li><li>[S]钻石铲 x1</li></ul></li><li>合成方式：<ul><li>[H][A][H]</li><li>[H][P][H]</li><li>[H][S][H]</li></ul></li></ul></li><li>✅ Harvester Hoe - 收割者锄<ul><li>介绍：收割的作物将自动重新种植，掉落的物品将添加到您的库存中，除了用于重新种植所需的种子！这将适用于小麦、胡萝卜、甜菜根、土豆、瓜类、南瓜、可可豆和下界疣。</li><li>材料准备：<ul><li>[H]钻石锄 x1</li><li>[W]小麦种子 x1</li><li>[M]西瓜种子 x1</li><li>[U]南瓜种子 x1</li><li>[O]可可豆 x1</li><li>[X]小麦种子 x1</li><li>[B]甜菜根种子 x1</li><li>[P]土豆 x1</li><li>[C]胡萝卜 x1</li></ul></li><li>合成方式：<ul><li>[W][M][U]</li><li>[O][H][X]</li><li>[B][P][C]</li></ul></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><ol><li>本文将列举服务器当前使用过的插件的使用指南，便于快速查找使用方法。</li><li>善用导航栏，快速定位到您需要的内容。</li></ol><h2 id="1-World-Utilities-实用工具"><a href="#1-World-Utilities-实用工具" class="headerlink" title="1. World Utilities - 实用工具"></a>1. World Utilities - 实用工具</h2><ul><li>✅ Guide Book - 指南书<ul><li>介绍：死亡后丢掉了合成指南？不要紧，找个工作台，简单的原料就可以再做一本，World Utilities 的全部合成指南都在书里，英语好的家人们可直接看书，而无需看下方内容了。</li><li>材料准备：<ul><li>[B]书 x1</li><li>[P]木稿 x1</li><li>[S]木铲 x1</li><li>[A]木斧 x1</li><li>[W]木剑 x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[W][B][A]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ homes - 快速传送<ul><li>介绍：该功能实现了快速传送到指定位置的功能，合成后右键使用，可记录当前所在位置，共开放了 10 个位置</li><li>材料准备：<ul><li>[C]原石 x5</li><li>[P]木板 x1</li><li>[D]木门（任意） x1</li></ul></li><li>合成方式：<ul><li>[&nbsp;&nbsp;&nbsp;][P][&nbsp;&nbsp;&nbsp;]</li><li>[C][D][C]</li><li>[C][C][C]</li></ul></li></ul></li><li>✅ Multiblock Pickaxe - 多方块挖掘镐<ul><li>介绍：现在挖一次方块就等于挖了 9 个方块，挖掘区域为下稿子的方块周围一圈，也就是9个，而区域方向为挖掘方块受击面所在平面，极大提升了下矿体验。</li><li>材料准备：<ul><li>[D]钻石镐 x3</li><li>[S]木棍 x2</li></ul></li><li>合成方式：<ul><li>[D][D][D]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li><li>[&nbsp;&nbsp;&nbsp;][S][&nbsp;&nbsp;&nbsp;]</li></ul></li></ul></li><li>✅ Omni Tool - 多功能工具<ul><li>介绍：使用这个多功能工具优化你的库存空间。这使你能够像使用镐、斧头或铲子一样打破任何方块。出门带着一个就行了，大大提高跑图体验。</li><li>材料准备：<ul><li>[H]蜂蜜块 x6</li><li>[A]钻石斧 x1</li><li>[P]钻石镐 x1</li><li>[S]钻石铲 x1</li></ul></li><li>合成方式：<ul><li>[H][A][H]</li><li>[H][P][H]</li><li>[H][S][H]</li></ul></li></ul></li><li>✅ Harvester Hoe - 收割者锄<ul><li><p>介绍：收割的作物将自动重新种植，掉落的物品将添加到您的库存中，除了用于重新种植所需的种子！这将适用于小麦、胡萝卜、甜菜根、土豆、瓜类、南瓜、可可豆和下界疣。</p></li><li><p>材料准备：</p><ul><li><p>[H]钻石锄 x1</p></li><li><p>[W]小麦种子 x1</p></li><li><p>[M]西瓜种子 x1</p></li><li><p>[U]南瓜种子 x1</p></li><li><p>[O]可可豆 x1</p></li><li><p>[X]小麦种子 x1</p></li><li><p>[B]甜菜根种子 x1</p></li><li><p>[P]土豆 x1</p></li><li><p>[C]胡萝卜 x1</p></li></ul></li><li><p>合成方式：</p><ul><li>[W][M][U]</li><li>[O][H][X]</li><li>[B][P][C]</li></ul></li></ul></li></ul>]]></content>
       
       
       <categories>
@@ -890,7 +890,7 @@
       <link href="/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
       <url>/2024/10/23/66.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<h2 id="当前服务器问答"><a href="#当前服务器问答" class="headerlink" title="当前服务器问答"></a>当前服务器问答</h2><h3 id="现在是什么服务器？"><a href="#现在是什么服务器？" class="headerlink" title="现在是什么服务器？"></a>现在是什么服务器？</h3><p>目前为自建 Minecraft Java 服务器，使用 Paper 服务端，游戏版本为 26.2。第 17 周目已全面公测，计划长期运营。</p><h3 id="需要正版和白名单吗？"><a href="#需要正版和白名单吗？" class="headerlink" title="需要正版和白名单吗？"></a>需要正版和白名单吗？</h3><p>需要。服务器开启正版验证。加入 QQ 审核群 417396863，按原流程填写问卷、阅读守则，向群主提交关键词和 Java 版或基岩版正版游戏的玩家 ID，注明游戏版本，并 @群主，等待审核和白名单。</p><h3 id="有哪些模组或插件？"><a href="#有哪些模组或插件？" class="headerlink" title="有哪些模组或插件？"></a>有哪些模组或插件？</h3><p>服务端安装了改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。具体清单尚未整理，旧 Realms Addon 使用说明不代表当前插件配置。</p><h3 id="服务器地址是什么？"><a href="#服务器地址是什么？" class="headerlink" title="服务器地址是什么？"></a>服务器地址是什么？</h3><p><code>106.54.16.79:25565</code></p><h3 id="费用、换图及退出规则是否沿用旧版？"><a href="#费用、换图及退出规则是否沿用旧版？" class="headerlink" title="费用、换图及退出规则是否沿用旧版？"></a>费用、换图及退出规则是否沿用旧版？</h3><p>这些条目尚未重新确认，暂不作为现服政策说明。请在群里向服主确认。</p><h2 id="旧版-Realms-问答（历史资料）"><a href="#旧版-Realms-问答（历史资料）" class="headerlink" title="旧版 Realms 问答（历史资料）"></a>旧版 Realms 问答（历史资料）</h2><p>以下为旧文原始记录，涉及费用、换图、Xbox 好友、退群处理及领域故障等描述，不代表当前服务器政策或故障判断依据。</p><details><summary>展开旧版问答原文</summary><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>本文将集中回答网友们回复的各类问题，毕竟很多问题回答的次数多了我也烦，还不如在这里列一个问答列表，方便大家查阅</p><p>本文最后更新时间：2024年10月23日</p><h2 id="二、常见问题"><a href="#二、常见问题" class="headerlink" title="二、常见问题"></a>二、常见问题</h2><h3 id="Q：服务器换图的原则和频率是怎么规定的？"><a href="#Q：服务器换图的原则和频率是怎么规定的？" class="headerlink" title="Q：服务器换图的原则和频率是怎么规定的？"></a>Q：服务器换图的原则和频率是怎么规定的？</h3><p>除非当前图已经无法满足新版本的需求，否则一直不换，稳定游玩到底。</p><h3 id="Q：服务器是不是收费的"><a href="#Q：服务器是不是收费的" class="headerlink" title="Q：服务器是不是收费的"></a>Q：服务器是不是收费的</h3><p>永久免费，欢迎赞助（要恰饭的嘛）</p><h3 id="Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？"><a href="#Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？" class="headerlink" title="Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？"></a>Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？</h3><p>我有事业、爱人、家人、朋友，游戏审核啥的只能放后面，理解万岁！婚后男人你懂的 ~</p><p>你们的问题我都会看，请耐心等待。</p><p>当然对于你的申请来说，要是你的申请流程没按照审核群置顶公告的流程来，我肯定不理你鸭，回去看看流程补齐缺失的就好了</p><h3 id="Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？"><a href="#Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？" class="headerlink" title="Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？"></a>Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？</h3><p>对于这样的人，一眼DJ，鉴定为纯纯的铸币。</p><p>回到正题，有问题你可以这样问：</p><ul><li>建议服务器 …</li><li>我觉得加上 … 更好</li><li>不知道加上 … 服务器是不是会更好</li><li>请问 …</li><li>可否 …</li></ul><p>我欢迎大家积极发表理性的意见和建议，“会说话”是一个人的基本素养。</p><h3 id="Q：我要是不想玩了，组织会怎么处理？"><a href="#Q：我要是不想玩了，组织会怎么处理？" class="headerlink" title="Q：我要是不想玩了，组织会怎么处理？"></a>Q：我要是不想玩了，组织会怎么处理？</h3><p>一般玩家都在自行退群或者跟我说声不想玩的，我都是走“三删除”的逻辑：</p><ol><li>删除 xbox 好友</li><li>剥夺服务器玩家用户权限</li><li>踢群</li></ol><p>一旦有人退群，不管是有意无意的，一律走“三删除”的逻辑。</p><h3 id="Q：服务器掉线？高延时？"><a href="#Q：服务器掉线？高延时？" class="headerlink" title="Q：服务器掉线？高延时？"></a>Q：服务器掉线？高延时？</h3><p>在群里反馈一下，只要有一个人能玩，就代表着服务器没问题。那就只有是你的问题了，看看网络是不是不顺畅，看看设备是不是不给力。</p><p>若都反应上不去等问题，那就是领域服务器崩了，等待微软自行修复即可。</p><h3 id="Q：主群的管理员身份有啥用？不是群主一人独裁了吗？"><a href="#Q：主群的管理员身份有啥用？不是群主一人独裁了吗？" class="headerlink" title="Q：主群的管理员身份有啥用？不是群主一人独裁了吗？"></a>Q：主群的管理员身份有啥用？不是群主一人独裁了吗？</h3><p>仅作纪念意义。主群的管理员从建群到现在就一直这几个人，从来没变，其实可以把它当作是一种身份 —— 一个在群里待得比其他绝大部分群员久且很幸运的身份（类似绝版徽章）</p></details>]]></content>
+        <content type="html"><![CDATA[<p>本文将集中回答网友们回复的各类问题，毕竟很多问题回答的次数多了我也烦，还不如在这里列一个问答列表，方便大家查阅</p><h3 id="Q：现在是什么服务器？"><a href="#Q：现在是什么服务器？" class="headerlink" title="Q：现在是什么服务器？"></a>Q：现在是什么服务器？</h3><p>目前为自建 Minecraft Java 服务器，使用 Paper 服务端，游戏版本为 26.2。第 17 周目已全面公测，计划长期运营。</p><h3 id="Q：需要正版和白名单吗？"><a href="#Q：需要正版和白名单吗？" class="headerlink" title="Q：需要正版和白名单吗？"></a>Q：需要正版和白名单吗？</h3><p>需要。服务器开启正版验证。</p><h3 id="Q：有哪些模组或插件？"><a href="#Q：有哪些模组或插件？" class="headerlink" title="Q：有哪些模组或插件？"></a>Q：有哪些模组或插件？</h3><p>服务端安装了改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。具体清单尚未整理。</p><h3 id="Q：服务器换图的原则和频率是怎么规定的？"><a href="#Q：服务器换图的原则和频率是怎么规定的？" class="headerlink" title="Q：服务器换图的原则和频率是怎么规定的？"></a>Q：服务器换图的原则和频率是怎么规定的？</h3><p>除非当前图已经无法满足新版本的需求，否则一直不换，稳定游玩到底。</p><h3 id="Q：服务器是不是收费的"><a href="#Q：服务器是不是收费的" class="headerlink" title="Q：服务器是不是收费的"></a>Q：服务器是不是收费的</h3><p>永久免费，欢迎赞助（要恰饭的嘛）</p><h3 id="Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？"><a href="#Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？" class="headerlink" title="Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？"></a>Q：为啥腐竹老是不理我？为啥我提出的问题回复的很慢？</h3><p>我有事业、爱人、家人、朋友，游戏审核啥的只能放后面，理解万岁！婚后男人你懂的 ~</p><p>你们的问题我都会看，请耐心等待。</p><p>当然对于你的申请来说，要是你的申请流程没按照审核群置顶公告的流程来，我肯定不理你鸭，回去看看流程补齐缺失的就好了</p><h3 id="Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？"><a href="#Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？" class="headerlink" title="Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？"></a>Q：有人说“为啥服务器没有xxx？为哈不能用xxx？一个人管理服务器？独裁？垃圾！艹”，对此腐竹有啥回应吗？</h3><p>对于这样的人，一眼DJ，鉴定为纯纯的铸币。</p><p>回到正题，有问题你可以这样问：</p><ul><li>建议服务器 …</li><li>我觉得加上 … 更好</li><li>不知道加上 … 服务器是不是会更好</li><li>请问 …</li><li>可否 …</li></ul><p>我欢迎大家积极发表理性的意见和建议，“会说话”是一个人的基本素养。</p><h3 id="Q：我要是不想玩了，组织会怎么处理？"><a href="#Q：我要是不想玩了，组织会怎么处理？" class="headerlink" title="Q：我要是不想玩了，组织会怎么处理？"></a>Q：我要是不想玩了，组织会怎么处理？</h3><p>一般玩家都在自行退群或者跟我说声不想玩的，我都是走“三删除”的逻辑：</p><ol><li>删除 xbox 好友</li><li>剥夺服务器玩家用户权限</li><li>踢群</li></ol><p>一旦有人退群，不管是有意无意的，一律走“三删除”的逻辑。</p><blockquote><p>OS: 不玩了在群里水群不好吗？不要那么绝情嘛。</p></blockquote><h3 id="Q：服务器掉线？高延时？"><a href="#Q：服务器掉线？高延时？" class="headerlink" title="Q：服务器掉线？高延时？"></a>Q：服务器掉线？高延时？</h3><p>在群里反馈一下，只要有一个人能玩，就代表着服务器没问题。那就只有是你的问题了，看看网络是不是不顺畅，看看设备是不是不给力。</p><p>若都反应上不去等问题，那就是服务器崩了，群里找我就行。</p><h3 id="Q：主群的管理员身份有啥用？不是群主一人独裁了吗？"><a href="#Q：主群的管理员身份有啥用？不是群主一人独裁了吗？" class="headerlink" title="Q：主群的管理员身份有啥用？不是群主一人独裁了吗？"></a>Q：主群的管理员身份有啥用？不是群主一人独裁了吗？</h3><p>仅作纪念意义。主群的管理员从建群到现在就一直这几个人，从来没变，其实可以把它当作是一种身份 —— 一个在群里待得比其他绝大部分群员久且很幸运的身份（类似绝版徽章）</p>]]></content>
       
       
       <categories>
@@ -925,7 +925,7 @@
       <link href="/2024/10/23/65.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%8A%A0%E5%85%A5%E6%96%B9%E5%BC%8F/"/>
       <url>/2024/10/23/65.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%8A%A0%E5%85%A5%E6%96%B9%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<ol><li><p>首先加入 QQ 审核群 417396863</p></li><li><p>填写 <strong>问卷调查</strong>（<a href="https://docs.qq.com/form/page/DQlBhdmFMc1BxQUxU?_w_tencentdocx_form=1">点我填问卷</a>）</p></li><li><p>看 <strong>玩家守则</strong>（<a href="https://nightingalewk.cn/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/">点我看守则</a>），找关键字（在文末，一句话）</p></li><li><p>在群里向群主提交<strong>关键词和 Java 版或基岩版正版游戏的玩家 ID</strong>，注明游戏版本，并 <strong>@群主</strong>。按自己使用的版本填写，例如：</p><ul><li>基岩版：<code>NightingaleWK</code></li><li>或者 Java：<code>NightingleWK</code></li></ul></li><li><p>等待审批及添加服务器白名单</p></li></ol><p>服务器开启正版验证。通过审核、进入主群并被加入白名单后，再连接服务器。Java 版使用 Minecraft Java 26.2 连接 <code>106.54.16.79:25565</code>；基岩版的连接方式请在群里向群主确认。</p>]]></content>
+        <content type="html"><![CDATA[<ol><li><p>首先加入 QQ 审核群 417396863</p></li><li><p>填写 <strong>问卷调查</strong>（<a href="https://docs.qq.com/form/page/DQlBhdmFMc1BxQUxU?_w_tencentdocx_form=1">点我填问卷</a>）</p></li><li><p>看 <strong>玩家守则</strong>（<a href="https://nightingalewk.cn/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/">点我看守则</a>），找关键字（在文末，一句话）</p></li><li><p>在审核群里向群主提交<strong>关键词和 Java 版或基岩版正版游戏的玩家 ID</strong>，注明游戏版本，并 <strong>@群主</strong>。按自己使用的版本填写，例如：</p><ul><li>基岩版：<code>NightingaleWK</code></li><li>Java：<code>NightingleWK</code></li></ul></li><li><p>审核通过会拉你进主群并加入白名单，再连接服务器即可。</p></li></ol><p>服务器开启正版验证。通过审核、进入主群并被加入白名单后，再连接服务器。Minecraft Java 26.2 连接 <code>106.54.16.79:25565</code>。</p>]]></content>
       
       
       <categories>
@@ -960,7 +960,7 @@
       <link href="/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/"/>
       <url>/2024/10/23/64.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E7%8E%A9%E5%AE%B6%E5%AE%88%E5%88%99/</url>
       
-        <content type="html"><![CDATA[<p>本文将通过 3 小节来为您清晰条例的说明游玩时必须遵守的文件 —— 玩家守则，全篇阅读大约需要 5 分钟</p><span id="more"></span><h2 id="一、自我介绍"><a href="#一、自我介绍" class="headerlink" title="一、自我介绍"></a>一、自我介绍</h2><p>称呼我 wk 就行，XboxID：LexingtonWK，Java 账户昵称：NightingaleWK，毕业于<a href="https://www.sdut.edu.cn/">山东理工大学</a>，计算机专业，曾任 Laravel 工程师职务与项目经理职务，现任 CEC 的某地数字城市，是一名 TALL STACK developer，本人是 1.7.2 入的坑，喜欢这款游戏的同时，同时不甘于一个人自己玩，于是从 2017 年开始经营领域服务器，如今已迁移为自建的 Java Paper 服务器。</p><h2 id="二、服务器介绍"><a href="#二、服务器介绍" class="headerlink" title="二、服务器介绍"></a>二、服务器介绍</h2><h3 id="1-当前服务器"><a href="#1-当前服务器" class="headerlink" title="1. 当前服务器"></a>1. 当前服务器</h3><p>目前提供一台自建的 Minecraft Java 服务器，使用 Paper 服务端。第 17 周目已全面公测，计划长期运营。</p><ul><li>游戏版本：<strong>26.2</strong></li><li>正版验证：<strong>开启</strong></li><li>加入方式：完成原有审核流程后，在群里向群主提交<strong>关键词和 Java 版或基岩版正版游戏的玩家 ID</strong>，注明游戏版本，并 <strong>@群主</strong>，等待审核和白名单。</li><li>服务器地址：<code>106.54.16.79:25565</code></li><li>插件：使用改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。</li></ul><details><summary>往期 Realms 配置（历史原文，已不代表现服）</summary><h3 id="1-配置"><a href="#1-配置" class="headerlink" title="1.配置"></a>1.配置</h3><p>目前提供 <strong>1 个</strong> 服务器供玩家游玩：</p><ul><li><strong>JAVA 版</strong> 服务器<ul><li>目前版本：1.21.41；</li><li>Addon 列表 ：<ol><li>耐久显示</li><li>Damage Indicator Addon</li><li>Item Info+ </li><li>Hiker’s Friend Addon</li><li>Poisonous Potato Addon</li><li>Spark Pets Lite Addon</li><li>Spark Portals Addon</li><li>Combine Ores Addon</li><li>Gravestone Addon</li><li>World Utilities Addon</li><li>Planes Pro Addon</li><li>Security Addon</li><li>Furniture Addon</li></ol></li></ul></li></ul></details><h3 id="2-管理"><a href="#2-管理" class="headerlink" title="2.管理"></a>2.管理</h3><p>个人独裁。腐竹拥有一切条例解释权和所有行为裁定权；</p><p>没有乱七八糟的组织结构，就我一个人，我会尽最大可能公正客观的对待每一次提意，我所做的目的就是为了我更好的管理服务器、玩家更好的进行游戏；</p><p>回复和审批处理不会很及时，但我看见了的都会去给处理的，大家放心。</p><h2 id="三、玩家守则"><a href="#三、玩家守则" class="headerlink" title="三、玩家守则"></a>三、玩家守则</h2><ol><li>生存不易，让自己坚强起来，不要无脑的等待他人的恩赐。用自己的实际行动在游戏里创造价值，赢得他人尊重；</li><li>不拿取他人物品、不杀害他人拥有的生物、不破坏他人领地方块、不恶意伤人，未经他人允许，请勿对他人及其所有财产进行抢、偷、借、损等行为；</li><li>对于作弊、卡恶性 Bug，造成游戏失衡、影响他人游戏体验的人，第一次警告，第二次飞机；</li><li>禁止高频红石、禁止高空流水（岩浆）；</li><li>游戏内外禁止污蔑诽谤、人身攻击、网络暴力等行为，若发现直接飞机并保留对其发起民事行驶处理的权利；</li><li>出生点周围区域为主城位置，建设请遵循群主安排，符合主城设计思路与风格。群主有权对不符合主城设计的建筑进行拆除，拆除后会给玩家进行一定的补偿；</li><li>生存发展时，建议圈地，若周围已有其他人，请与其协商，做到双方和谐共处；</li><li>请自觉把苦力怕的坑填上；</li><li>请大家通过自己的言行举止在建造领域积极向上的游戏氛围，双标党、优越狗、素质低下党、撕 13 党和小学生无脑言论党均是踢群的对象。有问题多沟通，有分歧互理解，没什么是沟通解决不了的，若有，那我就踢个群试试；</li><li>多利用牌子来表述自己的想法，比如“抱歉，误伤了您的牛，这是赔偿”、“一不小心地给你踩了，给你补种了”、“绝了，这是谁建的这么好看”、“你的红石设备被我一不小心玩坏了，需要怎么配合群里叫我，我帮你修”等；</li><li>谁提出谁实现。服务器推荐大家自己挖坑自己填，对自己的工程负责，当然，完全可以找志同道合的小伙伴一起实现；</li><li>严禁在服务器内的任何地方拉人，禁止宣传其他服务器。若您想自建服务器并找人，请您自己去贴吧知乎上努力，本服务器发现拉人情况直接飞机；</li><li>砍树请砍完。不要留个够不到的数头在那。</li></ol><p>🔑 <strong>关键词：苟利国家生死以</strong> 🔑</p>]]></content>
+        <content type="html"><![CDATA[<p>本文将通过 3 小节来为您清晰条例的说明游玩时必须遵守的文件 —— 玩家守则，全篇阅读大约需要 5 分钟</p><span id="more"></span><h2 id="一、自我介绍"><a href="#一、自我介绍" class="headerlink" title="一、自我介绍"></a>一、自我介绍</h2><p>称呼我 wk 就行，XboxID：LexingtonWK，Java 账户昵称：NightingaleWK，毕业于<a href="https://www.sdut.edu.cn/">山东理工大学</a>，计算机专业，曾任 Laravel 工程师职务与项目经理职务，现任 CEC 的某地数字城市，是一名 TALL STACK developer，本人是 1.7.2 入的坑，喜欢这款游戏的同时，同时不甘于一个人自己玩，于是从 2017 年开始经营领域服务器，如今已迁移为自建的 Java Paper 服务器。</p><h2 id="二、服务器介绍"><a href="#二、服务器介绍" class="headerlink" title="二、服务器介绍"></a>二、服务器介绍</h2><h3 id="1-当前服务器"><a href="#1-当前服务器" class="headerlink" title="1. 当前服务器"></a>1. 当前服务器</h3><p>目前提供一台自建的 Minecraft Java 服务器，使用 Paper 服务端。第 17 周目已全面公测，计划长期运营。</p><ul><li>游戏版本：<strong>26.2</strong></li><li>正版验证：<strong>开启</strong></li><li>加入方式：完成原有审核流程后，在群里向群主提交<strong>关键词和 Java 版或基岩版正版游戏的玩家 ID</strong>，注明游戏版本，并 <strong>@群主</strong>，等待审核和白名单。</li><li>服务器地址：<code>106.54.16.79:25565</code></li><li>插件：使用改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。</li></ul><details><summary>往期 Realms 配置（历史原文，已不代表现服）</summary><h3 id="1-配置"><a href="#1-配置" class="headerlink" title="1.配置"></a>1.配置</h3><p>目前提供 <strong>1 个</strong> 服务器供玩家游玩：</p><ul><li><strong>JAVA 版</strong> 服务器<ul><li>目前版本：1.21.41；</li><li>Addon 列表 ：<ol><li>耐久显示</li><li>Damage Indicator Addon</li><li>Item Info+</li><li>Hiker’s Friend Addon</li><li>Poisonous Potato Addon</li><li>Spark Pets Lite Addon</li><li>Spark Portals Addon</li><li>Combine Ores Addon</li><li>Gravestone Addon</li><li>World Utilities Addon</li><li>Planes Pro Addon</li><li>Security Addon</li><li>Furniture Addon</li></ol></li></ul></li></ul></details><h3 id="2-管理"><a href="#2-管理" class="headerlink" title="2.管理"></a>2.管理</h3><p>个人独裁。腐竹拥有一切条例解释权和所有行为裁定权；</p><p>没有乱七八糟的组织结构，就我一个人，我会尽最大可能公正客观的对待每一次提意，我所做的目的就是为了我更好的管理服务器、玩家更好的进行游戏；</p><p>回复和审批处理不会很及时，但我看见了的都会去给处理的，大家放心。</p><h2 id="三、玩家守则"><a href="#三、玩家守则" class="headerlink" title="三、玩家守则"></a>三、玩家守则</h2><ol><li>生存不易，让自己坚强起来，不要无脑的等待他人的恩赐。用自己的实际行动在游戏里创造价值，赢得他人尊重；</li><li>不拿取他人物品、不杀害他人拥有的生物、不破坏他人领地方块、不恶意伤人，未经他人允许，请勿对他人及其所有财产进行抢、偷、借、损等行为；</li><li>对于作弊、卡恶性 Bug，造成游戏失衡、影响他人游戏体验的人，第一次警告，第二次飞机；</li><li>禁止高频红石、禁止高空流水（岩浆）；</li><li>游戏内外禁止污蔑诽谤、人身攻击、网络暴力等行为，若发现直接飞机并保留对其发起民事行驶处理的权利；</li><li>出生点周围区域为主城位置，建设请遵循群主安排，符合主城设计思路与风格。群主有权对不符合主城设计的建筑进行拆除，拆除后会给玩家进行一定的补偿；</li><li>生存发展时，建议圈地，若周围已有其他人，请与其协商，做到双方和谐共处；</li><li>请自觉把苦力怕的坑填上；</li><li>请大家通过自己的言行举止在建造领域积极向上的游戏氛围，双标党、优越狗、素质低下党、撕 13 党和小学生无脑言论党均是踢群的对象。有问题多沟通，有分歧互理解，没什么是沟通解决不了的，若有，那我就踢个群试试；</li><li>多利用牌子来表述自己的想法，比如“抱歉，误伤了您的牛，这是赔偿”、“一不小心地给你踩了，给你补种了”、“绝了，这是谁建的这么好看”、“你的红石设备被我一不小心玩坏了，需要怎么配合群里叫我，我帮你修”等；</li><li>谁提出谁实现。服务器推荐大家自己挖坑自己填，对自己的工程负责，当然，完全可以找志同道合的小伙伴一起实现；</li><li>严禁在服务器内的任何地方拉人，禁止宣传其他服务器。若您想自建服务器并找人，请您自己去贴吧知乎上努力，本服务器发现拉人情况直接飞机；</li><li>砍树请砍完。不要留个够不到的数头在那。</li></ol><p>🔑 <strong>关键词：苟利国家生死以</strong> 🔑</p>]]></content>
       
       
       <categories>
@@ -1397,31 +1397,6 @@
     
     
     <entry>
-      <title>检测服务端口的方法</title>
-      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
-      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-      
-        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 端口查询 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 表单请求验证简明示例</title>
       <link href="/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/"/>
       <url>/2022/11/24/47.%20laravel%20%E8%A1%A8%E5%8D%95%E8%AF%B7%E6%B1%82%E9%AA%8C%E8%AF%81%E7%AE%80%E6%98%8E%E7%A4%BA%E4%BE%8B/</url>
@@ -1439,6 +1414,31 @@
         <tags>
             
             <tag> 表单验证 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>检测服务端口的方法</title>
+      <link href="/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2022/11/24/46.%20%E6%A3%80%E6%B5%8B%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>通过以下方法，可查询 win 或 linux 系统中各种服务的端口是多少，方便加入到 zabbix 监管平台中</p><h2 id="1-Linux-系统"><a href="#1-Linux-系统" class="headerlink" title="1. Linux 系统"></a>1. Linux 系统</h2><h3 id="1-1-查询-etc-services-找端口"><a href="#1-1-查询-etc-services-找端口" class="headerlink" title="1.1 查询 &#x2F;etc&#x2F;services 找端口"></a>1.1 查询 &#x2F;etc&#x2F;services 找端口</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/services | grep postgres</span><br><span class="line"> </span><br><span class="line">postgres 5432/tcp postgresql # POSTGRES</span><br><span class="line"> </span><br><span class="line">postgres 5432/udp postgresql # POSTGRES</span><br></pre></td></tr></table></figure><p>注意：如果用户没有配置services的话，这个方法就无效。</p><h3 id="1-2-netstat-命令查看"><a href="#1-2-netstat-命令查看" class="headerlink" title="1.2 netstat 命令查看"></a>1.2 netstat 命令查看</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># netstat -a | grep PGSQL</span><br><span class="line"> </span><br><span class="line">unix 2 [ ACC ] STREAM LISTENING 12693978 /tmp/.s.PGSQL.5432</span><br></pre></td></tr></table></figure><h2 id="2-Windows-系统"><a href="#2-Windows-系统" class="headerlink" title="2. Windows 系统"></a>2. Windows 系统</h2><p>待补充</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 端口查询 </tag>
             
         </tags>
       
@@ -1472,6 +1472,31 @@
     
     
     <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -1491,31 +1516,6 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
             
         </tags>
       
@@ -1862,31 +1862,6 @@
     
     
     <entry>
-      <title>Hexo 博客升级流程</title>
-      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
-      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 建站 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
       <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
       <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
@@ -1912,23 +1887,23 @@
     
     
     <entry>
-      <title>Dcat-Admin 主题色变更的避坑方法</title>
-      <link href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/"/>
-      <url>/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</url>
+      <title>Hexo 博客升级流程</title>
+      <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
+      <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
       
-        <content type="html"><![CDATA[<p>官方文档里写了如何变变更主题色，文档如下：</p><p><a href="https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725">https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725</a></p><p>当我们使用 <code>homestead</code> 开发时，运行 <code>php artisan admin:minify orange --color fbbd08 --publish</code> 会报错，问题大约就是在 <code>windows</code> 上运行的 <code>homestead</code> 这样的 <code>linux</code> 系统，在建立软连接的时候会出错，故我这里改一下教程，按照这样的方式就可以编译通过，达到效果</p><h2 id="1-Windows-上的操作"><a href="#1-Windows-上的操作" class="headerlink" title="1. Windows 上的操作"></a>1. Windows 上的操作</h2><p>上官网下载 <code>Node.js</code> 并安装，找到项目文件所在位置，这里我按照默认的规范，位置在 <code>C:\Users\djsyw\code\MyProject</code> ，之后我们继续寻找 <code>dcat</code> 的包，在 <code>C:\Users\djsyw\code\MyProject\vendor\dcat\laravel-admin</code> 这里，我们在这里打开 <code>Terminal</code> 输入指令 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>完成后执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure><p>相对于在 <code>homestead</code> 里运行 <code>linux Mix</code> 前端工作流那繁琐操蛋的流程， <code>win</code>下就很舒心，至此准备工作结束，我们这些操作完成了在 <code>homestead</code> 上各种报错的环节，这里算是给他提前做好了</p><h2 id="2-homestead-上的操作"><a href="#2-homestead-上的操作" class="headerlink" title="2. homestead 上的操作"></a>2. homestead 上的操作</h2><p>定位到我们的项目根目录，直接按照教程走，执行命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan admin:minify orange --color fbbd08 --publish</span><br></pre></td></tr></table></figure><p>然后会有接下来的显示，这就没问题了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">➜  yanji git:(master) php artisan admin:minify cecBlue --color 004ea2 --publish</span><br><span class="line">[cecBlue][#004ea2] npm run production...</span><br><span class="line"></span><br><span class="line">&gt; prod</span><br><span class="line">&gt; npm run production</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; production</span><br><span class="line">&gt; cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js</span><br><span class="line"></span><br><span class="line">//这里有很多的 warning 忽略即可（反正没 ERR 就行）</span><br><span class="line"></span><br><span class="line">DONE  Compiled successfully in 27702ms2:32:20 AM</span><br><span class="line"></span><br><span class="line">Asset      Size  Chunks                          Chunk Names</span><br><span class="line">/resources/dist/adminlte/adminlte.js  29.4 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">/resources/dist/adminlte/adminlte.js.map  83.9 KiB       0  [emitted] [dev]         /resources/dist/adminlte/adminlte</span><br><span class="line">/resources/dist/dcat/css/nunito.css  9.83 KiB          [emitted]</span><br><span class="line">/resources/dist/dcat/extra/action.js  2.85 KiB       1  [emitted]               /resources/dist/dcat/extra/action</span><br><span class="line">/resources/dist/dcat/extra/action.js.map  10.6 KiB       1  [emitted] [dev]         /resources/dist/dcat/extra/action</span><br><span class="line">/resources/dist/dcat/extra/grid-extend.js  7.65 KiB       2  [emitted]               /resources/dist/dcat/extra/grid-extend</span><br><span class="line">/resources/dist/dcat/extra/grid-extend.js.map  24.7 KiB       2  [emitted] [dev]         /resources/dist/dcat/extra/grid-extend</span><br><span class="line">/resources/dist/dcat/extra/select-table.js  4.79 KiB       3  [emitted]               /resources/dist/dcat/extra/select-table</span><br><span class="line">/resources/dist/dcat/extra/select-table.js.map  18.3 KiB       3  [emitted] [dev]         /resources/dist/dcat/extra/select-table</span><br><span class="line">/resources/dist/dcat/extra/upload.js  24.9 KiB       4  [emitted]               /resources/dist/dcat/extra/upload</span><br><span class="line">/resources/dist/dcat/extra/upload.js.map  74.5 KiB       4  [emitted] [dev]         /resources/dist/dcat/extra/upload</span><br><span class="line">/resources/dist/dcat/js/dcat-app.js  99.1 KiB       5  [emitted]               /resources/dist/dcat/js/dcat-app</span><br><span class="line">/resources/dist/dcat/js/dcat-app.js.map   192 KiB       5  [emitted] [dev]         /resources/dist/dcat/js/dcat-app</span><br><span class="line">resources/dist/adminlte/adminlte-cecBlue.css   656 KiB       0  [emitted]        [big]  /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/css/dcat-app-cecBlue.css    68 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/extra/markdown.css  1.72 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/extra/upload.css  6.34 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line"></span><br><span class="line">Copied Directory [/vendor/dcat/laravel-admin/resources/dist] To [/public/vendor/dcat-admin]</span><br><span class="line">Publishing complete.</span><br></pre></td></tr></table></figure><p>之后按照教程就可以了</p>]]></content>
+        <content type="html"><![CDATA[<p>1、全局升级<code>hexo-cli</code>，先<code>hexo version</code>查看当前版本，然后<code>npm i hexo-cli -g</code>，再次<code>hexo version</code>查看是否升级成功。</p><p>2、使用<code>npm install -g npm-check</code>和<code>npm-check</code>，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件</p><p>3、使用<code>npm install -g npm-upgrade</code>和<code>npm-upgrade</code>，升级系统中的插件</p><p>4、使用<code>npm update -g</code>和<code>npm update --save</code></p>]]></content>
       
       
       <categories>
           
-          <category> laravel </category>
+          <category> 建站 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> dcat admin </tag>
+            <tag> hexo </tag>
             
         </tags>
       
@@ -1950,6 +1925,31 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Dcat-Admin 主题色变更的避坑方法</title>
+      <link href="/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/"/>
+      <url>/2021/08/03/25.%20Dcat-Admin%20%E4%B8%BB%E9%A2%98%E8%89%B2%E5%8F%98%E6%9B%B4%E7%9A%84%E9%81%BF%E5%9D%91%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>官方文档里写了如何变变更主题色，文档如下：</p><p><a href="https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725">https://learnku.com/docs/dcat-admin/2.x/theme-and-color/8085#db3725</a></p><p>当我们使用 <code>homestead</code> 开发时，运行 <code>php artisan admin:minify orange --color fbbd08 --publish</code> 会报错，问题大约就是在 <code>windows</code> 上运行的 <code>homestead</code> 这样的 <code>linux</code> 系统，在建立软连接的时候会出错，故我这里改一下教程，按照这样的方式就可以编译通过，达到效果</p><h2 id="1-Windows-上的操作"><a href="#1-Windows-上的操作" class="headerlink" title="1. Windows 上的操作"></a>1. Windows 上的操作</h2><p>上官网下载 <code>Node.js</code> 并安装，找到项目文件所在位置，这里我按照默认的规范，位置在 <code>C:\Users\djsyw\code\MyProject</code> ，之后我们继续寻找 <code>dcat</code> 的包，在 <code>C:\Users\djsyw\code\MyProject\vendor\dcat\laravel-admin</code> 这里，我们在这里打开 <code>Terminal</code> 输入指令 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure><p>完成后执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure><p>相对于在 <code>homestead</code> 里运行 <code>linux Mix</code> 前端工作流那繁琐操蛋的流程， <code>win</code>下就很舒心，至此准备工作结束，我们这些操作完成了在 <code>homestead</code> 上各种报错的环节，这里算是给他提前做好了</p><h2 id="2-homestead-上的操作"><a href="#2-homestead-上的操作" class="headerlink" title="2. homestead 上的操作"></a>2. homestead 上的操作</h2><p>定位到我们的项目根目录，直接按照教程走，执行命令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php artisan admin:minify orange --color fbbd08 --publish</span><br></pre></td></tr></table></figure><p>然后会有接下来的显示，这就没问题了</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">➜  yanji git:(master) php artisan admin:minify cecBlue --color 004ea2 --publish</span><br><span class="line">[cecBlue][#004ea2] npm run production...</span><br><span class="line"></span><br><span class="line">&gt; prod</span><br><span class="line">&gt; npm run production</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&gt; production</span><br><span class="line">&gt; cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js</span><br><span class="line"></span><br><span class="line">//这里有很多的 warning 忽略即可（反正没 ERR 就行）</span><br><span class="line"></span><br><span class="line">DONE  Compiled successfully in 27702ms2:32:20 AM</span><br><span class="line"></span><br><span class="line">Asset      Size  Chunks                          Chunk Names</span><br><span class="line">/resources/dist/adminlte/adminlte.js  29.4 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">/resources/dist/adminlte/adminlte.js.map  83.9 KiB       0  [emitted] [dev]         /resources/dist/adminlte/adminlte</span><br><span class="line">/resources/dist/dcat/css/nunito.css  9.83 KiB          [emitted]</span><br><span class="line">/resources/dist/dcat/extra/action.js  2.85 KiB       1  [emitted]               /resources/dist/dcat/extra/action</span><br><span class="line">/resources/dist/dcat/extra/action.js.map  10.6 KiB       1  [emitted] [dev]         /resources/dist/dcat/extra/action</span><br><span class="line">/resources/dist/dcat/extra/grid-extend.js  7.65 KiB       2  [emitted]               /resources/dist/dcat/extra/grid-extend</span><br><span class="line">/resources/dist/dcat/extra/grid-extend.js.map  24.7 KiB       2  [emitted] [dev]         /resources/dist/dcat/extra/grid-extend</span><br><span class="line">/resources/dist/dcat/extra/select-table.js  4.79 KiB       3  [emitted]               /resources/dist/dcat/extra/select-table</span><br><span class="line">/resources/dist/dcat/extra/select-table.js.map  18.3 KiB       3  [emitted] [dev]         /resources/dist/dcat/extra/select-table</span><br><span class="line">/resources/dist/dcat/extra/upload.js  24.9 KiB       4  [emitted]               /resources/dist/dcat/extra/upload</span><br><span class="line">/resources/dist/dcat/extra/upload.js.map  74.5 KiB       4  [emitted] [dev]         /resources/dist/dcat/extra/upload</span><br><span class="line">/resources/dist/dcat/js/dcat-app.js  99.1 KiB       5  [emitted]               /resources/dist/dcat/js/dcat-app</span><br><span class="line">/resources/dist/dcat/js/dcat-app.js.map   192 KiB       5  [emitted] [dev]         /resources/dist/dcat/js/dcat-app</span><br><span class="line">resources/dist/adminlte/adminlte-cecBlue.css   656 KiB       0  [emitted]        [big]  /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/css/dcat-app-cecBlue.css    68 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/extra/markdown.css  1.72 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line">resources/dist/dcat/extra/upload.css  6.34 KiB       0  [emitted]               /resources/dist/adminlte/adminlte</span><br><span class="line"></span><br><span class="line">Copied Directory [/vendor/dcat/laravel-admin/resources/dist] To [/public/vendor/dcat-admin]</span><br><span class="line">Publishing complete.</span><br></pre></td></tr></table></figure><p>之后按照教程就可以了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> dcat admin </tag>
+            
+        </tags>
       
     </entry>
     
@@ -2000,35 +2000,6 @@
     
     
     <entry>
-      <title>laravel 项目在服务器上的更新</title>
-      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
-      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
-      
-        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> laravel </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 代码更新 </tag>
-            
-            <tag> oneinstack </tag>
-            
-            <tag> lnmp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>laravel 项目部署到服务器的流程</title>
       <link href="/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/06/08/23.%20Laravel%20%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%B5%81%E7%A8%8B/</url>
@@ -2045,11 +2016,40 @@
       
         <tags>
             
+            <tag> 代码部署 </tag>
+            
             <tag> oneinstack </tag>
             
             <tag> lnmp </tag>
             
-            <tag> 代码部署 </tag>
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>laravel 项目在服务器上的更新</title>
+      <link href="/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/"/>
+      <url>/2021/06/08/24.%20Laravel%20%E9%A1%B9%E7%9B%AE%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84%E6%9B%B4%E6%96%B0/</url>
+      
+        <content type="html"><![CDATA[<p>代码更新时会经常遇到服务器数据变动导致无法 git pull ，需要强行覆盖并重新进行参数配置，具体如下</p><h1 id="强制覆盖"><a href="#强制覆盖" class="headerlink" title="强制覆盖"></a>强制覆盖</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard origin/master </span><br><span class="line">git pull</span><br></pre></td></tr></table></figure><h1 id="修改-config-配置文件"><a href="#修改-config-配置文件" class="headerlink" title="修改 config 配置文件"></a>修改 config 配置文件</h1><p>&#x2F;data&#x2F;wwwroot&#x2F;yanji.wkarrow.top&#x2F;config&#x2F;admin.php</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line"> &#x27;https&#x27; =&gt; env(&#x27;ADMIN_HTTPS&#x27;, ture),</span><br><span class="line">.</span><br><span class="line">.</span><br><span class="line">.</span><br></pre></td></tr></table></figure><p>之后重启 nginx 服务并清理缓存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br><span class="line">//清理各类缓存</span><br><span class="line">php artisan cache:clear &amp;&amp; php artisan config:clear &amp;&amp; php artisan route:clear &amp;&amp; php artisan view:clear</span><br></pre></td></tr></table></figure><h1 id="数据库迁移并填充"><a href="#数据库迁移并填充" class="headerlink" title="数据库迁移并填充"></a>数据库迁移并填充</h1><p>若有需要可以执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php artisan migrate:regresh --seed</span><br><span class="line">php artisan admin:install</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> laravel </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oneinstack </tag>
+            
+            <tag> lnmp </tag>
+            
+            <tag> 代码更新 </tag>
             
         </tags>
       
