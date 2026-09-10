@@ -8,7 +8,7 @@
       <link href="/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/"/>
       <url>/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/</url>
       
-        <content type="html"><![CDATA[<p>这里记录「膝盖中箭之地」一路走来的重要节点：最初开服、周目更替，以及服务器的变化。随着旧记录逐步整理，这条时间轴也会继续补全。</p><p>本文记录历史；当前版本和加入要求请以最新服务器公告为准。以下年份和日期只采用已经确认的信息，尚未确认的事件时间单独说明。</p><span id="more"></span><h2 id="2017-年：故事开始"><a href="#2017-年：故事开始" class="headerlink" title="2017 年：故事开始"></a>2017 年：故事开始</h2><p>因为喜欢 Minecraft，也不甘于一个人玩，我买下了 Realms 领域服务器，开始和其他玩家一起游玩。「膝盖中箭之地」的故事由此展开。</p><p>此后，服务器经历了不同周目，也留下了玩家的建筑、探索与共同游玩的回忆。各周目的具体起止时间，将根据留存记录陆续补充。</p><h2 id="2024-年-10-月：博客中的服务器资料"><a href="#2024-年-10-月：博客中的服务器资料" class="headerlink" title="2024 年 10 月：博客中的服务器资料"></a>2024 年 10 月：博客中的服务器资料</h2><p>博客现存的玩家守则、加入方式、常见问题和 Addon 使用说明，发布日期为 2024 年 10 月 23 日；公开坐标及玩家高光系列的发布日期为 10 月 24 日。</p><p>其中，公开坐标注明适用于第 17 周目，玩家高光 S3 也注明素材来自第 17 周目。这些文章保留了当时的资料线索。</p><p>这里的日期是文章发布日期，不代表第 17 周目的开启日期。</p><h2 id="从-Realms-到自建-Paper：迁移日期待补充"><a href="#从-Realms-到自建-Paper：迁移日期待补充" class="headerlink" title="从 Realms 到自建 Paper：迁移日期待补充"></a>从 Realms 到自建 Paper：迁移日期待补充</h2><p>服务器从此前的 Realms 领域，迁移到了自建的 Minecraft Java 服务器，使用 Paper 服务端。</p><p>最新群公告以「第 17 周目开启公告」发布：游戏版本为 26.2，现已全面公测，计划长期运营。服务器开启正版验证，通过白名单准入；服务端添加改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。</p><p>加入仍沿用原来的审核流程。当前白名单申请需在群里向群主提交关键词和 Java 版或基岩版正版游戏的玩家 ID，注明游戏版本，并 @群主，由群主审核添加。</p><p>自建服务器的启用日期、公测日期，以及本次第 17 周目与旧文所记第 17 周目的关系，仍待核对，因此暂不归入具体年月。</p>]]></content>
+        <content type="html"><![CDATA[<p>只记已经确认的时间节点，条目会陆续补全。</p><span id="more"></span><ol class="mc-timeline"><li><time datetime="2017">2017</time><p>开服，使用 Realms 领域服务器。</p></li><li><time datetime="2026-08-14">2026 年 8 月 14 日</time><p>第 17 周目开启，使用自建 Java Paper 服务器。</p></li></ol>]]></content>
       
       
       <categories>
@@ -582,9 +582,9 @@
             
             <tag> Git </tag>
             
-            <tag> DevOps </tag>
-            
             <tag> Monorepo </tag>
+            
+            <tag> DevOps </tag>
             
         </tags>
       
@@ -1472,6 +1472,31 @@
     
     
     <entry>
+      <title>使用 net time 实现内网时间同步</title>
+      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
+      
+        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> net time </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sshpass 中使用 awk 的坑</title>
       <link href="/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/"/>
       <url>/2022/08/30/43.%20sshpass%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20awk%20%E7%9A%84%E5%9D%91/</url>
@@ -1491,31 +1516,6 @@
             <tag> sshppass </tag>
             
             <tag> awk </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用 net time 实现内网时间同步</title>
-      <link href="/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-      <url>/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</url>
-      
-        <content type="html"><![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> net time </tag>
             
         </tags>
       
@@ -1862,31 +1862,6 @@
     
     
     <entry>
-      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
-      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-      
-        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> oh-my-zsh </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hexo 博客升级流程</title>
       <link href="/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/"/>
       <url>/2021/08/09/28.%20Hexo%20%E5%8D%9A%E5%AE%A2%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B/</url>
@@ -1904,6 +1879,31 @@
         <tags>
             
             <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
+      <link href="/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> oh-my-zsh </tag>
             
         </tags>
       

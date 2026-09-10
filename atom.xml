@@ -10,7 +10,7 @@
   <rights>All rights reserved 2026, NightingaleWK</rights>
   <subtitle>Breezehome In Whiterun</subtitle>
   <title>雪漫城的风宅</title>
-  <updated>2026-09-10T02:26:11.694Z</updated>
+  <updated>2026-09-10T03:32:07.726Z</updated>
   <entry>
     <author>
       <name>NightingaleWK</name>
@@ -20,14 +20,14 @@
     <category term="Minecraft" scheme="https://nightingalewk.cn/tags/Minecraft/"/>
     <category term="膝盖中箭之地" scheme="https://nightingalewk.cn/tags/%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0/"/>
     <content>
-      <![CDATA[<p>这里记录「膝盖中箭之地」一路走来的重要节点：最初开服、周目更替，以及服务器的变化。随着旧记录逐步整理，这条时间轴也会继续补全。</p><p>本文记录历史；当前版本和加入要求请以最新服务器公告为准。以下年份和日期只采用已经确认的信息，尚未确认的事件时间单独说明。</p><span id="more"></span><h2 id="2017-年：故事开始"><a href="#2017-年：故事开始" class="headerlink" title="2017 年：故事开始"></a>2017 年：故事开始</h2><p>因为喜欢 Minecraft，也不甘于一个人玩，我买下了 Realms 领域服务器，开始和其他玩家一起游玩。「膝盖中箭之地」的故事由此展开。</p><p>此后，服务器经历了不同周目，也留下了玩家的建筑、探索与共同游玩的回忆。各周目的具体起止时间，将根据留存记录陆续补充。</p><h2 id="2024-年-10-月：博客中的服务器资料"><a href="#2024-年-10-月：博客中的服务器资料" class="headerlink" title="2024 年 10 月：博客中的服务器资料"></a>2024 年 10 月：博客中的服务器资料</h2><p>博客现存的玩家守则、加入方式、常见问题和 Addon 使用说明，发布日期为 2024 年 10 月 23 日；公开坐标及玩家高光系列的发布日期为 10 月 24 日。</p><p>其中，公开坐标注明适用于第 17 周目，玩家高光 S3 也注明素材来自第 17 周目。这些文章保留了当时的资料线索。</p><p>这里的日期是文章发布日期，不代表第 17 周目的开启日期。</p><h2 id="从-Realms-到自建-Paper：迁移日期待补充"><a href="#从-Realms-到自建-Paper：迁移日期待补充" class="headerlink" title="从 Realms 到自建 Paper：迁移日期待补充"></a>从 Realms 到自建 Paper：迁移日期待补充</h2><p>服务器从此前的 Realms 领域，迁移到了自建的 Minecraft Java 服务器，使用 Paper 服务端。</p><p>最新群公告以「第 17 周目开启公告」发布：游戏版本为 26.2，现已全面公测，计划长期运营。服务器开启正版验证，通过白名单准入；服务端添加改善游玩体验的辅助插件，整体保持原版体验，未来根据情况适当增删。</p><p>加入仍沿用原来的审核流程。当前白名单申请需在群里向群主提交关键词和 Java 版或基岩版正版游戏的玩家 ID，注明游戏版本，并 @群主，由群主审核添加。</p><p>自建服务器的启用日期、公测日期，以及本次第 17 周目与旧文所记第 17 周目的关系，仍待核对，因此暂不归入具体年月。</p>]]>
+      <![CDATA[<p>只记已经确认的时间节点，条目会陆续补全。</p><span id="more"></span><ol class="mc-timeline"><li><time datetime="2017">2017</time><p>开服，使用 Realms 领域服务器。</p></li><li><time datetime="2026-08-14">2026 年 8 月 14 日</time><p>第 17 周目开启，使用自建 Java Paper 服务器。</p></li></ol>]]>
     </content>
     <id>https://nightingalewk.cn/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/</id>
     <link href="https://nightingalewk.cn/2026/09/10/93.%20%E8%86%9D%E7%9B%96%E4%B8%AD%E7%AE%AD%E4%B9%8B%E5%9C%B0%20%E5%A4%A7%E4%BA%8B%E8%AE%B0/"/>
     <published>2026-09-10T01:52:49.000Z</published>
-    <summary>膝盖中箭之地 Minecraft 服务器大事记：开服起点、周目记录与 Paper 服务端迁移。</summary>
+    <summary>膝盖中箭之地时间轴：开服、周目更替与服务端变化。</summary>
     <title>膝盖中箭之地 · 大事记</title>
-    <updated>2026-09-10T02:26:11.694Z</updated>
+    <updated>2026-09-10T03:32:07.726Z</updated>
   </entry>
   <entry>
     <author>
@@ -360,8 +360,8 @@
     </author>
     <category term="git" scheme="https://nightingalewk.cn/categories/git/"/>
     <category term="Git" scheme="https://nightingalewk.cn/tags/Git/"/>
-    <category term="DevOps" scheme="https://nightingalewk.cn/tags/DevOps/"/>
     <category term="Monorepo" scheme="https://nightingalewk.cn/tags/Monorepo/"/>
+    <category term="DevOps" scheme="https://nightingalewk.cn/tags/DevOps/"/>
     <content>
       <![CDATA[<p>本文是一份将两个完全独立、无关联历史的 Git 仓库合并到一个新仓库（Monorepo）的完整操作指南。我们将把每个旧仓库的内容及其完整提交历史，迁移到新仓库的不同子目录中。</p><span id="more"></span><h2 id="核心思路"><a href="#核心思路" class="headerlink" title="核心思路"></a>核心思路</h2><p>我们的目标是创建一个全新的仓库 <code>sushang-combined</code>，并将 <code>sushang-v1</code> 和 <code>sushang-v2</code> 两个仓库的所有内容和历史记录，分别完整地移入 <code>sushang-combined</code> 下的 <code>sushang-v1/</code> 和 <code>sushang-v2/</code> 子目录中。</p><h2 id="第一阶段：环境准备"><a href="#第一阶段：环境准备" class="headerlink" title="第一阶段：环境准备"></a>第一阶段：环境准备</h2><p>首先，创建工作区，并克隆所有需要的仓库。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 创建一个专门的工作目录</span></span><br><span class="line"><span class="built_in">mkdir</span> git-merge-project &amp;&amp; <span class="built_in">cd</span> git-merge-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 克隆你的两个源仓库 (请替换为你的实际URL)</span></span><br><span class="line">git <span class="built_in">clone</span> &lt;URL_for_sushang-v1&gt;</span><br><span class="line">git <span class="built_in">clone</span> &lt;URL_for_sushang-v2&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 创建并初始化最终要合并到的目标仓库</span></span><br><span class="line"><span class="built_in">mkdir</span> sushang-combined</span><br><span class="line"><span class="built_in">cd</span> sushang-combined</span><br><span class="line">git init</span><br></pre></td></tr></table></figure><h2 id="第二阶段：重构源仓库"><a href="#第二阶段：重构源仓库" class="headerlink" title="第二阶段：重构源仓库"></a>第二阶段：重构源仓库</h2><p>此阶段是关键。我们需要在每个源仓库中，将所有文件移入一个与仓库同名的子目录。<strong>这个过程需要对 <code>sushang-v1</code> 和 <code>sushang-v2</code> 分别执行一次。</strong></p><p>下面以 <code>sushang-v1</code> 为例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 进入 sushang-v1 的本地克隆目录</span></span><br><span class="line"><span class="built_in">cd</span> ../sushang-v1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 创建子目录</span></span><br><span class="line"><span class="built_in">mkdir</span> sushang-v1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 将所有文件和目录移动到新子目录中</span></span><br><span class="line"><span class="comment"># 使用 git mv 至关重要，它能让 Git 追踪文件移动，保留历史记录！</span></span><br><span class="line"><span class="comment"># -k 标志会忽略移动过程中可能出现的无关紧要的错误</span></span><br><span class="line">git <span class="built_in">mv</span> -k * sushang-v1/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 单独处理以点开头的隐藏文件（如 .gitignore, .github 等）</span></span><br><span class="line">git <span class="built_in">mv</span> .gitignore sushang-v1/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5. 提交这次结构调整</span></span><br><span class="line">git commit -m <span class="string">&quot;chore: Restructure repository for monorepo merge&quot;</span></span><br></pre></td></tr></table></figure><p><strong>请返回上一级目录，对 <code>sushang-v2</code> 仓库重复上述 1-5 步。</strong></p><h2 id="第三阶段：执行合并"><a href="#第三阶段：执行合并" class="headerlink" title="第三阶段：执行合并"></a>第三阶段：执行合并</h2><p>现在，所有准备工作就绪，可以开始真正的合并操作。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 返回合并目标仓库</span></span><br><span class="line"><span class="built_in">cd</span> ../sushang-combined</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 合并 sushang-v1</span></span><br><span class="line"><span class="comment">#    将本地重构后的 sushang-v1 仓库添加为名为 v1 的远程源</span></span><br><span class="line">git remote add v1 ../sushang-v1</span><br><span class="line"><span class="comment">#    从 v1 拉取所有历史数据</span></span><br><span class="line">git fetch v1</span><br><span class="line"><span class="comment">#    合并 v1 的主分支，--allow-unrelated-histories 是关键！</span></span><br><span class="line">git merge v1/main --allow-unrelated-histories -m <span class="string">&quot;feat: Merge sushang-v1 history&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 合并 sushang-v2</span></span><br><span class="line"><span class="comment">#    以同样的方式添加并合并 v2</span></span><br><span class="line">git remote add v2 ../sushang-v2</span><br><span class="line">git fetch v2</span><br><span class="line">git merge v2/main --allow-unrelated-histories -m <span class="string">&quot;feat: Merge sushang-v2 history&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 验证结果</span></span><br><span class="line"><span class="comment">#    执行 ls，应能看到 sushang-v1 和 sushang-v2 两个目录</span></span><br><span class="line"><span class="comment">#    执行 git log --graph --oneline --all 查看合并后的历史图谱</span></span><br><span class="line"><span class="built_in">ls</span> -la</span><br></pre></td></tr></table></figure><h2 id="第四阶段：发布到-GitHub"><a href="#第四阶段：发布到-GitHub" class="headerlink" title="第四阶段：发布到 GitHub"></a>第四阶段：发布到 GitHub</h2><p>将本地合并好的新仓库推送到远程。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 在 GitHub 上创建一个新的、空的仓库，例如 sushang-combined</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 在本地 sushang-combined 目录中，关联到你刚创建的远程仓库</span></span><br><span class="line">git remote add origin &lt;URL_for_new_github_repo&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 将本地的完整历史推送到 GitHub</span></span><br><span class="line"><span class="comment">#    -u 选项会建立本地 main 分支与远程 origin/main 分支的追踪关系</span></span><br><span class="line">git push -u origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. (可选) 清理本地的临时远程源</span></span><br><span class="line">git remote <span class="built_in">rm</span> v1</span><br><span class="line">git remote <span class="built_in">rm</span> v2</span><br></pre></td></tr></table></figure><h2 id="第五阶段：归档旧仓库"><a href="#第五阶段：归档旧仓库" class="headerlink" title="第五阶段：归档旧仓库"></a>第五阶段：归档旧仓库</h2><p>为了避免混淆，并完整保留 Issues、Pull Requests 等宝贵信息，最佳实践是<strong>归档</strong>（Archive）而不是删除旧仓库。</p><p>对 <code>sushang-v1</code> 和 <code>sushang-v2</code> 在 GitHub 上的仓库，分别执行以下操作：</p><ol><li><strong>更新仓库描述</strong>：在仓库主页点击 “Edit”，修改描述，明确指出项目已归档，并提供新仓库 <code>sushang-combined</code> 的链接。例如：“**[ARCHIVED]** Development continues at [link to sushang-combined].”</li><li><strong>更新 README</strong>：在 <code>README.md</code> 文件顶部添加醒目通知，引导访问者前往新仓库。</li><li><strong>执行归档</strong>：<ul><li>进入仓库的 <code>Settings</code> 页面。</li><li>滚动到底部的 <code>Danger Zone</code>（危险区域）。</li><li>点击 <code>Archive this repository</code>（归档此仓库）。</li><li>按提示输入仓库名称进行确认。</li></ul></li></ol><p>至此，您已成功将两个独立仓库完整地合并为一个，并完成了所有后续整理工作。</p>]]>
     </content>
@@ -1017,6 +1017,24 @@
     <author>
       <name>NightingaleWK</name>
     </author>
+    <category term="工具" scheme="https://nightingalewk.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="net time" scheme="https://nightingalewk.cn/tags/net-time/"/>
+    <content>
+      <![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]>
+    </content>
+    <id>https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</id>
+    <link href="https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
+    <published>2022-08-30T06:20:00.000Z</published>
+    <summary>
+      <![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p>]]>
+    </summary>
+    <title>使用 net time 实现内网时间同步</title>
+    <updated>2023-11-07T02:40:35.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>NightingaleWK</name>
+    </author>
     <category term="linux" scheme="https://nightingalewk.cn/categories/linux/"/>
     <category term="sshppass" scheme="https://nightingalewk.cn/tags/sshppass/"/>
     <category term="awk" scheme="https://nightingalewk.cn/tags/awk/"/>
@@ -1032,24 +1050,6 @@
     </summary>
     <title>sshpass 中使用 awk 的坑</title>
     <updated>2023-11-07T02:39:51.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>NightingaleWK</name>
-    </author>
-    <category term="工具" scheme="https://nightingalewk.cn/categories/%E5%B7%A5%E5%85%B7/"/>
-    <category term="net time" scheme="https://nightingalewk.cn/tags/net-time/"/>
-    <content>
-      <![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p><span id="more"></span><h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>首先，能用 ntp 最好，当然，在这种环境下我们的工控机 ping 不到数据中心的 ntp 服务器，那么我们退而求其次，同步一台可以使用 ntp 保证时间一致的服务器上的时间，也算是间接解决这个问题了，我们叫这台服务器为 A，工控机为 B。</p><h2 id="二、具体流程"><a href="#二、具体流程" class="headerlink" title="二、具体流程"></a>二、具体流程</h2><p>首先我们保障 B 能 ping 通 A ，网能通是一切的前提。</p><p>然后我们在 B 上用管理员方式打开 CMD，首先用 <code>net use</code> 建立于 A 的连接</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net use \\10.1.112.99 &quot;password&quot; /user:&quot;admin&quot;</span><br></pre></td></tr></table></figure><p>IP 换成那个 A 主机的，账号密码也是 A 的</p><p>至此我们建立了与 A 的连接，之后我们就可以使用 <code>net time</code> 来同步时间，具体为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net time \\10.1.112.99 /set /y</span><br></pre></td></tr></table></figure><p>至此时间就同步好了，我们把这个两行指令加入计划任务，即可实现定时执行。</p>]]>
-    </content>
-    <id>https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/</id>
-    <link href="https://nightingalewk.cn/2022/08/30/44.%20%E4%BD%BF%E7%94%A8%20net%20time%20%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/"/>
-    <published>2022-08-30T06:20:00.000Z</published>
-    <summary>
-      <![CDATA[<p>公司某项目有 8 个 windows 7 工控机，这些机子经常时间彼此不统一，我计划让他们定期同步数据中心的一台服务器的时间，做到彼此之间的时间统一</p>]]>
-    </summary>
-    <title>使用 net time 实现内网时间同步</title>
-    <updated>2023-11-07T02:40:35.000Z</updated>
   </entry>
   <entry>
     <author>
@@ -1310,25 +1310,6 @@
     <author>
       <name>NightingaleWK</name>
     </author>
-    <category term="git" scheme="https://nightingalewk.cn/categories/git/"/>
-    <category term="oh-my-zsh" scheme="https://nightingalewk.cn/tags/oh-my-zsh/"/>
-    <content>
-      <![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]>
-    </content>
-    <id>https://nightingalewk.cn/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</id>
-    <link href="https://nightingalewk.cn/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <published>2021-08-09T04:00:00.000Z</published>
-    <summary>
-      <![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p>
-<figure class="highl]]>
-    </summary>
-    <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
-    <updated>2023-11-07T02:19:32.000Z</updated>
-  </entry>
-  <entry>
-    <author>
-      <name>NightingaleWK</name>
-    </author>
     <category term="建站" scheme="https://nightingalewk.cn/categories/%E5%BB%BA%E7%AB%99/"/>
     <category term="hexo" scheme="https://nightingalewk.cn/tags/hexo/"/>
     <content>
@@ -1343,6 +1324,25 @@
     </summary>
     <title>Hexo 博客升级流程</title>
     <updated>2023-11-07T02:19:28.000Z</updated>
+  </entry>
+  <entry>
+    <author>
+      <name>NightingaleWK</name>
+    </author>
+    <category term="git" scheme="https://nightingalewk.cn/categories/git/"/>
+    <category term="oh-my-zsh" scheme="https://nightingalewk.cn/tags/oh-my-zsh/"/>
+    <content>
+      <![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-dirty 1</span><br></pre></td></tr></table></figure><p>如果你还觉得慢，可以再设置 oh-my-zsh 不读取任何 git 信息</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --add oh-my-zsh.hide-status 1</span><br></pre></td></tr></table></figure><p>如果想恢复，设置成0就好</p>]]>
+    </content>
+    <id>https://nightingalewk.cn/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/</id>
+    <link href="https://nightingalewk.cn/2021/08/09/27.%20%E8%A7%A3%E5%86%B3%20ohmyzsh%20%E8%AF%BB%E5%8F%96%20git%20%E4%BF%A1%E6%81%AF%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <published>2021-08-09T04:00:00.000Z</published>
+    <summary>
+      <![CDATA[<p>在 oh-my-zsh 进入包含 git 仓库目录时，会变的比平时慢&#x2F;卡顿，原因是因为 oh-my-zsh 要获取 git 更新信息，设置 oh-my-zsh 不读取文件变化信息（在 git 项目目录执行下列命令）</p>
+<figure class="highl]]>
+    </summary>
+    <title>解决 ohmyzsh 读取 git 信息缓慢的问题</title>
+    <updated>2023-11-07T02:19:32.000Z</updated>
   </entry>
   <entry>
     <author>
